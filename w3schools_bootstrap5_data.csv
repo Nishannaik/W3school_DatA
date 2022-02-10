@@ -1,0 +1,1652 @@
+H1_leftside_heading,H1_rightside_heading,H2,H3,All_para,li,div,div_2
+Bootstrap 5 ,Tutorial,"Try it Yourself Examples,Bootstrap 5 vs. Bootstrap 3 & 4,Bootstrap 5 Exercises,Bootstrap 5 Quiz Test",Bootstrap 5 Example,"This tutorial contains hundreds of Bootstrap 5 examples.,With our online editor, you can edit the code, and click on a button to view the result.,Bootstrap 5 is the newest version of ,; with new components, faster stylesheet and more responsiveness.,Bootstrap 5 supports the latest, stable releases of all major browsers and 
+platforms. However, Internet Explorer 11 and down is not supported.,The main differences between Bootstrap 5 and Bootstrap 3 & 4, is that 
+Bootstrap 5 has switched to , instead of ,.,Test your Bootstrap 5 skills at W3Schools!",,,
+Bootstrap 5 ,Carousel,"Carousel / Slideshow,How To Create a Carousel,Add Captions to Slides","Example,Example","The Carousel is a slideshow for cycling through elements:,The following example shows how to create a basic carousel with indicators and controls:,A description of what each class from the example above do:,Add elements inside , within each , to create a caption for each slide:",,"
+  <!-- Carousel -->,<div id=""demo"" class=""carousel slide"" 
+  data-bs-ride=""carousel"">,  <!-- Indicators/dots -->,  <div 
+  class=""carousel-indicators"">,    <button type=""button"" 
+  data-bs-target=""#demo"" data-bs-slide-to=""0"" class=""active""></button>,    
+  <button type=""button"" data-bs-target=""#demo"" data-bs-slide-to=""1""></button>,    
+  <button type=""button"" data-bs-target=""#demo"" data-bs-slide-to=""2""></button>,  
+  </div>,  <!-- The slideshow/carousel -->,  <div 
+  class=""carousel-inner"">,    <div class=""carousel-item 
+  active"">,      <img src=""la.jpg"" alt=""Los Angeles"" 
+  class=""d-block w-100"">,    </div>,    <div 
+  class=""carousel-item"">,      <img 
+  src=""chicago.jpg"" alt=""Chicago"" class=""d-block w-100"">,    
+  </div>,    <div class=""carousel-item"">,      
+  <img src=""ny.jpg"" alt=""New York"" class=""d-block w-100"">,    
+  </div>,  </div>,  <!-- Left and right controls/icons -->,  
+  <button class=""carousel-control-prev"" type=""button"" data-bs-target=""#demo"" 
+  data-bs-slide=""prev"">,    <span 
+  class=""carousel-control-prev-icon""></span>,  </button>,  
+  <button class=""carousel-control-next"" type=""button"" data-bs-target=""#demo"" 
+  data-bs-slide=""next"">,    <span 
+  class=""carousel-control-next-icon""></span>,  </button>,</div>,
+  <div class=""carousel-item"">,  <img src=""la.jpg"" alt=""Los Angeles"">,  
+  <div class=""carousel-caption"">,    <h3>Los 
+  Angeles</h3>,    
+  <p>We had such a great time in LA!</p>,  </div>,</div>",
+Bootstrap 5 ,Navbars,"Navigation Bars,Basic Navbar,Vertical Navbar,Centered Navbar,Colored Navbar,Brand / Logo,Navbar Text,Navbar With Dropdown,Navbar Forms and Buttons,Fixed Navigation Bar","Example,Example,Example,Example,Example,Example,Example,Example,Example,Example,Example,Example,Example","A navigation bar is a navigation header that is placed at the top of the 
+page:,With Bootstrap, a navigation bar can extend or collapse, depending on the 
+screen size.,A standard navigation bar is created with the , 
+class, followed by a responsive collapsing class: , 
+(stacks the navbar vertically on xxlarge, extra large, large, medium or small screens). ,To add links inside the navbar, use either an , element 
+(or a ,) with ,. 
+Then add , elements with a , class
+followed by an , element with a , class:,Remove the , class to create a navigation bar 
+that will always be vertical:,Add the , class to 
+center the navigation bar:,Use any of the , classes to change the background color of the navbar (,, ,, ,, ,, ,, ,, , and ,), Add a , text color to all links in the navbar with the , class, or use the , class to add a 
+, text color.,The , class is used to highlight the brand/logo/project name of your page:,When using the , class with images, Bootstrap 
+5 will automatically style the image to fit the navbar vertically.,Use the , class to vertical align any elements inside the navbar that are not links (ensures proper padding 
+and text color).,Very often, especially on small screens, you want to hide the navigation 
+links and replace them with a button that should reveal them when clicked on.,To create a collapsible navigation bar, use a button with ,. Then wrap the 
+navbar content (links, etc) inside a <div> element with ,, 
+followed by an id that matches the , of the button: "","".,Navbars can also hold dropdown menus:,You can also include forms inside the navigation bar:,The navigation bar can also be fixed at the top or at the bottom of the page.,A fixed navigation bar stays visible in a fixed position (top or bottom) 
+independent of the page scroll.,The , class makes the navigation bar fixed at 
+the ,:,Use the , class to make the navbar stay at 
+the , of the page:,Use the , class to make the navbar fixed/stay at 
+the , of the page when you scroll , it. ,This class does not work in IE11 and earlier (will treat it as ,).","
+          ,
+        ,
+          ,
+        ,
+          ,
+        ,
+        ,
+      ,
+        ,
+      ,
+        ,
+      ,
+      ,
+    ,
+      ,
+    ,
+      ,
+    ,
+      ,
+    ,
+      ,
+    ,
+      ,
+    ,
+      ,
+    ,
+      ,
+    ,
+      ,
+    ,
+      ,
+    ,
+      ,
+    ,
+      ,
+    ,
+      ,
+    ,
+      ,
+    ,
+      ,
+    ,
+      ,
+    ,
+      ,
+    ,
+      ,
+    ,
+          ,
+        ,
+          ,
+        ,
+          ,
+        ,
+          ,
+        ,
+          ,
+        ,
+          ,
+        ,
+          ,
+          ,
+        ,
+          ,
+        ,
+          ,
+        ,
+          ,
+        ","
+  <!-- A grey horizontal navbar that becomes 
+  vertical on small screens -->,<nav class=""navbar navbar-expand-sm 
+   bg-light"">,  <div class=""container-fluid"">,    <!-- Links -->,    <ul class=""navbar-nav"">,      <li class=""nav-item"">,        <a class=""nav-link"" href=""#"">Link 
+  1</a>,      </li>,      <li class=""nav-item"">,        <a class=""nav-link"" href=""#"">Link 
+  2</a>,      </li>,      <li class=""nav-item"">,        <a class=""nav-link"" href=""#"">Link 
+  3</a>,      </li>,    </ul>,  
+  </div>,</nav>,
+  <!-- A grey 
+  vertical navbar -->,<nav class=""navbar  
+   bg-light"">,  ...,</nav>,
+  <nav class=""navbar navbar-expand-sm 
+  bg-light justify-content-center"">,  ...,</nav>,
+  <!-- Grey with black text -->,<nav class=""navbar navbar-expand-sm bg-light navbar-light"">,  
+  <div class=""container-fluid"">,    <ul class=""navbar-nav"">,      
+  <li class=""nav-item"">,        <a class=""nav-link 
+  active"" 
+  href=""#"">Active</a>,      </li>,     <li 
+  class=""nav-item"">,        <a class=""nav-link"" href=""#"">Link</a>,      
+  </li>,      <li class=""nav-item"">,        
+  <a class=""nav-link"" href=""#"">Link</a>,      </li>,      
+  <li class=""nav-item"">,        <a class=""nav-link 
+  disabled"" href=""#"">Disabled</a>,      </li>,    </ul>,  
+  </div>,
+  </nav>,
+  ,<!-- Black background with white text -->,<nav class=""navbar navbar-expand-sm bg-dark navbar-dark"">...</nav>,<!-- Blue 
+  background with white text -->,<nav class=""navbar navbar-expand-sm 
+  bg-primary navbar-dark"">...</nav>,
+    <nav class=""navbar navbar-expand-sm bg-dark navbar-dark"">,  <div 
+    class=""container-fluid"">,    <a class=""navbar-brand"" 
+    href=""#"">Logo</a>,  </div>,</nav>,
+    <nav class=""navbar navbar-expand-sm bg-dark navbar-dark"">,  <div 
+    class=""container-fluid"">,    <a class=""navbar-brand"" 
+    href=""#"">,      <img src=""logo.png"" 
+    alt=""Avatar Logo"" style=""width:40px;"" class=""rounded-pill"">  ,    </a>,  </div>,</nav>,
+  <nav class=""navbar navbar-expand-sm bg-dark navbar-dark"">,  <div 
+  class=""container-fluid"">,    <span 
+  class=""navbar-text"">Navbar text</span>,  </div>,</nav>,
+  <nav class=""navbar navbar-expand-sm bg-dark navbar-dark"">,  <div 
+  class=""container-fluid"">,    <a class=""navbar-brand"" 
+  href=""#"">Logo</a>,    <button class=""navbar-toggler"" 
+  type=""button"" data-bs-toggle=""collapse"" data-bs-target=""#collapsibleNavbar"">,      
+  <span class=""navbar-toggler-icon""></span>,    </button>,    
+  <div class=""collapse navbar-collapse"" id=""collapsibleNavbar"">,      
+  <ul class=""navbar-nav"">,        <li 
+  class=""nav-item"">,          <a 
+  class=""nav-link"" href=""#"">Link</a>,        
+  </li>,        <li class=""nav-item"">,          
+  <a class=""nav-link"" href=""#"">Link</a>,        
+  </li>,        <li class=""nav-item"">,          
+  <a class=""nav-link"" href=""#"">Link</a>,        
+  </li> ,      </ul>,    </div>,  
+  </div>,</nav>,
+  <li class=""nav-item dropdown"">,  <a class=""nav-link dropdown-toggle"" 
+  href=""#"" role=""button"" data-bs-toggle=""dropdown"">Dropdown</a>,  <ul 
+  class=""dropdown-menu"">,    <li><a class=""dropdown-item"" 
+  href=""#"">Link</a></li>,    <li><a class=""dropdown-item"" 
+  href=""#"">Another link</a></li>,    <li><a 
+  class=""dropdown-item"" href=""#"">A third link</a></li>,  </ul>,</li>,
+  <nav class=""navbar navbar-expand-sm navbar-dark bg-dark"">,  <div 
+  class=""container-fluid"">,    <a class=""navbar-brand"" 
+  href=""javascript:void(0)"">Logo</a>,    <button 
+  class=""navbar-toggler"" type=""button"" data-bs-toggle=""collapse"" 
+  data-bs-target=""#mynavbar"">,      <span 
+  class=""navbar-toggler-icon""></span>,    </button>,    
+  <div class=""collapse navbar-collapse"" id=""mynavbar"">,      
+  <ul class=""navbar-nav me-auto"">,        
+  <li class=""nav-item"">,          
+  <a class=""nav-link"" href=""javascript:void(0)"">Link</a>,        
+  </li>,        <li class=""nav-item"">,          
+  <a class=""nav-link"" href=""javascript:void(0)"">Link</a>,        
+  </li>,        <li class=""nav-item"">,          
+  <a class=""nav-link"" href=""javascript:void(0)"">Link</a>,        
+  </li>,      </ul>,      
+  <form class=""d-flex"">,        <input 
+  class=""form-control me-2"" type=""text"" placeholder=""Search"">,        
+  <button class=""btn btn-primary"" type=""button"">Search</button>,      
+  </form>,    </div>,  </div>,</nav>,
+  <nav class=""navbar navbar-expand-sm bg-dark navbar-dark fixed-top"">,  
+  ...,</nav>,
+  <nav class=""navbar navbar-expand-sm bg-dark navbar-dark fixed-bottom"">,  
+  ...,</nav>,
+  <nav class=""navbar navbar-expand-sm bg-dark navbar-dark sticky-top"">,  
+  ...,</nav>",
+Bootstrap 5 ,Navs,"Nav Menus,Aligned Nav,Vertical Nav,Tabs,Pills,Justified Tabs/pills,Pills with Dropdown,Tabs with Dropdown,Toggleable / Dynamic Tabs,Toggleable / Dynamic Pills","Example,Example,Example,Example,Example,Example,Example,Example,Example,Example","If you want to create a simple horizontal menu, add the 
+, class to a , element, followed by ,
+for each , and add the , class to 
+their links:,Add the , class to center the nav, and the , class to right-align the nav.,Add the , class to create a vertical nav:,Turn the nav menu into navigation tabs with the , class. Add the , class to the active/current link. If you want the tabs to be togglable, see the last example on this page.,Turn the nav menu into navigation pills with the , class. If you want the pills to be togglable, see the last example on this page.,Justify the tabs/pills with the , class (equal width):,To make the tabs toggleable, add the , attribute to each link. 
+Then add a , class with a unique ID for every tab and wrap them inside a 
+, element with class ,.,If you want the tabs to fade in and out when clicking on them, add the , class to ,:,The same code applies to pills; only change the data-toggle 
+attribute to ,:","
+      ,
+    ,
+      ,
+    ,
+      ,
+    ,
+      ,
+    ,
+      ,
+    ,
+      ,
+    ,
+      ,
+    ,
+      ,
+    ,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+    ,
+  ,
+    ,
+  ,
+    ,
+  ,
+    ,
+  ,
+    ,
+  ,
+    ,
+  ","
+  <ul class=""nav"">,  <li class=""nav-item"">,    
+  <a class=""nav-link"" href=""#"">Link</a>,  </li>,  <li class=""nav-item"">,    
+  <a class=""nav-link"" href=""#"">Link</a>,  </li>,  <li class=""nav-item"">,    
+  <a class=""nav-link"" href=""#"">Link</a>,  </li>,  <li class=""nav-item"">,    
+  <a class=""nav-link disabled"" href=""#"">Disabled</a>,  </li>,</ul>,
+  <!-- Centered nav -->,<ul class=""nav justify-content-center"">,
+  ,<!-- Right-aligned nav -->,<ul class=""nav justify-content-end"">,
+ <ul class=""nav 
+  flex-column"">,
+  <ul class=""nav nav-tabs"">,  <li class=""nav-item"">,    
+  <a class=""nav-link active"" href=""#"">Active</a>,  </li>,  <li 
+  class=""nav-item"">,    <a class=""nav-link"" href=""#"">Link</a>,  
+  </li>,  <li class=""nav-item"">,    <a class=""nav-link"" 
+  href=""#"">Link</a>,  </li>,  <li class=""nav-item"">,    
+  <a class=""nav-link disabled"" href=""#"">Disabled</a>,  </li>,</ul>,
+  <ul class=""nav nav-pills"">,  <li class=""nav-item"">,    
+  <a class=""nav-link active"" href=""#"">Active</a>,  </li>,  <li 
+  class=""nav-item"">,    <a class=""nav-link"" href=""#"">Link</a>,  
+  </li>,  <li class=""nav-item"">,    <a class=""nav-link"" 
+  href=""#"">Link</a>,  </li>,  <li class=""nav-item"">,    
+  <a class=""nav-link disabled"" href=""#"">Disabled</a>,  </li>,</ul>,
+  <ul class=""nav nav-pills 
+  nav-justified"">..</ul>,<ul class=""nav nav-tabs nav-justified"">..</ul>,
+  <ul class=""nav nav-pills"">,  <li class=""nav-item"">,    
+  <a class=""nav-link active"" href=""#"">Active</a>,  </li>,  <li 
+  class=""nav-item dropdown"">,    <a class=""nav-link 
+  dropdown-toggle"" data-bs-toggle=""dropdown"" href=""#"">Dropdown</a>,    
+  <ul class=""dropdown-menu"">,      <li><a 
+  class=""dropdown-item"" href=""#"">Link 1</a></li>,      
+  <li><a class=""dropdown-item"" href=""#"">Link 2</a></li>,      
+  <li><a class=""dropdown-item"" href=""#"">Link 3</a></li>,    
+  </ul>,  </li>,  <li class=""nav-item"">,    <a 
+  class=""nav-link"" href=""#"">Link</a>,  </li>,  <li 
+  class=""nav-item"">,    <a class=""nav-link disabled"" 
+  href=""#"">Disabled</a>,  </li>,</ul>,
+  <ul class=""nav nav-tabs"">,  <li class=""nav-item"">,    
+  <a class=""nav-link active"" href=""#"">Active</a>,  </li>,  <li 
+  class=""nav-item dropdown"">,    <a class=""nav-link 
+  dropdown-toggle"" data-bs-toggle=""dropdown"" href=""#"">Dropdown</a>,    
+  <ul class=""dropdown-menu"">,      <li><a 
+  class=""dropdown-item"" href=""#"">Link 1</a></li>,      
+  <li><a class=""dropdown-item"" href=""#"">Link 2</a></li>,      
+  <li><a class=""dropdown-item"" href=""#"">Link 3</a></li>,    
+  </ul>,  </li>,  <li class=""nav-item"">,    <a 
+  class=""nav-link"" href=""#"">Link</a>,  </li>,  <li 
+  class=""nav-item"">,    <a class=""nav-link disabled"" 
+  href=""#"">Disabled</a>,  </li>,</ul>,
+  <!-- Nav tabs -->,<ul class=""nav nav-tabs"">,  <li class=""nav-item"">,    
+  <a class=""nav-link active"" data-bs-toggle=""tab"" href=""#home"">Home</a>,  
+  </li>,  <li class=""nav-item"">,    <a class=""nav-link"" 
+  data-bs-toggle=""tab"" href=""#menu1"">Menu 1</a>,  </li>,  <li 
+  class=""nav-item"">,    <a class=""nav-link"" data-bs-toggle=""tab"" 
+  href=""#menu2"">Menu 2</a>,  </li>,</ul>,
+  <!-- Tab panes -->,<div class=""tab-content"">,  <div 
+  class=""tab-pane container active"" id=""home"">...</div>,  <div class=""tab-pane 
+  container fade"" 
+  id=""menu1"">...</div>,  <div class=""tab-pane 
+  container fade"" id=""menu2"">...</div>,
+  </div>,
+ <!-- Nav pills -->,<ul class=""nav nav-pills"">,  <li class=""nav-item"">,    
+  <a class=""nav-link active"" data-bs-toggle=""pill"" href=""#home"">Home</a>,  
+  </li>,  <li class=""nav-item"">,    <a class=""nav-link"" 
+  data-bs-toggle=""pill"" href=""#menu1"">Menu 1</a>,  </li>,  <li 
+  class=""nav-item"">,    <a class=""nav-link"" data-bs-toggle=""pill"" href=""#menu2"">Menu 2</a>,  </li>,</ul>,
+  <!-- Tab panes -->,<div class=""tab-content"">,  <div 
+  class=""tab-pane container active"" id=""home"">...</div>,  <div class=""tab-pane 
+  container fade"" 
+  id=""menu1"">...</div>,  <div class=""tab-pane 
+  container fade"" id=""menu2"">...</div>,
+  </div>",
+Bootstrap 5 ,Scrollspy,"Scrollspy,How To Create a Scrollspy",Example,"Scrollspy is used to automatically update links in a navigation 
+list based on , position.,The following example shows how to create a scrollspy:,Add , to the element that should be used as the scrollable 
+area (often this is the , element).,Then add the , attribute with a value of the id or the class name 
+of the navigation bar (,). This is to make sure that the navbar 
+is connected with the scrollable area.,Note that scrollable elements must match the ID of the links inside the navbar's 
+list items 
+(, matches ,).,The optional , attribute specifies the number of pixels to offset 
+from top when calculating the position of scroll. This is useful when you feel 
+that the links inside the navbar changes the active state too soon or too early 
+when jumping to the scrollable elements. Default is 10 pixels.",,"
+ <!-- The scrollable area -->,<body data-bs-spy=""scroll"" data-bs-target="".navbar"" data-bs-offset=""50"">,<!-- The navbar - The <a> elements are used to jump to a section in the scrollable area -->,<nav 
+  class=""navbar navbar-expand-sm bg-dark navbar-dark fixed-top"">,...,  <ul class=""navbar-nav"">,    <li><a href=""#section1"">Section 1</a></li>,    ...,</nav>,<!-- Section 1 -->,<div id=""section1"">,  <h1>Section 1</h1>,  <p>Try to scroll this page and look at the navigation bar while scrolling!</p>,</div>,...,
+ </body>",
+Bootstrap 5 ,Tooltip,"Tooltips,How To Create a Tooltip,Positioning Tooltips","Example,Example","The Tooltip component is small pop-up box that appears when the user moves the 
+mouse pointer over an element:,To create a tooltip, add the , 
+attribute to an element. ,Use the , attribute to specify the text that should be 
+displayed inside the tooltip:, Tooltips must be initialized with JavaScript to work.,The following code will enable all tooltips in the document:,By default, the tooltip will appear on top of the element.,Use the , attribute to set the position of the 
+tooltip on top, bottom, left or the right side of the element:",,"
+  <button type=""button"" class=""btn btn-primary"" data-bs-toggle=""tooltip"" 
+  title=""Hooray!"">Hover over me!</button>,
+  <script>,var tooltipTriggerList = 
+  [].slice.call(document.querySelectorAll('[data-bs-toggle=""tooltip""]')),var 
+  tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {,  
+  return new bootstrap.Tooltip(tooltipTriggerEl),}),</script>,
+ <a href=""#"" data-bs-toggle=""tooltip"" data-bs-placement=""top"" title=""Hooray!"">Hover</a>,<a href=""#"" data-bs-toggle=""tooltip"" data-bs-placement=""bottom"" title=""Hooray!"">Hover</a>,<a href=""#"" data-bs-toggle=""tooltip"" data-bs-placement=""left"" title=""Hooray!"">Hover</a>,<a href=""#"" data-bs-toggle=""tooltip"" data-bs-placement=""right"" title=""Hooray!"">Hover</a>",
+Bootstrap 5 ,Popover,"Popovers,How To Create a Popover,Positioning Popovers,Closing Popovers,Hoverable Popover","Example,Example,Example,Example","The Popover component is similar to tooltips; it is a pop-up box that appears when the user clicks on an element. The difference is that the popover can contain much more content.,To create a popover, add the , 
+attribute to an element.,Use the , attribute to specify the header text of the popover, and use the , attribute to specify the 
+text that should be displayed inside the popover's body:, Popovers must be initialized with JavaScript to work.,The following code will enable all popovers in the document:,By default, the popover will appear on the right side of the element.,Use the , attribute to set the position of the 
+popover on top, bottom, left or the right side of the element:,By default, the popover is closed when you click on the element 
+again. However, you can use the , attribute which will close 
+the popover when clicking outside the element:, If you want the popover to be displayed when you move 
+the mouse pointer over the element, use the , attribute with a value of 
+"","":",,"
+  <button type=""button"" class=""btn btn-primary"" data-bs-toggle=""popover"" 
+  title=""Popover Header"" data-bs-content=""Some content inside the 
+  popover"">Toggle popover</button>,
+ <script>,var popoverTriggerList = 
+  [].slice.call(document.querySelectorAll('[data-bs-toggle=""popover""]')),var 
+  popoverList = popoverTriggerList.map(function (popoverTriggerEl) {,  
+  return new bootstrap.Popover(popoverTriggerEl),}),</script>,
+ <a href=""#"" title=""Header"" data-bs-toggle=""popover"" data-bs-placement=""top"" data-content=""Content"">Top</a>,<a href=""#"" title=""Header"" data-bs-toggle=""popover"" data-bs-placement=""bottom"" data-content=""Content"">Bottom</a>,<a href=""#"" title=""Header"" data-bs-toggle=""popover"" data-bs-placement=""left"" data-content=""Content"">Left</a>,<a href=""#"" title=""Header"" data-bs-toggle=""popover"" data-bs-placement=""right"" data-content=""Content"">Right</a>,
+  <a href=""#"" title=""Dismissible popover"" data-bs-toggle=""popover"" 
+  data-bs-trigger=""focus"" data-bs-content=""Click anywhere in the document to 
+  close this popover"">Click me</a>,
+  <a href=""#"" title=""Header"" data-bs-toggle=""popover"" data-bs-trigger=""hover"" 
+  data-bs-content=""Popover text"">Hover over me</a>",
+Bootstrap 5 ,Utilities,"Utilities / Helper Classes,Borders,Border Width,Border Color,Border Radius,Float and Clearfix,Responsive Floats,Center Align,Width,Height,Spacing,Shadows,Vertical Align,Aspect Ratio,Visibility,Close icon,Screenreaders,Colors,Background Colors","Example,Example,Example,Example,Example,Example,Example,Example,Example,Example,Example,Example,Example,Example,Example,Example,Example,Example,Example,Example","Bootstrap 5 has a lot of utility/helper classes to quickly style elements without using any CSS code.,Use the , classes to add or remove borders from an element:,Use , to , to change the width of the border:,Add a color to the border with any of the contextual border color classes:,Add rounded corners to an element with the , classes:,Float an element to the right with the , class or to the left with ,, and clear floats with the  , class:,Float an element to the left or to the right depending on screen width, with the responsive float classes (, - where * is , (>=576px), , (>=768px), , (>=992px), , (>=1200px) or , (>=1400px)):,Center an element with the , class (adds margin-left and margin-right: auto):,Set the width of an element with the w-* classes (,, ,, ,, ,, ,, ,):,Set the height of an element with the h-* classes (,, ,, ,, ,, ,, ,):,Bootstrap 5 has a wide range of responsive margin and padding utility classes. 
+They work for all breakpoints: , (<=576px), , (>=576px), , (>=768px), , (>=992px), , (>=1200px) or , (>=1400px)):,The classes are used in the format: , for , and , for ,, ,, ,, , and ,.,Where , is one of:,Where , is one of:,Where , is one of:,Use the , classes to add shadows to an element:,Use the , classes to change the alignment of elements (only works on inline, inline-block, inline-table and table cell elements):,Create responsive video or slideshows based on the width of the parent.,Add the , class together with an aspect 
+ratio of your choice , to a 
+parent element, and add the embed (video or iframe) inside of it:,Use the , or , classes to control the visibility of elements. , These classes do not change the CSS display value. They only add , or ,:,Use the , class to style a close 
+icon. This is often used for alerts and modals.,Use the , class to hide an element on all devices, except screen readers:,As described in the , chapter, here is a list of all text and background color classes:,The classes for text colors are: ,, 
+,, ,, ,,
+,, ,, ,, ,,
+,, , (default body color/often black) and ,:,Contextual text classes can also be used on links:,You can also add 50% opacity for black or white text with the , or , classes:,The classes for background colors are: ,, ,, ,, ,, ,, ,, , and ,.,Note that background colors do not set the text color, so in some cases you'll want to use them together with a , class."," - sets , - sets , - sets , or , - sets , or , - sets , or , - sets , or , - sets both , and , or , and , - sets both , and , or , and ,blank - sets a , or , on all 4 sides of the element, - sets , or , to , - sets , or , to , - sets , or , to , - sets , or , to , - sets , or , to , - sets , or , to , - sets , to auto","
+      <span class=""border""></span>,<span class=""border border-0""></span>,
+      <span class=""border border-top-0""></span>,<span class=""border 
+      border-end-0""></span>,<span class=""border border-bottom-0""></span>,
+      <span class=""border border-start-0""></span>,<br>,<span 
+      class=""border-top""></span>,<span class=""border-end""></span>,<span 
+      class=""border-bottom""></span>,<span class=""border-start""></span>,
+,
+      <span class=""border border-1""></span>,<span class=""border 
+      border-2""></span>,<span class=""border border-3""></span>,<span 
+      class=""border border-4""></span>,<span class=""border border-5""></span>,
+,
+      <span class=""border border-primary""></span>,<span class=""border 
+      border-secondary""></span>,<span class=""border border-success""></span>,
+      <span class=""border border-danger""></span>,<span class=""border 
+      border-warning""></span>,<span class=""border border-info""></span>,
+      <span class=""border border-light""></span>,<span class=""border 
+      border-dark""></span>,<span class=""border border-white""></span>,
+,
+      <span class=""rounded""></span>,<span class=""rounded-top""></span>,
+      <span class=""rounded-end""></span>,<span class=""rounded-bottom""></span>,
+      <span class=""rounded-start""></span>,<span 
+      class=""rounded-circle""></span>,<span class=""rounded-pill"" 
+      style=""width:130px""></span>,<span class=""rounded-0""></span>,<span 
+      class=""rounded-1""></span>,<span class=""rounded-2""></span>,<span 
+      class=""rounded-3""></span>,
+,
+      <div class=""clearfix"">, 
+      <span class=""float-start"">Float left</span>,  <span 
+      class=""float-end"">Float right</span>,</div>,
+,
+      <div class=""float-sm-end"">Float right on small screens or wider</div><br>,
+      <div class=""float-md-end"">Float right on medium screens or wider</div><br>,
+      <div class=""float-lg-end"">Float right on large screens or wider</div><br>,
+      <div class=""float-xl-end"">Float right on extra large screens or 
+      wider</div><br>,<div class=""float-xxl-end"">Float right on 
+      XXL screens or 
+      wider</div><br>,<div class=""float-none"">Float none</div>,
+,
+      <div class=""mx-auto 
+      bg-warning"" style=""width:150px"">Centered</div>,
+,
+      <div class=""w-25 bg-warning"">Width 25%</div>,<div class=""w-50 bg-warning"">Width 
+      50%</div>,<div class=""w-75 bg-warning"">Width 75%</div>,<div 
+      class=""w-100 bg-warning"">Width 100%</div>,<div 
+      class=""w-auto bg-warning"">Auto Width</div>,<div class=""mw-100 bg-warning"">Max Width 100%</div>,
+,
+      <div style=""height:200px;background-color:#ddd"">, 
+      <div class=""h-25 bg-warning"">Height 25%</div>,  <div class=""h-50 bg-warning"">Height 
+      50%</div>,  <div class=""h-75 bg-warning"">Height 75%</div>,  <div 
+      class=""h-100 bg-warning"">Height 100%</div>,  
+      <div class=""h-auto bg-warning"">Auto Height</div>,  <div class=""mh-100 bg-warning"" 
+      style=""height:500px"">Max Height 100%</div>,</div>,
+,
+      <div class=""pt-4 bg-warning"">I only have a top padding (1.5rem)</div>,<div class=""p-5 bg-success"">I have a padding on all sides 
+      (3rem)</div>,<div class=""m-5 pb-5 bg-info"">I have a margin on 
+      all sides (3rem) and a bottom padding (3rem)</div>,
+,
+      <div class=""shadow-none p-4 mb-4 bg-light"">No shadow</div>,<div 
+      class=""shadow-sm p-4 mb-4 bg-white"">Small 
+      shadow</div>,<div class=""shadow p-4 mb-4 bg-white"">Default 
+      shadow</div>,<div class=""shadow-lg p-4 mb-4 bg-white"">Large 
+      shadow</div>,
+,
+      <span class=""align-baseline"">baseline</span>,<span 
+      class=""align-top"">top</span>,<span class=""align-middle"">middle</span>,
+      <span class=""align-bottom"">bottom</span>,<span 
+      class=""align-text-top"">text-top</span>,<span 
+      class=""align-text-bottom"">text-bottom</span>,
+,
+      <!-- Aspect ratio 1:1 -->,<div class=""ratio ratio-1x1"">,  
+      <iframe src=""https://www.youtube.com/embed/tgbNymZ7vqY""></iframe>,
+      </div>,<!-- Aspect ratio 4:3 -->,<div class=""ratio ratio-4x3"">,  
+      <iframe src=""https://www.youtube.com/embed/tgbNymZ7vqY""></iframe>,
+      </div> ,<!-- Aspect ratio 16:9 -->,<div class=""ratio 
+      ratio-16x9"">,  <iframe 
+      src=""https://www.youtube.com/embed/tgbNymZ7vqY""></iframe>,</div>,
+      ,<!-- Aspect ratio 21:9 -->,<div class=""ratio ratio-21x9"">,  
+      <iframe src=""https://www.youtube.com/embed/tgbNymZ7vqY""></iframe>,
+      </div>,
+,
+      <div class=""visible"">I am visible</div>,<div class=""invisible"">I am 
+      invisible</div>,
+,
+      <button type=""button"" class=""btn-close""></button>,
+,
+  <span class=""visually-hidden"">I will be hidden on all screens except for screen 
+  readers.</span>",
+Bootstrap 5 ,Offcanvas,"Offcanvas,How To Create an Offcanvas Sidebar,Offcanvas Position","Example,Right Example,Top Example,Bottom Example","Offcanvas is similar to , (hidden by default and shown when activated), except that is often used as a sidebar navigation menu.,The following example shows how to create an offcanvas sidebar:,The , class creates the offcanvas sidebar.,The , class positions the offcanvas, and makes it 400px wide. 
+See examples below for more positioning classes.,The , class ensures proper margins and line-height.,Then, add your content inside the , class.,To open the offcanvas sidebar, you must use a , or an , element that points to the id of the , container (, in our example).,To open the offcanvas sidebar with an , element, you can point to , with the href attribute, instead of , attribute.,Use the , to position the offcanvas to the left, right, top or bottom:",,"
+  <!-- Offcanvas Sidebar -->,<div class=""offcanvas offcanvas-start"" 
+  id=""demo"">,  <div 
+  class=""offcanvas-header"">,    <h1 
+  class=""offcanvas-title"">Heading</h1>,    <button 
+  type=""button"" class=""btn-close text-reset"" 
+  data-bs-dismiss=""offcanvas""></button>,  </div>,  <div 
+  class=""offcanvas-body"">,    <p>Some text lorem ipsum.</p>,    
+  <p>Some text lorem ipsum.</p>,    <button class=""btn 
+  btn-secondary"" type=""button"">A Button</button>,  </div>,</div>,
+  ,<!-- Button to open the offcanvas sidebar -->,<button class=""btn 
+  btn-primary"" type=""button"" data-bs-toggle=""offcanvas"" data-bs-target=""#demo"">,  Open Offcanvas Sidebar,</button>,
+    <div class=""offcanvas offcanvas-end"" 
+  id=""demo"">,
+    <div class=""offcanvas offcanvas-top"" 
+  id=""demo"">,
+    <div class=""offcanvas offcanvas-bottom"" 
+  id=""demo"">",
+Bootstrap 5 ,Toasts,"Toasts,How To Create a Toast,Open a Toast",Example,"The toast component is like an alert box that is only shown for a couple of seconds when something happens (i.e. when the user clicks on a button, submits a form, etc.).,To create a toast, use the , class, and add a , and a 
+, inside of it., Toasts are hidden by default. Use the , class 
+if you want to display it. To close it, use a 
+<button> element and add ,:,To show a toast with a click of a button, you must initialize it with JavaScript: select the 
+specified element and call the , method.,The following code will show all ""toasts"" in the document when you click on a 
+button:",,"
+  <div class=""toast show"">,  <div class=""toast-header"">,    Toast Header,    
+  <button type=""button"" class=""btn-close"" data-bs-dismiss=""toast""></button>,  </div>,
+   
+  <div class=""toast-body"">,    Some text inside the toast body,  </div>,
+  </div>,
+ <script>,document.getElementById(""toastbtn"").onclick = 
+  function() {,  var toastElList = 
+  [].slice.call(document.querySelectorAll('.toast')),  var toastList = 
+  toastElList.map(function(toastEl) {,    return new 
+  bootstrap.Toast(toastEl),  }),  toastList.forEach(toast => 
+  toast.show()) ,},</script>",
+Bootstrap 5 ,Cards,"Cards,Basic Card,Header and Footer,Contextual Cards,Titles, text, and links,Card Images,Card Image Overlays","Example,Example,Example,Example,Example,Example","A card in Bootstrap 5 is a bordered box with some padding around its content. It includes options for headers, footers, content, colors, etc.,A basic card is created with the , class, and content inside the 
+card has a , class:,The , class adds a heading to the card and the , class adds a footer to the card:,To add a background color the card, use contextual classes (,, ,, ,, ,, ,, ,, , and ,.,Use , to add card titles to any 
+heading element. 
+The , class is used to remove bottom margins for a <p> element if it is 
+the last child (or the only one) inside ,. The , class adds a blue 
+color to any link, and a hover effect.,Add , or , to an , to place the image at the top or at the bottom inside the card. Note 
+that we have added the image outside of the , to span the entire width:,Turn an image into a card background and use , 
+to add text on top of the image:",,"
+ <div class=""card"">,  <div class=""card-body"">Basic 
+  card</div>,</div>,
+  <div class=""card"">,  <div class=""card-header"">Header</div>,  
+  <div class=""card-body"">Content</div> ,  <div 
+  class=""card-footer"">Footer</div>,</div>,
+  <div class=""card"">,  <div class=""card-body"">,    
+  <h4 class=""card-title"">Card title</h4>,    <p 
+  class=""card-text"">Some example text. Some example text.</p>,    
+  <a href=""#"" class=""card-link"">Card link</a>,    <a href=""#"" 
+  class=""card-link"">Another link</a>,  </div>,</div>,
+  <div class=""card"" style=""width:400px"">,  <img class=""card-img-top"" src=""img_avatar1.png"" 
+  alt=""Card image"">,  <div class=""card-body"">,    <h4 
+  class=""card-title"">John Doe</h4>,    <p 
+  class=""card-text"">Some example text.</p>,    <a href=""#"" 
+  class=""btn btn-primary"">See Profile</a>,  </div>,</div>,
+  <div class=""card"" style=""width:500px"">,  <img class=""card-img-top"" src=""img_avatar1.png"" 
+  alt=""Card image"">,  <div class=""card-img-overlay"">,    <h4 
+  class=""card-title"">John Doe</h4>,    <p 
+  class=""card-text"">Some example text.</p>,    <a href=""#"" 
+  class=""btn btn-primary"">See Profile</a>,  </div>,</div>",
+Bootstrap 5 ,List Groups,"Basic List Groups,Active State,List Group With Linked Items,Disabled Item,Flush / Remove Borders,Numbered List Groups,Horizontal List Groups,Contextual Classes,Link items with Contextual Classes,List Group with Badges","Example,Example,Example,Example,Example,Example,Example,Example,Example,Example","The most basic list group is an unordered list with list items:,To create a basic list group, use an , element with class ,, and
+, elements with class ,:,Use the , class to highlight the current item:,To create a list group with linked items, use , instead of , 
+and , instead of ,.
+Optionally, add the , class if you want a grey background color on 
+hover:,The , class adds a lighter text color to the disabled item. And when used on links, it will remove the hover effect:,Use the , class to remove some borders and rounded corners:,Use the , class to create 
+list items with numbers in front of them:,If you want the list items to display horizontally instead of vertically (side by side instead of on top of each other), add the , class to ,:,Contextual classes can be used to add color to the list items:,The classes for coloring list-items are: ,, ,, ,, ,, ,, ,, , and ,,:,Combine , classes with utility/helper classes to add badges inside the list group:","First item,Second item,Third item,Active item,Second item,Third item,First item,Second item,Third item,Fourth item,First item,Second item,Third item,First item,Second item,Third item,Fourth item,Success item,Secondary item,Info item,Warning item,Danger item,Primary item,Dark item,Light item,
+      Inbox
+      ,
+    ,
+      Ads
+      ,
+    ,
+      Junk
+      ,
+    ","
+ <ul class=""list-group"">,  <li class=""list-group-item"">First item</li>,  <li class=""list-group-item"">Second item</li>,  <li class=""list-group-item"">Third item</li>,</ul>,
+  <ul class=""list-group"">,  <li class=""list-group-item 
+  active"">Active item</li>,  <li class=""list-group-item"">Second item</li>,  <li class=""list-group-item"">Third item</li>,</ul>,
+ <div class=""list-group"">,  <a href=""#"" 
+  class=""list-group-item list-group-item-action"">First item</a>,  <a 
+  href=""#"" class=""list-group-item list-group-item-action"">Second item</a>,  
+  <a href=""#"" class=""list-group-item list-group-item-action"">Third item</a>,
+ </div>,
+  <div class=""list-group"">,  <a href=""#"" class=""list-group-item disabled"">Disabled item</a>,  <a href=""#"" 
+  class=""list-group-item disabled"">Disabled item</a>,  
+  <a href=""#"" class=""list-group-item"">Third item</a>,
+  </div>,
+ <ul class=""list-group 
+  list-group-flush"">,  <li class=""list-group-item"">First item</li>,  <li class=""list-group-item"">Second item</li>,  <li class=""list-group-item"">Third item</li>,  
+  <li class=""list-group-item"">Fourth item</li>,</ul>,
+  <ol class=""list-group list-group-numbered"">,  <li 
+  class=""list-group-item"">First item</li>,  <li 
+  class=""list-group-item"">Second item</li>,  <li 
+  class=""list-group-item"">Third item</li>,</ol>,
+ <ul class=""list-group 
+  list-group-horizontal"">,  <li class=""list-group-item"">First item</li>,  <li class=""list-group-item"">Second item</li>,  <li class=""list-group-item"">Third item</li>,  
+  <li class=""list-group-item"">Fourth item</li>,</ul>,
+ <ul class=""list-group"">,  <li class=""list-group-item 
+  list-group-item-success"">Success item</li>,  <li 
+  class=""list-group-item list-group-item-secondary"">Secondary item</li>,  
+  <li class=""list-group-item list-group-item-info"">Info item</li>,  <li 
+  class=""list-group-item list-group-item-warning"">Warning item</li>,  
+  <li class=""list-group-item list-group-item-danger"">Danger item</li>,  
+  <li class=""list-group-item list-group-item-primary"">Primary item</li>,  
+  <li class=""list-group-item list-group-item-dark"">Dark item</li>,  <li 
+  class=""list-group-item list-group-item-light"">Light item</li>,</ul>,
+  <div class=""list-group"">,  <a href=""#"" class=""list-group-item 
+  list-group-item-action"">Action item</a>,  <a href=""#"" 
+  class=""list-group-item list-group-item-action list-group-item-success"">Success item</a>,  <a 
+  href=""#"" class=""list-group-item list-group-item-action list-group-item-secondary"">Secondary item</a>,  
+  <a href=""#"" class=""list-group-item list-group-item-action list-group-item-info"">Info item</a>,  
+  <a href=""#"" class=""list-group-item list-group-item-action list-group-item-warning"">Warning item</a>,  
+  <a href=""#"" class=""list-group-item list-group-item-action list-group-item-danger"">Danger item</a>,  
+  <a href=""#"" class=""list-group-item list-group-item-action list-group-item-primary"">Primary item</a>,  
+  <a href=""#"" class=""list-group-item list-group-item-action list-group-item-dark"">Dark item</a>,  
+  <a href=""#"" class=""list-group-item list-group-item-action list-group-item-light"">Light item</a>,
+  </div>,
+  <ul class=""list-group"">,  <li class=""list-group-item d-flex 
+  justify-content-between align-items-center"">,    Inbox,    
+  <span class=""badge bg-primary rounded-pill"">12</span>,  </li>,  
+  <li class=""list-group-item d-flex justify-content-between align-items-center"">,    
+  Ads,    <span class=""badge bg-primary 
+  rounded-pill"">50</span>,  </li>,  <li class=""list-group-item 
+  d-flex justify-content-between align-items-center"">,    Junk,    
+  <span class=""badge bg-primary rounded-pill"">99</span>,  </li>,</ul>",
+Bootstrap 5 ,Pagination,"Basic Pagination,Active State,Disabled State,Pagination Sizing,Pagination Alignment,Breadcrumbs","Example,Example,Example,Example,Example,Example","If you have a web site with lots of pages, you may wish to add some sort of pagination to each page.,To create a basic pagination, add the , class to an , element. 
+Then add the , to each , element and a , class to each link 
+inside ,:,The , class is used to ""highlight"" the current page:,The , class is used for un-clickable links:,Pagination blocks can also be sized to a larger or a smaller size:,Add class , for larger blocks or , for smaller blocks:,Use utility classes to change the alignment of the pagination:,Another form for pagination, is breadcrumbs:,The , and , 
+classes indicates the current page's location within a 
+navigational hierarchy:",Rome,"
+  <ul class=""pagination"">,  <li class=""page-item""><a class=""page-link"" 
+  href=""#"">Previous</a></li>,  <li class=""page-item""><a 
+  class=""page-link"" href=""#"">1</a></li>,  <li class=""page-item""><a 
+  class=""page-link"" href=""#"">2</a></li>,  <li class=""page-item""><a 
+  class=""page-link"" href=""#"">3</a></li>,  <li class=""page-item""><a 
+  class=""page-link"" href=""#"">Next</a></li>,</ul>,
+ <ul class=""pagination"">,  <li class=""page-item""><a class=""page-link"" 
+  href=""#"">Previous</a></li>,  <li class=""page-item""><a 
+  class=""page-link"" href=""#"">1</a></li>,  <li class=""page-item 
+  active""><a 
+  class=""page-link"" href=""#"">2</a></li>,  <li class=""page-item""><a 
+  class=""page-link"" href=""#"">3</a></li>,  <li class=""page-item""><a 
+  class=""page-link"" href=""#"">Next</a></li>,</ul>,
+ <ul class=""pagination"">,  <li class=""page-item 
+  disabled""><a class=""page-link"" href=""#"">Previous</a></li>,  <li class=""page-item""><a 
+  class=""page-link"" href=""#"">1</a></li>,  <li class=""page-item""><a 
+  class=""page-link"" href=""#"">2</a></li>,  <li class=""page-item""><a 
+  class=""page-link"" href=""#"">3</a></li>,  <li class=""page-item""><a 
+  class=""page-link"" href=""#"">Next</a></li>,</ul>,
+ <ul class=""pagination 
+  pagination-lg"">,  <li class=""page-item""><a class=""page-link"" 
+  href=""#"">Previous</a></li>,  <li class=""page-item""><a 
+  class=""page-link"" href=""#"">1</a></li>,  <li class=""page-item""><a 
+  class=""page-link"" href=""#"">2</a></li>,  <li class=""page-item""><a 
+  class=""page-link"" href=""#"">3</a></li>,  <li class=""page-item""><a 
+  class=""page-link"" href=""#"">Next</a></li>,</ul>,
+  ,<ul class=""pagination pagination-sm"">,  <li class=""page-item""><a class=""page-link"" 
+  href=""#"">Previous</a></li>,  <li class=""page-item""><a 
+  class=""page-link"" href=""#"">1</a></li>,  <li class=""page-item""><a 
+  class=""page-link"" href=""#"">2</a></li>,  <li class=""page-item""><a 
+  class=""page-link"" href=""#"">3</a></li>,  <li class=""page-item""><a 
+  class=""page-link"" href=""#"">Next</a></li>,</ul>,
+  <!-- Default (left-aligned) -->,<ul class=""pagination"" style=""margin:20px 
+  0"">,  <li class=""page-item"">...</li>,</ul>,<!-- 
+  Center-aligned -->,<ul class=""pagination justify-content-center"" 
+  style=""margin:20px 0"">,  <li class=""page-item"">...</li>,</ul>,<!-- Right-aligned -->,<ul 
+  class=""pagination justify-content-end"" style=""margin:20px 0"">,  <li 
+  class=""page-item"">...</li>,</ul>,
+  <ul class=""breadcrumb"">,  <li class=""breadcrumb-item""><a 
+  href=""#"">Photos</a></li>,  <li 
+  class=""breadcrumb-item""><a href=""#"">Summer 2017</a></li>,  <li 
+  class=""breadcrumb-item""><a href=""#"">Italy</a></li>,  <li class=""breadcrumb-item 
+  active"">Rome</li>,</ul>",
+Bootstrap 5 ,Quiz,"The Test,Count Your Score",,"You can test your Bootstrap 5 skills with W3Schools' Quiz.,The test contains 25 questions and there is no time limit.,The test is not official, it's just a nice way to see how much you know, or don't know, about Bootstrap 5.,You will get 1 point for each correct answer. At the end of the Quiz,
+your total score will be displayed. Maximum score is 25 points.",,,
+Bootstrap 5 ,Modal,"Modals,How To Create a Modal,Add animation,Modal Size,Fullscreen Modals,Responsive Fullscreen Modals,Centered Modal,Scrolling Modal","Example,Example,Small Modal,Large Modal,Extra Large Modal,Example,Example,Example,Example","The Modal component is a dialog box/popup window that is displayed on top of the current 
+page:,The following example shows how to create a basic modal:,Use the , class to add a fading effect when opening and closing the modal:,Change the size of the modal by adding the , 
+class for 
+small modals (max-width 300px), , class for large modals  
+(max-width 800px), or , for extra large modals  
+(max-width 1140px). Default is 500px max-width.,Add the size class to the , element with class ,:,If you want the modal to span the whole width and height of the page, use the 
+, class:,You can also control when the modal should be in fullscreen, with the , classes:,Center the modal vertically and horizontally within the page, with the , 
+class:,When you have alot of content inside the modal, a scrollbar is added to the page. See the examples below to understand it:,However, it is possible to only scroll inside the modal, instead of the page itself, by adding , to ,:",,"
+  <!-- Button to Open the Modal -->,<button type=""button"" class=""btn btn-primary"" 
+  data-bs-toggle=""modal"" data-bs-target=""#myModal"">,  Open modal,</button>,
+  ,<!-- The Modal -->,<div class=""modal"" id=""myModal"">,  <div class=""modal-dialog"">,    
+  <div class=""modal-content"">,      <!-- Modal 
+  Header -->,      <div class=""modal-header"">,        
+  <h4 class=""modal-title"">Modal Heading</h4>,        
+  <button type=""button"" class=""btn-close"" data-bs-dismiss=""modal""></button>,      
+  </div>,      <!-- Modal body -->,      
+  <div class=""modal-body"">,        Modal 
+  body..,      </div>,      
+  <!-- Modal footer -->,      <div 
+  class=""modal-footer"">,        <button 
+  type=""button"" class=""btn btn-danger"" data-bs-dismiss=""modal"">Close</button>,      
+  </div>,    </div>,  </div>,</div>,
+    <!-- Fading modal -->,<div class=""modal fade""></div>,<!-- 
+    Modal without animation -->,<div class=""modal""></div>,
+ <div class=""modal-dialog modal-sm"">,
+ <div class=""modal-dialog modal-lg"">,
+ <div class=""modal-dialog modal-xl"">,
+ <div class=""modal-dialog modal-fullscreen"">,
+ <div class=""modal-dialog modal-dialog-centered"">,
+ <div class=""modal-dialog"">,
+ <div class=""modal-dialog modal-dialog-scrollable"">",
+Bootstrap 5 ,Collapse,"Basic Collapsible,Accordion","Example,Example,Example,Example","Collapsibles are useful when you want to hide and show large amount of content:,The , class indicates a collapsible element (a <div> in our example); 
+this is the content that will be shown or hidden with a click of a button.,To control (show/hide) the collapsible content, add the , attribute to an <a> or a <button> element. 
+Then add the , attribute to 
+connect the button with the collapsible content (<div id=""demo"">)., For <a> 
+elements, you can use the , attribute instead of the , 
+attribute:,By default, the collapsible content is hidden. However, you can add the , class to show the content by default:,The following example shows a simple accordion by extending the card component., Use the , attribute to make 
+sure that all collapsible elements under the specified parent will be closed when one of the collapsible item is shown.",,"
+ <button data-bs-toggle=""collapse"" data-bs-target=""#demo"">Collapsible</button>,<div id=""demo"" class=""collapse"">,Lorem ipsum dolor text....,</div>,
+ <a href=""#demo"" data-bs-toggle=""collapse"">Collapsible</a>,<div id=""demo"" class=""collapse"">,Lorem ipsum dolor text....,</div>,
+ <div id=""demo"" class=""collapse show"">,Lorem ipsum dolor text....,</div>,
+  <div id=""accordion"">,  <div class=""card"">,    <div 
+  class=""card-header"">,      <a class=""btn"" 
+  data-bs-toggle=""collapse"" href=""#collapseOne"">,        Collapsible 
+  Group Item #1,      </a>,    
+  </div>,    <div id=""collapseOne"" class=""collapse show"" 
+  data-bs-parent=""#accordion"">,      
+  <div class=""card-body"">,        Lorem 
+  ipsum..,      </div>,    </div>,  
+  </div>,  <div class=""card"">,    <div 
+  class=""card-header"">,      <a class=""collapsed 
+  btn"" 
+  data-bs-toggle=""collapse"" href=""#collapseTwo"">,        Collapsible 
+  Group Item #2,      </a>,    
+  </div>,    <div id=""collapseTwo"" class=""collapse"" 
+  data-bs-parent=""#accordion"">,      
+  <div class=""card-body"">,        Lorem 
+  ipsum..,      </div>,    </div>,  
+  </div>,  <div class=""card"">,    <div 
+  class=""card-header"">,      <a class=""collapsed 
+  btn"" 
+  data-bs-toggle=""collapse"" href=""#collapseThree"">,        Collapsible 
+  Group Item #3,      </a>,    
+  </div>,    <div id=""collapseThree"" class=""collapse"" 
+  data-bs-parent=""#accordion"">,      
+  <div class=""card-body"">,        Lorem 
+  ipsum..,      </div>,    </div>,  
+  </div>,</div>",
+Bootstrap 5 ,Dropdowns,"Basic Dropdown,Dropdown Divider,Dropdown Header,Disable and Active items,Dropdown Position,Dropdown Menu Right,Dropup,Dropdown Text,Grouped Buttons with a Dropdown,Vertical Button Group w/ Dropdown","Example,Example,Example,Example,Dropright,Dropleft,Example,Example,Example,Example,Example","A dropdown menu is a toggleable menu that allows the user to choose one value 
+from a predefined list:,The , class indicates a dropdown menu.,To open the dropdown menu, use a button or a link with a class of , and 
+the 
+, attribute.,Add the , class to a , element to actually build the dropdown menu. Then add the 
+, class to each element (links or 
+buttons) inside the dropdown menu.,The , class is used to separate links inside the dropdown menu with a thin horizontal border:,The , class is used to add headers inside the dropdown menu:,Highlight a specific dropdown item with the , class (adds a blue background color).,To disable an item in the dropdown menu, use the , class (gets a light-grey text color and a ""no-parking-sign"" icon on hover):,You can also create a ""dropend"" or ""dropstart"" menu, by adding the , or , class to the dropdown element. Note that the caret/arrow is added automatically:,To right-align the dropdown menu, add the , class to the element 
+with .dropdown-menu:,If you want the dropdown menu to expand upwards instead of downwards, change 
+the <div> element with class=""dropdown"" to ,:,The , class is used to add plain text to 
+a dropdown item, or used on links for default link styling.,
+  ",,"
+  <div class=""dropdown"">,  <button type=""button"" class=""btn btn-primary 
+  dropdown-toggle"" data-bs-toggle=""dropdown"">,    Dropdown button,  
+  </button>,  <ul class=""dropdown-menu"">,    
+  <li><a 
+  class=""dropdown-item"" href=""#"">Link 1</a></li>,    
+  <li><a 
+  class=""dropdown-item"" href=""#"">Link 2</a></li>,    
+  <li><a 
+  class=""dropdown-item"" href=""#"">Link 3</a></li>,  </ul>,</div>,
+  <li><hr class=""dropdown-divider""></hr></li>,
+  <li><h5 class=""dropdown-header"">Dropdown header 1</h5></li>,
+  <li><a class=""dropdown-item"" href=""#"">Normal</a></li>,<li><a 
+  class=""dropdown-item active"" href=""#"">Active</a></li>,<li><a 
+  class=""dropdown-item disabled"" href=""#"">Disabled</a></li>,
+ <div class=""dropdown dropend"">,
+ <div class=""dropdown dropstart"">,
+ <div class=""dropdown-menu dropdown-menu-end"">,
+ <div class=""dropup"">,
+  <ul class=""dropdown-menu"">,  <li><a class=""dropdown-item"" 
+  href=""#"">Link 1</a></li>,  <li><a class=""dropdown-item"" href=""#"">Link 
+  2</a></li>,  <li><a class=""dropdown-item"" href=""#"">Link 3</a></li>,  
+  <li><a class=""dropdown-item-text"" href=""#"">Text Link</a></li>,  
+  <li><span class=""dropdown-item-text"">Just Text</span></li>,</ul>,
+  <div class=""btn-group"">,  <button type=""button"" class=""btn 
+  btn-primary"">Apple</button>,  <button type=""button"" class=""btn 
+  btn-primary"">Samsung</button>,  <div class=""btn-group"">,    
+  <button type=""button"" class=""btn btn-primary dropdown-toggle"" 
+  data-bs-toggle=""dropdown"">Sony</button>,    <ul 
+  class=""dropdown-menu"">,      <li><a 
+  class=""dropdown-item"" href=""#"">Tablet</a></li>,      
+  <li><a class=""dropdown-item"" href=""#"">Smartphone</a></li>,    
+  </ul>,  </div>,</div>,
+  <div class=""btn-group-vertical"">,  <button type=""button"" class=""btn 
+  btn-primary"">Apple</button>,  <button type=""button"" class=""btn 
+  btn-primary"">Samsung</button>,  <div class=""btn-group"">,    
+  <button type=""button"" class=""btn btn-primary dropdown-toggle"" 
+  data-bs-toggle=""dropdown"">Sony</button>,    <ul 
+  class=""dropdown-menu"">,      <li><a 
+  class=""dropdown-item"" href=""#"">Tablet</a></li>,      
+  <li><a class=""dropdown-item"" href=""#"">Smartphone</a></li>,    
+  </ul>,  </div>,</div>",
+Bootstrap 5 ,Exercises,"Exercises,Count Your Score",,"You can test your Bootstrap 5 skills with W3Schools' Exercises.,We have gathered a variety of Bootstrap 5 exercises (with answers) for each chapter.,Try to solve an exercise by filling in the missing parts of a code. If you're stuck, hit the ""Show Answer"" button to see what you've done wrong.,You will get 1 point for each correct answer. Your score and total score will always be displayed.",,,
+Bootstrap 5 ,Templates,Bootstrap 5 Basic Template,,"We have created a responsive starter template with Bootstrap 5.,You are free to modify, save, share, and use it in your projects:",,,
+Bootstrap 5 ,Grid Examples,"Three Equal Columns,Three Equal Columns Using Numbers,Three Unequal columns,Setting One Column Width,More Equal Columns,Row Cols,More Unequal Columns,Equal Height,Nested Columns,Responsive Classes,Stacked to Horizontal,Mix and Match,No Gutters","Example,Example,Example,Example,Example,Example,Example,Example,Example,Example,Example,Example","Below we have collected some examples of Bootstrap 5 grid layouts.,Use the , class on a specified number of elements and Bootstrap will recognize how many elements there are (and create equal-width columns). In the example below, we use three col elements, which gets a width of 33.33% each.,You can also use numbers to control the column width. Just make sure that the sum adds up to 12 
+or fewer (it is not required that you use all 12 available columns):,To create unequal columns, you have to use numbers. The following example will create a 25%/50%/25% split:,However, it is enough to only set the width of one column, and have the sibling columns automatically resize around it. The following example will create a 25%/50%/25% split:,You can also control how many columns that should appear next to each other (regardless of how many cols), with the , classes:,If one of the column is taller than the other (due to text or CSS height), the rest will follow:,The following example shows how to create a two column layout, with another 
+two columns inside one of the columns:,The Bootstrap 5 grid system has five classes:,The classes above can be combined to create more dynamic and flexible layouts., Each class scales up, so if you wish to set the same widths for 
+, and ,, you only need to specify ,.,The following example shows how to create a column layout that starts out stacked on extra small devices, before becoming horizontal on larger devices (sm, md, lg and xl):,To change the gutters (extra space) between columns, use any of the , classes 
+  (, is default). ,To remove the gutter completely, use ,:"," (extra small devices - screen width less than 576px), (small devices - screen width equal to or greater than 576px), (medium devices - screen width equal to or greater than 768px), (large devices - screen width equal to or greater than 992px), (xlarge devices - screen width equal to or greater than 1200px), (xxl devices - screen width equal to or greater than 1400px)","
+  <div class=""row"">,
+    <div class=""col"">col</div>,
+    <div class=""col"">col</div>,  <div 
+  class=""col"">col</div>,</div>,
+  <div class=""row"">,
+    <div class=""col-4"">col-4</div>,
+    <div class=""col-4"">col-4</div>,  <div 
+  class=""col-4"">col-4</div>,</div>,
+  <div class=""row"">,
+    <div class=""col-3"">col-3</div>,
+    <div class=""col-6"">col-6</div>,  <div 
+  class=""col-3"">col-3</div>,</div>,
+  ,
+  <div class=""row"">,
+    <div class=""col"">col</div>,
+    <div class=""col-6"">col-6</div>,  <div 
+  class=""col"">col</div>,</div>,
+  ,
+  <!-- Two equal columns -->,<div class=""row"">,
+    <div class=""col"">1 of 2</div>,
+    <div class=""col"">2 of 2</div>,</div>,
+  ,<!-- Four equal columns -->,<div class=""row"">,
+    <div class=""col"">1 of 4</div>,
+    <div class=""col"">2 of 4</div>,  <div class=""col"">3 
+  of 4</div>,
+    <div class=""col"">4 of 4</div>,</div>,
+  ,<!-- Six equal columns -->,<div class=""row"">,
+    <div class=""col"">1 of 6</div>,
+    <div class=""col"">2 of 6</div>,  <div class=""col"">3 
+  of 6</div>,
+    <div class=""col"">4 of 6</div>  ,  <div class=""col"">5 
+  of 6</div>,
+    <div class=""col"">6 of 6</div>,</div>,
+  <div class=""row row-cols-1"">,
+    <div class=""col"">1 of 2</div>,
+    <div class=""col"">2 of 2</div>,</div>,
+  ,<div class=""row row-cols-2"">,
+    <div class=""col"">1 of 4</div>,
+    <div class=""col"">2 of 4</div>,  <div class=""col"">3 
+  of 4</div>,
+    <div class=""col"">4 of 4</div>,</div>,
+  ,<div class=""row row-cols-3"">,
+    <div class=""col"">1 of 6</div>,
+    <div class=""col"">2 of 6</div>,  <div class=""col"">3 
+  of 6</div>,
+    <div class=""col"">4 of 6</div>  ,  <div class=""col"">5 
+  of 6</div>,
+    <div class=""col"">6 of 6</div>,</div>,
+  <!-- Two Unequal 
+  Columns -->,<div class=""row"">,
+    <div class=""col-8"">1 of 2</div>,
+    <div class=""col-4"">2 of 2</div>,</div>,
+  ,<!-- Four Unequal Columns -->,<div class=""row"">,
+    <div class=""col-2"">1 of 4</div>,
+    <div class=""col-2"">2 of 4</div>,  <div class=""col-2"">3 
+  of 4</div>,
+    <div class=""col-6"">4 of 4</div>,</div>,
+  ,<!-- Setting two column widths -->,<div class=""row"">,
+    <div class=""col-4"">1 of 4</div>,
+    <div class=""col-6"">2 of 4</div>,  <div class=""col"">3 
+  of 4</div>,
+    <div class=""col"">4 of 4</div>,</div>,
+  <div class=""row"">,  <div class=""col"">Lorem ipsum...</div>,  
+  <div class=""col"">col</div>,  <div class=""col"">col</div>,</div>,
+ <div class=""row"">,  <div class=""col-8"">,    .col-8,    <div class=""row"">,      <div class=""col-6"">.col-6</div>,      <div class=""col-6"">.col-6</div>,    </div>,  </div>,  <div class=""col-4"">.col-4</div>,</div>,
+  <div class=""row"">,  <div class=""col-sm-9"">col-sm-9</div>,  
+  <div class=""col-sm-3"">col-sm-3</div>,</div>,<div class=""row"">,  <div 
+  class=""col-sm"">col-sm</div>,  <div class=""col-sm"">col-sm</div>,  
+  <div class=""col-sm"">col-sm</div>,</div>,
+  <!-- 50%/50% split on extra small devices and 75%/25% split on larger devices 
+  -->,<div class=""row"">,  <div class=""col-6 
+  col-sm-9"">col-6 col-sm-9</div>,  <div class=""col-6 
+  col-sm-3"">col-6 col-sm-3</div>,</div>,<!-- 58%/42% split 
+  on extra small, small and medium devices and 66.3%/33.3% split on large and 
+  xlarge devices -->,<div class=""row"">,  <div class=""col-7 col-lg-8"">col-7 
+  col-lg-8</div>,  <div class=""col-5 col-lg-4"">col-5 
+  col-lg-4</div>,</div>,
+  ,<!-- ,<div 
+  class=""row"">,  <div class=""col-sm-3 col-md-6 col-lg-4"">col-sm-3 
+  col-md-6 col-lg-4</div>,  <div class=""col-sm-9 col-md-6 
+  col-lg-8"">col-sm-9 col-md-6 col-lg-8</div>,</div>,
+  <div class=""row g-0"">",
+Bootstrap 5 ,Grid XXL,"XXL Grid Example,Using Only XXL,Auto Layout Columns","Example,Example","The following example will result in a 50%/50% split on medium, large and 
+extra large devices, and a 25%/75% 
+split on XXL 
+devices. On small and extra small devices, it will automatically stack (100%):,In the example below, we only specify the , class (without ,, and/or ,). 
+This means that xxlarge devices will split 50%/50%. However, 
+for extra large, large, medium, small AND extra small devices, it will stack vertically (100% width):,In Bootstrap 5, there is an easy way to create equal width columns for all devices: just remove the number from , and only use the , class on a specified number of 
+,. Bootstrap will recognize how many columns there 
+are, and each column will get the same width.,If the screen size is ,, the columns will 
+stack horizontally:",,"
+ <div class=""container-fluid"">,  <div class=""row"">,
+      <div class=""col-md-6 col-xxl-3"">,      <p>Lorem ipsum...</p>,    </div>,
+      <div class=""col-md-6 col-xxl-9"">,      <p>Sed ut perspiciatis...</p>,    </div>,  </div>,
+ </div>,
+ <div class=""container-fluid"">,  <div class=""row"">,
+      <div class=""col-xxl-6"">,      <p>Lorem ipsum...</p>,    </div>,
+      <div class=""col-xxl-6"">,      <p>Sed ut perspiciatis...</p>,    </div>,  </div>,
+ </div>,
+  <!-- Two columns: 50% width on xxl and up-->,<div class=""row"">,  <div class=""col-xxl"">1 of 
+  2</div>,
+ 
+<div class=""col-xxl"">2 of 2</div>,</div>,<!-- Four 
+  columns: 25% width on xxl and up -->,<div class=""row"">,  <div class=""col-xxl"">1 of 4</div>,
+ 
+<div class=""col-xxl"">2 of 4</div>,  <div class=""col-xxl"">3 
+  of 4</div>,  <div class=""col-xxl"">4 of 4</div>,
+  </div>",
+Bootstrap 5 ,Grid Extra Large,"Extra Large Grid Example,Using Only XLarge,Auto Layout Columns","Example,Example","In the previous chapter, we presented a grid example with classes for small, medium 
+and large devices. We used two divs (columns) and we gave them 
+a 
+25%/75% split on small devices, and a 50%/50% split on medium devices and a 
+33%/66% split on large devices:,But on xlarge devices the design may be better as a 20%/80% split.,For xlarge devices we will use the , classes:,The following example will result in a 25%/75% split on small devices, a 
+50%/50% split on medium devices, a 33%/66% split on large devices and a 20%/80% 
+split on xlarge and xxlarge 
+devices. On extra small devices, it will automatically stack (100%):,In the example below, we only specify the , class (without ,, , and/or ,). 
+This means that xlarge and xxlarge devices will split 50%/50%. However, 
+for large, medium, small AND extra small devices, it will stack vertically (100% width):,In Bootstrap 5, there is an easy way to create equal width columns for all devices: just remove the number from , and only use the , class on a specified number of 
+,. Bootstrap will recognize how many columns there 
+are, and each column will get the same width.,If the screen size is ,, the columns will 
+stack horizontally:",,"
+ <div class=""col-sm-3 col-md-6 col-lg-4"">....</div>,
+<div class=""col-sm-9 col-md-6 col-lg-8"">....</div>,
+ <div class=""col-sm-3 col-md-6 col-lg-4 ,"">....</div>,
+<div class=""col-sm-9 col-md-6 col-lg-8 ,"">....</div>,
+ <div class=""container-fluid"">,  <div class=""row"">,
+      <div class=""col-sm-3 col-md-6 col-lg-4 
+  col-xl-2"">,      <p>Lorem ipsum...</p>,    </div>,
+      <div class=""col-sm-9 col-md-6 col-lg-8 
+  col-xl-10"">,      <p>Sed ut perspiciatis...</p>,    </div>,  </div>,
+ </div>,
+ <div class=""container-fluid"">,  <div class=""row"">,
+      <div class=""col-xl-6"">,      <p>Lorem ipsum...</p>,    </div>,
+      <div class=""col-xl-6"">,      <p>Sed ut perspiciatis...</p>,    </div>,  </div>,
+ </div>,
+  <!-- Two columns: 50% width on xlarge and up-->,<div class=""row"">,  <div class=""col-xl"">1 of 
+  2</div>,
+ 
+<div class=""col-xl"">2 of 2</div>,</div>,<!-- Four 
+  columns: 25% width on xlarge and up -->,<div class=""row"">,  <div class=""col-xl"">1 of 4</div>,
+ 
+<div class=""col-xl"">2 of 4</div>,  <div class=""col-xl"">3 
+  of 4</div>,  <div class=""col-xl"">4 of 4</div>,
+  </div>",
+Bootstrap 5 ,Grid Large,"Large Grid Example,Using Only Large,Auto Layout Columns","Example,Example","In the previous chapter, we presented a grid example with classes for small 
+and medium devices. We used two divs (columns) and we gave them 
+a 
+25%/75% split on small devices, and a 50%/50% split on medium devices:,But on large devices the design may be better as a 33%/66% split.,For large devices we will use the , classes:,Now Bootstrap is going to say ""at the small size, look at classes with 
+, in them and use those. At the medium size, look at classes with 
+, in them and use those. At the large size, look at classes with the word 
+, 
+in them and use those.,The following example will result in a 25%/75% split on small devices, a 
+50%/50% split on medium devices, and a 33%/66% split on large, xlarge and xxlarge 
+devices. On extra small devices, it will automatically stack (100%):,In the example below, we only specify the , class (without , and/or ,). This means that large, xlarge and xxlarge devices will split 50%/50%. However, 
+for medium, small AND extra small devices, it will stack vertically (100% width):,In Bootstrap 5, there is an easy way to create equal width columns for all devices: just remove the number from , and only use the , class on a specified number of 
+,. Bootstrap will recognize how many columns there 
+are, and each column will get the same width.,If the screen size is ,, the columns will 
+stack horizontally:",,"
+<div class=""col-sm-3 col-md-6"">....</div>,
+<div class=""col-sm-9 col-md-6"">....</div>,
+ <div class=""col-sm-3 col-md-6 ,"">....</div>,
+<div class=""col-sm-9 col-md-6 ,"">....</div>,
+ <div class=""container-fluid"">,  <div class=""row"">,
+      <div class=""col-sm-3 col-md-6 col-lg-4"">,      <p>Lorem ipsum...</p>,    </div>,
+      <div class=""col-sm-9 col-md-6 col-lg-8"">,      <p>Sed ut perspiciatis...</p>,    </div>,  </div>,
+ </div>,
+ <div class=""container-fluid"">,  <div class=""row"">,
+      <div class=""col-lg-6"">,      <p>Lorem ipsum...</p>,    </div>,
+      <div class=""col-lg-6"">,      <p>Sed ut perspiciatis...</p>,    </div>,  </div>,
+ </div>,
+  <!-- Two columns: 50% width on large and up-->,<div class=""row"">,  <div class=""col-lg"">1 of 
+  2</div>,
+ 
+<div class=""col-lg"">2 of 2</div>,</div>,<!-- Four 
+  columns: 25% width on large and up -->,<div class=""row"">,  <div class=""col-lg"">1 of 4</div>,
+ 
+<div class=""col-lg"">2 of 4</div>,  <div class=""col-lg"">3 
+  of 4</div>,  <div class=""col-lg"">4 of 4</div>,
+  </div>",
+Bootstrap 5 ,Grid Medium ,"Medium Grid Example,Using Only Medium,Auto Layout Columns","Example,Example","In the previous chapter, we presented a grid example with classes for small 
+devices. We used two divs (columns) and we gave them a 25%/75% split:,But on medium devices the design may be better as a 50%/50% split.,For medium devices we will use the , classes:,Now Bootstrap is going to say ""at the small size, look at classes with 
+, in them and use those. At the medium size, look at classes with 
+, in them and use those"".,The following example will result in a 25%/75% split on small devices and a 
+50%/50% split on medium (and large, xlarge and xxlarge) devices. On extra small devices, it will 
+automatically stack (100%):,In the example below, we only specify the , class (without ,). This means that medium, large, 
+extra large and XXL devices will split 50%/50% - because the class scales up. However, 
+for small and extra small devices, it will stack vertically (100% width):,In Bootstrap 5, there is an easy way to create equal width columns for all devices: just remove the number from , and only use the , class on a specified number of 
+,. Bootstrap will recognize how many columns there 
+are, and each column will get the same width.,If the screen size is ,, the columns will 
+stack horizontally:,The next chapter shows how to add a different split percent for large devices.",,"
+<div class=""col-sm-3"">....</div>,
+<div class=""col-sm-9"">....</div>,
+ <div class=""col-sm-3 ,"">....</div>,
+<div class=""col-sm-9 ,"">....</div>,
+,
+ <div class=""container-fluid"">,  <div class=""row"">,
+      <div class=""col-sm-3 col-md-6"">,      <p>Lorem ipsum...</p>,    </div>,
+      <div class=""col-sm-9 col-md-6"">,      <p>Sed ut perspiciatis...</p>,    </div>,  </div>,
+ </div>,
+ <div class=""row"">,  <div class=""col-md-6"">,    <p>Lorem ipsum...</p>,  </div>,
+    <div class=""col-md-6"">,
+     <p>Sed ut perspiciatis...</p>,  </div>,</div>,
+ ,
+  <!-- Two columns: 50% width on medium and up-->,<div class=""row"">,  <div class=""col-md"">1 of 
+  2</div>,
+ 
+<div class=""col-md"">2 of 2</div>,</div>,<!-- Four 
+  columns: 25% width on medium and up -->,<div class=""row"">,  <div class=""col-md"">1 of 4</div>,
+ 
+<div class=""col-md"">2 of 4</div>,  <div class=""col-md"">3 
+  of 4</div>,  <div class=""col-md"">4 of 4</div>,
+  </div>",
+Bootstrap 5 ,Grid Small,"Small Grid Example,Auto Layout Columns","Example,Example","Assume we have a simple layout with two columns. We want the columns to be 
+split 25%/75% for small devices.,For small devices we will use the , classes.,We will add the following classes to our two columns:,The following example will result in a 25%/75% split on small (and medium, large, xlarge and xxlarge) devices. On extra small devices, it will automatically stack (100%):,For a 33.3%/66.6% split, you would use , and , (and for a 50%/50% split, you would use , and ,):,In Bootstrap 5, there is an easy way to create equal width columns for all devices: just remove the number from , and only use the , class on a specified number of 
+,. Bootstrap will recognize how many columns there 
+are, and each column will get the same width.,If the screen size is ,, the columns will 
+stack horizontally:,The next chapter shows how to add a different split percent for medium devices.",,"
+<div class=""col-sm-3"">....</div>,
+<div class=""col-sm-9"">....</div>,
+ <div class=""container-fluid"">,  <div class=""row"">,
+      <div class=""col-sm-3 bg-primary"">,      <p>Lorem ipsum...</p>,    </div>,
+      <div class=""col-sm-9 bg-dark"">,      <p>Sed ut perspiciatis...</p>,    </div>,  </div>,
+ </div>,
+  <!-- 33.3/66.6% split: -->,<div class=""container-fluid"">,  <div class=""row"">,
+      <div class=""col-sm-4 bg-primary"">,      <p>Lorem ipsum...</p>,    </div>,
+      <div class=""col-sm-8 bg-dark"">,      <p>Sed ut perspiciatis...</p>,    </div>,  </div>,
+ </div>,<!-- 50%/50% split: -->,<div class=""container-fluid"">,  <div class=""row"">,
+      <div class=""col-sm-6 bg-primary"">,      <p>Lorem ipsum...</p>,    </div>,
+      <div class=""col-sm-6 bg-dark"">,      <p>Sed ut perspiciatis...</p>,    </div>,  </div>,
+ </div>,
+  <!-- Two columns: 50% width on all screens, except for extra small (100% 
+  width) -->,<div class=""row"">,  <div class=""col-sm"">1 of 
+  2</div>,
+ 
+<div class=""col-sm"">2 of 2</div>,</div>,<!-- Four 
+  columns: 25% width on all screens, except for extra small (100% width)-->,<div class=""row"">,  <div class=""col-sm"">1 of 4</div>,
+ 
+<div class=""col-sm"">2 of 4</div>,  <div class=""col-sm"">3 
+  of 4</div>,  <div class=""col-sm"">4 of 4</div>,
+  </div>",
+Bootstrap 5 ,Grid Extra Small,"Extra Small Grid Example,Auto Layout Columns","Example,Example","Assume we have a simple layout with two columns. We want the columns to 
+split 25%/75% for , devices.,We will add the following classes to our two columns:,The following example will result in a 25%/75% split on all devices (extra 
+small, small, medium, large, xlarge and xxlarge).,For a 33.3%/66.6% split, you would use , and , (and for a 50%/50% split, you would use , and ,):,In Bootstrap 5, there is an easy way to create , for all devices: just remove the number from , and only use the , class on a specified number of 
+,. Bootstrap will recognize how many columns there are, and each column will get the same width:,The next chapter shows how to add a different split percent for small devices.",,"
+<div class=""col-3"">....</div>,
+<div class=""col-9"">....</div>,
+ <div class=""container-fluid"">,  <div class=""row"">,
+      <div class=""col-3 bg-primary"">,      <p>Lorem ipsum...</p>,    </div>,
+      <div class=""col-9 bg-dark"">,      <p>Sed ut perspiciatis...</p>,    </div>,  </div>,
+ </div>,
+  <!-- 33.3%/66.6% split -->,<div class=""container-fluid"">,  <div class=""row"">,
+      <div class=""col-4 bg-primary"">,      <p>Lorem ipsum...</p>,    </div>,
+      <div class=""col-8 bg-dark"">,      <p>Sed ut perspiciatis...</p>,    </div>,  </div>,
+ </div>,<!-- 50%/50% split -->,<div class=""container-fluid"">,  <div class=""row"">,
+      <div class=""col-6 bg-primary"">,      <p>Lorem ipsum...</p>,    </div>,
+      <div class=""col-6 bg-dark"">,      <p>Sed ut perspiciatis...</p>,    </div>,  </div>,
+ </div>,
+  <!-- Two columns: 50% width-->,<div class=""row"">,  <div class=""col"">1 of 
+  2</div>,
+ 
+<div class=""col"">2 of 2</div>,</div>,<!-- Four 
+  columns: 25% width-->,<div class=""row"">,  <div class=""col"">1 of 4</div>,
+ 
+<div class=""col"">2 of 4</div>,  <div class=""col"">3 
+  of 4</div>,  <div class=""col"">4 of 4</div>,
+  </div>",
+Bootstrap 5 ,Grid System,"The Grid System,Grid Classes,Basic Structure of a Bootstrap 5 Grid,Grid Options",,"Bootstrap's grid system is built with flexbox and allows up to 12 columns across the page.,If you do not want to use all 12 columns individually, you can group the 
+columns together to create wider columns:,The grid system is responsive, and the columns will re-arrange automatically depending on the screen size.,Make sure that the sum adds up to 12 or fewer (it is not required that you 
+use all 12 available columns).,The Bootstrap 5 grid system has six classes:,The classes above can be combined to create more dynamic and flexible layouts., Each class scales up, so if you want to set the same widths for 
+, and ,, you only need to specify ,.,The following is a basic structure of a Bootstrap 5 grid:,First example: create a row (,). Then, add the desired number of columns (tags with appropriate 
+, classes). The first star (*) 
+represents the responsiveness: sm, md, lg, xl or xxl, while the second star 
+represents a number, which should add up to 12 for each row.,Second example: instead of adding a number to each ,, let bootstrap handle 
+the layout, to create equal width columns: two , elements = 50% width to 
+each col, while three cols = 33.33% width to each col. Four cols = 25% width, etc. You 
+can also use , to make the columns responsive.,The following table summarizes how the Bootstrap 5 grid system works across 
+different screen sizes:"," (extra small devices - screen width less than 576px), (small devices - screen width equal to or greater than 576px), (medium devices - screen width equal to or greater than 768px), (large devices - screen width equal to or greater than 992px), (xlarge devices - screen width equal to or greater than 1200px), (xxlarge devices - screen width equal to or greater than 1400px)","
+   <!-- Control the column width, and how they should appear on different 
+   devices -->,<div class=""row"">,  <div class=""col-*-*""></div>,  
+   <div class=""col-*-*""></div>,</div>,<div class=""row"">,  <div class=""col-*-*""></div>,  <div class=""col-*-*""></div>,  <div class=""col-*-*""></div>,</div>,
+   ,<!-- Or let Bootstrap automatically handle the layout -->,<div class=""row"">,  <div class=""col""></div>,  <div class=""col""></div>,  <div class=""col""></div>,</div>",
+Bootstrap 5 ,Grid Stacked to horizontal,"Grid Example: Stacked-to-horizontal,Auto Layout Columns","Example: Stacked-to-horizontal,Example: Responsive Container","Let's create a basic grid system that starts out stacked on extra small devices, before becoming horizontal on 
+larger devices.,The following example shows a simple ""stacked-to-horizontal"" two-column layout, meaning it will result in a 50%/50% split on all screens, except for extra small screens, which it will automatically stack (100%):, You can turn any, layout 
+into a , , layout, by changing 
+the , class to ,:,In Bootstrap 5, there is an easy way to create equal width columns for all devices: just remove the number from , and only use the , class on a specified number of 
+,. Bootstrap will recognize how many columns there 
+are, and each column will get the same width. The , classes 
+(sm, md, etc.) determines , the columns should be responsive:",,"
+ <div class=""container-fluid"">,  <div class=""row"">,
+      <div class=""col-sm-6 bg-primary"">,      <p>Lorem ipsum...</p>,    </div>,
+      <div class=""col-sm-6 bg-dark"">,      <p>Sed ut perspiciatis...</p>,    </div>,  </div>,
+ </div>,
+ <div class=""container"">,  <div class=""row"">,
+      <div class=""col-sm-6"">,      <p>Lorem ipsum...</p>,    </div>,
+      <div class=""col-sm-6"">,      <p>Sed ut perspiciatis...</p>,    </div>,  </div>,</div>,
+  <!-- Two columns: 50% width on all screens, except for extra small (100% 
+  width) -->,<div class=""row"">,  <div class=""col-sm"">1 of 
+  2</div>,
+ 
+<div class=""col-sm"">2 of 2</div>,</div>,<!-- Four 
+  columns: 25% width on all screens, except for extra small (100% width)-->,<div class=""row"">,  <div class=""col-sm"">1 of 4</div>,
+ 
+<div class=""col-sm"">2 of 4</div>,  <div class=""col-sm"">3 
+  of 4</div>,  <div class=""col-sm"">4 of 4</div>,
+  </div>",
+Bootstrap 5 ,Form Validation,Form Validation,Example,"You can use different validation classes to provide valuable feedback to 
+users. Add either , or , to the , element, 
+depending on whether you want to provide validation feedback before or after 
+submitting the form. The input fields will have a green (valid) or red (invalid) 
+border to indicate what's missing in the form. You can also add a 
+, or , message to tell the user explicitly what's 
+missing, or needs to be done before submitting the form.",,"
+  <form action=""/action_page.php"" class=""was-validated"">,  <div 
+  class=""mb-3 mt-3"">,    <label for=""uname"" 
+  class=""form-label"">Username:</label>,    <input type=""text"" 
+  class=""form-control"" id=""uname"" placeholder=""Enter username"" name=""uname"" 
+  required>,    <div class=""valid-feedback"">Valid.</div>,    
+  <div class=""invalid-feedback"">Please fill out this field.</div>,  
+  </div>,  <div class=""mb-3"">,    <label for=""pwd"" 
+  class=""form-label"">Password:</label>,    <input 
+  type=""password"" class=""form-control"" id=""pwd"" placeholder=""Enter password"" 
+  name=""pswd"" required>,    <div 
+  class=""valid-feedback"">Valid.</div>,    <div 
+  class=""invalid-feedback"">Please fill out this field.</div>,  </div>,  
+  <div class=""form-check mb-3"">,    <input 
+  class=""form-check-input"" type=""checkbox"" id=""myCheck"" name=""remember"" 
+  required>,    <label class=""form-check-label"" 
+  for=""myCheck"">I agree on blabla.</label>,    <div 
+  class=""valid-feedback"">Valid.</div>,    <div 
+  class=""invalid-feedback"">Check this checkbox to continue.</div>,  
+  </div>,  <button type=""submit"" class=""btn btn-primary"">Submit</button>,
+  </form>",
+Bootstrap 5 ,Input Groups,"Input Groups,Input Group Size,Multiple Inputs and Helpers,Input Group with Checkboxes and Radios,Input Group Buttons,Input Group with Dropdown Button","Example,Example,Example,Example,Example,Example","The , class is a container to enhance an input by adding an icon, text or a button in front or behind the input field as a ""help text"".,To style the specified help text, use the , class:,Use the , class for small input groups and , for large inputs groups:,Add multiple inputs or addons:,You can also use checkboxes or radio buttons instead of text:,Add a dropdown button in the input group. Note that you don't need the .dropdown wrapper, as you normally would.",,"
+ <form>,  <div class=""input-group"">,    <span class=""input-group-text"">@</span>,    <input type=""text"" class=""form-control"" placeholder=""Username"">,
+   
+  </div>,  <div class=""input-group"">,    <input type=""text"" 
+  class=""form-control"" placeholder=""Your Email"">,    <span class=""input-group-text"">@example.com</span>,  </div>,</form>,
+  <div class=""input-group mb-3 input-group-sm"">,   <span class=""input-group-text"">Small</span>,  <input type=""text"" class=""form-control"">,</div>,<div class=""input-group mb-3"">,
+    <span 
+  class=""input-group-text"">Default</span>,  
+  <input type=""text"" class=""form-control"">>,</div>,<div 
+  class=""input-group mb-3 input-group-lg"">,  <span 
+  class=""input-group-text"">Large</span>,  <input type=""text"" class=""form-control"">,</div>,
+  <!-- Multiple inputs -->,<div class=""input-group mb-3"">,  <span 
+  class=""input-group-text"">Person</span>,  <input type=""text"" class=""form-control"" placeholder=""First Name"">,  <input type=""text"" class=""form-control"" placeholder=""Last Name"">,</div>,<!-- Multiple addons / help text -->,<div class=""input-group mb-3"">,  <span 
+  class=""input-group-text"">One</span>,  <span 
+  class=""input-group-text"">Two</span>,  <span 
+  class=""input-group-text"">Three</span>,  <input type=""text"" class=""form-control"">,</div>,
+  <div class=""input-group mb-3"">,  
+  <div class=""input-group-text"">,    <input 
+  type=""checkbox""> ,  </div>,  <input type=""text"" class=""form-control"" placeholder=""Some text"">,</div>,<div class=""input-group mb-3"">,  <div class=""input-group-text"">,    <input 
+  type=""radio""> ,  </div>,  <input 
+  type=""text"" class=""form-control"" placeholder=""Some text"">,</div>,
+  <div class=""input-group mb-3"">,  <button class=""btn btn-outline-primary"" type=""button"">Basic Button</button> ,  <input type=""text"" class=""form-control"" 
+  placeholder=""Some text"">,</div>,<div class=""input-group mb-3"">,  
+  <input type=""text"" class=""form-control"" placeholder=""Search"">,  <button class=""btn btn-success"" 
+  type=""submit"">Go</button> ,</div>,<div 
+  class=""input-group mb-3"">,  <input type=""text"" class=""form-control"" 
+  placeholder=""Something clever.."">,  <button class=""btn btn-primary"" type=""button"">OK</button> ,  <button class=""btn btn-danger"" type=""button"">Cancel</button> ,
+  </div>,
+  <div class=""input-group mt-3 mb-3"">,  <button type=""button"" class=""btn 
+  btn-primary dropdown-toggle"" data-bs-toggle=""dropdown"">,    
+  Dropdown button,  </button>,  <ul class=""dropdown-menu"">,    
+  <li><a class=""dropdown-item"" href=""#"">Link 1</a></li>,    
+  <li><a class=""dropdown-item"" href=""#"">Link 2</a></li>,    
+  <li><a class=""dropdown-item"" href=""#"">Link 3</a></li>,  </ul>,  
+  <input type=""text"" class=""form-control"" placeholder=""Username"">,</div>",
+Bootstrap 5 ,Form Floating Labels,"Floating Labels / Animated Labels,Textarea,Select Menus","Example,Example,Example","By default, when using labels, they normally appear on top of the input field:,With floating labels, you can insert the label inside the input field, and make them float/animate when you click on the input field:,It also works for textareas:,You can also use ""floating-labels"" on select menus. However, they will not float/get animated. The label will always appear in the top left corner, inside the select menu:",,"
+  <div class=""form-floating mb-3 mt-3"">,  <input type=""text"" 
+  class=""form-control"" id=""email"" placeholder=""Enter email"" name=""email"">,  
+  <label for=""email"">Email</label>,</div>,<div class=""form-floating 
+  mt-3 mb-3"">,  <input type=""text"" class=""form-control"" id=""pwd"" 
+  placeholder=""Enter password"" name=""pswd"">,  <label 
+  for=""pwd"">Password</label>,</div>,
+  <div class=""form-floating"">,  <textarea class=""form-control"" 
+  id=""comment"" name=""text"" placeholder=""Comment goes here""></textarea>,  
+  <label for=""comment"">Comments</label>,</div>,
+  <div class=""form-floating"">,  <select class=""form-select"" id=""sel1"" 
+  name=""sellist"">,    <option>1</option>,    
+  <option>2</option>,    <option>3</option>,    
+  <option>4</option>,  </select>,  <label for=""sel1"" 
+  class=""form-label"">Select list (select one):</label>,</div>",
+Bootstrap 5 ,Select,"Select Menu,Select Menu Size,Disabled Select Menu,Data Lists","Example,Example,Example,Example","Select menus are used if you want to allow the user to pick from multiple options.,To style a select menu in Bootstrap 5, add the , class to the 
+<select> element:,Use the , or , class to change the size of the select menu:,Use the , attribute to disable the select menu:,Bootstrap will also style data lists, which is a list of pre-defined options for an 
+<input> element:",,"
+  <select class=""form-select"">,  <option>1</option>,
+    <option>2</option>,  <option>3</option>,  <option>4</option>,</select>,
+  <select class=""form-select 
+  form-select-lg"">,<select class=""form-select"">,<select class=""form-select 
+  form-select-sm"">,
+  <select class=""form-select"" disabled>,  <option>1</option>,  
+  <option>2</option>,  <option>3</option>,  <option>4</option>,
+  </select>,
+  <label for=""browser"" class=""form-label"">Choose your browser from the 
+  list:</label>,<input class=""form-control"" list=""browsers"" name=""browser"" 
+  id=""browser"">,<datalist id=""browsers"">,  <option value=""Edge"">,  
+  <option value=""Firefox"">,  <option value=""Chrome"">,  <option 
+  value=""Opera"">,  <option value=""Safari"">,</datalist>",
+Bootstrap 5 ,Range,"Custom Range,Steps,Min and Max","Example,Example,Example","To style a range menu, add the , class to the input element with type=""range"":,By default, the interval between the range numbers is 1. You can change it by using the , attribute:,By default, the mininmum value is 0 and maximum value is 100. You can use 
+  the , and/or , 
+  attribute change it:",,"
+  <label for=""customRange"" class=""form-label"">Custom range</label>,<input 
+  type=""range"" class=""form-range"" id=""customRange"">,
+  <input type=""range"" class=""form-range"" 
+  step=""10"">,
+  <input 
+  type=""range"" class=""form-range"" min=""0"" max=""4"">",
+Bootstrap 5 ,Checkboxes and Radio buttons,"Checkboxes,Radio buttons,Toggle Switches","Example,Example,Example","Checkboxes are used if you want the user to select any number of options from a list of preset options.,To style checkboxes, use a wrapper element with , to ensure proper margins for labels and checkboxes.,Then, add the , class to label elements, and , to style checkboxes properly inside the , container.,Use the , attribute if you want the checkbox to be checked by default.,Radio buttons are used if you want to limit the user to just one selection from a list of preset options.,If you want your checkbox to be styled as a toggle switch, use the , class together with the , container:",,"
+  <div class=""form-check"">,
+    <input class=""form-check-input"" type=""checkbox"" id=""check1"" name=""option1"" 
+  value=""something"" checked>,  <label 
+  class=""form-check-label"">Option 1</label>,</div>,
+  <div class=""form-check"">,  <input type=""radio"" 
+  class=""form-check-input"" id=""radio1"" name=""optradio"" value=""option1"" 
+  checked>Option 1,  <label class=""form-check-label"" 
+  for=""radio1""></label>,</div>,<div class=""form-check"">,  
+  <input type=""radio"" class=""form-check-input"" id=""radio2"" name=""optradio"" 
+  value=""option2"">Option 2,  <label class=""form-check-label"" 
+  for=""radio2""></label>,</div>,<div 
+  class=""form-check"">,  <input type=""radio"" class=""form-check-input"" 
+  disabled>Option 3,  <label class=""form-check-label""></label>,</div>,
+  <div class=""form-check form-switch"">,  <input class=""form-check-input"" 
+  type=""checkbox"" id=""mySwitch"" name=""darkmode"" value=""yes"" checked>,  
+  <label class=""form-check-label"" for=""mySwitch"">Dark Mode</label>,</div>",
+Bootstrap 5 ,Forms,"Stacked Form,Textarea,Form Row/Grid (Inline Forms),Form Control Size,Disabled and Readonly,Plain text Inputs,Color Picker","Example,Example,Example,Example,Example,Example,Example","All textual <input> and  <textarea> elements with class , 
+get proper form styling:,If you want your form elements to appear side by side, use , and ,:,You can change the size of , inputs with , or ,:,Use the disabled and/or readonly attributes to disable the input field:,Use the , class to style an input field without borders, but keep proper marigins and padding:,To style an input with type=""color"" properly, use the , class:",,"
+  <form action=""/action_page.php"">,  <div class=""mb-3 mt-3"">,    
+  <label for=""email"" class=""form-label"">Email:</label>,    <input type=""email"" 
+  class=""form-control"" id=""email"" placeholder=""Enter email"" name=""email"">,  </div>,  
+  <div class=""mb-3"">,    <label for=""pwd"" 
+  class=""form-label"">Password:</label>,    
+  <input type=""password"" class=""form-control"" id=""pwd"" placeholder=""Enter 
+  password"" name=""pswd"">,  </div>,  <div class=""form-check 
+  mb-3"">,    <label class=""form-check-label"">,      
+  <input class=""form-check-input"" type=""checkbox"" name=""remember""> Remember me,    
+  </label>,  </div>,  <button type=""submit"" class=""btn 
+  btn-primary"">Submit</button>,</form>,
+  <label for=""comment"">Comments:</label>,<textarea class=""form-control"" 
+  rows=""5"" id=""comment"" name=""text""></textarea>,
+  <form>,  <div class=""row"">,    <div class=""col"">,      
+  <input type=""text"" class=""form-control"" placeholder=""Enter email"" 
+  name=""email"">,    </div>,    <div 
+  class=""col"">,      <input type=""password"" 
+  class=""form-control"" placeholder=""Enter password"" name=""pswd"">,    
+  </div>,  </div>,</form>,
+  <input type=""text"" class=""form-control form-control-lg"" placeholder=""Large 
+  input"">,<input type=""text"" class=""form-control"" placeholder=""Normal input"">,<input type=""text"" class=""form-control form-control-sm"" 
+  placeholder=""Small input"">,
+  <input type=""text"" class=""form-control"" placeholder=""Normal input"">,<input 
+  type=""text"" class=""form-control"" placeholder=""Disabled input"" disabled>,
+  <input type=""text"" class=""form-control"" placeholder=""Readonly input"" readonly>,
+  <input type=""text"" class=""form-control-plaintext"" placeholder=""Plaintext 
+  input"">,<input type=""text"" class=""form-control"" placeholder=""Normal input"">,
+  <input type=""color"" class=""form-control form-control-color"" value=""#CCCCCC"">",
+Bootstrap 5 ,Flex,"Flexbox,Horizontal Direction,Vertical Direction,Justify Content,Fill / Equal Widths,Grow,Order,Auto Margins,Wrap,Align Content,Align Items,Align Self,Responsive Flex Classes","Example,Example,Example,Example,Example,Example,Example,Example,Example,Example,Example,Example,Example,Example,Example,Example,Example,Example,Example,Example,Example,Example,Example,Example,Example,Example","The biggest difference between Bootstrap 3 and Bootstrap 4 & 5 is that Bootstrap 5 now uses flexbox, instead of floats, to handle the layout.,The Flexible Box Layout Module, makes it easier to design flexible responsive layout structure without using float or positioning. If you are new to flex, you can read about it in our ,.,To create a flexbox container and to transform direct children into flex items, use the , class:,To create an inline flexbox container, use the , class:,Use , to display the flex items 
+horizontally (side by side). This is default., Use , 
+to right-align the horizontal direction:,Use , to display the flex items vertically (on top of each other), or , 
+to reverse the vertical direction:,Use the , classes to change the alignment of flex items. Valid classes are , (default), ,, ,, , or ,:,Use , on flex items to force them into equal widths:,Use , on a flex item to take up the rest of the space. In the example below, the first two flex items take up their necessary space, while the last item takes up the rest of the available space:, Use , on a flex item to make it shrink if necessary. ,Change the visual order of a specific flex item(s) with the , classes. Valid classes are from 0 to 5, where the lowest number has highest priority (order-1 is shown before order-2, etc..):,Easily add auto margins to flex items with , (push items to the right), or by using , (push items to the left):,Control how flex items wrap in a flex container with , (default), , or ,.,Click on the buttons below to see the difference between the three classes, 
+by changing the wrapping of the flex items in the example box:,Control the vertical alignment of , flex items with the , 
+classes. Valid classes are , (default), ,, ,, ,, , and ,., These classes have no effect on single rows of flex items.,Click on the buttons below to see the difference between the five classes, 
+by changing the vertical alignment of the flex items in the example box:,Control the vertical alignment of , of flex items with the , 
+classes. Valid classes are ,, ,, ,, ,, and , 
+(default).,Click on the buttons below to see the difference between the five classes:,Control the vertical alignment of , with the , 
+classes. Valid classes are ,, ,, ,, ,, and , 
+(default).,Click on the buttons below to see the difference between the five classes:,All flex classes comes with additional responsive classes, which makes it easy to set a specific flex class on a specific screen size.,The , symbol can be replaced with sm, md, lg, xl or xxl, which represents small, medium, large, xlarge and xxlarge screens.",,"
+      <div class=""d-flex p-3 bg-secondary text-white"">,  
+      <div class=""p-2 bg-info"">Flex item 1</div>,  <div class=""p-2 bg-warning"">Flex 
+      item 2</div>,  <div class=""p-2 bg-primary"">Flex item 3</div>,</div>,
+,
+      <div class=""d-inline-flex p-3 bg-secondary text-white"">,  
+      <div class=""p-2 bg-info"">Flex item 1</div>,  <div class=""p-2 bg-warning"">Flex 
+      item 2</div>,  <div class=""p-2 bg-primary"">Flex item 3</div>,</div>,
+,
+      <div class=""d-flex flex-row 
+      bg-secondary"">,  <div class=""p-2 bg-info"">Flex 
+      item 1</div>,  <div class=""p-2 bg-warning"">Flex item 2</div>,  
+      <div class=""p-2 bg-primary"">Flex item 3</div>,</div>,<div 
+      class=""d-flex flex-row-reverse bg-secondary"">,  <div class=""p-2 bg-info"">Flex 
+      item 1</div>,  <div class=""p-2 bg-warning"">Flex item 2</div>,  
+      <div class=""p-2 bg-primary"">Flex item 3</div>,</div>,
+,
+      <div class=""d-flex flex-column"">,  <div class=""p-2 bg-info"">Flex 
+      item 1</div>,  <div class=""p-2 bg-warning"">Flex item 2</div>,  
+      <div class=""p-2 bg-primary"">Flex item 3</div>,</div>,<div 
+      class=""d-flex flex-column-reverse"">,  <div class=""p-2 bg-info"">Flex 
+      item 1</div>,  <div class=""p-2 bg-warning"">Flex item 2</div>,  
+      <div class=""p-2 bg-primary"">Flex item 3</div>,</div>,
+,
+      <div class=""d-flex justify-content-start"">...</div>,<div class=""d-flex 
+      justify-content-end"">...</div>,<div class=""d-flex 
+      justify-content-center"">...</div>,<div class=""d-flex 
+      justify-content-between"">...</div>,<div class=""d-flex 
+      justify-content-around"">...</div>,
+,
+      <div class=""d-flex"">,  <div class=""p-2 bg-info 
+      flex-fill"">Flex 
+      item 1</div>,  <div class=""p-2 bg-warning flex-fill"">Flex item 2</div>,  
+      <div class=""p-2 bg-primary flex-fill"">Flex item 3</div>,</div>,
+,
+      <div class=""d-flex"">,  <div class=""p-2 bg-info"">Flex 
+      item 1</div>,  <div class=""p-2 bg-warning"">Flex item 2</div>,  
+      <div class=""p-2 bg-primary flex-grow-1"">Flex item 3</div>,</div>,
+,
+      <div class=""d-flex bg-secondary"">,  <div class=""p-2 bg-info 
+      order-3"">Flex 
+      item 1</div>,  <div class=""p-2 bg-warning order-2"">Flex item 2</div>,  
+      <div class=""p-2 bg-primary order-1"">Flex item 3</div>,</div>,
+,
+      <div class=""d-flex 
+      bg-secondary"">,  <div class=""p-2 ms-auto bg-info"">Flex 
+      item 1</div>,  <div class=""p-2 bg-warning"">Flex item 2</div>,  
+      <div class=""p-2 bg-primary"">Flex item 3</div>,</div>,
+      ,
+,
+      <div class=""d-flex flex-wrap"">..</div>,<div class=""d-flex 
+      flex-wrap-reverse"">..</div>,<div class=""d-flex 
+      flex-nowrap"">..</div>,
+,
+      <div class=""d-flex flex-wrap 
+      align-content-start"">..</div>,<div class=""d-flex 
+      flex-wrap align-content-end"">..</div>,<div class=""d-flex 
+      flex-wrap align-content-center"">..</div>,<div class=""d-flex 
+      flex-wrap align-content-around"">..</div>,<div class=""d-flex 
+      flex-wrap align-content-stretch"">..</div>,
+,
+      <div class=""d-flex align-items-start"">..</div>,<div class=""d-flex 
+      align-items-end"">..</div>,<div class=""d-flex 
+      align-items-center"">..</div>,<div class=""d-flex align-items-baseline"">..</div>,<div class=""d-flex 
+      align-items-stretch"">..</div>,
+,
+      <div class=""d-flex bg-light"" style=""height:150px"">,  <div 
+      class=""p-2 border"">Flex item 1</div>,  <div class=""p-2 border
+      ,"">Flex item 2</div>,  <div 
+      class=""p-2 border"">Flex item 3</div>,</div>,
+",
+Bootstrap 5 ,Spinners,"Spinners,Colored Spinners,Growing Spinners,Spinner Size,Spinner Buttons","Example,Example,Example,Example,Example","To create a spinner/loader, use the , class:,Use any , to add a color to the spinner:,Use the , class if you want the spinner/loader to grow instead of ""spin"":,Use , or , to create a smaller spinner:,You can also add spinners to a button, with or without text:",,"
+  <div class=""spinner-border""></div>,
+  <div class=""spinner-border text-muted""></div>,<div class=""spinner-border 
+  text-primary""></div>,<div class=""spinner-border text-success""></div>,
+  <div class=""spinner-border text-info""></div>,<div class=""spinner-border 
+  text-warning""></div>,<div class=""spinner-border text-danger""></div>,<div 
+  class=""spinner-border text-secondary""></div>,<div class=""spinner-border 
+  text-dark""></div>,<div class=""spinner-border text-light""></div>,
+  <div class=""spinner-grow text-muted""></div>,<div class=""spinner-grow text-primary""></div>,<div class=""spinner-grow text-success""></div>,
+  <div class=""spinner-grow text-info""></div>,<div class=""spinner-grow text-warning""></div>,<div class=""spinner-grow text-danger""></div>,<div 
+  class=""spinner-grow text-secondary""></div>,<div class=""spinner-grow text-dark""></div>,<div class=""spinner-grow text-light""></div>,
+  <div class=""spinner-border 
+  spinner-border-sm""></div>,<div class=""spinner-grow 
+  spinner-grow-sm""></div>,
+    <button class=""btn btn-primary"">,  <span class=""spinner-border 
+    spinner-border-sm""></span>,</button>,<button class=""btn 
+    btn-primary"">,  <span class=""spinner-border 
+    spinner-border-sm""></span>,  Loading..,</button>,<button 
+    class=""btn btn-primary"" disabled>,  <span class=""spinner-border 
+    spinner-border-sm""></span>,  Loading..,</button>,
+    ,<button class=""btn btn-primary"" disabled>,  <span 
+    class=""spinner-grow spinner-grow-sm""></span>,  Loading..,
+    </button>",
+Bootstrap 5 ,Progress Bars,"Basic Progress Bar,Progress Bar Height,Progress Bar Labels,Colored Progress Bars,Striped Progress Bars,Animated Progress Bar,Multiple Progress Bars","Example,Example,Example,Example,Example,Example,Example","A progress bar can be used to show how far a user is in a
+process.,To create a default progress bar, add a , class to a 
+container element 
+and add the , class to its child element. Use the CSS , property to set the width of the progress bar:,The height of the progress bar is , (usually ,) by default. Use the CSS , property to change 
+it. Note that you must set the same height for the progress container and the 
+progress bar:,Add text inside the progress bar to show the visible percentage:,By default, the progress bar is blue (primary). Use any of the contextual background classes to change its color:,Use the , class to add stripes to the progress bars:,Add the , class to animate the progress bar:,Progress bars can also be stacked:",,"
+ <div class=""progress"">,  <div class=""progress-bar"" style=""width:70%""></div>,</div>,
+ <div class=""progress"" style=""height:20px"">,  <div class=""progress-bar"" style=""width:40%;height:20px""></div>,</div>,
+ <div class=""progress"">,  <div class=""progress-bar"" style=""width:70%"">70%</div>,</div>,
+  <!-- Blue -->,<div class=""progress"">,  <div class=""progress-bar"" 
+  style=""width:10%""></div>,</div>,<!-- Green -->,<div 
+  class=""progress"">,  <div 
+  class=""progress-bar bg-success"" style=""width:20%""></div>,</div>,<!-- 
+  Turquoise -->,<div class=""progress"">,  
+  <div class=""progress-bar bg-info"" style=""width:30%""></div>,</div>,
+  <!-- Orange -->,<div class=""progress"">,   <div class=""progress-bar bg-warning"" 
+  style=""width:40%""></div>,</div>,<!-- Red -->,<div 
+  class=""progress"">,  <div class=""progress-bar bg-danger"" 
+  style=""width:50%""></div>,</div>,<!-- White -->,<div 
+  class=""progress border"">,  <div 
+  class=""progress-bar bg-white"" style=""width:60%""></div>,</div>,<!-- 
+  Grey -->,<div class=""progress"">,  <div class=""progress-bar bg-secondary"" 
+  style=""width:70%""></div>,</div>,<!-- Light Grey -->,<div 
+  class=""progress border"">,  <div class=""progress-bar bg-light"" 
+  style=""width:80%""></div>,</div>,<!-- 
+  Dark Grey -->,<div class=""progress"">,  
+  <div class=""progress-bar bg-dark"" style=""width:90%""></div>,</div>,
+ <div class=""progress"">,  <div class=""progress-bar 
+  progress-bar-striped"" style=""width:40%""></div>,</div>,
+  <div class=""progress-bar progress-bar-striped progress-bar-animated"" 
+  style=""width:40%""></div>,
+  <div class=""progress"">,  <div class=""progress-bar bg-success"" 
+  style=""width:40%"">,    Free Space,  </div>,  
+  <div class=""progress-bar bg-warning"" style=""width:10%"">,    
+  Warning,  </div>,  <div class=""progress-bar bg-danger"" 
+  style=""width:20%"">,    Danger,  </div>,</div>",
+"Bootstrap 5 ,Example heading ",Badges,"Badges,Example heading ,Contextual Badges,Pill Badges,Badge inside an Element","Example,Example,Example,Example","Badges are used to add additional information to any content:,Use the , class together with a 
+contextual class (like ,) within , 
+elements to create rectangular badges. Note that badges scale to match the size of the 
+parent element (if any):,Use any of the contextual classes (,) to change the color of a badge:,Use the , class to make the badges more round:,An example of using a badge inside a button:",,"
+  <h1>Example heading <span class=""badge bg-secondary"">New</span></h1>,
+  <h2>Example heading <span class=""badge bg-secondary"">New</span></h2>,
+  <h3>Example heading <span class=""badge bg-secondary"">New</span></h3>,
+  <h4>Example heading <span class=""badge bg-secondary"">New</span></h4>,
+  <h5>Example heading <span class=""badge bg-secondary"">New</span></h5>,
+  <h6>Example heading <span class=""badge bg-secondary"">New</span></h6>,
+  <span class=""badge bg-primary"">Primary</span>,<span class=""badge 
+  bg-secondary"">Secondary</span>,<span class=""badge 
+  bg-success"">Success</span>,<span class=""badge 
+  bg-danger"">Danger</span>,<span class=""badge 
+  bg-warning"">Warning</span>,<span class=""badge bg-info"">Info</span>,
+  <span class=""badge bg-light"">Light</span>,<span class=""badge 
+  bg-dark"">Dark</span>,
+  <span class=""badge rounded-pill 
+  bg-primary"">Primary</span>,<span 
+  class=""badge rounded-pill bg-secondary"">Secondary</span>,<span 
+  class=""badge rounded-pill bg-success"">Success</span>,<span class=""badge 
+  rounded-pill bg-danger"">Danger</span>,<span class=""badge 
+  rounded-pill 
+  bg-warning"">Warning</span>,<span class=""badge rounded-pill 
+  bg-info"">Info</span>,<span class=""badge rounded-pill 
+  bg-light"">Light</span>,<span class=""badge rounded-pill 
+  bg-dark"">Dark</span>,
+  <button type=""button"" class=""btn btn-primary"">,  Messages <span 
+  class=""badge bg-danger"">4</span>,</button>",
+Bootstrap 5 ,Button Groups,"Button Groups,Vertical Button Groups,Button Groups Side by Side,Nesting Button Groups & Dropdown Menus","Example,Example,Example,Example,Example","Bootstrap 5 allows you to group a series of buttons together (on a single line) in a button group:,
+,Use a , element with class , to create a button group:, Instead of applying button sizes to every button in a 
+group, use class , for a large button group or the , for a small button group:,Bootstrap 5 also supports vertical button groups:,
+,Use the class , to create a vertical button group:,Button groups are ""inline"" by default, which makes them appear side by side when you have multiple groups:,
+,Nest button groups to create dropdown menus (you will learn more about 
+dropdowns in a later chapter):",,"
+ <div class=""btn-group"">,
+   <button type=""button"" class=""btn btn-primary"">Apple</button>,
+   <button type=""button"" class=""btn btn-primary"">Samsung</button>,
+   <button type=""button"" class=""btn btn-primary"">Sony</button>,
+ </div>,
+ <div class=""btn-group btn-group-lg"">,
+   <button type=""button"" class=""btn btn-primary"">Apple</button>,
+   <button type=""button"" class=""btn btn-primary"">Samsung</button>,
+   <button type=""button"" class=""btn btn-primary"">Sony</button>,
+    </div>,
+ <div class=""btn-group-vertical"">,
+   <button type=""button"" class=""btn btn-primary"">Apple</button>,
+   <button type=""button"" class=""btn btn-primary"">Samsung</button>,
+   <button type=""button"" class=""btn btn-primary"">Sony</button>,
+ </div>,
+  <div class=""btn-group"">,  <button type=""button"" class=""btn btn-primary"">Apple</button>,  
+  <button type=""button"" class=""btn btn-primary"">Samsung</button>,  
+  <button type=""button"" class=""btn btn-primary"">Sony</button>,</div>,
+  <div class=""btn-group"">,  <button type=""button"" class=""btn btn-primary"">BMW</button>,  
+  <button type=""button"" class=""btn btn-primary"">Mercedes</button>,  
+  <button type=""button"" class=""btn btn-primary"">Volvo</button>,</div>,
+    <div class=""btn-group"">,  <button type=""button"" class=""btn 
+    btn-primary"">Apple</button>,  <button type=""button"" class=""btn 
+    btn-primary"">Samsung</button>,  <div class=""btn-group"">,    
+    <button type=""button"" class=""btn btn-primary dropdown-toggle"" 
+    data-bs-toggle=""dropdown"">Sony</button>,    <div 
+    class=""dropdown-menu"">,      <a 
+    class=""dropdown-item"" href=""#"">Tablet</a>,      
+    <a class=""dropdown-item"" href=""#"">Smartphone</a>,    
+    </div>,  </div>,</div>",
+Bootstrap 5 ,Buttons,"Button Styles,Button Outline,Button Sizes,Block Level Buttons,Active/Disabled Buttons,Spinner Buttons","Example,Example,Example,Example,Example,Example,Example,Example","Bootstrap 5 provides different styles of buttons:,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,The button classes can be used on ,, ,, or 
+, elements:,Bootstrap 5 also provides eight outline/bordered buttons.,Move the 
+mouse over them to see an additional ""hover"" effect:,
+,
+,
+,
+,
+,
+,
+,
+,
+,Use the , class for large buttons or , class for small buttons:,
+,
+,
+,
+,To create a block level button 
+that spans the entire width of the parent element, use the , ""helper"" class on the parent element:,If you have many block-level buttons, you can control the space between them with the , class:,A button can be set to an active (appear pressed) or a disabled (unclickable) state:,
+,
+,
+,The class , makes a button appear 
+pressed, and the , attribute 
+makes a button unclickable. Note that <a> elements do not support the disabled 
+attribute and must therefore use the , class to make it visually appear 
+disabled.,You can also add ""spinners"" to a button, which you will learn more about in our ,:",,"
+ <button type=""button"" class=""btn"">Basic</button>,<button type=""button"" class=""btn btn-primary"">Primary</button>,<button type=""button"" class=""btn btn-secondary"">Secondary</button>,<button type=""button"" class=""btn btn-success"">Success</button>,<button type=""button"" class=""btn btn-info"">Info</button>,<button type=""button"" class=""btn btn-warning"">Warning</button>,<button type=""button"" class=""btn btn-danger"">Danger</button>,
+  <button type=""button"" class=""btn btn-dark"">Dark</button>,<button 
+  type=""button"" class=""btn btn-light"">Light</button>,<button type=""button"" class=""btn btn-link"">Link</button>,
+  <a href=""#"" class=""btn btn-success"">Link Button</a>,<button type=""button"" 
+  class=""btn btn-success"">Button</button>,<input type=""button"" class=""btn 
+  btn-success"" value=""Input Button"">,<input type=""submit"" class=""btn 
+  btn-success"" value=""Submit Button"">,<input type=""reset"" class=""btn 
+  btn-success"" value=""Reset Button"">,
+  <button type=""button"" class=""btn btn-outline-primary"">Primary</button>,
+  <button type=""button"" class=""btn btn-outline-secondary"">Secondary</button>,
+  <button type=""button"" class=""btn btn-outline-success"">Success</button>,
+  <button type=""button"" class=""btn btn-outline-info"">Info</button>,<button 
+  type=""button"" class=""btn btn-outline-warning"">Warning</button>,<button 
+  type=""button"" class=""btn btn-outline-danger"">Danger</button>,
+  <button type=""button"" class=""btn btn-outline-dark"">Dark</button>,<button 
+  type=""button"" class=""btn btn-outline-light text-dark"">Light</button>,
+ <button type=""button"" class=""btn btn-primary btn-lg"">Large</button>,<button type=""button"" class=""btn btn-primary"">Default</button>,<button type=""button"" class=""btn btn-primary btn-sm"">Small</button>,
+  <div class=""d-grid"">,  <button type=""button"" class=""btn btn-primary 
+  btn-block"">Full-Width Button</button>,</div>,
+  <div class=""d-grid gap-3"">,  <button type=""button"" class=""btn btn-primary 
+  btn-block"">Full-Width Button</button>,  <button type=""button"" class=""btn btn-primary 
+  btn-block"">Full-Width Button</button>,  <button type=""button"" class=""btn btn-primary 
+  btn-block"">Full-Width Button</button>,</div>,
+ <button type=""button"" class=""btn btn-primary active"">Active Primary</button>,
+ <button type=""button"" class=""btn btn-primary"" disabled>Disabled Primary</button>,<a href=""#"" class=""btn btn-primary 
+  disabled"">Disabled Link</a>,
+    <button class=""btn btn-primary"">,  <span class=""spinner-border 
+    spinner-border-sm""></span>,</button>,<button class=""btn 
+    btn-primary"">,  <span class=""spinner-border 
+    spinner-border-sm""></span>,  Loading..,</button>,<button 
+    class=""btn btn-primary"" disabled>,  <span class=""spinner-border 
+    spinner-border-sm""></span>,  Loading..,</button>,
+    ,<button class=""btn btn-primary"" disabled>,  <span 
+    class=""spinner-grow spinner-grow-sm""></span>,  Loading..,
+    </button>",
+Bootstrap 5 ,Alerts,"Alerts,Alert Links,Closing Alerts,Animated Alerts","Example,Example,Example,Example","Bootstrap 5 provides an easy way to create predefined alert messages:,Alerts are created with the , class, followed by one of the 
+contextual classes ,, ,, ,, 
+,, ,, ,, , or ,:,Add the , class to any links inside the alert box to create ""matching colored links"":,To close the alert message, add a , 
+class to the alert container. Then add , and , 
+to a link or a button element (when you click on this the alert box will 
+disappear).,The , and , classes adds a fading effect when 
+closing the alert message:",,"
+ <div class=""alert alert-success"">,  <strong>Success!</strong> Indicates a successful or positive action.,</div>,
+ <div class=""alert alert-success"">,  <strong>Success!</strong> You should <a href=""#"" class=""alert-link"">read this message</a>.,</div>,
+  <div class=""alert alert-success alert-dismissible"">,  <button 
+  type=""button"" class=""btn-close"" data-bs-dismiss=""alert""></button>,  
+  <strong>Success!</strong> This alert box could indicate a successful or 
+  positive action.,</div>,
+ <div class=""alert alert-danger 
+  alert-dismissible fade show"">",
+Bootstrap 5 ,Colors,"Text Colors,Background Colors","Example,Example,Example","Bootstrap 5 has some contextual classes that can be used to provide ""meaning through colors"".,The classes for text colors are: ,, 
+,, ,, ,,
+,, ,, ,, ,,
+,, , (default body color/often black) and ,:,You can also add 50% opacity for black or white text with the , or , classes:,The classes for background colors are: ,, ,, ,, ,, ,, ,, , and ,.,Note that background colors do not set the text color, so in some cases you'll want to use them together with a , 
+color class.",,,
+Bootstrap 5 ,Jumbotron,Bootstrap 5 Jumbotron,Example,"A jumbotron was introduced in Bootstrap 3 as a big padded box for calling extra attention to some special content or information.,Jumbotrons are no longer supported in Bootstrap 5. ,, you can use a , element and add special helper classes together with a color 
+class to achieve the same effect:",,"
+  <div class=""mt-4 p-5 bg-primary text-white rounded"">,  <h1>Jumbotron 
+  Example</h1> ,  <p>Lorem ipsum...</p> ,</div>",
+Bootstrap 5 ,Text/Typography,"Bootstrap 5 Default Settings,<h1> - <h6>,Display Headings,<small>,<mark>,<abbr>,<blockquote>,<dl>,<code>,<kbd>,<pre>,More Typography Classes","Example,Example,Example,Example,Example,Example,Example,Example,Example,Example,Example","Bootstrap 5 uses a default 
+, of 1rem (16px by default), and its  
+, is 1.5.,In addition, all , elements have 
+, and , (16px by default).,Bootstrap 5 styles HTML headings (, to
+,)  with a bolder font-weight and 
+a responsive font-size.,You can also use , to , classes on other elements to make them behave as headings if you want:,Display headings are used to stand out more than normal headings (larger 
+font-size and lighter font-weight), and there 
+are six classes to choose from: , to ,:,In Bootstrap 5 the HTML , element 
+(and the , class) is used to create a smaller, secondary text in any heading:,Bootstrap 5 will style , and , 
+with a yellow background color and some padding:,Bootstrap 5 will style the HTML , element 
+with a dotted border bottom and a cursor with question mark on hover:,Add the , class to a , 
+when quoting blocks of content from another source. And when naming a source, like ""from WWF's website"", use the , class:,Bootstrap 5 will style the HTML , element in the following way:,Bootstrap 5 will style the HTML , element in the following way:,Bootstrap 5 will style the HTML , element in the following way:,Bootstrap 5 will style the HTML , element in the following way:,The Bootstrap 5 classes below can be added to style HTML elements further:",,"
+  <p class=""h1"">h1 Bootstrap heading</p>,<p class=""h2"">h2 Bootstrap 
+  heading</p>,<p class=""h3"">h3 Bootstrap heading</p>,<p class=""h4"">h4 
+  Bootstrap heading</p>,<p class=""h5"">h5 Bootstrap heading</p>,<p 
+  class=""h6"">h6 Bootstrap heading</p>",
+Bootstrap 5 ,Images,"Image Shapes,Rounded Corners,Circle,Thumbnail,Aligning Images,Centered Image,Responsive Images","Example,Example,Example,Example,Example,Example","The , class adds rounded corners to an image:,The , class shapes the image to a circle:,The , class shapes the image to a thumbnail 
+(bordered):,Float an image to the left with the , class or to the right with ,:,Center an image by adding the utility classes , (margin:auto) and , (display:block) to the image:,Images come in all sizes. So do screens. Responsive images automatically 
+adjust to fit the size of the screen. ,Create responsive images by adding an , class 
+to the , tag. The image will then scale nicely to the parent element.,The , class applies , and 
+, to the image:",,"
+ <img src=""cinqueterre.jpg"" class=""rounded"" alt=""Cinque Terre"">,
+ <img src=""cinqueterre.jpg"" class=""rounded-circle"" alt=""Cinque Terre"">,
+ <img src=""cinqueterre.jpg"" class=""img-thumbnail"" alt=""Cinque Terre"">,
+  <img src=""paris.jpg"" class=""float-start""> ,<img src=""paris.jpg"" 
+  class=""float-end""> ,
+  <img src=""paris.jpg"" class=""mx-auto d-block"">,
+<img class=""img-fluid"" src=""ny.jpg"" alt=""New York""> ",
+Bootstrap 5 ,Grids,"Bootstrap 5 Grid System,Grid Classes,Basic Structure of a Bootstrap 5 Grid,Three Equal Columns,Responsive Columns,Two Unequal Responsive Columns","Example,Example,Example","Bootstrap's grid system is built with flexbox and allows up to 12 columns across the page.,If you do not want to use all 12 columns individually, you can group the 
+columns together to create wider columns:,The grid system is responsive, and the columns will re-arrange automatically depending on the screen size.,Make sure that the sum adds up to 12 or fewer (it is not required that you 
+use all 12 available columns).,The Bootstrap 5 grid system has six classes:,The classes above can be combined to create more dynamic and flexible layouts., Each class scales up, so if you want to set the same widths for 
+, and ,, you only need to specify ,.,The following is a basic structure of a Bootstrap 5 grid:,First example: create a row (,). Then, add the desired number of columns (tags with appropriate 
+, classes). The first star (*) 
+represents the responsiveness: sm, md, lg, xl or xxl, while the second star 
+represents a number, which should add up to 12 for each row.,Second example: instead of adding a number to each ,, let bootstrap handle 
+the layout, to create equal width columns: two , elements = 50% width to 
+each col, while three cols = 33.33% width to each col. Four cols = 25% width, etc. You 
+can also use , to make the columns responsive.,Below we have collected some examples of basic Bootstrap 5 grid layouts.,The following example shows how to create three equal-width columns, on all 
+devices and screen widths:,The following example shows how to create four equal-width columns starting at tablets and scaling to 
+extra large desktops. ,:,The following example shows how to get two various-width columns starting at 
+tablets and scaling to large extra desktops:"," (extra small devices - screen width less than 576px), (small devices - screen width equal to or greater than 576px), (medium devices - screen width equal to or greater than 768px), (large devices - screen width equal to or greater than 992px), (xlarge devices - screen width equal to or greater than 1200px), (xxlarge devices - screen width equal to or greater than 1400px)","
+   <!-- Control the column width, and how they should appear on different 
+   devices -->,<div class=""row"">,  <div class=""col-*-*""></div>,  
+   <div class=""col-*-*""></div>,</div>,<div class=""row"">,  <div class=""col-*-*""></div>,  <div class=""col-*-*""></div>,  <div class=""col-*-*""></div>,</div>,
+   ,<!-- Or let Bootstrap automatically handle the layout -->,<div class=""row"">,  <div class=""col""></div>,  <div class=""col""></div>,  <div class=""col""></div>,</div>,
+ <div class=""row"">,  <div class=""col"">.col</div>,  <div class=""col"">.col</div>,  <div class=""col"">.col</div>,</div>,
+ <div class=""row"">,  <div class=""col-sm-3"">.col-sm-3</div>,  <div class=""col-sm-3"">.col-sm-3</div>,  <div class=""col-sm-3"">.col-sm-3</div>,  
+  <div class=""col-sm-3"">.col-sm-3</div>,</div>,
+ <div class=""row"">,  <div class=""col-sm-4"">.col-sm-4</div>,  <div class=""col-sm-8"">.col-sm-8</div>,</div>",
+Bootstrap 5 ,Tables,"Basic Table,Striped Rows,Bordered Table,Hover Rows,Black/Dark Table,Dark Striped Table,Hoverable Dark Table,Borderless Table,Contextual Classes,Table Head Colors,Small table,Responsive Tables","Example,Example,Example,Example,Example,Example,Example,Example,Example,Example,Example,Example,Example","A basic Bootstrap 5 table has a light padding and horizontal dividers.,The , class adds basic styling to a table:,The , class adds zebra-stripes to a table:,The , class adds borders on all sides of the table and cells:,The , class adds a hover effect (grey background color) on table rows:,The , class adds a black background to the table:,Combine , and , to create a dark, striped table:,The , class adds a hover effect (grey background color) on table rows:,The , class removes borders from the table:, can be used to color the whole table (,),  
+the table rows (,) or table cells (,).,The contextual classes that can be used are:,You can also use any of the contextual classes to only add a background color to the table header:,The , class makes the table smaller by cutting cell padding in half:,The , class adds a scrollbar 
+to the table when needed (when it is too big horizontally):,You can also decide when the table should get a scrollbar, depending on the screen width:",,"
+ <div class=""table-responsive"">,  <table class=""table"">,    ...,  </table>,</div> ,
+ <div class=""table-responsive-sm"">,  <table class=""table"">,    ...,  </table>,</div> ",
+Bootstrap 5 ,Containers,"Bootstrap 5 Containers,Fixed Container,Fluid Container,Container Padding,Container Border and Color,Responsive Containers,Did You Know?","Example,Example,Example,Example,Example","You learned from the previous chapter that Bootstrap requires a containing 
+element to wrap site contents.,Containers are used to pad the content inside 
+of them, and there are two container classes available:,Use the , class to create a responsive, fixed-width container.,Note that its width (,) will change on different screen sizes:,Open the example below and resize the browser window to see that the container width will change at different breakpoints:,Use the , class to create a full width container, that will always span the entire width of the screen (, is always ,):,By default, containers have left and right padding, with no top or bottom padding. Therefore, we often use ,, such as extra padding and margins to make them look even better. For example, , means ""add a large ,"":,Other utilities, such as borders and colors, are also often used together with containers:,You can also use the , classes to determine when the container should be responsive.,The , of the container will change on different screen sizes/viewports:,W3.CSS is an excellent alternative to Bootstrap 5.,If you want to learn W3.CSS, go to our ,.",,"
+  <div class=""container"">,  <h1>My First Bootstrap Page</h1>,  <p>This is some text.</p> ,</div>,
+  <div class=""container-fluid"">,  <h1>My First Bootstrap Page</h1>,  <p>This is some text.</p> ,</div>,
+  <div class=""container pt-5""></div>,
+  <div class=""container p-5 my-5 border""></div>,<div class=""container 
+  p-5 my-5 bg-dark 
+  text-white""></div>,<div class=""container p-5 my-5 bg-primary 
+  text-white""></div>,
+  <div class=""container-sm"">.container-sm</div>,<div 
+  class=""container-md"">.container-md</div>,<div 
+  class=""container-lg"">.container-lg</div>,<div 
+  class=""container-xl"">.container-xl</div>,<div 
+  class=""container-xxl"">.container-xxl</div>",
+Bootstrap 5 ,Get Started,"What is Bootstrap?,Bootstrap Versions,Why Use Bootstrap?,Where to Get Bootstrap 5?,Bootstrap 5 CDN,Downloading Bootstrap 5,Create Your First Web Page With Bootstrap 5,Two Basic Bootstrap 5 Pages","Bootstrap 5 Example,MaxCDN:,Container Example,Container Fluid Example","Bootstrap 5 (released 2021) is the newest version of , 
+(released 2013); with new components, faster stylesheet and more responsiveness.,Bootstrap 5 supports the latest, stable releases of all major browsers and 
+platforms. However, Internet Explorer 11 and down is not supported.,The main differences between Bootstrap 5 and Bootstrap 3 & 4, is that 
+Bootstrap 5 has switched to vanilla JavaScript instead of jQuery.,Advantages of Bootstrap:,There are two ways to start using Bootstrap 5 on your own web site.,You can:,If you don't want to download and host Bootstrap 5 yourself, you can include it from a CDN (Content Delivery Network). ,jsDelivr provides CDN support for Bootstrap's CSS and JavaScript:,If you want to download and host Bootstrap 5 yourself, go to
+,, 
+and follow the instructions there.,Bootstrap 5 uses HTML elements and CSS properties that require
+the HTML5 doctype.,Always include the HTML5 doctype at the beginning of 
+the page, along with the lang attribute and the correct title and character set:,Bootstrap 5 is designed to be responsive to mobile devices. Mobile-first styles are 
+part of the core framework.,To ensure proper rendering and touch zooming, add the following , tag inside the 
+, element:,The , part sets the width of the page to follow the screen-width 
+of the device (which will vary depending on the device).,The , part sets the initial zoom level when the page is first loaded 
+by the browser.,Bootstrap 5 also requires a containing element to wrap site contents. ,There are two container classes to choose from:,The following example shows the code for a basic Bootstrap 5 page (with a responsive fixed width container):,The following example shows the code for a basic Bootstrap 5 page (with a full width container):","Bootstrap is a free front-end framework for faster and easier web development,Bootstrap includes HTML and CSS based design templates for typography, forms, buttons, tables, navigation, modals, image carousels and many other, as well as optional JavaScript plugins,Bootstrap also gives you the ability to easily create responsive designs, Anybody with just basic knowledge of HTML and CSS can start using Bootstrap, Bootstrap's responsive CSS adjusts to phones, tablets, and desktops, In Bootstrap, mobile-first styles are part of the core framework, Bootstrap 5 is compatible with all modern browsers (Chrome, Firefox, Edge, Safari, and Opera).
+  , that if you need support for IE11 and down, you must use 
+  either BS4 or BS3.,Include Bootstrap 5 from a CDN,Download Bootstrap 5 from getbootstrap.com","
+  <div class=""container-fluid p-5 bg-primary text-white text-center"">,  
+  <h1>My First Bootstrap Page</h1>,  <p>Resize this responsive page to 
+  see the effect!</p> ,</div>,<div class=""container mt-5"">,  <div 
+  class=""row"">,    <div class=""col-sm-4"">,      
+  <h3>Column 1</h3>,      <p>Lorem ipsum dolor sit 
+  amet, consectetur adipisicing elit...</p>,      
+  <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>,    
+  </div>,    <div class=""col-sm-4"">,      
+  <h3>Column 2</h3>,      <p>Lorem ipsum dolor sit 
+  amet, consectetur adipisicing elit...</p>,      
+  <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>,    
+  </div>,    <div class=""col-sm-4"">,      
+  <h3>Column 3</h3> ,      <p>Lorem ipsum dolor sit 
+  amet, consectetur adipisicing elit...</p>,      
+  <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>,    
+  </div>,  </div>,</div>,
+ <!-- Latest compiled and minified CSS -->,<link 
+  href=""https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"" 
+  rel=""stylesheet"">,
+ ,<!-- Latest compiled JavaScript -->,<script 
+  src=""https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js""></script>,
+<!DOCTYPE html>,<html lang=""en"">,  <head>,    
+  <title>Bootstrap 5 Example</title>,    <meta charset=""utf-8""> ,  </head>,</html>,
+<meta name=""viewport"" content=""width=device-width, initial-scale=1"">,
+  <!DOCTYPE html>,<html lang=""en"">,<head>,  <title>Bootstrap 
+  Example</title>,  <meta charset=""utf-8"">,  <meta 
+  name=""viewport"" content=""width=device-width, initial-scale=1"">,  <link 
+  href=""https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"" 
+  rel=""stylesheet"">,  <script 
+  src=""https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js""></script>,
+  </head>,<body>,<div class=""container"">,  <h1>My First 
+  Bootstrap Page</h1>,  <p>This part is inside a .container class.</p>
+  ,  <p>The .container class provides a responsive fixed width 
+  container.</p> ,</div>,
+  ,</body>,</html>,
+  <!DOCTYPE html>,<html lang=""en"">,<head>,  <title>Bootstrap 
+  Example</title>,  <meta charset=""utf-8"">,  <meta 
+  name=""viewport"" content=""width=device-width, initial-scale=1"">,  <link 
+  href=""https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"" 
+  rel=""stylesheet"">,  <script 
+  src=""https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js""></script>,
+  </head>,<body>,<div class=""container-fluid"">,  <h1>My First 
+  Bootstrap Page</h1>,  <p>This part is inside a .container-fluid 
+  class.</p>,  <p>The .container-fluid class provides a full width 
+  container, spanning the entire width of the viewport.</p> ,</div>,</body>,</html>",

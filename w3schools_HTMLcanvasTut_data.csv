@@ -1,0 +1,707 @@
+H1_leftside_heading,H1_rightside_heading,H2,H3,All_para,li,div,div_2
+HTML Canvas ,Drawing,"Draw on the Canvas With JavaScript,Step 1: Find the Canvas Element,Step 2: Create a Drawing Object,Step 3: Draw on the Canvas",Example,"All drawing on the HTML canvas must be done with JavaScript:,First of all, you must find the <canvas> element.,This is done by using the HTML DOM method getElementById():,Secondly, you need a drawing object for the canvas.,The getContext() is a built-in HTML object, with properties and methods for 
+drawing:,Finally, you can draw on the canvas.,Set the fill style of the drawing object to the color red:,The fillStyle property can be a CSS color, a gradient, or a pattern. The default fillStyle is black.,The fillRect(,) method draws a rectangle, filled with the fill style, on the canvas:",,"
+ <script>,var canvas = document.getElementById(""myCanvas"");,
+var ctx = canvas.getContext(""2d"");,
+ctx.fillStyle = ""#FF0000"";,
+ctx.fillRect(0, 0, 150, 75);,</script>,
+",
+HTML Canvas ,Gradients,"Canvas - Gradients,Using createLinearGradient(),Using createRadialGradient():","Example,Example","Gradients can be used to fill rectangles, circles, lines, text, etc. Shapes 
+on the canvas are not limited to solid colors.,There are two different types of gradients:,Once we have a gradient object, we must add two or more color stops.,The addColorStop() method specifies the color stops, and its position along 
+the gradient. Gradient positions can be anywhere between 0 to 1.,To use the gradient, set the fillStyle or strokeStyle property to the 
+gradient, then draw the shape (rectangle, text, or a line).","createLinearGradient(,) - creates a linear gradient,createRadialGradient(,) - creates a radial/circular gradient",,
+HTML Canvas ,Text,"Drawing Text on the Canvas,Using fillText(),Using strokeText(),Add Color and Center Text","Example,Example,Example","To draw text on a canvas, the most important property and methods are:","font - defines the font properties for the text,fillText(,) - draws ""filled"" text on the canvas,strokeText(,) - draws text on the canvas (no fill)",,
+SVG ,Examples,"Try-it Yourself Examples,SVG Examples",,"The examples below embed the SVG code directly into the HTML code.,This is supported by Firefox, Internet Explorer 9, Google Chrome, Opera, and 
+Safari.,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+",,,
+SVG ,Reference,SVG Elements,,,,,
+HTML Canvas, Coordinates,"Canvas Coordinates,Coordinates Example,Draw a Line,Draw a Circle","Example,Example","The HTML canvas is a two-dimensional grid.,The upper-left corner of the canvas has the coordinates (0,0),In the previous chapter, you saw this method used: fillRect(0,0,150,75).,This means: Start at the upper-left corner (0,0) and draw a 150x75 pixels rectangle.,Mouse over the rectangle below to see its x and y coordinates:,To draw a straight line on a canvas, use the following methods:,To actually draw the line, you must use one of the ""ink"" methods, like stroke().,To draw a circle on a canvas, use the following methods:","moveTo(,) - defines the starting point of the line,lineTo(,) - defines the ending point of the line,beginPath() - begins a path,arc(x,y,r,startangle,endangle) - creates an arc/curve. To create a circle with arc(): Set start angle to 0 and end angle to 2*Math.PI. The x and y parameters define the x- and y-coordinates of the center of the circle. The r parameter defines the radius of the circle.
+ ",,
+HTML Canvas ,Tutorial,"What is HTML Canvas?,Browser Support,HTML Canvas Can Draw Text,HTML Canvas Can Draw Graphics,HTML Canvas Can be Animated,HTML Canvas Can be Interactive,HTML Canvas Can be Used in Games,Canvas Example",Example,"The HTML <canvas> element is used to draw graphics on a web page.,The graphic above is created with <canvas>.,It shows four elements: a red rectangle, a gradient rectangle,
+a multicolor rectangle, and a multicolor text.,The HTML <canvas> element is used to draw graphics, on the fly, via scripting (usually JavaScript).,The <canvas> element is only a container for graphics. You must use a script to actually draw the graphics.,Canvas has several methods for drawing paths, boxes, circles, text, and adding images.,The numbers in the table specify the first browser version that fully supports the 
+<canvas> element.,Canvas can draw colorful text, with or without animation. ,Canvas has great features for graphical data presentation with an imagery of 
+graphs and charts. ,Canvas objects can move. Everything is possible: from simple bouncing balls 
+to complex animations.,Canvas can respond to 
+JavaScript events.,Canvas can respond to any user action (key clicks, mouse 
+clicks, button clicks, finger movement).,Canvas' methods for animations, offer a lot of possibilities for HTML gaming 
+applications.,In HTML, a <canvas> element looks like this:,The <canvas> element must have an id attribute so it can be referred to by JavaScript.,The width and height attribute is necessary to define the size of the canvas., You can have multiple <canvas> elements on one HTML page.,To add a border, use a style attribute:,The next chapters show how to draw on the canvas.",,"
+<canvas id=""myCanvas"" width=""200"" height=""100""></canvas>,
+<canvas id=""myCanvas"" width=""200"" height=""100""
+style=""border:1px solid 
+#000000;""></canvas>
+",
+SVG Gradients - ,Radial,"SVG Radial Gradient - <radialGradient>,Example 1,Example 2","Example,Example","The <radialGradient> element is used to define a radial gradient.,The <radialGradient> element must be nested within a <defs> tag. The <defs> tag is short 
+for definitions and contains definition of special 
+elements (such as gradients).,Define an ellipse with a radial gradient from white to blue:,Here is the SVG code:,Define another ellipse with a radial gradient from white to blue:,Here is the SVG code:","The id attribute of the <radialGradient> tag defines a unique name for the gradient,The cx, cy and r attributes define the outermost 
+  circle and the fx and fy define the innermost circle,The color range for a gradient can be composed of two or more colors. Each color 
+  is specified with a <stop> tag. The offset attribute is used to define where the gradient color begin and end,The fill attribute links the ellipse element to the gradient","
+ <svg height=""150"" width=""500"">,
+ 
+<defs>,
+   
+<radialGradient id=""grad1"" cx=""50%"" cy=""50%"" r=""50%""
+fx=""50%"" fy=""50%"">,
+     
+<stop offset=""0%"" style=""stop-color:rgb(255,255,255);,
+      stop-opacity:0"" />,
+     
+<stop offset=""100%"" style=""stop-color:rgb(0,0,255);stop-opacity:1"" />,
+   
+</radialGradient>,
+ 
+</defs>,
+ 
+<ellipse cx=""200"" cy=""70"" rx=""85"" ry=""55""
+fill=""url(#grad1)"" />,
+</svg>
+,
+ <svg height=""150"" width=""500"">,
+ 
+<defs>,
+   
+<radialGradient id=""grad2"" cx=""20%"" cy=""30%"" r=""30%"" fx=""50%"" fy=""50%"">,
+     
+<stop offset=""0%"" style=""stop-color:rgb(255,255,255);,
+      stop-opacity:0"" />,
+     
+<stop offset=""100%"" style=""stop-color:rgb(0,0,255);stop-opacity:1"" />,
+   
+</radialGradient>,
+ 
+</defs>,
+ 
+<ellipse cx=""200"" cy=""70"" rx=""85"" ry=""55"" fill=""url(#grad2)"" />,
+</svg>
+",
+SVG Gradients - ,Linear,"SVG Gradients,SVG Linear Gradient - <linearGradient>,Example 1,Example 2,Example 3","Example,Example,Example","A gradient is a smooth transition from one color to another. In addition, 
+several color transitions can be applied to the same element.,There are two main types of gradients in SVG:,The <linearGradient> element is used to define a linear gradient.,The <linearGradient> element must be nested within a <defs> tag. The <defs> tag is short 
+for definitions and contains definition of special elements (such as gradients).,Linear gradients can be defined as horizontal, vertical or angular gradients:,Define an ellipse with a horizontal linear gradient from yellow to red:,Here is the SVG code:,Define an ellipse with a vertical linear gradient from yellow to red:,Here is the SVG code:,Define an ellipse with a horizontal linear gradient from yellow to red, and add a text inside the ellipse:,Here is the SVG code:","Linear,Radial,Horizontal gradients are created when y1 and y2 are equal and x1 and x2 differ,Vertical gradients are created when x1 and x2 are equal and y1 and y2 differ,Angular gradients are created when x1 and x2 differ and y1 and y2 differ,The id attribute of the <linearGradient> tag defines a unique name for the gradient,The x1, x2, y1,y2 attributes of the <linearGradient> tag define the start and end position of the gradient,The color range for a gradient can be composed of two or more colors. Each color is specified with a <stop> 
+  tag. The offset attribute is used to define where the gradient color begin and end,The fill attribute links the ellipse element to the gradient,The <text> element is used to add a text","
+ <svg height=""150"" width=""400"">,
+ 
+<defs>,
+   
+<linearGradient id=""grad1"" x1=""0%"" y1=""0%"" x2=""100%"" y2=""0%"">,
+     
+<stop offset=""0%"" style=""stop-color:rgb(255,255,0);stop-opacity:1"" />,
+     
+<stop offset=""100%"" style=""stop-color:rgb(255,0,0);stop-opacity:1"" />,
+   
+</linearGradient>,
+ 
+</defs>,
+ 
+<ellipse cx=""200"" cy=""70"" rx=""85"" ry=""55""
+fill=""url(#grad1)"" />,
+</svg>
+,
+ <svg height=""150"" width=""400"">,
+ 
+<defs>,
+   
+<linearGradient id=""grad2"" x1=""0%"" y1=""0%"" x2=""0%"" y2=""100%"">,
+     
+<stop offset=""0%"" style=""stop-color:rgb(255,0,0);stop-opacity:1"" />,
+     
+<stop offset=""100%"" style=""stop-color:rgb(255,255,0);stop-opacity:1"" />,
+   
+</linearGradient>,
+ 
+</defs>,
+ 
+<ellipse cx=""200"" cy=""70"" rx=""85"" ry=""55"" fill=""url(#grad2)"" />,
+</svg>
+,
+ <svg height=""150"" width=""400"">,
+ 
+<defs>,
+   
+<linearGradient id=""grad3"" x1=""0%"" y1=""0%"" x2=""100%"" y2=""0%"">,
+     
+<stop offset=""0%"" style=""stop-color:rgb(255,255,0);stop-opacity:1"" />,
+     
+<stop offset=""100%"" style=""stop-color:rgb(255,0,0);stop-opacity:1"" />,
+   
+</linearGradient>,
+ 
+</defs>,
+ 
+<ellipse cx=""200"" cy=""70"" rx=""85"" ry=""55""
+fill=""url(#grad3)"" />,
+  <text fill=""#ffffff"" font-size=""45"" font-family=""Verdana"" x=""150"" y=""86"">,
+  SVG</text>,
+</svg>
+",
+SVG ,Drop Shadows,"<defs> and <filter>,SVG <feOffset>,Example 1,Example 2,Example 3,Example 4","Example,Example,Example,Example","All SVG filters are defined within a <defs> element. The <defs> element is short 
+for definitions and contains definition of special elements (such as filters).,The <filter> element is used to define an SVG filter. The <filter> element has a 
+required id attribute which identifies the filter. The graphic then points to the filter to use.,The <feOffset> element is used to create drop shadow effects. The idea 
+is to take an SVG graphic (image or element) and move it a little bit in the xy plane.,The first example offsets a rectangle (with <feOffset>), then blend the original on top of the offset image (with <feBlend>):,Here is the SVG code:,Now, the offset image can be blurred (with <feGaussianBlur>):,Here is the SVG code:,Now, make the shadow black:,Here is the SVG code:,Now, treat the shadow as a color:,Here is the SVG code:","The id attribute of the <filter> element defines a unique name for the filter,The filter attribute of the <rect> element links the element to the ""f1"" filter,The stdDeviation attribute of the <feGaussianBlur> element defines the amount of the blur,The in attribute of the <feOffset> element is changed to ""SourceAlpha"" 
+  which uses the Alpha channel for the blur instead of the entire RGBA pixel,The <feColorMatrix> filter is used to transform the colors in the offset image closer to black. The three values of '0.2' in 
+  the matrix all get multiplied by the red, green and blue channels. Reducing their values brings the colors closer to black (black is 0)","
+<svg height=""120"" width=""120"">,
+  <defs>,
+    <filter id=""f1"" x=""0"" y=""0"" width=""200%"" height=""200%"">,
+      <feOffset result=""offOut"" in=""SourceGraphic"" dx=""20"" 
+dy=""20"" />,
+      <feBlend in=""SourceGraphic"" in2=""offOut"" 
+mode=""normal"" />,
+    </filter>,
+  </defs>,
+  <rect width=""90"" height=""90"" stroke=""green"" stroke-width=""3"",
+  fill=""yellow"" filter=""url(#f1)"" />,
+</svg>
+,
+<svg height=""140"" width=""140"">,
+  <defs>,
+    <filter id=""f2"" x=""0"" y=""0"" width=""200%"" height=""200%"">,
+      <feOffset result=""offOut"" in=""SourceGraphic"" dx=""20"" 
+dy=""20"" />,
+      <feGaussianBlur result=""blurOut"" in=""offOut"" 
+stdDeviation=""10"" />,
+      <feBlend in=""SourceGraphic"" in2=""blurOut"" 
+mode=""normal"" />,
+    </filter>,
+  </defs>,
+  <rect width=""90"" height=""90"" stroke=""green"" stroke-width=""3"",
+  fill=""yellow"" filter=""url(#f2)"" />,
+</svg>
+,
+<svg height=""140"" width=""140"">,
+  <defs>,
+    <filter id=""f3"" x=""0"" y=""0"" width=""200%"" height=""200%"">,
+      <feOffset result=""offOut"" in=""SourceAlpha"" dx=""20"" 
+dy=""20"" />,
+      <feGaussianBlur result=""blurOut"" in=""offOut"" 
+stdDeviation=""10"" />,
+      <feBlend in=""SourceGraphic"" in2=""blurOut"" 
+mode=""normal"" />,
+    </filter>,
+  </defs>,
+  <rect width=""90"" height=""90"" stroke=""green"" stroke-width=""3"",
+  fill=""yellow"" filter=""url(#f3)"" />,
+</svg>
+,
+<svg height=""140"" width=""140"">,
+  <defs>,
+    <filter id=""f4"" x=""0"" y=""0"" width=""200%"" height=""200%"">,
+      <feOffset result=""offOut"" in=""SourceGraphic"" dx=""20"" 
+dy=""20"" />,
+      <feColorMatrix result=""matrixOut"" in=""offOut"" 
+type=""matrix"",
+      values=""0.2 0 0 0 0 0 0.2 0 0 0 0 0 0.2 0 0 0 0 0 
+1 0"" />,
+      <feGaussianBlur result=""blurOut"" in=""matrixOut"" 
+stdDeviation=""10"" />,
+      <feBlend in=""SourceGraphic"" in2=""blurOut"" 
+mode=""normal"" />,
+    </filter>,
+  </defs>,
+  <rect width=""90"" height=""90"" stroke=""green"" stroke-width=""3"",
+  fill=""yellow"" filter=""url(#f4)"" />,
+</svg>
+",
+SVG , Blur Effects,"<defs> and <filter>,SVG <feGaussianBlur>,Example 1",Example,"All internet SVG filters are defined within a <defs> element. The <defs> element is short 
+for definitions and contains definition of special elements (such as filters).,The <filter> element is used to define an SVG filter. The <filter> element has a 
+required id attribute which identifies the filter. The graphic then points to the filter to use.,The <feGaussianBlur> element is used to create blur effects:,Here is the SVG code:","The id attribute of the <filter> element defines a unique name for the filter,The blur effect is defined with the <feGaussianBlur> element,The in=""SourceGraphic"" part defines that the effect is created for the entire element,The stdDeviation attribute defines the amount of the blur,The filter attribute of the <rect> element links the element to the ""f1"" filter","
+<svg height=""110"" width=""110"">,
+  <defs>,
+    <filter id=""f1"" x=""0"" y=""0"">,
+      <feGaussianBlur in=""SourceGraphic"" stdDeviation=""15"" 
+/>,
+    </filter>,
+  </defs>,
+  <rect width=""90"" height=""90"" stroke=""green"" stroke-width=""3"",  fill=""yellow"" filter=""url(#f1)"" />,
+</svg>
+",
+SVG ,Filters,"SVG Filters,Browser Support,SVG Filter Elements",,"SVG Filters are used to add special effects to SVG graphics.,The numbers in the table specify the first browser version that supports SVG filters.,In the next chapters, we will only demonstrate a touch of the filter effects 
+that are possible - and give you an idea of what can be done with SVG.,The available filter elements in SVG are:","<feBlend> - filter for combining images,<feColorMatrix> - filter for color transforms,<feComponentTransfer>,<feComposite>,<feConvolveMatrix>,<feDiffuseLighting>,<feDisplacementMap>,<feFlood>,<feGaussianBlur>,<feImage>,<feMerge>,<feMorphology>,<feOffset> - filter for drop shadows,<feSpecularLighting>,<feTile>,<feTurbulence>,<feDistantLight> - filter for lighting,<fePointLight> - filter for lighting,<feSpotLight> - filter for lighting",,
+SVG ,Stroke Properties,"SVG Stroke Properties,SVG stroke Property,SVG stroke-width Property,SVG stroke-linecap Property,SVG stroke-dasharray Property","Example,Example,Example,Example","SVG offers a wide range of stroke properties. In this chapter we will look at the following:,All the stroke properties can be applied to any kind of lines, text and outlines of elements like a circle.,The stroke property defines the color of a line, text or outline of an element:,Here is the SVG code:,The stroke-width property defines the thickness of a line, text or outline of an element:,Here is the SVG code:,The stroke-linecap property defines different types of endings to an open path:,Here is the SVG code:,The stroke-dasharray property is used to create dashed lines:,Here is the SVG code:","stroke,stroke-width,stroke-linecap,stroke-dasharray","
+<svg height=""80"" width=""300"">,
+  <g fill=""none"">,
+    <path stroke=""red"" d=""M5 20 l215 0"" />,
+    <path stroke=""black"" d=""M5 40 l215 0"" />,
+    <path stroke=""blue"" d=""M5 60 l215 0"" />,
+  </g>,
+</svg>
+,
+<svg height=""80"" width=""300"">,
+  <g fill=""none"" stroke=""black"">,
+    <path stroke-width=""2"" d=""M5 20 l215 0"" />,
+    <path stroke-width=""4"" d=""M5 40 l215 0"" />,
+    <path stroke-width=""6"" d=""M5 60 l215 0"" />,
+  </g>,
+</svg>
+,
+<svg height=""80"" width=""300"">,
+  <g fill=""none"" stroke=""black"" stroke-width=""6"">,
+    <path stroke-linecap=""butt"" d=""M5 20 l215 0"" />,
+    <path stroke-linecap=""round"" d=""M5 40 l215 0"" />,
+    <path stroke-linecap=""square"" d=""M5 60 l215 0"" />,
+  </g>,
+</svg>
+,
+<svg height=""80"" width=""300"">,
+  <g fill=""none"" stroke=""black"" stroke-width=""4"">,
+    <path stroke-dasharray=""5,5"" d=""M5 20 l215 0"" />,
+    <path stroke-dasharray=""10,10"" d=""M5 40 l215 0"" />,
+    <path stroke-dasharray=""20,10,5,5,5,10"" d=""M5 60 l215 0"" />,
+  </g>,
+</svg>
+",
+SVG ,<text>,"SVG Text - <text>,Example 1,Example 2,Example 3,Example 4","Example,Example,Example,Example","The <text> element is used to define a text.,Write a text:,Here is the SVG code:,Rotate the text:,Here is the SVG code:,The <text> element can be arranged in any number of sub-groups with the <tspan> 
+element. Each <tspan> element can contain different formatting and position.,Text on several lines (with the <tspan> element):,Here is the SVG code:,Text as a link (with the <a> element):,Here is the SVG code:",,"
+<svg height=""30"" width=""200"">,
+ 
+<text x=""0"" y=""15"" fill=""red"">I 
+love SVG!</text>,
+</svg>
+,
+<svg height=""60"" width=""200"">,
+ 
+<text x=""0"" y=""15"" fill=""red"" 
+transform=""rotate(30 20,40)"">I 
+love SVG</text>,
+</svg>
+,
+<svg height=""90"" width=""200"">,
+  <text x=""10"" y=""20"" style=""fill:red;"">Several lines:,
+    <tspan x=""10"" y=""45"">First line.</tspan>,
+    <tspan x=""10"" y=""70"">Second line.</tspan>,
+  </text>,
+</svg>
+,
+<svg height=""30"" width=""200""
+xmlns:xlink=""http://www.w3.org/1999/xlink"">,
+  <a xlink:href=""https://www.w3schools.com/graphics/"" 
+target=""_blank"">,
+    <text x=""0"" y=""15"" fill=""red"">I love SVG!</text>,
+  </a>,
+</svg>
+",
+Game Movement,,"How to Move Objects?,Making Turns,Use the Keyboard","Example,Example,Example","With the new way of drawing components, explained in the Game Rotation chapter, the movements are more flexible.,Add a , property to the , constructor, which represents the current speed of the component.,Also make some changes in the , method, to calculate the 
+position of the component, based on , and ,.,By default, the components are facing up, and by setting the speed 
+property to 1, the component will start moving forward.,We also want to be able to make left and right turns. Make a new 
+property called ,, which indicates the current moving 
+value, or rotation angle. In the , method calculate the
+, based on the , property:,How does the red square move when using the keyboard?
+Instead of moving up and down, and from side to side, the red square moves forward when you use the ""up"" arrow,
+and turns left and right when pressing the left and right arrows.",,,
+HTML Graphics,,"Google Maps,SVG,HTML Canvas",," lets you embed maps in HTML.,The , allows vector based graphics in HTML:,The , can be used to draw graphics on a web page:",,,
+SVG ,<path>,"SVG Path - <path>,Example 1,Example 2","Example,Example","The <path> element is used to define a path.,The following commands are available for path data:, All of the commands above can also be expressed with lower 
+letters. Capital letters means absolutely positioned, lower cases means relatively positioned.,The example below defines a path that starts at position 150,0 with a line to position 75,200 
+then from there, a line to 225,200 and finally closing the path back to 150,0:,Here is the SVG code:,Bézier curves are used to model smooth curves that can be scaled 
+indefinitely. Generally, the user selects two endpoints and one or two control 
+points. A Bézier curve with one control point is called a quadratic Bézier curve 
+and the kind with two control points is called cubic.,The following example creates a quadratic Bézier curve, where A and C are the 
+start and end points, B is the control point:,Here is the SVG code:,Complex? YES!!!! Because of the complexity involved in drawing paths it is 
+highly recommended to use an SVG editor to create complex graphics.","M = moveto,L = lineto,H = horizontal lineto,V = vertical lineto,C = curveto,S = smooth curveto,Q = quadratic Bézier curve,T = smooth quadratic Bézier curveto,A = elliptical Arc,Z = closepath","
+ <svg height=""210"" width=""400"">,
+   <path d=""M150 0 L75 200 L225 200 Z"" />,
+ </svg>
+,
+ <svg height=""400"" width=""450"">,
+   <path id=""lineAB"" d=""M 100 350 l 150 -300"" stroke=""red"",
+   stroke-width=""3"" fill=""none"" />,
+   <path id=""lineBC"" d=""M 250 50 l 150 300"" stroke=""red"",
+   stroke-width=""3"" fill=""none"" />,
+   <path d=""M 175 200 l 150 0"" stroke=""green"" stroke-width=""3"",
+   fill=""none"" />,
+   <path d=""M 100 350 q 150 -300 300 0"" stroke=""blue"",
+   stroke-width=""5"" fill=""none"" />,
+   <!-- Mark relevant points -->,
+   <g stroke=""black"" stroke-width=""3"" fill=""black"">,
+     <circle id=""pointA"" cx=""100"" cy=""350"" r=""3"" />,
+     <circle id=""pointB"" cx=""250"" cy=""50"" r=""3"" />,
+     <circle id=""pointC"" cx=""400"" cy=""350"" r=""3"" />,
+   </g>,
+   <!-- Label the points -->,
+   <g font-size=""30"" font-family=""sans-serif"" fill=""black"" stroke=""none"",
+   text-anchor=""middle"">,
+     <text x=""100"" y=""350"" dx=""-30"">A</text>,
+     <text x=""250"" y=""50"" dy=""-10"">B</text>,
+     <text x=""400"" y=""350"" dx=""30"">C</text>,
+   </g>,
+ </svg>
+",
+Game Rotation,,"Rotating Components,The Component Constructor",Example,"The red square can rotate:,Earlier in this tutorial, the red square was able to move around on the gamearea, but it could not turn or rotate.,To rotate components, we have to change the way we draw components.,The only rotation method available for the canvas element will rotate the entire canvas:,Everything else you draw on the canvas will also be rotated, not only the specific component.,That is why we have to make some changes in the , method:,First, we save the current canvas context object:,Then we move the entire canvas to the center of the specific component, using the translate method:,Then we perform the wanted rotation using the rotate() method:,Now we are ready to draw the component onto the canvas, but now we will draw it with its center position at position 0,0 on the translated (and rotated) canvas:,When we are finished, we must restore the context object back to its saved position, using the restore method:,The component is the only thing that is rotated:,The , constructor has a new property called ,, 
+which is radian number that represents the angle of the component.,The , method of the , constructor is 
+were we draw the component, and here you can see the changes that will allow the 
+component to rotate:",,,
+Game Bouncing,,Bouncing,Example,"This red square bounces when it hits the floor:,Another functionallity we want to add is the , property.,The , property indicates if the component will bounce back when gravity makes it fall down to the ground.,The bounce property value must be a number. 0 is no bounce at all, and 1 will make the component bounce all the way backto where it start falling.",,,
+Game Gravity,,"Gravity,Hit the Bottom,Accelerate Up,A Game","Example,Example,Example,Example","Some games have forces that pulls the game component in one direction, like gravity pulls objects to the ground.,To add this functionality to our component constructor, first add a , property, which sets the current gravity.
+Then add a , property, which increases everytime we update the frame:,To prevent the red square from falling forever, stop the falling when it hits the bottom of the game area:,In a game, when you have a force that pulls you down, you should have a method to force the component to accelerate up.
+,Trigger a function when someone clicks a button, and make the red square fly up in the air: ,Make a game based on what we have learned so far:",,"
+ <script>,</script>,
+ <button onmousedown=""accelerate(-0.2)"" onmouseup=""accelerate(0.1)"">ACCELERATE</button>",
+Game Sound,,"How to Add Sounds?,Background Music","Example,Example,Example","Turn up the volume. Do you hear a ""dunk"" when the red square hits an obstacle?,Use the HTML5 <audio> element to add sound and music to your games.,In our examples, we create a new object constructor to handle sound objects:,To create a new sound object use the , constructor, and when 
+the red square hits an obstacle, play the sound:,To add background music to your game, add a new sound object, and start 
+playing when you start the game:",,,
+Game Images,,"How to Use Images?,Change Images,Background Images,Moving Background,Background Loop","Example,Example,Example,Example,Example,Example","Push the buttons to move the smiley:,To add images on a canvas, the getContext(""2d"") object has built-in image 
+properties and methods.,In our game, to create the gamepiece as an image, use the component 
+constructor, but instead of referring to a color, you must refer to the url of 
+the image. And you must tell the constructor that this component is of type 
+""image"":,In the component constructor we test if the component is of type ""image"", and 
+create an image object by using the built-in ""new Image()"" object constructor. 
+When we are ready to draw the image, we use the drawImage method instead of the fillRect method:,You can change the image whenever you like by changing the , property of the , object of your component.,If you want to change the smiley everytime it moves, change the image source when the user clicks a button, 
+and back to normal when the button is not clicked:,Add a background image to your game area by adding it as a component, and 
+also update the background in every frame:,Change the background component's , property to make the background move:,To make the same background loop forever, we must use a specific technique.,Start by telling the component constructor that this is a ,.
+The component constructor will then add the image twice, placing the second image 
+immediately after the first image.,In the , method, check if the , position of the component has reach 
+the end of the image, if it has, set the , position of the component to 0:",,,
+Game Score,,Count The Score,"Example,Example,Example","Push the buttons to move the red square:,There are many ways to keep the score in a game, we will show you how to 
+write a score onto the canvas.,First make a score component:,The syntax for writing text on a canvas element is different from drawing a rectangle.
+Therefore we must call the component constructor using an additional argument,
+telling the constructor that this component is of type ""text"".,In the component constructor we test if the component is of type ""text"", and use the 
+, method instead of the , method:,At last we add some code in the updateGameArea function that writes the score 
+onto the canvas. We use the , property to count the score:",,,
+Game Obstacles,,"Add Some Obstacles,Hit The Obstacle = Game Over,Moving Obstacle,Multiple Obstacles,Obstacles of Random Size","Example,Example,Example,Example,Example,Example","Push the buttons to move the red square:,Now we want to add some obstacles to our game.,Add a new component to the gaming area. Make it green, 10px wide, 200px high, 
+and place it 300px to the right and 120px down.,Also update the obstacle component in every frame:,In the example above, nothing happens when you hit the obstacle. In a game, 
+that is not very satisfying.,How do we know if our red square hits the obstacle?,Create a new method in the component constructor, that checks if the 
+component crashes with another component. This method should be called every 
+time the frames updates, 50 times per second.,Also add a , method to the , object, 
+which clears the 20 milliseconds interval.,The obstacle is of no danger when it is static, so we want it to move.,Change the property value of , at 
+every update:,How about adding multiple obstacles?,For that we need a property for counting frames, and a method for execute something at a given frame rate.,The everyinterval function returns true if the current framenumber 
+corresponds with the given interval.,To define multiple obstacles, first declare the obstacle variable as an 
+array.,Second, we need to make some changes in the updateGameArea function.,In the , function we must loop through every obstacle to see if 
+there is a crash. If there is a crash, the , function 
+will stop, and no more drawing is done.,The , function counts frames and adds an obstacle for every 
+150th 
+frame.,To make the game a bit more difficult, and fun, we will send in obstacles of random sizes, so that the red square must move up and down to 
+not crash.",,,
+Game Controllers,,"Get in Control,Stop Moving,Keyboard as Controller,Multiple Keys Pressed,Using The Mouse Cursor as a Controller,Touch The Screen to Control The Game,Controllers on The Canvas","Example,Example,Example,Example,Example,Example,Example,Example,Example,Example,Example,Example","Push the buttons to move the red square:,Now we want to control the red square.,Add four buttons, up, down, left, and right.,Write a function for each button to move the component in the selected 
+direction.,Make two new properties in the , constructor, and call them , 
+and ,. These properties are being used as speed indicators.,Add a function in the , constructor, called ,, which uses the , and , 
+properties to change the component's position.,The newpos function is called from the updateGameArea function before drawing 
+the component:,If you want, you can make the red square stop when you release a button.,Add a function that will set the speed indicators to 0.,To deal with both normal screens and touch screens, we will add code for both 
+devices:,We can also control the red square by using the arrow keys on the keyboard.,Create a method that checks if a key is pressed, and set the , 
+property of the , object to the key code. When the key is 
+released, set the , property to ,:,Then we can move the red square if one of the arrow keys are pressed:,What if more than one key is pressed at the same time?,In the example above, the component can only move horizontally or vertically. 
+Now we want the component to also move diagonally.,Create a , , for the , object, and insert one element 
+for each key that is pressed, and give it the value , , the 
+value remains true untill the key is no longer pressed, the value becomes , in the , event listener function:,If you want to control the red square by using the mouse cursor,
+add a method in , object that updates the x and y 
+coordinates of the mouse cursor:.,Then we can move the red square using the mouse cursor:,We can also control the red square on a touch screen.,Add a method in the , object that uses the x and y coordinates of where 
+the screen is touched:,Then we can move the red square if the user touches the screen, 
+by using the same code as we did for the mouse cursor:,We can also draw our own buttons on the canvas, and use them as controllers:,Add a new function that figures out if a component, in this case a button, is clicked.,Start by adding event listeners to check if a mouse button is clicked (, and ,). 
+To deal with touch screens, also add event listeners to check if the screen is 
+clicked on (, and ,):,Now the , object has properties that tells us the x- 
+and y-coordinates of a click. We use these properties to check if the click was 
+performed on one of our blue buttons.,The new method is called ,, it is a method of the , constructor, and it checks if the 
+component is being clicked., In the , function, we take the neccessarry actions
+if one of the blue buttons is clicked:",,,
+Game Components,,"Add a Component,Frames,Make it Move,Why Clear The Game Area?,Change the Size,Change the Color,Change the Position,Many Components,Moving Components","Example,Example,Example,Example,Example,Example,Example,Example,Example,Example","Make a component constructor, which lets you add components onto the gamearea.,The object constructor is called ,, and we make our first component, called ,:,The components have  properties and methods to control their appearances and movements.,To make the game ready for action, we will update the display 50 times per second, 
+which is much like frames in a movie. ,First, create a new function called ,.,In the , object, add an interval which will run the , function every 
+20th 
+millisecond (50 times per second). Also add a function called ,, 
+that clears the entire canvas.,In the , constructor, add a function called ,, to handle the drawing of the component.,The , function calls the , and 
+the , method.,The result is that the component is drawn and cleared 50 times per second:,To prove that the red square is being drawn 50 times per second, we will change the x position (horizontal)
+by one pixel every time we update the game area:,It might seem unnecessary to clear the game area at every update. However, if we leave out the 
+, method,
+all movements of the component will leave a trail of where it was positioned in the last frame:,You can 
+control the width and height of the component:,You can 
+control the color of the component:,You can also use other colorvalues like hex, rgb, or rgba:,We use x- and y-coordinates to position components onto the game area.,The upper-left corner of the canvas has the coordinates (0,0),Mouse over the game area below to see its x and y coordinates:,You can position the components wherever you like on the game area:,You can put as many components as you like on the game area:,Make all three components move in different directions:",,,
+Game Canvas,,"HTML Canvas,.getContext(""2d""),Get Started",Example,"The , element is perfect for making games in HTML.,The , element offers all the functionality you need for making games.,Use JavaScript to draw, write, insert images, and more, onto the ,.,The , element has a built-in object, called the , object, with methods and properties for drawing.,You can learn more about the , element, and the , object, in our ,.,To make a game, start by creating a gaming area, and make it ready for 
+drawing:,The object , will have 
+more properties and methods later in this tutorial.,The function , invokes the method , of the , object.,The , method creates a , element and inserts 
+it as the first childnode of the , element.",,,
+HTML Game Example,,Try it Yourself Examples,Example,"Learn how to make games, using nothing but HTML and JavaScript.,Push the buttons to move the red square:,With our online editor, you can edit the code, and click on a button to view the result.",,,
+Canvas ,Clock Start,"Part V - Start the Clock,Example Explained",JavaScript:,"In these chapters we build an analog clock using HTML Canvas.,To start the clock, call the drawClock function at intervals:,
+,
+,The only thing you have to do (to start the clock) is to call the drawClock 
+function at intervals.,Substitute:,With:",,,
+Canvas ,Clock Numbers,"Part III - Draw Clock Numbers,Example Explained",JavaScript:,"The clock needs numbers. Create a JavaScript function to draw clock numbers:,
+,
+,Set the font size (of the drawing object) to 15% of the radius:,Set the text alignment to the middle and the center of the print position:,Calculate the print position (for 12 numbers) to 85% of the 
+radius, rotated (PI/6) for each number:",,,
+Canvas ,Clock Hands,"Part IV - Draw Clock Hands,Example Explained",JavaScript:,"The clock needs hands. Create a JavaScript function to draw clock hands:,
+,
+,Use Date to get hour, minute, second:,Calculate the angle of the hour hand, and draw it a length (50% of radius), 
+and a width (7% of radius):,Use the same technique for minutes and seconds.,The drawHand() routine does not need an explanation. It just draws a line 
+with a given length and width.",,,
+Canvas ,Clock,"Part I - Create the Canvas,Code Explained",HTML code:,"In these chapters we will build an analog clock using HTML canvas.,The clock needs an HTML container. Create an HTML canvas:,
+,
+,Add an HTML <canvas> element to your page:,Create a canvas object (var canvas) from the HTML canvas element:,Create a 2d drawing object (var ctx) for the canvas object:,Calculate the clock radius, using the height of the canvas:,Remap the (0,0) position (of the drawing object) to the center of the canvas:,Reduce the clock radius (to 90%) to draw the clock well inside the canvas:,Create a function to draw the clock:",,"
+<!DOCTYPE html>,<html>,
+<body>,
+<canvas id=""canvas"" width=""400""
+height=""400"" style=""background-color:#333""></canvas>,
+<script>,var canvas = document.getElementById(""canvas"");,
+var ctx = canvas.getContext(""2d"");,
+var radius = canvas.height / 2;,
+ctx.translate(radius, radius);,
+radius = radius * 0.90,
+drawClock();,
+function drawClock() {,
+    ctx.arc(0, 0, radius, 0 , 2 * Math.PI);,
+    ctx.fillStyle = ""white"";,
+    ctx.fill();,
+},
+</script>,
+</body>,</html>,
+,
+  <canvas id=""canvas"" width=""400"" 
+ height=""400"" style=""background-color:#333""></canvas>,
+",
+Canvas ,Clock Face,"Part II - Draw a Clock Face,Code Explained",JavaScript:,"The clock needs a clock face. Create a JavaScript function to draw a clock face:,
+,
+,Create a drawFace() function for drawing the clock face:,Draw the white circle:,Create a radial gradient (95% and 105% of original clock radius):,Create 3 color stops, corresponding with the inner, middle, and outer edge of 
+the arc:,Define the gradient as the stroke style of the drawing object:,Define the line width of the drawing object (10% of radius):,Draw the circle:,Draw the clock center:",,,
+SVG ,<ellipse>,"SVG Ellipse - <ellipse>,Example 1,Example 2,Example 3","Example,Example,Example","The <ellipse> element is used to create an ellipse.,An ellipse is closely related to a circle. The difference is that an ellipse has an x and a y radius that differs from each other,
+while a circle has equal x and y radius:,The following example creates an ellipse:,Here is the SVG code:,The following example creates three ellipses on top of each other:,Here is the SVG code:,The following example combines two ellipses (one yellow and one white):,Here is the SVG code:","The cx attribute defines the x coordinate of the center of the ellipse,The cy attribute defines the y coordinate of the center of the ellipse,The rx attribute defines the horizontal radius,The ry attribute defines the vertical radius","
+<svg height=""140"" width=""500"">,
+  <ellipse cx=""200"" cy=""80"" rx=""100"" ry=""50"",  style=""fill:yellow;stroke:purple;stroke-width:2"" />,
+</svg>
+,
+<svg height=""150"" width=""500"">,
+ 
+<ellipse cx=""240"" cy=""100"" rx=""220"" ry=""30""
+style=""fill:purple"" />,
+ 
+<ellipse cx=""220"" cy=""70"" rx=""190"" ry=""20""
+style=""fill:lime"" />,
+ 
+<ellipse cx=""210"" cy=""45"" rx=""170"" ry=""15""
+style=""fill:yellow"" />,
+</svg>
+,
+<svg height=""100"" width=""500"">,
+ 
+<ellipse cx=""240"" cy=""50"" rx=""220"" ry=""30""
+style=""fill:yellow"" />,
+ 
+<ellipse cx=""220"" cy=""50"" rx=""190"" ry=""20""
+style=""fill:white"" />,
+</svg>
+",
+"HTML , Reference",Canvas,"Description,Browser Support,Colors, Styles, and Shadows,Line Styles,Rectangles,Paths,Transformations,Text,Image Drawing,Pixel Manipulation,Compositing,Other",,"The HTML5 <canvas> tag is used to draw graphics, on the fly, via scripting 
+(usually JavaScript).,However, the <canvas> element has no drawing abilities of its own (it is only 
+a container for graphics) - you must use a script to actually draw the graphics.,The getContext() method returns an object that provides methods and 
+properties for drawing on the canvas.,This reference will cover the properties and methods of the getContext(""2d"") 
+object, which can be used to draw text, lines, boxes, circles, and more - on the 
+canvas.,The numbers in the table specify the first browser version that fully 
+supports the element.,Internet Explorer 9, Firefox, Opera, Chrome, and Safari support <canvas> and 
+its properties and methods., Internet Explorer 8 and earlier versions, do not support the 
+<canvas> element.",,,
+SVG ,<circle>,SVG Circle - <circle>,Example,"The <circle> element is used to create a circle:,Here is the SVG code:","The  cx and cy attributes define the x and y coordinates of the center of the circle. 
+  If  cx and cy are omitted, the circle's center is set to (0,0),The r attribute defines the radius of the circle","
+<svg height=""100"" width=""100"">,
+ 
+<circle cx=""50"" cy=""50"" r=""40"" stroke=""black""
+stroke-width=""3"" fill=""red"" />,
+</svg>
+",
+SVG ,<rect>,"SVG Shapes,SVG Rectangle - <rect>,Example 1,Example 2,Example 3,Example 4","Example,Example,Example,Example","SVG has some predefined shape elements that can be used by developers:,The following chapters will explain each element, starting with the rect element.,The <rect> element is used to create a rectangle and variations of a rectangle shape:,Here is the SVG code:,Let's look at another example that contains some new attributes:,Here is the SVG code:,Define the opacity for the whole element:,Here is the SVG code:,Last example, create a rectangle with rounded corners:,Here is the SVG code:","Rectangle <rect>,Circle <circle>,Ellipse <ellipse>,Line <line>,Polyline <polyline>,Polygon <polygon>,Path <path>,The width and height attributes of the <rect> element define the height and 
+  the width of the rectangle,The style attribute is used to define CSS properties for the rectangle,The CSS fill property defines the fill color of the rectangle,The CSS stroke-width property defines the width of the border of the rectangle,The CSS stroke property defines the color of the border of the rectangle,The x attribute defines the left position of the rectangle (e.g. x=""50"" 
+  places the rectangle 50 px from the left margin),The y attribute defines the top position of the rectangle (e.g. y=""20"" 
+  places the rectangle 20 px from the top margin),The CSS fill-opacity property defines the opacity of the fill color (legal range: 0 to 1),The CSS stroke-opacity property defines the opacity of the stroke color (legal range: 0 to 1),The CSS opacity property defines the opacity value for the whole element (legal range: 0 to 1),The rx and the ry attributes rounds the corners of the rectangle","
+<svg width=""400"" height=""110"">,
+ 
+<rect width=""300"" height=""100""
+style=""fill:rgb(0,0,255);stroke-width:3;stroke:rgb(0,0,0)"" />,
+</svg>
+,
+<svg width=""400"" height=""180"">,
+ 
+<rect x=""50"" y=""20"" width=""150"" height=""150"",
+ 
+style=""fill:blue;stroke:pink;stroke-width:5;fill-opacity:0.1;stroke-opacity:0.9"" />,
+</svg>
+,
+<svg width=""400"" height=""180"">,
+ 
+<rect x=""50"" y=""20"" width=""150"" height=""150"",
+ 
+style=""fill:blue;stroke:pink;stroke-width:5;opacity:0.5"" />,
+</svg>
+,
+<svg width=""400"" height=""180"">,
+ 
+<rect x=""50"" y=""20"" rx=""20"" ry=""20"" width=""150""
+height=""150"",
+  style=""fill:red;stroke:black;stroke-width:5;opacity:0.5"" />,
+</svg>
+",
+SVG ,Tutorial,"Examples in Each Chapter,What you should already know,What is SVG?,SVG is a W3C Recommendation,SVG Advantages,Creating SVG Images",SVG Example,"With our ""Try it Yourself"" editor, you can edit the SVG, and click on a button to view the result.,Before you continue, you should have some basic understanding of the following:,If you want to study these subjects first, find the tutorials on our
+,.,SVG 1.0 became a W3C Recommendation on 4 September 2001.,SVG 1.1 became a W3C Recommendation on 14 January 2003.,SVG 1.1 (Second Edition) became a W3C Recommendation on 16 August 2011.,Advantages of using SVG over other image formats (like JPEG 
+and GIF) are:,SVG images can be created with any text editor, but 
+it is often more convenient to create SVG images with a drawing program, like
+,.","HTML ,Basic XML,SVG stands for Scalable Vector Graphics,SVG is used to define vector-based graphics for the Web,SVG defines the graphics in XML format,Every element and every attribute in SVG files can be animated,SVG is a W3C recommendation,SVG integrates with other W3C standards such as the DOM and XSL,SVG images can be created and edited with any text editor,SVG images can be searched, indexed, scripted, and compressed,SVG images are scalable,SVG images can be printed with high quality at any resolution,SVG images are zoomable,SVG graphics do NOT lose any quality if they are zoomed or resized,SVG is an open standard,SVG files are pure XML","
+<html>,
+<body>,
+,
+<h1>My first SVG</h1>,
+,
+ <svg width=""100"" height=""100"">,  <circle cx=""50"" cy=""50"" r=""40"" stroke=""green"" stroke-width=""4"" fill=""yellow"" />,</svg>,
+,
+</body>,
+</html>
+",
+SVG ,in HTML,Embed SVG Directly Into HTML Pages,Example,"You can embed SVG elements directly into your HTML pages.,Here is an example of a simple SVG graphic:,and here is the HTML code:, Since SVG is written in XML, all elements must be 
+properly closed!","An SVG image begins with an <svg> element,The width and height attributes of the <svg> element define the width and height of the SVG image,The <circle> element is used to draw a circle,The cx and cy attributes define the x and y coordinates of the center of the circle. If cx and cy are 
+    not set, the circle's center is set to (0, 0),The r attribute defines the radius of the circle
+    ,The stroke and stroke-width attributes control how the outline of a shape appears. We set the outline of the circle to a 4px green ""border"",The fill attribute refers to the color inside the circle. We set the fill color to yellow,The closing </svg> tag closes the SVG image","
+ <!DOCTYPE html>,<html>,<body>,<h1>My first SVG</h1>,<svg width=""100"" height=""100"">,  <circle cx=""50"" cy=""50"" r=""40"" stroke=""green"" stroke-width=""4"" fill=""yellow"" />,</svg>,
+ ,</body>,</html> ",
+SVG ,<line>,SVG Line - <line>,Example,"The <line> element is used to create a line:,Here is the SVG code:","The x1 attribute defines the start of the line on the x-axis,The y1 attribute defines the start of the line on the y-axis,The x2 attribute defines the end of the line on the x-axis,The y2 attribute defines the end of the line on the y-axis","
+<svg height=""210"" width=""500"">,
+ 
+<line x1=""0"" y1=""0"" x2=""200"" y2=""200""
+style=""stroke:rgb(255,0,0);stroke-width:2"" />,
+</svg>
+",
+SVG ,<polyline>,"SVG Polyline - <polyline>,Example 1,Example 2","Example,Example","The <polyline> element is used to create any shape that consists of only straight lines 
+(that is connected at several points):,Here is the SVG code:,Another example with only straight lines:,Here is the SVG code:",The points attribute defines the list of points (pairs of x and y coordinates) required to draw the polyline,"
+<svg height=""200"" width=""500"">,
+ 
+<polyline points=""20,20 40,25 60,40 80,120 120,140 200,180"",
+  style=""fill:none;stroke:black;stroke-width:3"" />,
+</svg>
+,
+<svg height=""180"" width=""500"">,
+ 
+<polyline points=""0,40 40,40 40,80 80,80 80,120 120,120 120,160"",
+ 
+style=""fill:white;stroke:red;stroke-width:4"" />,
+</svg>
+",
+Google Maps Reference,,"The Map() Constructor,Definition and Usage,Syntax,Parameter Values,Methods of Map(),Properties of Map(),Events of Map(),Overlays,Events,Controls",Example,The Map() constructor creates a new map inside a specified HTML element (typically a <div> element).,,,
+Google Maps ,Types,"Google Maps - Basic Map Types,Google Maps - 45° Perspective View,Google Maps - Disable 45° Perspective View - setTilt(0)","Example,Example","The following map types are supported in Google Maps API:,The map type is specified either within the Map properties object, with the mapTypeId property:,Or by calling the map's setMapTypeId() method:,The map types SATELLITE and HYBRID support a 45° perspective imagery view for 
+certain locations (only at high zoom levels).,If you zoom into a location with 45° imagery view, the map will automatically 
+alter the perspective view. In addition, the map will add:, Zooming out from a map with 45° imagery will revert each of 
+these changes, and the original map is displayed.,The following example shows a 45° perspective view of Palazzo Ducale in 
+Venice, Italy:,You can disable 45° perspective view by calling setTilt(0) on the Map object:, To enable 45° perspective view at a later point, call 
+setTilt(45).","ROADMAP (normal, default 2D map),SATELLITE (photographic map),HYBRID (photographic map + roads and city names),TERRAIN (map with mountains, rivers, etc.),A compass wheel around the Pan control, allowing you to rotate the image,A Rotate control between the Pan and Zoom controls, allowing you to rotate the image 90°,A toggle control for displaying the 45° perspective view, under the Satellite control/label",,
+Google Maps ,Controls,"Google Maps - The Default Controls,Google Maps - More Controls,Google Maps - Disabling The Default Controls,Google Maps - Turn On All Controls,Google Maps - Modifying Controls","Example,Example,Example,Example,Example","When showing a standard Google map, it comes with the default control set:,In addition to the default controls, Google Maps also has:,You can specify which controls to show when creating the map (inside MapOptions) or 
+by calling setOptions() to 
+change the map's options.,You may instead wish to turn off the default controls.,To do so, set the Map's disableDefaultUI property (within the Map options 
+object) to true:,Some controls appear on the map by default; while others will not appear 
+unless you set them.,Adding or removing controls from the map 
+is specified in the Map options object.,Set the control to true to make it visible - Set the control to false to hide it.,The following example turns ""on"" all controls:,Several of the map controls are configurable.,The controls can be modified by specifying control options fields.,For example, options for modifying a Zoom control are specified in the zoomControlOptions field. 
+The zoomControlOptions field may contain:, If you modify a control, always enable the control 
+first (set it to true).,Another configurable control is the MapType control.,Options for modifying a control are specified in the mapTypeControlOptions field. 
+The mapTypeControlOptions field may contain::,You can also position a control, with the ControlPosition property:","Zoom - displays a slider or ""+/-"" buttons to control the zoom level of the map,Pan - displays a pan control for panning the map,MapType - lets the user toggle between map types (roadmap and satellite),Street View - displays a Pegman icon which can be dragged to the map to enable Street View,Scale - displays a map scale element,Rotate - displays a small circular icon which allows you to rotate maps,Overview Map - displays a thumbnail overview map reflecting the current map viewport within a wider area,google.maps.ZoomControlStyle.SMALL - displays a mini-zoom control (only + and - buttons),google.maps.ZoomControlStyle.LARGE - displays the standard zoom slider control,google.maps.ZoomControlStyle.DEFAULT - picks the best zoom control based on device and map size,google.maps.MapTypeControlStyle.HORIZONTAL_BAR - display one button for each map type,google.maps.MapTypeControlStyle.DROPDOWN_MENU - select map type via a dropdown menu,google.maps.MapTypeControlStyle.DEFAULT - displays the ""default"" behavior (depends on screen size)",,
+Google Maps ,Events,"Click The Marker to Zoom,Pan Back to Marker,Open an InfoWindow When Clicking on The Marker,Set Markers and Open InfoWindow for Each Marker","Example,Example,Example,Example","We still use the map from the previous page: a map centered on London, England.,Now we want to zoom when a user is clicking on the marker (We attach 
+an event handler to a marker that zooms the map when clicked).,Here is the added code:,We register for event notifications using the addListener() event handler. 
+That method takes an object, an event to listen for, and a function to call when 
+the specified event occurs.,Here, we save the zoom changes and pan the map back after 3 seconds:,Click on the marker to show an infowindow with some text:,Run a function when the user clicks on the map.,The placeMarker() function places a marker where the user has clicked, and shows an infowindow with the latitudes 
+and longitudes of the marker:",,,
+Google Maps ,Overlays,"Google Maps - Overlays,Google Maps - Add a Marker,Google Maps - Animate the Marker,Google Maps - Icon Instead of Marker,Google Maps - Polyline,Google Maps - Polygon,Google Maps - Circle,Google Maps - InfoWindow","Example,Example,Example,Example,Example,Example,Example","Overlays are objects on the map that are bound to latitude/longitude 
+coordinates.,Google Maps has several types of overlays:,The Marker constructor creates a marker. Note that the position property 
+must be set for the marker to display.,Add the marker to the map by using the setMap() 
+method:,The example below shows how to animate the marker with the animation property:,The example below specifies an image (icon) to use instead of the default marker:,A Polyline is a line that is drawn through a series of coordinates in an ordered sequence.,A polyline supports the following properties:,A Polygon is similar to a Polyline in that it consists of a 
+series of coordinates in an ordered sequence. However, polygons are designed to define regions within a closed loop.,Polygons are made of straight lines, and the shape is ""closed"" (all the lines 
+connect up).,A polygon supports the following properties:,A circle supports the following properties:,Show an InfoWindow with some text content for a marker:","Marker - Single locations on a map. Markers can also display custom icon images,Polyline - Series of straight lines on a map,Polygon - Series of straight lines on a map, and the shape is ""closed"",Circle and Rectangle,Info Windows - Displays content within a popup balloon on top of a map,Custom overlays,path - specifies several latitude/longitude coordinates for the line,strokeColor - specifies a hexadecimal color for the line (format: ""#FFFFFF""),strokeOpacity - specifies the opacity of the line (a value between 0.0 and 1.0),strokeWeight - specifies the weight of the line's stroke in pixels,editable - defines whether the line is editable by users (true/false),path - specifies several LatLng coordinates for the line (first and last coordinate are equal),strokeColor - specifies a hexadecimal color for the line (format: ""#FFFFFF""),strokeOpacity - specifies the opacity of the line (a value between 0.0 and 1.0),strokeWeight - specifies the weight of the line's stroke in pixels,fillColor - specifies a hexadecimal color for the area within the enclosed region (format: ""#FFFFFF""),fillOpacity - specifies the opacity of the fill color (a value between 0.0 and 1.0),editable - defines whether the line is editable by users (true/false),center - specifies the google.maps.LatLng of the center of the circle,radius - specifies the radius of the circle, in meters,strokeColor - specifies a hexadecimal color for the line around the circle (format: ""#FFFFFF""),strokeOpacity - specifies the opacity of the stroke color (a value between 0.0 and 1.0),strokeWeight - specifies the weight of the line's stroke in pixels,fillColor - specifies a hexadecimal color for the area within the circle (format: ""#FFFFFF""),fillOpacity - specifies the opacity of the fill color (a value between 0.0 and 1.0),editable - defines whether the circle is editable by users (true/false)",,
+Google Maps ,Basic,"Create a Basic Google Map,The Map Container and Size,Create a Function to Set The Map Properties,Multiple Maps,Free Google API Key","Example,Example","This example creates a Google Map centered in London, England:,The rest of this page describes the example above, step by step.,The map needs an HTML element to hold the map:,The , variable defines the properties for the map.,The , property specifies where to center the map (using 
+latitude and longitude coordinates).,The , property specifies the zoom level for the map (try 
+to experiment with the zoom level).,The line: , creates a new map inside the <div> element with 
+id=""googleMap"", using the parameters that are passed (mapProp).,The example below defines four maps with different 
+map types:,Google allows a website to call any Google API for free, thousands of times a day.,Go to 
+, to 
+learn how to get an 
+API key.,Google Maps expects to find the API key in the , parameter when loading an API:",,"
+ <!DOCTYPE html>,<html>,<body>,<h1>My First Google Map</h1>,
+  <div id=""googleMap"" style=""width:100%;height:400px;""></div>,<script>,
+  function myMap() {,var mapProp= {,  center:new 
+  google.maps.LatLng(51.508742,-0.120850),,  zoom:5,,};,
+  var map = new google.maps.Map(document.getElementById(""googleMap""),mapProp);,
+  },</script>,<script src=""https://maps.googleapis.com/maps/api/js?key=YOUR_KEY&callback=myMap""></script>,
+  ,</body>,</html>
+,
+<div id=""googleMap"" style=""width:100%;height:400px""></div>,
+  function myMap() {,var mapProp = {,    center:new 
+  google.maps.LatLng(51.508742,-0.120850),,    zoom:5,,};,
+  var map = new google.maps.Map(document.getElementById(""googleMap""),mapProp);,
+  }
+,
+  <script src=""https://maps.googleapis.com/maps/api/js?,&callback=myMap""></script>
+",
+SVG ,<polygon>,"SVG Polygon - <polygon>,Example 1,Example 2,Example 3,Example 4","Example,Example,Example,Example","The <polygon> element is used to create a graphic that contains at least 
+three sides.,Polygons are made of straight lines, and the shape is ""closed"" (all the lines 
+connect up).,The following example creates a polygon with three sides:,Here is the SVG code:,The following example creates a polygon with four sides:,Here is the SVG code:,Use the <polygon> element to create a star:,Here is the SVG code:,Change the fill-rule property to ""evenodd"":,Here is the SVG code:",The points attribute defines the x and y coordinates for each corner of the polygon,"
+<svg height=""210"" width=""500"">,
+ 
+<polygon points=""200,10 250,190 160,210""
+style=""fill:lime;stroke:purple;stroke-width:1"" />,
+</svg>
+,
+<svg height=""250"" width=""500"">,
+ 
+<polygon points=""220,10 300,210 170,250 123,234""
+style=""fill:lime;stroke:purple;stroke-width:1"" />,
+</svg>
+,
+<svg height=""210"" width=""500"">,
+  <polygon points=""100,10 40,198 190,78 10,78 160,198"",
+ 
+style=""fill:lime;stroke:purple;stroke-width:5;fill-rule:nonzero;"" />,
+</svg>
+,
+<svg height=""210"" width=""500"">,
+  <polygon points=""100,10 40,198 190,78 10,78 160,198"",
+ 
+style=""fill:lime;stroke:purple;stroke-width:5;fill-rule:evenodd;"" />,
+</svg>
+",
+HTML Canvas ,Images,Canvas - Images,Example,"To draw an image on a canvas, use the following method:","drawImage(,)",,
+Google Maps Tutorial,,"Google Maps API,Google Maps in HTML",Example,"This tutorial is about the Google Maps API (,pplication
+,rogramming ,nterface).,This example creates a Google Map in HTML:",,"
+ <!DOCTYPE html>,<html>,<body>,<h1>My First Google Map</h1>,
+  <div id=""googleMap"" style=""width:100%;height:400px;""></div>,<script>,
+  function myMap() {,var mapProp= {,  center:new 
+  google.maps.LatLng(51.508742,-0.120850),,  zoom:5,,};,
+  var map = new google.maps.Map(document.getElementById(""googleMap""),mapProp);,
+  },</script>,<script src=""https://maps.googleapis.com/maps/api/js?key=YOUR_KEY&callback=myMap""></script>,
+  ,</body>,</html>
+",

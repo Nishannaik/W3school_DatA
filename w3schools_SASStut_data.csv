@@ -1,0 +1,90 @@
+H1_leftside_heading,H1_rightside_heading,H2,H3,All_para,li,div,div_2
+Sass ,Installation,"System Requirements for Sass,Official Sass Web Site,Install Sass",,"Read more about Sass at the official Sass web site:
+,There are several ways to install Sass in your system. There are many 
+applications that will get you up and running with Sass in a few minutes for 
+Mac, Windows, and Linux. Some of these are free, but some are paid apps.,You can read more about them here:
+"," - Sass is platform independent, - Sass works in Edge/IE (from IE 8), 
+  Firefox, Chrome, Safari, Opera, - Sass is based on Ruby",,
+Sass ,Numeric Functions,Sass Numeric Functions,,"The numeric functions are used to manipulate numeric values.,The following table lists all numeric functions in Sass:",,,
+Sass ,String Functions,Sass String Functions,,"The string functions are used to manipulate and get information about 
+strings.,Sass strings are 1-based. The first character in a string is at index 1, not 
+0.,The following table lists all string functions in Sass:",,,
+Sass ,Introduction,"What You Should Already Know,What is Sass?,Why Use Sass?,A Simple Example why Sass is Useful,How Does Sass Work?,Sass File Type,Sass Comments","Sass Example,Sass Example","Before you continue you should have a basic understanding of the following:,If you want to study these subjects first, find the tutorials on our
+,.,Stylesheets are getting larger, more complex, 
+and harder to maintain. This is where a CSS pre-processor can help.,Sass lets 
+you use features that do not exist in CSS, like variables, nested rules, mixins, 
+imports, 
+inheritance, built-in functions, and other stuff.,Let's say we have a website with three main colors:,So, how many times do you need to type those HEX values? A LOT of times. And 
+what about variations of the same colors? ,Instead of typing the above values a lot of times, you can use Sass and write this:,So, when using Sass, and the primary color changes, you only need to change 
+it in one place.,A browser does not understand Sass code. Therefore, you will need a Sass 
+pre-processor to convert Sass code into standard CSS.,This process is called transpiling. So, you need to give a transpiler 
+(some kind of program) some Sass code and then get some CSS code back.,Sass files has the "".scss"" file extension. ,Sass supports standard CSS comments ,, 
+and in addition it supports inline comments ,:","HTML,CSS, stands for ,yntactically ,wesome
+  ,tyle,heet,Sass is an extension to CSS,Sass is a CSS pre-processor,Sass is completely compatible with all versions of CSS,Sass reduces repetition of CSS and therefore saves time,Sass was designed by Hampton Catlin and developed by Natalie Weizenbaum in 
+  2006,Sass is free to download and use",,
+Sass ,Tutorial,"Examples in Each Chapter,Sass Function References",Sass Example,"Our ""Show Sass"" tool makes it easy to learn Sass, it shows both the code and the result.,At W3Schools you will find complete references of all Sass functions with syntax and examples.",,,
+Sass ,@extend and Inheritance,Sass @extend Directive,,"The , directive lets you share a set 
+of CSS properties from one selector to another. ,The , directive is useful if 
+you have almost identically styled elements that only differ in some 
+small details.,The following Sass example first creates a basic style for buttons (this 
+style will be 
+used for most buttons). Then, we create one style for a ""Report"" button and one 
+style for a ""Submit"" button. Both ""Report"" and ""Submit"" button inherit all the 
+CSS properties from the .button-basic class, through the , directive. In 
+addition, they have their own colors defined:,After compilation, the CSS will look like this:,By using the , directive, you do not need to 
+specify several classes for an element in your HTML code, like this: <button 
+class=""button-basic button-report"">Report this</button>. You just need to specify .button-report to get both sets of styles.,The , directive helps keep your Sass code very DRY.",,,
+Sass ,Introspection Functions,Sass Introspection Functions,,"The introspection functions are rarely used when building a stylesheet. 
+However, they are valuable if something does not work properly - to figure out 
+what's going on: like debugging functions. ,The following table lists all introspection functions in Sass:",,,
+Sass ,Color Functions,Sass Color Functions,,"We have divided the color functions in Sass into three parts: Set color 
+functions, Get color functions, and Manipulate color functions:",,,
+Sass ,Map Functions,Sass Map Functions,,"In Sass, the map data type represents one or more key/value pairs., It is also possible to use the
+, from the previous page, 
+with maps. Then the map will be treated as a list with two elements.,Sass maps are immutable (they cannot change). So, the map functions that return a 
+map, will 
+return a new map, and not change the original map.,The following table lists all map functions in Sass:",,,
+Sass ,@mixin and @include,"Sass Mixins,Defining a Mixin,Using a Mixin,Passing Variables to a Mixin,Default Values for a Mixin,Using a Mixin For Vendor Prefixes",,"The , directive lets you create CSS 
+code that is to be reused throughout the website.,The , directive is created to let you 
+use (include) the mixin.,A mixin is defined with the , directive.,The following example creates a mixin named ""important-text"":,The , directive is used to include a mixin.,So, to include the important-text mixin created above:,The Sass transpiler will convert the above to normal CSS:,A mixin can also include other mixins:,Mixins accept arguments. This way you can pass variables to a mixin.,Here is how to define a mixin with arguments:,Notice that the arguments are set as variables and then used as the values 
+(color and width) of the border property.,After compilation, the CSS will look like this:,It is also possible to define default values for mixin variables:,Then, you only need to specify the values that change when you include the 
+mixin:,Another good use of a mixin is for vendor 
+prefixes.,Here is an example for transform:,After compilation, the CSS will look like this:",,,
+Sass ,Selector Functions,Sass Selector Functions,,"The selector functions are used to check and manipulate selectors. ,The following table lists all selector functions in Sass:",,,
+Sass ,List Functions,Sass List Functions,,"The list functions are used to access values in a list, combine lists, and 
+add items to lists.,Sass lists are immutable (they cannot change). So, the list functions that return a 
+list, will 
+return a new list, and not change the original list.,Sass lists are 1-based. The first list item in a list is at index 1, not 0.,The following table lists all list functions in Sass:",,,
+Sass ,@import and Partials,"Sass Importing Files,Sass Partials","Example,Example,Example,Example","Sass keeps the CSS code DRY (Don't Repeat Yourself). One way to 
+write DRY code is to keep related code in separate files.,You can create small files with CSS snippets to include in other Sass files. Examples 
+of such files can be: reset file, variables, colors, fonts, font-sizes, etc. ,Just like CSS, Sass also supports the , 
+directive.,The , directive allows you to include 
+the content of one file in another.,The CSS , directive has a major drawback 
+due to performance issues; it creates an extra HTTP request 
+each time you call it. However, the Sass , 
+directive 
+includes the file in the CSS; so no extra HTTP call is required at runtime!, You do not need to specify a 
+file extension, Sass automatically assumes that you mean a .sass or .scss file. 
+You can also import CSS files. The , 
+directive imports the file and any variables or mixins defined in the imported 
+file can then be used in the main file.,You can import as many files as you need in the main file:,Let's look at an example: Let's assume we have a reset file called ""reset.scss"", that looks like this:,and now we want to import the ""reset.scss"" file into another file called ""standard.scss"".,Here is how we do it: It is normal to add the , 
+directive at the top of a file; this way its content will have a global scope:,So, when the ""standard.css"" file is transpiled, the CSS will look like this:,By default, Sass transpiles all the .scss files directly. However, when you want to 
+import a file, you do not need the file to be transpiled directly.,Sass has a mechanism for this: If you start the filename with an underscore, Sass will not transpile it. Files named this way are called partials in 
+Sass.,So, a partial Sass file is named with a leading underscore:,The following example shows a partial Sass file named ""_colors.scss"". 
+(This file will not be transpiled directly to ""colors.css""):,Now, if you import the partial file, omit the underscore. Sass understands 
+that it should 
+import the file ""_colors.scss"":",,,
+Sass ,Variables,"Sass Variables,Sass Variable Scope,Using Sass !global",,"Variables are a way to store information that you can re-use later.,With Sass, you can store information in variables, like:,Sass uses the $ symbol, followed by a name, to declare variables:,The following example declares 4 variables named myFont, myColor, myFontSize, and myWidth.
+After the variables are declared, you can use the variables wherever you want:,So, when the Sass file is transpiled, it takes the variables (myFont, myColor, 
+etc.) and outputs normal CSS with the variable values placed in the CSS, like 
+this:,Sass variables are only available at the level of nesting where they are defined.,Look at the following example:,Will the color of the text inside a , tag be red or green? It will be red!,The other definition, $myColor: green; is inside the 
+, rule, and will only 
+be available there!,So, the CSS output will be:,Ok, that is the default behavior for variable scope.,The default behavior for variable scope can be overridden by using the 
+, switch., 
+, indicates that a variable is global, 
+which means that it is accessible on all levels.,Look at the following example (same as above; but with 
+, added):,Now the color of the text inside a , tag will be green!,So, the CSS output will be:","strings,numbers,colors,booleans,lists,nulls",,
+Sass ,Nested Rules and Properties,"Sass Nested Rules,Sass Nested Properties","Example,Example","Sass lets you nest CSS selectors in the same way as HTML.,Look at an example of some Sass code for a site's navigation:,Notice that in Sass, the ,, 
+,, and , selectors are nested inside the , selector.,While in CSS, the rules are defined one by one (not nested):,Because you can nest properties in Sass, it is cleaner and easier to read 
+than standard CSS.,Many CSS properties have the same prefix, like font-family, font-size and 
+font-weight or text-align, text-transform and text-overflow.,With Sass you can write them as nested properties:,The Sass transpiler will convert the above to normal CSS:",,,

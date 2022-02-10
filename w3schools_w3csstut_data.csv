@@ -1,0 +1,2766 @@
+H1_leftside_heading,H1_rightside_heading,H2,H3,All_para,li,div,div_2
+W3.CSS ,Tutorial,"A Quality Alternative to Bootstrap,W3.CSS is Free,How To,W3.CSS Crash Course,W3.CSS Web Site Templates","Example,Example,Example","W3.CSS is Smaller, Faster and Easier to Use.,W3.CSS is free to use. No license is necessary.,To use W3.CSS in your web site, just add a link to ""w3.css"" from your web 
+pages:,Or download w3.css from , and 
+add a link to w3.css:,How to create web page
+that looks nice on all devices (desktop, laptop, tablet, and phone).,We have created some responsive W3CSS templates for you to use.,You are free to modify, save, share, use or do whatever you want with them:",,"
+ <div class=""w3-container w3-teal"">,  <h1>My Header</h1>,
+ </div>,<img 
+ src=""img_car.jpg"" alt=""Car"">,<div class=""w3-container"">,
+  
+ <p>A car is a wheeled, self-powered motor vehicle used for transportation.</p>,</div>,
+<div class=""w3-container w3-teal"">,  <p>My Footer</p>,
+ </div>,
+<link rel=""stylesheet"" href=""https://www.w3schools.com/w3css/4/w3.css"">
+,
+<link rel=""stylesheet"" href=""w3.css"">
+",
+W3.CSS ,Layout,"W3.CSS Layout Classes,HTML Block Elements,Layout Cells,Layout Container,Layout Cells are Self Adjusting,Layout Cells Adjust to Equal Height,Responsive Layout,Easy Alignment,Deprecated W3.CSS Table Layout Classes","Example,Example,Example,Example,Example,Example,Example,Example,Example","W3.CSS version 2.90 / 2.91 introduced the following classes for ""column-like"" layout:,Originally, HTML block elements (like <div> elements) display as vertical blocks:,The , class redefines block elements to display horizontally (like table cells):,The , is a container for cells (columns).,The width of the w3-cell-row container defines the total width of all the 
+contained 
+cells.,The default width is 100%:,If you change the width of the cell container, it will reduce the total 
+width of the contained cells:,The , class has a very nice built-in self 
+adjusting standard.
+Side-by-side elements will automatically adjust to the necessary width:,Side-by-side , elements will 
+also automatically self-adjust to equal height:,The ,class adds mobile first responsiveness to any 
+HTML element.,Used together with w3-cell it will display the layout columns vertically on small screens/mobile phones and horizontally on medium/large screens.,The , class makes it very easy to align text.,There are 3 different alignment classes:,The , class stretches the elements to fit the page width:","w3-cell-top (default),w3-cell-middle,w3-cell-bottom","
+<div class=""w3-container w3-red"">,
+  <p>Hello W3.CSS Layout.</p>,
+</div>,
+<div class=""w3-container w3-green"">,
+  <p>Hello W3.CSS Layout.</p>,</div>
+,
+<div class=""w3-container w3-red w3-cell"">,
+  <p>Hello W3.CSS Layout.</p>,
+</div>,
+<div class=""w3-container w3-green w3-cell"">,
+  <p>Hello W3.CSS Layout.</p>,
+</div>
+,
+  <div class=""w3-cell-row"">,  <div class=""w3-container w3-red w3-cell"">,
+    <p>Hello W3.CSS Layout.</p>,
+ 
+</div>,
+  , 
+<div class=""w3-container w3-green w3-cell"">,
+    <p>Hello W3.CSS Layout.</p>,
+ 
+</div>,</div>
+,
+  <div class=""w3-cell-row"" 
+  style=""width:75%"">,  <div class=""w3-container w3-red w3-cell"">,
+    <p>Hello W3.CSS Layout.</p>,
+ 
+</div>,
+  , 
+<div class=""w3-container w3-green w3-cell"">,
+    <p>Hello W3.CSS Layout.</p>,
+ 
+</div>,</div>
+,
+<div class=""w3-container w3-red w3-cell"">,
+  <p>Hello W3.CSS Layout.</p>,
+</div>,<div class=""w3-container w3-green w3-cell"">,
+    <p>Hello W3.CSS Layout. Hello W3.CSS Layout.</p>,
+</div>
+,
+<div class=""w3-container w3-red w3-cell"">,
+  <p>Hello W3.CSS Layout.</p>,
+</div>,<div class=""w3-container w3-green w3-cell"">,
+  <p>Hello W3.CSS Layout.</p>,
+  <p>Hello W3.CSS Layout.</p>,
+  <p>Hello W3.CSS Layout.</p>,
+  <p>Hello W3.CSS Layout.</p>,
+</div>
+,
+  <div class=""w3-container w3-red 
+  w3-cell w3-mobile"">,  <p>Hello W3.CSS Layout.</p>,</div>,<div class=""w3-container w3-green w3-cell 
+  w3-mobile"">,  <p>Hello W3.CSS Layout.</p>,</div>,<div 
+  class=""w3-container w3-blue w3-cell w3-mobile"">,  <p>Hello 
+  W3.CSS Layout.</p>,</div>,
+<div class=""w3-container w3-red w3-cell"">,
+  <p>Hello W3.CSS Layout.</p>,
+  <p>Hello W3.CSS Layout.</p>,
+  <p>Hello W3.CSS Layout.</p>,
+  <p>Hello W3.CSS Layout.</p>,
+</div>,<div class=""w3-container w3-green w3-cell 
+  w3-cell-middle"">,
+  <p>Hello W3.CSS Layout.</p>,
+</div>,<div class=""w3-container w3-blue w3-cell 
+  w3-cell-bottom"">,
+  <p>Hello W3.CSS Layout.</p>,
+</div>
+,
+  <div class=""w3-cell-row"">,<div class=""w3-container w3-red w3-cell"">,
+  <p>Hello W3.CSS Layout.</p>,
+  <p>Hello W3.CSS Layout.</p>,
+  <p>Hello W3.CSS Layout.</p>,
+  <p>Hello W3.CSS Layout.</p>,
+</div>,<div class=""w3-container w3-green w3-cell 
+  w3-cell-middle"">,
+  <p>Hello W3.CSS Layout.</p>,
+</div>,<div class=""w3-container w3-blue w3-cell 
+  w3-cell-bottom"">,
+  <p>Hello W3.CSS Layout.</p>,
+</div>,</div>
+",
+W3.CSS ,Built-In Responsiveness,"W3.CSS Responsive Classes,The w3-half Class,The w3-third Class,The w3-twothird Class,The w3-quarter Class,The w3-threequarter Class,Combinations,Nested Rows,Columns Using Rest,Columns Using Percent,The w3-content Class,w3-row vs. w3-row-padding,Stretch Padded Rows,Responsive Show / Hide,The w3-mobile Class,Screen Resolutions,12 Column Responsive Fluid Grid","Example,Example,Example,Example,Example,Example: w3-half Inside w3-half,Example,Example,Example,Example,Example,Example,Example","W3.CSS includes a responsive, mobile-first grid system to handle layout:,W3.CSS's grid system is responsive, and the columns will re-arrange automatically depending on the screen size:,The responsive classes above must be placed inside a , 
+class (or , class) to be fully responsive.,The width of the , class is 1/2 of the parent element 
+(style=""width:50%"").,On screens smaller than 601 pixels it resizes to 100%.,The width of the , class is 1/3 of the parent element 
+(style=""width:33.33%"").,On screens smaller than 601 pixels it resizes to 100%.,The width of the , class is 2/3 of the parent element 
+(style=""width:66.66%"").,On screens smaller than 601 pixels it resizes to 100%. ,The width of the , class is 1/4 of the parent element 
+(style=""width:25%"").,On screens smaller than 601 pixels it resizes to 100%.,The width of the , class is 3/4 of the parent element 
+(style=""width:75%"").,On screens smaller than 601 pixels it resizes to 100%.,The , class defines one column in a 12-column 
+responsive grid.,The , class will occupy the rest of the width:,You can also use the CSS width property to set the width in percent:,The , class defines a container for fixed size centered content. Use the CSS max-width property to override the default width (980px).,The , class defines a container with no padding, while the 
+, class adds a 8px left and right padding to each column:,w3-row:,w3-row-padding:,The , class removes the right and left margins from an element. This class is often used to stretch a padded row:,An example with w3-stretch:,An example without w3-stretch:,The ,, ,, and , classes hide elements on specific screen sizes., Resize the browser window to understand how it works:,The , class adds mobile-first responsiveness to any element.,It adds display:block and width:100% to an element on screens that are less than 600px wide.,The built-in responsiveness of W3.CSS uses the DP size of a screen.,W3.CSS will treat an iPhone 6 with a resolution of 750 x 1334 pixels as a small screen of 375 x 667 pixels 
+DP.,Small screens are less than 601 pixels DP, medium screens are less than 993 pixels DP.,Below is a list of typical device resolutions and reported DP sizes:,W3.CSS also supports an advanced 12 column responsive fluid grid.,Resize the page to see the effect!",,"
+<div class=""w3-row"">,  <div class=""w3-half w3-container w3-green"">,    
+<h2>w3-half</h2> ,  
+</div>,  <div class=""w3-half w3-container"">,    
+<h2>w3-half</h2> ,  
+</div>,</div>,
+<div class=""w3-row"">,  <div class=""w3-third w3-container w3-green"">,    
+<h2>w3-third</h2> ,  
+</div>,  <div class=""w3-third w3-container"">,    
+<h2>w3-third</h2> ,  
+</div>,  <div class=""w3-third w3-container"">,    
+<h2>w3-third</h2>,  
+</div>,</div>,
+<div class=""w3-row"">,  <div class=""w3-green w3-container 
+ w3-twothird"">,    
+<h2>w3-twothird</h2> ,  
+</div>,  <div class=""w3-container w3-third"">,    
+<h2>w3-third</h2> ,  
+</div>,</div>,
+<div class=""w3-row"">,  <div class=""w3-green w3-container 
+ w3-quarter"">,    
+<h2>w3-quarter</h2> ,  
+</div>,  <div class=""w3-container w3-quarter"">,    
+<h2>w3-quarter</h2> ,  
+</div>,  <div class=""w3-container w3-quarter"">,    
+<h2>w3-quarter</h2>,  
+</div>,  <div class=""w3-container w3-quarter"">,    
+<h2>w3-quarter</h2>,  
+</div>,</div>,
+<div class=""w3-row"">,  <div class=""w3-green w3-container 
+ w3-threequarter"">,    
+<h2>w3-threequarter</h2> ,  
+</div>,  <div class=""w3-container w3-quarter"">,    
+<h2>w3-quarter</h2> ,  
+</div>,</div>,
+<div class=""w3-row"">,  <div class=""w3-half w3-container"">,    
+<h2>w3-half</h2>,    <div class=""w3-row"">,      
+<div class=""w3-half w3-container w3-red"">,        
+<h2>w3-half</h2> ,        <p>This is a 
+paragraph.</p>,      </div>,      
+<div class=""w3-half w3-container"">,        
+<h2>w3-half</h2> ,        <p>This is a 
+paragraph.</p>,      </div>,    
+</div>,  </div>,  <div class=""w3-half w3-container"">,    
+<h2>w3-half</h2>,    <div class=""w3-row"">,      
+<div class=""w3-half w3-container w3-red"">,        
+<h2>w3-half</h2> ,        <p>This is a 
+paragraph.</p>,      </div>,      
+<div class=""w3-half w3-container"">,        
+<h2>w3-half</h2> ,        <p>This is a 
+paragraph.</p>,      </div>,    
+</div>,  </div>,</div>,
+<div class=""w3-row"">,  <div class=""w3-col"" style=""width:150px""><p>I 
+  am 150px</p></div>,  <div class=""w3-rest 
+w3-green""><p>I am the rest</p></div>,</div>,
+ <div class=""w3-row"">,  <div class=""w3-col"" 
+ style=""width:20%""><p>20%</p></div>,  <div class=""w3-col"" style=""width:60%""><p>60%</p></div>,
+    <div 
+ class=""w3-col"" style=""width:20%""><p>20%</p></div>,</div>,
+<body class=""w3-content"" style=""max-width:500px"">,  
+page content...,</body>,
+<div class=""w3-row"">,  <div class=""w3-col s4""><img src=""img_lights.jpg""></div>,  
+<div class=""w3-col s4""><img src=""img_nature.jpg""></div>,  <div class=""w3-col 
+  s4""><img src=""img_snowtops.jpg""></div>,</div>,
+,<div class=""w3-row-padding"">,  <div class=""w3-col s4""><img src=""img_lights.jpg""></div>,  
+<div class=""w3-col s4""><img src=""img_nature.jpg""></div>,  <div class=""w3-col 
+  s4""><img src=""img_snowtops.jpg""></div>,</div>,
+  <div class=""w3-row-padding w3-section w3-stretch"">,  <div 
+  class=""w3-col s4"">,    <img src=""img_nature_wide.jpg"">,  </div>,  <div class=""w3-col s4"">,    
+  <img src=""img_snow_wide.jpg"">,  </div>,  
+  <div class=""w3-col s4"">,    <img 
+  src=""img_mountains_wide.jpg"">,  </div>,</div>,
+ <div class=""w3-container w3-hide-small w3-red"">,  <p>w3-hide-small will 
+ be hidden on small screens (phones)</p>,</div>,<div 
+ class=""w3-container w3-hide-medium w3-green"">,  <p>w3-hide-medium will 
+ be hidden on medium screens (tablets)</p>,</div>,<div 
+ class=""w3-container w3-hide-large w3-blue"">,  <p>w3-hide-large will be 
+ hidden on large screens (laptops/desktop)</p>,</div>,
+  <a class=""w3-button w3-mobile"" href=""#"">Link</a>",
+W3.CSS ,Bars,"Horizontal Bars,Vertical Bars,Bar Colors,Hover Colors,Bar Links,Bar Buttons,Responsive Bar,Right-Aligned Bar Items","Example,Example,Example,Example,Example,Example,Example,Example","Horizontal bars are common web design elements:,The , class is used to style an horizontal bar:,The purpose of the , class is to provide correct spacing, padding, and positioning. 
+,Vertical bars (sidebars) are also common in web design:,The , class is used to style a vertical bar:,You can use any color to style a bar:,You can use any hover color to style a bar:,Mouse over the bar items to see the effect:,Providing navigation is a typical use for bars:,The , class is perfect for styling links in a bar.,Mouse over the bar items to see the effect:,The , class is perfect for making bar items responsive.,Resize the window to see the effect:,The , class is perfect for making bar items right-aligned:",,"
+<div class=""w3-bar w3-green"">,
+  <div class=""w3-bar-item"">London</div>,
+  <div class=""w3-bar-item"">Paris</div>,
+  <div class=""w3-bar-item"">Tokyo</div>,
+</div>
+,
+<div class=""w3-bar-block w3-green"">,
+  <div class=""w3-bar-item"">London</div>,
+  <div class=""w3-bar-item"">Paris</div>,
+  <div class=""w3-bar-item"">Tokyo</div>,
+</div>
+,
+<div class=""w3-bar w3-black"">,
+  <div class=""w3-bar-item"">London</div>,
+  <div class=""w3-bar-item"">Paris</div>,
+  <div class=""w3-bar-item"">Tokyo</div>,
+</div>
+,
+<div class=""w3-bar w3-black"">,
+  <div class=""w3-bar-item w3-hover-red"">London</div>,
+  <div class=""w3-bar-item w3-hover-green"">Paris</div>,
+  <div class=""w3-bar-item w3-hover-blue"">Tokyo</div>,
+</div>
+,
+<div class=""w3-bar w3-black"">,
+  <a href=""#"" class=""w3-bar-item w3-hover-green"">London</a>,
+  <a href=""#"" class=""w3-bar-item w3-hover-green"">Paris</a>,
+  <a href=""#"" class=""w3-bar-item w3-hover-green"">Tokyo</a>,
+</div>
+,
+<div class=""w3-bar w3-black"">,
+  <a href=""#"" class=""w3-bar-item w3-button"">London</a>,
+  <a href=""#"" class=""w3-bar-item w3-button"">Paris</a>,
+  <a href=""#"" class=""w3-bar-item w3-button"">Tokyo</a>,
+</div>
+,
+<div class=""w3-bar w3-black"">,
+  <a href=""#"" class=""w3-bar-item w3-button w3-mobile"">London</a>,
+  <a href=""#"" class=""w3-bar-item w3-button w3-mobile"">Paris</a>,
+  <a href=""#"" class=""w3-bar-item w3-button w3-mobile"">Tokyo</a>,
+</div>
+,
+<div class=""w3-bar w3-black"">,
+  <a href=""#"" class=""w3-bar-item w3-button"">London</a>,
+  <a href=""#"" class=""w3-bar-item w3-button"">Paris</a>,
+  <a href=""#"" class=""w3-bar-item w3-button w3-right"">Tokyo</a>,
+</div>
+",
+W3.CSS ,Icons,"Icon Libraries,Using an Icon Library,Some Font Awesome Icons,Some Google Material Design Icons,Some Bootstrap Icons","Example,Example,Example","With W3.CSS you can use the icon library you like, such as:,To insert an icon:, The <i> and <span> elements are widely used to add 
+icons.,To control the size of the icon, change the font-size property of the icon, or use 
+one of the , classes:","Font Awesome Icons,Google Material Design Icons,Bootstrap Icons,w3-tiny,w3-small,w3-large,w3-xxlarge,w3-xxxlarge,w3-jumbo","
+<!DOCTYPE html>,<html>,<title>W3.CSS</title>,
+<meta name=""viewport"" content=""width=device-width, initial-scale=1"">,
+<link rel=""stylesheet"" href=""https://www.w3schools.com/w3css/4/w3.css"">,<link rel=""stylesheet"" 
+href=""https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"">,
+<body>,<i class=""fa fa-home""></i>,<i class=""fa fa-search""></i>,
+  <i class=""fa fa-cloud""></i>,<i class=""fa fa-trash""></i>,
+</body>,</html>
+,
+<!DOCTYPE html>,<html>,<title>W3.CSS</title>,
+<meta name=""viewport"" content=""width=device-width, initial-scale=1"">,
+<link rel=""stylesheet"" href=""https://www.w3schools.com/w3css/4/w3.css"">,<link rel=""stylesheet"" href=""https://fonts.googleapis.com/icon?family=Material+Icons"">,
+ <body>,<i class=""material-icons"">home</i>,<i class=""material-icons"">search</i>,<i class=""material-icons"">cloud</i>,
+  <i class=""material-icons"">delete</i>,
+</body>,</html>
+,
+<!DOCTYPE html>,<html>,<title>W3.CSS</title>,
+<meta name=""viewport"" content=""width=device-width, initial-scale=1"">,
+<link rel=""stylesheet"" href=""https://www.w3schools.com/w3css/4/w3.css"">,<link rel=""stylesheet"" 
+href=""https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"">,
+<body>,<i class=""glyphicon glyphicon-home""></i>,<i class=""glyphicon glyphicon-search""></i>,<i class=""glyphicon glyphicon-cloud""></i>,<i class=""glyphicon glyphicon-trash""></i>,
+</body>,</html>
+",
+W3.CSS ,Dropdowns,"W3.CSS Dropdown Classes,Dropdown Elements,Menu Dropdowns,Clickable Dropdowns,Image Dropdowns,Card Dropdowns,Animated Dropdown,Right-aligned Dropdown","Example,Example,Example,Example,Example,Example,Example,Example","W3.CSS provides the following dropdown classes:,The , class defines a hoverable dropdown 
+element.,The , class defines the dropdown content to be 
+displayed.,Both the hoverable element and the dropdown content element can be any HTML element.,In the example above the hover element was a <button>, and the dropdown 
+content a <div>.,In the next example the hover element is a <p>, and the 
+dropdown content is a <span>:,The , class is perfect for creating navigation 
+bars with dropdown menues:,The , class creates a clickable dropdown 
+element.,With this class, the dropdown is opened by JavaScript:,Move the mouse over the image:,Move the mouse over one of the cities below:,Use any of the , to fade, zoom or slide in the dropdown content:,Use the , class to float the dropdown to the right. Use CSS 
+to position the dropdown content (, will make the dropdown menu go from 
+right to left instead of left to right):",,"
+<div class=""w3-dropdown-hover"">,
+  <button class=""w3-button"">Hover Over Me!</button>,
+  <div class=""w3-dropdown-content w3-bar-block w3-border"">,
+    <a href=""#"" class=""w3-bar-item w3-button"">Link 1</a>,
+    <a href=""#"" class=""w3-bar-item w3-button"">Link 2</a>,
+    <a href=""#"" class=""w3-bar-item w3-button"">Link 3</a>,
+  </div>,</div>
+,
+<p class=""w3-dropdown-hover"">Hover over me!,  
+<span class=""w3-dropdown-content w3-green"">Hello World!</span>,</p>,
+  <div class=""w3-bar w3-light-grey"">,  <a href=""#"" class=""w3-bar-item 
+  w3-button"">Home</a>,  <a href=""#"" class=""w3-bar-item w3-button"">Link 
+  1</a>,  <div class=""w3-dropdown-hover"">,    <button 
+  class=""w3-button"">Dropdown</button>,    <div 
+  class=""w3-dropdown-content w3-bar-block w3-card-4"">,      
+  <a href=""#"" class=""w3-bar-item w3-button"">Link 1</a>,      <a href=""#"" 
+  class=""w3-bar-item w3-button"">Link 
+  2</a>,      <a href=""#"" class=""w3-bar-item 
+  w3-button"">Link 3</a>,    
+  </div>,  </div>,</div>,
+<div class=""w3-dropdown-click"">,
+  <button onclick=""myFunction()"" class=""w3-button w3-black"">Click Me!</button>,
+  <div id=""Demo"" class=""w3-dropdown-content 
+  w3-bar-block w3-border"">,
+    <a href=""#"" class=""w3-bar-item w3-button"">Link 1</a>,
+    <a href=""#"" class=""w3-bar-item w3-button"">Link 2</a>,
+    <a href=""#"" class=""w3-bar-item w3-button"">Link 3</a>,
+  </div>,</div>,<script>,function myFunction() {,  var x = document.getElementById(""Demo"");,
+    if (x.className.indexOf(""w3-show"") 
+== -1) {  ,    x.className += "" w3-show"";,
+    
+	} else { ,    x.className = x.className.replace("" w3-show"", """");,
+    },},</script>,
+<div class=""w3-dropdown-hover"">, 
+<img src=""img_snowtops.jpg"" alt=""Norway"" style=""width:20%"">,  <div 
+class=""w3-dropdown-content"" style=""width:300px"">,    <img src=""img_snowtops.jpg"" 
+alt=""Norway"" style=""width:100%"">,  </div>,</div>,
+ <div class=""w3-dropdown-hover"">London,  <div class=""w3-dropdown-content 
+ w3-card-4"" style=""width:250px"">,    <img src=""img_london.jpg"" 
+ alt=""London"" style=""width:100%"">,    <div 
+ class=""w3-container"">,      <p>London is the 
+ capital city of England.</p>,      <p>It is the 
+ most populous city in the UK.</p>,    </div>,  </div>,
+ </div>,
+<div class=""w3-dropdown-click"">,  <button onclick=""myFunction()"" 
+class=""w3-button"">Click Me</button>,  <div id=""Demo"" 
+class=""w3-dropdown-content w3-bar-block w3-animate-zoom"">,    <a href=""#"" 
+  class=""w3-bar-item w3-button"">Link 
+1</a>,    <a href=""#"" class=""w3-bar-item w3-button"">Link 2</a>,    <a href=""#"" 
+  class=""w3-bar-item w3-button"">Link 3</a>,  </div>,</div>,
+<div class=""w3-dropdown-hover w3-right"">,
+  <button class=""w3-button"">Dropdown</button>,
+  <div class=""w3-dropdown-content 
+  w3-bar-block w3-border"" style=""right:0"">,
+    <a href=""#"" class=""w3-bar-item w3-button"">Link 1</a>,
+    <a href=""#"" class=""w3-bar-item w3-button"">Link 2</a>,
+    <a href=""#"" class=""w3-bar-item w3-button"">Link 3</a>,
+  </div>,</div>
+",
+W3.CSS ,Accordions,"Accordion,Accordion vs. Dropdown,Accordion Buttons,Active Accordion Buttons,Accordion Width,Accordion Content,Animated Accordions","Example,Example,Example,Example,Example,Example,Example,Example","Click on the ""Open Section"" buttons below to see how accordions work:,An accordion is used to show (and hide) HTML content.,Use the ,class to hide the accordion content.,Use any kind of button to open and close the content:,Both the element that is used to open the accordion and the accordion's 
+content can be any HTML element.,This table shows the difference between an accordion and a dropdown:,You can use any HTML element to open the accordion content. We prefer a button with a 
+, class, to span the entire width of the page (100% 
+width).,Remember that buttons in W3.CSS are centered by default. Use the , class if you want 
+them left-aligned instead. However, you do not have to follow our approach - an accordion will look good either way:,Use JavaScript to highlight accordions that are open (clicked on):,By default, the width of block is 100%. To override this, change the 
+CSS width property of the accordion container:,Use any of the w3-animate-, to fade, zoom or slide in the accordion content:","Jill,Eve,Adam","
+  <button onclick=""myFunction('Demo1')"" 
+class=""w3-button w3-block w3-left-align"">,Open Section 1</button>,
+  ,<div id=""Demo1"" class=""w3-container 
+  w3-hide"">,  
+<p>Some text..</p>,</div>,<script>,
+function myFunction(id) {,  var x = 
+document.getElementById(id);,  if (x.className.indexOf(""w3-show"") 
+== -1) {,    x.className += "" w3-show"";,  } else { ,    
+x.className = x.className.replace("" w3-show"", """");,  },
+},</script>,
+  <button onclick=""myFunc('Demo1')"" 
+class=""w3-button"">,Normal button</button>,<div id=""Demo1"" class=""w3-hide"">,  <p>Lorem ipsum...</p>,</div>,
+  ,<button onclick=""myFunc('Demo2')"" class=""w3-button w3-block w3-left-align 
+w3-green"">,Left aligned and full-width</button>,<div id=""Demo2"" class=""w3-hide"">,  <p>Lorem ipsum...</p>,</div>,
+  ,<button onclick=""myFunc('Demo3')"" class=""w3-btn w3-block 
+w3-red"">,Centered and full-width</button>,
+  ,<div id=""Demo3"" 
+class=""w3-hide w3-center"">,  
+<p>Centered content as well!</p>,</div>,
+<div class=""w3-light-grey"" style=""width:50%"">,  <button onclick=""myFunction('Demo1')"" 
+class=""w3-button w3-block"">,    50%,  
+</button>,  <div id=""Demo1"" class=""w3-hide"">,
+    <p>Some text..</p>,  </div>,</div>,
+  <button onclick=""myFunction('Demo1')"" 
+class=""w3-button w3-block w3-left-align"">,Accordion</button>,<div id=""Demo1"" class=""w3-hide"">,  
+  <a href=""#"" class=""w3-button w3-block w3-left-align"">Link 1</a>,  <a href=""#"" 
+  class=""w3-button w3-block w3-left-align"">Link 2</a>,  <a href=""#"" 
+  class=""w3-button w3-block w3-left-align"">Link 3</a>,</div>,
+  <button onclick=""myFunction('Demo1')"" 
+class=""w3-button w3-block w3-left-align"">,Accordion</button>,<div id=""Demo1"" class=""w3-hide"">,
+    <ul class=""w3-ul"">,    <li>Jill</li>,    
+<li>Eve</li>,    <li>Adam</li>,  
+</ul>,</div>,
+<div class=""w3-sidebar w3-bar-block w3-light-grey w3-card"" style=""width:200px;"">,  
+<a href=""#"" class=""w3-bar-item w3-button"">Link 1</a> ,  
+<a href=""#"" class=""w3-bar-item w3-button"" onclick=""myAccFunc()"">Accordion</a>,  <div 
+id=""demoAcc"" class=""w3-hide"">,    
+<a href=""#"" class=""w3-bar-item w3-button"">Link</a>,    <a href=""#"" 
+  class=""w3-bar-item w3-button"">Link</a>,  </div>,  <div class=""w3-dropdown-click"">,    
+<a href=""#"" class=""w3-bar-item w3-button"" onclick=""myDropFunc()"">Dropdown</a>,    <div 
+id=""demoDrop"" class=""w3-dropdown-content"">,      
+<a href=""#"" class=""w3-bar-item w3-button"">Link</a>,      <a href=""#"" 
+  class=""w3-bar-item w3-button"">Link</a>,    
+</div>,  </div>,  <a href=""#"" class=""w3-bar-item 
+  w3-button"">Link 2</a> ,  <a href=""#"" 
+  class=""w3-bar-item w3-button"">Link 3</a>,
+</div>,
+<div id=""Demo1"" class=""w3-hide 
+w3-animate-zoom"">",
+W3.CSS ,Effects,"W3.CSS Effect Classes,Opacity,Grayscale,Sepia,Hover Effects,Hover Opacity Color","Example,Example,Example,Example,Example","W3.CSS provides the following effects classes:,The , classes add transparency to an element:,The , classes add a grayscale effect to an element:,The , classes add a sepia effect to an element:,You can also add special effects on hover/mouse-over.,You can also combine any , classes with , to create a slightly ""lighter"" background color on hover:",,"
+<img src=""image.jpg"" class=""w3-opacity-min"">
+  ,<img src=""image.jpg"" class=""w3-opacity"">
+  ,<img src=""image.jpg"" class=""w3-opacity-max"">
+,
+<img src=""image.jpg"" class=""w3-grayscale-min"">
+  ,<img src=""image.jpg"" class=""w3-grayscale"">
+  ,<img src=""image.jpg"" class=""w3-grayscale-max"">
+,
+<img src=""image.jpg"" class=""w3-sepia-min"">
+  ,<img src=""image.jpg"" class=""w3-sepia"">
+  ,<img src=""image.jpg"" class=""w3-sepia-max"">
+,
+    <img src=""image.jpg"" class=""w3-hover-opacity"">,<img src=""image.jpg"" class=""w3-hover-grayscale"">,<img src=""image.jpg"" class=""w3-hover-sepia"">,
+    <div class=""w3-border w3-hover-opacity w3-hover-red"">,  <p>w3-hover-red with w3-hover-opacity</p>,</div>",
+W3.CSS ,Navigation Bars,"W3.CSS Navigation Bar Classes,Basic Navigation,Responsive Navigation,Colored Navigation Bars,Bordered Navigation Bars,Active/Current Link,Hoverable Links,Right-Aligned Links,Navigation Bar Size,Navigation Bar with Icons,Navigation Bar Text,Navbar with Inputs and Buttons,Navigation Bar with Dropdown,Clickable Dropdown,Horizontal Dropdown Menu,Responsive Navbar with Responsive Dropdown,Fixed Navigation Bar,Vertical Navigation Bar,Collapsing the Navigation Bar,Side Navigation","Example,Example,Example,Example,Example,Example,Example,Example,Example,Example,Example,Example,Example,Example,Example,Example,Example,Example,Example,Example,Fixed Top,Fixed Bottom,Example,Example","W3.CSS provides the following classes for navigation bars:,The , class is a container for displaying HTML elements horizontally.,The , class defines the container elements.,It is a perfect tool for creating navigation bars:,The , class makes any bar elements responsive 
+(horizontal on large screens and vertical on small).,Use a , class to add a color to the navigation 
+bar:,Use a , or , class to add borders around the navigation bar, or to display it as a card:,Add a , class to a link to highlight it:,When you mouse over a button, the background color will change to grey.,If you want a different background color on hover, use any of the , classes:,If you want to change the text color instead, turn off the default hover effect with the
+, class, and add a , class.,Spend some time to play around with different hover effects:,Use the , class on a list item to right-align a specific link:,Use a , class to change the font-size of the links inside the navbar:,Use a , class to change the padding of each link inside the navbar:, You can also add padding to the navigation bar, instead of each 
+button. However, if you do this, note that the links do not get full padding on hover:,Customize the width of the links with the CSS width property,(,: Use , to transform the links 
+to 100% width on small screens):,If you want text instead of buttons inside the navigation bar,
+use the , class to get the same padding as the buttons.,Move the mouse over the ""Dropdown"" link:,Use , if you prefer to click on the dropdown link instead of hover:,Remove the w3-bar-block class from the dropdown container if you want the dropdown links to display horizontally instead of vertically:,Use the w3-mobile class on all links including the dropdown container to create a responsive navbar with responsive dropdown links.,Resize the browser window to see the effect:,To force the navigation bar to stay at the top or at the bottom of the page, 
+even when the user scrolls the page, wrap a <div> element around the bar and add the , or , class:,The , class is a container for displaying HTML elements vertically.,When the navigation bar takes up too much space on a small screen, and you do not want to display it vertically by default, you 
+can use hide and show classes on specific links in the navigation bar.,In the example below, the navigation bar is replaced with a button (☰) in the top right corner when shown on tablets and mobile devices. When the button is clicked, the 
+links in the navigation bar will vertically stack:,The , class creates a side navigation:,Go to the , to learn more about the side navigation.",,"
+<div class=""w3-bar w3-black"">,
+  <a href=""#"" class=""w3-bar-item w3-button"">Home</a>,
+  <a href=""#"" class=""w3-bar-item w3-button"">Link 1</a>,
+  <a href=""#"" class=""w3-bar-item w3-button"">Link 2</a>,
+  <a href=""#"" class=""w3-bar-item w3-button"">Link 3</a>,
+</div>
+,
+<div class=""w3-bar w3-black"">,
+  <a href=""#"" class=""w3-bar-item w3-button w3-mobile"">Home</a>,
+  <a href=""#"" class=""w3-bar-item w3-button w3-mobile"">Link 1</a>,
+  <a href=""#"" class=""w3-bar-item w3-button w3-mobile"">Link 2</a>,
+  <a href=""#"" class=""w3-bar-item w3-button w3-mobile"">Link 3</a>,
+</div>
+,
+<div class=""w3-bar w3-light-grey"">,<div 
+class=""w3-bar w3-green"">,<div 
+class=""w3-bar w3-blue"">,
+<div class=""w3-bar w3-border w3-light-grey"">,<div 
+class=""w3-bar w3-border w3-card-4"">,
+<div class=""w3-bar w3-border w3-light-grey"">,
+  <a href=""#"" class=""w3-bar-item w3-button w3-green"">Home</a>,
+  <a href=""#"" class=""w3-bar-item w3-button"">Link 1</a>,
+  <a href=""#"" class=""w3-bar-item w3-button"">Link 2</a>,
+  <a href=""#"" class=""w3-bar-item w3-button"">Link 3</a>,
+</div>
+,
+<div class=""w3-bar w3-border w3-light-grey"">,
+  <a href=""#"" class=""w3-bar-item w3-button"">Home</a>,
+  <a href=""#"" class=""w3-bar-item w3-button w3-hover-green"">Link 1</a>,
+  <a href=""#"" class=""w3-bar-item w3-button w3-hover-blue"">Link 2</a>,
+  <a href=""#"" class=""w3-bar-item w3-button w3-hover-teal"">Link 3</a>,
+</div>
+,
+  <div class=""w3-bar w3-border w3-black"">,  <a href=""#"" 
+  class=""w3-bar-item w3-button"">Default</a>,  <a href=""#"" 
+  class=""w3-bar-item w3-button w3-hover-none w3-text-grey 
+  w3-hover-text-white"">Link 1</a>,  <a href=""#"" class=""w3-bar-item 
+  w3-button w3-hover-none w3-text-grey w3-hover-text-white"">Link 2</a>,  
+  <a href=""#"" class=""w3-bar-item w3-button w3-hover-none w3-text-grey 
+  w3-hover-text-white"">Link 3</a>,</div> ,
+<div class=""w3-bar"">,
+<a href=""#"" class=""w3-bar-item w3-button w3-hover-none w3-border-white w3-bottombar w3-hover-border-black"">Link 1</a>,
+<a href=""#"" class=""w3-bar-item w3-button w3-hover-none w3-border-white w3-bottombar w3-hover-border-black"">Link 2</a>,<a href=""#"" 
+class=""w3-bar-item w3-button w3-hover-none w3-border-white w3-bottombar w3-hover-border-black"">Link 3</a>,</div> ,
+<div class=""w3-bar w3-border w3-light-grey"">,
+    <a href=""#"" class=""w3-bar-item w3-button"">Home</a>,
+  <a href=""#"" class=""w3-bar-item w3-button"">Link 1</a>,
+  <a href=""#"" class=""w3-bar-item w3-button"">Link 2</a>,
+  <a href=""#"" class=""w3-bar-item w3-button w3-green w3-right"">Link 3</a>,
+</div>
+,
+<div class=""w3-bar w3-green w3-large"">,
+<div class=""w3-bar w3-green w3-xlarge"">
+,
+<div class=""w3-bar w3-border w3-green"">,
+  <a href=""#"" class=""w3-bar-item w3-button w3-padding-16"">Home</a>,
+  <a href=""#"" class=""w3-bar-item w3-button w3-padding-16"">Link 1</a>,
+  <a href=""#"" class=""w3-bar-item w3-button w3-padding-16"">Link 2</a>,
+  <a href=""#"" class=""w3-bar-item w3-button w3-padding-16"">Link 3</a>,
+</div>
+,
+<div class=""w3-bar w3-green w3-padding-16""></div>
+,
+  ,
+  <div class=""w3-bar w3-light-grey w3-border"">,  <a href=""#"" 
+  class=""w3-bar-item w3-button w3-green""><i class=""fa fa-home""></i></a>,  
+  <a href=""#"" class=""w3-bar-item w3-button""><i class=""fa fa-search""></i></a>,  
+  <a href=""#"" class=""w3-bar-item w3-button""><i class=""fa fa-envelope""></i></a>,  
+  <a href=""#"" class=""w3-bar-item w3-button""><i class=""fa fa-globe""></i></a>,  
+  <a href=""#"" class=""w3-bar-item w3-button""><i class=""fa fa-sign-in""></i></a>,
+  </div>,
+  <div class=""w3-bar w3-black"">,  <a href=""#"" class=""w3-bar-item 
+  w3-button"">Home</a>,  <a href=""#"" class=""w3-bar-item w3-button"">Link 
+  1</a>,  <a href=""#"" class=""w3-bar-item w3-button"">Link 2</a>,  
+  <a href=""#"" class=""w3-bar-item w3-button"">Link 3</a>,  <span 
+  class=""w3-bar-item"">Text</span>,</div>,
+  <div class=""w3-bar w3-light-grey"">,  <a href=""#"" class=""w3-bar-item 
+  w3-button"">Home</a>,  <a href=""#"" class=""w3-bar-item w3-button"">Link 
+  1</a>,  <a href=""#"" class=""w3-bar-item w3-button"">Link 2</a>,  
+  <input type=""text"" class=""w3-bar-item w3-input"" placeholder=""Search.."">,  
+  <a href=""#"" class=""w3-bar-item w3-button w3-green"">Go</a>,</div>,
+<div class=""w3-bar w3-light-grey"">,  <a href=""#"" 
+  class=""w3-bar-item w3-button"">Home</a>,  
+<a href=""#"" class=""w3-bar-item w3-button"">Link 1</a>,  <div class=""w3-dropdown-hover"">,
+      <button class=""w3-button"">Dropdown</button>,    <div 
+class=""w3-dropdown-content w3-bar-block w3-card-4"">,      <a href=""#"" 
+  class=""w3-bar-item w3-button"">Link 1</a>,      <a href=""#"" 
+  class=""w3-bar-item w3-button"">Link 
+2</a>,      <a href=""#"" class=""w3-bar-item 
+  w3-button"">Link 3</a>,    
+</div>,  </div>,</div>,
+<div class=""w3-dropdown-click"">,  <button class=""w3-button"" onclick=""myFunction()"">,    Dropdown 
+<i class=""fa fa-caret-down""></i>,  </button>,  <div id=""demo"" 
+class=""w3-dropdown-content w3-bar-block w3-card-4"">,    <a href=""#"" 
+  class=""w3-bar-item w3-button"">Link 1</a>,    <a href=""#"" 
+  class=""w3-bar-item w3-button"">Link 2</a>,    
+<a href=""#"" class=""w3-bar-item w3-button"">Link 3</a>,  </div>,</div>,
+<div class=""w3-bar w3-light-grey"">,  <a href=""#"" 
+  class=""w3-bar-item w3-button"">Home</a>,  
+<a href=""#"" class=""w3-bar-item w3-button"">Link 1</a>,  <div class=""w3-dropdown-hover"">,
+      <button class=""w3-button"">Dropdown</button>,    <div 
+class=""w3-dropdown-content w3-card-4"">,      <a href=""#"" 
+  class=""w3-bar-item w3-button"">Link 1</a>,      <a href=""#"" 
+  class=""w3-bar-item w3-button"">Link 
+2</a>,      <a href=""#"" class=""w3-bar-item 
+  w3-button"">Link 3</a>,    
+</div>,  </div>,</div>,
+ <div class=""w3-bar w3-black"">,  <a href=""#"" class=""w3-bar-item 
+  w3-button w3-mobile w3-green"">Home</a>,  <a href=""#"" 
+  class=""w3-bar-item w3-button w3-mobile"">Link 1</a>,  <a href=""#"" 
+  class=""w3-bar-item w3-button w3-mobile"">Link 2</a>,  <div 
+  class=""w3-dropdown-hover w3-mobile"">,    <button 
+  class=""w3-button"">Dropdown <i class=""fa fa-caret-down""></i></button>,    
+  <div class=""w3-dropdown-content w3-bar-block w3-dark-grey"">,      
+  <a href=""#"" class=""w3-bar-item w3-button w3-mobile"">Link 1</a>,      
+  <a href=""#"" class=""w3-bar-item w3-button w3-mobile"">Link 2</a>,      
+  <a href=""#"" class=""w3-bar-item w3-button w3-mobile"">Link 3</a>,    
+  </div>,  </div>,</div>,
+  <div class=""w3-top"">, 
+  <div class=""w3-bar"">,    ...,    ...,  </div>,
+  </div>,
+  <div class=""w3-bottom"">, 
+<div class=""w3-bar"">,    ...,    ...,  </div>,
+  </div>,
+  <div class=""w3-bar-block w3-black"">,  <a href=""#"" class=""w3-bar-item w3-button"">Home</a>,  <a href=""#"" class=""w3-bar-item w3-button"">Link 
+  1</a>,  <a href=""#"" class=""w3-bar-item w3-button"">Link 2</a>,  
+  <a href=""#"" class=""w3-bar-item w3-button"">Link 3</a>,</div>",
+W3.CSS ,Sidebar,"W3.CSS Vertical Navigation Bars,Always Display the Sidebar,Open the Sidebar Navigation Over a Part of the Content ,Open the Sidebar Navigation Over the Content,Collapsible Responsive Side Navigation,Slide the Page Content to the Right,Right-sided Side Navigation,Right-sided Collapsible Navigation,Left & Right Side Navigation,Styling the Side Navigation,Bordered Side Navigation,Hoverable Links,Side Navigation Sizes,Side Navigation with Icons,Sidebar with Dropdown,Sidebar with Accordion,Animated Sidebar,Sidebar Overlay,Sidebar Content","Example,Example,Example,Example,Example,Example,Example,Example,Example,Example,Example,Example,Example,Example,Example,Example,Example,Example,Example,Example,Example","With side navigation, you have several options:,Add the , class to the w3-sidebar to change 
+the background color. If you want an active/current link, to let the user know which 
+page he/she is on, add the w3-, class to one of the links as well:,Use the , class to add a border around the side navigation:,Add the , class to the links to create link dividers:,Use the , class to display the side navigation as a card:,When you mouse over the links inside a bar block, the background color will change to grey.,If you want a different background color on hover, use any of the , classes:,You can turn off the default hover effect with the , class. This is often used when you only want to highlight text color (and not background color) on hover:,Increased font-size (w3-large etc):,Increased padding (w3-padding etc):, When the dropdown menu is ""open"", the dropdown link gets a grey background color to indicate that it is active. To override this, add a 
+,class to both the ""dropdown"" 
+<div> and <a>.,Use any of the , to fade, zoom or slide in side navigation:,The , class can be used to create an overlay effect when opening the sidebar. The w3-overlay class adds a black background with a 
+50% opacity to the ""page content"" - this effect will ""highlight"" the side navigation.,Add whatever you like inside the side navigation:","Always display the navigation pane to the left of the page content,Use a collapsible, ""fully automatic"" responsive side navigation,Open navigation pane over the left part of the page content,Open navigation pane over all of the page content,Slide the page content to the right when opening the navigation pane,Display the navigation pane on the right side instead of the left side","
+   <div class=""w3-sidebar w3-bar-block"" style=""width:25%""> ,  <a href=""#"" class=""w3-bar-item w3-button"">Link 1</a>,  <a href=""#"" class=""w3-bar-item w3-button"">Link 2</a>,  <a href=""#"" class=""w3-bar-item w3-button"">Link 3</a>,</div>,<div style=""margin-left:25%"">,... page content ...,</div>,
+  <div class=""w3-sidebar 
+  w3-bar-block w3-collapse w3-card"" style=""width:200px;"" id=""mySidebar"">,  <button class=""w3-bar-item 
+  w3-button w3-hide-large"",  onclick=""w3_close()"">Close &times;</button>,  <a 
+  href=""#"" class=""w3-bar-item w3-button"">Link 1</a>,  <a 
+  href=""#"" class=""w3-bar-item w3-button"">Link 2</a>,  <a 
+  href=""#"" class=""w3-bar-item w3-button"">Link 3</a>,</div>,<div class=""w3-main"" style=""margin-left:200px"">,
+  ,<div class=""w3-teal"">,  <button class=""w3-button w3-teal 
+  w3-xlarge"" onclick=""w3_open()"">&#9776;</button>,  <div 
+  class=""w3-container"">,    <h1>My Page</h1>,  </div>,  
+  </div>,</div>,<script>,function w3_open() 
+{,  document.getElementById(""mySidebar"").style.display 
+= ""block"";,},function w3_close() {,  
+document.getElementById(""mySidebar"").style.display = ""none"";,
+},</script>,
+  <div class=""w3-sidebar 
+   w3-bar-block"" style=""width:25%;,"">,  <h5 class=""w3-bar-item"">Menu</h5>,
+     <a href=""#"" class=""w3-bar-item 
+   w3-button"">Link 1</a> ,  <a href=""#"" 
+   class=""w3-bar-item w3-button"">Link 2</a> ,  <a href=""#"" 
+   class=""w3-bar-item w3-button"">Link 3</a> ,</div>,<div style=""margin-right:25%"">,... page content ...,</div>,
+<div class=""w3-sidebar w3-bar-block w3-collapse"" style=""width:200px;right:0"" 
+id=""mySidebar"">,   
+<button class=""w3-bar-item w3-button w3-hide-large"",  onclick=""w3_close()"">Close 
+&times;</button> ,  <a href=""#"" class=""w3-bar-item w3-button"">Link 
+  1</a> ,  <a href=""#"" 
+  class=""w3-bar-item w3-button"">Link 2</a> ,  <a href=""#"" class=""w3-bar-item w3-button"">Link 
+  3</a> ,
+  </div>,<div class=""w3-main"" style=""margin-right:200px"">,
+  <div class=""w3-teal"">,  <button class=""w3-button w3-teal w3-xlarge 
+  w3-right w3-hide-large"" onclick=""w3_open()"">&#9776;</button>,  <div 
+  class=""w3-container"">,    <h2>My Page</h2>,  </div>,
+  </div>,</div>,<script>,function w3_open() 
+{,  document.getElementById(""mySidebar"").style.display 
+= ""block"";,},function w3_close() {,  
+document.getElementById(""mySidebar"").style.display = ""none"";,
+},</script>,
+  <div class=""w3-sidebar w3-red"">,
+  <div class=""w3-sidebar w3-border"">,
+<div class=""w3-sidebar w3-bar-block"">,  
+<a href=""#"" class=""w3-bar-item w3-button w3-border-bottom"">Link 1</a> ,  <a href=""#"" 
+  class=""w3-bar-item w3-button w3-border-bottom"">Link 2</a> ,  <a href=""#"" 
+  class=""w3-bar-item w3-button"">Link 3</a> ,</div>,
+  <nav class=""w3-sidebar w3-card"">,
+<div class=""w3-sidebar w3-bar-block"">,  
+<a href=""#"" class=""w3-bar-item w3-button w3-hover-black"">Link 1</a>,  <a href=""#"" 
+  class=""w3-bar-item w3-button w3-hover-green"">Link 2</a>,  <a href=""#"" 
+  class=""w3-bar-item w3-button w3-hover-blue"">Link 3</a>,</div>,
+<div class=""w3-sidebar w3-bar-block"">,  
+<a href=""#"" class=""w3-bar-item w3-button w3-hover-none w3-hover-text-grey"">Link 
+  1</a>,  <a href=""#"" 
+class=""w3-bar-item w3-button w3-hover-none w3-hover-text-green"">Link 
+  2</a>,  <a href=""#"" 
+class=""w3-bar-item w3-button w3-hover-none w3-hover-text-teal"">Link 
+  3</a>,</div>,
+<div class=""w3-sidebar w3-bar-block w3-large"">,  <a href=""#"" class=""w3-bar-item 
+  w3-button"">Link</a>,
+  <a href=""#"" class=""w3-bar-item w3-button"">Link</a>,
+    <a href=""#"" class=""w3-bar-item w3-button"">Link</a>,</div>,
+<div class=""w3-sidebar w3-bar-block w3-black"" style=""width:70px"">,  <a href=""#"" 
+  class=""w3-bar-item w3-button""><i 
+class=""fa fa-home""></i></a> ,  <a href=""#"" 
+  class=""w3-bar-item w3-button""><i class=""fa 
+fa-search""></i></a> ,  <a href=""#"" class=""w3-bar-item 
+  w3-button""><i class=""fa fa-envelope""></i></a> ,  <a href=""#"" 
+  class=""w3-bar-item w3-button""><i class=""fa fa-globe""></i></a> ,</div>,
+  <div class=""w3-sidebar w3-bar-block"">,  <a href=""#"" class=""w3-bar-item w3-button"">Link 1</a> ,
+  <a href=""#"" class=""w3-bar-item w3-button"">Link 2</a> ,  <div 
+class=""w3-dropdown-hover"">,    <button 
+  class=""w3-button"">Dropdown 
+<i class=""fa fa-caret-down""></i></button>,    <div 
+class=""w3-dropdown-content w3-bar-block"">,      <a href=""#"" 
+  class=""w3-bar-item w3-button"">Link</a>,      <a href=""#"" 
+  class=""w3-bar-item w3-button"">Link</a>,    </div>,  </div>,<a href=""#"" 
+  class=""w3-bar-item w3-button"">Link 
+3</a> ,</div>,
+<div class=""w3-sidebar w3-light-grey w3-card"" style=""width:200px"">,  
+<a href=""#"" class=""w3-bar-item w3-button"">Link 1</a> ,  
+<button class=""w3-button w3-block w3-left-align"" onclick=""myAccFunc()"">Accordion</button>,  <div 
+id=""demoAcc"" class=""w3-bar-block w3-hide w3-white w3-card-4"">,    
+<a href=""#"" class=""w3-bar-item w3-button"">Link</a>,    <a href=""#"" 
+  class=""w3-bar-item w3-button"">Link</a>,  
+</div>,  <div class=""w3-dropdown-click"">,    
+<button class=""w3-button"" onclick=""myDropFunc()"">Dropdown</button>,    <div 
+id=""demoDrop"" class=""w3-dropdown-content w3-bar-block w3-white w3-card-4"">,      
+<a href=""#"" class=""w3-bar-item w3-button"">Link</a>,      <a href=""#"" 
+  class=""w3-bar-item w3-button"">Link</a>,    
+</div>,  </div>,  <a href=""#"" class=""w3-bar-item 
+  w3-button"">Link 2</a> ,  <a href=""#"" 
+  class=""w3-bar-item w3-button"">Link 
+  3</a>,
+</div>,
+<div class=""w3-sidebar w3-animate-left"">,
+<!-- Sidebar -->,<div class=""w3-sidebar w3-bar-block"" style=""display:none;z-index:5"" id=""mySidebar"">,  <button 
+  class=""w3-bar-item w3-button"" 
+onclick=""w3_close()"">Close</button>,  <a href=""#"" 
+  class=""w3-bar-item w3-button"">Link 
+1</a> ,  <a href=""#"" class=""w3-bar-item w3-button"">Link 2</a>,  <a href=""#"" 
+  class=""w3-bar-item w3-button"">Link 3</a>,</div>,<!-- Overlay -->,
+<div class=""w3-overlay"" onclick=""w3_close()"" style=""cursor:pointer"" 
+  id=""myOverlay""></div>,
+,<!-- Page content -->,<button class=""w3-button w3-xxlarge"" 
+  onclick=""w3_open()"">&#9776;</button>,<div class=""w3-container"">,  
+  <h1>Sidebar Overlay</h1>,  <p>Click on the ""hamburger"" icon to slide 
+  in the side navigation.</p>,</div>,<!-- JS to 
+open and close sidebar with overlay effect -->,<script>,function 
+w3_open() {,  document.getElementById(""mySidebar"").style.display 
+= ""block"";,  document.getElementById(""myOverlay"").style.display 
+= ""block"";,},function w3_close() {,  
+document.getElementById(""mySidebar"").style.display = ""none"";,  
+document.getElementById(""myOverlay"").style.display = ""none"";,
+},</script>,
+<div class=""w3-sidebar w3-bar-block w3-light-grey"" style=""width:50%"">,  <div 
+class=""w3-container w3-dark-grey"">,    <h4>Menu</h4>,  
+</div>,  <img src=""img_snowtops.jpg"">,  <a href=""#"" 
+  class=""w3-bar-item w3-button w3-red"">Home</a>,
+  <a href=""#"" class=""w3-bar-item w3-button"">Projects ,    <span 
+class=""w3-tag w3-red w3-round w3-right"">8</span>,  </a>,
+  <a href=""#"" class=""w3-bar-item w3-button"">About</a>,  <a href=""#"" 
+  class=""w3-bar-item w3-button"">Contact</a>,  <div class=""w3-panel w3-blue-grey 
+  w3-display-container"">,    
+<span class=""w3-button w3-display-topright"">X</span>,    <p>Lorem 
+ipsum box...</p>,  </div>, </div>",
+W3.CSS Tags (Labels and Signs),,"W3.CSS Tag Classes,Tags, Labels, and Signs,Tags are Rectangular,Colored Tags,Tag Sizes,Letter Tags,Signs,Road Signs,Large Signs,Rounded Signs,Rotating Tags,Spinning Tags","Example,Example,Example,Example,Example,Example,Example,Example,Example,Example,Example,Example","Tags:
+,
+,
+,
+,Tags as signs:
+,
+,
+,
+,W3.CSS provides one class for tags, labels, and signs:,The , class creates a rectangular tag (label or sign). 
+The default color is black: ,Status: ,Use a , class to change the color of a tag:  ,By default, a tag will inherit the size of its container.,The , classes
+(w3-tiny, w3-small, w3-large, w3-xlarge, w3-xxlarge, w3-xxxlarge, w3-jumbo)
+can be used to modify the size of a tag:,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+You might want to add some extra padding to large tags:,Signs are nothing but large tags.,The , classes can be used to display large signs:,The , classes can be used to add rounded corners to a sign:,Use the standard CSS transform property to rotate a sign:,The , class can be used to let a sign spin 360 degrees:",,"
+<p>Status: <span 
+class=""w3-tag"">Done</span></p> ,
+ <p><span class=""w3-tag w3-blue"">New!</span></p>,
+ <p><span 
+class=""w3-tag w3-teal"">More Later!</span></p>,
+<span class=""w3-tag w3-jumbo w3-blue"">66</span>,<span class=""w3-tag w3-jumbo 
+ w3-blue w3-padding-large"">66</span>,
+<span class=""w3-tag w3-xlarge"">A</span>,<span class=""w3-tag w3-xlarge"">U</span>,<span class=""w3-tag w3-xlarge"">G</span>,<span 
+class=""w3-tag w3-xlarge"">U</span>,<span class=""w3-tag w3-xlarge"">S</span>,
+<span class=""w3-tag w3-xlarge"">T</span>,
+<span class=""w3-tag w3-jumbo w3-red"">S</span>,
+<span class=""w3-tag w3-jumbo"">A</span>,<span 
+class=""w3-tag w3-jumbo w3-yellow"">L</span>,<span class=""w3-tag w3-jumbo"">E</span> ,
+<div class=""w3-tag w3-xxlarge w3-orange"">London Zoo</div>
+,
+<div class=""w3-tag w3-round w3-green"" style=""padding:3px"">,  <div 
+class=""w3-tag w3-round w3-green w3-border w3-border-white"">,    Falcon 
+Ridge Parkway,  </div>,</div>
+,
+<span class=""w3-tag w3-xxlarge w3-padding w3-orange w3-center"">,
+ <strong>,IN CASE OF<br>,
+EMERGENCY:<br>,RUN LIKE HELL!,</strong>,</span>,
+<span class=""w3-tag w3-jumbo w3-green"">,49<span class=""w3-xlarge"">,99</span>,</span>,
+<span class=""w3-tag w3-padding w3-round-large w3-red w3-center"">,
+DO NOT<br>,
+BREATHE<br>,
+UNDER WATER,
+</span>
+,
+<span class=""w3-tag w3-xlarge w3-padding w3-red"" style=""transform:rotate(-5deg)"">,STOP,</span>,
+<span class=""w3-tag w3-spin w3-large"">,STOP,</span>",
+W3.CSS ,Animations,"W3.CSS Animation Classes,Animate Top,Animate Bottom,Animate Left,Animate Right,Fade in Elements,Zoom in Elements,Spin Elements,Fading Infinite,Fade All","Example,Example,Example,Example,Example,Example,Example,Example,Example","W3.CSS provides the following classes for animations:,The , class slides in an element from the top 
+(from -300px to 0):,The , class slides in an element from the 
+bottom 
+(from -300px to 0):,The , class slides in an element from left (-300px to 0):,The , class slides in an element from the 
+right (-300px to 0):,The , class animates an element's opacity 
+from 0 to 1 in 0.8 seconds.,Fade in an element with the , class:,The , class animates an element from 0 to 100% 
+in size.,Zoom in an element with the , class:,The , class spins an element 360 degrees:,
+,
+,The , class fades in and out an element every 10 seconds (continuously):",,"
+     <div class=""w3-container"">,  <h1 class=""w3-center  w3-animate-top"">Animation is Fun!</h1>,</div>,
+     <div class=""w3-container"">,  <h1 class=""w3-center  w3-animate-bottom"">Animation is Fun!</h1>,</div>,
+     <div class=""w3-container"">,  <h1 class=""w3-center  w3-animate-left"">Animation is Fun!</h1>,</div>,
+     <div class=""w3-container"">,  <h1 class=""w3-center  w3-animate-right"">Animation is Fun!</h1>,</div>,
+     <div class=""w3-animate-opacity"">..</div>,
+     <div class=""w3-animate-zoom"">..</div>,
+     <div class=""w3-spin"">..</div>,
+     <div class=""w3-animate-fading"">..</div>,
+     <img class=""w3-animate-top"" src=""img_01.jpg"">,
+     <img class=""w3-animate-zoom"" src=""img_02.jpg"">,<img 
+     class=""w3-animate-left"" src=""img_03.jpg"">,
+     <img class=""w3-animate-bottom"" src=""img_04.jpg"">",
+W3.CSS ,Input,"Input Cards,Colored Labels,Bordered Input,Rounded Borders,Borderless Input,Colors,Hoverable inputs,Animated Inputs,Select Options,Bordered Select Menu,Form Elements in a Grid,Grid with Labels,Icon Labels","Example,Example,Example,Example,Example,Example,Example,Example,Example,Example,Example,Example,Example,Example,Example,Example","Use any of the , classes to color your labels:,Add the , class to create bordered inputs:,Use any of the , classes to create rounded borders:,The w3-input class has a bottom border by default. If you want a borderless input, add the , class:,Feel free to use your favorite styles and colors:,The , classes adds a background color to the input field on mouse-over:,The , class transforms the width of an input field to 100% when it gets focus:,      
+,      
+,In this example, we use W3.CSS' Responsive Grid System to make the inputs appear on the same line (on smaller screens, they will stack horizontally with 100% width). 
+You will learn more about this later.",,"
+<form class=""w3-container"">,<label>First Name</label>,
+ <input class=""w3-input"" type=""text"">,<label>Last Name</label>,
+ <input class=""w3-input"" type=""text"">,
+ ,</form>
+,
+<form class=""w3-container"">,<input class=""w3-input"" type=""text"">,<label>First Name</label>,
+    ,<input class=""w3-input"" type=""text"">,<label>Last 
+ Name</label>,
+ ,</form>
+,
+<div class=""w3-card-4"">,<div class=""w3-container 
+w3-green"">,  <h2>Header</h2>,</div>,<form class=""w3-container"">, ,<label>First Name</label>,<input class=""w3-input"" 
+type=""text"">, ,
+<label>Last Name</label>,<input class=""w3-input"" 
+type=""text"">,
+,</form>,</div>,
+<form class=""w3-container"">, ,<label 
+class=""w3-text-blue""><b>First Name</b></label>,
+<input class=""w3-input w3-border"" type=""text"">, ,
+<label 
+class=""w3-text-blue""><b>Last Name</b></label>,
+<input class=""w3-input w3-border"" type=""text"">,<button class=""w3-btn 
+w3-blue"">Register</button>, ,</form>,
+<input class=""w3-input w3-border"" 
+type=""text"">,
+<input class=""w3-input w3-border w3-round"" 
+type=""text"">, ,<input class=""w3-input w3-border 
+w3-round-large"" 
+type=""text"">,
+<form class=""w3-container w3-light-grey"">,  <label>First 
+Name</label>,  <input class=""w3-input w3-border-0"" type=""text"">,
+,  <label>Last Name</label>,  <input class=""w3-input 
+w3-border-0"" type=""text"">,</form>,
+<div class=""w3-container w3-teal"">,  <h2>Input Form</h2>,</div>,
+,<form class=""w3-container"">,  <label class=""w3-text-teal""><b>First Name</b></label>,  
+<input class=""w3-input w3-border w3-light-grey"" type=""text"">,
+,  <label class=""w3-text-teal""><b>Last Name</b></label>,  
+<input class=""w3-input w3-border w3-light-grey"" type=""text"">,
+,  <button class=""w3-btn w3-blue-grey"">Register</button>,</form>,
+<input class=""w3-input w3-hover-green"" type=""text"">,<input class=""w3-input 
+w3-border w3-hover-red"" type=""text"">,<input class=""w3-input 
+w3-border w3-hover-blue"" type=""text"">,
+,
+<input class=""w3-input w3-animate-input"" 
+type=""text"" style=""width:30%"">,
+<input class=""w3-check"" type=""checkbox"" checked=""checked"">,
+<label>Milk</label>,<input class=""w3-check"" 
+type=""checkbox"">,<label>Sugar</label>,
+,
+<input class=""w3-check"" type=""checkbox"" disabled>,
+<label>Lemon (Disabled)</label>,
+<input class=""w3-radio"" type=""radio"" name=""gender"" value=""male"" checked>,
+<label>Male</label>,
+,<input class=""w3-radio"" 
+type=""radio"" name=""gender"" value=""female"">,<label>Female</label>,<input class=""w3-radio"" 
+type=""radio"" name=""gender"" value="""" disabled>,<label>Don't know (Disabled)</label>,
+<select class=""w3-select"" name=""option"">,  <option value="""" disabled 
+selected>Choose your option</option>,  <option value=""1"">Option 
+1</option>,  <option value=""2"">Option 2</option>,  <option 
+value=""3"">Option 3</option>,</select>,
+  <select class=""w3-select w3-border"" name=""option"">,
+<div class=""w3-row-padding"">,  <div class=""w3-third"">,    
+<input class=""w3-input w3-border"" type=""text"" placeholder=""One"">,  
+</div>,  <div class=""w3-third"">,    <input 
+class=""w3-input w3-border"" type=""text"" placeholder=""Two"">,  </div>,  
+<div class=""w3-third"">,    <input class=""w3-input 
+w3-border"" type=""text"" placeholder=""Three"">,  </div>,</div>,
+<div class=""w3-row-padding"">,  <div class=""w3-half"">,    
+<label>First Name</label>,    <input 
+class=""w3-input w3-border"" type=""text"" placeholder=""Two"">,  </div>,  
+<div class=""w3-half"">,    <label>Last 
+Name</label>,    <input class=""w3-input 
+w3-border"" type=""text"" placeholder=""Three"">,  </div>,</div>",
+W3.CSS ,Images,"Rounded Image,Circled Image,Bordered Image,Image as a Card,Image Text,Responsive Images,Opacity,Grayscale,Sepia,Hover Effects,Opacity Off,Constructing a Photo Album","Example,Example,Example,Example,Example,Example,Example,Example,Example,Example,Example,Example,Example,Example","The , class adds rounded corners to an image:,The , class shapes an image to a circle:,The , class adds borders around the image:,Wrap any of the , classes around the <img> element to display it as a card 
+(add shadows):,Position the text in an image with the ,:,An image can be set to automatically resize itself to fit the size of its container.,If you want the image to scale down if it has to, but never scale up to be 
+larger than its original size, use the w3-image class.,If you want the image to scale both up and down on responsiveness, set the 
+CSS width property to 100%:,If you want to restrict a responsive image to a maximum size, use the max-width property:,The , classes make images transparent:,The , classes add a grayscale effect to an image:,The , classes add a sepia effect to an image:,You can also add special effects on hover/mouse-over.,The , class adds transparency to the image on mouse-over, and the 
+, class removes transparency on mouse-over.,In this example we use the W3.CSS Responsive Grid system to create a photo album that looks good on all devices.
+You will learn more about this later.",,"
+    <img src=""img_snowtops.jpg"" class=""w3-round"" alt=""Norway"">,
+<img src=""snowtops.jpg"" class=""w3-circle"" alt=""Alps"">
+,
+<img src=""snowtops.jpg"" class=""w3-border w3-padding"" alt=""Alps"">
+,
+<div class=""w3-card-4"">,
+  <img src=""img_avatar.png"" 
+alt=""Person"">,
+</div>
+,
+<div class=""w3-display-container"">,  <img src=""img_lights.jpg"" 
+alt=""Lights"">,  <div class=""w3-display-topleft w3-container"">Top 
+Left</div>,  <div class=""w3-display-topright w3-container"">Top 
+Right</div>,  <div class=""w3-display-bottomleft w3-container"">Bottom 
+Left</div>,  <div class=""w3-display-bottomright w3-container"">Bottom 
+Right</div>,  <div class=""w3-display-left w3-container"">Left</div>,  <div class=""w3-display-right w3-container"">Right</div>,  <div class=""w3-display-middle w3-large"">Middle</div>,  <div class=""w3-display-topmiddle w3-container"">Top Middle</div>,  <div class=""w3-display-bottommiddle w3-container"">Bottom Middle</div>,
+</div>,
+  <img src=""img_lights.jpg"" 
+alt=""Lights"" class=""w3-image"">,
+  <img src=""img_lights.jpg"" 
+alt=""Lights"" style=""width:100%"">,
+  <img src=""img_lights.jpg"" 
+alt=""Lights"" style=""width:100%;max-width:400px"">,
+<img src=""img_forest.jpg"" alt=""Forest"" class=""w3-opacity-min"">
+  ,<img src=""img_forest.jpg"" alt=""Forest"" class=""w3-opacity"">
+  ,<img src=""img_forest.jpg"" alt=""Forest"" class=""w3-opacity-max"">
+,
+<img src=""image.jpg"" alt=""Table"" class=""w3-grayscale-min"">
+  ,<img src=""image.jpg"" alt=""Table"" class=""w3-grayscale"">
+  ,<img src=""image.jpg"" alt=""Table"" class=""w3-grayscale-max"">
+,
+<img src=""image.jpg"" alt=""Table"" class=""w3-sepia-min"">
+  ,<img src=""image.jpg"" alt=""Table"" class=""w3-sepia"">
+  ,<img src=""image.jpg"" alt=""Table"" class=""w3-sepia-max"">
+,
+    <img src=""image.jpg"" alt=""Einstein"" class=""w3-hover-opacity"">,<img src=""image.jpg"" alt=""Einstein"" class=""w3-hover-grayscale"">,<img src=""image.jpg"" alt=""Einstein"" class=""w3-hover-sepia"">,
+ <img src=""snowtops.jpg"" class=""w3-hover-opacity"" alt=""Alps"">
+  ,<img src=""snowtops.jpg"" class=""w3-opacity w3-hover-opacity-off"" alt=""Alps"">
+,
+ <div class=""w3-third"">,  <div class=""w3-card"">,    
+ <img src=""img_monterosso.jpg"" style=""width:100%"">,    <div 
+ class=""w3-container"">,      <h4>Monterosso</h4>,    
+ </div>,  </div>,</div>
+",
+W3.CSS Badges,,"W3.CSS Badge Classes,Badges,Colored Badges,Badges in Buttons,Badges in Lists,Badges in Tables,Badge Sizes,UTF-8 Badges","Example,Example,Example,Example,Example,Example,Example,Example","
+,
+,
+,
+,
+,
+,
+,W3.CSS provides only one class for badges:,The , class creates a circular badge. The default color is black.,Updates ,Use a , class to change the color of a badge:,News ,Comments ,The , class can be used inside other elements:,The , class floats an element to the right.,This is perfect for lists with badges:,By default, a badge will inherit the size of its container.,The , classes
+(w3-tiny, w3-small, w3-large, w3-xlarge, w3-xxlarge, w3-xxxlarge, w3-jumbo)
+can be used to modify the size of a badge:,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+You might want to add some extra padding to large badges:,Since HTML5 supports the UTF-8 character set, you can use
+, for single digit badges."," Jill, Eve, Adam,Jill ,Eve ,Adam ","
+<p>Updates <span class=""w3-badge"">9</span></p>
+, 
+,
+ <p>News <span class=""w3-badge 
+w3-green"">6</span></p>,<p>Comments <span class=""w3-badge 
+w3-red"">8</span></p> 
+,
+<p><button class=""w3-btn w3-black"">Button,<span class=""w3-badge w3-margin-left 
+w3-white"">1</span>,</button></p>,<p><button class=""w3-btn 
+w3-red"">Button,<span class=""w3-badge w3-margin-left"">2</span>,</button></p>,
+ <ul class=""w3-ul"">,  <li><span class=""w3-badge"">1</span> Jill</li>,  
+ <li><span class=""w3-badge"">2</span> Eve</li>,  <li><span 
+ class=""w3-badge"">3</span> Adam</li>,</ul>,
+,
+<ul class=""w3-ul w3-border"">,  <li>Jill <span 
+class=""w3-badge w3-right w3-margin-right"">1</span></li>,  <li>Eve <span 
+class=""w3-badge w3-right w3-margin-right"">2</span></li>,  <li>Adam <span 
+class=""w3-badge w3-right w3-margin-right"">3</span></li>,</ul>,
+,
+ <tr>,  <td>Eve</td>,  <td>Jackson <span 
+ class=""w3-badge"">1</span></td>,  <td>94</td>,</tr>,<tr>,  
+ <td>Adam</td>,  <td>Johnson <span class=""w3-badge"">2</span></td>,  
+ <td>67</td>,</tr>,
+,
+<span class=""w3-badge w3-jumbo w3-red"">66</span>,<span class=""w3-badge w3-jumbo 
+ w3-red w3-padding"">66</span>,
+    <div class=""w3-xxlarge"">,&#x2776; &#x2777; &#x2778; &#x2779; &#x277A; &#x2785; &#x2786; &#x2787; &#x2788; &#x2789;,</div>,<div class=""w3-xxlarge w3-text-red"">,&#x2776; &#x2777; &#x2778; &#x2779; &#x277A; &#x2785; &#x2786; &#x2787; &#x2788; &#x2789;,</div>",
+W3.CSS ,Lists,"Basic List,Bordered List,List Header,List as a Card,Centered List,Colored List,Colored List Item,Hoverable List,Closable List Item,List With Padding,Avatar List,List Width,Tiny List,Small List,Large List,XLarge List,XXLarge List,XXXLarge List,Jumbo List","Example,Example,Example,Example,Example,Example,Example,Example,Example,Example,Example,Example,Example,Example,Example,Example,Example,Example,Example,Example","The , class is used to display a basic list:,The , class adds a border around the list:,An example of how to add a heading element inside the list item:,The , classes can be used to show a list as a card:,The , class can be used to center the list items in a list:,The , classes can be used to add a color to the list:,The , classes can be used to add a color to the list item:,The , class adds a grey background color to each list item on mouse-over:,If you want a specific hover color, add any of the , 
+classes to each <li> element:,Click on the ""x"" to close/hide a list item:,The , classes can be used to add 
+padding to list items: ,Lists have a 100% width by default. Use the width property to change this.,30% width:,50% width:,80% width:,Use the , class to display a tiny list: ,Use the , class to display a small list:  ,Use the , class to display a large list: ,Use the , class to display an extra large list:  ,Use the , class to display an XXLarge list:  ,Use the , class to display an XXXLarge list:  ,Use the , class to display an enormous ""jumbo"" 
+list:  ","
+    ,
+    ,
+    ,
+  ,
+    ,
+    ,
+    ,
+  ,
+    ,
+    ,
+    ,
+  ,Jill,Eve,Adam,Jill,Eve,Adam,Jill,Eve,Adam,Jill,Eve,Adam,Jill,Eve,Adam,Jill,Eve,Adam,Jill,Eve,Adam,Jill,Eve,Adam,Jill,Eve,Adam,Jill ,Adam ,Eve ,Jill,Eve,Adam,Jill,Eve,Adam,
+    ,
+    ,
+    ,
+  ,
+    ,
+    ,
+    ,
+  ,
+    ,
+    ,
+    ,
+  ,Jill,Adam,Jill,Adam,Jill,Adam,Jill,Eve,Adam,Jill,Eve,Adam,Jill,Eve,Adam,Jill,Eve,Adam,Jill,Eve,Adam,Jill,Eve,Adam,Jill,Eve,Adam","
+ <ul class=""w3-ul"">,  <li>Jill</li>,  <li>Eve</li>,  <li>Adam</li>,
+ </ul>,
+,
+ <ul class=""w3-ul w3-border"">,  <li>Jill</li>,  <li>Eve</li>,  
+ <li>Adam</li>,</ul>,
+,
+ <ul class=""w3-ul w3-border"">,  <li><h2>Names</h2></li>,  <li>Jill</li>,  <li>Eve</li>,  
+ <li>Adam</li>,</ul>,
+,
+<ul class=""w3-ul w3-card-4"" style=""width:50%"">,  <li>Jill</li>,  <li>Eve</li>,  
+<li>Adam</li>,</ul>,
+,
+<ul class=""w3-ul w3-center"">,  <li>Jill</li>,  <li>Eve</li>,  
+<li>Adam</li>,</ul>,
+,
+<ul class=""w3-ul w3-red"">,  <li>Jill</li>,  <li>Eve</li>,  
+<li>Adam</li>,</ul>,
+,
+<ul class=""w3-ul"">,  <li class=""w3-blue"">Jill</li>,  <li>Eve</li>,  
+<li>Adam</li>,</ul>,
+,
+<ul class=""w3-ul w3-hoverable"">,  <li>Jill</li>,  <li>Eve</li>,  
+<li>Adam</li>,</ul>,
+,
+  <ul class=""w3-ul"">,  <li class=""w3-hover-red"">Jill</li>,  <li class=""w3-hover-blue"">Eve</li>,  <li class=""w3-hover-green"">Adam</li>,</ul>,
+<li class=""w3-display-container"">Jill ,  <span onclick=""this.parentElement.style.display='none'""
+,  class=""w3-button w3-display-right"">&times;</span>,</li>,
+,
+<ul class=""w3-ul"">,  <li class=""w3-padding-small"">Jill</li>,  <li 
+class=""w3-padding-small"">Eve</li>,  
+<li class=""w3-padding-small"">Adam</li>,</ul>,
+,
+  <li class=""w3-bar"">,  <span onclick=""this.parentElement.style.display='none'""
+  ,  class=""w3-bar-item w3-button w3-xlarge w3-right"">&times;</span>,  
+  <img src=""img_avatar2.png"" class=""w3-bar-item w3-circle"" style=""width:85px"">,  
+  <div class=""w3-bar-item"">,    <span 
+  class=""w3-large"">Mike</span><br>,    <span>Web 
+  Designer</span>,  </div>,</li>,
+,
+<ul class=""w3-ul"" style=""width:30%"">,  <li>Jill</li>,  <li>Eve</li>,  
+<li>Adam</li>,</ul>,
+,
+<ul class=""w3-ul w3-tiny"">,  <li>Jill</li>,  <li>Eve</li>,  
+<li>Adam</li>,</ul>,
+,
+<ul class=""w3-ul w3-small"">,  <li>Jill</li>,  <li>Eve</li>,  
+<li>Adam</li>,</ul>,
+,
+<ul class=""w3-ul w3-large"">,  <li>Jill</li>,  <li>Eve</li>,  
+<li>Adam</li>,</ul>,
+,
+<ul class=""w3-ul w3-xlarge"">,  <li>Jill</li>,  <li>Eve</li>,  
+<li>Adam</li>,</ul>,
+,
+<ul class=""w3-ul w3-xxlarge"">,  <li>Jill</li>,  <li>Eve</li>,  
+<li>Adam</li>,</ul>,
+,
+<ul class=""w3-ul w3-xxxlarge"">,  <li>Jill</li>,  <li>Eve</li>,  
+<li>Adam</li>,</ul>,
+,
+<ul class=""w3-ul w3-jumbo"">,  <li>Jill</li>,  <li>Eve</li>,  
+<li>Adam</li>,</ul>,
+",
+W3.CSS ,Downloads,"Download W3.CSS,W3.CSS is Free,How To use W3.CSS,Changelog,GitHub Repositiory,Validating W3.CSS,Customize W3.CSS,W3.CSS is Normalized","Example,Example,Example,Example,Example","Download W3.CSS from this link:
+,W3.CSS is free to use. No license is necessary.,To use W3.CSS, just add a link to ""w3.css"" in your web pages:,Or download w3.css and run it from your own web site:,If you put w3.css in a subfolder, add the folder name between slashes:,If you place w3.css at the root of your web, add a slash:,Download version 4.13 from this link:
+,Validating W3.CSS  might return some errors.,W3.CSS includes basic fonts and font sizes.,You can customize W3.CSS by changing these settings:,Normalizing a style sheet is done to:,An , from
+Normalize.css is used in W3.CSS.,This makes W3.CSS display HTML consistently in all browsers, and in line with 
+modern web standards.","Correct browser bugs,Remove browser inconsistencies,Assure common browser defaults,Normalize the styles of all HTML elements,Add CSS improvements","
+  <!DOCTYPE html>,<html>,<title>My Web</title>,<meta 
+  name=""viewport"" content=""width=device-width, initial-scale=1"">,
+  ,
+  <!DOCTYPE html>,<html>,<title>My Web</title>,<meta 
+  name=""viewport"" content=""width=device-width, initial-scale=1"">,
+  ,
+  <!DOCTYPE html>,<html>,<title>My Web</title>,<meta 
+  name=""viewport"" content=""width=device-width, initial-scale=1"">,
+  ,
+  <!DOCTYPE html>,<html>,<title>My Web</title>,<meta 
+  name=""viewport"" content=""width=device-width, initial-scale=1"">,
+  ",
+W3.CSS Reference,,"W3.CSS Classes,Hover Color Classes",,"The colors above can also be used as hover classes:,The text classes above can also be used as hover classes:",,,
+W3.CSS ,Demos,Mobile Templates,,,,,
+W3.CSS ,Templates,,,,,,
+W3.CSS ,Examples,"W3.CSS Colors,W3.CSS Containers,W3.CSS Borders,W3.CSS Panels,W3.CSS Cards,W3.CSS Fonts,W3.CSS Text,W3.CSS Round,W3.CSS Padding,W3.CSS Margins,W3.CSS Display,W3.CSS Buttons,W3.CSS Notes,W3.CSS Quotes,W3.CSS Alerts,W3.CSS Tables,W3.CSS Lists,W3.CSS Images,W3.CSS Inputs,W3.CSS Badges,W3.CSS Tags, Labels, and Signs,W3.CSS Icons,W3.CSS Responsive,W3.CSS Animate,W3.CSS Dropdowns,W3.CSS Accordions,W3.CSS Navigation,W3.CSS Sidebar,W3.CSS Tabs,W3.CSS Pagination,W3.CSS Progress Bars,W3.CSS Slideshow,W3.CSS Modal,W3.CSS Tooltips,W3.CSS Responsive Grid,W3.CSS Code,W3.CSS Filters",,,,,
+Architect Web Page,,,"Example,Example,Example,Example",,,,
+Gourmet Catering,,,"Example,Example,Example,Example,Example,Example",Powered by ,,,
+Pizza Restaurant,,,"Example,Example,Example,Example",,,,
+Using a CSS Stylesheet,,How to Be Responsive,"HTML / CSS Skeleton,HTML Code,HTML Code","To use the stylesheet you must add a class to the HTML elements you want to style:,Try to change the background color of the container from teal to black.,Did you make it?,You have just learned the basics of using a style sheet.,Keep on reading!",,"
+<link rel=""stylesheet"" href="""">
+,
+<link rel=""stylesheet"" href=""https://www.w3schools.com/w3css/4/w3.css"">
+,
+<div class=""w3-container w3-black"">,
+<h1>This is a Heading</h1>,
+<p>This is a paragraph.</p>,
+<p>This is another paragraph.</p>,
+</div>,
+,
+<div class=""w3-row"">,
+<div class=""w3-third"">,
+<img src=""img_avatar.png"" alt=""Name1"" style=""width:100%"">,
+</div>,
+<div class=""w3-third"">,
+<img src=""img_avatar.png"" alt=""Name2"" style=""width:100%"">,
+</div>,
+<div class=""w3-third"">,
+<img src=""img_avatar.png"" alt=""Name3"" style=""width:100%"">,
+</div>,
+</div>
+,
+  <div class=""w3-card""  style=""width:200px"">,
+    <img src=""img_avatar.png"" style=""width:100%"">,
+    <div class=""w3-container w3-center"">,
+      <p class=""w3-xlarge"">John Doe</p>,
+      <p>Engineer</p>,
+    </div>,</div>
+",
+"The Band,The Band",,,"Example,Example,Example,Example,Example,Example","This is our band website. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",,"
+<!-- Navigation (Stays on Top) -->,
+<div class=""w3-top w3-bar w3-black"">,
+<a href=""#home"" class=""w3-bar-item w3-button"">Home</a>,
+<a href=""#about"" class=""w3-bar-item w3-button"">About</a>,
+<a href=""#members"" class=""w3-bar-item w3-button"">Members</a>,
+<a href=""#contact"" class=""w3-bar-item w3-button"">Contact</a>,
+  </div>
+,
+<!-- Slides -->,
+<img class=""slides"" src=""img_la.jpg"" width=""100%"">,
+<img class=""slides"" src=""img_ny.jpg"" width=""100%"">,
+<img class=""slides"" src=""img_ch.jpg"" width=""100%"">,
+<script>,
+w3.slideshow("".slides"", 1500);,
+</script>
+,
+  <!-- About -->,<div id=""about"" class=""w3-container w3-padding-32"">,<h1 
+  class=""w3-center"">The Band</h1>,<p>This is our band website. Lorem ipsum 
+  dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt 
+  ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
+  exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>,
+  </div>
+,
+<!-- Members -->,<div id=""members"" class=""w3-container w3-padding-32"">,<div class=""w3-row w3-center"">,
+  ,<div class=""w3-third"">,
+  <img src=""img_bandmember.jpg"" alt=""Name1"" style=""width:60%"">,
+  </div>,
+  ,<div class=""w3-third"">,
+  <img src=""img_bandmember.jpg"" alt=""Name2"" style=""width:60%"">,
+  </div>,<div class=""w3-third"">,
+  <img src=""img_bandmember.jpg"" alt=""Name3"" style=""width:60%"">,
+  </div>,
+  ,</div>
+,</div>,
+  <div id=""contact"" class=""w3-container w3-center w3-padding-32"">,<h2 
+  class=""w3-wide"">CONTACT</h2>,Chicago, US<br>,Phone: +00 151515<br>,
+  Email: mail@mail.com<br>,<p class=""w3-opacity w3-center""><i>Fan? Drop a 
+  note!</i></p>,<form action=""/action_page.php"" target=""_blank"">,
+  <input class=""w3-input"" type=""text"" placeholder=""Name"" required name=""Name"">,
+  <input class=""w3-input"" type=""text"" placeholder=""Email"" required name=""Email"">,
+  <input class=""w3-input"" type=""text"" placeholder=""Message"" required 
+  name=""Message"">,<br>,<button class=""w3-button w3-black"" 
+  type=""submit"">SEND</button>,</form>,<img src=""map.jpg"" 
+  class=""w3-image"" style=""width:100%""> ,</div>",
+Page Layout,,"A CSS ""Layout Draft""",,"It is always wise to draw a layout draft before building a webpage.,Make a draft on a piece of paper:",,,
+Using a JavaScript Library,,"How to - Slideshow,Hide/Show HTML Elements,Congratulations!","JavaScript Example,JavaScript Example",You have just learned the basics of using a JavaScript library.,,"
+<script src=""""></script>
+,
+<script src=""https://www.w3schools.com/lib/w3.js""></script>
+,
+  <img class=""nature"" src=""img_snowtops.jpg"" width=""100%"">,
+  <img class=""nature"" src=""img_mountains.jpg"" width=""100%"">,
+  <img class=""nature"" src=""img_nature.jpg"" width=""100%"">,
+  <script>,
+  w3.slideshow("".nature"", 1500);,</script>,
+  <p>,<button onclick=""w3.hide('#London')"">Hide London</button>,<button 
+  onclick=""w3.show('#London')"">Show London</button>,</p>,<div 
+  id=""London"" class=""w3-container w3-red"">,  <h2>London</h2>,  <p>London is 
+  the capital city of England.</p>,</div>,<div id=""Paris"" 
+  class=""w3-container w3-green"">,  <h2>Paris</h2>,  <p>Paris is the capital of 
+  France.</p> ,</div>,<div id=""Tokyo"" class=""w3-container w3-blue"">,
+   
+  <h2>Tokyo</h2>,  <p>Tokyo is the capital of Japan.</p>,</div>,
+",
+Using an HTML Skeleton,,HTML Skeleton Explained,Example,"Every Web developer should have an HTML skeleton.,It should be kept in his pocket, and used for every job:,Try to change the text ""This is a Heading"" to ""This is my Wedding"".,Did you make it?,Congratulations! Now you know how to edit HTML.,The DOCTYPE must be present. It informs the browser that this is an HTML document:,An html start tag and an html end tag define the start and end of an HTML document.,The language is English:,A meta charset tag defines the character set (UTF-8):,The HTML standard requires a proper page title:,A meta viewport tag makes the page look good on all screen sizes (Laptop, Mobile):,The link tag links to a stylesheet:,Start tag and end tag surround future CSS styling:,The script tag links to a script:,Start tag and end tag surround the visible body of the HTML document:,Image tags define HTML images:,Make it a habbit to ""pack"" HTML sections in div elements.,Prepare yourself for giving each section a class name:,Heading tags define HTML headings:,Paragraph tags define HTML paragraps:",,"
+<!DOCTYPE html>
+,
+<html lang=""en"">,
+</html>
+,
+<meta charset=""UTF-8"">
+,
+<title>Page Title</title>,
+,
+<meta name=""viewport"" content=""width=device-width,initial-scale=1"">
+,
+<link rel=""stylesheet"" href="","">
+,
+<style>,
+</style>
+,
+<script src="",""></script>
+,
+<body>,
+</body>
+,
+<img src=""img_la.jpg"" alt=""LA"" style=""width:100%"">,
+,
+<div class="","">,
+</div>
+,
+<h1>This is a Heading</h1>,
+,
+<p>This is a paragraph.</p>,
+<p>This is another paragraph.</p>,
+",
+Web Building,,"How to Create a Web Site,Commit Yourself",,"This tutorial will teach you how to create a professional web site.,The intention is to teach you to code faster, easier, and more efficient.,Creating a web site is much easier than most people think.,The trick is to use the same frameworks and barebones in all your projects.,Commit yourself to learn the basics of this tutorial in a few days.,Start Now! Do not waste any time! Do not install any software!,For a few days, commit yourself to:","Always use the same HTML Skeleton,Always use the same Style Sheet,Always use the same JavaScript,Always use a Layout Plan,Code everyday - Try all the examples in this tutorial.,Code everyday - Do not waste time on any other subjects.,Code everyday - Do not waste time on any other tutorials.",,
+W3.CSS ,Color Generator,"Generated CSS:,Private Themes",Example,"With this color generator you can create your own private themes.,Input a color in the yellow box below or select a color from colors of the year.,With W3.CSS, it is easy to customize an application with a private color theme.,You can link to a private theme in a <link> tag, or you can put the private theme in a <style> tag:",,,
+W3.CSS ,Color Themes,"Color Themes,Predefined Themes,Adding Gradients,Downloadable Color Themes","Example,Example","With W3.CSS, it is easy to customize your applications with color themes.,All you have to do is add a link to a predefined (or home made) theme:,These are the predefined themes in W3.CSS:,One reader sent us this suggestion: You might want to consider adding a gradient for each theme.,I used the l2 and l1 colors from the blue theme to create this gradient:,Here are some downloadable color themes inspired by Google's Material Design:","
+      ,
+      ,
+    ,
+      ,
+      ,
+    ,
+      ,
+      ,
+    ,
+      ,
+      ,
+    ,
+      ,
+      ,
+    ,
+      ,
+      ,
+    ","
+ <link rel=""stylesheet"" 
+href=""https://www.w3schools.com/w3css/4/w3.css"">,<link rel=""stylesheet"" 
+href="","">",
+W3.CSS ,Color Schemes,"Color Schemes,Achromatic Color Schemes,Monochromatic Color Schemes,Flat Design Color Schemes",,"The colors used in the design of a web site is often called a color scheme:,The purpose of a color scheme is to create an aesthetic feeling of style and appeal.,The black on white achromatic color scheme is the default color scheme for a web page:,The white on black achromatic color scheme is often preferred for smaller 
+devices:,Monochromatic color schemes use a single color width different additions of black, gray, and white.,The color scheme above was generated by the
+,. ,Monochromatic color schemes often have a more subtle and peaceful energy, 
+with especially with blue or green colors.,In the chapter , you 
+will find a lot of monochromatic color themes.,You can read more about color schemes in the chapter
+, in our
+,.,The theory of flat design is covered in the chapter
+,.,Colors play an important part in flat design. Flat design color schemes often 
+use more colors than traditional color schemes.,The color schemes used in W3.CSS is inspired by Google Material Design:",,,
+W3.CSS ,Color Libraries,"Color Libraries,How to Use Color Libraries,US Highway Colors,US Safety Colors,European Signal Colors,Vivid Colors,Food Colors,Camouflage Colors","Example,Example,Example,Example,Example,Example","Color libraries are small CSS files containing commonly used color values 
+like safety standards, highway colors, fashion colors, camouflage colors, and 
+more.,
+,Color libraries are easy to use. Just add a link to the color library in your 
+web page: ,Then, add a class name to the HTML element you want to color:,The highway colors are defined in ,.,The US safety colors are defined in ,.,The European signal colors are defined in the ,.,The vivid colors are defined in ,.,The camouflage colors are defined in ,.",,"
+  <link rel=""stylesheet"" 
+  href=""https://www.w3schools.com/lib/w3-colors-highway.css"">
+,
+  <div class=""w3-highway-schoolbus"">Schoolbus</div>,<div 
+  class=""w3-highway-green"">Falcon Ridge Parkway</div>,<div 
+  class=""w3-highway-red"">STOP</div>,
+  <div class=""w3-highway-red"">STOP</div>
+,
+  <div class=""w3-safety-red"">DANGER</div>
+,
+  <div class=""w3-signal-red"">Stop</div>,<div 
+  class=""w3-signal-yellow"">Wait</div>,<div class=""w3-signal-green"">Go</div>
+,
+  <div class=""w3-vivid-red"">,  <p>London is the most populous city in the 
+  United Kingdom,,  with a metropolitan area of over 9 million 
+  inhabitants.</p>,</div>
+,
+  <div class=""w3-food-apple"">Apple</div>,<div 
+  class=""w3-food-banana"">Banana</div>
+,
+  <div class=""w3-camo-earth"">Camouflaged Truck</div>,<div 
+  class=""w3-camo-grey"">Camouflaged Ship</div>
+",
+W3.CSS Fashion Colors,,"How to Use Fashion Colors,The Hottest Spring/Summer Colors 2021,Classic Spring/Summer Colors 2021,The Hottest Spring/Summer Colors 2020,Classic Spring /Summer Colors 2020,Autumn/Winter Colors 2020,Fashion Colors Spring 2019,Fashion Colors Autumn 2019,Classic Colors Autumn/Winter 2019,Fashion Colors 2018,Fashion Colors 2017","Example,Example,Example,Example,Example,Example,Example,Example","Fashion Colors are easy to use. Just add a link to the right color library: ,Then, add a class name to the HTML element you want to color:,The fashion colors are selected from ,.,The fashion colors are selected from ,.,The fashion colors are selected from ,.,The fashion colors are selected from ,.",,"
+  <link rel=""stylesheet"" 
+  href=""https://www.w3schools.com/lib/w3-colors-2021.css"">
+,
+<div class=""w3-2021-marigold"">Marigold</div>,
+<div class=""w3-2021-cerulean"">Cerulean</div>,
+<div class=""w3-2021-rust"">Rust</div>
+,
+<div class=""w3-2021-inkwell"">Inkwell</div>,
+<div class=""w3-2021-ultimate-gray"">Ultimate Gray</div>,
+<div class=""w3-2021-buttercream"">Buttercream</div>
+,
+<div class=""w3-2020-flame-scarlet"">Flame Scarlet</div>,
+<div class=""w3-2020-saffron"">Saffron</div>,
+<div class=""w3-2020-biscay-green"">Biscay Green</div>
+,
+<div class=""w3-2020-lark"">Lark</div>,
+<div class=""w3-2020-navy-blazer"">Navy Blazer</div>,
+<div class=""w3-2020-brilliant-white"">Brilliant White</div>
+<div class=""w3-2020-ash"">Ash</div>
+,
+  <div class=""w3-2019-fiesta"">Fiesta</div>,
+  <div class=""w3-2019-princess-blue"">Princess Blue</div>
+,
+<div class=""w3-2019-chili-pepper"">Chili Pepper</div>,
+<div class=""w3-2019-dark-cheddar"">Dark Cheddar</div>,
+<div class=""w3-2019-bluestone"">Bluestone</div>
+,
+  <div class=""w3-2018-ultra-violet"">Ultra Violet</div>,
+  <div class=""w3-2018-cherry-tomato"">Cherry Tomato</div>
+,
+  <div class=""w3-2017-greenery"">Greenery</div>,
+  <div class=""w3-2017-flame"">Flame</div>
+",
+W3.CSS iOS Colors,,,Example,,,"
+<div class=""w3-ios-dark-blue"">,
+  <p>London is the most populous city in the United Kingdom,,
+  with a metropolitan area of over 9 million inhabitants.</p>,
+</div>
+",
+W3.CSS Windows Colors,,,Example,,,"
+<div class=""w3-win8-lime"">,
+  <p>London is the most populous city in the United Kingdom,,
+  with a metropolitan area of over 9 million inhabitants.</p>,
+</div>
+",
+W3.CSS ,Metro UI Colors,Windows Metro UI,Example,"Metro is the nickname of Microsoft Design Language (MDL).,Metro is focused on typography, simplified icons, and modern colors.,This example shows how to use Windows Metro colors with W3.CSS:",,"
+<div class=""w3-metro-light-green"">,
+  <p>London is the most populous city in the United Kingdom,,
+  with a metropolitan area of over 9 million inhabitants.</p>,
+</div>
+",
+W3.CSS ,Flat UI Colors,Flat UI,Example,Another popular color scheme that can be used in W3.CSS is Flat UI:,,"
+<div class=""w3-flat-emerald"">,
+  <p>London is the most populous city in the United Kingdom,,
+  with a metropolitan area of over 9 million inhabitants.</p>,
+</div>
+",
+W3.CSS ,Colors,"W3.CSS Default Color Classes,W3.CSS Text Color Classes,Hover Color Classes",,"The default color class used in W3.CSS is inspired by Material Design.,Material Design colors reflect the colors used in marketing, road signs, and sticky notes.,The following W3.CSS color classes can be used on any HTML element:,The following W3.CSS text color classes can be used on any HTML element:,The following W3.CSS hover color classes can be used on any HTML element:",,,
+W3.CSS ,Color Classes,"W3.CSS Default Colors,Flat UI,Windows Metro UI,Windows 8","Example,Example,Example,Example","The default color class used in W3.CSS is inspired by Material Design.,Material Design colors reflect the colors used in marketing, road signs, and sticky notes.,Flat UI is another popular color class that can be used in W3.CSS:,Metro is the nickname of Microsoft Design Language (MDL).,Metro is focused on typography, simplified icons, and modern colors.,This example shows how to use Windows Metro colors in W3.CSS:,Windows 8 was the first major operating system focused on flat design and modern colors.,This example shows how to use Windows 8 colors in W3.CSS:",,"
+<div class=""w3-red"">,
+  <p>London is the most populous city in the United Kingdom,,
+  with a metropolitan area of over 9 million inhabitants.</p>,
+</div>
+,
+<div class=""w3-flat-turquoise"">,
+  <p>London is the most populous city in the United Kingdom,,
+  with a metropolitan area of over 9 million inhabitants.</p>,
+</div>
+,
+<div class=""w3-metro-light-green"">,
+  <p>London is the most populous city in the United Kingdom,,
+  with a metropolitan area of over 9 million inhabitants.</p>,
+</div>
+,
+<div class=""w3-win8-lime"">,
+  <p>London is the most populous city in the United Kingdom,,
+  with a metropolitan area of over 9 million inhabitants.</p>,
+</div>
+",
+W3.CSS - ,Building a Mobile App,"Create a Basic Mobile Page,Add Content,Add a Color Theme,Add More Style,Add Side Navigation,Fixed Navigation, Header and Footer","Example,Example (using classic HTML elements),Example (using semantic HTML elements),Examples,Example,Example,Example","The pro version of W3.CSS is perfect for mobile apps. It is small and very 
+fast.",,"
+<!DOCTYPE html>,<html>,<meta name=""viewport"" 
+content=""width=device-width, initial-scale=1"">,<link rel=""stylesheet"" 
+href=""https://www.w3schools.com/w3css/4/,"">,<body>,
+ <!-- Content here -->,</body>,</html>,
+<div class=""w3-container"">,  <h1>Movies 2014</h1>,
+</div>,
+,<div class=""w3-cell-row"">,  <div class=""w3-cell"">,    <img 
+  src=""img_avatar.jpg"">,  </div>,  
+  <div class=""w3-cell w3-container"">,    <h3>Frozen</h3>,      
+  <p>The response to the animations was ridiculous.</p>,  </div>,
+  </div>,
+,<div class=""w3-container"">,  <h3>Footer</h3>,</div>,
+<header class=""w3-container"">,  <h1>Header</h1>,
+</header>,
+,<div class=""w3-cell-row"">,  <div class=""w3-cell"">,    <img 
+  src=""img_avatar.jpg"">,  </div>,  
+  <div class=""w3-cell w3-container"">,    <h3>Frozen</h3>,      
+  <p>The response to the animations was ridiculous.</p>,  </div>,
+  </div>,
+,<footer class=""w3-container"">,  <h3>Footer</h3>,</footer>,</body>,</html>
+,
+<link rel=""stylesheet"" href=""https://www.w3schools.com/lib/w3-theme-blue.css"">
+,
+<link rel=""stylesheet"" href=""https://www.w3schools.com/lib/w3-theme-red.css"">,
+  <img class=""w3-circle"" src=""img_avatar.jpg"" alt=""avatar"">,<h3 class=""w3-text-theme"">Frozen</h3>,
+  <nav class=""w3-sidebar w3-bar-block w3-card"" style=""width:30%"">,
+  <div class=""w3-red"">,  <a href=""javascript:void(0)"" onclick=""closeSidebar()"", 
+  class=""w3-button w3-display-topright w3-xlarge"">X</a>,    <div 
+  class=""w3-padding-large w3-center"">,      <img class=""w3-circle"" src=""img_avatar.jpg"" 
+  alt=""avatar"">,   </div>,  </div>,<a 
+   class=""w3-bar-item w3-button"" 
+  href=""#"">Home</a> ,<a class=""w3-bar-item w3-button"" href=""#"">Friends</a> ,<a 
+   class=""w3-bar-item w3-button"" href=""#"">Messages</a> ,
+  </nav>,<script>,function openSidebar() {,  document.getElementById(""mySidebar"").style.display = ""block"";,},function closeSidebar() {,  document.getElementById(""mySidebar"").style.display = ""none"";,},</script>,
+  <header 
+  class=""w3-top"">,<nav 
+  class=""w3-top"">,<footer 
+  class=""w3-bottom"">",
+W3.CSS ,Versions,"W3.CSS - Pro,W3.CSS Pro Colors","Example,Example,Example,Example,Example","W3.CSS was released in 2017.,The latest version is W3.CSS 4.15 December 2020.,The latest version can be downloaded from ,.,W3.CSS comes with a professional version: ,.,The pro version is smaller and faster because it has no colors defined.,The pro version is designed for using themes or other color classes supplied by the 
+developer. ,The pro version can be downloaded from: ,With W3.CSS pro you can define your own colors:,You can define your colors inline with a <style> tag:,Or you can load your own themes:,Or you can load your color libraries:",,"
+<!DOCTYPE html>,
+<html>,
+<meta name=""viewport"" content=""width=device-width, initial-scale=1"">,
+<link rel=""stylesheet"" href=""https://www.w3schools.com/w3css/4/w3pro.css"">,
+<!-- Colors here -->,
+<body>,
+<!-- Content here -->,
+</body>,
+</html>
+,
+  <style>,.w3-amber{color:#000!important;background-color:#ffc107!important},
+  </style>,
+<link rel=""stylesheet"" href=""/lib/w3-theme-amber.css"">,
+<link rel=""stylesheet"" href=""/lib/w3-colors-2018.css"">,
+<link rel=""stylesheet"" href=""/lib/w3-colors-2017.css"">",
+W3.CSS Validation,,"CSS Validation,Validation Warnings,Vendor Extensions",,"The W3C CSS Validation Service can be used to check the correctness (validity) of W3.CSS.,The W3C CSS Validator checks for CSS1, CSS2, CSS3, and CSS4 properties., Some 
+browsers use , to simulate CSS3 and CSS4 
+properties.,Vendor extensions can create warnings in the W3 CSS validation prosess.,W3.CSS uses , to support older browsers.,Browser vendors are working to stop using prefixes in future browser 
+versions.,Until then, some extensions will have to be used to make modern CSS work in 
+all browsers.,Below is a list of the most common vendor extensions used:",,,
+W3.CSS ,Material Design,"Material Design,Material Design Look Using W3.CSS,Material Design Look (Color Themes),Material Design Look (Navigation Bars),Material Design Look (Colorful Cards)",,"Material Design was designed by Google in 2014 and has later been adopted in many Google applications.,Material Design uses elements that remind us of paper and ink. In addition the elements have realistic shadows 
+and hover effects.,W3.CSS is the perfect stylesheet for designing applications with a ""Material Design"" look:,
+,
+",,,
+W3.CSS Case Study,,"Building a Responsive Web Site From Scratch,Put Elements in Containers ,Color Classes,Size Classes,Use Semantic Elements ,Multicolumn Responsive Layout,Columns With Different Widths,Navigation Bars,Side Navigation","Example,Example,Example,Example,Example,Example,Example,Example,Example","In this chapter we will build a W3.CSS responsive website from scratch.,First, start with a simple HTML page, with an initial viewport and a link to W3.CSS.,To add common margins and padding, put the HTML elements inside containers (<div 
+class=""w3-container"">),Separate the header 
+from the rest of the content, using two separate <div> elements:,Color classes defines the color of elements.,This example adds a color to the first <div> element:,Size classes defines the text size for elements.,This example adds a size to both header elements:,If you like to follow the HTML5 semantic recommendations. please do!,With W3.CSS it is easy to create a multicolumn responsive layout.,The columns will rearrange themselves automatically when viewed on different screen sizes.,Some grid rules:,This example shows how to create three columns 
+of equal width:,This example shows how to create four columns 
+of equal width:,This example creates a three-column layout where the column in the 
+middle is wider than the first and last column:,A navigation bar is a navigation header that is placed at the top of the page.,With side navigation, you have several options:,This example opens the navigation pane over the left part of the page 
+content:","Start with a row class <div class=""w3-row-padding"">,Use predefined classes like ""w3-third"" to quickly make grid columns,Place your text content inside the grid columns,Always display the navigation pane to the left of the page content.,Use a collapsible, ""fully automatic"" responsive side navigation.,Open navigation pane over the left part of the page content.,Open navigation pane over all of the page content.,Slide the page content to the right when opening the navigation pane.,Display the navigation pane on the right side instead of the left side","
+<!DOCTYPE html>,<html lang=""en"">,<title>W3.CSS Case</title>,<meta name=""viewport"" 
+content=""width=device-width, initial-scale=1"">,<link rel=""stylesheet"" 
+href=""https://www.w3schools.com/w3css/4/w3.css"">,<body>,  
+<h1>My first W3.CSS website!</h1> ,  <p>This site 
+will grow as we add more ...</p> ,  <p>This is another 
+paragraph.</p> ,  <p>This is a paragraph.</p> ,  
+<p>This is another paragraph.</p>,</body>,</html>,
+<div class=""w3-container"">,  <h1>My 
+First W3.CSS Website!</h1> ,  <p>This site 
+will grow as we add more ...</p>,</div>,<div 
+class=""w3-container"">,  <p>This is another 
+paragraph.</p> ,  <p>This is a paragraph.</p> ,  
+<p>This is another paragraph.</p>,</div>,
+<div class=""w3-container w3-light-grey"">,  <h1>My 
+First W3.CSS Website!</h1> ,  <p>This site 
+will grow as we add more ...</p>,</div>,<div 
+class=""w3-container"">,  <p>This is another 
+paragraph.</p> ,  <p>This is a paragraph.</p> ,  
+<p>This is another paragraph.</p>,</div>,
+<div class=""w3-container w3-light-grey"">,  <h1 
+class=""w3-jumbo"">My 
+First W3.CSS Website!</h1> ,  <p 
+class=""w3-xxlarge"">This site 
+will grow as we add more ...</p>,</div>,<div 
+class=""w3-container"">,  <p>This is another 
+paragraph.</p> ,  <p>This is a paragraph.</p> ,  
+<p>This is another paragraph.</p>,</div>,
+<!DOCTYPE html>,<html lang=""en"">,<title>W3.CSS Case</title>,<meta name=""viewport"" 
+content=""width=device-width, initial-scale=1"">,<link rel=""stylesheet"" 
+href=""https://www.w3schools.com/w3css/4/w3.css"">,<body>,<header class=""w3-container 
+w3-light-grey"">,  
+<h1 class=""w3-jumbo"">My first W3.CSS website!</h1> ,  <p 
+class=""w3-xxlarge"">This site 
+will grow as we add more ...</p>,</header>,<div 
+class=""w3-container""> ,  <p>This is another 
+paragraph.</p> ,  <p>This is a paragraph.</p> ,  
+<p>This is another paragraph.</p>,</div>,<footer 
+class=""w3-container"">,  <p>This is my footer</p>,</footer>,</body>,</html>,
+<div class=""w3-row-padding"">,  
+<div class=""w3-third"">,    <p>Lorem ipsum 
+dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor,    incididunt ut labore et dolore magna aliqua.</p>,  
+</div>,  <div class=""w3-third""> ,    <p>Lorem ipsum 
+dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor,    incididunt ut labore et dolore magna aliqua.</p>,  
+</div>,  <div class=""w3-third""> ,    <p>Lorem ipsum 
+dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor,    incididunt ut labore et dolore magna aliqua.</p>,  </div>,</div>,
+<div class=""w3-row-padding"">,  
+<div class=""w3-quarter"">,    <p>Lorem ipsum 
+dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor,    incididunt ut labore et dolore magna aliqua.</p>,  
+</div>,  <div class=""w3-quarter""> ,     <p>Lorem ipsum 
+dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor,    incididunt ut labore et dolore magna aliqua.</p>, </div>,  <div class=""w3-quarter""> ,    <p>Lorem ipsum 
+dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor,    incididunt ut labore et dolore magna aliqua.</p>,  </div>,  <div 
+class=""w3-quarter""> ,    <p>Lorem ipsum 
+dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor,    incididunt ut labore et dolore magna aliqua.</p>,  </div>,</div>,
+ <div class=""w3-row-padding"">,  
+<div class=""w3-quarter"">,    <p>Lorem ipsum 
+dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor,    incididunt ut labore et dolore magna aliqua.</p>,  
+</div>,  <div class=""w3-half""> ,    <p>Lorem ipsum 
+dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor,    incididunt ut labore et dolore magna aliqua.</p>,  
+</div>,  <div class=""w3-quarter""> ,    <p>Lorem ipsum 
+dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor,    incididunt ut labore et dolore magna aliqua.</p>,  </div>,</div>,
+<nav class=""w3-bar w3-black w3-large"">,  <a href=""#"" 
+  class=""w3-bar-item w3-button"">Home</a>,  <a 
+href=""#"" class=""w3-bar-item w3-button"">Link 1</a>,  <a 
+href=""#"" class=""w3-bar-item w3-button"">Link 2</a>,  <a href=""#"" 
+  class=""w3-bar-item w3-button"">Link 3</a>,</nav>,
+<nav class=""w3-sidebar w3-bar-block w3-black w3-card"" style=""display:none"" 
+id=""mySidebar"">,  
+<a class=""w3-bar-item w3-button"" href=""#"">Link 1</a> ,  <a 
+  class=""w3-bar-item w3-button"" href=""#"">Link 2</a> ,  <a 
+  class=""w3-bar-item w3-button"" 
+href=""#"">Link 3</a> ,</nav>
+",
+W3.CSS ,Trends,"Flat Design,Almost Flat Design (Flat 2.0),Material Design,Cards,Cleaner Logos,Minimalism,Readable Typography,Full Screen Input,Mobile First,Large Hero Images,Single Page",,"Every year you will see new web techniques and trends.,On this page we will bring you some of the most relevant web design trends.,The flat design trend started with Windows Phone 7 and Windows 8 in 2010:,It was followed up by Apple with iOS 7 in 2013:,Almost flat is a newer alternative to the original flat design.,Almost flat acquires more depth, brighter colors, complex shadows, and dimension.,Since we might have reached the peak of flat design (with almost flat), many 
+designers are expected to go for Material Design (Designed by Google in 2014).,Material Design uses elements that remind us of paper and ink. In addition 
+the elements have realistic shadows 
+and hover effects.,Most typical cards are rectangles with an image and some text.,Cards have become a common structure for organizing headlines, images, and text on an equal plane.,Cards can be small or large, with or without pictures, and with or without shadows:,Cleaner logos is a result of the popularity of flat design:,Easy to read. Easy to understand. Easy to design.,Minimalism can go hand in hand with Almost Flat Design:,The natural typography of flat design is simple and easy to read.,Letter-spacing and line-spacing is typically larger.,Also expect increased font sizes in order to focus more on reader's attention.,More and more sites are using full screen for inputs like signups and logins, instead of 
+using only a small part of the page.,Full screen often uses a screen overlay or modal instead of redirecting to a new page.,
+,
+,Historically, web designers have developed web applications for computers 
+first, and then added responsive web design to make sure 
+the web looks good when viewed on a tablet or a phone.,This trend is shifting towards designing for mobiles first, and then add 
+responsive design to make a site work on desktops and laptops.,50/50 is an easy way to achieve web design for responsive webs. With 50/50 design,
+the screen can show two pages on large screens and one page on narrow screens.,
+,
+,""Hero image"" is a term used for a specific type of web banner.,A hero image is a large image, placed in the front of a web page. It often consists of 
+both an image and some text, and it can be static or a rotating list of images.,The purpose of an hero image is to present the web site's most important content.,
+,
+,The web design trend shifts from regular clicking to vertical scrolling.,Scrolling allows users to see all the web content on the one page.,This single page technique has been used by social networks a long time, until somebody 
+discovered that it suits other pages as well.",,,
+W3.CSS ,Filters,"Filter Tables,Filter Lists,Filter Dropdowns","Example,Example,Example","With a little bit of JavaScript, all components in W3.CSS can be filtered.","Adele,Agnes,Billy,Bob,Calvin,Christina,Cindy",,
+W3.CSS ,Code,"Display Examples,Display Code,Highlight Inline Code,Coloring Code,Highlight JavaScript Code,Highlight HTML Code,Highlight CSS Code","Example,Example,Example,Example,Example,Example,Example","The , class is used to display examples in a grey container:,The , class is used to display code in a readable mono-spaced font.,The , class is used to highlight inline code:,The , element defines an HTML page.,W3Schools provides a JavaScript library for coloring code.,You can download the library from here: ,If you use the w3codecolor.js library, you can also use the code classes 
+described below: ,The , class is used to highlight JavaScript code:,The , class is used to highlight HTML code:,The , class is used to highlight CSS code:","Jill,Eve,Adam","
+  The
+<code class=""w3-codespan"">html</code> element defines an HTML page.,
+<div class=""w3-code jsHigh"">,
+.. JavaScript code here,
+</div>
+,
+<div class=""w3-code htmlHigh"">,
+.. HTML code goes here,
+</div>
+,
+<div class=""w3-code cssHigh"">,
+.. CSS code here,
+</div>
+",
+W3.CSS ,Responsive Fluid Grid,"Responsive Grid,Responsive Rows,Two Equal Columns,Two Unequal Columns,Three Equal Columns,Three Unequal Columns,Six Columns,Mixed: Mobile and Laptops,Mixed: Mobile, Tablets and Laptops,Difference between w3-row and w3-row-padding,Using w3-rest,Using Percent","Example,Example,Example,Example,Example,Example,Example,Example,Example,Example using rest,Example","W3.CSS supports a 12 column responsive fluid grid.,Resize the page to see the effect!,W3.CSS's grid system is responsive. The columns will re-arrange automatically depending on the screen size: On a big screen it might look better with the content organized in three columns, but on a small screen it 
+might be better if the content were stacked on top of each other.,w3-col has the following sub classes:,The classes above can be combined to create more dynamic and flexible layouts. 
+,Each class scales up, so if you wish to set the same width for small, medium and large screens, you only 
+need to specify the , class. And if you want the same width on medium and large screens, you only need to 
+specify the medium class.,However, if you only use medium and/or large classes, the width will always 
+transform to 100% on small screens., The number of columns should always add up to 12 for 
+each row (6+6, 3+3+6, 9+3, etc)!,Two equal-width columns (50%/50%) on all screen sizes:,Two columns of unequal width (25%/75%) on all screen sizes:,Three equal-width columns (33.3%/33.3%/33.3%) on all screen sizes:,Three various-width columns (25%/50%/25%) on tablets, laptops and desktops. On mobile phones, the columns will automatically stack (100% width):, This example is the same as using w3-quarter (m3), w3-half (m6), w3-quarter (m3), which you learned in the , chapter.,Six equal-width columns (16% each) on tablets, laptops and desktops. On mobile phones, the columns will automatically stack (100% width):,You can combine classes to create a dynamic and flexible layout. This example 
+will produce a two column layout with a 83.34%/16.66% (l10, l2) split on large screens and a 50%/50% 
+(s6, s6) 
+split on small screens:,This example will produce a three column layout with a 25%/58.34%/16.66% (l3, l7, l2) split on large screens, 50%/25%/25% (m6, m3, m3) split on medium screens and a 33.3%/33.3%/33.3% (s4, s4, s4)split on small screens:,The w3-row class defines a padded-less container, while the w3-row-padding class adds a 8px left and right padding to each column:,The , class is a powerful and flexible class that will use what's left of the grid column.,Use the CSS width property to determine a specific width of the columns.",,"
+<div class=""w3-row"">,  <div class=""w3-col m4 l3"">,    
+ <p>12 columns on a small screen, 4 
+ on a medium screen, and 3 on a large screen.</p>,
+   </div>,  <div class=""w3-col m8 l9"">,
+      <p>12 columns on a small screen, 8 
+ on a medium screen, and 9 on a large screen.</p>,
+  </div>,</div>,
+<div class=""w3-row"">,  <div class=""w3-col s6 w3-green w3-center""><p>s6</p></div>,  <div class=""w3-col 
+s6 w3-dark-grey w3-center""><p>s6</p></div>,</div>,
+<div class=""w3-row"">,  <div class=""w3-col s3 w3-green w3-center""><p>s3</p></div>,  <div class=""w3-col 
+s9 w3-dark-grey w3-center""><p>s9</p></div>,</div>,
+<div class=""w3-row"">,  <div class=""w3-col s4 w3-green w3-center""><p>s4</p></div>,  <div class=""w3-col s4 w3-dark-grey w3-center""><p>s4</p></div>,  <div class=""w3-col s4 
+w3-red w3-center""><p>s4</p></div>,</div>,
+<div class=""w3-row"">,  <div class=""w3-col m3 w3-green w3-center""><p>m3</p></div>,  <div class=""w3-col 
+m6 w3-dark-grey w3-center""><p>m6</p></div>,  <div class=""w3-col 
+m3 
+w3-red w3-center""><p>m3</p></div>,</div>,
+<div class=""w3-row"">,  <div class=""w3-col m2 w3-green 
+w3-center""><p>m2</p></div>,  <div class=""w3-col m2 w3-red 
+w3-center""><p>m2</p></div>,  <div class=""w3-col m2 w3-blue 
+w3-center""><p>m2</p></div>,  <div class=""w3-col m2 w3-dark-grey 
+w3-center""><p>m2</p></div>,  <div class=""w3-col m2 w3-black 
+w3-center""><p>m2</p></div>,  <div class=""w3-col m2 w3-purple 
+w3-center""><p>m2</p></div>,</div>,
+<div class=""w3-row"">,  <div class=""w3-col l10 s6 w3-pink 
+w3-center""><p>l10 s6</p></div>,  <div class=""w3-col l2 s6 
+w3-dark-grey w3-center""><p>l2 s6</p></div>,
+</div>,
+<div class=""w3-row"">,  <div class=""w3-col l3 m6 s4 w3-green w3-center""><p>l3 m6 s4</p></div>,  <div class=""w3-col l7 m3 s4 
+w3-dark-grey w3-center""><p>l7 m3 s4</p></div>,  <div class=""w3-col l2 
+m3 s4 w3-red w3-center""><p>l2 m3 s4</p></div>,</div>,
+<div class=""w3-row"">,  <div class=""w3-col s4""><img src=""img_lights.jpg""></div>,  
+<div class=""w3-col s4""><img src=""img_nature.jpg""></div>,  <div class=""w3-col s4""><img src=""img_snowtops.jpg""></div>,</div>,
+,<div class=""w3-row-padding"">,  <div class=""w3-col s4""><img src=""img_lights.jpg""></div>,  
+<div class=""w3-col s4""><img src=""img_nature.jpg""></div>,  <div class=""w3-col s4""><img src=""img_snowtops.jpg""></div>,</div>,
+ <div class=""w3-row"">,  <div class=""w3-col"" style=""width:150px""><p>150px</p></div>,  <div class=""w3-rest""><p>rest</p></div>,</div>,
+<div class=""w3-row"">,  <div class=""w3-col 
+w3-container w3-green"" 
+style=""width:20%""><p>20%</p></div>,  <div 
+class=""w3-col w3-container w3-blue"" style=""width:60%""><p>60%</p></div>,  <div 
+class=""w3-col w3-container w3-red"" style=""width:20%""><p>20%</p></div>,</div>",
+W3.CSS ,Tooltips,"W3.CSS Tooltip Classes,Tooltip Element and Tooltip Text,Tooltip as a Tag,Image Tooltip,Absolute Positioned Tooltip,Colored Tooltip,Rounded Tooltip,Small Tooltip,Tiny Tooltip,Large Tooltip,Animated Tooltip","Example,Example,Example (text before the picture),Example (text after the picture),Example,Example,Example,Example,Example,Example,Example","Hover over the sentences below:,W3.CSS provides the following tooltip classes:,Tooltips display text (or other content) when you hover over an HTML element.,The , class defines the element to hover over (the tooltip container).,The , class defines the tooltip text.,Hover over the sentence below:,London
+, is the capital of England.,Hover over the sentence below:,London
+,
+is the capital of England.,Hover over this picture to see the effect:,If you want the tooltip to appear in an absolute position, position the tooltip text with CSS:,If you want a colored tooltip, use the , classes:,If you want a rounded tooltip, use the , classes:,If you want a small tooltip, use the , class:,If you want a tiny tooltip, use the , class:,If you want a large tooltip, use the , classes:,If you want to fade in the tooltip, use the , class:",,"
+<p class=""w3-tooltip"">London,<span 
+class=""w3-text"">(<em>9 million inhabitants</em>)</span>,is the capital of England.</p>,
+<p class=""w3-tooltip"">London,<span 
+class=""w3-text w3-tag""><b>9 million inhabitants</b></span>,is the capital of England.</p>,
+  <div class=""w3-tooltip"">,  <p 
+  class=""w3-text"">A car is a...</p>,  <img src=""img_car.jpg"" 
+  alt=""Car"">,</div>,
+  <div class=""w3-tooltip"">,  <img src=""img_car.jpg"" 
+  alt=""Car"">,  <p 
+  class=""w3-text"">A car is a...</p>,</div>,
+<p class=""w3-tooltip"">London,<span style=""position:absolute;left:0;bottom:18px""
+,class=""w3-text w3-tag"">9 million inhabitants</span>,is the capital of England.</p>,
+  <span 
+  class=""w3-text w3-tag w3-red"">9 million inhabitants</span>,
+<span class=""w3-text w3-tag w3-round-xlarge"">9 million inhabitants</span>,
+  <span class=""w3-text w3-tag w3-small"">9 
+  million inhabitants</span>,
+  <span class=""w3-text w3-tag w3-tiny"">9 million  inhabitants</span>,
+  <span class=""w3-text w3-tag w3-xlarge"">9 million  inhabitants</span>,
+  <span class=""w3-text w3-tag w3-animate-opacity"">9 million  inhabitants</span>",
+W3.CSS ,Modal,"W3.CSS Modal Classes,Create A Modal,Open a Modal,Close a Modal,Modal Header and Footer,Modal As a Card,Animated Modals,Modal Image,Modal Image Gallery,Modal Login Form,Modal With Tabbed Content,Close the Modal,Advanced: Lightbox (Modal Image Gallery)","Example,Example,Example,Example,Example,Example,Example,Example,Example,Example,Example","A modal is a dialog box/popup window that is displayed on top of the current page:,W3.CSS provides the following classes for modal windows:,The , class defines a container for a modal.,The , class defines the modal content.,Modal content can be any HTML element (divs, headings, paragraphs, images, etc.).,Use any HTML element to open the modal. However, this is often a button or a link.,Add the , attribute and point to the id of the modal (, in our example), using the document.getElementById() 
+method.,To close a modal, add the , class to an element together with an onclick attribute that points to the id of the modal (,). 
+You can also close it by clicking outside of the modal (see example below).,Use , classes to create different sections inside the modal 
+content:,To display the modal as a card, add one of the , classes to the 
+, container:,Use any of the , classes to slide in the modal from a specific direction:,You can also fade in the modal's background color by setting the , class on the w3-modal element:,Click on the image to display it as a modal, in full size:,Click on an image to display it in full size:,This example creates a modal for login:,This example creates a modal with tabbed content:,In the examples above, we use a button to close the modal. However, with a little bit of JavaScript, you can also close the modal when clicking outside of the modal box:,This example shows how to add an image slideshow inside a modal, to create a ""lightbox"":, To learn more about slideshows, visit our , chapter.",,"
+<!-- Trigger/Open the Modal -->,<button onclick=""document.getElementById('id01').style.display='block'"",
+class=""w3-button"">Open Modal</button>,<!-- The Modal -->,<div 
+id=""id01"" class=""w3-modal"">,  
+<div class=""w3-modal-content"">,    <div 
+class=""w3-container"">,      <span onclick=""document.getElementById('id01').style.display='none'""
+,      class=""w3-button w3-display-topright"">&times;</span>,      
+<p>Some text in the Modal..</p>,      
+<p>Some text in the Modal..</p>,    </div>,  
+</div>,</div>,
+<div id=""id01"" class=""w3-modal"">,  <div class=""w3-modal-content"">,
+  ,    <header class=""w3-container w3-teal""> ,      <span onclick=""document.getElementById('id01').style.display='none'"" 
+,      class=""w3-button w3-display-topright"">&times;</span>,      <h2>Modal Header</h2>,    </header>,
+  ,    <div 
+class=""w3-container"">,      <p>Some text..</p>,      
+<p>Some text..</p>,    </div>,    <footer class=""w3-container 
+w3-teal"">,      <p>Modal Footer</p>,    </footer>,
+  ,  </div>,</div>,
+     <div class=""w3-modal-content w3-card-4"">,
+<div class=""w3-modal-content w3-animate-zoom"">,<div class=""w3-modal-content w3-animate-top"">,
+<div class=""w3-modal-content w3-animate-bottom"">,
+<div class=""w3-modal-content w3-animate-left"">,
+<div class=""w3-modal-content w3-animate-right"">,<div class=""w3-modal-content w3-animate-opacity"">,
+,
+<div class=""w3-modal w3-animate-opacity"">,
+,
+<img src=""img_snowtops.jpg"" onclick=""document.getElementById('modal01').style.display='block'"" 
+class=""w3-hover-opacity"">,
+,<div id=""modal01"" class=""w3-modal w3-animate-zoom"" onclick=""this.style.display='none'"">,  
+<img class=""w3-modal-content"" src=""img_snowtops.jpg"">,</div>,
+,
+ <div class=""w3-row-padding"">,  <div class=""w3-container w3-third"">,    
+ <img src=""img_snowtops.jpg"" style=""width:100%"" onclick=""onClick(this)"">,  
+ </div>,  <div class=""w3-container w3-third"">,    <img 
+ src=""img_lights.jpg"" style=""width:100%"" onclick=""onClick(this)"">,  
+ </div>,  <div class=""w3-container w3-third"">,    <img 
+ src=""img_mountains.jpg"" style=""width:100%"" onclick=""onClick(this)"">,  
+ </div>,</div>,<div id=""modal01"" class=""w3-modal"" onclick=""this.style.display='none'"">,  
+ <img class=""w3-modal-content"" id=""img01"" style=""width:100%"">,</div>,<script>,function 
+ onClick(element) {,  document.getElementById(""img01"").src = element.src;,  
+ document.getElementById(""modal01"").style.display = ""block"";,},</script>,
+",
+W3.CSS ,Slideshow,"Manual Slideshow,Automatic Slideshow,HTML Slides,Slideshow Caption,Slideshow Indicators,Images as Indicators,Multiple Slideshows on the Same Page,Animated Slides,Faded Animation","Example,Example,Example,Example,Example,Example,Example,Example,Example,Example,Example,Example","Displaying a manual slideshow with W3.CSS is very easy.,Just create many elements with the same class name:,And two buttons to scroll the images:
+,And add a JavaScript to select images:
+,First, set the , to 1. (First picture),Then call , to display the first image.,When the user clicks one of the buttons call ,.,The plusDivs() function , one or  , 
+one to the slideIndex.,The , function hides (,) 
+all elements with the class name ""mySlides"", and displays (,) 
+the element with the given slideIndex. ,If the slideIndex is , the number of elements (x.length), 
+the slideIndex is set to zero.,If the slideIndex is , 1 it is set to number of elements 
+(x.length).,To display an automatic slideshow is even simpler.,You only need a little different 
+JavaScript: ,The slides do not have to be images.,They can be any HTML content:,Add a caption text for each image slide with the , 
+classes (topleft, topmiddle, topright, bottomleft, bottommiddle, bottomright, 
+left, right or middle):,An example of using buttons to indicate how many slides there are in the slideshow, and which slide the user is currently viewing.,Another example:,An example of using images as indicators:,To operate multiple slideshows on one page, you must class the members of 
+each slideshow group with different classes:,Slide or fade in an element from the top, bottom, left or right of the screen with the w3-animate-* classes.,The , class fades an element in and out (takes about 10 seconds).",,"
+ <img class=""mySlides"" src=""img_snowtops.jpg"">,<img class=""mySlides"" src=""img_lights.jpg"">,
+ <img class=""mySlides"" src=""img_mountains.jpg"">,<img class=""mySlides"" src=""img_forest.jpg"">,
+,
+ <button class=""w3-button w3-display-left"" onclick=""plusDivs(-1)"">&#10094;</button>,<button class=""w3-button w3-display-right"" onclick=""plusDivs(+1)"">&#10095;</button>,
+,
+ <div class=""mySlides"">,  <div class=""w3-container w3-red"">,    <h1><b>Did You Know?</b></h1>,    <h1><i>We plan to sell trips to the 
+ moon in the 2020s</i></h1>,  </div>,</div>,
+,
+<div class=""w3-display-container mySlides"">,  <img src=""img_snowtops.jpg"" 
+style=""width:100%"">,  <div class=""w3-display-bottomleft w3-container 
+w3-padding-16 w3-black"">,    French Alps,  
+</div>,</div>,
+,
+<div class=""w3-center"">,  <button class=""w3-button"" onclick=""plusDivs(-1)"">&#10094; 
+Prev</button>,  <button class=""w3-button"" onclick=""plusDivs(1)"">Next 
+&#10095;</button>,  <button class=""w3-button demo"" onclick=""currentDiv(1)"">1</button>
+,  <button class=""w3-button demo"" onclick=""currentDiv(2)"">2</button>
+,  <button class=""w3-button demo"" onclick=""currentDiv(3)"">3</button>
+,</div>,
+,
+<div class=""w3-content w3-display-container"">,  <img class=""mySlides"" 
+src=""img_nature.jpg"">,  <img class=""mySlides"" src=""img_snowtops.jpg"">,  
+<img class=""mySlides"" src=""img_mountains.jpg"">,  <div 
+class=""w3-center w3-display-bottommiddle"" style=""width:100%"">,    
+<div class=""w3-left"" onclick=""plusDivs(-1)"">&#10094;</div>,    
+<div class=""w3-right"" onclick=""plusDivs(1)"">&#10095;</div>,    
+<span class=""w3-badge demo w3-border"" onclick=""currentDiv(1)""></span>,    
+<span class=""w3-badge demo w3-border"" onclick=""currentDiv(2)""></span>,    
+<span class=""w3-badge demo w3-border"" onclick=""currentDiv(3)""></span>,  
+</div>,</div>,
+,
+<div class=""w3-content"" style=""max-width:1200px"">,  <img class=""mySlides"" 
+src=""img_nature_wide.jpg"" style=""width:100%"">,  <img class=""mySlides"" 
+src=""img_snow_wide.jpg"" style=""width:100%"">,  <img class=""mySlides"" 
+src=""img_mountains_wide.jpg"" style=""width:100%"">,  <div 
+class=""w3-row-padding w3-section"">,    <div class=""w3-col 
+s4"">,      <img class=""demo w3-opacity"" src=""img_nature_wide.jpg"",      
+  style=""width:100%"" onclick=""currentDiv(1)"">,    </div>,    
+<div class=""w3-col s4"">,      <img class=""demo 
+w3-opacity"" src=""img_snow_wide.jpg"",      
+  style=""width:100%;display:none"" 
+onclick=""currentDiv(2)"">,    </div>,    
+<div class=""w3-col s4"">,      <img class=""demo 
+w3-opacity"" src=""img_mountains_wide.jpg"",      
+  style=""width:100%;display:none"" onclick=""currentDiv(3)"">,    </div>,  </div>,
+</div>,
+,
+  <div class=""w3-content"">,<img class=""mySlides1"" src=""img_snowtops.jpg"" 
+  style=""width:100%"">,<img class=""mySlides1"" src=""img_lights.jpg"" 
+  style=""width:100%"">,<img class=""mySlides1"" src=""img_mountains.jpg"" 
+  style=""width:100%"">,<img class=""mySlides1"" src=""img_forest.jpg"" 
+  style=""width:100%"">,</div>,<div class=""w3-content"">,<img 
+  class=""mySlides2"" src=""img_la.jpg"" style=""width:100%"">,<img 
+  class=""mySlides2"" src=""img_ny.jpg"" style=""width:100%"">,<img 
+  class=""mySlides2"" src=""img_chicago.jpg"" style=""width:100%"">,</div>,
+ <img class=""mySlides w3-animate-top""    src=""img_01.jpg"">,<img class=""mySlides 
+ w3-animate-bottom"" src=""img_02.jpg"">,<img class=""mySlides w3-animate-top""    src=""img_03.jpg"">,<img class=""mySlides w3-animate-bottom"" src=""img_04.jpg"">,
+ <img class=""mySlides w3-animate-fading"" src=""img_01.jpg"">,<img class=""mySlides 
+ w3-animate-fading"" src=""img_02.jpg"">,<img class=""mySlides 
+ w3-animate-fading"" src=""img_03.jpg"">,<img class=""mySlides 
+ w3-animate-fading"" src=""img_04.jpg"">",
+W3.CSS ,Progress Bars,"Basic Progress Bar,Progress Bar Width,Progress Bar Colors,Progress Bar Labels,Progress Bar Text Size,Progress Bar Padding,Rounded Progress Bars,Dynamic Progress Bar,Dynamic Progress Bar with Labels","Example,Example,Example,Example,Example,Example,Example,Example,Example,Example,Example,Example","A progress bar can be used to show how far along a user is in a process:,A normal <div> element can be used for a progress bar.,The CSS width property can be used to set the height and width of a progress 
+bar.,Change the width of a progress bar with the CSS , property (from 0 to 100%):,Use the , classes to change the color of a 
+progress bar:,Add text inside a , element to add a label to the progress bar.,Use the , class to center the label. If omitted, it will be left aligned.,Use the , classes to change the text size in the container:,Use the , classes to add padding to the container.,Use the , classes to add rounded corners to a progress bar:,Use JavaScript to create a dynamic progress bar:,Centered label:,Left-aligned label:,Label outside of the progress bar:,Another example (advanced):",,"
+<div class=""w3-border"">,
+  <div class=""w3-grey"" style=""height:24px;width:20%""></div>,
+</div>
+,
+<div class=""w3-light-grey"">,  <div class=""w3-grey"" style=""height:24px;width:50%""></div>,</div>,
+<div class=""w3-light-grey"">,  <div class=""w3-blue"" style=""width:75%""></div>,</div>,
+<div class=""w3-light-grey"">,  <div  
+class=""w3-container w3-green w3-center"" style=""width:25%"">25%</div>,</div>,
+<div class=""w3-light-grey w3-xlarge"">,
+  <div class=""w3-container w3-green"" style=""width:50%"">50%</div>,
+</div>
+,
+<div class=""w3-light-grey"">,  <div  
+class=""w3-container w3-red w3-padding w3-center"" style=""width:25%"">25%</div>,  </div>,</div>,
+<div class=""w3-light-grey w3-round"">,  <div 
+class=""w3-container w3-round w3-blue"" style=""width:25%"">25%</div>,</div>,
+<div class=""w3-light-grey"">,
+  <div id=""myBar"" class=""w3-container w3-green""
+style=""height:24px;width:1%""></div>,
+</div>,
+<button class=""w3-button w3-light-grey"" onclick=""move()"">Click Me</button>,
+<script>,
+function move() {,
+  var elem = 
+document.getElementById(""myBar""); ,  var width = 
+1;,  var id = setInterval(frame, 10);,  function frame() {,
+      
+if (width >= 100) {,      
+clearInterval(id);,    } else {,      width++; ,
+        
+elem.style.width = width + '%'; ,    },  },},</script>",
+W3.CSS ,Pagination,"Basic Pagination,Pagination Arrows,Active/Current Link,Hover Color,Pagination Sizing,Centered Pagination,Bordered Pagination,Other Pagination Examples","Example,Example,Example,Example,Example,Example,Example,Example,Example,Next/previous Example,Inline Menu Example","If you have a web site with many pages, you may want to use some sort of pagination.,To create a basic pagination, use buttons (,) in a 
+bar (,).,To remove the space between the buttons add a , 
+class:,Use HTML entities or icons from an icon library to add pagination arrows:,Use one of the , classes to indicate which page the user is on:,By default, when you move the mouse over the pagination links, they get a grey background color. Use any of the , classes to change the hover color:,Use ,, ,, ,, ,, , or 
+, to size the pagination:,To center the pagination, put the ""w3-bar"" element inside a ""w3-center"" element:,Add the , class to create a pagination with borders:,Add the , class next to w3-border for rounded borders:,The w3-bar class can also be used to create next/previous buttons:",,"
+  <div class=""w3-bar"">,  <a href=""#"" class=""w3-button"">1</a>,  
+  <a href=""#"" class=""w3-button"">2</a>,  <a href=""#"" 
+  class=""w3-button"">3</a>,  <a href=""#"" class=""w3-button"">4</a>,  
+  <a href=""#"" class=""w3-button"">5</a>,</div>
+,
+<div class=""w3-bar"">,
+  <a href=""#"" class=""w3-button"">&laquo;</a>,
+  <a href=""#"" class=""w3-button"">1</a>,
+  <a href=""#"" class=""w3-button"">2</a>,
+  <a href=""#"" class=""w3-button"">3</a>,
+  <a href=""#"" class=""w3-button"">4</a>,
+  <a href=""#"" class=""w3-button"">5</a>,
+  <a href=""#"" class=""w3-button"">&raquo;</a>,
+</div>
+,
+<div class=""w3-bar"">,
+  <a href=""#"" class=""w3-button"">&laquo;</a>,
+  <a href=""#"" class=""w3-button"">1</a>,
+  <a href=""#"" class=""w3-button"">2</a>,
+  <a href=""#"" class=""w3-button"">3</a>,
+  <a href=""#"" class=""w3-button"">4</a>,
+  <a href=""#"" class=""w3-button"">5</a>,
+  <a href=""#"" class=""w3-button"">&raquo;</a>,
+</div>
+,
+<div class=""w3-bar"">,
+  <a href=""#"" class=""w3-button"">&laquo;</a>,
+  <a href=""#"" class=""w3-button w3-green"">1</a>,
+  <a href=""#"" class=""w3-button"">2</a>,
+  <a href=""#"" class=""w3-button"">3</a>,
+  <a href=""#"" class=""w3-button"">4</a>,
+  <a href=""#"" class=""w3-button"">&raquo;</a>,
+</div>
+,
+<div class=""w3-bar"">,  <a href=""#"" 
+class=""w3-button w3-hover-purple"">&laquo;</a>,  <a 
+  href=""#"" class=""w3-button w3-hover-green"">1</a>,  <a href=""#"" 
+  class=""w3-button w3-hover-red"">2</a>,  <a href=""#"" class=""w3-button 
+  w3-hover-blue"">3</a>,  <a href=""#"" 
+class=""w3-button w3-hover-black"">4</a>,  <a href=""#"" 
+class=""w3-button w3-hover-orange"">&raquo;</a>,</div> ,
+<div class=""w3-bar 
+w3-xlarge"">,
+  <div class=""w3-center"">,<div class=""w3-bar"">,  <a href=""#"" 
+  class=""w3-bar-item w3-button"">&laquo;</a>,  <a href=""#"" 
+  class=""w3-button"">1</a>,  <a href=""#"" class=""w3-button"">2</a>,  
+  <a href=""#"" class=""w3-button"">3</a>,  <a href=""#"" 
+  class=""w3-button"">4</a>,  <a href=""#"" class=""w3-button"">&raquo;</a>,
+  </div>,</div>,
+<div class=""w3-bar 
+w3-border"">,
+<div class=""w3-bar 
+w3-border w3-round"">
+,
+
+  <div class=""w3-bar w3-border w3-round"">,  <a href=""#"" 
+  class=""w3-button"">&#10094; Previous</a>,  <a href=""#"" class=""w3-button 
+  w3-right"">Next &#10095;</a>,</div>,
+  <div class=""w3-show-inline-block"">,<div class=""w3-bar w3-light-grey"">,  
+  <a href=""#"" class=""w3-bar-item w3-button w3-dark-grey"">Home</a>,  <a 
+  href=""#"" class=""w3-bar-item w3-button"">Link 1</a>,  <a href=""#"" 
+  class=""w3-bar-item w3-button"">Link 2</a>,  <a href=""#"" 
+  class=""w3-bar-item w3-button"">Link 3</a>,</div>,</div>
+",
+W3.CSS ,Navigation Tabs,"Tabbed Navigation,Closable Tabs,Active/Current Tab,Vertical Tabs,Animated Tab Content,Tabbed Image Gallery,Tabs in a Grid","Example,Example,Example,Example,Example,Example,Example,Example,Example","Tabbed navigation is a way to navigate around a website.,Normally, tabbed navigation uses navigation buttons (tabs) arranged together 
+with the selected tab highlighted.,This example uses elements with the same class name (""city"" in our example) 
+, and changes the style between , and , to hide and display different content:,And some clickable buttons to open the tabbed content:
+,And a JavaScript to do the job:
+,The , function is called when the user clicks on one of the buttons in the menu.,The function hides all elements with the class name ""city"" (,), 
+and displays the element with the given city name (,);,To close a tab, add , 
+to an element inside the tab container:,To highlight the current tab/page the user is on, use JavaScript 
+and add a color class to the active link. In the example below, we have added a ""tablink"" 
+class to each link. That way, it is easy to get all links that is associated 
+with tabs, and give the current tab link a ""w3-red"" class, to highlight it:,Use any of the w3-animate-, to fade, zoom or slide in tab 
+content:,Click on an image:,Using tabs in a third column layout. Note that we add a bottom border to the active tab, instead of a background color:",,"
+  <div id=""London"" class=""city"">,  <h2>London</h2>,  <p>London is the capital 
+    of England.</p>,</div>,
+ <div id=""Paris"" class=""city"" style=""display:none"">,  <h2>Paris</h2>,  <p>Paris is the capital of France.</p>
+ ,</div>,<div 
+ id=""Tokyo"" class=""city"" style=""display:none"">,
+  
+ <h2>Tokyo</h2>,  <p>Tokyo is the capital of Japan.</p>,</div>,
+,
+  <div class=""w3-bar w3-black"">,  <button class=""w3-bar-item w3-button"" 
+  onclick=""openCity('London')"">London</button>,  <button 
+  class=""w3-bar-item w3-button"" onclick=""openCity('Paris')"">Paris</button>,  
+  <button class=""w3-bar-item w3-button"" onclick=""openCity('Tokyo')"">Tokyo</button>,
+  </div>,
+  <div id=""London"" class=""w3-display-container"">,  
+  <span onclick=""this.parentElement.style.display='none'"",  
+  class=""w3-button w3-display-topright"">X</span>,  <h2>London</h2>,  
+  <p>London is the capital city of England.</p>,</div>,
+,
+<nav class=""w3-sidebar w3-bar-block w3-light-grey"" style=""width:130px"">,
+    <button class=""w3-bar-item w3-button"" onclick=""openCity(event, 'London')"">London</button> ,
+    <button class=""w3-bar-item w3-button"" onclick=""openCity(event, 'Paris')"">Paris</button> ,
+    <button class=""w3-bar-item w3-button"" onclick=""openCity(event, 'Tokyo')"">Tokyo</button>,</nav>,
+,
+<div id=""London"" class=""w3-container city w3-animate-left"">,  <p>London is the capital city of England.</p>,
+</div>,
+,
+<a href=""javascript:void(0)"" class=""w3-hover-opacity"" onclick=""openImg('Nature');"">,  
+<img src=""img_nature.jpg"" alt=""Nature"">,</a>,
+,<div id=""Nature"" class=""picture w3-display-container"">,  <img 
+src=""img_nature_wide.jpg"" alt=""Nature"" style=""width:100%"">,  
+<span onclick=""this.parentElement.style.display='none'"" 
+class=""w3-display-topright"">&times;</span>,  <div 
+class=""w3-display-bottomleft w3-container"">Nature</div>,</div>",
+W3.CSS ,Tables,"W3.CSS Table Classes,Basic Table,Striped Table,Bordered Table,Striped Bordered Table,Border Around a Table,Displaying it All,Flipping the Stripes,Centering all Content,Centering one Column,Right Align one Column,Hoverable Table,Hover Colors,Combining W3.CSS Classes, Colored Table Header,Colored Table,Responsive Table,Table as a Card,Tiny Table,Small Table,Large Table,XLarge Table,XXLarge Table,XXXLarge Table,Jumbo Table","Example,Example,Example,Example,Example,Example,Example,Example,Example,Example,Example,Example,Example,Example,Example,Example,Example,Example,Example,Example,Example,Example,Example","W3.CSS provides the following classes for tables:,The , class is used to display a basic table:,The , class is used to add zebra-stripes to a table:,The , class adds a bottom border to each table row:,Combine the , class and the , class to create a striped bordered table:,The , class is used to display a border around a table:,The , class combines all of the classes 
+above:,To flip the stripes (start with the light-grey color), add a <thead> element around the table header row. 
+You must also define a color to be used for the table header row:,The , class centers the content of the table:,The , class centers the content of a column:,The , class right aligns the content of a 
+column:,The , class adds a grey background color on 
+mouse-over:,If you want a specific hover color, add any of the , classes 
+to each <tr> element:,Many W3.CSS classes can be used on all HTML elements.,For example: border classes, color classes, font classes, card classes, and 
+more.,Use any of the , classes to display a colored row:,Use any of the , classes to display a colored table:,The , class creates a responsive table. The 
+table will then scroll horizontally on small screens. When viewing on large 
+screens, there is no difference.,Resize the screen to see the effect on the table below:,Use a , class to display a table as a card:,Use the , class to display a tiny table:,Use the , class to display a small table:,Use the , class to display a large table:,Use the , class to display an xlarge table:,Use the , class to display an xxlarge table:,Use the , class to display an xxxlarge table:,Use the , class to display a jumbo large table:",,"
+<table class=""w3-table"">,<tr>,  <th>First Name</th>,  
+<th>Last Name</th>,  <th>Points</th>,</tr>,
+<tr>,  <td>Jill</td>,  <td>Smith</td>,  <td>50</td>,
+</tr>,</table>,
+,
+<table class=""w3-table w3-striped"">,
+,
+<table class=""w3-table w3-bordered"">,
+,
+<table class=""w3-table w3-striped w3-bordered"">,
+,
+<table class=""w3-table w3-striped w3-border""> 
+,
+<table class=""w3-table-all""> 
+,
+ <thead>,  <tr class=""w3-light-grey"">,    <th>First Name</th>,    
+ <th>Last Name</th>,    <th>Points</th>,  </tr>,
+ </thead>,
+<table class=""w3-table-all w3-centered"">,
+,
+<table class=""w3-table-all"">,<tr>,  <th>First 
+  Name</th>,  <th>Last Name</th>,  
+  <th class=""w3-center"">Points</th>,</tr>,
+,
+<table class=""w3-table-all"">,<tr>,  <th>First Name</th>,  
+  <th>Last Name</th>,  <th class=""w3-right-align"">Points</th>,</tr>,
+,
+<table class=""w3-table-all 
+ w3-hoverable""> 
+,
+<tr class=""w3-hover-green"">,
+ <tr class=""w3-red"">,  <th>First Name</th>,  <th>Last 
+ Name</th>,  <th>Points</th>,</tr>,
+<table class=""w3-table w3-blue""> ,
+,
+<div class=""w3-responsive"">,  <table class=""w3-table-all"">,
+   
+... table content ...,  </table>,
+  </div>
+,
+<table class=""w3-table-all w3-card-4"">,
+,
+<table class=""w3-table-all w3-tiny"">,
+,
+<table class=""w3-table-all w3-small"">,
+,
+<table class=""w3-table-all w3-large"">,
+,
+<table class=""w3-table-all w3-xlarge"">,
+,
+<table class=""w3-table-all w3-xxlarge"">,
+,
+<table class=""w3-table-all w3-xxxlarge"">
+,
+<table class=""w3-table-all w3-jumbo"">,
+",
+W3.CSS ,Alerts,"Display Warnings,Display Successs,Display Information,Using a Container,Alerts in All Colors,Closing Alerts,Rounded Alerts,Alert as a Card","Example,Example,Example,Example,Example,Example,Example,Example,Example","The , class is the perfect class to display all types of alerts:,Alerts are often displayed using a strong color:,The ,class 
+can also be used to display alerts:,Alerts are often displayed in special colors, but any color can be used:,To close the alert box, click on the X in the upper right corner:,To create the X that closes the alert, add a <span> element with class
+, and an , event:,Use the , classes if you want rounded corners:,Use a , class if you want the alert to be displayed as a card:",,"
+<div class=""w3-panel w3-red"">,
+  <h3>Danger!</h3>,
+  <p>Red often indicates a dangerous or negative situation.</p>,
+</div> 
+,
+<div class=""w3-panel w3-yellow"">,
+  <h3>Warning!</h3>,  <p>Yellow often indicates a warning that 
+  might need attention.</p>,</div> 
+,
+<div class=""w3-panel w3-green"">,
+  <h3>Success!</h3>,  <p>Green often indicates something successful 
+  or positive.</p>,</div> 
+,
+<div class=""w3-panel w3-blue"">,
+  <h3>Information!</h3>,  <p>Blue often indicates a neutral 
+  informative change or action.</p>,
+</div> 
+,
+<div class=""w3-container w3-red"">,
+  <h3>Danger!</h3>,
+  <p>Red often indicates a dangerous or negative situation.</p>,
+</div> 
+,
+<div class=""w3-panel w3-blue-grey"">,
+  <h3>Danger!</h3>,
+  <p>Red often indicates a dangerous or negative situation.</p>,
+</div> 
+,
+   <span onclick=""this.parentElement.style.display='none'"",class=""w3-button 
+   w3-display-topright"">&times;</span> ,
+     <div class=""w3-panel w3-green w3-round"">,
+     <div class=""w3-panel w3-yellow w3-card-4"">",
+W3.CSS Quotes,,"Displaying Quotes,Large Quotes,Blockquotes,Using HTML Symbols,Using Font Awesome Icons,Display Quotes as Cards","Example,Example,Example,Example,Example,Example,Example,Example,Example,Example","The , class is the perfect class to display quotes.,Quotes are often displayed with a grey background, a left border bar, and an italic font style:,Large quotes are often used on the Internet:,If you use the standard HTML <blockquote> element, notice that the 
+browser will add an extra left and right margin:,You can use standard HTML symbols instead of ampersands:,You can also use icons from the Font Awesome library:,You can also change the color and opacity:,A black quote:",,"
+<div class=""w3-panel w3-leftbar w3-light-grey"">,
+  <p class=""w3-xlarge w3-serif"">,  <i>""Make it as simple as possible, but not simpler.""</i></p>,
+  <p>Albert Einstein</p>,
+</div>
+,
+<div class=""w3-panel w3-leftbar w3-sand"">,
+  <p class=""w3-xxlarge w3-serif"">,
+    <i>""Make it as simple as possible, but not simpler.""</i></p>,
+  <p>Albert Einstein</p>,
+</div>
+,
+<blockquote class=""w3-panel w3-leftbar w3-light-grey"">,
+  <p class=""w3-large"">,  <i>""Make it as simple as possible, but not simpler.""</i></p>,
+  <p>Albert Einstein</p>,
+</blockquote>
+,
+ <div class=""w3-panel w3-light-grey"">,  <span 
+ style=""font-size:150px;line-height:0.6em;opacity:0.2"">&#10077;</span>,  
+ <p class=""w3-xlarge"" style=""margin-top:-40px"">,  <i>""Lorem ipsum dolor sit amet, consectetur adipiscing elit ...""</i></p>,  <p>Albert 
+ Einstein</p>,</div> ,
+  <div class=""w3-panel w3-center w3-leftbar w3-sand"">,  <p><i 
+  class=""w3-serif w3-xlarge"">,  <span 
+  style=""font-size:150px;line-height:0.6em;opacity:0.2"">&#10004;</span>,  
+  Programming in C will slowly decline.<br>,  Programming in JavaScript 
+  will be more important.</i></p>,</div>,
+ <div class=""w3-panel w3-leftbar"">,  <p><i class=""fa fa-quote-right 
+ w3-xxlarge""></i><br>,  <i class=""w3-serif w3-xlarge"">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</i></p>,</div> ,
+ <div class=""w3-panel w3-sand w3-leftbar"">,  <p><i class=""fa fa-quote-right 
+ w3-xxlarge w3-opacity""></i>,  <span class=""w3-serif 
+ w3-xlarge"">,  
+ Lorem ipsum dolor sit amet, consectetur adipiscing elit ...</span></p>,</div> ,
+ <div class=""w3-panel w3-black"">,  <p class=""w3-large 
+ w3-serif"">,  <i class=""fa fa-quote-right w3-xxlarge w3-margin-right""></i>,
+  
+ Lorem ipsum dolor sit amet, consectetur adipiscing elit ...</p>,</div> ,
+ <div class=""w3-panel w3-card-4 w3-light-grey"" style=""width:50%"">,  <p 
+ class="" w3-large w3-serif"">,  <i class=""fa fa-quote-right w3-xxlarge 
+ w3-text-red""></i><br>,  Lorem ipsum dolor sit amet, consectetur adipiscing 
+ elit ...</p>,</div>
+,
+ <div class=""w3-panel w3-card-4 w3-center"" style=""width:50%"">,  <span 
+ style=""font-size:100px"">&#10077;</span><br>,  <p style=""margin-top:-60px"">,
+  
+ <i><b>Lorem ipsum dolor sit amet, consectetur adipiscing elit ...</b></i></p>,
+    </div> ",
+W3.CSS ,Notes,"Notes and Information,More Examples",Example,"The , class is the perfect class to display notes and information.,Notes are often displayed with a color:",,"
+<div class=""w3-panel w3-yellow"">,  <p>London is the most populous city in the United Kingdom,,  with a metropolitan area of over 9 million inhabitants.</p>,</div>  ,
+<div class=""w3-panel w3-border w3-light-grey w3-round-large"">,
+  <p>London is the most populous city in the United Kingdom,,
+  with a metropolitan area of over 9 million inhabitants.</p>,
+</div>
+,
+<div class=""w3-panel w3-pale-blue w3-leftbar w3-rightbar w3-border-blue"">,
+  <p>London is the most populous city in the United Kingdom,,
+  with a metropolitan area of over 9 million inhabitants.</p>,
+</div>
+,
+<div class=""w3-panel w3-pale-red w3-leftbar w3-border-red"">,
+  <p>London is the most populous city in the United Kingdom,,
+  with a metropolitan area of over 9 million inhabitants.</p>,
+</div>
+,
+<div class=""w3-panel w3-pale-yellow w3-border w3-border-yellow"">,
+  <p>London is the most populous city in the United Kingdom,,
+  with a metropolitan area of over 9 million inhabitants.</p>,
+</div>
+,
+<div class=""w3-panel w3-pale-green w3-bottombar w3-border-green w3-border"">,
+  <p>London is the most populous city in the United Kingdom,,
+  with a metropolitan area of over 9 million inhabitants.</p>,
+</div>
+,
+<div class=""w3-panel w3-yellow w3-topbar w3-bottombar w3-border-amber"">,
+  <p>London is the most populous city in the United Kingdom,,
+  with a metropolitan area of over 9 million inhabitants.</p>,
+</div>
+",
+W3.CSS ,Buttons,"W3.CSS Button Classes,Buttons,Button Colors,Hover Colors,Button Shapes,Button Sizes,Button Borders,Buttons With Different Text Effects,Buttons With Padding,Full-width Buttons,Disabled Buttons,Button Bars,Navigation Bars,Left and Right Buttons,Buttons With Ripple Effects,All Elements Can Be Buttons,Circular Buttons","Example,Example,Example,Example,Example,Example,Example,Example,Example,Example,Example,Example,Example,Example,Example,Example,Example,Example,Example,Example,Example,Example","W3.CSS provides the following classes for buttons:,Both the , class and the ,
+class add button-behavior to any HTML elements.,The most common elements to use are 
+<input type=""button"">, <button>, and <a>:,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,All the , classes is used to add color to buttons:,Hover effects also come in all colors. Here are some:,
+,
+,
+,
+,
+,
+,
+,
+,The , classes is used to add 
+hover color to buttons:,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,The , classes are used to add rounded 
+borders to buttons:,
+,
+,
+,
+,
+,
+,The , classes can be used to define different text sizes:,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,The , class can be used to add borders to buttons.,The ,classes are used to define the color of the border:,Buttons can use a wider text effects:,
+,
+,
+,The , class adds a wider text effect:,Buttons can have italic and bold text effects:,
+,
+,
+,
+,Use standard HTML tags (<i> and <b>) to add italic or bold effect to the 
+button text:,
+,
+,
+,
+,
+,
+,
+,
+,The , classes is used to add extra 
+padding around the button text:,To create a full-width button, add the , class to the button.,Full-width buttons have a width of 100%, and spans the entire width of the parent element:,The size of the a block can be defined using ,.,
+,
+,
+,
+,Buttons stand out with a shadow effect and the cursor turns into a hand when mousing over them.,Disabled buttons are opaque (semi-transparent) and display a ""no parking sign"":,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,The , class is used to create a disabled button 
+(if the element support the standard HTML disabled attribute, you can use the 
+disabled attribute instead):,Buttons can be grouped together in a horizontal bar using the , class:,Buttons can be grouped together without a space between them by using , class:,To show two (or more) button bars on the same line, add the , class:,Button bars can easily be used as navigation bars:,The size of each items can be defined by using ,:,Use the , class and the , class to float buttons 
+to the left or to the right:,Used to create ""previous/next"" buttons:,The , class creates a ripple effect on buttons (when they are clicked on):,
+,
+,
+,
+,
+,
+,
+,
+,With W3.CSS, all elements can be a button:,The w3-circle class can be used to create circular buttons:,
+,
+,
+,Square buttons:,
+,
+,
+",,"
+<input class=""w3-button w3-black"" type=""button"" value=""Input Button"">,
+<button class=""w3-button w3-black"">Button Button</button>,
+<a href=""https://www.w3schools.com"" class=""w3-button w3-black"">Link Button</a>,
+<input class=""w3-btn w3-black"" type=""button"" value=""Input Button"">,
+<button class=""w3-btn w3-black"">Button Button</button>,
+<a href=""https://www.w3schools.com"" class=""w3-btn w3-black"">Link Button</a>
+,
+<button class=""w3-button w3-black"">Black</button>,
+<button class=""w3-button w3-khaki"">Khaki</button>,
+<button class=""w3-button w3-yellow"">Yellow</button>,
+<button class=""w3-button w3-red"">Red</button>,
+<button class=""w3-button w3-purple"">Purple</button>,
+<button class=""w3-button w3-hover-black"">Black</button>,
+<button class=""w3-button w3-hover-red"">Red</button>,
+<button class=""w3-button w3-hover-purple"">Purple</button>,
+<button class=""w3-button w3-round"">Round</button>,
+<button class=""w3-button w3-round-large"">Rounder</button>,
+<button class=""w3-button w3-round-xlarge"">and Rounder</button>,
+<button class=""w3-button w3-round-xxlarge"">and Rounder</button>,
+<button class=""w3-btn w3-round"">Round</button>,
+<button class=""w3-btn w3-round-large"">Rounder</button>,
+<button class=""w3-btn w3-round-xlarge"">and Rounder</button>,
+<button class=""w3-btn w3-round-xxlarge"">and Rounder</button>,
+,
+<button class=""w3-button w3-tiny"">Tiny</button>,
+<button class=""w3-button w3-small"">Small</button>,
+<button class=""w3-button w3-medium"">Medium</button>,
+<button class=""w3-button w3-large"">Large</button>,
+<button class=""w3-button w3-xlarge"">xLarge</button>,
+<button class=""w3-button w3-xxlarge"">XXLarge</button>,
+<button class=""w3-button w3-xxxlarge"">XXXLarge</button>,
+<button class=""w3-button w3-jumbo"">Jumbo</button>,
+,
+<button class=""w3-button w3-white w3-border"">Button</button>,
+<button class=""w3-button w3-white w3-border w3-border-blue"">Button</button>,
+<button class=""w3-button w3-yellow w3-border"">Button</button>,
+<button class=""w3-button w3-white w3-border w3-border-red w3-round-large"">Button</button>,
+,
+<button class=""w3-button"">Normal</button>,
+<button class=""w3-button w3-wide"">Wide</button>,
+,
+<button class=""w3-button""><i>Italic</i></button>,
+<button class=""w3-button""><b>Bold</b></button>,
+,
+<button class=""w3-button w3-padding-small"">Button</button>,
+<button class=""w3-button"">Button</button>,
+<button class=""w3-button w3-padding-large"">Button</button>,
+<button class=""w3-btn w3-padding-small"">Button</button>,
+<button class=""w3-btn"">Button</button>,
+<button class=""w3-btn w3-padding-large"">Button</button>
+,
+<button class=""w3-button w3-block"">Button</button>,
+<button class=""w3-button w3-block w3-teal"">Button</button>,
+<button class=""w3-button w3-block w3-red w3-left-align"">Button</button>,
+<button class=""w3-btn w3-block"">Button</button>,
+<button class=""w3-btn w3-block w3-teal"">Button</button>,
+<button class=""w3-btn w3-block w3-red w3-left-align"">Button</button>
+,
+<button class=""w3-button w3-block w3-black"" 
+  style=""width:30%"">Button</button>,
+<button class=""w3-button w3-block w3-teal"" style=""width:50%"">Button</button>,
+<button class=""w3-button w3-block w3-red"" style=""width:80%"">Button</button>,
+,
+<a class=""w3-button w3-disabled"" href=""https://www.w3schools.com"">Link Button</a>,
+<button class=""w3-button"" disabled>Button</button>,
+<input type=""button"" class=""w3-button"" value=""Button"" disabled>,
+<a class=""w3-btn w3-disabled"" href=""https://www.w3schools.com"">Link Button</a>,
+<button class=""w3-btn"" disabled>Button</button>,
+<input type=""button"" class=""w3-btn"" value=""Button"" disabled>,
+,
+<div class=""w3-bar"">,
+  <button class=""w3-button w3-black"">Button</button>,
+  <button class=""w3-button w3-teal"">Button</button>,
+  <button class=""w3-button w3-red"">Button</button>,
+</div>
+,
+<div class=""w3-bar"">,
+  <button class=""w3-bar-item w3-button w3-black"">Button</button>,
+  <button class=""w3-bar-item w3-button w3-teal"">Button</button>,
+  <button class=""w3-bar-item w3-button w3-red"">Button</button>,
+</div>
+,
+  <div class=""w3-center"">,<div class=""w3-bar"">,
+  <button class=""w3-button w3-black"">Button</button>,
+  <button class=""w3-button w3-teal"">Button</button>,
+  <button class=""w3-button w3-disabled"">Button</button>,
+</div>,</div>
+,
+  <div class=""w3-show-inline-block"">,<div class=""w3-bar"">,
+  <button class=""w3-btn"">Button</button>,  <button 
+class=""w3-btn w3-teal"">Button</button>,  <button class=""w3-btn 
+w3-disabled"">Button</button>,</div>,</div>,<div 
+  class=""w3-show-inline-block"">,<div 
+class=""w3-bar"">,
+  <button class=""w3-btn"">Button</button>,  <button 
+class=""w3-btn w3-teal"">Button</button>,  <button class=""w3-btn 
+w3-disabled"">Button</button>,</div>,</div>,
+,
+  <div class=""w3-bar w3-black"">,  <button class=""w3-bar-item 
+  w3-button"">Button</button>,  <button class=""w3-bar-item 
+  w3-button"">Button</button>,  <button class=""w3-bar-item 
+  w3-button"">Button</button>,</div>,
+  <div 
+class=""w3-bar"">,  <button class=""w3-bar-item w3-button"" 
+style=""width:33.3%"">Button</button>,  <button class=""w3-bar-item w3-button 
+w3-teal"" style=""width:33.3%"">Button</button>,  <button 
+class=""w3-bar-item w3-button w3-red"" style=""width:33.3%"">Button</button>,</div>,
+,
+<div class=""w3-bar"">,
+  <button class=""w3-button w3-left"">Left</button>,
+  <button class=""w3-button w3-right"">Right</button>,</div>,
+<button class=""w3-button w3-ripple"">Button</button>,<button 
+class=""w3-button w3-ripple w3-red"">Button</button>,<button class=""w3-button 
+w3-ripple w3-yellow"">Button</button>,
+,
+<button class=""w3-button w3-circle w3-black"">+</button>,
+<button class=""w3-button w3-circle w3-teal"">+</button>,
+,
+<button class=""w3-button w3-black"">+</button>,<button 
+class=""w3-button w3-teal"">+</button>,
+",
+W3.CSS ,Display,"W3.CSS Display Classes,Examples,Display Hover,Displaying A Flag,Floating Classes,Hide and Show,The w3-mobile Class","Example,Example,Example,Example,Example,Example,Example,Example,Example,Example","The display classes allow you to display HTML elements in specific positions inside other HTML elements:,W3.CSS provides the following display classes: ,Same example as above with added padding:,Displaying text inside an image:,The , class displays content on hover inside a w3-display-container (goes from hidden to shown).,The , classes can be combined with , and 
+, classes to create cool hover effects:,You will learn more about animations and effects later in this tutorial.,With a little bit of imagination, the w3-display-classes can be used to create a flag:,The , class floats an element to the left, the , class 
+floats an element to the right:,Force an element to be shown or hidden with the , or
+, class.,These classes are often used to toggle between hiding and showing elements:,The , class adds mobile-first responsiveness to any element.,It adds display:block and width:100% to an element on screens that are less than 600px wide.",,"
+<div class=""w3-display-container w3-green"" style=""height:300px;"">,
+  <div class=""w3-display-topleft"">Top Left</div>,
+  <div class=""w3-display-topright"">Top Right</div>,
+  <div class=""w3-display-bottomleft"">Bottom Left</div>,
+  <div class=""w3-display-bottomright"">Bottom Right</div>,  <div class=""w3-display-left"">Left</div>,  <div class=""w3-display-right"">Right</div>,  <div class=""w3-display-middle"">Middle</div>,
+  <div class=""w3-display-topmiddle"">Top Mid</div>,
+  <div class=""w3-display-bottommiddle"">Bottom Mid</div>,
+</div>
+,
+<div class=""w3-display-container w3-green"" style=""height:300px;"">,
+  <div class=""w3-padding w3-display-topleft"">Top Left</div>,
+  <div class=""w3-padding w3-display-topright"">Top Right</div>,
+  <div class=""w3-padding w3-display-bottomleft"">Bottom Left</div>,
+  <div class=""w3-padding w3-display-bottomright"">Bottom Right</div>,  <div class=""w3-padding w3-display-left"">Left</div>,  <div class=""w3-padding w3-display-right"">Right</div>,
+  <div class=""w3-padding w3-display-middle"">Middle</div>,
+  <div class=""w3-padding w3-display-topmiddle"">Top Mid</div>,
+  <div class=""w3-padding w3-display-bottommiddle"">Bottom Mid</div>,
+</div>
+,
+<div class=""w3-display-container"">,
+  <img src=""img_lights.jpg"" alt=""Lights"" style=""width:100%"">,
+  <div class=""w3-padding w3-display-topleft"">Top Left</div>,
+  <div class=""w3-padding w3-display-topright"">Top Right</div>,
+  <div class=""w3-padding w3-display-bottomleft"">Bottom Left</div>,
+  <div class=""w3-padding w3-display-bottomright"">Bottom Right</div>,
+  <div class=""w3-padding w3-display-topmiddle"">Top Mid</div>,  <div class=""w3-padding w3-display-left"">Left</div>,  <div class=""w3-padding w3-display-right"">Right</div>,
+  <div class=""w3-padding w3-display-middle"">Middle</div>,
+  <div class=""w3-padding w3-display-bottommiddle"">Bottom Mid</div>,
+</div>
+,
+  <div class=""w3-display-container w3-light-grey"" style=""height:300px;"">,  
+  <div class=""w3-display-topleft w3-display-hover"">Top Left</div>,  <div 
+  class=""w3-display-topright w3-display-hover"">Top Right</div>,  <div 
+  class=""w3-display-bottomleft w3-display-hover"">Bottom Left</div>,  
+  <div class=""w3-display-bottomright w3-display-hover"">Bottom Right</div>,  
+  <div class=""w3-display-left w3-display-hover"">Left</div>,  <div 
+  class=""w3-display-right w3-display-hover"">Right</div>,  <div 
+  class=""w3-display-middle"">Mouse over this box!</div>,  <div 
+  class=""w3-display-topmiddle w3-display-hover"">Top Mid</div>,  <div 
+  class=""w3-display-bottommiddle w3-display-hover"">Bottom Mid</div>,</div>,
+   <div class=""w3-display-container w3-hover-opacity"">,  <img src=""img_avatar.png"" 
+  alt=""Avatar"">,  <div class=""w3-display-middle w3-display-hover"">,    <button class=""w3-button 
+  w3-black"">John Doe</button>,  </div>,</div>,
+<div class=""w3-display-container w3-card-4"" style=""height:200px;width:350px"">,
+ 
+<div class=""w3-red w3-display-topleft"" style=""width:25%;height:40%""></div>,
+ 
+<div class=""w3-red w3-display-topright"" style=""width:60%;height:40%""></div>,
+ 
+<div class=""w3-red w3-display-bottomleft"" style=""width:25%;height:40%""></div>,
+ 
+<div class=""w3-red w3-display-bottomright"" style=""width:60%;height:40%""></div>,
+</div>
+,
+<div class=""w3-bar w3-light-grey"">,  <div class=""w3-left 
+w3-red"">w3-left</div>,  <div class=""w3-right w3-blue"">w3-right</div>,</div>,
+  <p class=""w3-show"">I am shown (display: block).</p>,<p class=""w3-hide"">I am hidden (display: none).</p>,
+  <button class=""w3-button w3-mobile"">Link</button>",
+W3.CSS Margins,,"W3.CSS Margin Classes,Margin,Margin Top,Margin Bottom,Margin Left,Margin Right,Sections","Example,Example,Example,Example,Example,Example","W3.CSS provides the following margin classes:,The , class adds a 16px margin to all sides of an element:,The , class adds a 16px top margin to an element:,The , class adds a 16px bottom margin to an element:,The , class adds a 16px left margin to an element:,The , class adds a 16px right margin to an element:,Many HTML elements do not have a default top or bottom margin.
+Such elements will display without a margin between them:,The , class can be used to separate elements.,It adds
+, top and bottom margin to any HTML element:",,"
+<div class=""w3-container w3-margin"">,
+  <p>I have 16px margin on all sides.</p>,
+</div>
+,
+<div class=""w3-container w3-margin-top"">,
+  <p>I have 16px margin on the top.</p>,
+</div>
+,
+<div class=""w3-container w3-margin-bottom"">,
+  <p>I have 16px margin on the bottom.</p>,
+</div>
+,
+<div class=""w3-container w3-margin-left"">,
+  <p>I have 16px margin the left.</p>,
+</div>
+,
+<div class=""w3-container w3-margin-right"">,
+  <p>I have 16px margin the right.</p>,
+</div>
+,
+<div class=""w3-container w3-section w3-blue"">,  <h1>I am 
+ Blue</h1>,</div>,<div class=""w3-container 
+  w3-section 
+w3-green"">,  <h1>I am Green</h1>,</div>
+",
+W3.CSS Padding,,"W3.CSS Padding Number Classes,Examples:,W3.CSS Padding Size Classes,Examples:","Example,Example","The , classes add top and bottom padding to any HTML element:,The , classes add top, bottom, right, and left padding to any HTML element:",,"
+<div class=""w3-panel w3-padding-16"">,
+   <p>I have 16px top and bottom padding.</p>,
+</div>
+,
+<div class=""w3-panel w3-padding-large"">,
+  <p>I have 12px top and bottom padding and 24px left and right padding.</p>,
+</div>
+",
+W3.CSS ,Round Classes,"The Circle Class,An Image Inside a Circle,Text Inside a Circle,A Circle Inside a Circle","Example,Example,Example,Example 1,Example 2","The , classes add rounded corners to any HTML element:,The , class displays content inside a circle.",,"
+<div class=""w3-round w3-teal"">w3-round</div>,
+ <img class=""w3-circle"" 
+src=""img_car.jpg"" alt=""Car"">,
+  <div class=""w3-padding-32 w3-red w3-circle w3-center"">,  <h1>The 
+  w3-circle Class</h1>,</div>,
+ <div class=""w3-padding-32 w3-green w3-circle"">,  <img src=""img_car.jpg"" 
+ class=""w3-circle"" style=""width:75%"">,</div> ,
+ <div class=""w3-padding-32 w3-green w3-circle"">,  <div 
+ class=""w3-padding-32 w3-red w3-circle w3-center"" style=""width:55%"">,    
+ <p class=""w3-xlarge"">Hello<br>W3.CSS!</p>,  </div>,</div> ",
+W3.CSS ,Text,"Text Alignment,Centering Elements,Wide Text,Text Opacity,Text Shadow,Special Effects","Example,Example,Example,Example,Example,Example","The , and the , classes 
+are used to align text.,The , class is used to center-align elements:,The , class specifies a wider text:,This text is normal.,This text is wider.,The , class is designed to work with all colors:,The CSS3 text-shadow property can be used to add shadow or blur effects to text:",,"
+ <div class=""w3-container w3-border w3-large"">,  <div 
+ class=""w3-left-align""><p>Left aligned text.</p></div>,  <div 
+ class=""w3-right-align""><p>Right aligned text.</p></div>,</div>,
+<div class=""w3-container w3-center"">,
+  <h2>Centered Content</h2>,
+  <img src=""img_car.jpg"" alt=""car"" style=""width:80%;max-width:320px"">,
+  <p>Some centered text.</p>,
+</div>
+,
+<p class=""w3-wide"">The w3-wide class specifies a wider text.</p>,
+<div class=""w3-panel w3-pink"">,
+  <h2 class=""w3-opacity"">Text Opacity</h2>,</div>
+,
+<h2 
+  class=""w3-blue"" style=""text-shadow:1px 1px 0 #444"">Text Shadow</h2>,
+    <div class=""w3-panel w3-pink"">,  <h1 class=""w3-opacity"">,  <b>Text Opacity + Bold</b></h1>,</div>,<div class=""w3-panel w3-amber"">,  <h1 class=""w3-text-yellow"" 
+    style=""text-shadow:1px 1px 0 #444"">,  <b>Yellow Text + Shadow + Bold</b></h1>,</div>,<div class=""w3-panel w3-blue"">,  <h1 class=""w3-text-orange"" 
+    style=""text-shadow:1px 1px 0 #444"">,  <b>Orange Text + Shadow + Bold</b></h1>,</div>
+",
+W3.CSS Google Fonts,,"Using Google Fonts,Another Example,Create a Font Class","Example,Example,Example,Example,Example,Example","This is Roboto,This is Sofia,Sofia on Fire,Making the Web!,Making the Web!,Making the Web!,Making the Web!,Making the Web!,Google Fonts are free to use, and have more than 1000 fonts to choose from.,In the head of your web page, link to a Google font:,Then add the CSS about where to use it:,In the head of your web page, link to a Google font:,Then create a font class:,In your web page, use the font class:","Very easy to use (only CSS and HTML),Unlimited use of external font libraries (Like Google Fonts),Works in all modern browsers","
+<link rel=""stylesheet"" href=""https://fonts.googleapis.com/css?family=Roboto"">,
+,
+<link rel=""stylesheet"" href=""https://fonts.googleapis.com/css?family=Sophia"">,
+,
+<link rel=""stylesheet"" href=""https://fonts.googleapis.com/css?family=Sophia"">,
+,
+<p class=""w3-sofia"">Making the Web!</p>,
+<link rel=""stylesheet"" href=""https://fonts.googleapis.com/css?family=Tangerine"">
+,
+<p class=""w3-tangerine"">Making the Web Beautiful!</p>
+,
+  <link rel=""stylesheet"",href=""https://fonts.googleapis.com/css?family=Lobster"">,
+,
+<link rel=""stylesheet"",href=""https://fonts.googleapis.com/css?family=Lobster&effect=shadow-multiple"">,
+,
+<link rel=""stylesheet"",href=""https://fonts.googleapis.com/css?family=Allerta+Stencil"">,
+",
+W3.CSS ,Fonts,"Using Another Default Font,Using Font Classes,This is w3-serif,This is w3-sans-serif,This is w3-monospace,This is w3-cursive,Web Safe Sans Serif Fonts,This is Arial,This is Helvetica,This is Verdana,This is Geneva,This is Tahoma,This is Trebuchet MS,This is Segoe UI,Web Safe Serif Fonts,This is Times New Roman,This is Georgia","Example,Example,Example,Example,Example,Example,Example,Example,Example,Example,Example,Example,Example,Example,Example,Example,Example,Example","Using another default font in W3.CSS is very easy:,With W3.CSS you can use 4 different built-in font classes:,Norway has a total area of 385,252 square kilometers and a population of 5,438,657 (December 2020).
+Norway is bordered by Sweden, Finland and Russia to the north-east,
+and the Skagerrak to the south, with Denmark on the other side.,Norway has a total area of 385,252 square kilometers and a population of 5,438,657 (December 2020).
+Norway is bordered by Sweden, Finland and Russia to the north-east,
+and the Skagerrak to the south, with Denmark on the other side.,Norway has a total area of 385,252 square kilometers and a population of 5,438,657 (December 2020).
+Norway is bordered by Sweden, Finland and Russia to the north-east,
+and the Skagerrak to the south, with Denmark on the other side.,Norway has a total area of 385,252 square kilometers and a population of 5,438,657 (December 2020).
+Norway is bordered by Sweden, Finland and Russia to the north-east,
+and the Skagerrak to the south, with Denmark on the other side.,Norway has a total area of 385,252 square kilometers and a population of 5,438,657 (December 2020).
+Norway is bordered by Sweden, Finland and Russia to the north-east,
+and the Skagerrak to the south, with Denmark on the other side.,Norway has a total area of 385,252 square kilometers and a population of 5,438,657 (December 2020).
+Norway is bordered by Sweden, Finland and Russia to the north-east,
+and the Skagerrak to the south, with Denmark on the other side.,Norway has a total area of 385,252 square kilometers and a population of 5,438,657 (December 2020).
+Norway is bordered by Sweden, Finland and Russia to the north-east,
+and the Skagerrak to the south, with Denmark on the other side.,Norway has a total area of 385,252 square kilometers and a population of 5,438,657 (December 2020).
+Norway is bordered by Sweden, Finland and Russia to the north-east,
+and the Skagerrak to the south, with Denmark on the other side., is considered the safest sans-serif font on the web.
+It is installed on all Windows machines (99.8%) and all Mac machines (98.7%)., is the preferred fallback because the two fonts are almost identical.
+Helvetica runs on all Mac machines (100%) but on fewer Windows machines (7.3%).,Using Arial with Helvetica fallback, or Helvetiva with Arial fallback, covers both worlds., is also considered to be a web safe sans-serif font. It runs on all Windows machines
+(99.8%), and all Mac Machines (99.1%)., is Verdanas preferred fallback, because the two fonts are quite similar,
+and Geneva runs on all Mac machines (99.6%)., was the standard font in Windows 95. It works on 99.9% of all Windows machines,
+and 91.7% of all Mac machines., has been released with all Windows operating systems (99.7%) since Microsoft Windows 2000.
+It is also included on Macs machines (97.1%), iOS and Chrome OS.,Source: ,Norway has a total area of 385,252 square kilometers and a population of 5,438,657 (December 2020).
+Norway is bordered by Sweden, Finland and Russia to the north-east,
+and the Skagerrak to the south, with Denmark on the other side.,Norway has a total area of 385,252 square kilometers and a population of 5,438,657 (December 2020).
+Norway is bordered by Sweden, Finland and Russia to the north-east,
+and the Skagerrak to the south, with Denmark on the other side.,Arial is ranked , in use on the Web.,Norway has a total area of 385,252 square kilometers and a population of 5,438,657 (December 2020).
+Norway is bordered by Sweden, Finland and Russia to the north-east,
+and the Skagerrak to the south, with Denmark on the other side.,Norway has a total area of 385,252 square kilometers and a population of 5,438,657 (December 2020).
+Norway is bordered by Sweden, Finland and Russia to the north-east,
+and the Skagerrak to the south, with Denmark on the other side.,Helvetica is ranked , in use on the Web.,Norway has a total area of 385,252 square kilometers and a population of 5,438,657 (December 2020).
+Norway is bordered by Sweden, Finland and Russia to the north-east,
+and the Skagerrak to the south, with Denmark on the other side.,Norway has a total area of 385,252 square kilometers and a population of 5,438,657 (December 2020).
+Norway is bordered by Sweden, Finland and Russia to the north-east,
+and the Skagerrak to the south, with Denmark on the other side.,Verdana is ranked , in use on the Web.,Norway has a total area of 385,252 square kilometers and a population of 5,438,657 (December 2020).
+Norway is bordered by Sweden, Finland and Russia to the north-east,
+and the Skagerrak to the south, with Denmark on the other side.,Norway has a total area of 385,252 square kilometers and a population of 5,438,657 (December 2020).
+Norway is bordered by Sweden, Finland and Russia to the north-east,
+and the Skagerrak to the south, with Denmark on the other side.,Norway has a total area of 385,252 square kilometers and a population of 5,438,657 (December 2020).
+Norway is bordered by Sweden, Finland and Russia to the north-east,
+and the Skagerrak to the south, with Denmark on the other side.,Norway has a total area of 385,252 square kilometers and a population of 5,438,657 (December 2020).
+Norway is bordered by Sweden, Finland and Russia to the north-east,
+and the Skagerrak to the south, with Denmark on the other side.,Norway has a total area of 385,252 square kilometers and a population of 5,438,657 (December 2020).
+Norway is bordered by Sweden, Finland and Russia to the north-east,
+and the Skagerrak to the south, with Denmark on the other side.,Norway has a total area of 385,252 square kilometers and a population of 5,438,657 (December 2020).
+Norway is bordered by Sweden, Finland and Russia to the north-east,
+and the Skagerrak to the south, with Denmark on the other side.,Norway has a total area of 385,252 square kilometers and a population of 5,438,657 (December 2020).
+Norway is bordered by Sweden, Finland and Russia to the north-east,
+and the Skagerrak to the south, with Denmark on the other side.,Norway has a total area of 385,252 square kilometers and a population of 5,438,657 (December 2020).
+Norway is bordered by Sweden, Finland and Russia to the north-east,
+and the Skagerrak to the south, with Denmark on the other side.,Segoe UI is the default font in Windows 10. It is also the default heading font in W3Schools an W3.CSS., is considered the most web safe serif font.
+It works on all Windows machines (99.7%) and all Mac machines (97.4%).,Some older operating systems might have an alternative version called ,,
+so it is smart to use Times as a fallback as well as serif., is also considered very safe. It is a little larger than Times New Roman,
+but works well on most Windows machines (99.4%) and Mac machines (97.5%).,To be on the safe side, use serif as fallback.,Norway has a total area of 385,252 square kilometers and a population of 5,438,657 (December 2020).
+Norway is bordered by Sweden, Finland and Russia to the north-east,
+and the Skagerrak to the south, with Denmark on the other side.,Norway has a total area of 385,252 square kilometers and a population of 5,438,657 (December 2020).
+Norway is bordered by Sweden, Finland and Russia to the north-east,
+and the Skagerrak to the south, with Denmark on the other side.,Norway has a total area of 385,252 square kilometers and a population of 5,438,657 (December 2020).
+Norway is bordered by Sweden, Finland and Russia to the north-east,
+and the Skagerrak to the south, with Denmark on the other side.,Norway has a total area of 385,252 square kilometers and a population of 5,438,657 (December 2020).
+Norway is bordered by Sweden, Finland and Russia to the north-east,
+and the Skagerrak to the south, with Denmark on the other side.","w3-serif,w3-sans-serif,w3-monospace,w3-cursive","
+<p class=""w3-serif"">
+,
+<p class=""w3-sans-serif"">
+,
+<div class=""w3-monospace"">
+,
+<div class=""w3-cursive"">
+,
+<style>,
+body, h1, h2, h3, h4, h5, h6 {,
+  font-family: Arial, Helvetica, sans-serif;,
+},
+</style>
+,
+<style>,
+body, h1, h2, h3, h4, h5, h6 {,
+  font-family: Helvetica, Arial, sans-serif;,
+},
+</style>
+,
+<div class=""w3-monospace"">
+,
+<div class=""w3-cursive"">
+",
+W3.CSS Defaults,,"W3.CSS is Easy to Read,HTML Headings <h1> - <h6>,Font-Size Classes,Overriding the W3.CSS Defaults,Changing the Default Font","Example,Example,Override in<head>,Add your own CSS,Change W3.CSS,Example","W3.CSS pages are easy to read, even for people with slight reading 
+disabilities.,By default, W3.CSS styles HTML headings this way:,Headings should be used for what they are: 
+Headings.,With W3.CSS, font sizes can be set by the 
+following , classes:,Overriding the W3.CSS default settings is very easy.,You have at least three options:,In the head of your web page (or in your style sheet), after loading W3.CSS, change the style 
+of html and body:","The default font-size is 15px,The default font is Verdana, which has a good letter spacing,The default line-spacing (1.5) is also very good","
+ <link rel=""stylesheet"" href=""https://www.w3schools.com/w3css/4/w3.css"">,<link rel=""stylesheet"" 
+ href=""myStyle.css"">,
+ <link rel=""stylesheet"" href=""https://www.w3schools.com/w3css/4/w3.css"">,
+ <style>,
+ html, body, h1, h2, h3, h4, h5, h6 {,  font-family: cursive, sans-serif;,},
+ </style>
+",
+W3.CSS ,Cards,"W3.CSS Card Classes,Colored Cards,Card Content,Photo Card,Hover Effect,More Examples,Weather Widget","Example (White Cards),Example (Yellow Cards),Example,Example,Example,Example,Example,Example","W3.CSS provides the following classes for displaying paper-like cards:,To display colored cards, just add , class:,Add containers inside the card to create different sections:,The, class adds a shadow effect on hover - this will make any element look like a card on mouse-over (same style as w3-card-4).",,"
+<div class=""w3-card"">,
+ 
+<p>w3-card</p>,
+</div>
+,
+<div class=""w3-card w3-yellow"">,
+ 
+<p>w3-card</p>,
+</div>
+,
+<div class=""w3-card-4"">,<header class=""w3-container 
+w3-blue"">,  
+<h1>Header</h1>,</header>,<div class=""w3-container"">,  
+<p>Lorem ipsum...</p>,</div>,<footer class=""w3-container 
+w3-blue"">,  
+<h5>Footer</h5>,</footer>,
+,</div>,
+<div class=""w3-card-4"">,  <img src=""img_snowtops.jpg"" 
+alt=""Alps"">,  <div class=""w3-container w3-center"">,    
+<p>The Italian / Austrian Alps</p>,  </div>,</div>,
+<div class=""w3-green w3-hover-shadow w3-center"">,  <p>Hover over 
+me!</p>,</div>,
+<div class=""w3-card-4 w3-dark-grey"">,<div class=""w3-container 
+w3-center"">,  <h3>Friend request</h3>,  <img src=""img_avatar3.png"" 
+alt=""Avatar"" style=""width:80%"">,  <h5>John 
+Doe</h5>,
+,  <button class=""w3-button w3-green"">Accept</button>,
+  <button class=""w3-button w3-red"">Decline</button>,</div>,</div>,
+<div class=""w3-card-4"">,<header class=""w3-container w3-light-grey"">,
+  <h3>John Doe</h3>,</header>,<div 
+class=""w3-container"">,  <p>1 new friend request</p>,  <hr>,  
+<img src=""img_avatar3.png"" alt=""Avatar"" class=""w3-left w3-circle"">,  
+<p>President/CEO at Mighty Schools...</p>,</div>,<button class=""w3-button 
+  w3-block 
+w3-dark-grey"">+ Connect</button>,</div>,
+ <div class=""w3-card-4"">,  <div 
+ class=""w3-display-container w3-text-white"">,    <img src=""img_london.jpg"" 
+ alt=""Lights"" style=""width:100%"">,    <div class=""w3-xlarge w3-display-bottomleft 
+ w3-padding"">LONDON 60&deg; F</div>,  </div>,  <div class=""w3-row"">,
+    
+ <div class=""w3-third w3-center"">,      <h3>MON</h3>,      <img src=""img_weather_sun.jpg"" 
+ alt=""sun"">,    </div>,    <div class=""w3-third w3-center"">,      <h3>TUE</h3>,      <img 
+ src=""img_weather_cloud.jpg"" alt=""cloud"">,    </div>,    <div class=""w3-third 
+ w3-center w3-margin-bottom"">,      <h3>WED</h3>,      <img src=""img_weather_clouds.jpg"" 
+ alt=""clouds"">,    </div>,  </div>,</div>",
+W3.CSS ,Borders,"W3.CSS Border Classes,Adding Borders,Border Colors,Rounded Borders,Thick Borders,Hoverable Borders","Example,Example,Example,Example,Example,Example,Example","W3.CSS provides the following border classes:,The , classes are used to add borders to any HTML element:,The , classes are used to add colors to borders:,To add rounded borders, add one of the , classes:,The ,, ,, ,, ,classes are used to add thick borders to an element:,The , classes change the color of the border on mouse-over:",,"
+<div class=""w3-panel w3-border"">,
+  <p>I have borders.</p>,
+</div>,<div class=""w3-panel w3-border-left"">,
+  <p>I have only a left border.</p>,
+</div>,<div class=""w3-panel w3-border-top w3-border-bottom"">,
+  <p>I have top and bottom borders.</p>,
+</div>
+,
+  <div class=""w3-panel w3-border w3-border-red"">,  <p>I have red borders.</p>,
+  </div>,<div class=""w3-panel w3-border-left w3-border-blue"">,  <p>I have a blue left border.</p>,</div>,
+  ,<div class=""w3-panel w3-border-top w3-border-bottom w3-border-green"">,  <p>I have a green top and bottom border.</p>,</div> ,
+	<div class=""w3-panel w3-border"">,  <p>My borders are normal.</p>,
+	</div>,<div class=""w3-panel w3-border w3-round-small"">,  
+	<p>My borders are rounded (small).</p>,</div>,<div class=""w3-panel 
+	w3-border w3-round"">,  <p>My borders are rounded.</p>,</div>,
+	,<div class=""w3-panel w3-border w3-round-large"">,  <p>I have 
+	large rounded borders.</p>,</div>,<div class=""w3-panel w3-border 
+	w3-round-xlarge"">,  <p>I have xlarge rounded borders.</p>,</div>,
+	,<div class=""w3-panel w3-border w3-round-xxlarge"">,  <p>I have 
+	xxlarge rounded borders.</p>,</div>,
+,
+<div class=""w3-panel w3-leftbar"">,  <p>I have a thick left border.</p>,
+</div>,<div class=""w3-panel w3-leftbar w3-border-blue"">,
+  <p>I have a thick blue left border.</p>,
+</div>,<div class=""w3-panel w3-leftbar w3-border-blue w3-pale-blue"">,
+  <p>I have a thick blue left border and a pale-blue background color.</p>,
+</div>,
+<div class=""w3-panel w3-topbar w3-bottombar w3-border-red w3-pale-red"">,
+  <p>I have a thick red top and bottom border and a pale-red background color.</p>,
+</div>
+,
+<div class=""w3-panel w3-border w3-hover-border-red"">,
+  <p>Border that turns red on hover</p>,
+</div>,
+<div class=""w3-panel w3-border w3-border-red w3-hover-border-green"">,
+  <p>Red border that turns green on hover</p>,
+</div>
+
+,
+<div class=""w3-panel w3-leftbar w3-border-white w3-hover-border-green"">,
+  <p>Thick (invisible) left border that turns green on hover.</p>,
+</div>,
+  ,<div class=""w3-panel w3-bottombar w3-border-white w3-hover-border-green"">,
+  <p>Thick (invisible) bottom border that turns green on hover.</p>,
+</div>
+,
+  <div style=""border:16px solid white"" class=""w3-panel w3-hover-border-green"">,  
+  <p>Thick (invisible) border that turns green on hover.</p>,</div>,
+  <div style=""border:16px solid white"" class=""w3-panel w3-hover-border-black"">,  
+  <p>Thick (invisible) border that turns black on hover.</p>,</div>
+",
+W3.CSS ,Panels,"The Panel Class,Panels for Notes,Panels for Quotes,Panels for Alerts,Panels as Cards,Rounded Panels,Hide (Close) a Panel,Show (Open) a Panel","Example,Example,Example,Example,Example,Example,Example,Example","The , class adds a 16px top and bottom margin and a 16px left and right padding to any HTML element.,The , class is perfect for displaying notes.,Notes are often displayed with a pale color:,To learn more about W3.CSS Notes please visit the , chapter.,The , class is perfect for displaying quotes.,To learn more about W3.CSS Quotes please visit the , chapter.,The , class is perfect for displaying alerts.,Alerts are often displayed using a strong color:,To learn more about W3.CSS Alerts please visit the , chapter.,Hiding a panel is easy.,Showing (a hidden) panel is easy:",,"
+ <div class=""w3-panel w3-red"">,  <p>I am a panel.</p>,
+    </div>  ,
+<div class=""w3-panel w3-pale-green"">,  <p>London 
+is the most populous city in the United Kingdom,,  with a 
+metropolitan area of over 9 million inhabitants.</p>,</div> ,
+ <div class=""w3-panel w3-leftbar w3-sand w3-xxlarge w3-serif"">,  <p><i>""Make it as simple as possible, but not simpler.""</i></p>,
+    </div>  ,
+<div class=""w3-panel w3-red"">,  <h3>Danger!</h3>,  <p>Red often 
+ indicates a dangerous or negative situation.</p>,</div> ,
+ <div class=""w3-panel w3-blue w3-card-4"">,  <p>London is the most populous city in the United Kingdom,,  with a 
+ metropolitan area of over 9 million inhabitants.</p>,</div> ,
+ <div class=""w3-panel w3-blue w3-round-xlarge"">,  <p>London is the most populous city in the United Kingdom,,  with 
+ a metropolitan area of over 9 million inhabitants.</p>,</div> ,
+<div class=""w3-panel 
+  w3-display-container"">,  <span onclick=""this.parentElement.style.display='none'"",  class=""w3-button 
+  w3-display-topright"">X</span>,  <p>Click on the X to close this panel.</p>,  <p>Click on the X to close this panel.</p>,</div>
+,
+<button class=""w3-btn"" onclick=""document.getElementById('id01').style.display='block'"">Show 
+panel</button>,<div id=""id01"" class=""w3-panel w3-green 
+  w3-display-container"" style=""display:none"">,
+  <span onclick=""this.parentElement.style.display='none'"",  class=""w3-button 
+  w3-display-topright"">X</span>,
+   <p>Click on the X to close this panel.</p>,  <p>Click on the X to close this panel.</p>,</div>
+",
+W3.CSS ,Containers,"The Container Class,Containers Provides Equality,Headers and Footers,Articles and Sections,Web Page Example,Container Padding","Example,Example,Example,Example,Example,Example,Example,Example using HTML <div> elements,Example using HTML semantic elements,Example,Example","The , class adds a 16px left and right padding 
+to any HTML element.,The , class is the perfect class to use for all HTML container elements like:,<div>, <article>, <section>, <header>, <footer>, <form>, and 
+more.,The , provides equality for all HTML container 
+elements:,To use a container, just add a , class to any element:,To add a color, just add a , class:,The , class can be used to style headers:,The , class can be used to style footers:,The , class can be 
+used to style <article> and <section> elements:,A car is a wheeled, self-powered motor vehicle used for transportation. Most definitions of the term specify that cars are designed to run primarily on roads. (Wikipedia),The , class has a default , left and right padding, 
+and no top or bottom padding:,Normally you will not have to change the default padding of a container, 
+because paragraphs and heading provide margins that will simulate padding.","Common margins,Common paddings,Common alignments,Common fonts,Common colors","
+<div class=""w3-container"">,
+  <p>The w3-container class is an important 
+w3.CSS class.</p>,
+</div>
+,
+<div class=""w3-container w3-red"">,
+  <p>London is the capital city of England.</p>,
+</div>
+,
+<div class=""w3-container w3-teal"">,
+  <h1>Header</h1>,
+</div>
+,
+<header class=""w3-container w3-teal"">,
+  <h1>Header</h1>,
+</header>
+,
+<div class=""w3-container w3-teal"">,
+  <h5>Footer</h5>,
+  <p>Footer information goes here</p>,
+</div>
+,
+<footer class=""w3-container w3-teal"">,
+  <h5>Footer</h5>,
+  <p>Footer information goes here</p>,
+</footer>
+,
+<div class=""w3-container""> ,  <h2>London</h2>,  <p>London 
+is the most populous city in the United Kingdom, ,  with a 
+metropolitan area of over 9 million inhabitants.</p>,</div>,
+<article class=""w3-container""> ,  <h2>Paris</h2>,  <p>The 
+Paris area is one of the largest population centers in Europe, ,  
+with more than 2 million inhabitants.</p>,</article>,<section 
+class=""w3-container""> ,  <h2>Tokyo</h2>,  <p>Tokyo is the 
+center of the Greater Tokyo Area, ,  and the most populous 
+metropolitan area in the world.</p>,</section>,
+<div class=""w3-container w3-red"">,  <h1>Header</h1>,
+</div>,<img src=""img_car.jpg"" alt=""Car"" style=""width:100%"">,<div 
+class=""w3-container"">,  <p>A car is a wheeled, self-powered motor vehicle used for transportation. Most definitions of the term specify that cars are designed to run primarily on roads. (Wikipedia)</p>,</div>,<div class=""w3-container 
+w3-red"">,  
+<h5>Footer</h5>,</div>,
+<header class=""w3-container w3-teal"">,  <h1>Header</h1>,
+</header>,<img src=""img_car.jpg"" alt=""Car"" style=""width:100%"">,<article 
+class=""w3-container"">,  <p>A car is a wheeled, self-powered motor vehicle used for transportation. Most definitions of the term specify that cars are designed to run primarily on roads. (Wikipedia)</p>,</article>,<footer class=""w3-container 
+w3-teal"">,  
+<h5>Footer</h5>,</footer>,
+<div class=""w3-container w3-blue"">,
+ I have no top or bottom padding.,
+</div>
+,
+<div class=""w3-container w3-blue"">,
+  <h1>I am a Heading</h1>,  <p>I am a paragraph.</p>,
+</div>
+",
+W3.CSS ,Colors,"Coloring HTML Elements,Background Colors,Text Colors,Hover Colors,Color libraries,Windows Colors:,Fashion Colors:,Highway Colors:","Example,Example,Example,Example","The , and , classes can be used to color 
+any HTML element:,The , classes set the background color for any HTML element:,The , classes set the text color of any HTML element:,The , classes define the background hover color for any HTML element:,The , classes define the text hover color for any HTML element:,In addition to standard W3.CSS colors, W3.CSS can also use colors from a lot of different color libraries:,You will learn a lot more about colors in later chapters of this tutorial.",,"
+<div class=""w3-red"">,
+  <h2>London</h2>,  <p>London is the most populous city in the United Kingdom,,  with a metropolitan area of over 9 million inhabitants.</p>,
+</div>,<div class=""w3-yellow"">,
+  <h2>London</h2>,  <p>London is the most populous city in the United Kingdom,,  with a metropolitan area of over 9 million inhabitants.</p>,
+</div>,<div class=""w3-gray"">,
+  <h2>London</h2>,  <p>London is the most populous city in the United Kingdom,,  with a metropolitan area of over 9 million inhabitants.</p>,
+</div>
+,
+<div class=""w3-text-red"">,
+  <h2>London</h2>,  <p>London is the most populous city in the United Kingdom,,  with a metropolitan area of over 9 million inhabitants.</p>,
+</div>
+,
+  <div class=""w3-container w3-orange w3-hover-red"">,  <h2>London</h2>,  <p>London is the most populous city in the United Kingdom, with a metropolitan area of over 9 million inhabitants.</p>,</div>
+,
+  <div class=""w3-container w3-orange w3-hover-text-white"">,  <h2>London</h2>,  <p>London is the most populous city in the United Kingdom, with a metropolitan area of over 9 million inhabitants.</p>,
+  </div>
+",
+"W3.CSS , (Kitchen Sink)",Intro,"W3.CSS Colors,W3.CSS Containers,W3.CSS Panels, Notes, and Quotes,W3.CSS Alerts,W3.CSS Cards,W3.CSS Tables,W3.CSS Lists,W3.CSS Buttons,W3.CSS Tags, Labels, Badges, and Signs,W3.CSS Responsive,W3.CSS Display,W3.CSS Modals,W3.CSS Progress Bars,W3.CSS Dropdowns,W3.CSS Accordions,W3.CSS Tabs,W3.CSS Navigation,W3.CSS Pagination,Slideshows,Lightbox,W3.CSS Animations,W3.CSS Images,W3.CSS Effects,W3.CSS Input Forms,W3.CSS Filters,W3.CSS Fonts,W3.CSS Tooltips,Color Themes","Example,Example,Example,Example","The ,
+classes are inspired by modern colors used in marketing, road signs, and sticky notes:,The , class is the most important of the W3.CSS classes. It provides equality like:,The w3-container class is typically used with HTML container elements, like:,<div>, <header>, <footer>, <article>, <section>, <blockquote>, <form>, and 
+more.,The ,
+class can display all kinds of notes and quotes:,The ,
+class can also be used for all kinds of alerts:,The ,
+classes are suitable for both images and notes:,The ,
+classes can handle all kinds of tables:,The ,
+class can handle all kinds of lists:,The ,
+class provides buttons of all sizes and types.,Wide buttons:,Circular or square buttons:,
+,
+,
+,
+,
+,
+,
+,
+,The , and the
+,
+classes are capable of displaying all kinds of tags, labels, badges and signs:,
+,
+,
+,
+,
+,
+,
+,The ,
+classes provide responsiveness for all device types: PC, laptop, tablet, and mobile.,W3.CSS also supports a
+, 
+with small, medium, and large classes.,The , classes
+allow you to display HTML elements in specific positions:,The ,
+class provides modal dialog in pure HTML:,Modal Image:,Read more at ,
+
+,The ,
+classes provide dropdowns:,Read more at , are perfect for single page web applications, or for web pages capable of displaying different subjects.,Tabbed Image Gallery (Click on one of the pictures):,The , class can be used to create a navigation bar:,Navigation bar with input:>,Navigation bar with dropdown:,The , class creates a side navigation:,W3.CSS provides simple ways for ,.,W3.CSS provide , for cycling through images or other content:,Combine , and , to create a lightbox (modal image gallery):,The ,
+classes provide an easy way to slide and fade in elements:,Styling , in W3CSS is easy:,Add special , to any element:,The ,
+classes are for input forms:,Use , to search for a specific element inside a list, table, dropdown, etc:,With W3.CSS it is extremely easy to add , to a web page:,The ,
+class can display all kinds of tooltips:,Hover over this text!
+,Hover over this text!
+,Color themes can easily be added to any web application:","Common margins,Common paddings,Common vertical alignments,Common horizontal alignments,Common fonts,Common colors,
+    ,
+    ,
+    ,
+    ,
+  ,
+    ,
+    ,
+    ,
+    ,
+  ,
+    ,
+    ,
+    ,
+    ,
+  ,
+    ,
+    ,
+    ,
+    ,
+  ,
+      ,
+      ,
+    ,
+      ,
+      ,
+    ,
+      ,
+      ,
+    ,
+      ,
+      ,
+    ,
+      ,
+      ,
+    ,
+      ,
+      ,
+    ","
+<div class=""w3-panel w3-yellow"">,
+  <h3>Warning!</h3>,
+  <p>Yellow often indicates a warning that might need attention.</p>,
+</div>
+,
+<div class=""w3-card-4"">,  <img src=""img_snowtops.jpg"" alt=""Alps"">,
+  <div class=""w3-container w3-center"">,
+   <p>French Alps</p>,
+  </div>,</div>
+,
+<table class=""w3-table w3-striped w3-border""> 
+,
+ <ul class=""w3-ul w3-border"">,  <li><h2>Names</h2></li>,  <li>Jill</li>,  <li>Eve</li>,  
+ <li>Adam</li>,</ul>,
+",

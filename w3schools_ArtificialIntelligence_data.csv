@@ -1,0 +1,435 @@
+H1_leftside_heading,H1_rightside_heading,H2,H3,All_para,li,div,div_2
+Artificial Intelligence,,,,"Artificial Intelligence suggest that machines can mimic humans in:,About 70 000 years ago, the human brain started to develop ""Cognitive Intelligence"":,Cognitive intelligence created:
+,Cognitive intelligence also created:
+,AI is a result of the human need for doing ,.,This can only be achieved using high speed computers.,The main branches of Mathematics involved in AI are:,These chapters provide content about the branches of mathematics
+that is used in data science projects (machine learning / deep learning).,AI experts cannot live without this Algebra:,Probability is about how likely something is,
+Probability is a number between 0 and 1,How to collect, analyze, interpret, and present data.","Talking,Thinking,Learning,Planning,Understanding,Being able to understand numbers,Being able to understand a language,Being able to understand abstract thinking,Mind,Words,Numbers,Numbers,Counting,Calculating,Linear Functions,Linear Graphics,Linear Algebra,Probability,Statistics,AI make use of Scalars,AI make use of Vectors,AI make use of Matrices,AI make use of Tensors,Linear means straight,A linear graph is a straight line,In general, a linear graph displays a Linear Function,What is the most Common?,What is the most Expected?,What is the most Normal?,Clustering,Regressions,Perceptrons,Training,Perceptrons,Recognition,Training,Testing,Tutorial,Operations,Visor,Models,Canvas,Plotly.js,Chart.js,Google Chart",,
+Scatter Plots,,"Data Collection,Scatter Plots,Graphs,When to Use Scatter Plots","Example,Source Code","Collecting data is the most important part of any Machine Intelligence 
+projects.,The most common data to collect are numbers and measurements.,Often data are stored in arrays representing the relationship between values.,This table contains house prices versus size:,A , has points scattered over an area representing the 
+relationship between two values.,A , can also be used to show the same values:,Scatter plots are great for:
+","Data Collections,Scatter Plots,Graphs,Seeing the ""Big Picture"",Compare different values,Discovering potential trends,Discovering patterns in data,Discovering relationships between data,Discovering , and ",,
+Linear Graphs,,"Linear,Slope,Intercept","Example,Example,Example"," means straight. A linear graph is a straight line.,In general, a linear graph display function values.,The , is the angle of the graph.,The slope is the , value in a linear graph:,y = ,x,In this example, , = ,:,The , is the start value of the graph.,The intercept is the , value in a linear graph:,y = ax + ,In this example, slope = 1.2 and , = ,:","Linear,Slope,Intercept",,
+A Plotter Object,,"Create a Plotter Object,Add a Method for Plotting a Line,Add a Method for Transforming XY Values,Add a Method for Plotting Points,Plot Some Random Points,Put the Code in a Library,Use it in Your HTML Pages","Example,Example,Example,Example,Example,Source Code,Example",Now you can add your plotter object to your HTML pages:,"Makes AI more ,Makes AI more ,Makes AI more ","
+<script src=""myplotlib.js""></script>
+",
+Neural Networks (NN),,"The Deep Learning Revolution,Neurons,Neural Networks,The Neural Network Model,Neural Networks with JavaScript,JavaScript Libraries,Introduction to ml5.js,TensorFlow Playground,Tom Mitchell,Stories",,"The deep learning revolution started around 2010. Since then, Deep Learning 
+has solved many ""unsolvable"" problems.,The deep learning revolution was not started by a single discovery.
+It more or less happened when several needed factors were ready:,Scientists agree that our brain has around 100 billion neurons.,These neurons have hundreds of billions connections between them.,Image credit: University of Basel, Biozentrum.,Neurons (aka Nerve Cells) are the fundamental units of our brain and nervous system.,The neurons are responsible for receiving input from the external world,
+for sending output (commands to our muscles),
+and for transforming the electrical signals in between., are normally called Neural Networks (NN).,Neural networks are in fact multi-layer ,.,The perceptron defines the first step into multi-layered neural networks.,Input data (Yellow) are processed against a hidden layer (Blue)
+and modified against another hidden layer (Green) to produce the final output (Red).,Artificial Intelligence can be math-heavy. The nature of neural networks is highly technical,
+and the jargon that goes along with it tends to scare people away.,
+This is were JavaScript can come to help. We need easy to understand software APIs to simplifying the process
+of creating and training neural networks., is a JavaScript library that makes it easy to understand Neural Networks
+because it hides the complexity of the mathematics.,.,ml5.js is trying to make machine learning more accessible to a wider audience.,The ml5 team is working to wrap machine learning functionality in friendlier ways.,The example below uses only , of code to classify an image:,Try substitute ""pic1.jpg"" with ""pic2.jpg"" and ""pic3.jpg""., is a web application written in ,.,With TensorFlow Playground you can learn about , (NN) without math.,In your own , you can create a Neural Network and see the result.,TensorFlow.js was previously called Tf.js and Deeplearn.js.,Tom Michael Mitchell (born 1951) is an American computer scientist and University Professor at the Carnegie Mellon University (CMU).,He is a former Chair of the Machine Learning Department at CMU.,
+E: Experience (the number of times).,
+T: The Task (driving a car).,
+P: The Performance (good or bad).,
+,In 2015, ,, a student at Imperial College in London created a neural network called ,.,Giraffe could be trained in 72 hours to play chess at the same level as an international master.,Computers playing chess are not new, but the way this program was created was new.,Smart chess playing programs take years to build, while Giraffe was built in 72 hours with a neural network.","Medical Diagnosis,Face Detection,Voice Recognition,Computers were fast enough,Computer storage was big enough,Better training methods were invented,Better tuning methods were invented","
+<img id=""image"" src=""pic1.jpg"" width=""100%"">,
+<script>,
+const classifier =  ml5.imageClassifier('MobileNet');,
+classifier.classify(document.getElementById(""image""), gotResult);,
+function gotResult(error, results) { ... },
+</script>,
+",
+Machine Learning (ML),,"Machine Learning,Supervised Learning,Unsupervised Learning,Self-Supervised Learning",,"Classical programming uses programs (algorithms) to create results:,Machine Learning uses results to create programs (algorithms):,Machine Learning is often considered equivalent with Artificial Intelligence.,This is not correct. Machine learning is a subset of Artificial Intelligence.,Machine Learning is a discipline of AI that uses data to teach machines.,Supervised learning uses , (data with known answers) to train
+algoritms to:,Supervised learning can , data like ""What is spam in an e-mail"",
+based on known spam examples.,Supervised learning can , outcomes like like predicting what kind of video you like,
+based on videos you have played.,Unsupervised learning is used to predict undefined relationships like 
+meaningful patterns in data.,It is about creating computer algorithms than can improve themselves.,It is expected that machine learning will shift to unsupervised learning 
+to allow programmers to solve problems without creating models.,Self-supervised learning is similar to unsupervised learning
+because both work with data without human added labels.,The difference is that unsupervised learning uses clustering, grouping, and dimensionality reduction,
+while self-supervised learning draw its own conclusions for regression and classification tasks.","Supervised Machine Learning,Unsupervised Machine Learning,Self-Supervised Machine Learning,Classify Data,Predict Outcomes",,
+AI Sciences,,"AI Scientists,Weak AI,Strong AI,Machine Learning (ML),Neural Networks (NN),Deep Learning (DL),The Deep Learning Revolution,Examples,History of AI",,"AI Scientists build software with algorithms that can do tasks 
+that normally require human intelligence.,AI Scientists can be experts in multiple AI disciplines:
+,Some AI Scientists also have significant big data experience: 
+, is limited to specific or narrow areas like most 
+of the AI we have around us today:,Weak AI is also called Narrow AI.,Weak AI , in contrast to Strong AI that ,., is the type of AI that mimics human 
+intelligence.,Strong AI indicates the ability to think, plan, learn, and communicate.,Strong AI is the theoretical next level of AI: ,.,Strong AI moves towards machines with self-awareness, consciousness, and objective thoughts.
+
+,Classical programming uses programs to create results:,Machine Learning uses results to create programs (algorithms):,One of the most significant discoveries in history is the power of , (NN).,In Neural Networks, many layers of data called , are added 
+together or stacked on top of each other to compute new levels of data.,Commonly used short names:
+, are algorithms that use , to 
+extract higher-level data.,Each successive layer uses the preceding layer as input.,For instance, optical reading uses low layers to identify edges, and higher 
+layers to identify letters.,Deep Learning has two phases:,1. Training: Input data are used to calculate the parameters of the model.,2. Inference: The ""trained"" model outputs data from any given input.,The deep learning revolution is here!,The deep learning revolution started around 2010. Since then, Deep Learning 
+has been used to solve many ""unsolvable"" problems.,Deep CNNs such as
+,
+and
+,
+have reduced the error rate in the , classification from 25% in 
+2011 to 5% in 2017.
+, is an image database organized according to the WordNet 
+hierarchy, in which each node of the hierarchy contains hundreds and thousands 
+of images. ImageNet is a useful resource for researchers, educators, students 
+and everyone else with a passion for pictures., is a lexical database of semantic relations between words in 
+200+ languages. It is organized as a combination of a dictionary and thesaurus, 
+linking words together into semantic relations using synonyms, hyponyms, and 
+meronyms.,RNNs are helping create music scores and novel instrument sounds:,
+,.","Machine Learning (ML),Neural Networks (NN),Deep Learning (DL),Big Data,Applied mathematics,Computational statistics,Computer Science,Machine learning,Deep learning,Business Intelligence,Data Base Design,Data Warehouse Design,Data Mining,SQL Queries,SQL Reporting,Search Engines,Apple's Siri,Microsoft's Cortana,Amazon's Alexa,IBM's Watson, Deep Neural Network, Convolutional Neural Network, Recurrent Neural Network",,
+Perceptrons,,"Frank Rosenblatt,The Perceptron,Perceptron Example,The Perceptron Algorithm,Perceptron Terminology,Perceptron Inputs,Node Values,Node Weights,The Activation Function,Neural Networks",Example," (1928 – 1971) was an American psychologist
+notable in the field of Artificial Intelligence.,In , he started something really big.,Scientists had discovered that brain cells (,)
+receive input from our senses by electrical signals.,The Neurons, then again use electrical signals to store information, and to make decisions based on previous input.,Frank had the idea that , could simulate brain principles, with the ability to learn and make decisions.,From these thoughts, he ""invented"" the ,.,The Perceptron was tested on an IBM 704 computer at Cornell Aeronautical Laboratory in 1957.,The original , was designed to take a number of , inputs, and produce one ,
+output (0 or 1).,The idea was to use different , to represent the importance of each ,,
+and that the sum of the values should be greater than a , value before making a 
+decision like , or , (0 or 1).,Imagine a perceptron (in your brain).,The perceptron tries to decide if you should go to a concert.,Is the artist good? Is the weather good?,What weights should these facts have?,Frank Rosenblatt suggested this algorithm:,:,:,:,:,Perceptron inputs are called nodes.,The nodes have both a value and a weight.,In the example above the node values are: ,Weights shows the strength of each node.,In the example above the node weights are: ,The activation functions maps the result (the weighted sum) into a required value like 0 or 1.,The binary output (0 or 1) can be interpreted as (no or yes) or (false or true).,In the example above, the activation function is simple: ,The , defines the first step into ,.,The perceptron is a ,.,The Neural Network is a ,.","Threshold = 1.5,x1 * w1 = 1 * 0.7 = 0.7,x2 * w2 = 0 * 0.6 = 0,x3 * w3 = 1 * 0.5 = 0.5,x4 * w4 = 0 * 0.3 = 0,x5 * w5 = 1 * 0.4 = 0.4,0.7 + 0 + 0.5 + 0 + 0.4 = 1.6 (The Weighted Sum),Return true if the sum > 1.5 (""Yes I will go to the Concert""),Perceptron Inputs,Node values,Node Weights,Activation Function",,
+Data Clusters,,"Clusters,Identifying Clusters,Clustering,Clustering Methods,Correlation Coefficient",," are collections of data based on similarity.,Data points clustered together in a graph can often be classified into clusters.,In the graph below we can distinguish 3 different clusters:,Clusters can hold a lot of valuable information, but clusters come in all sorts of shapes,
+so how can we recognize them?,The two main methods are:, is a type of ,.,Clustering is trying to:,The , considers points in a dense regions to have more similarities
+and differences than points in a lower dense region.
+The density method has a good accuracy. It also has the ability to merge clusters.,
+Two common algorithms are DBSCAN and OPTICS.,The , forms the clusters in a tree-type structure.
+New clusters are formed using previously formed clusters.,
+Two common algorithms are CURE and BIRCH.,The , formulates the data into a finite number of cells that form a grid-like structure.,
+Two common algorithms are CLIQUE and STING,The , partitions the objects into k clusters and each partition forms one cluster.,
+One common algorithm is CLARANS.,The , (r) describes the strength and direction of a linear relationship
+and x/y variables on a scatterplot.,The value of r is always between -1 and +1:"," are collections of similar data, is a type of unsupervised learning,The , describes the strength of a relationship.,Using Visualization,Using an Clustering Algorithm,Collect similar data in groups,Collect dissimilar data in other groups,Density Method,Hierarchical Method,Partitioning Method,Grid-based Method",,
+Distribution,,"Normal Distribution,Normal Distribution Facts,The Margin of Error,How to Interpret Margin of Error",,"The , is a bell-shaped curve.,Each band of the curve has a width of ,:,Each band of the curve has a width of 1 Standard deviation from the ,.,Values less than ,
+away account for ,.,Values less than , away account for ,.,Values less than , away account for ,.,What does it mean?,Most observations are within 1 standard deviation from the mean.,Almost all observations are within 2 standard deviations.,Practically all observations are within 3 standard deviations.,Normal distribution is ,. The peak always divides the distribution in half.,Normal distribution is a , distribution.,A lot of observations follow the normal distribution:,Normal distribution shows that values near the mean
+are more frequent than values far from the mean:,The , (aka The Empirical Rule), is a shorthand 
+to remember the percentage of values that lie within the different bands of a normal distribution.,Normal distribution is also known as the , and the ,.,Statisticians will always try to predict everything with 100% accuracy.,But, there will always be some uncertainty.,The, is the number that quantifies this statistical uncertainty., define different ranges for where we believe the correct answers can be found., is a matter of judgment, and relative to how important the answer is.,The more samples we collect, the lower the margin of error is:,
+,
+,
+,Suppose 55% of a sampled population say they plan to vote ""Yes"".,When projecting this to a whole population, you add/subtract the margin of error
+to give a range of possible results.,With a margin of error of 3%, you are confident that between 52% and 58% will vote ""Yes"".,With a margin of error of 10%, you are confident that between 45% and 65% will vote ""Yes"".","What is ,What is ,Your IQ,Your Weight,Your Height,Your Salary,Your Blood Pressure",,
+Linear Regressions,,"Scatter Plot,Predicting Values,Linear Graphs,Linear Relationships,Using a Linear Regression Function","Example,Example,Example,Example","This is the , (from the previous chapter):,From the scattered data above, how can we predict future prices?,This is a linear graph predicting prices based on the lowest and the highest price:,This , predicts prices using a linear relationship between price and size:,In the example above, the slope is a calculated average and the intercept = 0.,This , predicts prices using a linear regression function:","Use hand drawn linear graph,Model a linear relationship,Model a linear regression, is the price we want to predict, is the slope of the line, are the input values, is the intercept",,
+AI Data,,"What is Data?,Intelligence Needs Data,Storing Data,Quantitative vs. Qualitative,Census or Sampling,Sampling Terms,Random Samples,Sampling Bias",,"Data can be many things. With Artificial Intelligence it must be a collection of facts:,Human intelligence needs data:,A real estate broker needs data about sold houses to estimate prices.,Artificial intelligence needs data:,A computer program also needs data to estimate prices.,The most common data to collect are Numbers and Measurements.,Often data are stored in arrays representing the relationship between values.,This table contains house prices versus size:,Quantitative data are numerical:,Qualitative data are descriptive:,A , is when we collect data for every member of a group.,A , is when we collect data for some members of a group.,If we wanted to know how many Americans smoke cigarettes,
+we could ask every person in the US (a census),
+or we could ask 10 000 people (a sample).,A census is ,, but hard to do. A sample is ,, but is easier to do.,A , is group of individuals (objects) we want to collect information from.,A , is information about every individual in a population.,A , is information about a part of the population (In order to represent all).,In order for a sample to represent a population, it must be collected randomly.,A ,, is a sample where every member of the population has an 
+equal chance to appear in the sample.,A , (Error) occurs when samples are collected in such a way
+that some individuals are less (or more) likely to be included in the sample.","What data is ,?,What data is ,?
+,How to , the data?,How to , the data?,How to , the data?,How to , the data?,How to , the data?,55 cars,15 meters,35 children,It is cold,It is long,It was fun",,
+Statistics,,"Inferential Statistics,Incredible Chocolate Facts,Descriptive Statistics,Mean Values,The Variance,Standard Deviation,Normal Distribution",," are methods for quantifying properties of a population
+from a small ,:,You take data from a sample and make a prediction about the whole population.,For example, you can stand in a shop and ask a , if they like chocolate.,From your research, using inferential statistics, you could predict that 91% of , like chocolate.
+,Nine out of ten people love chocolate.,50% of the US population cannot live without chocolate every day., are methods for summarizing observations into information that we can understand.,Since we register every new born baby, we can tell that 51 out of 100 are boys.,From the numbers we have collected, we can predict a 51% chance that a new baby will be a boy.,It is a mystery that the ratio is not 50%, like basic biology would predict.
+We can only say that we have at least had this tilted sex ratio since the 17th century.,The mean value is the , of all values.,This table contains house prices versus size:,The mean price is (7+8+8+9+9+9+10+11+14+14+15)/11 = 10.363636.,: Add all numbers, then divide by the number of numbers.,The , is the , divided by the ,.,In statistics, the , is the average of the squared differences from the mean value.,In other words, it describes how far a set of numbers is spread out from their average value., is a measure of how spread out numbers are.,The symbol is , (Greek letter sigma).,The formula is the , variance (the square root of the variance).,The , is a bell-shaped curve.,Each band of the curve has a width ,:","What is the most ,What is the most ,What is the most ",,
+Tensors,,"Tensor Ranks,Real Tensors,Linear Algebra in JavaScript,JavaScript Tensor Operations","Tensor Addition,Tensor Subtraction","The number of directions a tensor can have in a ,-dimensional space, is called the , of the tensor.,The rank is denoted ,.,A , is a single number. ,.,A , is an array of numbers. ,.,A , is a 2-dimensional array. ,.,Technically, all of the above are tensors, but when we speak of tensors, we generally 
+speak of matrices with a dimension larger than 2 (,).,In linear algebra, the most simple math object is the ,:,Another simple math object is the ,:,Matrices are ,:,Vectors can be written as , with only one column:,Vectors can also be written as ,:,Tensors are ,:,Programming tensor operations in JavaScript, can easily become a spaghetti of loops.,Using a JavScript library will save you a lot of headache.,One of the most common libraries to use for tensor operations is called ,.","A Scalar is a 0-dimensional tensor,A Vector is a 1-dimensional tensor,A Matrix is a 2-dimensional tensor,It has 0 Axes,It has a Rank of 0,It is a 0-dimensional Tensor,It has 1 Axis,It has a Rank of 1,It is a 1-dimensional Tensor,It has 2 Axis,It has a Rank of 2,It is a 2-dimensional Tensor",,
+Probability,,"The Probability of an Event,Tossing Coins,P(A) - The Probability,Throwing Dices,6 Balls,P(A) = P(B),Choosing a King",,"The probability of an event is:,The number of ways the event can happen / The number of possible outcomes.,When tossing a coin, there are two possible outcomes:,The probability of an event , is often written as ,.
+
+,When tossing two coins, there are 4 possible outcomes:,When throwing a dice, there are 6 possible outcomes:,I have 6 balls in a bag: 3 reds, 2 are green, and 1 is blue.,Blindfolded. What is the probability that I pick a green one?,Number of , it can happen are 2 (there are 2 greens).,Number of , are 6 (there are 6 balls).,The probability that I pick a green one is 2 out of 6: 2/6 = 0.333333.,The probability is written P(green) = 0.333333.,For the 6 balls:,The probability of choosing a king in a deck of cards is 4 in 52.,Number of , it can happen are 4 (there are 4 kings).,Number of , are 52 (there are 52 cards).,The probability is 4 out of 52: 4/52 = 0.076923.,The probability is written P(king) = 0.076923.",,,
+Matrices,,"Matrix Dimensions,Square Matrices,Diagonal Matrices,Scalar Matrices,The Identity Matrix,The Zero Matrix,Equal Matrices,Negative Matrices,Linear Algebra in JavaScript,JavaScript Matrix Operations,Adding Matrices,Subtracting Matrices,Scalar Multiplication,Transpose a Matrix,Multiplying Matrices,Matrix Factorization","Using math.js,Example,Example,Example,Example,Example,Example","This , has , row and , columns:,The , of the matrix is (,x,).,This matrix has , rows and , columns:,The dimension of the matrix is (,x,).,A , is a matrix with the same number of rows and columns.,An n-by-n matrix is known as a square matrix of order n.,A , matrix (Square matrix of order 2):,A , matrix (Square matrix of order 4):,A , has values on the diagonal entries, and , on the rest:
+,A , has equal diagonal entries and , on the rest:
+,The , has , on the diagonal and , on the rest.,This is the matrix equivalent of 1. The symbol is ,.,If you multiply any matrix with the identity matrix, the result equals the original.,The , (Null Matrix) has only zeros.,Matrices are , if each element correspond:,The , of a matrix is easy to understand:,In linear algebra, the most simple math object is the ,:,Another simple math object is the ,:,Matrices are ,:,Vectors can be written as , with only one column:,Vectors can also be written as ,:,Programming matrix operations in JavaScript, can easily become a spaghetti of loops.,Using a JavScript library will save you a lot of headache.,One of the most common libraries to use for matrix operations is called ,.,It can be added to your web page with one line of code:,If two matrices have the same dimension, we can add them:,If two matrices have the same dimension, we can subtract them:,While numbers in rows and columns are called ,, single numbers are called ,.,It is easy to multiply a matrix with a scalar. Just multiply each number in the matrix with the scalar:,To transpose a matrix, means to replace rows with columns.,When you swap rows and columns, you rotate the matrix around it's diagonal.,Multiplying matrices is more difficult.,We can only multiply two matrices if the number of rows in matrix A is the same as the number of columns in matrix B.,Then, we need to compile a ""dot product"":,We need to multiply the numbers in each , with the numbers in each ,, and then add the products:,If you know how to multiply matrices, you can solve many complex equations.,With AI, you need to know how to factorize a matrix.,Matrix factorization is a key tool in linear algebra, especially in Linear Least Squares.","Red roses are $3 each,White roses are $4 each,Yellow roses are $2 each,Monday you sold 260 roses,Tuesday you sold 200 roses,Wednesday you sold 120 roses","
+<script src=""https://cdnjs.cloudflare.com/ajax/libs/mathjs/9.3.2/math.js""></script>
+",
+D3.js,,"How to Use D3.js?,Scatter Plot",Example,"To use D3.js in your web page, , to the library:,D3.js is easy to use.,This script selects the body element and appends a paragraph with the text ""Hello World!"":",,"
+<script src=""//d3js.org/d3.v3.min.js""></script>
+",
+Google Chart,,"How to Use Google Chart?,Line Graph,Scatter Plots,Bar Charts,Pie Charts,3D Pie","Source Code,Source Code","To use Google Chart in your web page, , to the charts loader:,Google Chart is easy to use.,Just add a , element to display the chart:,The <div> element must have a unique id.,Then load the Google Graph API:,That's all!,To , the same data, change google.visualization to LineChart:,To convert a , Chart to a , chart, just replace:,
+google.visualization.,with:,
+google.visualization.,To display the Pie in 3D, just add , to the options:","Scatter Chart,Line Chart ,Bar / Column Chart,Area Chart,Pie Chart,Donut Chart,Org Chart,Map / Geo Chart","
+<script,
+src=""https://www.gstatic.com/charts/loader.js"">,
+</script>
+,
+<div id=""myChart"" style=""max-width:700px; height:400px""></div>
+",
+JavaScript Graphics,,"Plotly.js,Chart.js,Google Chart",,"Plotly.js is a charting library that comes with over 40 chart types, 3D charts, statistical graphs, and SVG maps.,
+
+,Chart.js comes with many built-in chart types:,
+
+
+,From simple line charts to complex tree maps,
+Google Chart provides a number of built-in chart types:,
+,
+
+","Plotly.js,Chart.js,Google Chart,Scatter,Line,Bar,Radar,Pie and Doughnut,Polar Area,Bubble,Scatter Chart,Line Chart ,Bar / Column Chart,Area Chart,Pie Chart,Donut Chart,Org Chart,Map / Geo Chart",,
+Chart.js,,"How to Use Chart.js?,Scatter Plots,Line Graphs,Multiple Lines,Linear Graphs,Function Graphs,Bar Charts,Pie Charts,Doughnut Charts","Source Code,Source Code,Source Code,Source Code,Source Code,Horizontal Bars,Example","Chart.js is easy to use.,, add a link to the providing CDN (Content Delivery Network):,, add a <canvas> to where you want to draw the chart:,The canvas element must have a unique id.,That's all!,If you set the borderColor to zero, you can , the line graph:","Scatter,Line,Bar,Radar,Pie and Doughnut,Polar Area,Bubble","
+<script,
+src=""https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"">,
+</script>
+,
+<canvas id=""myChart"" style=""width:100%;max-width:700px""></canvas>
+",
+Plotly.js,,"Scatter Plots,Line Graphs,Linear Graphs,Multiple Lines,Bar Charts,Horizontal Bar Charts,Pie Charts,Donut Charts,Plotting Equations","Source Code,Source Code,Source Code,Source Code,Source Code,Source Code,Source Code","To display a pie instead of bars, change x and y to labels and values, and change the type to ""pie"":,To display a donut instead of a pie, add a hole:",,,
+HTML Canvas,,"Scatter Plots,Line Graphs,Combined","Source Code,Source Code,Source Code",,,,
+Example 2 Training,,"Training Function,Test the Model","Un Normalize,Plot the Result"," defines how many iterations (loops) the model will do., is the function that runs the loops., defines the callback function to call
+when the model wants to redraw the graphics.,When a model is trained, it is important to test and evaluate it.,We do this by inspecting what the model predicts for a range of different inputs.,But, before we can do that, we have to un-normalize the data:
+,Then we can look at the result:",,,
+Example 2 Model,,"Shuffle Data,TensorFlow Tensors,Data Normalization,Tensorflow Model,Compiling a Model",Example,"When a model is trained, the data is divided into small sets (batches).
+Each batch is then fed to the model.
+Shuffling is important to prevent the model getting the same data over again.
+If using the same data twice, the model will not be able to generalize the data
+and give the right output. Shuffling gives a better variety of data in each batch.,To use TensorFlow, input data needs to be converted to tensor data:,Data should be normalized before being used in a neural network.,A range of 0 - 1 using min-max are often best for numerical data:,A , is an algorithm that produces output from input.,This example uses 3 lines to define a ,:,
+creates a ,.,In a sequential model, the input flows directly to the output. 
+Other models can have multiple inputs and multiple outputs.
+Sequential is the easiest ML model.
+It allows you to build a model layer by layer,
+with weights that correspond to the next layer., is used to add two layers to the model., is a layer type that works in most cases.
+It multiplies its inputs by a weight-matrix and adds a number (bias) to the result., because we have 1 input (x = rooms).
+, defines the size of the weight matrix:
+1 weight for each input (x value).
+,Compile the model with a specified , and , function:,The compiler is set to use the , optimizer.
+It is simple to use and quite effective.,
+is the function we want to use to compare model predictions and true values.",,,
+Example 2 Data,,"Data Collection,Cleaning Data,Remove Data,Remove Errors,Fetching Data,Plotting the Data",,"The data used in Example 2, is a list of house objects:,The dataset is a JSON file stored at:,When preparing for machine learning, it is always important to:,A smart way to remove unnecessary data, it to extract ,.,This can be done by iterating (looping over) your data with a ,.,The function below takes an object and returns , from the object's
+Horsepower and Miles_per_Gallon properties:,Most datasets contain some type of errors.,A smart way to remove errors is to use a , to filter out the errors.,The code below returns false if on of the properties (x or y) contains a null value:,When you have your map and filter functions ready, you can write a function to fetch the data.,
+,Here is some code you can use to plot the data:","Remove the data you don't need,Clean the data from errors",,
+TensorFlow Example 2,,"Input Data,Reduce Loss,Explained,Graphics (tfjs-vis)",,"The model above performs 4 important steps:,In the next chapters you will learn how to program a copy of the above example.,You will learn how to fetch data, clean data, and plot data.,You will also learn how to build a TensorFlow model, and how to train the model.,The graphics is diplayed using the ,.
+,tfjs-vis is a small library for in browser visualization intended for use with TensorFlow.js.","It Collects Data,It Prepares Data,It Trains a Model,It Evaluates the Model,Graphic tools for visualizing ,Functions for visualizing , Objects,Visualizations can be organized in a , (a modal browser window),Can be used with , likes d3, Chart.js, and Plotly.js",,
+Example 1 Training,,"Training Function,Test the Model","Un Normalize,Plot the Result"," defines how many iterations (loops) the model will do., is the function that runs the loops., defines the callback function to call
+when the model wants to redraw the graphics.,When a model is trained, it is important to test and evaluate it.,We do this by inspecting what the model predicts for a range of different inputs.,But, before we can do that, we have to un-normalize the data:
+,Then we can look at the result:",,,
+Example 1 Model,,"Shuffle Data,TensorFlow Tensors,Data Normalization,Tensorflow Model,Compiling a Model",Example,"When a model is trained, the data is divided into small sets (batches).
+Each batch is then fed to the model.
+Shuffling is important to prevent the model getting the same data over again.
+If using the same data twice, the model will not be able to generalize the data
+and give the right output. Shuffling gives a better variety of data in each batch.,To use TensorFlow, input data needs to be converted to tensor data:,Data should be normalized before being used in a neural network.,A range of 0 - 1 using min-max are often best for numerical data:,A , is an algorithm that produces output from input.,This example uses 3 lines to define a ,:,
+creates a ,.,In a sequential model, the input flows directly to the output. 
+Other models can have multiple inputs and multiple outputs.
+Sequential is the easiest ML model.
+It allows you to build a model layer by layer,
+with weights that correspond to the next layer., is used to add two layers to the model., is a layer type that works in most cases.
+It multiplies its inputs by a weight-matrix and adds a number (bias) to the result., because we have 1 input (x = horsepower).
+, defines the size of the weight matrix:
+1 weight for each input (x value).
+,Compile the model with a specified , and , function:,The compiler is set to use the , optimizer.
+It is simple to use and quite effective.,
+is the function we want to use to compare model predictions and true values.",,,
+Example 1 Data,,"TensorFlow Data Collection,Cleaning Data,Remove Data,Remove Errors,Fetching Data,Plotting the Data",,"The data used in Example 1, is a list of car objects like this:,The dataset is a JSON file stored at:,When preparing for machine learning, it is always important to:,A smart way to remove unnecessary data, it to extract ,.,This can be done by iterating (looping over) your data with a ,.,The function below takes an object and returns , from the object's
+Horsepower and Miles_per_Gallon properties:,Most datasets contain some type of errors.,A smart way to remove errors is to use a , to filter out the errors.,The code below returns false if on of the properties (x or y) contains a null value:,When you have your map and filter functions ready, you can write a function to fetch the data.,
+,Here is some code you can use to plot the data:","Remove the data you don't need,Clean the data from errors",,
+TensorFlow Example 1,,"Input Data,Reduce Loss,Explained,Graphics (tfjs-vis)",,"The model above performs 4 important steps:,In the next chapters you will learn how to program a copy of the above example.,You will learn how to fetch data, clean data, and plot data.,You will also learn how to build a TensorFlow model, and how to train the model.,The graphics is diplayed using the ,.
+,tfjs-vis is a small library for in browser visualization intended for use with TensorFlow.js.","It Collects Data,It Prepares Data,It Trains a Model,It Evaluates the Model,Graphic tools for visualizing ,Functions for visualizing , Objects,Visualizations can be organized in a , (a modal browser window),Can be used with , likes d3, Chart.js, and Plotly.js",,
+TensorFlow.js Visor,,"Using tfjs-vis,Scatter Plots,Bar Graphs,Line Graphs","Example,Example,Example with a Visor,Example,Example with a Visor,Example,Example with a Visor","To use tfjs-vis, add the following script tag to your HTML file(s):,Visualizations can be organized in a Visor (a modal browser window):,Visualizations can be organized in a Visor (a modal browser window):,Visualizations can be organized in a Visor (a modal browser window):"," is a graphic tools for visualizing ,It contains functions for visualizing ,Visualizations can be organized in , (modal browser windows),Can be used with , likes d3, Chart.js, and Plotly.js,Often called ","
+<script src=""https://cdn.jsdelivr.net/npm/@tensorflow/tfjs-vis""></script>
+",
+TensorFlow Models,,"Tensorflow Models,A Tensorflow Project,Example,Collecting Data,Creating a Model,Adding Layers,Compiling the Model,Tensorflow Optimizers,Training the Model,Using the Model",," and , are important building blocks in ,.,For different Machine Learning tasks you must combine different types of Layers
+into a Model that can be trained with data to predict future values.,TensorFlow.js is supporting different types of , and different types of ,A TensorFlow , is a , with one or more ,.,A Tensorflow project has this typical workflow:,Suppose you knew a function that defined a strait line:,Then you could calculate any y value with the JavaScript formula:,To demonstrate Tensorflow.js, we could train a Tensorflow.js model to
+predict Y values based on X inputs.,Create a tensor (xs) with 5 x values:,Create a tensor (ys) with 5 correct y answers (multiply xs with 1.2 and add 5):,Create a sequential mode:.,Add one dense layer to the model.,The layer is only one unit (tensor) and the shape is 1 (one dimentional):,Compile the model using meanSquaredError as loss function and
+sgd (stochastic gradient descent) as optimizer function:,Train the model (using xs and ys) with 500 repeats (epochs):,After the model is trained, you can use it for many different purposes.,This example predicts 10 y values, given 10 x values, and calls a function to plot the predictions in a graph:,This example predicts 10 y values, given 10 x values, and calls a function to display the values:","Collecting Data,Creating a Model,Adding Layers to the Model,Compiling the Model,Training the Model,Using the Model,Adadelta -Implements the Adadelta algorithm.,Adagrad - Implements the Adagrad algorithm.,Adam - Implements the Adam algorithm.,Adamax - Implements the Adamax algorithm.,Ftrl - Implements the FTRL algorithm.,Nadam - Implements the NAdam algorithm.,Optimizer - Base class for Keras optimizers.,RMSprop - Implements the RMSprop algorithm.,SGD - Stochastic Gradient Descent Optimizer.",,
+TensorFlow Operations,,"Tensor Addition,Tensor Subtraction,Tensor Multiplication,Tensor Division,Tensor Square,Tensor Reshape","Example,Example,Example,Example,Example,Example","You can add two tensors using ,:,You can subtract two tensors using ,:,You can multiply two tensors using ,:,You can divide two tensors using ,:,You can square a tensor using ,:,The number of elements in a tensor is the product of the sizes in the shape.,Since there can be different shapes with the same size,
+it is often useful to reshape a tensor to other shapes with the same size.,You can reshape a tensor using ,:","Add,Subtract,Multiply,Divide,Square,Reshape",,
+TensorFlow.js Tutorial,,"Using TensorFlow,Tensors,Creating a Tensor,Tensor Shape,Tensor Data Types,Retrieve Tensor Values","Example,Example 2,Example 1,Example 2,Example1,Example2,Example3,Example,Example,Example","To use TensorFlow.js, add the following script tag to your HTML file(s):,To make sure you always use the latest version, use this:, is a , library 
+to define and operate on ,.,A Tensor is much the same as a multidimensional array.,A Tensor contains numeric values in a (one or more) dimensional shape.,A Tensor has the following main properties:,A Tensor can be created from any ,:
+,A Tensor can also be created from an , and a , parameter:
+,A Tensor can have the following data types:
+,When you create a tensor, you can specify the data type as the third parameter:,You can get the data behind a tensor using ,:,You can get the array behind a tensor using ,:","bool,int32,float32 (default),complex64,string","
+<script src=""https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@3.6.0/dist/tf.min.js""></script>
+,
+<script src=""https://cdn.jsdelivr.net/npm/@tensorflow/tfjs""></script>
+",
+Brain.js,,"Building a Neural Network,How to Predict a Contrast","Example:,Example,Example:","Building a neural network with Brain.js:,A Neural Network is created with: ,The network is trained with ,The examples represent 4 input values with a corresponding output value.,With ,, you ask ""What is the likely output of [1,0]?"",The answer from the network is:,With CSS, colors can be set by RGB:,The example below demonstrates how to predict the darkness of a color:,A Neural Network is created with: ,The network is trained with ,The examples represent 4 input values a corresponding output value.,With ,, you ask ""What is the likely output of dark blue?"",The answer from the network is:
+,Why not edit the example to test the likely output of yellow or red?","one: 93% (close to 1),zero: 6% (close to 0),Dark: 95%,Light: 4% ",,
+ML Terminology,,"Relationships,Machine Learning Labels,Machine Learning Features,Machine Learning Models,Machine Learning Training,Machine Learning Inference",,"Machine learning systems uses , between , to produce ,.,In algebra, a relationship is often written as ,:,With ML, a relationship is written as ,:,In Machine Learning terminology, the , is the thing we want to ,.,It is like the , in a linear graph:,In Machine Learning terminology, the , are the ,.,They are like the , values in a linear graph:,Sometimes there can be many features (input values) with different weights:,y = b + w, + w,
++ w, + w,A , defines the relationship between the label (y) and the 
+features (x).
+,There are three phases in the life of a model:,The goal of training is to create a model that can answer a question. Like 
+what is the expected price for a house?,Inference is when the trained model is used to infer (predict) values using 
+live data. Like putting the model into production.","Relationships,Labels,Features,Models,Training,Inference, is the label we want to predict, is the slope of the line, are the input values, is the intercept, is the label we want to predict, is the weight (the slope), are the features (input values), is the intercept,Data Collection,Training,Inference,
+",,
+Machine Learning,,"Gradient Descent,A Trainer Object,Cost Function,The Train Function,An Update Weights Function,Create Your Own Library",Library Code,"Train me to find the line of best fit:,
+,
+,
+,
+,
+, is a popular algorithm for solving AI problems.,A simple , can be used to demonstrate a gradient descent.,The goal of a linear regression is to fit a linear graph to a set of (x,y) points.
+This can be solved with a math formula. But a , can also solve this.,This is what the example above does.,It starts with a scatter plot and a linear model (y = wx + b).,Then it trains the model to find a line that fits the plot.
+This is done by altering the weight (slope) and the bias (intercept) of the line.,Below is the code for a , that can solve this problem
+(and many other problems).,Create a Trainer object that can take any number of (x,y) values in two arrays (xArr,yArr).,Set both weight and bias to zero.,A learning constant (learnc) has to be set, and a cost variable must be defined:,A standard way to solve a regression problem, is with an ""Cost Function"" that measures how good the solution is.,The function uses the weight and bias from the model (y = wx + b) and returns an error,
+based on how well the line fits a plot.,The way to compute this error, is to loop through all (x,y) points in the plot,
+and sum the square distances between the y value of each point and the line.,The most conventional way is to square the distances (to ensure positive values)
+and to make the error function differentiable.,We will now run a gradient descent.,The gradient descent algorithm should walk the cost function towards the best line.,Each iteration should update both m and b towards a line with a lower cost (error).,To do that, we add a train function that loops over all the data many times:,The train function above should update the weights and biases in each iteration.,The direction to move is calculated using two partial derivatives:"," is the error (cost), is the total number of observations (points), is the value (label) of each observation, is the value (feature) of each observation, is the slope (weight), is intercept (bias), is the prediction, is the squared mean value","
+<script src=""myailib.js""></script>
+",
+Testing a Perceptron,,"Test Your Library,Count the Errors,Tune the Perceptron","Example,Example","Generate new unknown points and check if your Perceptron can guess the right answers:,Add a counter to count the number of errors:,How can you tune the Perceptron?,Here are some suggestions:","A Perceptron must be , and ,A Perceptron must be tested against ,.,Adjust the learning rate,Increase the number of training data,Increase the number of training iterations",,
+Training a Perceptron,,"Training Task,Create a Perceptron Object,Add an Activate Function,Create a Training Function,Backpropagation,Create Your Own Library,Use Your Library","Example,Example,Example,Library Code,Example","Imagine a straight line in a space with scattered x y points.,Train a perceptron to classify the points over and under the line.,Create a Perceptron object. Name it anything (like Perceptron).,Let the perceptron accept two parameters:
+,Set the default learning rate to 0.00001.,Then create random weights between -1 and 1 for each input.,Remember the perceptron algorithm:,The activation function will output:,The training function guesses the outcome based on the activate function.,Every time the guess is wrong, the perceptron should adjust the weights.,After many guesses and adjustments, the weights will be correct.,After each guess, the perceptron calculates how wrong the guess was.,If the guess is wrong, the perceptron adjusts the bias and the weights
+so that the guess will be a little bit more correct the next time.,This type of learning is called ,.
+,After trying (a few thousand times) your perceptron will become quite good at guessing.","Create a ,Create a , the perceptron against the desired answers,Multiply each input with the perceptron's weights,Sum the results,Compute the outcome,1 if the sum is greater than 0,0 if the sum is less than 0","
+<script src=""myperceptron.js""></script>
+",
+Pattern Recognition,,"Pattern Classification,How to Program a Perceptron,Create a Simple Plotter,Create Random X Y Points,Create a Line Function,Compute Desired Answers,Display the Desired Answers,How to Train a Perceptron","Example,Example,Example,Example,Example","Imagine a strait line (a linear graph) in a space with scattered x y points.,How can you classify the points over and under the line?,A perceptron can be trained to recognize the points over the line,
+without knowing the formula for the line.,To learn more about how to program a perceptron, we will create a very simple JavaScript program
+that will:,Use the simple plotter object described in the ,.,Create as many xy points as wanted.,Let the x values be random, between 0 and maximum.,Let the y values be random, between 0 and maximum.,Display the points in the plotter:,Display the line in the plotter:,Compute the desired answers based on the line function:,y = x * 1.2 + 50.,The desired answer is 1 if y is over the line and 0 if y is under the line.,Store the desired answers in an array (desired[]).,For each point, if desired[i] = 1 display a blue point,
+else display a black point.,In the next chapters, you will learn more about how to Train the Perceptron",,,
+Vectors,,"Vector Notation,Vectors in Geometry,Motion,Vector Addition,Vector Subtraction,Scalar Operations,Force,Velocity",,"Vectors can be written in many ways. The most common are:,or:,Vectors are the building blocks of ,In geometry, a vector can describe a movement from one point to another.,The vector [3, 2] says go 3 right and 2 up.,The sum of two vectors (,) is found by moving the vector , until the tail meets the head of vector ,.
+(This does not change vector b).,Then, the line from the tail of , to the head of , is the vector ,:,
+,Vector , is the opposite of ,.,This means that vector a and vector -a has the same magnitude in opposite directions:,
+,Vectors can be modified by adding, subtracting, or multiplying a scalar (number) from all the vector values:
+,a = [1 1 1],a + 1 = [2 2 2],[1 2 3] + 1 = [2 3 4],Vector multiplications has much of the same properties as normal multiplication:,[2 2 2] * 3 = [6 6 6],[6 6 6] / 3 = [2 2 2], is a Vector.,Force is a vector with a , and a ,., is a Vector.,Velocity is a vector with a , and a ,.",,,
+Linear Algebra,,"Vectors and Matrices,Scalars,Vectors,Matrices,Tensors",Example," and , are the languages of data.,With AI, most things are done with vectors and matrices.,With vectors and matrices, you can ,.,In linear algebra, a scalar is a ,.,In JavaScript it can be written like a constant or a variable:,In linear algebra, a vector is an ,.,In JavaScript, it can be written as an array:,An array can have multiple dimensions, but a vector is a ,.,A vector can be written in many ways. The most common are:,or:,In linear algebra, a matrix is a ,.,In JavaScript, a matrix is an array with 2 indices (indexes).,A Tensor is an ,.,In JavaScript, a matrix is an array with multiple indices (indexes).","AI make heavy use of ,AI make heavy use of ,AI make heavy use of ,AI make heavy use of ",,
+Linear Functions,,"Linear Functions,Linear Equations,Non-Linear Equations,Linear Regression,Linear Least Squares",,"A , is special relationship where each input has an output.,A function is often written as , where x is the input:,Results from f(x) = x,Results from f(x) = 2x,A Linear Equation is an equation for a straight line:,A Linear Equation can NOT contain exponents or square roots:,A Linear regression tries to model the relationship between two variables by fitting a linear graph to data.,One variable (x) is considered to be data, and the other (y) is considered to be dependent.,For example, a Linear Regression can be a model to relate the price of houses to their size.,Linear algebra is used to solve Linear Equations.,Linear Least Squares (LLS) is a set of formulations for solving statistical problems
+involved in Linear Regression.","Linear means ,A , is a ,A , represents a ,y = x,y = x*2,y = x*2 + 7,y = ax + b,5x = 3y,y/2 = 6,y = x**2,y = Math.sqrt(x),y = Math.sin(x)",,
+AI Mathematics,,"AI = Mathematics,Linear Functions,Linear Algebra,Probability,Statistics",,"Behind every AI success there is ,.,All AI models are constructed using solutions and ideas from math.,The , of AI is to create , for understanding ,.
+
+,If you want an AI career:
+,You should focus on the mathematic concepts described here.,Linear algebra is the bedrock of data science.,Knowing linear algebra boosts your ability to understand
+data science algorithms., is how likely something is to occur,
+or how likely something is true.,I have 6 balls in a bag: 3 reds, 2 are green, and 1 is blue.,Blindfolded. What is the probability that I pick a green one?,Number of , it can happen are 2 (there are 2 greens).,Number of , are 6 (there are 6 balls).,The probability is 2 out of 6: 2/6 = 0.333333...,Probability = Ways / Outcomes,Statistics is about how to collect, analyze, interpret, and present data.,Statistics works with questions like:
+","Linear Functions,Linear Graphics,Linear Algebra,Probability,Statistics,Data Scientist,Machine Learning Engineer,Robot Scientist,Data Analyst,Natural Language Expert,Deep Learning Scientist,Linear means ,A , is a ,A , represents a ,Graphics plays an important role in ,Graphics plays an important role in ,Graphics plays an important role in ,What is the most ,What is the most ,What is the most ",,
+AI in the Browser,,"Math in the Browser,Machine Learning in the Browser,Plotting in the Browser,Plotting Equations,Plotting Values",," is an extensive math library for JavaScript and Node.js.,Math.js is powerful and easy to use.
+It comes with a large set of built-in functions,
+a flexible expression parser, and solutions to work with many data types like
+numbers, big numbers, complex numbers, fractions, units, arrays, and matrices., is a GPU accelerated neural networks in JavaScript for Browsers and Node.js.,Brain.js is simple to use. You do not need to know neural networks in details to work with Brain.js.,Brain.js provides multiple neural network implementations as different neural nets can be trained to do different things well.,
+,Here is a list of some JavaScript libraries to use for both Artificial Intelligence graphs and other charts:,
+,
+,
+,
+,
+,
+,
+","AI in JavaScript,AI for Everyone on the Web,AI on more Platforms,AI for a wider Audience",,
+AI in JavaScript,,"AI and JavaScript,Is JavaScript Good for AI?,WebGL API,Neural Networks with JavaScript",,"Artificial Intelligence has changed the science of image processing, computer vision, and natural language applications.,Thanks to new AI libraries, JavaScript developers can now build machine learning and deep learning applications
+without Python or R. This way JavaScript can help developers to bring AI to the browser and to the web.,With AI, JavaScript developers can make more intelligent web applications.,Most AI applications these days use R or Python.,But JavaScript has a great future as an AI language,
+and it even has some advantages:, is a JavaScript API for rendering 2d and 3D graphics in any browser.,WebGL can run on both integrated and standalone graphic cards in any PC.,WebGL brings 3D graphics to the web browser. Major browser vendors Apple (Safari), Google (Chrome),
+Microsoft (Edge), and Mozilla (Firefox) are members of the WebGL Working Group.,WebGL 1.0 was released in March 2011.,WebGL 2.0 was released in January 2017.,Artificial Intelligence can be math-heavy. The nature of neural networks is highly technical,
+and the jargon that goes along with it tends to scare people away.,
+This is where JavaScript can come to help. We need easy to understand software APIs to simplifying the process
+of creating and training neural networks.","JavaScript is better known. All developers can use it.,Security is built in. JavaScript cannot access your files.,JavaScript is faster than Python.,Modern JavaScript compiles into machine code.,Modern JavaScript can use hardware acceleration.",,
+AI Programming,,"LISP,R,Python,C++,Java,SQL",," is the second oldest programming language in the world (1958), only one year younger than Fortran (1957).,The term , was made up by , who invented LISP.,LISP was founded on the theory of , (a function appears in its own definition).,Recursive Functions can be written as self-modifying functions, and this is very suitable for AI programs where 
+""self-learning"" is an important part of the program.,
+
+
+, is a programming language for , and , computing.,R is supported by the ,.,R comes with a wide set of statistical and graphical techniques for:, is a general-purpose coding language. It can be used for all types of programming and software development.,Python is typically used for server development, like building web apps for web servers.,Python is also typically used in ,.,An advantage for using Python is that it comes with some very suitable libraries:, holds the title: ""The worlds fastest programming language"".,Because of the speed, C++ is a preferred language when programming Computer Games.,It provides faster execution and has less response time which is applied in search engines and development of computer games.
+,Google uses C++ in AI programs for SEO (Search Engine Optimization)., is a super-fast library with support for supervised learning algorithms, linear regression, neural networks, and clustering., is a super-fast machine learning library written for C++., is another general-purpose coding language that can be used for all types of software development.,For AI, Java is mostly used to create machine learning solutions, search algorithms, and neural networks., (Structured Query Language) is the most popular language for managing data.,Knowledge of SQL databases, tables and queries helps data scientists when dealing with data.,SQL is very convenient for storing, manipulating, and retrieving data in databases.","LISP,R,Python,C++,Java,JavaScript,SQL,Linear Modeling,Nonlinear Modeling,Statistical Tests,Time-series Analysis,Classification,Clustering,NumPy (Library for working with Arrays),SciPy (Library for Statistical Science),Matplotlib (Graph Plotting Library),NLTK (Natural Language Toolkit),TensorFlow (Machine Learning)",,
+Theory of Mind,,"What is Mind?,Cognitive Science,The Mental Model,Can AI Be Human?,Reactive Machines,Machine Learning,Theory of Mind,Self-Awareness",,"There is , proven definition of ,.,Mind can be defined as an instantiation of intelligence.,Mind can be defined as a collection of knowledge.,Is thinking, feeling, and meaning mind or know-how?,Is the Mind just a big computer?,Cognitive science is the study of ,.,A cognitive scientist studies intelligence and behavior.,Cognitive science focus on how brain cells process and transform information.,Cognitive Science also tries to learn how to develop intelligent computer algorithms.,A mental model is an internal picture of the external reality.,Scientists expects that a model plays a major role in reasoning and decision-making (cognition).,Kenneth Craik suggested in 1943 that the mind constructs ""small-scale models"" of reality when trying to anticipate events.,Scientists are trying to discover what separates human intelligence from artificial intelligence.,What is the status? What is the future?,Early AI systems were reactive. Reactive systems cannot use past experience.,In 1997 a reactive machine (""IBM Deep Blue"") beat the world champion in chess.,""Deep Blue"" could not think. But it was stored with information about the chess board,
+and the rules for moving chess pieces.,""Deep Blue"" won because it was programmed to calculate every move to win.,Today, AI systems can use some information from the past.,One example is self-driven cars. They can combine pre-programmed information with
+information they collect while they learn how to drive., is a term from psychology about an individual's capacity for empathy
+and understanding of others.,This is an awareness of others being like yourself, with individual needs and intentions.,One of the abilities language users have, is to communicate about things 
+that are not concrete, like needs, ideas, or concepts.,,
+British psychologist and professor at the University of Cambridge,
+argues (1999) that ""Theory of Mind"" must have preceded languages,
+based on knowledge about early human activities:,In psychology, ""Theory of Mind"" means that people have thoughts, feelings and emotions
+that affect their behavior.,Future AI systems must learn to understand that everyone (both people and AI objects)
+have thoughts and feelings.,Future AI systems must know how to adjust their behavior to be able to walk among us.,The last step, before AI can be human, is machine consciousness.,We can not construct this software before we know much more about the human brain,
+memory, and intelligence.","Thoughts,Feelings,Emotions,Self Awareness,Empathy,Year 2000: ,Year 2015: ,Year 2030: ,Year 2050: ,Teaching,Building Shared Goals,Building Shared Plans,Intentional Communication,Intentional Sharing of Topic,Intentional Sharing of Focus,Intentional Persuasion,Intentional Pretending,Intentional Deception",,
+AI Examples,,"Artificial Music Intelligence,Bach, Larson, or EMI?,Artificial Health Intelligence,Project Baseline,FDA Statement",,"Can an algorithm compose better music than a human?,David Cope is a former professor of music at the University of Santa Cruz (California).
+
+,For over 30 years, David Cope has been developing Emmy or EMI (Experimental Musical Intelligence),
+an algorithm to compose music in the style of famous composers.,In a test performed by professor Douglas Hofstadter of the University of 
+Oregon,
+a pianist performed three musical pieces in the style of Bach:
+,Dr. Larson was hurt when the audience concluded that his piece was written by EMI.,He felt better when the listeners decided that the piece composed by EMI was a genuine Bach.,Source: ,Machine learning is a new  technology that can provide better drug discovery,
+shorter development time, and lower drug costs.,Machine Learning enables healthcare to use ""big data"" for making better medical or clinical decisions.,
+is an initiative to make it easy for everyone to contribute to the map of human health
+and to participate in clinical research.,In Project Baseline, researchers, clinicians, engineers, designers, advocates, and volunteers,
+can collaborate building the next generation of healthcare tools and services.,Statement from FDA Commissioner Scott Gottlieb, M.D. on steps toward a new,
+tailored review framework for artificial intelligence-based medical devices:","Self Driving Cars,E-Payment,Google Maps,Text Autocorrect,Automated Translation,Chatbots,Social Media,Face Detection,Search Algorithms,Robots,Automated Investment,NLP - Natural Language Processing,Flying Drones,Dr. Watson,Apple Siri,Microsoft Cortana,Amazon Alexa,One written by Bach,One written by Steve Larson,One written by EMI",,
+Job Replacement,,"Bookkeeping,Sales And Customers,Production Workers,Read and Write,Bartenders,Postal Services,Airplane Pilots,Drivers. Transportation Jobs,Robots could take 20 million jobs by 2030",,"
+99% of all Tax Preparers,
+99% of all Account Clerks,
+98% of all Bookkeeping Clerks,
+98% of all Credit Analysts,
+,Carl Benedikt Frey and Michael A. Osborne were right.,Today, bookkeeping is automated.,For these jobs, computers are much more affordable than people.,
+99% of all Telemarketers,
+97% of all Cashiers,
+94% of all Door-to-Door Salesmen,
+92% of all Insurance Sales Agents,
+85% of all Sales Representatives,
+58% of all Financial Advisors,
+55% of all Customer Service,
+54% of all Sales Agents,
+,They were right.,Web shopping is taking over.,Conversion rates for telephone sales are not very attractive.,
+98% of all Packaging Machine Operators,
+95% of all Print Binding and Finishing Workers,
+93% of all Industrial Truck Operators,
+92% of all Production Workers,
+87% of all Food Preparation Workers,
+,Assembly line robots has been around for 50 years.,Today, smart robots can be programmed by anyone to do anything.,Robots are replacing jobs at Amazon:,
+,
+,
+99% of all Data Entry Keyers,
+84% of all Proofreaders,
+65% of all Librarians,
+54% of all Film and Video Editors,
+,Proofreading software is everywhere. From spell check to 
+,.
+,
+81% of all Fast Food Cooks,
+77% of all Bartenders,
+77% of all Dishwashers,
+,Coffee robots can replace many baristas.,
+,
+,Robotic Bartenders on Quantum of the Seas - Royal Caribbean:,
+,
+,
+95% of all Postal Service Clerks,
+79% of all Mail Sorters,
+75% of all Postmasters,
+68% of all Mail Carriers,
+,
+55% of all Pilots
+,The military uses drones today.,Tomorrow AI will replace the pilots of cargo planes.,Passenger planes will have only one pilot. The second pilot will be an autopilot.,
+69% of all Taxi Drivers,
+69% of all Truck Drivers,
+67% of all Bus Drivers,
+,Self-driving cars is already a reality.,The potential of jobs lost is staggering.,Very soon AI could replace millions of transportation jobs.,According to a study from ,
+(2019), there could be 14 million robots working in China by 2030.,
+,
+",,,
+Robots,,"Industrial Robots,AI Robots,Can AI Robots Interact Socially?",,"Industrial robots have been around for more than 50 years.,The first robot , was applied for in 1954 and granted in 1961.,In 1969, Victor Scheinman invented the , (Stanford 
+University),
+and in 1972 he designed the , for the MIT Artificial Intelligence Lab.,These ""robots"" are not considered intelligent.
+They are electrical machines designed to permit 6-axis arm movement.
+But the new design allowed for a machine to follow a programmed path and opened up for 
+""robot jobs"" like car painting, welding and assembly.,The pioneering robot company Unimation (with support from General Motors)
+took the Scheinman's design to the marked as the , (Programmable Universal Machine for Assembly).,.,Most modern robots are said to be , or semi-autonomous because
+they do not require much human input after they have been programmed.,A robot can easily be programmed to do a lot of different things (like on an assembly line),
+but it will never change what it is doing. It will continue to the same job until you turn it off.,Robotic Bartenders on Quantum of the Seas - Royal Caribbean:,
+,
+,Robots and Artificial Intelligence are two different things.,Robot technology is not a subset of Artificial Intelligence.,A robot is a physical thing. After 50 years of development, almost anything is programmable,
+your radio, your watch, your phone, and even robots.,Artificial Intelligence can be built into robots,
+and AI is a very exciting field in future robotics.,Hanson Robotics' Sophia personifies some dreams for the future of AI.,Sophia is a combination of science, engineering, and artistry.
+She is a human-crafted science fiction character depicting the future of AI and robotics.,Yes, AI Robots can learn to interact socially.,Kismet (a MIT robot) is programmed to understand body language and voice inflection.
+The creators study how human and babies interact, based on tone of speech and visual cue.,Kismet could be the foundation of a human-like learning system.","Industrial Robots,Artificial Intelligence Robots",,
+The History of Computing,,"The First Abacus,Abacus 2.0,Analog Computers,Digital Computers,Electronic Computers,Second Generation Computers,Third Generation Computers,Computer Speed,When Did it Start? Where Will it End?,Smarter Than Humans?",,"The , was developed to , to perform calculations.,As stated in the previous chapter, we believe that the Babylonians invented complex counting.,The period 2700–2300 BC probably saw the first appearance of an abacus,
+a table of successive columns which defined the orders of a , number system.,The , used 10 digits Roman numbers to , to perform calculations:,Image: 1911 Encyclopedia Britannica (public domain).,The Romans developed the Roman Abacus, a portable, base-10 version of earlier abacuses used by the Babylonians.,This was the worlds first handheld computer. Used by Roman engineers, merchants and tax collectors., (Charles Babbage 1822) was a mechanical machine
+designed to , to calculate complex mathematical functions., (Charles Babbage 1833) was a mechanical machine
+designed with modern computer elements like arithmetic, logic, and memory.,Both these ""computers"" used 10 digit (decimal) mechanical cogwheels to
+perform mathematical calculations:,
+,
+,(Charles Babbage's Analytical Engine. Science Museum. London),Digital Computers use 0/1 switches to perform calculations.
+They operate on , values like 11100110 in contrast to , values like 230.,Try It Yourself:,The first Electric Digital Computer was designed and built by Konrad Zuse in Germany (1941).,It used 2600 electrical relays as 0/1 switches. The clock speed was about 5 Hz.,
+,
+,Replica of the Zuse Z3. Deutsches Museum. Munich.
+
+
+, (1945-1950)
+used vacuum tubes as binary switches.,Vacuum tubes are much faster than electrical relays.,The clock speed of these computers was between 500 KHz and 1 Mhz., (1950-1960) used transistors as binary 0/1 switches.,Transistors are much faster than vacuum tubes., (1960) used integrated circuits as binary switches.,Integrated circuits are much faster than transistors.,The first electrical computer could do 5 instructions per second.,The first electronic computer did 5000 instructions per second.,The first PC did 5 million instructions per second.,AMD was the first PC to reach 1 billion instructions per second.,Today, IPhone 12 can do 11 billion instructions per second.,From the history above you can extract:,If we believe in ,:,In 2020, computers have the capacity of a mouse brain.,In 2030, computers might have the capacity of a human brain:,Source: ","Abacus,Analog Computers,Digital Computers,Electronic Computers,Computer Speed,Computers were designed to do calculations,Charles Babbage created the first mechanical computer,The first digital computers used electromechanical switches,Vacuum tubes are much faster than electromechanical switches,Transistors are much faster than vacuum tubes,Integrated circuits are much faster than transistors,Tomorrow's computes will be faster than the human brain?",,
+The History of Numbers,,"AI is About Numbers,AI is About Counting,Two Babylonian Scientists,Babylonian Numbers (Base 60),Dozenal (base 12),How to Count Dozenal,Sexagesimal (base 60),Roman Numbers (Base 10),Digital Numbers (Base 2),Man vs. Computer",,"Artificial Intelligence is all about ,.,Numbers are easy to understand: 1,2,3,4,5 ... 11,12,13,14,15.,Studies of animals indicates that even animals can understand some numbers:
+,The need for numbers in the modern world is absolute. We cannot live without numbers:,The concept of numbers leads to the concept of counting.,Imagine prehistoric thinking:,Artificial Intelligence is a result of the human need for calculations.,Counting is easy to understand: 2 + 2 = 4.,Studies of animals indicates that animals can only understand very simple counting.,How do Homo Sapiens deal with calculations?,Complex calculations are done by computers.,About 6000 Years ago ...,Two Babylonian scientists were talking:,We believe that the Babylonians started the development of complex counting.,The Babylonian number system has 60 different digits. It is a , system:,
+1,5 means 1 times 60, plus 5 (65),
+3,30 means 3 times 60, plus 30 (180 + 30 = 210),
+,The Babylonians had a place-value system, where the digits to
+in the left represented full values, much like our decimal system.,The reason why the Babylonians used 60 as the base,
+was (we like to believe) that 60 is divisible with most numbers:
+1,2,3,4,5,6,10,12,15,20,30, and 60.,The downside was that the user had to remember
+60 different digits. But the system was smart. A lot of it is still in use today:,The origin of the , (base 60) has been lost in history.,But surely, it looks like it has been used in parallel with the , since ancient times.,The dozenal system (base 12):,12 is very versatile. It can be divided by 1,2,3,4,6,and 12.,Each of your fingers have 3 joints:,The sexagesimal system (base 60):,60 is very versatile. It can be divided by 1,2,3,4,5,6,10,12,15,30, and 60.,Roman numbers originated in Rome and was used in Europe into the Middle Ages.,The Romans used a , system.
+Possibly because they used their 10 fingers to count.,Today, most of the world use a , number system:,
+Western numbers, Chinese numbers, Brahmi numbers, Greek numbers, Hebrew numbers...,
+5 means 5,
+50 means 5 times 10,
+500 means 5 times 100,
+,
+57 means 5 times 10, plus 7,
+75 means 7 times 10, plus 5,
+,Humans can count with base 10 numbers, computers can not.,Electricity cannot count. Electricity can only be On and Off.
+,Computers use Electricity or Magnetism to represent On and Off.,Computers use , like 11100110 (in contrast to , like 230).,Digital numbers (11100110) are also called ,.,You will learn more about digital computers in the next chapter.,Computers can handle an unlimited amount of numbers.,Humans can not.","2 Wives,8 Sons,5 Eggs,100 Dollar,Pi = 3.14,365 Days,25 Years,20% Tax,100 Miles,How to count apples?,How to weigh corn?,How to pay?,How far is the ocean?,There are 12 in a dozen,There are 12 hours in a day,There are 12 hours in a night,There are 12 months in a year,1 full hand = 12,2 full hands = 24,3 full hands = 36,4 full hands = 48,5 full hands = 60,There are 60 seconds in one minute,There are 60 minutes in one hour",,
+The History of Languages,,"What is a Language?,Spoken Languages,Cognitive Development,Human Languages,Computer Languages,Written Languages","Example,Example","Apes and Whales communicate with each other. 
+,Birds and Bees communicate with each other.,But only humans have developed a real Language.,No other species can express ideas using sentences constructed by a
+set of words (with verbs and nouns).,This skill is remarkable. And what is even more remarkable: Even children master this skill.,We are not sure of how old the spoken language is.
+The topic is difficult to study because of the lack of evidence.,We don't know how it started. But we have a clue.,The great African apes, Pan and Gorilla, are our closest living relatives.
+Why are they called ""Apes""? Because they ape. Apes mime to get their message across.,It is assumed that the evolution of languages must have been a long process.
+Our ancestors might have started speaking a million years ago,
+but with fewer words, more miming, and no grammar.,According to ,, there are six aspects of language development:,Human languages contain a limited set of ,put together in ,:,Computers are programmed with a limited set of ,
+put together in computer ,:,Egyptian and Sumerian are the earliest known written languages.,(The oldest written language in use today, is Chinese)","Theory of Mind,Understanding Vocal Signals,Understanding Imitation,Understanding Numbers,Understanding Intentional Communication,Understanding Non-linguistic Representations",,
+Human Intelligence,,"Words and Numbers,Languages,Abstract Thinking,What is Intelligence?,Is the Human Brain Superior?",,"Using words, was a big step in the development of human intelligence:,""Elephant"" is more informative than ""Big Animal"".,Understanding numbers, was also a big step:,""5"" or ""50"" is more informative than ""few"" or ""many"".,""There is a lion behind the big oak"" is more informative than shouting ""Danger!"".,Having a language is probably a key characteristic that distinguishes us from animals.,
+,Abstract thinking is thinking about things that are not concrete,
+like freedom, or ideas, or concepts.,Many everyday behaviors use abstract thinking:,There is , proven definition of ,.,Intelligence can be defined as:,Intelligence can be defined as a collection of knowledge:,The challenge of AI is to understand what intelligence is, and how intelligence works.,What is the difference between human knowledge and artificial intelligence?,Intelligence might be a type of algorithms in our brains or in our genes.,Later in this tutorial you will learn more about intelligent algorithms.,Can animals, birds, insects, or plants think?,Humans have bigger brains than animals.,Big dogs have bigger brains than small dogs. Are big dogs smarter?,Birds have very small brains, but they know they should not make children in the autumn,
+and they know when to fly to the south.,Bees have even smaller brains, but they know how to communicate 
+about where to find nectar.,Plants have no brain, but they know how to reproduce, and how to prepare for the winter.","Being able to understand a language,Being able to understand numbers,Being able to understand abstract thinking,Using Concepts,Using Theories,Using Metaphors,Using Analogies,Using Imagination,Being able to understand abstract thinking,Being able to understand a language,Being able to understand numbers",,
+Artificial Intelligence,,"What is Artificial Intelligence?,Interesting Questions,Why AI Now?,Intelligent Decision Formula,AI Films",,"Artificial Intelligence suggest that machines can mimic humans in:,Artificial Intelligence is also called Machine Intelligence and Computer Intelligence.,Artificial intelligence is a system that can solve a problem optimally.
+This means that the system can figure out alone what is the best action to take.,AI is intelligence demonstrated by machines,
+unlike natural intelligence displayed by humans and animals,
+which involves consciousness and emotionality.,AI refers to the simulation of human intelligence in machines
+that are programmed to think like humans and mimic their actions.,AI is the ability of a digital computer or computer-controlled
+robot to perform tasks commonly associated with intelligent beings.
+The term is frequently applied to the project of developing systems endowed with the intellectual processes
+characteristic of humans, such as the ability to reason, discover meaning, generalize,
+or learn from past experience.,Studying AI raises many interesting questions:,Machines can understand verbal commands, recognize faces, drive cars, and play games better than us.,One of the greatest innovators in the field of machine learning was ,, widely recognized as the 
+""Father of Artificial Intelligence"".,In the mid 1950s, McCarthy coined the term ""Artificial Intelligence""
+and defined it as "","".,The algorithms has been here since then. Why is AI more interesting now?,The answer is:
+,Another strong force is the major investments from big companies
+(Google, Microsoft, Facebook, YouTube) because their datasets became much too big to handle traditionally.,The fact that computers can do this millions of times, 
+has proven that computers can take very intelligent decisions.","Talking,Thinking,Learning,Planning,Understanding,Computing power has not been strong enough,Computer storage has not been large enough,Big data has not been available,Fast Internet has not been available,Save the result of all actions,Simulate all possible outcomes,Compare the new action with the old ones,Check if the new action is good or bad,Choose the new action if it is less bad,Do it all over again",,

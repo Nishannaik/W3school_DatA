@@ -1,0 +1,257 @@
+H1_leftside_heading,H1_rightside_heading,H2,H3,All_para,li,div,div_2
+Icons Tutorial,,"How To Add Icons,Font Awesome 5 Icons,Font Awesome 4 Icons,Bootstrap 3 Icons,Google Icons","Example,Example,Example,Example","To insert an icon, add the name of the icon class to any inline HTML element.,The , and , elements are widely used to add 
+icons.,All the icons in the icon libraries below, are scalable vector icons that can 
+be customized with CSS (size, color, shadow, etc.),To use the Free Font Awesome 5 icons, go to , and sign in to get a code to use in your web pages.,Read more about how to get started with Font Awesome in our
+, chapter., No downloading or installation is required!,To use the Font Awesome 4 icons, add the following line inside the , section of your HTML page:, No downloading or installation is required!,To use the Bootstrap 3 glyphicons, add the following line inside the , section of your HTML page:, No downloading or installation is required!,To use the Google icons, add the following line inside the , section of your HTML page:, No downloading or installation is required!",,"
+  <!DOCTYPE html>,<html>,<head>,
+     <script src=""https://kit.fontawesome.com/,.js"" crossorigin=""anonymous""></script>,
+   <!--Get your code at fontawesome.com-->,</head>,<body>,<i class=""fas fa-band-aid""></i>,<i 
+   class=""fas fa-cat""></i>,<i class=""fas fa-dragon""></i>,<i class=""far fa-clock""></i>,
+   <i class=""fas fa-clock""></i>,
+  </body>,</html>
+,
+  <!DOCTYPE html>,<html>,<head>,
+     <link rel=""stylesheet""  href=""https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"">,
+  </head>,<body>,<i class=""fa fa-cloud""></i>,<i  class=""fa fa-heart""></i>,<i class=""fa fa-car""></i>,<i class=""fa fa-file""></i>,
+  <i class=""fa fa-bars""></i>,
+  </body>,</html>
+,
+  <!DOCTYPE html>,<html>,<head>,
+     <link rel=""stylesheet"" href=""https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"">,</head>,<body>,
+  ,<i class=""glyphicon glyphicon-cloud""></i>,<i class=""glyphicon  glyphicon-remove""></i>,<i class=""glyphicon glyphicon-user""></i>,<i  class=""glyphicon glyphicon-envelope""></i>,<i class=""glyphicon glyphicon-thumbs-up""></i>,
+  </body>,</html>
+,
+  <!DOCTYPE html>,<html>,<head>,
+     <link rel=""stylesheet"" href=""https://fonts.googleapis.com/icon?family=Material+Icons"">,</head>,<body>,
+  ,<i class=""material-icons"">cloud</i>,<i  class=""material-icons"">favorite</i>,<i  class=""material-icons"">attachment</i>,<i  class=""material-icons"">computer</i>,<i  class=""material-icons"">traffic</i>,</body>,</html>
+",
+Font Awesome 5 ,Editor Icons,Editor Icons,,The table below shows the Free Font Awesome 5 Editor icons:,,,
+Font Awesome 5 ,Design Icons,Design Icons,,The table below shows the Free Font Awesome 5 Design icons:,,,
+Font Awesome 5 ,Energy Icons,Energy Icons,,The table below shows the Free Font Awesome 5 Energy icons:,,,
+Font Awesome 5 ,Food Icons,Food Icons,,The table below shows the Free Font Awesome 5 Food icons:,,,
+Font Awesome 5 ,Education Icons,Education Icons,,The table below shows the Free Font Awesome 5 Education icons:,,,
+Font Awesome 5 ,Date & Time Icons,Date & Time Icons,,The table below shows the Free Font Awesome 5 Date & Time icons:,,,
+Font Awesome 5 ,Finance Icons,Finance Icons,,The table below shows the Free Font Awesome 5 Finance icons:,,,
+Font Awesome 5 ,Fitness Icons,Fitness Icons,,The table below shows the Free Font Awesome 5 Fitness icons:,,,
+Font Awesome 5 ,Files Icons,Files Icons,,The table below shows the Free Font Awesome 5 Files icons:,,,
+Font Awesome 5 ,Emoji Icons,Emoji Icons,,The table below shows the Free Font Awesome 5 Emoji icons:,,,
+Font Awesome 5 ,Currency Icons,Currency Icons,,The table below shows the Free Font Awesome 5 Currency icons:,,,
+Font Awesome 5 ,Construction Icons,Construction Icons,,The table below shows the Free Font Awesome 5 Construction icons:,,,
+Font Awesome 5 ,Computer Icons,Computer Icons,,The table below shows the Free Font Awesome 5 Computer icons:,,,
+Font Awesome 5 ,Communication Icons,Communication Icons,,The table below shows the Free Font Awesome 5 Communication icons:,,,
+Font Awesome 5 ,Code Icons,Code Icons,,The table below shows the Free Font Awesome 5 Code icons:,,,
+Google ,Social Icons,Social Icons,,The table below shows all Google Social icons:,,,
+Google ,Places Icons,Places Icons,,The table below shows all Google Places icons:,,,
+Google ,Notification Icons,Notification Icons,,The table below shows all Google Notification icons:,,,
+Google ,Navigation Icons,Navigation Icons,,The table below shows all Google Navigation icons:,,,
+Google ,Maps Icons,Maps Icons,,The table below shows all Google Maps icons:,,,
+Google ,Image Icons,Image Icons,,Below is a list of all Google Image icons:,,,
+Google ,Hardware Icons,Hardware Icons,,Below is a list of all Google Hardware icons:,,,
+Google ,Toggle Icons,Toggle Icons,,The table below shows all Google Toggle icons:,,,
+Google ,File Icons,File Icons,,The table below shows all Google File icons:,,,
+Google ,Editor Icons,Editor Icons,,The table below shows all Google Editor icons:,,,
+Google ,Device Icons,Device Icons,,The table below shows all Google Device icons:,,,
+Google ,Content Icons,Content Icons,,The table below shows all Google Content icons:,,,
+Google ,Communication Icons,Communication Icons,,The table below shows all Google Communication icons:,,,
+Google ,AV Icons,AV Icons,,The table below shows all Google AV icons:,,,
+Google ,Alert Icons,Alert Icons,,The table below shows all Google Alert icons:,,,
+Google ,Action Icons,Action Icons,,The table below shows all Google Action icons:,,,
+"Google Icons ,Sizable Icons",Introduction,Basic Icons,"Example,Example","To use the Google icons, add the following line inside the , section of your HTML page:, No downloading or installation is required!,Add the , class to an inline element and insert the 
+icon's name:,Google icons are designed to be used with inline elements. The , and , 
+elements are widely used for icons., Material icons are 24px by default.,Also note that if you change the color of the icon's container, the color of 
+the icon 
+changes too. Same things goes for shadow, and anything else that gets inherited 
+using CSS. The exception is the CSS font-size property, which is always 24px, 
+unless something else is specified.,Although the material icons can be scaled to any size, the recommended 
+font-size is either 18, 24, 36 or 48px:",,"
+  <!DOCTYPE html>,<html>,<head>,
+     <link rel=""stylesheet"" href=""https://fonts.googleapis.com/icon?family=Material+Icons"">,</head>,<body>,
+  ,<i class=""material-icons"">cloud</i>,<i class=""material-icons""  style=""font-size:48px;"">cloud</i>,<i class=""material-icons""  style=""font-size:60px;color:red;"">cloud</i>,</body>,</html>
+,
+     <style>, { , , }, { , ,  } , { , , }, { , , },</style>,<i class=""material-icons md-18"">cloud</i>,<i class=""material-icons  md-24"">cloud</i>,<i class=""material-icons md-36"">cloud</i>,<i class=""material-icons  md-48"">cloud</i>",
+Bootstrap ,Glyphicons,Bootstrap 3 Icons,,"Below is a list of all Bootstrap 3 Glyphicons., Glyphicons are not supported in Bootstrap 4.,For more information about Bootstrap 3 and Glyphicons, visit our ",,,
+Font Awesome ,Web Application Icons,Web Application Icons,,The table below shows all Font Awesome Web Application icons:,,,
+Font Awesome ,Video Player Icons,Video Player Icons,,The table below shows all Font Awesome Video Player icons:,,,
+Font Awesome ,Transportation Icons,Transportation Icons,,The table below shows all Font Awesome Transportation icons:,,,
+Font Awesome ,Text Icons,Text Icons,,The table below shows all Font Awesome Text icons:,,,
+Font Awesome ,Spinner Icons,Spinner Icons,,The table below shows all Font Awesome Spinner icons:,,,
+Font Awesome ,Payment Icons,Payment Icons,,The table below shows all Font Awesome Payment icons:,,,
+Font Awesome ,Medical Icons,Medical Icons,,The table below shows all Font Awesome Medical icons:,,,
+Font Awesome ,Hand Icons,Hand Icons,,The table below shows all Font Awesome Hand icons:,,,
+Font Awesome ,Gender Icons,Gender Icons,,The table below shows all Font Awesome Gender icons:,,,
+Font Awesome ,Form Icons,Form Icons,,The table below shows all Font Awesome Form icons:,,,
+Font Awesome ,File Type Icons,File Type Icons,,The table below shows all Font Awesome File Type icons:,,,
+Font Awesome ,Directional Icons,Directional Icons,,The table below shows all Font Awesome Directional icons:,,,
+Font Awesome ,Currency Icons,Currency Icons,,The table below shows all Font Awesome Currency icons:,,,
+Font Awesome ,Chart Icons,Chart Icons,,The table below shows all Font Awesome Chart icons:,,,
+Font Awesome ,Brand Icons,Brand Icons,,The table below shows all Font Awesome Brand icons:,,,
+"Font Awesome ,Larger Icons,List Icons,Bordered and Pulled Icons,Animated Icons,Rotated and Flipped Icons,Stacked Icons,Fixed Width Icons,Bootstrap",Introduction,Basic Icons,"Example,Example,Example,Example,Example,Example,Example,Example","To use the Font Awesome icons, add the following line inside the , section of your HTML page:, No downloading or installation is required!,You place Font Awesome icons by using the prefix , and the icon's name.,Font Awesome is designed to be used with inline elements. The , and , 
+elements are widely used for icons.,Also note that if you change the font-size or color of the icon's container, the icon 
+changes. Same things goes for shadow, and anything else that gets 
+inherited using CSS.,The , (33% increase), ,, ,, 
+,, or , classes are used to increase the icon sizes relative to their container., If your icons are getting chopped off on top and bottom, increase the line-height.,The , and , classes are used to replace default bullets in unordered lists.,The ,, , or , 
+classes are used for pull quotes or article icons.,The , class gets any icon to rotate, and the , 
+class gets any icon to rotate with 8 steps., IE8 and IE9 do not support CSS3 animations.,The , and , classes are used to rotate and flip icons.,To stack multiple icons, use the , class on the parent, the 
+, class for the regularly sized icon, and , for the larger icon.,The , class can be used as an alternative icon color. 
+You can also add larger 
+icon classes to the parent to further control the sizing.,The , class is used to set icons at a fixed width. This class is useful when different icon 
+widths throw off alignment. Especially useful in Bootstrap's navlists and list groups.,Font Awesome also works great with all the Bootstrap components.","List icons,List icons,List icons","
+  <!DOCTYPE html>,<html>,<head>,
+     <link rel=""stylesheet""  href=""https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"">,
+  </head>,<body>,<i class=""fa fa-car""></i>,
+    <i class=""fa fa-car"" style=""font-size:48px;""></i>,
+    <i class=""fa fa-car"" style=""font-size:60px;color:red;""></i>,
+  ,</body>,</html>,
+     <i class=""fa fa-car fa-lg""></i>,
+    <i class=""fa fa-car fa-2x""></i>,
+    <i class=""fa fa-car fa-3x""></i>,
+    <i class=""fa fa-car fa-4x""></i>,
+    <i class=""fa fa-car fa-5x""></i>
+,
+<ul class=""fa-ul"">,  <li><i class=""fa-li fa fa-check-square""></i>List 
+icons</li>, 
+<li><i class=""fa-li fa fa-spinner fa-spin""></i>List icons</li>,  <li><i class=""fa-li 
+fa fa-square""></i>List icons</li>,</ul>,
+<i class=""fa fa-quote-left fa-3x fa-pull-left fa-border""></i>,
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.,
+<i class=""fa fa-spinner fa-spin""></i>,<i class=""fa fa-circle-o-notch fa-spin""></i>,
+<i class=""fa fa-refresh fa-spin""></i>,<i class=""fa fa-cog fa-spin""></i>,<i 
+class=""fa fa-spinner fa-pulse""></i>
+,
+<i class=""fa fa-shield""></i>,<i class=""fa fa-shield fa-rotate-90""></i>,<i class=""fa fa-shield fa-rotate-180""></i>,<i class=""fa fa-shield fa-rotate-270""></i>,<i class=""fa fa-shield fa-flip-horizontal""></i>,<i class=""fa fa-shield fa-flip-vertical""></i>,
+ <span class=""fa-stack fa-lg"">,  <i class=""fa fa-circle-thin fa-stack-2x""></i>,  <i class=""fa fa-twitter fa-stack-1x""></i>,
+ </span>,
+ fa-twitter on fa-circle-thin<br>,<span class=""fa-stack fa-lg"">,  <i class=""fa fa-circle fa-stack-2x""></i>,  <i class=""fa fa-twitter fa-stack-1x fa-inverse""></i>,</span>,fa-twitter (inverse) on fa-circle<br>,
+ <span class=""fa-stack fa-lg"">,  <i class=""fa fa-camera fa-stack-1x""></i>,  <i class=""fa fa-ban fa-stack-2x text-danger"" style=""color:red;""></i>,</span>,fa-ban on fa-camera,
+  <div class=""list-group"">,  <a href=""#"" class=""list-group-item""><i  class=""fa fa-home fa-fw""></i> Home</a>,  <a href=""#""  class=""list-group-item""><i class=""fa fa-book fa-fw""></i> Library</a>,   <a href=""#"" class=""list-group-item""><i class=""fa fa-pencil fa-fw""></i>  Applications</a>,  <a href=""#"" class=""list-group-item""><i class=""fa  fa-cog fa-fw""></i> Settings</a>,</div> ",
+Font Awesome 5 ,Writing Icons,Writing  Icons,,The table below shows the Free Font Awesome 5 Writing icons:,,,
+Font Awesome 5 ,Winter Icons,Winter Icons,,The table below shows the Free Font Awesome 5 Winter icons:,,,
+Font Awesome 5 ,Weather Icons,Weather Icons,,The table below shows the Free Font Awesome 5 Weather icons:,,,
+Font Awesome 5 ,Vehicle Icons,Vehicle Icons,,The table below shows the Free Font Awesome 5 Vehicle icons:,,,
+Font Awesome 5 ,Users & People Icons,Users & People Icons,,The table below shows the Free Font Awesome 5 Users & People icons:,,,
+Font Awesome 5 ,Travel Icons,Travel Icons,,The table below shows the Free Font Awesome 5 Travel icons:,,,
+Font Awesome 5 ,Toggle Icons,Toggle Icons,,The table below shows the Free Font Awesome 5 Toggle icons:,,,
+Font Awesome 5 ,Tabletop Gaming Icons,Tabletop Gaming Icons,,The table below shows the Free Font Awesome 5 Tabletop Gaming icons:,,,
+Font Awesome 5 ,Summer Icons,Summer Icons,,The table below shows the Free Font Awesome 5 Summer icons:,,,
+Font Awesome 5 ,Status Icons,Status Icons,,The table below shows the Free Font Awesome 5 Status icons:,,,
+Font Awesome 5 ,Spring Icons,Spring Icons,,The table below shows the Free Font Awesome 5 Spring icons:,,,
+Font Awesome 5 ,Spinner Icons,Spinner Icons,,The table below shows the Free Font Awesome 5 Spinner icons:,,,
+Font Awesome 5 ,Sport Icons,Sport Icons,,The table below shows the Free Font Awesome 5 Sport icons:,,,
+Font Awesome 5 ,Social Icons,Social Icons,,The table below shows the Free Font Awesome 5 Social icons:,,,
+Font Awesome 5 ,Shopping Icons,Shopping Icons,,The table below shows the Free Font Awesome 5 Shopping icons:,,,
+Font Awesome 5 ,Shapes Icons,Shapes Icons,,The table below shows the Free Font Awesome 5 Shapes icons:,,,
+Font Awesome 5 ,Security Icons,Security Icons,,The table below shows the Free Font Awesome 5 Security icons:,,,
+Font Awesome 5 ,Science Fiction Icons,Science Fiction Icons,,The table below shows the Free Font Awesome 5 Science Fiction icons:,,,
+Font Awesome 5 ,Science Icons,Science Icons,,The table below shows the Free Font Awesome 5 Science icons:,,,
+Font Awesome 5 ,Religion Icons,Religion Icons,,The table below shows the Free Font Awesome 5 Religion icons:,,,
+Font Awesome 5 ,Political Icons,Political Icons,,The table below shows the Free Font Awesome 5 Political icons:,,,
+Font Awesome 5 ,Pharmacy Icons,Pharmacy Icons,,The table below shows the Free Font Awesome 5 Pharmacy icons:,,,
+Font Awesome 5 ,Payment & Shopping Icons,Payment & Shopping Icons,,The table below shows the Free Font Awesome 5 Payment & Shopping icons:,,,
+Font Awesome 5 ,Objects Icons,Objects Icons,,The table below shows the Free Font Awesome 5 Objects icons:,,,
+Font Awesome 5 ,Music Icons,Music Icons,,The table below shows the Free Font Awesome 5 Music icons:,,,
+Font Awesome 5 ,Moving Icons,Moving Icons,,The table below shows the Free Font Awesome 5 Moving icons:,,,
+Font Awesome 5 ,Medical Icons,Medical Icons,,The table below shows the Free Font Awesome 5 Medical icons:,,,
+Font Awesome 5 ,Mathematics Icons,Mathematics Icons,,The table below shows the Free Font Awesome 5 Mathematics icons:,,,
+Font Awesome 5 ,Marketing Icons,Marketing Icons,,The table below shows the Free Font Awesome 5 Marketing icons:,,,
+Font Awesome 5 ,Maritime Icons,Maritime Icons,,The table below shows the Free Font Awesome 5 Maritime icons:,,,
+Font Awesome 5 ,Map Icons,Map Icons,,The table below shows the Free Font Awesome 5 Map icons:,,,
+Font Awesome 5 ,Logistics Icons,Logistics Icons,,The table below shows the Free Font Awesome 5 Logistics icons:,,,
+Font Awesome 5 ,Interfaces Icons,Interfaces Icons,,The table below shows the Free Font Awesome 5 Interfaces icons:,,,
+Font Awesome 5 ,Image Icons,Image Icons,,The table below shows the Free Font Awesome 5 Image icons:,,,
+Font Awesome 5 ,Household Icons,Household Icons,,The table below shows the Free Font Awesome 5 Household icons:,,,
+Font Awesome 5 ,Hotel Icons,Hotel Icons,,The table below shows the Free Font Awesome 5 Hotel icons:,,,
+Font Awesome 5 ,Holiday Icons,Holiday Icons,,The table below shows the Free Font Awesome 5 Holiday icons:,,,
+Font Awesome 5 ,Health Icons,Health Icons,,The table below shows the Free Font Awesome 5 Health icons:,,,
+Font Awesome 5 ,Hand Icons,Hand Icons,,The table below shows the Free Font Awesome 5 Hand icons:,,,
+Font Awesome 5 ,Halloween Icons,Halloween Icons,,The table below shows the Free Font Awesome 5 Halloween icons:,,,
+Font Awesome 5 ,Gender Icons,Gender Icons,,The table below shows the Free Font Awesome 5 Gender icons:,,,
+Font Awesome 5 ,Games Icons,Games Icons,,The table below shows the Free Font Awesome 5 Games icons:,,,
+Font Awesome 5 ,Fruits and Vegetables Icons,Fruits and Vegetables Icons,,The table below shows the Free Font Awesome 5 Fruits and Vegetables icons:,,,
+Font Awesome 5 ,Clothing Icons,Clothing Icons,,The table below shows the Free Font Awesome 5 Clothing icons:,,,
+Font Awesome 5 ,Childhood Icons,Childhood Icons,,The table below shows the Free Font Awesome 5 Childhood icons:,,,
+Font Awesome 5 ,Chess Icons,Chess Icons,,The table below shows the Free Font Awesome 5 Chess icons:,,,
+Font Awesome 5 ,Chat Icons,Chat Icons,,The table below shows the Free Font Awesome 5 Chat icons:,,,
+Font Awesome 5 ,Charity Icons,Charity Icons,,The table below shows the Free Font Awesome 5 Charity icons:,,,
+Font Awesome 5 ,Camping Icons,Camping Icons,,The table below shows the Free Font Awesome 5 Camping icons:,,,
+Font Awesome 5 ,Business Icons,Business Icons,,The table below shows the Free Font Awesome 5 Business icons:,,,
+Font Awesome 5 ,Building Icons,Building Icons,,The table below shows the Free Font Awesome 5 Building icons:,,,
+Font Awesome 5 ,Brand Icons,Brand Icons,,The table below shows the Free Font Awesome 5 Brand icons:,,,
+Font Awesome 5 ,Beverage Icons,Beverage Icons,,The table below shows the Free Font Awesome 5 Beverage icons:,,,
+Font Awesome 5 ,Autumn Icons,Autumn Icons,,The table below shows the Free Font Awesome 5 Autumn icons:,,,
+Font Awesome 5 ,Automotive Icons,Automotive Icons,,The table below shows the Free Font Awesome 5 Automotive icons:,,,
+Font Awesome 5 ,Audio & Video Icons,Audio & Video Icons,,The table below shows the Free Font Awesome 5 Audio & Video icons:,,,
+Font Awesome 5 ,Arrow Icons,Arrow Icons,,The table below shows the Free Font Awesome 5 Arrow icons:,,,
+Font Awesome 5 ,Animal Icons,Animal Icons,,The table below shows the Free Font Awesome 5 Animal icons:,,,
+Font Awesome 5 ,Alert Icons,Alert Icons,,The table below shows the Free Font Awesome 5 Alert icons:,,,
+Font Awesome 5 ,Accessibility Icons,Accessibility Icons,,The table below shows the Free Font Awesome 5 Accessibility icons:,,,
+"Font Awesome ,Sizing Icons,List Icons,Animated Icons,Rotated and Flipped Icons,Stacked Icons,Fixed Width Icons,Bordered and Pulled Icons",5 Introduction,"Font Awesome 5,Get Your Own KIT CODE,New in Font Awesome 5","Example,Example,Example,Example,Example,Example,Example,Example,Example,Example","Font Awesome 5 has a PRO edition with 7842 icons, and a FREE edition with 1588 icons. This tutorial will concentrate on the FREE edition.,To use the Free Font Awesome 5 icons, you can choose to download the Font 
+Awesome library, or you can sign up for an account at Font Awesome, and get a 
+code (called KIT CODE) to use when you add Font Awesome to your web page.,We prefer the KIT CODE approach. Once you get the code you can start using 
+Font Awesome on your web pages by including only one line of HTML code:,Sign up and get your own code for free at:,New in Font Awesome 5 is the , prefix, 
+Font Awesome 4 uses ,.,The , in , 
+stands for ,, and some icons also have a , mode, 
+specified by using the prefix ,:,Font Awesome is designed to be used with inline elements. The , and , 
+elements are widely used for icons.,Also note that if you change the font-size or color of the icon's container, the icon 
+changes. Same things goes for shadow, and anything else that gets 
+inherited using CSS.,The
+,,
+,,
+,,
+,,
+,, 
+,, 
+,, 
+,, 
+,,
+,,
+,,
+or , classes are used to adjust the icon sizes relative to their container.,The , and , classes are used to replace default bullets in unordered lists.,The , class gets any icon to rotate, and the , 
+class gets any icon to rotate with 8 steps., IE8 and IE9 do not support CSS3 animations.,The , and , classes are used to rotate and flip icons.,To stack multiple icons, use the , class on the parent, the 
+, class for the regularly sized icon, and , for the larger icon.,The , class can be used as an alternative icon color. 
+You can also add larger 
+icon classes to the parent to further control the sizing.,Just like letters and other characters, icons can have different widths, and 
+if you need to vertically align icons like in a list or a menu, this can be a 
+problem.,The , class is used to set icons at a 
+fixed width.,The ,, , or , 
+classes are used for for pull quotes or article icons.",,"
+   <script src=""https://kit.fontawesome.com/,.js"" crossorigin=""anonymous""></script>,
+  <!DOCTYPE html>,<html>,<head>,
+     <script src=""https://kit.fontawesome.com/a076d05399.js"" crossorigin=""anonymous""></script>,</head>,<body>,<i class=""fas fa-clock""></i>,
+  ,</body>,</html>,
+    <i class=""fas fa-clock""></i>,
+    <i class=""far fa-clock""></i>,
+    <i class=""fas fa-clock"" style=""font-size:120px;color:#2196F3""></i>,
+    <i class=""far fa-clock"" style=""font-size:120px;color:#2196F3""></i>,
+     <i class=""fas fa-clock fa-xs""></i>,
+     <i class=""fas fa-clock fa-sm""></i>,<i class=""fas fa-clock fa-lg""></i>,
+    <i class=""fas fa-clock fa-2x""></i>,
+    <i class=""fas fa-clock fa-5x""></i>,
+    <i class=""fas fa-clock fa-10x""></i>,
+,
+   <ul class=""fa-ul"">,  <li><span class=""fa-li""><i class=""fas fa-check-square""></i></span>List 
+   Item</li>,  <li><span class=""fa-li""><i class=""fas fa-spinner fa-pulse""></i></span>List 
+   Item</li>,  <li><span class=""fa-li""><i class=""fas fa-square""></i></span>List 
+   Item</li>,</ul>,
+<i class=""fas fa-spinner fa-spin""></i>,<i class=""fas fa-circle-notch fa-spin""></i>,
+<i class=""fas fa-sync-alt fa-spin""></i>,<i class=""fas fa-cog fa-spin""></i>,<i class=""fas fa-cog fa-pulse""></i>,<i 
+class=""fas fa-spinner fa-pulse""></i>
+,
+<i class=""fas fa-horse""></i>,<i class=""fas fa-horse fa-rotate-90""></i>,<i class=""fas fa-horse fa-rotate-180""></i>,<i class=""fas fa-horse fa-rotate-270""></i>,<i class=""fas fa-horse fa-flip-horizontal""></i>,<i class=""fas fa-horse fa-flip-vertical""></i>,
+  <span class=""fa-stack fa-lg"">,  <i class=""fas fa-circle 
+  fa-stack-2x""></i>,  <i class=""fab fa-twitter fa-stack-1x fa-inverse""></i>,
+  </span>,fa-twitter (inverse) on fa-circle (solid)<br>,<span class=""fa-stack 
+  fa-lg"">,  <i class=""far fa-circle fa-stack-2x""></i>,  <i 
+  class=""fab fa-twitter fa-stack-1x""></i>,</span>,fa-twitter on fa-circle 
+  (regular)<br>,<span class=""fa-stack fa-lg"">,  <i class=""fas fa-camera 
+  fa-stack-1x""></i>,  <i class=""fas fa-ban fa-stack-2x text-danger"" 
+  style=""color:red;""></i>,</span>,fa-ban on fa-camera,
+   <p>Fixed Width:</p>,<div><i class=""fas fa-arrows-alt-v fa-fw""></i> Icon 
+   1</div>,<div><i class=""fas fa-band-aid fa-fw""></i> Icon 
+   2</div>,<div><i 
+   class=""fab fa-bluetooth-b fa-fw""></i> Icon 3</div>,<p>Without Fixed 
+   Width:</p>,<div><i class=""fas fa-arrows-alt-v""></i> Icon 1</div>,<div><i 
+   class=""fas fa-band-aid""></i> Icon 2</div>,<div><i class=""fab fa-bluetooth-b""></i> Icon 
+   3</div>,
+<i class=""fas fa-quote-left fa-3x fa-pull-left fa-border""></i>,
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+Icons Reference,,"Font Awesome 5:,Font Awesome 4:,Bootstrap:,Google:",,,,,

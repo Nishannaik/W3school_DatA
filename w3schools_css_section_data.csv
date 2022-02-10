@@ -1,0 +1,1302 @@
+H1_leftside_heading,H1_rightside_heading,H2,H3,All_para,li,div,div_2
+CSS ,Tutorial,"Examples in Each Chapter,CSS Examples,Use the Menu,CSS Templates,CSS Exercises,CSS Quiz,CSS References",CSS Example,"This CSS tutorial contains hundreds of CSS examples.,With our online editor, you can edit the CSS, and click on a button to view the result.,Learn from over 300 examples! With our editor, you can edit the CSS, and click on a
+button to view the result.,We recommend reading this tutorial, in the sequence listed in the menu.,If you have a large screen, the menu will always be present on the left.,If you have a small screen, open the menu by clicking the top menu sign ,.,We have created some responsive W3.CSS templates for you to use.,You are free to modify, save, share, and use them in all your projects.,Test your CSS skills with a quiz.,At W3Schools you will find complete CSS references of all properties and selectors with syntax, examples, browser support, and more.",,,
+CSS ,Layout - float and clear,"The float Property,Example - float: right;,Example - float: left;,Example - No float,Example - Float Next To Each Other","Example,Example,Example,Example","The CSS , property specifies 
+how an element should float.,The CSS , property 
+specifies what elements can float beside the cleared element and on which side.,The , property is used for 
+positioning and formatting content e.g. let an image float left to the text in a 
+container.,The , property can have one of the 
+following values:,In its simplest use, the , property can be used to wrap text around images.,The following example specifies that an image should float to the , in a text:,The following example specifies that an image should float to the , in a text:,In the following example the image will be displayed just where it occurs in 
+the text (float: none;):,Normally div elements will be displayed on top of each other. However, if we 
+use , we can let elements float next to each other:"," , - The element floats to the left of its container, , - The element floats to the right of its container, , - The element does not float (will be displayed just where it occurs in the text). This is default, , - The element inherits the float value of its parent",,
+CSS ,Layout - Overflow,"CSS Overflow,overflow: visible,overflow: hidden,overflow: scroll,overflow: auto,overflow-x and overflow-y,All CSS Overflow Properties","Example,Example,Example,Example,Example","The CSS , property controls what 
+happens to content that is too big to fit into an area.,The , property specifies whether to clip 
+the content or 
+to add scrollbars when the content of an element is too big to fit in the specified 
+area.,The , property has the following values:,By default, the overflow is ,, meaning that it is not clipped and it 
+renders outside the element's box:,With the , value, the overflow is clipped, and the rest of the content is hidden:,Setting the value to ,, the overflow is clipped and a scrollbar is added to scroll inside the box. Note that this will add a scrollbar both horizontally and vertically (even if you do not need it):,The , value is similar to ,, 
+but it adds scrollbars only when necessary:,The , and , properties specifies 
+whether to change the overflow of content just horizontally or vertically (or 
+both):, specifies what to do with the left/right edges of the 
+content.,
+
+, specifies what to do with the top/bottom edges of the 
+content."," - Default. The overflow is not clipped. 
+The content renders outside the element's box, - The overflow is clipped, and the rest of the content will be invisible, - The overflow is clipped, and a scrollbar is added to see the rest of the content, - Similar to ,, 
+but it adds scrollbars only when necessary",,
+"CSS , Property",Layout - The z-index,"The z-index Property,Another z-index Example,Without z-index, CSS Property","Example,Example,Example","The , property specifies the 
+stack order of an element.,When elements are positioned, they can overlap other elements.,The , property specifies the stack order of an element (which element should be placed in front of, or behind, the others).,An element can have a positive or negative stack order:, , only works on , (position: absolute, 
+position: relative, position: fixed, or position: sticky) and , 
+(elements that are direct children of display: flex elements).,If two positioned elements overlap each other without a , 
+specified, the element defined , will be shown on top.",,"
+  <html>,<head>,<style>,.container {,  position: relative;,},
+  ,.black-box {,  position: relative;,  z-index: 1;,  
+  border: 2px solid black;,  height: 100px;,  margin: 30px;,},.gray-box {,  
+  position: absolute;,  z-index: 3;,  background: lightgray;,  height: 60px; ,  
+  width: 70%;,  left: 50px;,  top: 50px;,},.green-box {,  position: absolute;,  z-index: 2;,  background: lightgreen;,  
+  width: 35%;,  left: 270px;,  top: -15px;,  height: 
+  100px;,},</style>,</head>,<body>,
+  ,<div class=""container"">,  <div 
+  class=""black-box"">Black box</div>,  <div class=""gray-box"">Gray 
+  box</div>,  <div class=""green-box"">Green box</div>,</div>,</body>,</html>,
+  <html>,<head>,<style>,.container {,  position: relative;,},
+  ,.black-box {,  position: relative;,  
+  border: 2px solid black;,  height: 100px;,  margin: 30px;,},.gray-box {,  
+  position: absolute;,  background: lightgray;,  height: 60px; ,  
+  width: 70%;,  left: 50px;,  top: 50px;,},.green-box {,  position: absolute;,  background: lightgreen;,  
+  width: 35%;,  left: 270px;,  top: -15px;,  height: 
+  100px;,},</style>,</head>,<body>,
+  ,<div class=""container"">,  <div 
+  class=""black-box"">Black box</div>,  <div class=""gray-box"">Gray 
+  box</div>,  <div class=""green-box"">Green box</div>,</div>,</body>,</html>",
+CSS ,Pseudo-elements,"What are Pseudo-Elements?,Syntax,The ::first-line Pseudo-element,The ::first-letter Pseudo-element,Pseudo-elements and HTML Classes,Multiple Pseudo-elements,CSS - The ::before Pseudo-element,CSS - The ::after Pseudo-element,CSS - The ::marker Pseudo-element,CSS - The ::selection Pseudo-element,All CSS Pseudo Elements,All CSS Pseudo Classes","Example ,Example,Example,Example,Example,Example,Example,Example","A CSS pseudo-element is used to style specified parts of an element.,For example, it can be used to:,The syntax of pseudo-elements:,The , pseudo-element is used to add a special style 
+to the first line of a text.,The following example formats the first line of the text in all <p> 
+elements:, The , pseudo-element can only be applied to block-level 
+elements.,The following properties apply to the , 
+pseudo-element:,The , pseudo-element is used to add a special style to the first 
+letter of a text.,The following example formats the first letter of the text in all <p> 
+elements: , The , pseudo-element can only be applied to block-level 
+elements.,The following properties apply to the ::first-letter pseudo- element: ,Pseudo-elements can be combined with HTML classes: ,The example above will display the first letter of paragraphs with class=""intro"", in 
+red and in a larger size.,Several pseudo-elements can also be combined.,In the following example, the first letter of a paragraph will be red, in 
+an xx-large font size. The rest of the first line will be blue, and in 
+small-caps. The rest of the paragraph will be the default font size and color:,The , pseudo-element can be used to insert some content before the content of an element.,The following example inserts an image before the content of each <h1> element:,The , pseudo-element can be used to insert some content after the content of an element.,The following example inserts an image after the content of each <h1> element:,The , pseudo-element selects the 
+markers of list items.,The following example styles the markers of list items:,The , pseudo-element matches the portion of an element that is 
+selected by a user.,The following CSS properties can be applied to ,: 
+,, 
+,, ,, and ,.,The following example makes the selected text red on a yellow background:","Style the first letter, or line, of an element,Insert content before, or after, the content of an element ,font properties,color properties,background properties,word-spacing,letter-spacing,text-decoration,vertical-align,text-transform,line-height,clear, font properties, color properties , background properties,margin properties,padding properties,border properties,text-decoration,vertical-align (only if ""float"" is ""none""),text-transform,line-height,float,clear",,
+CSS ,Layout - Horizontal & Vertical Align,"Center Align Elements,Center Align Text,Center an Image,Left and Right Align - Using position,Left and Right Align - Using float,The clearfix Hack,Center Vertically - Using padding,Center Vertically - Using line-height,Center Vertically - Using position & transform,Center Vertically - Using Flexbox","Example,Example,Example,Example,Example,Example,Example,Example,Example,Example,Example","To horizontally center a block element (like <div>), use ,Setting the width of the element will prevent it from stretching out to the 
+edges of its container.,The element will then take up the specified width, and the remaining space 
+will be split equally between the two margins:, Center aligning has no effect if the , property is not set 
+(or set to 100%).,To just center the text inside an element, use , For more examples on how to align text, see the , chapter.,To center an image, set left and right margin to , and make it into a , element:,One method for aligning elements is to use ,:, Absolute positioned elements are removed from the normal flow, and can overlap elements.,Another method for aligning elements is to use the , property:,Then we can add the clearfix hack to the containing element to fix 
+this problem:,There are many ways to center an element vertically in CSS. A simple solution is to use top and bottom ,:,To center both vertically and horizontally, use , and ,:,Another trick is to use the , property with a value that is equal 
+to the , property:,If , and , 
+are not options, another solution is to use positioning and the , property:, You will learn more about the transform property in our ,.,You can also use flexbox to center things. Just note that flexbox is not supported in IE10 and earlier versions:, You will learn more about Flexbox in our ,.",,,
+CSS ,Opacity / Transparency,"Transparent Image,Transparent Hover Effect,Transparent Box,Transparency using RGBA,Text in Transparent Box,Example explained","Example,Example,Example,Example,Example,Example","The , property specifies the opacity/transparency of an element.,The , property can take a value from 0.0 - 1.0. The lower value, the more transparent:,The , property is often used together with the , 
+selector to change the opacity on mouse-over:,The first CSS block is similar to the code in Example 1. In addition, we have added what should happen when a user hovers over one of the images. In this case we want the image to NOT be transparent when the user hovers over it. The CSS for this is ,.,When the mouse pointer moves away from the image, the image will be transparent again.,An example of reversed hover effect:,When using the , property to add transparency to the background of an element, all of its child elements 
+inherit the same transparency. This can make the text inside a fully transparent element hard to read:,If you do not want to apply opacity to child elements, like in our example above, use , color values. 
+The following example sets the opacity for the background color and not the text:,You learned from our ,, that you can use RGB as a color value. In addition to RGB, 
+you can use an RGB color value with an alpha channel (RGBA) - which specifies the opacity for a color.,An RGBA color value is specified with: rgba(red, green, blue, ,). The 
+, parameter is a number between 0.0 (fully transparent) and 1.0 (fully opaque)., You will learn more about RGBA Colors in our ,.,First, we create a <div> element (class=""background"") with a background image, and a border.
+,Then we create another <div> (class=""transbox"") inside the first <div>. ,The 
+<div class=""transbox""> have a background color, and a border - 
+the div is transparent. ,Inside the transparent 
+<div>, we add some text inside a <p> element.",,"
+<html>,
+<head>,
+<style>,
+div.background {,
+    background: url(klematis.jpg) repeat;,
+    border: 2px solid black;,
+},
+,
+div.transbox {,
+    margin: 30px;,
+    background-color: #ffffff;,
+    border: 1px solid black;,
+  opacity: 0.6;,
+},
+,
+div.transbox p {,
+  margin: 5%;,
+  font-weight: bold;,
+    color: #000000;,
+},
+</style>,
+</head>,
+<body>,
+,
+<div class=""background"">,
+  <div class=""transbox"">,
+    <p>This is some text that is placed in the transparent box.</p>,
+  </div>,
+</div>,
+,
+</body>,
+</html>
+",
+CSS ,Pseudo-classes,"What are Pseudo-classes?,Syntax,Anchor Pseudo-classes,Pseudo-classes and HTML Classes,Hover on <div>,Simple Tooltip Hover,CSS - The :first-child Pseudo-class,Match the first <p> element,Match the first <i> element in all <p> elements,Match all <i> elements in all first child <p> elements,CSS - The :lang Pseudo-class,More Examples,All CSS Pseudo Classes,All CSS Pseudo Elements","Example,Example,Example,Example,Example,Example,Example,Example","A pseudo-class is used to define a special state 
+of an element.,For example, it can be used to:,The syntax of pseudo-classes:,Links can be displayed in different ways:,Pseudo-classes can be combined with HTML classes:,When you hover over the link in the example, it will change color:,An example of using the , pseudo-class on a <div> element:,Hover over a <div> element to show a <p> element (like a tooltip):,The , pseudo-class matches a specified element that is the first child of another element.,In the following example, the selector matches any <p> element that is the first child of any element:,In the following example, the selector matches the first <i> element in all <p> elements:,In the following example, the selector matches all <i> elements in <p> elements that are the first child of another element:,The , pseudo-class allows you to define special rules for different languages.,In the example below, , defines the quotation marks for <q> elements with lang=""no"":,
+This example demonstrates how to add other styles to hyperlinks.,
+This example demonstrates how to use the :focus pseudo-class.","Style an element when a user mouses over it,Style visited and unvisited links differently,Style an element when it gets focus","
+<html>,
+<head>,
+<style>,
+  q:lang(no) {,  quotes: ""~"" ""~"";,},
+</style>,
+</head>,
+<body>,
+<p>Some text <q lang=""no"">A quote in a paragraph</q> 
+Some text.</p>,
+</body>,
+</html>
+",
+CSS ,Layout - display: inline-block,"The display: inline-block Value,Using inline-block to Create Navigation Links","Example,Example","Compared to ,, the major 
+difference is that , allows 
+to set a width and height on the element.,Also, with ,, the top and bottom margins/paddings are respected, 
+but with , they are not.,Compared to ,, the major 
+difference is that , does 
+not add a line-break after the element, so the element can sit next to other 
+elements.,The following example shows the different behavior of ,, , 
+and ,:,One common use for , 
+is to display list items horizontally instead of vertically. The following 
+example creates horizontal navigation links:",,,
+CSS ,Navigation Bar,"Demo: Navigation Bars,Navigation Bars,Navigation Bar = List of Links","Example,Example","Having easy-to-use navigation is important for any web site.,With CSS you can transform boring HTML menus into good-looking navigation bars.,A navigation bar needs standard HTML as a base.,In our examples we will build the navigation bar from a standard HTML list.,A navigation bar is basically a list of links, so using the <ul> and <li> elements makes perfect 
+sense:,Now let's remove the bullets and the margins and padding from the list:,Example explained:,The code in the example above is the standard code used in both vertical, and horizontal navigation bars, which you will learn more about in the next chapters."," - Removes the bullets. A navigation bar 
+does not need list markers,Set , and , 
+to remove browser default settings","
+<ul>,
+ 
+<li><a href=""default.asp"">Home</a></li>,
+ 
+<li><a href=""news.asp"">News</a></li>,
+ 
+<li><a href=""contact.asp"">Contact</a></li>,
+ 
+<li><a href=""about.asp"">About</a></li>,
+</ul>
+",
+"CSS , Property",Layout - The position,"The position Property,position: static;,position: relative;,position: fixed;,position: absolute;,position: sticky;,Positioning Text In an Image,More Examples,All CSS Positioning Properties","Example,Example,Example,Example,Example,Example","The , property specifies the type of 
+positioning method used for an element (static, relative, fixed, absolute or 
+sticky).,The , property specifies the type of positioning method used for an element.,There are five different position values: ,Elements are then positioned using the top, bottom, left, and right 
+properties. However, these properties will not work unless the , 
+property is set first. They also work differently depending on the position 
+value.,HTML elements are positioned static by default.,Static positioned elements are not affected by the top, bottom, left, and right properties.,An element with , is not positioned in any special way; it is 
+always positioned according to the normal flow of the page:,Here is the CSS that is used:,An element with , is positioned relative to its normal position.,Setting the top, right, bottom, and left properties of a relatively-positioned element will cause
+it to be adjusted away from its normal position. Other content will not be adjusted to fit into any gap left by the 
+element.,Here is the CSS that is used:,An element with , is positioned relative to the viewport, which means it always 
+stays in the same place even if the page is scrolled. The top, 
+right, bottom, and left properties are used to position the element.,A fixed element does not leave a gap in the page where it would normally have been located.,Notice the fixed element in the lower-right corner of the page. Here is the CSS that is used:,An element with , is positioned relative to the nearest positioned ancestor 
+(instead of positioned relative to the viewport, like fixed).,However; if an absolute positioned element has no positioned ancestors, 
+it uses the document body, and moves along with page scrolling., Absolute positioned elements are removed from the normal flow, and can overlap elements.,Here is a simple example:,Here is the CSS that is used:,An element with , is positioned based on the user's scroll position.,A sticky element toggles between , and ,, depending on the scroll position. It is positioned relative until a given offset position is met in the viewport - then it ""sticks"" in place (like position:fixed).,In this example, the sticky element sticks to the top of the page (,), when you reach its scroll position.,How to position text over an image:,
+This example demonstrates how to set the shape of an element. The element is clipped into this shape, and displayed.",,,
+CSS ,Combinators,"CSS Combinators,Descendant Selector,Child Selector (>),Adjacent Sibling Selector (+),General Sibling Selector (~),All CSS Combinator Selectors","Example,Example,Example,Example","A CSS selector can contain more than one simple selector. Between the simple 
+selectors, we can include a combinator.,There are four different combinators in CSS:,The descendant selector matches all elements that are descendants of a specified 
+element.,The following example selects all <p> elements inside <div> elements: ,The child selector selects all elements that are the children of a 
+specified element.,The following example selects all <p> elements that are  
+children of a <div> 
+element:,The adjacent sibling selector is used to select an element that is directly 
+after another specific element.,Sibling elements must have the same parent element, and ""adjacent"" means 
+""immediately following"".,The following example selects the first <p> element that are placed immediately after <div> elements:,The general sibling selector selects all elements that are next siblings of a specified element.,The following example selects all <p> elements that are next siblings of <div> elements: ","descendant selector (space),child selector (>),adjacent sibling selector (+),general sibling selector (~)",,
+CSS ,Layout - width and max-width,"Using width, max-width and margin: auto;",Example,"As mentioned in the previous chapter; a block-level element always takes up the full width available 
+(stretches out to the left and right as far as it can).,Setting the , of a block-level element will prevent it from stretching 
+out to the edges of its container. Then, you can set the 
+margins to auto, to horizontally center the element within its container. The 
+element will take up the specified width, and the remaining space will be split 
+equally between the two margins:, The problem with the , above occurs when the browser window is 
+smaller than the width of 
+the element. The browser then adds a horizontal scrollbar to the page.,Using , instead, in this situation, will improve the 
+browser's handling of small windows. This is important when making a site usable 
+on small devices:, Resize the browser window to less than 500px wide, to see the difference between 
+the two divs!,Here is an example of the two divs above:",,,
+"CSS , Property",Layout - The display,"The display Property,Block-level Elements,Inline Elements,Display: none;,Override The Default Display Value,Hide an Element - display:none or visibility:hidden?,More Examples,CSS Display/Visibility Properties","Example,Example,Example,Example,Example","The , property is the most important CSS property for controlling layout.,The , property specifies if/how an element is displayed.,Every HTML element has a default display value depending on what type 
+of element it is. The default display value for most elements is , or 
+,.,Click to show panel,A block-level element always starts on a new line and takes up the full width available 
+(stretches out to the left and right as far as it can).,Examples of block-level elements:,An inline element does not start on a new line and only takes up as much width as necessary.,This is , a paragraph.,Examples of inline elements:, is commonly used with JavaScript to hide 
+and show elements without deleting and recreating them. Take a look at our last 
+example on this page if you want to know how this can be achieved.,The , element uses , 
+as default. ,As mentioned, every element has a default display value. However, you can 
+override this.,Changing an inline element to a block element, or vice versa, can be useful for 
+making the page look a specific way, and still follow the web standards.,A common example is making inline , elements for horizontal menus:,The following example displays <span> elements as block elements:,The following example displays <a> elements as block elements:,Hiding an element can be done by setting the , property to 
+,. 
+The element will be hidden, and the page will be displayed as if the element is not 
+there:, also hides an element.,However, the element will still take up the same space 
+as before. The element will be hidden, but still affect the layout:,
+This example demonstrates display: none; versus visibility: hidden;,
+This example demonstrates how to use CSS and JavaScript to show an element on 
+click.","<div>,<h1> - <h6>,<p>,<form>,<header>,<footer>,<section>,<span>,<a>,<img>",,
+CSS ,Lists,"HTML Lists and CSS List Properties,Different List Item Markers,An Image as The List Item Marker,Position The List Item Markers,Remove Default Settings,List - Shorthand property,Styling List With Colors,More Examples,All CSS List Properties","Example,Example,Example,Example,Example,Example","In HTML, there are two main types of lists:,The CSS list properties allow you to:,The , property specifies the type of list item 
+marker.,The following example shows some of the available list item markers: ,Note: Some of the values are for unordered lists, and some for ordered lists.,The , property specifies an image as the list 
+item marker:,The , property specifies the position of the list-item markers 
+(bullet points).,""list-style-position: outside;"" means that the bullet points will be outside 
+the list item. The start of each line of a list item will be aligned vertically. 
+This is default:,""list-style-position: inside;"" means that the bullet points will be inside 
+the list item. As it is part of the list item, it will be part of the text and 
+push the text at the start:,The , property can also be 
+used to remove the markers/bullets. Note that the list also has default margin 
+and padding. To remove this, add , and , to <ul> or <ol>:,The , property is a shorthand property. It is used to set all the 
+list properties in one declaration:,When using the shorthand property, the order of the property values are:,If one of the property values above are missing, the default value for the 
+missing property will be inserted, if any.,We can also style lists with colors, to make them look a little more 
+interesting.,Anything added to the <ol> or <ul> tag, affects the entire list, while 
+properties added to the <li> tag will affect the individual list items:,
+This example demonstrates how to create a list with a red left border.,
+This example demonstrates how to create a bordered list without bullets.,
+This example demonstrates all the different list-item markers in CSS.","Coffee,Tea,Coca Cola,Coffee,Tea,Coca Cola,unordered lists (<ul>) - the list items are marked with bullets,ordered lists (<ol>) - the list items are marked with numbers or letters,Set different list item markers for ordered lists,Set different list item markers for unordered lists,Set an image as the list item marker,Add background colors to lists and list items,Coffee -
+,Tea,Coca-cola,Coffee -
+,Tea,Coca-cola, (if a list-style-image is specified, 
+the value of this property will be displayed if the image for some reason 
+cannot be displayed), (specifies whether the list-item markers should appear inside or outside the content flow), (specifies an image as the list item 
+marker),Coffee,Tea,Coca Cola",,
+CSS ,Tables,"Table Borders,Full-Width Table,Collapse Table Borders","Example,Example,Example,Example","The look of an HTML table can be greatly improved with CSS:,To specify table borders in CSS, use the , property.,The example below specifies a black border for <table>, <th>, and <td> elements:,The table above might seem small in some cases. If you need a table that should span the entire screen (full-width), add , to the 
+<table> element:,The , property sets whether the table borders 
+should be collapsed into a single border:,If you only want a border around the table, only specify the , property for 
+<table>:",,,
+CSS ,Browser Support Reference,"CSS Reference With Browser Support,Icon Explanations",,"The table below lists all CSS properties and how each property is supported in the different browsers:,The number to the right of the browser icon indicates in which browser version the property was first supported.",,,
+"CSS , Reference",Default Values,Default CSS Values for HTML Elements,,The table below shows the default CSS browser values for all HTML elements.,,,
+CSS ,Legal Color Values,"CSS Colors,Hexadecimal Colors,Hexadecimal Colors With Transparency,RGB Colors,RGBA Colors,HSL Colors,HSLA Colors,Predefined/Cross-browser Color Names,The currentcolor Keyword","Example,Example,Example,Example,Example,Example,Example,Example","Colors in CSS can be specified by the following methods:,A hexadecimal color is specified with: #RRGGBB, where the RR (red), GG (green) and BB (blue) hexadecimal integers specify the components of the color. 
+All values must be between 00 and FF.,For example, the #0000ff value is rendered as blue, because the blue component is set to its highest value (ff) and the others are set to 
+00.,A hexadecimal color is specified with: #RRGGBB. To add transparency, add two 
+additional digits between 00 and FF.,An RGB color value is specified with the ,, which has the following syntax:,Each parameter (red, green, and 
+blue) defines the intensity of the color and can be an integer between 0 and 255 or a percentage value (from 0% to 100%).,For example, the rgb(0,0,255) value is rendered as blue, 
+because the blue parameter is set to its highest value (255) and the others are 
+set to 0.,Also, the following values define equal color: rgb(0,0,255) and rgb(0%,0%,100%).,RGBA color values are an extension of RGB color values with an alpha channel - which specifies the opacity of the object.,An RGBA color is specified with the ,, which has the following syntax:,The alpha parameter is a number between 0.0 (fully transparent) and 1.0 (fully opaque).,HSL stands for hue, saturation, and lightness - and represents a cylindrical-coordinate representation of colors.,An HSL color value is specified with the ,, which has the following syntax:,Hue is a degree on the color wheel (from 0 to 360) - 0 (or 360) is red, 120 
+is green, 240 is blue. Saturation is a percentage value; 0% means a shade of 
+gray and 100% is the full color. Lightness is also a percentage; 0% is black, 
+100% is white.,HSLA color values are an extension of HSL color values with an alpha channel - which specifies the opacity of the object.,An HSLA color value is specified with the ,, which has the following syntax:,The alpha parameter is a number between 0.0 (fully transparent) and 1.0 (fully opaque).,140 color names are predefined in the HTML and CSS color specification.,For example: ,, ,, ,, ,, etc:,The , keyword refers to the value of the color property of an element.","Hexadecimal colors,Hexadecimal colors with transparency ,RGB colors,RGBA colors,HSL colors,HSLA colors,Predefined/Cross-browser color names,With the , keyword",,
+CSS ,Units,"CSS Units,Absolute Lengths,Relative Lengths,Browser Support",Example,"CSS has several different units for expressing a length.,Many CSS properties take ""length"" values, such as ,, ,, ,, 
+,, etc., is a number followed by a length unit, such as ,, 
+,, etc., A whitespace cannot appear between the number and the unit. However, if the value is 
+,, the unit can be omitted.,For some CSS properties, negative lengths are allowed.,There are two types of length units: , and ,.,The absolute length units are fixed and a length expressed in any of these will appear as exactly that size.,Absolute length units are not recommended for use on screen, because screen sizes vary so much. 
+However, they can be used if the output medium is known, such 
+as for print layout.,* Pixels (px) are relative to the viewing device. For low-dpi devices, 1px is one device pixel (dot) of the display. For printers and high resolution 
+screens 1px implies multiple device pixels.,Relative length units specify a length relative to another length property. 
+Relative length units scale better between different rendering medium.,The numbers in the table specify the first browser version that fully supports the 
+length unit.",,,
+CSS ,Animatable,"Definition and Usage,Browser Support,Animatable Properties",Example,"Some CSS properties are ,, meaning that they can be used in animations and transitions.,Animatable properties can change gradually from one value to another, like size, numbers, percentage and color.,The numbers in the table specifies the first browser version that fully support CSS animations.,Numbers followed by -webkit-, -moz-, or -o- specify the first version that worked with a prefix.,These properties are , in CSS:",,,
+CSS ,Web Safe Fonts,"Best Web Safe Fonts for HTML and CSS,Arial (sans-serif),Verdana (sans-serif),Helvetica (sans-serif),Tahoma (sans-serif),Trebuchet MS (sans-serif),Times New Roman (serif),Georgia (serif),Garamond (serif),Courier New (monospace),Brush Script MT (cursive)","Example,Example,Example,Example,Example,Example,Example,Example,Example,Example","The following fonts are the best web safe fonts for HTML and CSS: ,Arial is the most widely used font for both online and printed media. Arial 
+is also the default font in Google Docs.,Arial is one of the safest web fonts, and it is available on all major operating systems.,Verdana is a very popular font. Verdana is easily readable even for small font sizes.,The Helvetica font is loved by designers. It is suitable for many types of business.,The Tahoma font has less space between the characters.,Trebuchet MS was designed by Microsoft in 1996. Use this font carefully. Not 
+supported by all mobile operating systems.,Times New Roman is one of the most recognizable fonts in the world. It looks 
+professional and is used in many newspapers and ""news"" websites. It is also the 
+primary font for Windows devices and applications.,Georgia is an elegant serif font. It is very readable at different font sizes, so it is a good candidate for mobile-responsive design.,Garamond is a classical font used for many printed books. It has a timeless 
+look and good readability.,Courier New is the most widely used monospace serif font. 
+Courier New is often used with coding displays, and many email providers 
+use it as their default font. Courier New is also the standard font for movie 
+screenplays.,The Brush Script MT font was designed to mimic handwriting.
+It is elegant and sophisticated, but can be hard to read. Use it carefully.","Arial (sans-serif),Verdana (sans-serif),Helvetica (sans-serif),Tahoma (sans-serif),Trebuchet MS (sans-serif),Times New Roman (serif),Georgia (serif),Garamond (serif),Courier New (monospace),Brush Script MT (cursive)",,
+"CSS , Reference",Aural,"Aural Style Sheets,CSS Aural Reference",,"Aural style sheets use a combination of speech synthesis and sound effects to make the user listen to information, instead of reading information.,Aural presentation can be used:,The aural presentation converts the document to plain text and feed this to a
+screen reader (a program that reads all the characters on the screen).,An example of an Aural style sheet:,The example above will make the speech synthesizer play a sound, then speak the headers in a very rich male voice.,The ""CSS"" column indicates in which CSS version the property is defined (CSS1 or CSS2).","by blind people,to help users learning to read,to help users who have reading problems,for home entertainment,in the car,by print-impaired communities",,
+PX to EM ,Conversion,"PX to EM Converter,Body Font Size",,"In the table below, select a body font size in pixels (px) to display a 
+complete ""px to em and percent"" conversion table., The default font size is usually 16px.","Set a default font size (usually 16px),Then, convert a pixel value to em, based on the default size,Or, convert an em value to pixels, based on the default size",,
+"CSS , Reference",Functions,CSS Functions,,CSS functions are used as a value for various CSS properties.,,,
+"CSS , Reference",Selector,CSS Selectors,,"In CSS, selectors are patterns used to select the element(s) you want to style.,Use our , to demonstrate the different selectors.",,,
+CSS ,Reference,CSS Properties,,,,,
+CSS ,Exercises,"Exercises,Count Your Score",,"You can test your CSS skills with W3Schools' Exercises.,We have gathered a variety of CSS exercises (with answers) for each CSS Chapter.,Try to solve an exercise by editing some code. Get a ""hint"" if you're stuck, or show the answer to see what you've done wrong.,You will get 1 point for
+each correct answer. Your score and total score will always be displayed.",,,
+W3Schools ,CSS Certificate,How Does It Work?,,,"Study for free at W3Schools.com,Study at your own speed,Test your skills with W3Schools online quizzes,Apply for your certificate by paying an exam fee,Take your exam online, at any time, and from any location",,
+CSS ,Quiz,"The Test,Count Your Score",,"You can test your CSS skills with W3Schools' Quiz.,The test contains 25 questions and there is no time limit. ,The test is not official, it's just a nice way to see how much you know, or don't know, about CSS.,You will get 1 point for each correct answer. At the end of the Quiz,
+your total score will be displayed. Maximum score is 25 points.",,,
+Sass ,Tutorial,"Examples in Each Chapter,Sass Function References",Sass Example,"Our ""Show Sass"" tool makes it easy to learn Sass, it shows both the code and the result.,At W3Schools you will find complete references of all Sass functions with syntax and examples.",,,
+CSS ,Grid Item,"Child Elements (Items),The grid-column Property:,The grid-row Property:,The grid-area Property,Naming Grid Items,The Order of the Items","Example,Example,Example,Example,Example,Example,Example,Example,Example,Example,Example,Example,Example","
+,
+,A grid , contains grid ,.,By default, a container has one grid item for each column, in each row, but you can style the grid items so that they 
+will span multiple columns and/or rows.,The , property defines on which 
+column(s) to place an item.,You define where the item will start, and where the item will end.,To place an item, you can refer to ,, or use the keyword ""span"" to 
+define how many columns the item will span.,The , property defines on which row to 
+place an item.,You define where the item will start, and where the item will end.,To place an item, you can refer to ,, or use the keyword ""span"" to 
+define how many rows the item will span:,The , property can be used as a shorthand property for the 
+,, ,, , and the , properties.,The , property can also be used to assign names to grid items.,Named grid items can be referred to by the , property 
+of the grid container.,Each row is defined by apostrophes (' '),The columns in each row is defined inside the apostrophes, separated by a 
+space.,To define two rows, define the column of the second row inside another set of apostrophes:,The Grid Layout allows us to position the items anywhere we like.,You can re-arrange the order for certain screen sizes, by using media queries:",,,
+CSS ,Grid Container,"Grid Container,The grid-template-columns Property,The grid-template-rows Property,The justify-content Property,The align-content Property","Example,Example,Example,Example,Example,Example,Example,Example,Example,Example,Example,Example,Example,Example,Example","
+,
+,To make an HTML element behave as a grid container, you have to set the , property to , or ,.,Grid containers consist of grid items, placed inside columns and rows.,The , property defines the 
+number of columns in your grid layout, and it can define the width of each column.,The value is a space-separated-list, where each value defines the width 
+of the respective column.,If you want your grid layout to contain 4 columns, specify the width of the 4 columns, or ""auto"" if all columns should have the same width.,The , property can also be used to specify the size (width) of the columns.,The , property defines the height of each row.,The value is a space-separated-list, where each value defines the height of the respective row:,The , property is used to align the whole grid inside the container.,The , property is used to , align the whole grid inside the container.",,,
+CSS ,Templates,CSS Layout Templates,,"We have created some responsive starter templates with CSS.,You are free to modify, save, share, and use them in all your projects.",,,
+CSS ,Grid Layout Module,"Grid Layout,Browser Support,Grid Elements,Display Property,Grid Columns,Grid Rows,Grid Gaps,Grid Lines,All CSS Grid Properties","Example,Example,Example,Example,Example,Example,Example,Example,Example","
+,
+,The CSS Grid Layout Module offers a grid-based layout system, with rows and 
+columns, making it easier to design web pages without having to use floats and 
+positioning.,The grid properties are supported in all modern browsers.,A grid layout consists of a parent element, with one or more child elements.,An HTML element becomes a grid container when its , property 
+is set to
+, or ,.,All direct children of the grid container automatically become ,.,The vertical lines of grid items are called ,.,The horizontal lines of grid items are called ,.,The spaces between each column/row are called ,.,You can adjust the gap size by using one of the following properties:,The lines between columns are called ,.,The lines between rows are called ,.,Refer to line numbers when placing a grid item in a grid container:", ,"
+<div 
+  class=""grid-container"">,  <div class=""grid-item"">1</div>,  <div 
+  class=""grid-item"">2</div>,  <div class=""grid-item"">3</div>,  <div class=""grid-item"">4</div>,  <div 
+  class=""grid-item"">5</div>,  <div class=""grid-item"">6</div>,  <div class=""grid-item"">7</div>,  <div 
+  class=""grid-item"">8</div>,  <div class=""grid-item"">9</div>,</div>
+",
+Responsive Web Design - ,Templates,W3.CSS Web Site Templates,,"We have created some responsive templates with the ,.,You are free to modify, save, share, and use them in all your projects., All templates below can be , with ,.",,,
+Responsive Web Design - ,Frameworks,"Using W3.CSS,Bootstrap","Example,Example","There are many free CSS Frameworks that offer Responsive Design.,
+A great way to create a responsive design, is to use a 
+responsive 
+style sheet, like ,W3.CSS makes it easy to develop sites that look nice at any size!,To learn more about W3.CSS, read our ,.,Another popular framework is Bootstrap. It uses HTML and CSS to make 
+responsive web pages:,To learn more about Bootstrap, go to our ,.",,"
+ <!DOCTYPE html>,<html>,<meta name=""viewport"" 
+ content=""width=device-width, initial-scale=1"">,<link rel=""stylesheet"" 
+ href=""https://www.w3schools.com/w3css/4/w3.css"">,<body>,<div 
+ class=""w3-container w3-blue"">,  <h1>W3Schools Demo</h1> ,  
+ <p>Resize this responsive page!</p> ,</div>,<div 
+ class=""w3-row-padding"">,  <div class=""w3-third"">,    <h2>London</h2>,    <p>London is the capital city of England.</p>,    <p>It is the most populous city in the United Kingdom,,    with a 
+ metropolitan area of over 13 million inhabitants.</p>,  </div>,  <div 
+ class=""w3-third"">,    <h2>Paris</h2>,    <p>Paris is 
+ the capital of France.</p> ,    <p>The Paris area is one of the largest 
+ population centers in Europe,,    with more than 12 million 
+ inhabitants.</p>,  </div>,  <div class=""w3-third"">,    
+ <h2>Tokyo</h2>,    <p>Tokyo is the capital of Japan.</p>,    <p>It 
+ is the center of the Greater Tokyo Area,,    and the most populous 
+ metropolitan area in the world.</p>,  </div>,</div>,</body>,
+ </html>,
+<!DOCTYPE html>,<html lang=""en"">,<head>,
+  <title>Bootstrap 5 Example</title>,<meta charset=""utf-8"">,<meta 
+  name=""viewport"" content=""width=device-width, initial-scale=1"">,<link 
+  href=""https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"" 
+  rel=""stylesheet"">,<script 
+  src=""https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js""></script>,
+  </head>,<body>,<div class=""container-fluid p-5 bg-primary text-white 
+  text-center"">,  <h1>My First Bootstrap Page</h1>,  <p>Resize 
+  this responsive page to see the effect!</p> ,</div>,<div class=""container mt-5"">,  <div class=""row"">,    
+  <div class=""col-sm-4"">,      <h3>Column 1</h3>,      
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>,      
+  <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>,    
+  </div>,    <div class=""col-sm-4"">,      
+  <h3>Column 2</h3>,      <p>Lorem ipsum dolor sit 
+  amet, consectetur adipisicing elit...</p>,      
+  <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>,    
+  </div>,    <div class=""col-sm-4"">,      
+  <h3>Column 3</h3> ,      <p>Lorem ipsum dolor sit 
+  amet, consectetur adipisicing elit...</p>,      
+  <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>,    
+  </div>,  </div>,</div>,</body>,</html>",
+CSS ,Fallback Fonts,"Commonly Used Fallback Fonts,Serif Fonts,Sans-Serif Fonts,Monospace Fonts,Cursive Fonts,Fantasy Fonts",,"There are no 100% completely web safe fonts. There is always a chance that a 
+font is not found or is not installed properly. Therefore, it is very important 
+to always use fallback fonts.,This means that you should add a list of similar ""backup fonts"" in the 
+font-family property. If the first font does not work, the browser will try the 
+next one, and the next one, and so on. Always end the list with a generic font 
+family name.,Below are some commonly used fallback fonts, organized by the 5 generic font families:",,,
+CSS  ,Entities,Complete CSS Entity Reference,Example,"If you use CSS to display any of these characters in HTML, you can use the CSS entity found in the table below.",,"
+  <style>,h2:after {,  content: ' \00A7';,},</style>",
+Responsive Web Design - ,Videos,"Using The width Property,Using The max-width Property,Add a Video to the Example Web Page","Example,Example,Example","If the , property is set to 100%, the video player will be 
+responsive and scale up and down:,Notice that in the example above, the video player can be scaled up to be larger 
+than its original size. A better solution, in many cases, will be to use the
+, property instead.,If the , property is set to 100%, the video player will scale down if it has to, but never scale up to be larger than its 
+original size:,We want to add a video in our example web page. The video will be resized to always take up all the available space:",,,
+Responsive Web Design - ,Images,"Using The width Property,Using The max-width Property,Add an Image to The Example Web Page,Background Images,Different Images for Different Devices,The HTML <picture> Element","Example,Example,Example,Example,Example,Example,Example,Example,Example","If the , property is set to a percentage 
+and the , property is set to ""auto"", the image will be 
+responsive and scale up and down:,Notice that in the example above, the image can be scaled up to be larger 
+than its original size. A better solution, in many cases, will be to use the
+, property instead.,If the , property is set to 100%, the image will scale down if it has to, but never scale up to be larger than its 
+original size:,Background images can also respond to resizing and scaling.,Here we will show three different methods:,1. If the , property is set to ""contain"", the 
+background 
+image will scale, and try to fit the content area. However, the image will keep its aspect ratio (the proportional relationship 
+between the image's width and height):,Here is the CSS code:,2. If the , property is set to ""100% 100%"", the background image will stretch to cover the entire content area:,Here is the CSS code:,3. If the , property is set to ""cover"", the background image will scale 
+to cover the entire content area. Notice that the ""cover"" value keeps the aspect 
+ratio, and some part of the background image may be 
+clipped:,Here is the CSS code:,A large image can be perfect on a big computer 
+screen, but useless on a small device. Why load a large image when 
+you have to scale it down anyway? To reduce the load, or for any other reasons, you can use media queries to display different images on different devices.,Here is one large image and one smaller image that will be displayed on different devices:,
+You can use the media query ,, instead of ,, which
+checks the device width, instead of the browser width. Then the image will not change when you resize the browser window:
+,The HTML , element gives web 
+developers more flexibility in specifying image resources.,The most common use of the , 
+element will be for images used in responsive designs. Instead of having one 
+image that is scaled up or down based on the viewport width, multiple images can 
+be designed to more nicely fill the browser viewport.,The , element works similar to the , and 
+, elements. You set up different sources, and the first source that fits the 
+preferences is the one being used:,The , attribute is required, and defines the source of the image.,The , attribute is optional, and accepts the media queries you find in
+,.,You should also define an , element for browsers that do not support the
+, element.",,"
+<picture>,  <source srcset=""img_smallflower.jpg"" media=""(max-width: 
+400px)"">,  <source srcset=""img_flowers.jpg"">,  <img 
+src=""img_flowers.jpg"" alt=""Flowers"">,</picture>",
+Responsive Web Design ,- Media Queries,"What is a Media Query?,Add a Breakpoint,Always Design for Mobile First,Another Breakpoint,Typical Device Breakpoints,Orientation: Portrait / Landscape,Hide Elements With Media Queries,Change Font Size With Media Queries,CSS @media Reference","Example,Example,Example,Example,HTML Example,Example,Example,Example,Example","Media query is a CSS technique introduced in CSS3.,It uses the , rule to include a block of CSS properties only if a 
+certain condition is true.,Earlier in this tutorial we made a web page with rows and columns, and it 
+was responsive, but it did not look good on a small screen.,Media queries can help with that. We can add a breakpoint where 
+certain parts of the design will behave differently on each side of the 
+breakpoint.,Use a media query to add a breakpoint at 768px:,Mobile First means designing for mobile before designing for desktop or any 
+other device (This will make the page display faster on smaller devices).,This means that we must make some changes in our CSS.,Instead of changing styles when the width gets , than 
+768px, we should change the design when the width gets , than 
+768px. This will make our design Mobile First:,You can add as many breakpoints as you like.,We will also insert a breakpoint between tablets and mobile phones.,We do this by adding one more media query (at 600px), and a set of new classes for devices larger than 600px 
+(but smaller than 768px):,It might seem odd that we have two sets of identical classes, but it gives us the 
+opportunity ,, to decide what will happen with the columns at each 
+breakpoint:,There are tons of screens and devices with different heights and widths, so it is hard to create an exact breakpoint for each device. To keep things simple you could target 
+five groups:,Media queries can also be used to change layout of a page depending on the 
+orientation of the browser.,You can have a set of CSS properties that will only 
+apply when the browser window is wider than its height, a so called ""Landscape"" 
+orientation: ,Another common use of media queries, is to hide elements on different screen sizes:,You can also use media queries to change the font size of an element on 
+different screen sizes:,For a full overview of all the media types and features/expressions, please look at the
+,.",,"
+<div class=""row"">,  <div class=""col-3 col-s-3"">...</div>,  <div 
+class=""col-6 col-s-9"">...</div>,  <div 
+class=""col-3 col-s-12"">...</div>,</div>",
+Responsive Web Design - ,Grid-View,"What is a Grid-View?,Building a Responsive Grid-View","Example,CSS:,CSS:,HTML:,CSS:,Example","Many web pages are based on a grid-view, which means that the page is divided into columns:,Using a grid-view is very helpful when designing web pages. It makes it easier to place elements on the page.,A responsive grid-view often has 12 columns, and has a total width of 100%, and will shrink and expand as you resize the browser window.,Lets start building a responsive grid-view.,First ensure that all HTML elements have the , property set to 
+,. 
+This makes sure that the padding and border are included in the total width and height of 
+the elements.,Add the following code in your CSS:,Read more about the , property in our , chapter.,The following example shows a simple responsive web page, with two columns:,The example above is fine if the web page only contains two columns.,However, we want to use a responsive grid-view with 12 columns, to have more 
+control over the web page.,First we must calculate the percentage for one column: 100% / 12 columns = 
+8.33%.,Then we 
+make one class for each of the 12 columns, , and a number 
+defining how many columns the section should span:, All these columns should be floating to the left, and have a padding of 15px:,Each row should be wrapped in a ,. The number of columns 
+inside a row should always add up to 12:,The columns inside a row are all floating to the left, and are therefore 
+taken out of the flow of the page, and other elements will be placed as if the columns do not exist. To prevent this, we will 
+add a style that clears the flow:,We also want to add some styles and colors to make it look better:",,"
+<div class=""row"">,  <div class=""col-3"">...</div> <!-- 25% -->,  <div class=""col-9"">...</div> <!-- 75% -->,</div>",
+CSS ,Examples,,,,,,
+Responsive Web Design - ,The Viewport,"What is The Viewport?,Setting The Viewport,Size Content to The Viewport",,"The viewport is the user's visible area of a web page.,The viewport varies with the device, and will be smaller on a mobile phone than on a computer screen.,Before tablets and mobile phones, web pages were designed only for computer screens, and it was common for
+web pages to have a static design and a fixed size.,Then, when we started surfing the internet using tablets and mobile phones, fixed 
+size web pages were too large to fit the viewport.
+To fix this, browsers on those devices scaled down the entire web page to fit the screen.,This was not perfect!! But a quick fix.,HTML5 introduced a method to let web designers take control over the viewport, through the 
+, tag.,You should include the following , viewport element in all your web pages:,This gives the browser instructions on how 
+to control the page's dimensions and scaling.,The , part sets the width of the page to follow the screen-width of the device (which will vary depending on the device).,The , part sets the initial zoom level when the page is first loaded by the browser.,Here is an example of a web page , the viewport meta tag, and the same web page , the viewport meta tag:,Users are used to scroll websites vertically on both desktop and mobile 
+devices - but not horizontally!,So, if the user is forced to scroll horizontally, or zoom out, to see the 
+whole web page it results in a poor user experience.,Some additional rules to follow:,For example, if 
+an image is displayed at a width wider than the viewport it can cause the 
+viewport to scroll horizontally. Remember to adjust this content to fit within 
+the width of the viewport., - Since screen dimensions and width in CSS pixels vary 
+widely between devices, content should not rely on a particular viewport width 
+to render well., - Setting large absolute CSS widths for page elements 
+will cause the element to be too wide for the viewport on a smaller device. 
+Instead, consider using relative width values, such as width: 100%. Also, be 
+careful of using large absolute positioning values. It may cause the element to 
+fall outside the viewport on small devices.",,,
+CSS ,Colors,Color Names Supported by All Browsers,,"All modern browsers support the following 140 color names (click on a color name, or a hex value, to view the color as the background-color along with different text colors):",,,
+Sass ,Selector Functions,Sass Selector Functions,,"The selector functions are used to check and manipulate selectors. ,The following table lists all selector functions in Sass:",,,
+Sass ,Introspection Functions,Sass Introspection Functions,,"The introspection functions are rarely used when building a stylesheet. 
+However, they are valuable if something does not work properly - to figure out 
+what's going on: like debugging functions. ,The following table lists all introspection functions in Sass:",,,
+Sass ,List Functions,Sass List Functions,,"The list functions are used to access values in a list, combine lists, and 
+add items to lists.,Sass lists are immutable (they cannot change). So, the list functions that return a 
+list, will 
+return a new list, and not change the original list.,Sass lists are 1-based. The first list item in a list is at index 1, not 0.,The following table lists all list functions in Sass:",,,
+Responsive Web Design - ,Introduction,"What is Responsive Web Design?,Designing For The Best Experience For All Users",,"Responsive web design makes your web page look good on all devices.,Responsive web design uses only HTML and CSS.,Responsive web design is not a program or a JavaScript.,Web pages can be viewed using many different devices: desktops, tablets, and phones.
+Your web page should look good, and be easy to use, regardless of the device.
+,Web pages should not leave out information to fit smaller devices, but rather adapt its content to fit any device:,It is called responsive web design when you use CSS and HTML to resize, hide, shrink, enlarge, or move the content to make it look good on any screen.,Don't worry if you don't understand the example below, we will break down the code, step-by-step, in the next chapters:",,,
+Sass ,Numeric Functions,Sass Numeric Functions,,"The numeric functions are used to manipulate numeric values.,The following table lists all numeric functions in Sass:",,,
+Sass ,String Functions,Sass String Functions,,"The string functions are used to manipulate and get information about 
+strings.,Sass strings are 1-based. The first character in a string is at index 1, not 
+0.,The following table lists all string functions in Sass:",,,
+Sass ,Color Functions,Sass Color Functions,,"We have divided the color functions in Sass into three parts: Set color 
+functions, Get color functions, and Manipulate color functions:",,,
+Sass ,Map Functions,Sass Map Functions,,"In Sass, the map data type represents one or more key/value pairs., It is also possible to use the
+, from the previous page, 
+with maps. Then the map will be treated as a list with two elements.,Sass maps are immutable (they cannot change). So, the map functions that return a 
+map, will 
+return a new map, and not change the original map.,The following table lists all map functions in Sass:",,,
+Sass ,@extend and Inheritance,Sass @extend Directive,,"The , directive lets you share a set 
+of CSS properties from one selector to another. ,The , directive is useful if 
+you have almost identically styled elements that only differ in some 
+small details.,The following Sass example first creates a basic style for buttons (this 
+style will be 
+used for most buttons). Then, we create one style for a ""Report"" button and one 
+style for a ""Submit"" button. Both ""Report"" and ""Submit"" button inherit all the 
+CSS properties from the .button-basic class, through the , directive. In 
+addition, they have their own colors defined:,After compilation, the CSS will look like this:,By using the , directive, you do not need to 
+specify several classes for an element in your HTML code, like this: <button 
+class=""button-basic button-report"">Report this</button>. You just need to specify .button-report to get both sets of styles.,The , directive helps keep your Sass code very DRY.",,,
+Sass ,@mixin and @include,"Sass Mixins,Defining a Mixin,Using a Mixin,Passing Variables to a Mixin,Default Values for a Mixin,Using a Mixin For Vendor Prefixes",,"The , directive lets you create CSS 
+code that is to be reused throughout the website.,The , directive is created to let you 
+use (include) the mixin.,A mixin is defined with the , directive.,The following example creates a mixin named ""important-text"":,The , directive is used to include a mixin.,So, to include the important-text mixin created above:,The Sass transpiler will convert the above to normal CSS:,A mixin can also include other mixins:,Mixins accept arguments. This way you can pass variables to a mixin.,Here is how to define a mixin with arguments:,Notice that the arguments are set as variables and then used as the values 
+(color and width) of the border property.,After compilation, the CSS will look like this:,It is also possible to define default values for mixin variables:,Then, you only need to specify the values that change when you include the 
+mixin:,Another good use of a mixin is for vendor 
+prefixes.,Here is an example for transform:,After compilation, the CSS will look like this:",,,
+Sass ,@import and Partials,"Sass Importing Files,Sass Partials","Example,Example,Example,Example","Sass keeps the CSS code DRY (Don't Repeat Yourself). One way to 
+write DRY code is to keep related code in separate files.,You can create small files with CSS snippets to include in other Sass files. Examples 
+of such files can be: reset file, variables, colors, fonts, font-sizes, etc. ,Just like CSS, Sass also supports the , 
+directive.,The , directive allows you to include 
+the content of one file in another.,The CSS , directive has a major drawback 
+due to performance issues; it creates an extra HTTP request 
+each time you call it. However, the Sass , 
+directive 
+includes the file in the CSS; so no extra HTTP call is required at runtime!, You do not need to specify a 
+file extension, Sass automatically assumes that you mean a .sass or .scss file. 
+You can also import CSS files. The , 
+directive imports the file and any variables or mixins defined in the imported 
+file can then be used in the main file.,You can import as many files as you need in the main file:,Let's look at an example: Let's assume we have a reset file called ""reset.scss"", that looks like this:,and now we want to import the ""reset.scss"" file into another file called ""standard.scss"".,Here is how we do it: It is normal to add the , 
+directive at the top of a file; this way its content will have a global scope:,So, when the ""standard.css"" file is transpiled, the CSS will look like this:,By default, Sass transpiles all the .scss files directly. However, when you want to 
+import a file, you do not need the file to be transpiled directly.,Sass has a mechanism for this: If you start the filename with an underscore, Sass will not transpile it. Files named this way are called partials in 
+Sass.,So, a partial Sass file is named with a leading underscore:,The following example shows a partial Sass file named ""_colors.scss"". 
+(This file will not be transpiled directly to ""colors.css""):,Now, if you import the partial file, omit the underscore. Sass understands 
+that it should 
+import the file ""_colors.scss"":",,,
+Sass ,Introduction,"What You Should Already Know,What is Sass?,Why Use Sass?,A Simple Example why Sass is Useful,How Does Sass Work?,Sass File Type,Sass Comments","Sass Example,Sass Example","Before you continue you should have a basic understanding of the following:,If you want to study these subjects first, find the tutorials on our
+,.,Stylesheets are getting larger, more complex, 
+and harder to maintain. This is where a CSS pre-processor can help.,Sass lets 
+you use features that do not exist in CSS, like variables, nested rules, mixins, 
+imports, 
+inheritance, built-in functions, and other stuff.,Let's say we have a website with three main colors:,So, how many times do you need to type those HEX values? A LOT of times. And 
+what about variations of the same colors? ,Instead of typing the above values a lot of times, you can use Sass and write this:,So, when using Sass, and the primary color changes, you only need to change 
+it in one place.,A browser does not understand Sass code. Therefore, you will need a Sass 
+pre-processor to convert Sass code into standard CSS.,This process is called transpiling. So, you need to give a transpiler 
+(some kind of program) some Sass code and then get some CSS code back.,Sass files has the "".scss"" file extension. ,Sass supports standard CSS comments ,, 
+and in addition it supports inline comments ,:","HTML,CSS, stands for ,yntactically ,wesome
+  ,tyle,heet,Sass is an extension to CSS,Sass is a CSS pre-processor,Sass is completely compatible with all versions of CSS,Sass reduces repetition of CSS and therefore saves time,Sass was designed by Hampton Catlin and developed by Natalie Weizenbaum in 
+  2006,Sass is free to download and use",,
+Sass ,Nested Rules and Properties,"Sass Nested Rules,Sass Nested Properties","Example,Example","Sass lets you nest CSS selectors in the same way as HTML.,Look at an example of some Sass code for a site's navigation:,Notice that in Sass, the ,, 
+,, and , selectors are nested inside the , selector.,While in CSS, the rules are defined one by one (not nested):,Because you can nest properties in Sass, it is cleaner and easier to read 
+than standard CSS.,Many CSS properties have the same prefix, like font-family, font-size and 
+font-weight or text-align, text-transform and text-overflow.,With Sass you can write them as nested properties:,The Sass transpiler will convert the above to normal CSS:",,,
+Sass ,Variables,"Sass Variables,Sass Variable Scope,Using Sass !global",,"Variables are a way to store information that you can re-use later.,With Sass, you can store information in variables, like:,Sass uses the $ symbol, followed by a name, to declare variables:,The following example declares 4 variables named myFont, myColor, myFontSize, and myWidth.
+After the variables are declared, you can use the variables wherever you want:,So, when the Sass file is transpiled, it takes the variables (myFont, myColor, 
+etc.) and outputs normal CSS with the variable values placed in the CSS, like 
+this:,Sass variables are only available at the level of nesting where they are defined.,Look at the following example:,Will the color of the text inside a , tag be red or green? It will be red!,The other definition, $myColor: green; is inside the 
+, rule, and will only 
+be available there!,So, the CSS output will be:,Ok, that is the default behavior for variable scope.,The default behavior for variable scope can be overridden by using the 
+, switch., 
+, indicates that a variable is global, 
+which means that it is accessible on all levels.,Look at the following example (same as above; but with 
+, added):,Now the color of the text inside a , tag will be green!,So, the CSS output will be:","strings,numbers,colors,booleans,lists,nulls",,
+Sass ,Installation,"System Requirements for Sass,Official Sass Web Site,Install Sass",,"Read more about Sass at the official Sass web site:
+,There are several ways to install Sass in your system. There are many 
+applications that will get you up and running with Sass in a few minutes for 
+Mac, Windows, and Linux. Some of these are free, but some are paid apps.,You can read more about them here:
+"," - Sass is platform independent, - Sass works in Edge/IE (from IE 8), 
+  Firefox, Chrome, Safari, Opera, - Sass is based on Ruby",,
+CSS ,Flexbox,"CSS Flexbox Layout Module,Browser Support,Flexbox Elements",Example,"
+,
+,Before the Flexbox Layout module, there were four layout modes:,The Flexible Box Layout Module, makes it easier to design 
+flexible responsive layout structure without using float or positioning.,The flexbox properties are supported in all modern browsers.,To start using the Flexbox model, you need to first define a flex container.,The element above represents a flex container (the blue area) with three flex items.","Block, for sections in a webpage,Inline, for text,Table, for two-dimensional table data,Positioned, for explicit position of an element","
+<div 
+  class=""flex-container"">,  <div>1</div>,  <div>2</div>,  <div>3</div>,</div>
+",
+CSS ,Media Queries - Examples,"CSS Media Queries - More Examples,Media Queries For Menus,Media Queries For Columns,Hide Elements With Media Queries,Change Font Size With Media Queries,Flexible Image Gallery,Flexible Website,Orientation: Portrait / Landscape,Min Width to Max Width,CSS @media Reference","Example,Example,Example,Example,Example,Example,Example,Example,Example,Example,Example","Let us look at some more examples of using media queries.,Media queries are a popular technique for delivering a tailored style sheet to different devices. To demonstrate a simple example, we can change the background color for different devices:,In this example, we use media queries to create a responsive navigation menu, that varies 
+in design on different screen sizes.,A common use of media queries, is to create a flexible layout. In this example, we create a layout that varies between four, two and full-width columns, depending on different screen sizes:,Another common use of media queries, is to hide elements on different screen sizes:,You can also use media queries to change the font size of an element on 
+different screen sizes:,In this example, we use media queries together with flexbox to create a responsive image gallery:,In this example, we use media queries together with flexbox to create a responsive website, containing a flexible navigation bar and flexible content.,Media queries can also be used to change layout of a page depending on the 
+orientation of the browser.,You can have a set of CSS properties that will only 
+apply when the browser window is wider than its height, a so called ""Landscape"" 
+orientation: ,You can also use the , values to set a minimum width and a maximum width.,For example, when the browser's width is between 600 and 900px, change the 
+appearance of a <div> element:, In the example below, we add an additional media query to our already 
+existing one using a comma (this will behave like an OR operator):,For a full overview of all the media types and features/expressions, please look at the
+,., To learn more about responsive web design (how to target different devices and screens), using media query breakpoints, read our ,.",,,
+CSS ,Media Queries,"CSS2 Introduced Media Types,CSS3 Introduced Media Queries,Browser Support,Media Query Syntax,CSS3 Media Types,Media Queries Simple Examples,CSS @media Reference ","Example,Example","The , rule, introduced in CSS2, made it possible to define different style rules for different media types.,Examples: You could have one set of style rules for computer screens, one for 
+printers, one for handheld devices, one for television-type devices, and so on.,Unfortunately these media types never got a lot of support by devices, other 
+than the print media type.,Media queries in CSS3 extended the CSS2 media types idea: Instead of looking for a type of device, 
+they look at the capability of the 
+device.,Media queries can be used to check many things, such as:,Using media queries are a popular technique for delivering a tailored style 
+sheet to desktops, laptops, tablets, and mobile phones (such as iPhone and Android phones).,The numbers in the table specifies the first browser version that fully supports the , rule.,A media query consists of a media type and can contain one or more 
+expressions, which resolve to either true or false.,The result of the query is 
+true if the specified media type matches the type of device the document is 
+being displayed on and all expressions in the media query are true. When a media query is true, the corresponding style sheet or style rules are 
+applied, following the normal cascading rules.,Unless you use the not or only operators, the media type is optional and the
+, type will be implied.,You can also have different stylesheets for different media:,One way to use media queries is to have an alternate CSS section right inside your style sheet.,The following example changes the background-color to lightgreen if the 
+viewport is 480 pixels wide or wider (if the viewport is less than 
+480 pixels, the background-color will be pink):,The following example shows a menu that will float to the left of the page if 
+the viewport is 480 pixels wide or wider (if the viewport is less than 
+480 pixels, the menu will be on top of the content):,For a full overview of all the media types and features/expressions, please look at the
+,.","width and height of the viewport,width and height of the device,orientation (is the tablet/phone in landscape or portrait mode?),resolution",,
+CSS ,Box Sizing,"CSS Box Sizing,Without the CSS box-sizing Property,With the CSS box-sizing Property,CSS Box Sizing Property","Example,Example,Example","The CSS , property allows us to include the padding and border in 
+an element's total width and height.,By default, the width and height of an element is calculated like this:,width + padding + border = actual width of an element,
+height + padding + border = actual height of an element,This means: When you set the width/height of an element, the element often appears 
+bigger than you have set (because the element's border and padding are added to the element's specified width/height).,The following illustration shows two <div> elements with the same 
+specified width and height:,The two <div> elements above end up with different sizes in the result 
+(because div2 has a padding 
+specified):,The , property solves 
+this problem.,The , property allows us to include the padding and border in 
+an element's total width and height.,If you set , on an element, padding and border are 
+included in the width and height:,Here is the same example as above, with , 
+added to both <div> elements:,Since the result of using the , is so much better, many developers want all elements on their 
+pages to work this way.,The code below ensures that all elements are sized in this more intuitive way. 
+Many browsers already use , for 
+many form elements (but not all - which is why 
+inputs and text areas look different at width: 100%;). ,Applying this to all elements is safe and wise:",,,
+CSS ,User Interface,"CSS User Interface,Browser Support,CSS Resizing,CSS Outline Offset,CSS User Interface Properties","Example,Example,Example,Example,Example","In this chapter you will learn about the following CSS user interface properties:,The numbers in the table specify the first browser version that fully supports the property.,The , property specifies if (and how) an element should be resizable by the user.,The following example lets the user resize only the width of a <div> element:,The following example lets the user resize only the height of a <div> element:,The following example lets the user resize both the height and width of a <div> element:,In many browsers, <textarea> is resizable by default. Here, we have used the resize property to disable the resizability:,The , property adds space between an outline and the edge or 
+border of an element.,The following example uses the , property to add space 
+between the border and the outline:,The following table lists all the user interface properties:",,,
+CSS ,Multiple Columns,"CSS Multi-column Layout,CSS Multi-column Properties,Browser Support,CSS Create Multiple Columns,CSS Specify the Gap Between Columns,CSS Column Rules,Specify How Many Columns an Element Should Span,Specify The Column Width,CSS Multi-columns Properties","Example,Example,Example,Example,Example,Example,Example,Example","The CSS multi-column layout allows easy definition of multiple columns of 
+text - just like in newspapers:,In this chapter you will learn about the following multi-column properties:,The numbers in the table specify the first browser version that fully supports the property.,The , property specifies the number of columns an element should 
+be divided into.,The following example will divide the text in the <div> element into 3 
+columns: ,The , property specifies the gap between the columns.,The following example specifies a 40 pixels gap between the columns:,The , property specifies the style of the rule between 
+columns:,The , property specifies the width of the rule between columns:,The , property specifies the color of the rule between columns:,The , property is a shorthand property for setting all the column-rule-* properties above. ,The following example sets the width, style, and color of the rule between columns:,The , property specifies how many columns an element should span across.,The following example specifies that the <h2> element should span across all columns:,The , property specifies a suggested, optimal width for the columns.,The following example specifies that the suggested, optimal width for the columns 
+should be 100px:,The following table lists all the multi-columns properties: ",,,
+CSS ,Buttons,"Basic Button Styling,Button Colors,Button Sizes,Rounded Buttons,Colored Button Borders,Hoverable Buttons,Shadow Buttons,Disabled Buttons,Button Width,Button Groups,Bordered Button Group,Vertical Button Group,Button on Image,Animated Buttons","Example,Example,Example,Example,Example,Example,Example,Example,Example,Example,Example,Example,Example,Example,Example,Example,Example","Learn how to style buttons using CSS., ,Use the , property to change the background color of 
+a 
+button:,Use the , property to change the font size of a button:,Use the , property to change the padding of a button:,Use the , property to add rounded corners to a button:,Use the , property to add a colored border to a button:,Use the , selector to change the style of a button when you move the 
+mouse over it., Use the , property to determine the 
+speed of the ""hover"" effect:,Use the , property to add shadows to a button:,Use the , property to add transparency to a button (creates a 
+""disabled"" look)., You can also add the , property with a value of 
+""not-allowed"", which will display a ""no parking sign"" when you mouse over the 
+button:,By default, the size of the button is determined by its text content (as wide as its 
+content). Use the , property to change the width of a button:,Remove margins and add , to each button to create a button group:,Use the , property to create a bordered button 
+group:,Use , instead of , to group the buttons below each other, instead of side by side:",,,
+CSS Variables - The var() Function,,"CSS Variables,The Traditional Way,Syntax of the var() Function,How var() Works,Browser Support,CSS var() Function","Example,Example,Example","The , function is used to insert the value of a 
+CSS variable.,CSS variables have access to the DOM, which means that you can create 
+variables with local or global scope, change the variables with JavaScript, and 
+change the variables based on media queries.,A good way to use CSS variables is when it comes to the colors of your 
+design. Instead of copy and paste the same colors over and over again, you can 
+place them in variables.,The following example shows the traditional way of defining some colors in a style sheet 
+(by defining the colors to use, for each specific element):,The , function is used to insert the value of a 
+CSS variable.,The syntax of the , function is as follows:, The variable name must begin with two dashes (--) and it is case sensitive!,First of all: CSS variables can have a global or local scope.,Global variables can be accessed/used through the entire document, while 
+local variables can be used only inside the selector where it is declared.,To create a variable with global scope, declare it inside the ,  
+selector. The , selector matches the document's root element.,To create a variable with local scope, declare it inside the selector that is going to use it.,The following example is equal to the example above, but here we use the , function.,First, we declare two global variables (--blue and --white). Then, we use the 
+, function to insert the value of the variables later in the style sheet:,Advantages of using var() are: ,To change the blue and white color to a softer blue and white, you just need 
+to change the two variable values:,The numbers in the table specify the first browser version that fully supports the 
+, function.","makes the code easier to read (more understandable),makes it much easier to change the color values",,
+CSS ,Pagination Examples,"Simple Pagination,Active and Hoverable Pagination,Bordered Pagination,Pagination Size,Centered Pagination,More Examples,Breadcrumbs","Example,Example,Example,Example,Example,Example,Example,Example,Example,Example,Example","Learn how to create a responsive pagination using CSS.,If you have a website with lots of pages, you may wish to add some sort of 
+pagination to each page:,Highlight the current page with an , 
+class, and use the , 
+selector to change the color of each page link when moving the mouse over them:,Add the , property if you want a rounded ""active"" and ""hover"" button:,Add the , property to the page links to create a transition effect on hover:,Use the , property to add borders to the pagination:, Add rounded borders to your first and last link in the 
+pagination:, Add the , property if you do not want to group the page links:,Change the size of the pagination with the , property:,To center the pagination, wrap a container element (like <div>) around it with ,Another variation of pagination is so-called ""breadcrumbs"":",Italy,,
+CSS ,Masking,"The CSS mask-image Property,Browser Support,Use an Image as the Mask Layer,Another Example,Use Gradients as the Mask Layer,Use SVG as the Mask Layer,CSS Masking Properties","Example,Example,Example,Example,Example,Example,Example,Example,Example","With CSS masking you create a mask layer to place over an 
+element to partially or fully hide portions of the element.,The CSS , property specifies a mask 
+layer 
+image.,The mask layer image can be a PNG image, an SVG image, a ,, or an 
+,. , Most browsers only have partial support for CSS 
+masking. You will need to use the -webkit- prefix in addition to the standard 
+property in most browsers.,The numbers in the table below specify the first browser version that fully supports the property. Numbers followed by -webkit- specify the first version that worked with a prefix.,To use a PNG or an SVG image as the mask layer, use a url() value to pass in the mask 
+layer image.,The mask image needs to have a transparent or semi-transparent area. Black 
+indicates fully transparent.,Here is the mask image (a PNG image) we will use:,Here is an image from Cinque Terre, in Italy:,Now, we apply the mask image (the PNG image above) as the mask layer for the image from Cinque 
+Terre, Italy:,The , property specifies the image 
+to be used as a mask layer for an element.,The , property specifies if or how 
+a mask image will be repeated. The , 
+value indicates that the mask image will not be repeated (the mask image will 
+only be shown once).,If we omit the , property, the mask image will be repeated all over the
+image from Cinque Terre, Italy:,CSS linear and radial gradients can also be used as mask images.,Here, we use a linear-gradient as the mask layer for our image. This linear 
+gradient goes from top (black) to bottom (transparent):,Here, we use a linear-gradient along with text masking as the mask layer for 
+our image:,Here, we use a radial-gradient (shaped as a circle) as the mask layer for our image:,Here, we use a radial-gradient (shaped as an ellipse) as the mask layer for 
+our image:,The SVG , element can be used inside an 
+SVG graphic to create masking effects.,Here, we use the SVG , element to create different mask layers for 
+our image:,The following table lists all the CSS masking properties:",,"
+    <svg width=""600"" height=""400"">,  <mask id=""svgmask1"">,    
+    <polygon fill=""#ffffff"" points=""200 0, 400 400, 0 400""></polygon>,  
+    </mask>,  <image xmlns:xlink=""http://www.w3.org/1999/xlink"" 
+    xlink:href=""img_5terre.jpg"" mask=""url(#svgmask1)""></image>,</svg>,
+    <svg width=""600"" height=""400"">,  <mask id=""svgmask2"">,    
+    <polygon fill=""#ffffff"" points=""100,10 40,198 190,78 10,78 
+    160,198""></polygon>,  </mask>,  <image xmlns:xlink=""http://www.w3.org/1999/xlink"" 
+    xlink:href=""img_5terre.jpg"" mask=""url(#svgmask2)""></image>,
+    </svg>,
+    <svg width=""600"" height=""400"">,  <mask 
+    id=""svgmask3"">,    <circle fill=""#ffffff"" cx=""75"" cy=""75"" 
+    r=""75""></circle>,    <circle fill=""#ffffff"" cx=""80"" 
+    cy=""260"" r=""75""></circle>,    <circle fill=""#ffffff"" 
+    cx=""270"" cy=""160"" r=""75""></circle>,  </mask>,  <image 
+    xmlns:xlink=""http://www.w3.org/1999/xlink"" xlink:href=""img_5terre.jpg"" 
+    mask=""url(#svgmask3)""></image>,</svg>",
+CSS ,The object-position Property,"The Image,Using the object-position Property,CSS Object-* Properties","Example,Example,Example","The CSS , property 
+is used to specify how an <img> or <video> should be positioned 
+within its container.,Look at the following image from Paris, which is 400x300 pixels:,Next, we use , to keep the 
+aspect ratio and to fill the given dimension. However, the image will be clipped to fit, 
+like this:,Let's say that the part of the image that is shown, is not positioned as we want. To 
+position the image, we will use the , property.,Here we will use the , property 
+to position the image so that the great old building is in 
+center:,Here we will use the , property 
+to position the image so that the famous Eiffel Tower is in 
+center:,The following table lists the CSS object-* properties:",,,
+CSS ,Image Reflection,"CSS Image Reflections,Browser Support,Examples,CSS Reflection Offset,CSS Reflection With Gradient","Example,Example,Example,Example","In this chapter you will learn how to reflect an image.,The , property is used to create an image reflection.,The value of the , property 
+can be: ,, ,,
+, , or ,.,The numbers in the table specify the first browser version that fully supports the property.,Numbers followed by -webkit- specify the first version that worked with a 
+prefix.,To specify the gap between the image and the reflection, add the size of the 
+gap to the , property.,We can also create a fade-out effect on the reflection.",,,
+CSS ,Styling Images,"Rounded Images,Thumbnail Images,Responsive Images,Center an Image,Polaroid Images / Cards,Transparent Image,Image Text,Image Filters,Image Hover Overlay,Flip an Image,Responsive Image Gallery,Image Modal (Advanced)","Example,Example,Example,Example,Example,Example,Example,Example,Example,Example,Example,Example,Example,Example,Example,Example,Example,Example,Example","Learn how to style images using CSS.,Use the , property to create rounded images:,Use the , property to create thumbnail images.,Responsive images will automatically adjust to fit the size of the screen.,Resize the browser window to see the effect:,If you want an image to scale down if it has to, but never 
+scale up to be larger than its original size, add the following:, Read more about Responsive Web Design in our 
+,.,To center an image, set left and right margin to , and make it into a , element:,The , property can take a value from 0.0 - 1.0. The lower value, the more transparent:,How to position text in an image:,The CSS , property adds visual effects (like blur and saturation) to an element., The filter property is not supported in Internet 
+Explorer or Edge 12., Go to our , to learn more about CSS filters.,Create an overlay effect on hover:,Move your mouse over the image:,CSS can be used to create image galleries. This example use 
+media queries to re-arrange the images on different screen sizes. Resize the 
+browser window to see the effect:, Read more about Responsive Web Design in our 
+,.,This is an example to demonstrate how CSS and JavaScript can work together.,First, use CSS to create a modal window (dialog box), and hide it by 
+default.,Then, use a JavaScript to show the modal window and to display the  
+image inside the modal, when a user clicks on the image:",,,
+CSS ,Tooltip,"Demo: Tooltip Examples,Basic Tooltip,Positioning Tooltips,Tooltip Arrows,Fade In Tooltips (Animation)","Example,Right Tooltip,Left Tooltip,Top Tooltip,Bottom Tooltip,Bottom Arrow,Top Arrow,Left Arrow,Right Arrow,Example","Create tooltips with CSS.,A tooltip is often used to specify extra information about something when the 
+user moves the mouse pointer over an element:,Create a tooltip that appears when the user moves the mouse over an element:, Use a container element (like <div>) and add the 
+, class to it. When the user mouse over this <div>, it will show the 
+tooltip text.,The tooltip text is placed inside an inline element (like <span>) with ,., The , class use ,, 
+which is needed to position the tooltip text (,).
+, See examples below on how to position the tooltip.,The , class holds the actual tooltip text. It is 
+hidden by default, and will be visible on hover (see below). We have also added 
+some basic styles to it: 120px width, black background color, white text color, 
+centered text, and 5px top and bottom padding. ,The CSS , property is used to add rounded corners to the tooltip 
+text.,The , selector is used to show the tooltip text when the user moves the 
+mouse over the <div> with ,.,In this example, the tooltip is placed to the right (,) of the ""hoverable"" 
+text (<div>). Also note that , is used to place it in the middle of its container element. 
+We use the number , because the tooltip text has a top and 
+bottom padding of 
+5px. If you increase its padding, also increase the value of the , property to 
+ensure that it stays in the middle (if this is something you want). The same 
+applies if you want the tooltip placed to the left.,If you want the tooltip to appear on top or on the bottom, see examples 
+below. Note that we use the , property with a value of minus 60 
+pixels. This is to center the tooltip above/below the hoverable text. It is set 
+to the half of the tooltip's width (120/2 = 60).,To create an arrow that should appear from a specific side of the tooltip, add ""empty"" 
+content after 
+tooltip, with the pseudo-element class , together with the , 
+property. The arrow itself is created using borders. This will make the tooltip 
+look like a speech bubble.,This example demonstrates how to add an arrow to the bottom of the tooltip:,Position the arrow inside the tooltip: , will place the arrow at the 
+bottom of the tooltip. , will center the arrow., The , property specifies the size of the 
+arrow. If you change this, also change the , value to the same. This 
+will keep the arrow centered.,The , is used to transform the content into an arrow. We set the 
+top border to black, and the rest to transparent. If all sides were black, you 
+would end up with a black square box.,This example demonstrates how to add an arrow to the top of the tooltip. 
+Notice that we set the bottom border color this time:,This example demonstrates how to add an arrow to the left of the tooltip:,This example demonstrates how to add an arrow to the right of the tooltip:,If you want to fade in the tooltip text when it is about to be visible, you 
+can use the CSS , property together with the , 
+property, and go from being completely invisible to 100% visible, in a number of specified seconds 
+(1 second in our example):",,,
+CSS ,Animations,"CSS Animations,Browser Support for Animations,What are CSS Animations?,The @keyframes Rule,Delay an Animation,Set How Many Times an Animation Should Run,Run Animation in Reverse Direction or Alternate Cycles,Specify the Speed Curve of the Animation,Specify the fill-mode For an Animation,Animation Shorthand Property,CSS Animation Properties","Example,Example,Example,Example,Example,Example,Example,Example,Example,Example,Example,Example,Example,Example,Example,Example","CSS allows animation of HTML elements without using JavaScript or Flash!,In this chapter you will learn about the following properties:,The numbers in the table specify the first browser version that fully supports the property.,An animation lets an element gradually change from one style to another.,You can change as many CSS properties you want, as many times as you want.,To use CSS animation, you must first specify some keyframes for the 
+animation.,Keyframes hold what styles the element will have at certain times.,When you specify CSS styles inside the ,
+rule, the animation will gradually change from the current style to the new style 
+at certain times.,To get an animation to work, you must bind the animation to an element.,The following example binds the ""example"" animation to the <div> element. 
+The animation will last for 4 seconds, and it will gradually change the 
+background-color of the <div> element from ""red"" to ""yellow"":, The , property 
+defines how long an animation should take to complete. If the , property is not specified, 
+no animation will occur, because 
+the default value is 0s (0 seconds). ,In the example above we have specified when the style will change by using 
+the keywords ""from"" and ""to"" (which represents 0% (start) and 100% (complete)).,It is also possible to use percent. By using percent, you can add as many 
+style changes as you like.,The following example will change the background-color of the <div> 
+element when the animation is 25% complete, 50% complete, and again when the animation is 100% complete:,The following example will change both the background-color and the position of the <div> 
+element when the animation is 25% complete, 50% complete, and again when the animation is 100% complete:,The , property specifies a delay for the start of an animation.,The following example has a 2 seconds delay before starting the animation:,Negative values are also allowed. If using negative values, the animation 
+will start as if it had already been playing for , seconds.,In the following example, the animation will start as if it had already been 
+playing for 2 seconds:,The , property specifies the number of times an animation should run.,The following example will run the animation 3 times before it stops:,The following example uses the value ""infinite"" to make the animation 
+continue for ever:,The , property specifies 
+whether an animation should be played forwards, backwards or in alternate 
+cycles.,The animation-direction property can have the following values:,The following example will run the animation in reverse direction (backwards):,The following example uses the value ""alternate"" to make the animation 
+run forwards first, then backwards:,The following example uses the value ""alternate-reverse"" to make the animation 
+run backwards first, then forwards:,The , property specifies the speed curve of the 
+animation.,The animation-timing-function property can have the following values:,The following example shows some of the different speed curves that can be used:,CSS animations do not affect an element before the first keyframe is played 
+or after the last keyframe is played. The animation-fill-mode property can 
+override this behavior.,The , property specifies a 
+style for the target element when the animation is not playing (before it 
+starts, after it ends, or both).,The animation-fill-mode property can have the following values:,The following example lets the <div> element retain the style values from the 
+last keyframe when the animation ends:,The following example lets the <div> element get the style values set by the 
+first keyframe before the animation starts (during the animation-delay period):,The following example lets the <div> element get the style values set 
+by the first keyframe before the animation starts, and retain the style values 
+from the last keyframe when the animation ends:,The example below uses six of the animation properties:,The same animation effect as above can be achieved by using the shorthand 
+, property:,The following table lists the @keyframes rule and all the CSS animation properties:"," - The animation is played as normal 
+(forwards). This is default, - The animation is played in 
+reverse direction (backwards),- The animation is played 
+forwards first, then backwards, - The animation is played 
+backwards first, then forwards, - Specifies an animation with a slow start, then fast, then end slowly (this is default), - Specifies an animation with the same speed from start to end, - Specifies an animation with a slow start, - Specifies an animation with a slow end, - Specifies an animation with a slow start and end, - Lets you define your own values in a cubic-bezier function, - Default value. Animation will not 
+apply any styles to the element before or after it is executing, - The element will retain the 
+style values that is set by the last keyframe (depends on animation-direction 
+and animation-iteration-count), - The element will get the style 
+values that is set by the first keyframe (depends on animation-direction), and 
+retain this during the animation-delay period, - The animation will follow the rules 
+for both forwards and backwards, extending the animation properties in both 
+directions",,
+CSS ,The object-fit Property,"The CSS object-fit Property,Using object-fit: cover;,Using object-fit: contain; ,Using object-fit: fill; ,Using object-fit: none; ,Using object-fit: scale-down; ,Another Example, CSS object-fit More Examples,CSS Object-* Properties","Example,Example,Example,Example,Example,Example,Example,Example,Example","The CSS , property is used to specify how an
+<img> or <video> should be resized to fit its container.,The CSS , property is used to specify how an <img> or <video> should 
+be resized to fit its container.,This property tells the content to fill the container in a variety of ways; such as 
+""preserve that aspect ratio"" or ""stretch up and take up as much space as 
+possible"".,Look at the following image from Paris. This image is 400 pixels wide and 300 pixels high:,However, if we style the image above to be half its width (200 pixels) and 
+same height (300 pixels), it will look like this:,We see that the image is being squished to fit the container of 200x300 pixels 
+(its original aspect ratio is destroyed).,Here is where the , property comes 
+in. The , property can take one of the 
+following values:,If we use , the image keeps its aspect ratio 
+and fills the given dimension. The image will be clipped to fit:,If we use , the image 
+keeps its aspect ratio, but is resized to fit within the given dimension:,If we use , the image is 
+resized to fill the given dimension. If necessary, the image will be 
+stretched or squished to fit:,If we use , the image is not 
+resized:,If we use , the image is 
+scaled down to the smallest version of , or ,:,Here we have two images and we want them to fill the width of 50% of the browser window and 100% of the height.,In the following example we do NOT use ,, so when we resize the browser window, the aspect ratio of the images will be destroyed:,In the next example, we use ,, so when we resize the browser window, the aspect ratio of the images 
+is preserved:,The following example demonstrates all the possible values of the , property 
+in one example:,The following table lists the CSS object-* properties:"," - This is default. The image is resized to fill the 
+  given dimension. If necessary, the image will be stretched or squished to fit, - The image 
+keeps its aspect ratio, but is resized to fit within the given dimension, - The image keeps its aspect ratio 
+  and fills the given dimension. The image will be clipped to fit, - The image is not resized, - the image is 
+  scaled down to the smallest version of , or ",,
+CSS ,Transitions,"CSS Transitions,Browser Support for Transitions,How to Use CSS Transitions?,Change Several Property Values,Specify the Speed Curve of the Transition,Delay the Transition Effect,Transition + Transformation,More Transition Examples,CSS Transition Properties","Example,Example,Example,Example,Example,Example,Example,Example","CSS transitions allows you to change property values smoothly, over a given duration.,In this chapter you will learn about the following properties:,The numbers in the table specify the first browser version that fully supports the property.,To create a transition effect, you must specify two things:, If the duration part is not specified, the transition will have no effect, because the default value is 0.,The following example shows a 100px * 100px red <div> element. The <div> 
+element has also specified a transition effect for the width property, with a duration of 2 seconds:,The transition effect will start when the specified CSS property (width) changes value.,Now, let us specify a new value for the width property when a user mouses over the <div> element:,Notice that when the cursor mouses out of the element, it will gradually change back to its original style.,The following example adds a transition effect for both the width and height property, with a duration 
+of 2 seconds for the width and 4 seconds for the height:,The , property specifies the speed curve of the transition effect.,The transition-timing-function property can have the following values:,The following example shows some of the different speed curves that can be used:,The , property specifies a delay (in seconds) for the transition effect.,The following example has a 1 second delay before starting:,The following example adds a transition effect to the transformation:,The CSS transition properties can be specified one by one, like this:,or by using the shorthand property ,:,The following table lists all the CSS transition properties:","the CSS property you want to add an effect to,the duration of the effect, - specifies a transition effect with a slow start, then fast, then end slowly (this is default), - specifies a transition effect with the same speed from start to end, - specifies a transition effect with a slow start, - specifies a transition effect with a slow end, - specifies a transition effect with a slow start and end, - lets you define your own values in a cubic-bezier function",,
+CSS ,3D Transforms,"CSS 3D Transforms,Browser Support,CSS 3D Transforms Methods ,The rotateX() Method,The rotateY() Method,The rotateZ() Method,CSS Transform Properties,CSS 3D Transform Methods","Example,Example,Example","CSS also supports 3D transformations.,Mouse over the elements below to see the difference between a 2D 
+and a 3D transformation:,In this chapter you will learn about the following CSS property:,The numbers in the table specify the first browser version that fully supports the property.,With the CSS , property you can use 
+the following 3D transformation methods:,The , method rotates an element around its X-axis at a given degree:,The , method rotates an element around its Y-axis at a given degree:,The , method rotates an element around its Z-axis at a given degree:,The following table lists all the 3D transform properties:",,,
+CSS ,2D Transforms,"CSS 2D Transforms,Browser Support,CSS 2D Transforms Methods ,The translate() Method,The rotate() Method,The scale() Method,The scaleX() Method,The scaleY() Method,The skewX() Method,The skewY() Method,The skew() Method,The matrix() Method,CSS Transform Properties,CSS 2D Transform Methods","Example,Example,Example,Example,Example,Example,Example,Example,Example,Example,Example,Example,Example,Example","CSS transforms allow you to move, rotate, scale, and skew elements.,Mouse over the element below to see a 2D transformation:,In this chapter you will learn about the following CSS property:,The numbers in the table specify the first browser version that fully supports the property.,With the CSS , property you can use 
+the following 2D transformation methods:,The , method moves an element from its current position (according 
+to the parameters given for the X-axis and the Y-axis).,The following example moves the <div> element 50 pixels to the right, 
+and 100 pixels down from its current position:,The , method rotates an element clockwise or counter-clockwise according to a given degree.,The following example rotates the <div> element clockwise with 20 degrees:,Using negative values will rotate the element counter-clockwise.,The following example rotates the <div> element counter-clockwise with 20 degrees:,The , method increases or decreases the size of an element (according to the parameters given for the width and height).,The following example increases the <div> element to be two times of its original width, and three times of its original height: ,The following example decreases the <div> element to be half of its original width and height: ,The , method increases or decreases the 
+width of an element.,The following example increases the <div> element to be two times of its original width: ,The following example decreases the <div> element to be half of its original width: ,The , method increases or decreases the 
+height of an element.,The following example increases the <div> element to be three times of its original 
+height: ,The following example decreases the <div> element to be half of its original 
+height: ,The , method skews an element along the X-axis by the given angle.,The following example skews the <div> element 20 degrees along the 
+X-axis:,The , method skews an element along the Y-axis by the given angle.,The following example skews the <div> element 20 degrees along the Y-axis:,The , method skews an element along the X and Y-axis by the given angles.,The following example skews the <div> element 20 degrees along the X-axis, and 10 degrees along the Y-axis:,If the second parameter is not specified, it has a zero value. So, the following example skews the <div> element 20 degrees along the X-axis:,The , method combines all the 2D transform methods into one.,The matrix() method take six parameters, containing mathematic functions, 
+which allows you to rotate, scale, move (translate), and skew elements.,The parameters are as follow: matrix(scaleX(),skewY(),skewX(),scaleY(),translateX(),translateY()),The following table lists all the 2D transform properties:",,,
+CSS ,Web Fonts,"The CSS @font-face Rule,Different Font Formats,Browser Support for Font Formats,Using The Font You Want,Using Bold Text,CSS Font Descriptors","Example,Example","Web fonts allow Web designers to use fonts that are not installed on the user's computer.,When you have found/bought the font you wish to use, just include the font 
+file on your web server, and it will be automatically downloaded to the user when needed.,Your ""own"" fonts are defined within the CSS , rule.,TrueType is a font standard developed in the late 1980s, by Apple and Microsoft. TrueType is the most common font format for both the Mac OS and Microsoft 
+Windows operating systems.,OpenType is a format for scalable computer fonts. It was built on TrueType, 
+and is a registered trademark of 
+Microsoft. OpenType fonts are used commonly today on the major 
+computer platforms.,WOFF is a font format for use in web pages. It was developed in 2009, and is 
+now a W3C Recommendation. WOFF is essentially OpenType or TrueType with 
+compression and additional metadata. The goal is to support font distribution 
+from a server to a client over a network with bandwidth constraints.,TrueType/OpenType font that provides better compression than WOFF 1.0.,SVG fonts allow SVG to be used as glyphs when displaying text. The SVG 1.1 
+specification define a font module that allows the creation of fonts within an 
+SVG document. You can also apply CSS to SVG documents, and the @font-face rule 
+can be applied to text in SVG documents.,EOT fonts are a compact form of OpenType fonts designed by Microsoft for use 
+as embedded fonts on web pages.,The numbers in the table specifies the first browser version that fully supports the 
+font format.,*IE: The font format only works when set to be ""installable"".,In the , rule; first define a name for the font (e.g. myFirstFont) and then point to the font file.,To use the font for an HTML element, refer to the name of the font (myFirstFont) through the , property:,You must add another , rule containing descriptors for bold text:,The file ""sansation_bold.woff"" is another font file, that contains the bold characters for the Sansation font.,Browsers will use this whenever a piece of text with the font-family ""myFirstFont"" should render as bold.,This way you can have many , rules for the same font.,The following table lists all the font descriptors that can be defined inside the , rule:",,,
+CSS ,"Text Effects, Overflow, Word Wrap, Line Breaking 
+Rules, and Writing Modes","CSS Text,CSS Text Overflow,CSS Word Wrapping,CSS Word Breaking,CSS Writing Mode,CSS Text Effect Properties","Example,Example,Example,Example,Example","In this chapter you will learn about the following properties:,The CSS , property specifies how overflowed content that is not 
+displayed should be signaled to the user.,It can be clipped:,This is some long text that will not fit in the box,or it can be rendered as an ellipsis (...):,This is some long text that will not fit in the box,The CSS code is as follows:,The following example shows how you can display the overflowed content when hovering over the element:,The CSS , property allows long words to be able to be broken and wrap onto the next line. ,If a word is too long to fit within an area, it expands outside:, This paragraph contains a very long word: thisisaveryveryveryveryveryverylongword. The long word will break and wrap to the next line.,The word-wrap property allows you to force the text to wrap - even if it means splitting it in the middle of a word:, This paragraph contains a very long word: thisisaveryveryveryveryveryverylongword. The long word will break and wrap to the next line.,The CSS code is as follows:,The CSS , property specifies line breaking rules.,This paragraph contains some text. This line will-break-at-hyphens.,This paragraph contains some text. The lines will break at any character.,The CSS code is as follows:,The CSS , property specifies 
+whether lines of text are laid out horizontally or vertically.,Some text with a span element with a , writing-mode.,The following example shows some different writing modes:,The following table lists the CSS text effect properties:",,,
+CSS ,Shadow Effects,"CSS Shadow Effects,CSS Text Shadow,Text shadow effect!,Text shadow effect!,Text shadow effect!,Text shadow effect!,Text shadow effect!,Multiple Shadows,Text shadow effect!,Text shadow effect!,Border around text!","Example,Example,Example,Example,Example,Example,Example,Example","With CSS you can add shadow to text and to elements.,In these chapters you will learn about the following properties:,The CSS , property applies shadow to text.,In its simplest use, you only specify the horizontal shadow (2px) and the vertical shadow (2px):,Next, add a color to the shadow:,Then, add a blur effect to the shadow:,The following example shows a white text with black shadow:,The following example shows a red neon glow shadow:,To add more than one shadow to the text, you can add a comma-separated list of shadows. ,The following example shows a red and blue neon glow shadow:,The following example shows a white text with black, blue, and darkblue shadow:,You can also use the text-shadow property to create a plain border around 
+some text (without shadows):",,,
+CSS ,Gradients,"CSS Linear Gradients,Using Angles,Using Multiple Color Stops,Using Transparency,Repeating a linear-gradient","Example,Example,Example,Example,Example,Example,Example,Example","CSS gradients let you display smooth transitions between two or more specified colors.,CSS defines three types of gradients:,To create a linear gradient you must define 
+at least two color stops. Color stops are the colors you want to render smooth transitions 
+among. You can also set a starting point and a direction (or an angle) along 
+with the gradient effect.,The following example shows a linear gradient that starts at the top. It starts red, transitioning to yellow:,The following example shows a linear gradient that starts from the left. It starts red, transitioning to 
+yellow:,You can make a gradient diagonally by specifying both the horizontal and vertical starting positions.,The following example shows a linear gradient that starts at top left (and 
+goes to bottom right). It starts red, transitioning to yellow:,If you want more control over the direction of the gradient, 
+you can define an angle, instead of the predefined directions (to bottom, to 
+top, to right, to left, to bottom right, etc.). A value of 0deg is equivalent to 
+""to top"". A value of 90deg is equivalent to ""to right"". A value of 
+180deg is equivalent to ""to bottom"".,The following example shows how to use angles on linear gradients:,The following example shows a linear gradient (from top to bottom) with 
+multiple color stops:,The following example shows how to create a linear gradient (from left to 
+right) with the color of the rainbow and some text:,CSS gradients also support transparency, which can be used to create fading effects.,To add transparency, we use the rgba() function to define the color stops. 
+The last parameter in the rgba() function can be a value from 0 to 1, and it 
+defines the transparency of the color: 0 indicates full transparency, 1 
+indicates full color (no transparency).,The following example shows a linear gradient that starts from the left. It starts fully transparent, transitioning to full color red:,The repeating-linear-gradient() function is used to repeat linear gradients:",,,
+CSS , Color Keywords,"The transparent Keyword,The currentcolor Keyword,The inherit Keyword","Example,Example,Example,Example,Example","This page will explain the ,, ,, 
+and , keywords.,The , keyword is used to make a 
+color transparent. This is often used to make a transparent background color for 
+an element.,The , keyword is like a variable 
+that holds the current value of the color property of an element.,This keyword can be useful if you want a specific color to be consistent in an 
+element or a page.,The , keyword specifies that a 
+property should inherit its value from its parent element.,The , keyword can be used for any CSS 
+property, and on any HTML element.",,,
+CSS , Colors,"RGBA Colors,HSL Colors,HSLA Colors,Opacity","Example,Example,Example,Example","CSS supports ,, RGBA 
+values, HSL values, HSLA values, and opacity.,RGBA color values are an extension of RGB color values with an alpha channel - which specifies the opacity 
+for a color.,An RGBA color value is specified with: rgba(red, green, blue, alpha). The alpha parameter is a number between 0.0 
+(fully transparent) and 1.0 (fully opaque).,The following example defines different RGBA colors:,HSL stands for Hue, Saturation and Lightness.,An HSL color value is specified with: hsl(hue, saturation, lightness).,The following example defines different HSL colors:,HSLA color values are an extension of HSL color values with an alpha channel - which specifies the opacity 
+for a color.,An HSLA color value is specified with: hsla(hue, saturation, lightness, alpha), where the 
+alpha parameter defines the opacity. The alpha parameter is a number between 0.0 (fully transparent) and 1.0 (fully opaque).,The following example defines different HSLA colors:,The CSS , property sets the opacity for 
+the whole element (both background color and text will be opaque/transparent).,The , property value must be a number between 0.0 (fully transparent) and 1.0 (fully opaque).,Notice that the text above will also be 
+transparent/opaque!,The following example shows different elements with opacity:","0 (or 360) is red,120 is green,240 is blue",,
+CSS ,Multiple Backgrounds,"CSS Multiple Backgrounds,CSS Background Size,Define Sizes of Multiple Background Images,Full Size Background Image,Hero Image,CSS background-origin Property,CSS background-clip Property,CSS Advanced Background Properties","Example,Example,Example,Example,Example,Example,Example,Example,Example","CSS allows you to add multiple background images for an element, through the 
+, property.,The different background images are separated by commas, and the images are 
+stacked on top of each other, where the first image is closest to the viewer.,The following example has two background images, the first image is a flower 
+(aligned to the bottom and right) and the second image is a paper background (aligned to the top-left corner):,Multiple background images can be specified using either the individual 
+background properties (as above) or the , shorthand property.,The following example uses the , shorthand property (same result as 
+example above):,The CSS , property allows you to specify the size of background images.,The size can be specified in lengths, percentages, or by using one of the two 
+keywords: contain or cover.,The following example resizes a background image to much smaller than the original image (using pixels):,Here is the code:,The two other possible values for , are , 
+and ,.,The , keyword scales the background image to be as large as possible 
+(but both its width and its height must fit inside the content area). As such, depending on the proportions of the background 
+image and the background positioning area, there may be some areas of 
+the background which are not covered by the background image.,The , keyword scales the background image so that the content area is 
+completely covered by the background image (both its width and height are equal to or 
+exceed the content area). As such, some parts of the background image may not be 
+visible in the background positioning area.,The following example illustrates the use of , and ,:,The , property also accepts multiple values for background size 
+(using a comma-separated list), when working with multiple backgrounds.,The following example has three background images specified, with different 
+background-size value for each image:,Now we want to have a background image on a website that covers the entire 
+browser window at all times.,The requirements are as follows:,The following example shows how to do it; Use the <html> element 
+(the <html> element is always at least the height of the browser window). Then set a fixed and centered background on it. 
+Then adjust its size with the 
+background-size property:,You could also use different background properties on a <div> to create a hero image (a large image with text), and place it where you want.,The CSS , property specifies where the background image is 
+positioned.,The property takes three different values:,The following example illustrates the , property:,The CSS , property specifies the painting area of the background.,The property takes three different values:,The following example illustrates the , property:","Fill the entire page with the image (no white space),Scale image as needed,Center image on page,Do not cause scrollbars,border-box - the background image starts from the upper left corner of the border,padding-box - (default) the background image starts from the upper left corner of the padding edge,content-box - the background image starts from the upper left corner of the content,border-box - (default) the background is painted to the outside edge of the border,padding-box - the background is painted to the outside edge of the padding,content-box - the background is painted within the content box",,
+CSS ,Border Images,"CSS border-image Property,CSS border-image - Different Slice Values,CSS Border Image Properties","Example,Example,Example","The CSS , property allows you to specify an image to be used instead of the normal border around an element.,The property has three parts:,We will use the following image (called ""border.png""):,The , property takes the image and slices it into nine sections, 
+like a tic-tac-toe board. It then places the corners at the corners, and the 
+middle sections are repeated or stretched as you specify., For , to work, the element also needs the 
+, property set!,Here, the middle sections of the image are repeated to create the border:,An image as a border!,Here is the code:,Here, the middle sections of the image are stretched to create the border:,An image as a border!,Here is the code:,Different slice values completely changes the look of the border:,Example 1:,border-image: url(border.png) 50 round;,Example 2:,border-image: url(border.png) 20% round;,Example 3:,border-image: url(border.png) 30% round;,Here is the code:",,,
+CSS , Rounded Corners,"CSS border-radius Property,CSS border-radius - Specify Each Corner,CSS Rounded Corners Properties","Example,Example,Example","The CSS 
+, property defines the radius of an 
+element's corners., This property allows you to add rounded corners to 
+elements!,Here are three examples:,1. Rounded corners for an element with a specified background color:,Rounded corners!,2. Rounded corners for an element with a border:,Rounded corners!,3. Rounded corners for an element with a background image:,Rounded corners!,Here is the code:,The , property can have from one 
+to four values. Here are the rules:, (first 
+value applies to top-left corner, second value applies to top-right corner, 
+third value applies to bottom-right corner, and fourth value applies to 
+bottom-left corner): , (first value 
+applies to top-left corner, second value applies to top-right and bottom-left 
+corners, and third value applies to bottom-right corner):, (first value applies 
+to top-left and bottom-right corners, and the second value applies to top-right 
+and bottom-left corners):, (the value applies to all 
+four corners, which are rounded equally:,Here is the code:,You could also create elliptical corners:",,,
+CSS ,Math Functions,"The calc() Function,The max() Function,The min() Function,All CSS Math Functions","Example,Example,Example","The CSS math functions allow mathematical expressions to be 
+used as property values. Here, we will explain the ,, , and , functions.,The , function performs a calculation to be used as the property value.,Let us look at an example:,The , function uses the largest value, 
+from a comma-separated list of values, as the property value.,Let us look at an example:,The , function uses the smallest value, 
+from a comma-separated list of values, as the property value.,Let us look at an example:",,,
+CSS ,The !important Rule,"What is !important?,Important About !important,Maybe One or Two Fair Uses of !important","Example,Example,Example,Example,Example","The , rule in CSS is used to add more importance to a property/value than normal.,In fact, if you use the , rule, it will override ALL previous styling rules for that 
+specific property on that element!,Let us look at an example:,In the example above. all three paragraphs will get a red background 
+color, even though the ID selector and the class selector has a higher 
+specificity. The , rule overrides the , property in both cases.,The only way to override an , 
+rule is to include another , 
+rule on a declaration with the same (or higher) specificity in the source code - and here the problem starts!
+This makes the CSS code confusing and the debugging will be hard, especially if 
+you have a large style sheet!,Here we have created a simple example. It is not very clear, when you look at 
+the CSS source code, which color is considered most important:, It is good to know about the , 
+rule, you might see it in some CSS source code. 
+However, do not use it unless you absolutely have to.,One way to use , is if you have to override 
+a style that cannot be overridden in any other way. This could be if you are 
+working on a Content Management System (CMS) and cannot edit the CSS code. 
+Then you can set some custom styles to override some of the CMS styles.,Another way to use , is: Assume you 
+want a special look for all buttons on a page. Here, buttons are styled with a gray 
+background color, white text, and some padding and border:,The look of a button can sometimes change if we put it inside another element with 
+higher specificity, and the properties get in conflict. Here is an example of this:,To ""force"" all buttons to have the same look, no matter what, we can add the , 
+rule to the properties of the button, like this:",,,
+CSS ,Specificity,"What is Specificity?,Specificity Hierarchy ,How to Calculate Specificity?,More Specificity Rules Examples","Example 1,Example 2,Example 3,Example 4,Example,Example,Example,Example,Example","If there are two or more CSS rules that point to the same 
+element, the selector with the highest specificity value will ""win"", and its 
+style declaration will be applied to that HTML element.,Think of specificity as a score/rank that determines which style declaration 
+are ultimately applied to an element.,Look at the following examples:,Now, look at example 2:,Now, look at example 3:,Now, look at example 4:,Every CSS selector has its place in the specificity hierarchy.,There are four categories which define the specificity level of a selector:,Memorize how to calculate specificity!,Start at 0, add 100 for each ID value, add 10 for each 
+class value (or 
+pseudo-class or attribute selector), add 1 for each element selector or pseudo-element.,The table below shows some examples on how to calculate specificity values:,Consider these three code fragments:,The specificity of A is 1 (one element selector),The specificity of B is 
+101 (one ID reference + one element selector),The specificity of C is 1000 (inline styling),Since the third rule (C) has the highest specificity value (1000), this style 
+declaration will be applied.,- 
+If the same rule is written twice into the external style sheet, then 
+the latest rule wins:, 
+- Look at the following three code lines:,the first rule is more specific than the other two, and will therefore be applied.,The embedded style sheet is closer to the element to be styled. So in the 
+following situation,the latter rule will be applied.,- a class selector such as .intro beats h1, p, div, etc:, - 
+The universal selector (*) and inherited values are ignored!"," - Example: 
+<h1 style=""color: pink;"">, - Example: 
+#navbar, - Example: .test, 
+  :hover, [href], - Example: h1, :before","
+  <html>,<head>,  <style>,    p {color: red;} ,  
+  </style>,</head>,<body>,<p>Hello World!</p>,
+  ,</body>,
+  </html>,
+  <html>,<head>,  <style>,    .test {color: green;}
+  ,    p {color: red;} ,  </style>,</head>,<body>,
+  ,<p class=""test"">Hello World!</p>,</body>,</html>,
+  <html>,<head>,  <style>,    #demo {color: blue;},    
+  .test {color: green;} ,    p {color: red;} ,  
+  </style>,</head>,<body>,<p id=""demo"" class=""test"">Hello 
+  World!</p>,</body>,</html>,
+  <html>,<head>,  <style>,    #demo {color: blue;},    
+  .test {color: green;} ,    p {color: red;} ,  
+  </style>,</head>,<body>,<p id=""demo"" class=""test"" 
+  style=""color: pink;"">Hello World!</p>,</body>,</html>,
+A: h1,B: h1#content,C: <h1 id=""content"" style=""color: 
+  pink;"">Heading</h1>",
+CSS ,Units,"CSS Units,Absolute Lengths,Relative Lengths,Browser Support",Example,"CSS has several different units for expressing a length.,Many CSS properties take ""length"" values, such as ,, ,, ,, 
+,, etc., is a number followed by a length unit, such as ,, 
+,, etc., A whitespace cannot appear between the number and the unit. However, if the value is 
+,, the unit can be omitted.,For some CSS properties, negative lengths are allowed.,There are two types of length units: ,and ,.,The absolute length units are fixed and a length expressed in any of these will appear as exactly that size.,Absolute length units are not recommended for use on screen, because screen sizes vary so much. 
+However, they can be used if the output medium is known, such 
+as for print layout.,* Pixels (px) are relative to the viewing device. For low-dpi devices, 1px is one device pixel (dot) of the display. For printers and high resolution 
+screens 1px implies multiple device pixels.,Relative length units specify a length relative to another length property. 
+Relative length units scales better between different rendering mediums.,The numbers in the table specify the first browser version that fully supports the 
+length unit.",,,
+CSS ,Website Layout,"Website Layout,Header,Navigation Bar,Content,Unequal Columns,Footer,Responsive Website Layout","Example,Example,Example,Example,Example","A website is often divided into headers, menus, content and a footer:,There are tons of different layout designs to choose from. However, the structure above, is one of the most common, and we will take a closer look at it in this tutorial.,A header is usually located at the top of the website (or right below a top navigation menu). It often contains a logo or the website name:,A navigation bar contains a list of links to help visitors navigating through your website:,The layout in this section, often depends on the target users. The most common layout is 
+one (or combining them) of the following:,We will create a 3-column layout, and change it to a 1-column layout on smaller screens:,The main content is the biggest and the most important part of your site.,It is common with , column widths, so that most of the space 
+is reserved for 
+the main content. The side content (if any) is often used as an alternative 
+navigation or to specify information relevant to the main content. Change the widths as you like, only remember that it should add up to 100% in total:,The footer is placed at the bottom of your page. It often contains 
+information like copyright and contact info:,By using some of the CSS code above, we have created a responsive website layout, which varies between two columns and full-width columns depending on screen width:"," (often used for mobile browsers), (often used for tablets and laptops), (only used for desktops)",,
+CSS ,Counters,"Automatic Numbering With Counters,Nesting Counters, CSS Counter Properties","Example,Example,Example","CSS counters are ""variables"" maintained by CSS whose values can 
+be incremented by CSS rules (to track how many times they are used). Counters 
+let you adjust the appearance of content based on its placement in the document.,CSS counters are like ""variables"". The variable values can be incremented by CSS rules 
+(which will 
+track how many times they are used).,To work with CSS counters we will use the following properties:,To use a CSS counter, it must first be created with ,.,The following example creates a counter for the page (in the body selector), 
+then increments the counter value for each <h2> element and adds ""Section <,>:"" 
+to the beginning of each <h2> element:,The following example creates one counter for the page (section) and one 
+counter for each <h1> element (subsection). The ""section"" counter will be 
+counted for each <h1> element with ""Section <,>."", and the ""subsection"" counter will be counted 
+for each <h2> element with ""<,>.<,>"":,A counter can also be useful to make outlined lists because a new 
+instance of a counter is automatically created in child elements. Here we use the 
+, function to insert a string between different levels of nested 
+counters:"," - Creates or resets a counter, - Increments a counter value, - Inserts generated 
+content, or , function - Adds the 
+value of a counter to an element",,
+CSS ,Forms,"Styling Input Fields,Padded Inputs,Bordered Inputs,Colored Inputs,Focused Inputs,Input with icon/image,Animated Search Input,Styling Textareas,Styling Select Menus,Styling Input Buttons,Responsive Form","Example,Example,Example,Example,Example,Example,Example,Example,Example,Example,Example,Example","The look of an HTML form can be greatly improved with CSS:,Use the , property to determine the width of the input field:,The example above applies to all <input> elements. If you only want to 
+style a specific input type, you can use attribute selectors:,Use the , property to add space inside the text field., When you have many inputs after each other, you might 
+also want to add some ,, to add more space 
+outside of them:,Use the , property to change the border size and color, and 
+use the , property to add rounded corners:,If you only want a bottom border, use the , property:,Use the , property to add a background color to the input, and 
+the , property to change the text color:,By default, some browsers will add a blue outline around the input when it gets 
+focus (clicked on). You can remove this behavior by adding , to the input.,Use the , selector to do something with the input field when it gets focus:,If you want an icon inside the input, use the , property and 
+position it with the , property. Also notice that we 
+add a 
+large left padding to reserve the space of the icon:,In this example we use the CSS , property to animate 
+the width of the search input when it gets focus. You will learn more about the , property later, in our , chapter., Use the , property to prevent textareas from being resized (disable the ""grabber"" in the bottom right corner):,For more information about how to style buttons with CSS, read our ,.,Resize the browser window to see the effect. When the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other."," - will only select text fields, - will only select password fields, - will only select number fields,etc..",,
+"CSS , Selectors",Attribute,"Style HTML Elements With Specific Attributes,CSS [attribute] Selector,CSS [attribute=""value""] Selector,CSS [attribute~=""value""] Selector,CSS [attribute|=""value""] Selector,CSS [attribute^=""value""] Selector,CSS [attribute$=""value""] Selector,CSS [attribute*=""value""] Selector,Styling Forms,All CSS Attribute Selectors","Example,Example,Example,Example,Example,Example,Example,Example","It is possible to style HTML elements that have specific attributes or attribute values.,The , selector is used to select elements with a specified 
+attribute.,The following example selects all <a> elements with a target attribute:,The , selector is used to select elements with a specified 
+attribute and value.,The following example selects all <a> elements with a target=""_blank"" attribute:,The , selector is used to select elements with an attribute 
+value containing a specified word.,The following example selects all elements with a title attribute that 
+contains a space-separated list of words, one of which is ""flower"":,The example above will match elements with title=""flower"", title=""summer 
+flower"", and title=""flower new"", but not title=""my-flower"" or title=""flowers"".,The , selector 
+is used to select elements with the specified attribute, whose value can be 
+exactly the specified value, or the specified value followed by a hyphen (-)., The value has to be a whole word, either alone, like 
+class=""top"", or followed by a hyphen( - ), like class=""top-text"".,The , selector 
+is used to select elements with the specified attribute, whose value starts with 
+the specified value.,The following example selects all elements with a class attribute value that 
+starts with ""top"":, The value does not have to be a whole word!,The , selector is used to select elements whose attribute 
+value ends with a specified value.,The following example selects all elements with a class attribute value that 
+ends with ""test"":, The value does not have to be a whole word!  ,The , selector is used to select elements whose attribute 
+value contains a specified value.,The following example selects all elements with a class attribute value that 
+contains ""te"":, The value does not have to be a whole word!  ,The attribute selectors can be useful for styling forms without class or ID:, Visit our , for more examples on how to style forms with CSS.",,,
+CSS ,Image Sprites,"Image Sprites,Image Sprites - Simple Example,Image Sprites - Create a Navigation List,Image Sprites - Hover Effect","Example,Example,Example","An image sprite is a collection of images put into a single image.,A web page with many images can take a long time to load and generates 
+multiple server requests.,Using image sprites will reduce the number of server requests and save 
+bandwidth.,Instead of using three separate images, we use this single image (""img_navsprites.gif""):,With CSS, we can show just the part of the image we need.,In the following example the CSS specifies which part of the ""img_navsprites.gif"" 
+image to show:,This is the easiest way to use image sprites, now we want to expand it by 
+using links and hover effects.,We want to use the sprite image (""img_navsprites.gif"") to create a navigation list.,We will use an HTML list, because it can be a link and also supports a background image:,Now start to position and style for each specific part:,Now we want to add a hover effect to our navigation list.,Our new image (""img_navsprites_hover.gif"") contains three navigation images 
+and three images to use for hover effects:,Because this is one single image, and not six separate files, there will be , when a user hovers over the image.,We only add three lines of code to add the hover effect:,Example explained:"," - Only defines a small transparent image 
+because the src attribute cannot be empty. The displayed image will be the background image we specify in CSS, - Defines the portion of the image we want to use, - Defines the background image and its position (left 0px, top 0px),#navlist {position:relative;} - position is set to relative to allow 
+absolute positioning inside it,#navlist li {margin:0;padding:0;list-style:none;position:absolute;top:0;} 
+- margin and padding are set to 0, list-style is removed, and all list items 
+are absolute positioned,#navlist li, #navlist a {height:44px;display:block;} - the height of all 
+the images are 44px,#home {left:0px;width:46px;} - Positioned all the way to the left, and 
+the width of the image is 46px,#home {background:url(img_navsprites.gif) 0 0;} - 
+Defines the background 
+image and its position (left 0px, top 0px),#prev {left:63px;width:43px;} - Positioned 63px to the 
+right (#home width 46px + some extra space between items), and 
+the width is 43px.,#prev {background:url('img_navsprites.gif') -47px 0;} - Defines the background 
+image 47px to the right (#home width 46px + 1px line 
+divider),#next {left:129px;width:43px;}- Positioned 129px to 
+the right (start of #prev is 63px + #prev width 43px + 
+extra space), and the width is 43px.,#next {background:url('img_navsprites.gif') -91px 0;} - 
+Defines the background 
+image 91px to the right (#home width 46px + 1px 
+line divider + #prev width 43px + 1px line divider ),#home a:hover {background: url('img_navsprites_hover.gif') 0 -45px;} - For all three hover images we specify the same background position, only 45px further down",,
+CSS ,Image Gallery,"Image Gallery,More Examples","Example,Responsive Image Gallery",The following image gallery is created with CSS:,,"
+<html>,
+<head>,
+<style>,
+div.gallery {,
+  margin: 5px;,
+    border: 1px solid #ccc;,
+    float: left;,
+  width: 180px;,
+},
+,
+div.gallery:hover {,
+  border: 1px solid #777;,
+},
+,
+div.gallery img {,
+  width: 100%;,
+  height: auto;,
+},
+,
+div.desc {,
+    padding: 15px;,
+    text-align: center;,
+},
+</style>,
+</head>,
+<body>,
+,
+  <div class=""gallery"">,  <a target=""_blank"" href=""img_5terre.jpg"">,    
+  <img src=""img_5terre.jpg"" alt=""Cinque Terre"" width=""600"" height=""400"">,  
+  </a>,  <div class=""desc"">Add a description of the image here</div>,
+  </div>,<div class=""gallery"">,  <a target=""_blank"" href=""img_forest.jpg"">,    
+  <img src=""img_forest.jpg"" alt=""Forest"" width=""600"" height=""400"">,  
+  </a>,  <div class=""desc"">Add a description of the image here</div>,
+  </div>,<div class=""gallery"">,  <a target=""_blank"" href=""img_lights.jpg"">,    
+  <img src=""img_lights.jpg"" alt=""Northern Lights"" width=""600"" height=""400"">,  
+  </a>,  <div class=""desc"">Add a description of the image here</div>,
+  </div>,<div class=""gallery"">,  <a target=""_blank"" href=""img_mountains.jpg"">,    
+  <img src=""img_mountains.jpg"" alt=""Mountains"" width=""600"" height=""400"">,  
+  </a>,  <div class=""desc"">Add a description of the image here</div>,
+  </div>,
+,
+</body>,
+</html>
+",
+CSS ,Dropdowns,"Demo: Dropdown Examples,Basic Dropdown,Dropdown Menu,Right-aligned Dropdown Content,More Examples","Example,Example,Example,Dropdown Image,Dropdown Navbar","Create a hoverable dropdown with CSS.,Move the mouse over the examples below:,Create a dropdown box that appears when the user moves the mouse over an 
+element., Use any element to open the dropdown content, e.g. a 
+<span>, or a <button> element.,Use a container element (like <div>) to create the dropdown content and add 
+whatever you want inside of it.,Wrap a <div> element around the elements to position the dropdown content 
+correctly with CSS., The , class uses ,, which is needed when we want the 
+dropdown content to be placed right below the dropdown button (using ,).,The , class holds the actual dropdown content. It is hidden by 
+default, and will be displayed on hover (see below). Note the , is set to 160px. Feel free to change 
+this. , If you want the width of the dropdown content to be 
+as wide as the dropdown button, set the , to 100% (and , to 
+enable scroll on small screens).,Instead of using a border, we have used the CSS , property to make the 
+dropdown menu look like a ""card"".,The , selector is used to show the dropdown menu when the user moves the 
+mouse over the dropdown button.,Create a dropdown menu that allows the user to choose an option from a list:,This example is similar to the previous one, except that we add links inside the dropdown box and style them to fit a styled dropdown button:,If you want the dropdown menu to go from right to left, instead of left to right, add ",,"
+<style>,.dropdown {,  position: relative;,  
+display: inline-block;,},.dropdown-content {,  display: 
+none;,  position: absolute;,  
+background-color: #f9f9f9;,  min-width: 160px;,  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);,
+    padding: 
+12px 16px;,  z-index: 1;,},.dropdown:hover 
+.dropdown-content {,  display: block;,},</style>,
+<div class=""dropdown"">,
+  <span>Mouse over me</span>,  
+<div class=""dropdown-content"">,    <p>Hello World!</p>,  </div>,</div>,
+<style>,/* Style The Dropdown Button */,.dropbtn {,  
+background-color: #4CAF50;,  color: white;,  
+padding: 16px;,  font-size: 16px;,  
+border: none;,  cursor: pointer;,},/* The 
+container <div> - needed to position the dropdown content */,.dropdown {,
+    position: relative;,  display: 
+inline-block;,},/* Dropdown Content (Hidden by Default) */,
+.dropdown-content {,  display: none;,  position: 
+absolute;,  background-color: #f9f9f9;,  
+min-width: 160px;,  box-shadow: 
+0px 8px 16px 0px rgba(0,0,0,0.2);,  z-index: 1;,},/* Links inside the dropdown */,
+.dropdown-content a {,  color: black;,  padding: 12px 16px;,  text-decoration: none;,
+    
+display: block;,},/* Change color of dropdown links on hover */,
+.dropdown-content a:hover {background-color: #f1f1f1},/* Show the 
+dropdown menu on hover */,.dropdown:hover .dropdown-content {,  
+display: block;,},/* Change the background color of the dropdown 
+button when the dropdown content is shown */,.dropdown:hover .dropbtn {,  background-color: #3e8e41;,},</style>,
+<div class=""dropdown"">,  <button class=""dropbtn"">Dropdown</button>,  
+<div class=""dropdown-content"">,    <a href=""#"">Link 
+1</a>,    
+<a href=""#"">Link 2</a>,    <a href=""#"">Link 3</a>,  </div>,</div>",
+CSS ,Links,"Styling Links,Text Decoration,Background Color,Link Buttons,More Examples","Example,Example,Example,Example,Example,Example,Example,Example","With CSS, links can be styled in many different ways.,Links can be styled with any CSS property (e.g. ,, ,, 
+,, etc.).,In addition, links can be styled 
+differently depending on what , they are in.,The four links states are: ,When setting the style for several link states, there are some order rules:,The , property is mostly used to remove underlines from links:,The , property can be used to specify a background color for links:,This example demonstrates a more advanced example where we combine several CSS properties to display links as boxes/buttons:"," - a normal, unvisited link, - a link the user has visited, - a link when the user mouses over it, - a link the moment it is clicked,a:hover MUST come after a:link and a:visited,a:active MUST come after a:hover","
+  <span style=""cursor: auto"">auto</span><br>,<span style=""cursor: 
+  crosshair"">crosshair</span><br>,<span style=""cursor: 
+  default"">default</span><br>,<span style=""cursor: e-resize"">e-resize</span><br>,
+  <span style=""cursor: help"">help</span><br>,<span style=""cursor: 
+  move"">move</span><br>,<span style=""cursor: n-resize"">n-resize</span><br>,
+  <span style=""cursor: ne-resize"">ne-resize</span><br>,<span style=""cursor: 
+  nw-resize"">nw-resize</span><br>,<span style=""cursor: 
+  pointer"">pointer</span><br>,<span style=""cursor: progress"">progress</span><br>,
+  <span style=""cursor: s-resize"">s-resize</span><br>,<span style=""cursor: 
+  se-resize"">se-resize</span><br>,<span style=""cursor: sw-resize"">sw-resize</span><br>,
+  <span style=""cursor: text"">text</span><br>,<span style=""cursor: 
+  w-resize"">w-resize</span><br>,<span style=""cursor: wait"">wait</span>",
+CSS ,Icons,"How To Add Icons,Font Awesome Icons,Bootstrap Icons,Google Icons","Example,Example,Example","Icons can easily be added to your HTML page, by using an icon library.,The simplest way to add an icon to your HTML page, is with an icon library, 
+such as Font Awesome.,Add the name of the specified icon class to any inline HTML element (like , or 
+,).,All the icons in the icon libraries below, are scalable vectors that can 
+be customized with CSS (size, color, shadow, etc.),To use the Font Awesome icons, go to ,, sign in, and get a code to add in the , section of your HTML page:,Read more about how to get started with Font Awesome in our 
+,., No downloading or installation is required!,To use the Bootstrap glyphicons, add the following line inside the , section of your HTML page:, No downloading or installation is required!,To use the Google icons, add the following line inside the , section of your HTML page:, No downloading or installation is required!",,"
+<!DOCTYPE html>,<html>,<head>,
+  <script src=""https://kit.fontawesome.com/a076d05399.js"" crossorigin=""anonymous""></script>,
+</head>,<body>,<i class=""fas fa-cloud""></i>,<i  class=""fas fa-heart""></i>,<i class=""fas fa-car""></i>,<i class=""fas fa-file""></i>,
+<i class=""fas fa-bars""></i>,
+</body>,</html>
+,
+  <!DOCTYPE html>,<html>,<head>,
+     <link rel=""stylesheet"" href=""https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"">,</head>,<body>,
+  ,<i class=""glyphicon glyphicon-cloud""></i>,<i class=""glyphicon  glyphicon-remove""></i>,<i class=""glyphicon glyphicon-user""></i>,<i  class=""glyphicon glyphicon-envelope""></i>,<i class=""glyphicon glyphicon-thumbs-up""></i>,
+  </body>,</html>
+,
+<!DOCTYPE html>,<html>,<head>,
+<link rel=""stylesheet"" href=""https://fonts.googleapis.com/icon?family=Material+Icons"">,</head>,<body>,
+,<i class=""material-icons"">cloud</i>,<i  class=""material-icons"">favorite</i>,<i  class=""material-icons"">attachment</i>,<i  class=""material-icons"">computer</i>,<i  class=""material-icons"">traffic</i>,</body>,</html>
+",
+CSS ,Fonts,"Font Selection is Important,Generic Font Families,Difference Between Serif and Sans-serif Fonts,Some Font Examples,The CSS font-family Property",Example,"Choosing the right font for your website is important!,Choosing the right font has a huge impact on how the readers experience a 
+website.,The right font can create a strong identity for your brand.,Using a font that is easy to read is important. The font adds 
+value to your text. It is also important to choose the correct color and text size 
+for the font.,In CSS there are five generic font families:,All the different font names belong to one of the generic font families. ,In CSS, we use the , property to specify the font of a text., The , property should hold several font names as a ""fallback"" system, 
+to ensure maximum compatibility between browsers/operating systems. Start with the font you want, and end with a generic family 
+(to let the 
+browser pick a similar font in the generic family, if no other fonts are 
+available). The font names should be separated with comma. Read more about 
+fallback fonts in the ,.",,,
+CSS ,Text,"Text Color,Text Color and Background Color","Example,Example","CSS has a lot of properties for formatting text.,The , property is used to set the color of the text. 
+The color is specified by:,Look at , for a complete list of possible color values.,The default text color for a page is defined in the body selector.,In this example, we define both the , property and the , property:","a color name - like ""red"",a HEX value - like ""#ff0000"",an RGB value - like ""rgb(255,0,0)""",,
+CSS ,Outline,"CSS Outline,CSS Outline Style",Example,"An outline is a line drawn outside the element's border.,An outline is a line that is drawn around elements, OUTSIDE the borders, to make the element ""stand out"".,CSS has the following outline properties:,The , property specifies the style of the outline, 
+and can have one of the following values:,The following example shows the different , values:"," , , , , , - Defines a dotted outline, - Defines a dashed outline, - Defines a solid outline, - Defines a double outline, - Defines a 3D grooved outline, - Defines a 3D ridged outline, - Defines a 3D inset outline, - Defines a 3D outset outline, - Defines no outline, - Defines a hidden outline",,
+CSS ,Box Model,"The CSS Box Model,Width and Height of an Element","Example,Example","All HTML elements can be considered as boxes.,In CSS, the term ""box model"" is used when talking about design and layout.,The CSS box model is essentially a box that wraps around every HTML element. 
+It consists of: margins, borders, padding, and the actual content. The image below illustrates the box model:,Explanation of the different parts:,The box model allows us to add a border around elements, and to define space 
+between elements. ,In order to set the width and height of an element correctly in all browsers, you need to know how the box model works.,Here is the calculation:,
+,The total width of an element should be calculated like this:,Total element width = width + left padding + right padding + left 
+border + right border + left margin + right margin,The total height of an element should be calculated like this:,Total element height = height + top padding + bottom padding + top 
+border + bottom border + top margin + bottom margin"," - The content of the box, where text and images appear, - Clears an area around the content. The padding is transparent, - A border that goes around the padding and content, - Clears an area outside the border. The margin is 
+transparent",,
+CSS ,Height and Width,"CSS Setting height and width,CSS height and width Values,CSS height and width Examples,Setting max-width,Try it Yourself - Examples,All CSS Dimension Properties","Example,Example,Example","The CSS , and , properties are used to set the 
+height and width of an element.,The CSS , property is used to set the maximum width of an element.,The , and , properties are used to set the 
+height and width of an element.,The height and width properties do not include padding, borders, or margins. 
+It sets the height/width of the area inside the padding, border, and margin of 
+the element.,The , and , properties 
+may have the following values:, Remember that the , and , properties do not include padding, borders, 
+or margins! They set the height/width of the area inside the padding, border, 
+and margin of the element!,The , property is used to set the maximum width of an element.,The , can be specified in ,, like px, cm, etc., or in percent (%) of the 
+containing block, or set to none (this is 
+default. Means that there is no maximum width).,The problem with the , above occurs when the browser window is smaller than the width of 
+the element (500px). The browser then adds a horizontal scrollbar to the page.,Using , instead, in this situation, will improve the browser's handling of small windows., Drag the browser window to smaller than 500px wide, to see the difference between 
+the two divs!, If you for some reason use both the
+, property and the
+, property on the same element, and the value of the
+, property is larger than the
+, property; the
+, property will be used (and the
+, property will be ignored).,
+This example demonstrates how to set the height and width of different elements.,
+This example demonstrates how to set the height and width of an image using a percent value.,
+This example demonstrates how to set a minimum width and a maximum width of an element using a pixel value.,
+This example demonstrates how to set a minimum height and a maximum height of an element using a pixel value."," - This is default. The browser 
+calculates the height and width, - Defines the height/width in px, cm 
+etc., - Defines the height/width in percent of 
+the containing block, - Sets the height/width to its 
+default value, - The height/width will be 
+  inherited from its parent value",,
+CSS ,Padding,"CSS Padding,Padding - Individual Sides,Padding - Shorthand Property,Padding and Element Width,More Examples,All CSS Padding Properties","Example,Example,Example,Example,Example,Example,Example","Padding is used to create space around an element's content, inside of any defined borders.,The CSS , properties are used to generate space around 
+an element's content, inside of any defined borders.,With CSS, you have full control over the padding. There are properties 
+for setting the padding for each side of an element (top, right, bottom, and left).,CSS has properties for specifying the padding for each 
+side of an element:,All the padding properties can have the following values:, Negative values are not allowed.,To shorten the code, it is possible to specify all the padding properties in 
+one property.,The , property is a shorthand property for the following individual 
+padding properties:,So, here is how it works:,If the , property has four values:,If the , property has three values:,If the , property has two values:,If the , property has one value:,The CSS , property specifies the width of the element's content area. The 
+content area is the portion inside the padding, border, and margin of an element 
+(,).,So, if an element has a specified width, the padding added to that element will 
+be added to the total width of the element. This is often an undesirable result.,To keep the width at 300px, no matter the amount of padding, you can use the , property. This causes the element to maintain its actual width; if 
+you increase the padding, the available content space will decrease.,
+This example demonstrates how to set the left padding of a <p> element.,
+This example demonstrates how to set the right padding of a <p> element.,
+This example demonstrates how to set the top padding of a <p> element.,
+This example demonstrates how to set the bottom padding of a <p> element."," - specifies a padding in px, pt, cm, etc., - specifies a padding in % of the width of the containing element,inherit - specifies that the padding should be inherited from the parent element,
+,top padding is 25px,right padding is 50px,bottom padding is 75px,left padding is 100px,
+,top padding is 25px,right and left paddings are 50px,bottom padding is 75px,
+,top and bottom paddings are 25px,right and left paddings are 50px,
+,all four paddings are 25px,
+",,
+CSS ,Margins,"CSS Margins,Margin - Individual Sides,Margin - Shorthand Property,The auto Value,The inherit Value","Example,Example,Example,Example,Example,Example,Example","Margins are used to create space around elements, outside of any defined borders.,The CSS , properties are used to create space around elements, 
+outside of any defined borders.,With CSS, you have full control over the margins. There are properties 
+for setting the margin for each side of an element (top, right, bottom, and left).,CSS has properties for specifying the margin for each 
+side of an element:,All the margin properties can have the following values:, Negative values are allowed.,To shorten the code, it is possible to specify all the margin properties in 
+one property.,The , property is a shorthand property for the following individual margin properties:,So, here is how it works:,If the , property has four values:,If the , property has three values:,If the , property has two values:,If the , property has one value:,You can set the margin property to , to horizontally center the element within its container.,The element will then take up the specified width, and the remaining space 
+will be split equally between the left and right margins.,This example lets the left margin of the <p class=""ex1""> element be inherited from the parent element 
+(<div>):","auto - the browser calculates the margin, - specifies a margin in px, pt, cm, etc., - specifies a margin in % of the width of the containing element,inherit - specifies that the margin should be inherited from the parent element,
+,top margin is 25px,right margin is 50px,bottom margin is 75px,left margin is 100px,
+,top margin is 25px,right and left margins are 50px,bottom margin is 75px,
+,top and bottom margins are 25px,right and left margins are 50px,
+,all four margins are 25px,
+",,
+CSS ,Borders,CSS Border Style,Example,"The CSS border properties allow you to specify the style, 
+width, and color of an element's border.,The , property specifies what kind of border to display.,The following values are allowed:,The , property can have from one to four values (for 
+the top border, right border, bottom border, and the left border)."," - Defines a dotted border, - Defines a dashed border, - Defines a solid border, - Defines a double border, - Defines a 3D grooved border. The effect depends on the border-color value, - Defines a 3D ridged border. The effect depends on the border-color value, - Defines a 3D inset border. The effect depends on the border-color value, - Defines a 3D outset border. The effect depends on the border-color value, - Defines no border, - Defines a hidden border",,
+CSS ,Backgrounds,"CSS background-color,Other Elements,Opacity / Transparency,Transparency using RGBA","Example,Example,Example,Example","The CSS background properties are used to add background effects 
+for elements.,The , property specifies the background color of an element.,With CSS, a color is most often specified by:,Look at , for a complete 
+list of possible color values.,You can set the background color for any HTML elements:,The , property specifies the opacity/transparency of an element. It can take a value from 0.0 - 1.0. The lower value, the more transparent:,If you do not want to apply opacity to child elements, like in our example above, use , color values. 
+The following example sets the opacity for the background color and not the text:,You learned from our ,, that you can use RGB as a color value. In addition to RGB, 
+you can use an RGB color value with an , channel (RGB,) - which specifies the opacity for a color.,An RGBA color value is specified with: rgba(red, green, blue, ,). The 
+, parameter is a number between 0.0 (fully transparent) and 1.0 (fully opaque)., You will learn more about RGBA Colors in our ,."," , , , , , , (shorthand property),a valid color name - like ""red"",a HEX value - like ""#ff0000"",an RGB value - like ""rgb(255,0,0)""",,
+CSS ,Colors,"CSS Color Names,CSS Background Color,CSS Text Color,CSS Border Color,Hello World,Hello World,Hello World,CSS Color Values","Example,Example,Example,Example","Colors are specified using predefined color names, or RGB, HEX, HSL, RGBA, HSLA values.,In CSS, a color can be specified by using a predefined color name:,CSS/HTML support ,.,You can set the background color for HTML elements:,You can set the color of text:,Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.,Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.,You can set the color of borders:,In CSS, colors can also be specified using RGB values, HEX values, HSL 
+values, RGBA values, and HSLA values:,Same as color name ""Tomato"":,Same as color name ""Tomato"", but 50% transparent:",,"
+  <h1 style=""background-color:DodgerBlue;"">Hello World</h1>,<p style=""background-color:Tomato;"">Lorem 
+  ipsum...</p>,
+  <h1 style=""color:Tomato;"">Hello 
+  World</h1>,<p style=""color:DodgerBlue;"">Lorem 
+  ipsum...</p>,<p style=""color:MediumSeaGreen;"">Ut wisi 
+  enim...</p>,
+  <h1 style=""border:2px 
+  solid Tomato;"">Hello 
+  World</h1>,<h1 style=""border:2px 
+  solid DodgerBlue;"">Hello 
+  World</h1>,<h1 style=""border:2px 
+  solid Violet;"">Hello 
+  World</h1>,
+  <h1 style=""background-color:rgb(255, 
+  99, 71);"">...</h1>,<h1 style=""background-color:#ff6347;"">...</h1>,<h1 style=""background-color:hsl(9, 
+  100%, 64%);"">...</h1>,<h1 style=""background-color:rgba(255, 
+  99, 71, 0.5);"">...</h1>,<h1 style=""background-color:hsla(9, 
+  100%, 64%, 0.5);"">...</h1>",
+CSS ,Comments,"CSS Comments,HTML and CSS Comments","Example,Example,Example,Example","CSS comments are not displayed in the browser, but they can 
+help document your source code.,Comments are used to explain the code, and may help when you edit the source code at a later date.,Comments are ignored by browsers.,A CSS comment is placed inside the , element, and starts with , and ends with ,:,You can add comments wherever you want in the code:,Comments can also span 
+multiple lines: ,From the HTML tutorial, you learned that you can add comments to your HTML source by using the 
+, syntax.,In the following example, we use a combination of HTML and CSS comments:",,"
+  <!DOCTYPE html>,<html>,<head>,<style>,p {,  color: red; /* Set 
+  text color to red */,} ,</style>,</head>,<body>,<h2>My 
+  Heading</h2>,<!-- These paragraphs will be red -->,<p>Hello 
+  World!</p>,<p>This paragraph is styled with CSS.</p>,<p>CSS comments are 
+  not shown in the output.</p>,</body>,</html>,
+",
+,How To Add CSS,"Three Ways to Insert CSS,External CSS,Internal CSS,Inline CSS,Multiple Style Sheets,Cascading Order","Example,""mystyle.css"",Example,Example,Example,Example","When a browser reads a style sheet, it will format the HTML document according to 
+the information in the style sheet.,There are three ways of inserting a style sheet:,With an
+external style sheet, you can change the look of an entire website by changing 
+just one file!,Each HTML page must include a reference to the external style sheet file inside 
+the <link> element, inside the head section.,An external style sheet can be written in any text editor, and must be saved with a .css extension.,The external .css file should not contain any HTML tags.,Here is how the ""mystyle.css"" file looks:,An internal style sheet may be used if one single HTML page has a unique style.,The internal style is defined inside the <style> element, inside the head 
+section.,An inline style may be used to apply a unique style for a single element.,To use inline styles, add the style attribute to the relevant element. The
+style attribute can contain any CSS property.,If some properties have been defined for the same selector (element) in different style sheets,
+the value from the last read style sheet will be used. ,What style will be used when there is more than one style specified for an HTML element?,All the styles in a page will ""cascade"" into a new ""virtual"" style
+sheet by the following rules, where number one has the highest priority:,So, an inline style has the highest priority, and will override external and 
+internal styles and browser defaults.","External CSS,Internal CSS,Inline CSS","
+  <!DOCTYPE html>,<html>,<head>,<link rel=""stylesheet"" href=""mystyle.css"">,</head>,<body>,<h1>This is a heading</h1>,
+  <p>This is a paragraph.</p>,</body>,</html>,
+  <!DOCTYPE html>,<html>,<head>,<style>,body {,  
+  background-color: linen;,},h1 {,  color: maroon;,  
+  margin-left: 40px;,} ,</style>,</head>,<body>,<h1>This is a 
+  heading</h1>,<p>This is a paragraph.</p>,</body>,</html>,
+  <!DOCTYPE html>,<html>,<body>,<h1 style=""color:blue;text-align:center;"">This 
+  is a heading</h1>,<p style=""color:red;"">This is a paragraph.</p>,
+  </body>,</html>,
+<head>,<link rel=""stylesheet"" type=""text/css"" href=""mystyle.css"">,
+<style>,h1 {,  color: orange;,},</style>,</head>",
+CSS ,Selectors,"CSS Selectors,The CSS element Selector,The CSS id Selector,The CSS class Selector,The CSS Universal Selector,The CSS Grouping Selector,All CSS Simple Selectors","Example,Example,Example,Example,Example,Example,Example","A CSS selector selects the HTML element(s) you 
+want to style.,CSS selectors are used to ""find"" (or select) the HTML elements you 
+want to style.,We can divide CSS selectors into five categories:,This page will explain the most basic CSS selectors.,The element selector selects HTML elements based on the element name.,The id selector uses the id attribute of an HTML element to select a specific element.,The id of an element is unique within a page, so the id selector is 
+used to 
+select one unique element!,To select an element with a specific id, write a hash (#) character, followed by 
+the id of the element.,The class selector selects HTML elements with a specific class attribute.,To select elements with a specific class, write a period (.) character, followed by the 
+class name.,You can also specify that only specific HTML elements should be affected by a class.,HTML elements 
+can also refer to more than one class.,The universal selector (*) selects all HTML 
+elements on the page.,The grouping selector selects all the HTML elements with the same style 
+definitions.,Look at the following CSS code (the h1, h2, and p elements have the same 
+style definitions):,It will be better to group the selectors, to minimize the code.,To group selectors, separate each selector with a comma.","Simple selectors (select elements based on name, id, class), (select  
+  elements based on a specific relationship between them), (select elements based on a certain state), (select 
+  and style a part of an element), (select elements based on 
+  an attribute or attribute value)","
+<p class=""center large"">This paragraph refers to two classes.</p>",
+CSS ,Syntax,CSS Syntax,Example,"A CSS rule consists of a selector and a declaration block.,The selector points to the HTML element you want to style.,The declaration block contains one or more declarations separated by 
+semicolons.,Each declaration includes a CSS property name and a value, separated by a colon.,Multiple CSS declarations are separated with semicolons, and declaration 
+blocks are surrounded by curly braces."," is a selector in CSS (it points to the HTML element you want to style: 
+<p>)., is a property, and , is the property value, is a property, and , is the property value",,
+CSS ,Introduction,"What is CSS?,CSS Demo - One HTML Page - Multiple Styles!,Why Use CSS?,CSS Solved a Big Problem,CSS Saves a Lot of Work!",CSS Example,"CSS is the language we use to style a Web page.,Here we will show one HTML page displayed with four different stylesheets. 
+Click on the ""Stylesheet 1"", ""Stylesheet 2"", ""Stylesheet 3"", ""Stylesheet 4"" 
+links below to see the different styles:,CSS is used to define styles for your web pages, including the design, layout 
+and variations in display for different devices and screen sizes.,HTML was NEVER intended to contain tags for formatting a web page!,HTML was 
+created to describe the content of a web page, like:,<h1>This is a heading</h1>,<p>This is a paragraph.</p>,When tags like <font>, and color attributes were added to the HTML 3.2 
+specification, it started a nightmare for web developers. Development of large 
+websites, where fonts and color information were added to every single  
+page, became a long and expensive process.,To solve this problem, the World Wide Web Consortium (W3C) created CSS.,CSS removed the style formatting from the HTML page!,The style definitions are normally saved in external .css files.,With an external stylesheet file, you can change the look of an entire website by changing just one file!","CSS stands for Cascading Style Sheets,CSS describes how HTML elements are to be displayed on screen,  
+  paper, or in other media,CSS saves a lot of work. It can control the layout of 
+  multiple web pages all at once,External stylesheets are stored in CSS files",,

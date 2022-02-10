@@ -1,0 +1,413 @@
+H1_leftside_heading,H1_rightside_heading,H2,H3,All_para,li,div,div_2
+Java ,Tutorial,"Examples in Each Chapter,Java Exercises,Java Quiz,Learn by Examples,Java Reference,Download Java",Example,"Our ""Try it Yourself"" editor makes it easy to learn Java. You can edit Java code and view the result 
+in your browser.,Test your Java skills with a quiz.,Learn by examples! This tutorial supplements all explanations with clarifying examples.,Download Java from the official Java web site:
+",,,
+Java ,Constructors,"Java Constructors,Constructor Parameters","Example,Example,Example","A constructor in Java is a , that is used to initialize objects. 
+The constructor is called when an object of a class is created. It can be used to 
+set initial values for object attributes:,Constructors can also take parameters, which is used to initialize 
+attributes.,The following example adds an , parameter 
+to the constructor. 
+Inside the constructor we set x to y (x=y). When we call 
+the constructor, we pass a parameter to the constructor (5), which will set the value of 
+x to 5:,You can have as many parameters as you want:",,,
+Java ,Class Methods,"Java Class Methods,Static vs. Non-Static,Access Methods With an Object,Using Multiple Classes","Example,Example,Example,Example","You learned from the , chapter that methods are declared within a 
+class, and that they are used to perform certain actions:, prints a text (the action), when it is 
+,. To 
+call a method, write the method's name followed by two parentheses , and a semicolon,You will often see Java programs that have either , or , 
+attributes and methods.,In the example above, we created a , 
+method, which means that it can be accessed without creating an object of the class, 
+unlike ,, which can only be accessed by 
+objects:,1) We created a custom , class with the , keyword.,2) We created the , and , 
+methods in the , class.,3) The , method and the , 
+method will print out some text, when they are called.,4) The , 
+method accepts an , parameter called , - we 
+will use this in ,.,5) In order to use the , class and its 
+methods, we need to create an , of the , Class.,6) Then, go to the , method, which you know by now is a built-in 
+Java method that runs your program (any code inside main is executed).,7) By using the , keyword we created an object with the name
+,.,8) Then, we call the , and 
+, 
+methods on the , object, and run the program using the name of the object (,), followed by a dot (,), followed by the name of the method (, and ,). 
+Notice that we add an , parameter of , inside the , method.,Like we specified in the ,, it is 
+a good practice to create an object of a class and access it in another class.,Remember that the name of the java file should match the class name. In this 
+example, we have created two files in the same directory:,When both files have been compiled:,Run the Second.java file:,And the output will be:","Main.java,Second.java",,
+Java ,Modifiers,"Modifiers,Access Modifiers,Non-Access Modifiers,Final,Static,Abstract","Example,Example,Example","By now, you are quite familiar with the , keyword that appears in almost 
+all of our examples:,The , keyword is an ,, 
+meaning that it is used to set the access level for classes, attributes, methods and 
+constructors.,We divide modifiers into two groups:,For ,, you can use either , or ,:,For ,, you can use the one of the 
+following:,For ,, you can use either , or ,:,For ,, you can use the one of the 
+following:,If you don't want the ability to override existing attribute values, declare 
+attributes as ,:,A , method means that it can be 
+accessed without creating an object of the class, unlike ,:,An , method belongs to an , class, and it does not have a body. 
+The body is provided by the subclass:"," - controls the access level, - do not control access level, but provides other functionality",,
+Java ,Inner Classes,"Java Inner Classes,Private Inner Class,Static Inner Class,Access Outer Class From Inner Class","Example,Example,Example,Example","In Java, it is also possible to nest classes (a class within a class). The purpose 
+of nested classes is to group classes that belong together, which makes your code more readable and maintainable.,To access the inner class, create an object of the outer class, and then create an object of the inner class:,Unlike a ""regular"" class, an inner class can be , or ,. 
+If you don't want outside objects to access the inner class, declare 
+the class as ,:,An inner class can also be ,, which means that you can access it without 
+creating an object of the outer class:,One advantage of inner classes, is that they can access attributes and methods of the outer class:",,,
+Java ,Abstraction,Abstract Classes and Methods,Example,"Data , is the process of hiding certain details and showing only essential information to the user.,
+Abstraction can be achieved with either , or 
+, (which you will learn more about in the next chapter).,The , keyword is a non-access modifier, used for classes and methods:
+,An abstract class can have both abstract and regular methods:,From the example above, it is not possible to create an object of the Animal class:,To access the abstract class, it must be inherited from another class. Let's convert the Animal class we used in the , chapter to an abstract class:"," is a restricted class that cannot be used to create objects (to access it, it must be inherited from another class)., can only be used in an abstract class, and it does not have a body. The body is provided by the subclass (inherited from).",,
+Java ,Encapsulation,"Encapsulation,Get and Set,Why Encapsulation?","Example,Example","The meaning of ,, is to make sure that ""sensitive"" data is hidden 
+from users. To achieve this, you must:
+,You learned from the previous chapter that , variables can only be 
+accessed within the same class (an outside class has no access to it). However, 
+it is possible to access them if we provide public , and , methods.,The , method returns the variable value, and the , method sets the value.,Syntax for both is that they start with either , or ,, followed by the 
+name of the variable, with the first letter in upper case:,The , method returns the value of the variable ,.,The , method takes a parameter (,) and assigns it to the
+, variable. The , keyword is used to refer to the current 
+object.,However, as the , variable is declared as ,, we 
+, access it from outside this class:,If the variable was declared as ,, we would expect the following output:,However, as we try to access a , variable, we get an error:,Instead, we use the , and , methods to access and update the variable:","declare class variables/attributes as ,provide public , 
+and , methods to access and update the value of a , 
+variable,Better control of class attributes and methods,Class attributes can be made , (if you only use the , method), or , (if you only use the , method),Flexible: the programmer can change one part of the code without affecting other parts,Increased security of data",,
+Java ,Packages,"Java Packages & API,Built-in Packages,Import a Class,Import a Package,User-defined Packages","Syntax,Example,Example,Example,Example,MyPackageClass.java","A package in Java is used to group related classes. Think of it as
+,. We use packages to avoid name conflicts, and 
+to write a better maintainable code. Packages are divided into two categories:,The Java API is a library of prewritten classes, that are free to use, included in the
+Java Development Environment.,The library contains components for managing input, database programming, and much much 
+more. The complete list can be found at Oracles website: ,.,The library is divided into , and ,. 
+Meaning you can either import a single class (along with its methods and 
+attributes), or a whole package that contain 
+all the classes that belong to the specified package.,To use a class or a package from the library, you need to use the , 
+keyword:,If you find a class you want to use, for example, the , class, ,, write the following code:,In the example above, , is a package, while , is a class of 
+the , package.,To use the , class, create an object of the class and use any of the available methods found in the , class documentation. 
+In our example, we will use the , method, which is used to read a 
+complete line:,There are many packages to choose from. In the previous example, we used the , class from the , package. This package also contains date and time 
+facilities, random-number generator and other utility classes.,To import a whole package, end the sentence with an asterisk sign (,). 
+The following example 
+will import ALL the classes in the , package:,To create your own package, you need to understand that Java uses a file system directory to store them. Just like folders on your computer:,To create a package, use the , keyword:,Save the file as ,, and compile it:,Then compile the package:,When we compiled the package in the example above, a new folder was created, called ""mypack"".,To run the , file, write the following:,The output will be:","Built-in Packages (packages from the Java API),User-defined Packages (create your own packages)",,
+Java ,Polymorphism,Java Polymorphism,"Example,Example","Polymorphism means ""many forms"", and it occurs when we have many classes that are related to each other by inheritance.,Like we specified in the previous chapter; 
+, lets us 
+inherit attributes and methods from another class. , 
+uses those methods to perform different tasks. This allows us to perform a single 
+action in different ways.,For example, think of a superclass called , that has a method called ,. Subclasses of Animals could be Pigs, Cats, Dogs, Birds - And they also have their own implementation of an animal sound (the pig oinks, and the cat meows, etc.):,Now we can create , and , objects and call the , method on both of them:",,,
+Java ,Class Attributes,"Java Class Attributes,Accessing Attributes,Modify Attributes,Multiple Objects,Multiple Attributes","Example,Example,Example,Example,Example,Example,Example","In the previous chapter, we used the term ""variable"" for , in the example (as shown below). It is actually an 
+, of the class. Or you could say that class attributes are variables within a class:,You can access attributes by creating an object of the class, and by using the dot syntax (,):,The following example will create an object of the , class, with the 
+name ,. We use the , 
+attribute on the object to print its value:,You can also modify attribute values:,Or override existing values:,If you don't want the ability to override existing values, declare the attribute as ,:,If you create multiple objects of one class, you can change the attribute values in one object, without affecting the attribute values in the other:,You can specify as many attributes as you want:",,,
+Java ,Inheritance,"Java Inheritance (Subclass and Superclass),The final Keyword",Example,"In Java, it is possible to inherit attributes and methods from one class to another. We group the ""inheritance concept"" into two categories:,To inherit from a class, use the , 
+keyword.,In the example below, the , class 
+(subclass) inherits the attributes and methods from the , class 
+(superclass):,If you don't want other classes to inherit from a class, use the , keyword:"," (child) - the class that inherits from another class, (parent) - the class being inherited from",,
+Java ,Classes and Objects,"Java Classes/Objects,Create a Class,Create an Object,Multiple Objects,Using Multiple Classes","Main.java,Example,Example","Java is an object-oriented programming language.,Everything in Java is associated with classes and objects, along with its attributes and 
+methods. For example: in real life, a car is an object. The car has ,, such as weight and color, and ,, such as drive and brake. ,A Class is like an object constructor, or a ""blueprint"" for creating objects.,To create a class, use the keyword ,:,In Java, an object is created from a class. We have already created the class named ,, 
+so now we can use this to create objects.,To create an object of ,, 
+specify the class name, followed by the object name, and use the keyword ,:,You can create multiple objects of one class:,You can also create an object of a class and access it in another class. This 
+is often used for better organization of classes (one class has all the 
+attributes and methods, while the other class holds the , method (code to 
+be executed)). ,Remember that the name of the java file should match the class name. In this 
+example, we have created two files in the same directory/folder:,When both files have been compiled:,Run the Second.java file:,And the output will be:","Main.java,Second.java",,
+Java ,OOP,"Java - What is OOP?,Java - What are Classes and Objects?",,"OOP stands for ,.,Procedural programming is about writing procedures or methods that perform 
+operations on the data, while object-oriented programming is about 
+creating objects that contain both data and methods.,Object-oriented programming has several advantages over procedural 
+programming:, The ""Don't Repeat Yourself"" (DRY) principle is about 
+reducing the repetition of code. You should extract out the codes that are 
+common for the application, and place them at a single place and reuse them 
+instead of repeating it.,Classes and objects are the two main aspects of object-oriented programming.,Look at the following illustration to see the difference between class and 
+objects:,Another example:,So, a class is a template for objects, and an object is an instance of a class.,When the individual objects are created, they inherit all the 
+variables and methods from the class.,You will learn much more about , in the next chapter.","OOP is faster and easier to execute,OOP provides a clear structure for the programs,OOP helps to keep the Java code DRY ""Don't Repeat Yourself"", and makes 
+  the 
+  code easier to maintain, modify and debug,OOP makes it possible to create full reusable 
+  applications with less code and shorter development time",,
+Java ,Recursion,"Java Recursion,Recursion Example,Halting Condition","Example,Example","Recursion is the technique of making a function call itself. This technique provides a way
+to break complicated problems down into simple problems which are easier to solve.,Recursion may be a bit difficult to understand. The
+best way to figure out how it works is to experiment with it.,Adding two numbers together is easy to do, but adding a range of numbers is more
+complicated. In the following example, recursion is used to add a range of numbers
+together by breaking it down into the simple task of adding two numbers:,When the , function is called, it adds parameter , to the sum of all numbers smaller
+than , and returns the result. When k becomes 0, the function just returns 0. When
+running, the program follows these steps:,Since the function does not call itself when , is 0, the program stops there and returns the
+result.,Just as loops can run into the problem of infinite looping, recursive functions can run into
+the problem of infinite recursion. Infinite recursion is when the function never stops calling
+itself. Every recursive function should have a halting condition, which is the condition
+where the function stops calling itself. In the previous example, the halting condition is
+when the parameter , becomes 0.,It is helpful to see a variety of different examples to better understand the concept. In this
+example, the function adds a range of numbers between a start and an end. The halting
+condition for this recursive function is when , is not greater than ,:",,,
+Java ,Scope,"Java Scope,Method Scope,Block Scope","Example,Example","In Java, variables are only accessible inside the region they are created. This is called
+,.,Variables declared directly inside a method are available anywhere in the method following the line of code in which they were declared:,A block of code refers to all of the code between curly braces ,. Variables
+declared inside blocks of code are only accessible by the code between the curly braces, which follows the line in which the variable was declared:",,,
+Java ,Method Overloading,Method Overloading,"Example,Example,Example","With,, multiple methods can have the same name with different
+parameters:,Consider the following example, which has two methods that add numbers of different type:,Instead of defining two methods that should do the same thing, it is better to overload one. ,In the example below, we overload the , 
+method to work for both , 
+and ,:",,,
+W3Schools ,Java Certificate,How Does It Work?,,,"Study for free at W3Schools.com,Study at your own speed,Test your skills with W3Schools online quizzes,Apply for your certificate by paying an exam fee,Take your exam online, at any time, and from any location",,
+Java ,Exercises,"Exercises,Count Your Score",,"You can test your Java skills with W3Schools' Exercises.,We have gathered a variety of Java exercises (with answers) for each Java Chapter.,Try to solve an exercise by editing some code, or show the answer to see what you've done wrong.,You will get 1 point for
+each correct answer. Your score and total score will always be displayed.",,,
+Java ,Quiz,"The Test,Count Your Score",,"You can test your Java skills with W3Schools' Quiz.,The test contains 25 questions and there is no time limit.,The test is not official, it's just a nice way to see how much you know, or don't know, about 
+Java.,You will get 1 point for each correct answer. At the end of the Quiz,
+your total score will be displayed. Maximum score is 25 points.",,,
+Java ,Examples,"Java Syntax,Java Comments,Java Variables,Java Data Types,Java Type Casting,Java Operators,Java Strings,Java Math,Java Booleans,Java If...Else (Conditions),Java Switch,Java Loops,Java Arrays,Java Methods,Java Classes and Objects,Java Modifiers,Java Encapsulation,Java Packages,Java Inheritance,Java Inner Classes,Java Abstraction & Interfaces,Java Enums,Java User Input,Java Dates,Java ArrayList,Java HashMap,Java HashSet,Java Iterator,Java Wrapper Classes,Java Exceptions (Try...Catch),Java Regular Expressions,Java Threads,Java Files",,,,,
+Java ,Online Compiler,"Java Compiler (Editor),Java Compiler Explained",,"With our online Java compiler, you can edit Java code, and view the result in your browser.,Click on the ""Try it Yourself"" button to see how it works.,The window to the left is editable - edit the code and click on the ""Run"" button to view the result in the right window.,The icons are explained in the table below:",,,
+Java ,String Methods,All String Methods,,The String class has a set of built-in methods that you can use on strings.,,,
+Java ,Keywords,Java Reserved Keywords,,"Java has a set of keywords that are reserved words that cannot be used as 
+variables, methods, classes, or any other identifiers:, ,, ,, and , are not keywords, but they are literals and reserved words that cannot be used as identifiers.",,,
+Java ,Math Methods,All Math Methods,,"The Java Math class has many methods that allows you to perform mathematical tasks on numbers.,A list of all Math methods can be found in the table below:, All Math methods are ,.",,,
+Java ,How To Add Two Numbers,"Add Two Numbers,Add Two Numbers with User Input","Example,Example","Learn how to add two numbers in Java:,Learn how to add two numbers with user input:",,,
+Java ,Create and Write To Files,"Create a File,Write To a File","Example,Example,Example","To create a file in Java, you can use the , method. This method returns a 
+boolean value: , if the file was successfully created, and , if the file 
+already exists. Note that the method is enclosed in a , 
+block. This is necessary because it throws an , if an error occurs (if the 
+file cannot be created for some reason):,To create a file in a specific directory (requires permission), specify the path of the file and use double backslashes to escape the "","" character (for Windows). On Mac and Linux you can just write the path, like: /Users/name/filename.txt,In the 
+following example, we use the , class together with its , method 
+to write some text to the file we created in the example above. Note that when you are done writing to the file, 
+you should close it 
+with the , method:,To read the file above, go to the , chapter.",,,
+Java ,Files,Java File Handling,Example,"File handling is an important part of any application.,Java has several methods for creating, reading, updating, and 
+deleting files.,The , class from the , package, allows 
+us to work with files.,To use the , class, create an object of 
+the class, and specify the filename or directory name: 
+
+,The , class has many useful methods for creating and getting information 
+about files. 
+For example:,You will learn how to create, write, read and delete files in the next chapters:",,,
+Java ,Lambda Expressions,"Java Lambda Expressions,Syntax,Using Lambda Expressions","Example,Example,Example","Lambda Expressions were added in Java 8.,A lambda expression is a short block of code which takes in parameters and returns a
+value. Lambda expressions are similar to methods, but they do not need a name and they
+can be implemented right in the body of a method.,The simplest lambda expression contains a single parameter and an expression:,To use more than one parameter, wrap them in parentheses:,Expressions are limited. They have to immediately return a value, and they cannot contain
+variables, assignments or statements such as , or ,. In order to do more complex
+operations, a code block can be used with curly braces. If the lambda expression needs to
+return a value, then the code block should have a , statement.,Lambda expressions are usually passed as parameters to a function:,Lambda expressions can be stored in variables if the variable's type is an interface which
+has only one method. The lambda expression should have the same number of
+parameters and the same return type as that method. Java has many of these kinds of
+interfaces built in, such as the , interface (found in the , package) used by lists.,To use a lambda expression in a method, the method should have a parameter with a
+single-method interface as its type. Calling the interface's method will run the lambda
+expression:",,,
+Java ,Threads,"Java Threads,Creating a Thread,Running Threads,Concurrency Problems","Extend Syntax,Implement Syntax,Extend Example,Implement Example,Example,Example","Threads allows a program to operate more efficiently by doing multiple things at the same
+time.,Threads can be used to perform complicated tasks in the background without interrupting
+the main program.,There are two ways to create a thread.,It can be created by extending the , class and overriding its , 
+method:,Another way to create a thread is to implement the , interface:,If the class extends the , class, the thread can be run by creating an instance of the
+class and call its , method:,If the class implements the , interface, the thread can be run by passing an
+instance of the class to a , object's constructor and then calling the thread's
+, method:,Because threads run at the same time as other parts of the program, there is no way to
+know in which order the code will run. When the threads and main program are reading
+and writing the same variables, the values are unpredictable. The problems that result
+from this are called concurrency problems.,To avoid concurrency problems, it is best to share as few attributes between threads as
+possible. If attributes need to be shared, one possible solution is to use the ,
+method of the thread to check whether the thread has finished running before using any 
+attributes that the thread can change.",,,
+Java ,Regular Expressions,"What is a Regular Expression?,Flags,Regular Expression Patterns,Metacharacters,Quantifiers",Example,"A regular expression is a sequence of characters that forms a search pattern.
+When you search for data in a text, you can use this search pattern to describe what you
+are searching for.,A regular expression can be a single character, or a more complicated pattern.,Regular expressions can be used to perform all types of , and ,
+operations.,Java does not have a built-in Regular Expression class, but we can import the , 
+package to work with regular expressions. The package includes the following 
+classes:,In this example, The word ""w3schools"" is being searched for in a sentence.,First, the pattern is created using the , method. The first parameter
+indicates which pattern is being searched for and the second parameter has a flag to
+indicates that the search should be case-insensitive. The second parameter is optional.,The , method is used to search for the pattern in a string. It returns a Matcher
+object which contains information about the search that was performed.,The , method returns true if the pattern was found in the string and false if it was not
+found.,Flags in the , method change how the search is performed. Here are a few of
+them:,The first parameter of the , method is the pattern. It describes what
+is being searched for.,Brackets are used to find a range of characters:,Metacharacters are characters with a special meaning:,Quantifiers define quantities:"," Class - Defines a pattern (to be used in a search), Class - Used to search for the 
+pattern, Class - Indicates syntax error in a regular 
+expression pattern, - The case of letters will be ignored when performing
+a search., - Special characters in the pattern will not have any special
+meaning and will be treated as ordinary characters when performing a search., - Use it together with the , flag to
+also ignore the case of letters outside of the English alphabet",,
+Java Exceptions - ,Try...Catch,"Java Exceptions,Java try and catch,Finally,The throw keyword","Syntax,Example,Example,Example,Example","When executing Java code, different errors can occur: coding errors made by the programmer, errors due to wrong input, 
+or other unforeseeable things.,When an error occurs, Java will normally stop and generate an error message. The technical term for this is: Java will throw an , (throw an error).,The , statement allows you to define a block of code to be 
+tested for errors while it is being executed.,The , statement allows you to define a block of code to 
+be executed, if an error occurs in the try block.,The , and , keywords 
+come in pairs:,Consider the following example:,If an error occurs, we can use , to catch the error and execute some code to handle it:,The , statement lets you execute code, after ,, regardless of the result:,The , statement allows you to create a custom error.,The , statement is used together with an ,. There are many exception types available in Java: ,, 
+,, ,, ,, etc:,If , was 20, you would , get an exception:",,,
+Java ,Read Files,"Read a File,Get File Information","Example,Example","In the previous chapter, you learned how to create and write to a file.,In the 
+following example, we use the , class to read the contents of the text file we created in the previous chapter:,To get more information about a file, use any of the , methods:",,,
+Java ,Wrapper Classes,"Java Wrapper Classes,Creating Wrapper Objects","Example,Example,Example,Example","Wrapper classes provide a way to use primitive data types (,, ,, 
+etc..) as objects.,The table below shows the primitive type and the equivalent wrapper class:,Sometimes you must use wrapper classes, for example when working with Collection objects, such 
+as ,, where primitive types cannot be 
+used (the list can only store objects):,To create a wrapper object, use the wrapper class instead of the primitive 
+type. To get the value, you can just print the object:,Since you're now working with objects, you can use certain methods to get 
+information about the specific object.,For example, the following methods are used to get the value associated with 
+the corresponding wrapper object: ,, ,, ,, ,, 
+,, ,, ,, ,.,This example will output the same result as the example above:,Another useful method is the , method, which is used to convert wrapper objects to strings.,In the following example, we convert an , to a ,, and use the , method of the , class to output the length of the ""string"":",,,
+Java ,Iterator,"Java Iterator,Getting an Iterator,Looping Through a Collection,Removing Items from a Collection","Example,Example,Example","An , is an object that can be used to loop through collections, like ,
+and ,. It is called an ""iterator"" because ""iterating"" is the technical term for looping.,To use an Iterator, you must import it from the , package.,The , method can be used to get an , for any collection:,To loop through a collection, use the , and , methods of the ,:,Iterators are designed to easily change the collections that they loop through. The , method can remove items from a collection while looping.",,,
+Java ,HashSet,"Java HashSet,Add Items,Check If an Item Exists,Remove an Item,HashSet Size,Loop Through a HashSet,Other Types","Example,Example,Example,Example,Example,Example,Example,Example","A HashSet is a collection of items where every item is unique, and it is found in the , 
+package:,The , class has many useful methods. For example, to 
+add items to it, use the , method:, In the example above, even though BMW is added twice it only appears once in the set
+because every item in a set has to be unique.,To check whether an item exists in a HashSet, use the , method:,To remove an item, use the , method:,To remove all items, use the , method:,To find out how many items there are, use the , method:,Loop through the items of an , with a , loop:,Items in an HashSet are actually objects. In the examples above, we created 
+items 
+(objects) of type ""String"". Remember that a String in Java is an object (not a primitive type). To use other types, such as int, you must specify an equivalent ,: ,. For other primitive types, 
+use: , for boolean, , for char, , for double, 
+etc:",,,
+Java ,HashMap,"Java HashMap,Add Items,Access an Item,Remove an Item,HashMap Size,Loop Through a HashMap,Other Types","Example,Example,Example,Example,Example,Example,Example,Example,Example,Example","In the , chapter, you learned that Arrays store items as an ordered collection, and you have to access them with an index number (, type).
+A , however, store items in "",/,"" pairs, and you can access them by an index of another type (e.g. a ,).,One object is used as a key (index) to another 
+object (value). It can store different types: , keys and , values, or the 
+same type, like: , keys and , values:,The , class has many useful methods. For example, to 
+add items to it, use the , method:,To access a value in the ,, use the , method and refer to 
+its key:,To remove an item, use the , method 
+and refer to the key:,To remove all items, use the , method:,To find out how many items there are, use the , method:,Loop through the items of a , with a , loop., Use the , method if you only want the keys, and use the , method if you only want the values:,Keys and values in a HashMap are actually objects. In the examples above, we used objects of type ""String"". Remember that a String in Java is an object (not a primitive type). To use other types, such as int, you must specify an equivalent ,: ,. For other primitive types, 
+use: , for boolean, , for char, , for double, 
+etc:",,,
+Java ,LinkedList,"Java LinkedList,ArrayList vs. LinkedList,LinkedList Methods",Example,"In the previous chapter, you learned about the , class. The , class is 
+almost identical to the 
+,:,The , class is a collection which can contain many objects of the same type,
+just like the ,.,The , class has all of the same methods as the , class because
+they both implement the , interface. This means that you can add items, change
+items, remove items and clear the list in the same way.,However, while the , class and the , class can be used in the same way,
+they are built very differently.,The , class has a regular array inside it. When an element is added, it is placed
+into the array. If the array is not big enough, a new, larger array is created to replace the
+old one and the old one is removed.,The , stores its items in ""containers."" The list has a link to the first container
+and each container has a link to the next container in the list. To add an element to the list,
+the element is placed into a new container and that container is linked to one of the other
+containers in the list.,For many cases, the , is more efficient as it is common to need access to
+random items in the list, but the , provides several methods to do certain
+operations more efficiently:",,,
+Java ,ArrayList,"Java ArrayList,Add Items,Access an Item,Change an Item,Remove an Item,ArrayList Size,Loop Through an ArrayList,Other Types,Sort an ArrayList","Example,Example,Example,Example,Example,Example,Example,Example,Example,Example,Example,Example","The , class is a resizable ,, which can be found in the , package.,The difference between a built-in array and an , in Java, is that the size of an array cannot be modified (if you want to 
+add or remove elements to/from an array, you have to create a new one). While elements can be added and removed from an , whenever you want. The syntax is also slightly different:,The , class has many useful methods. For example, to add elements to the ,, use the , method:,To access an element in the ,, use the , method and refer to the index number:,To modify an element, use the , method 
+and refer to the index number:,To remove an element, use the , method 
+and refer to the index number:,To remove all the elements in the ,, use the , method:,To find out how many elements an ArrayList have, use the , method:,Loop through the elements of an , with a , loop, and use the , method to specify how many times the loop should run:,You can also loop through an , with the , loop:,Elements in an ArrayList are actually objects. In the examples above, we created elements 
+(objects) of type ""String"". Remember that a String in Java is an object (not a primitive type). To use other types, such as int, you must specify an equivalent ,: ,. For other primitive types, 
+use: , for boolean, , for char, , for double, 
+etc:,Another useful class in the , package is the , class, which include the , method for sorting lists 
+alphabetically or numerically:",,,
+Java ,Date and Time,"Java Dates,Display Current Date,Display Current Time,Display Current Date and Time,Formatting Date and Time","Example,Example,Example,Example","Java does not have a built-in Date class, but we can import the , 
+package to work with the date and time API. The package includes many date and time classes. 
+For example:,To display the current date, import the , class, and use its , method:,To display the current time (hour, minute, second, and nanoseconds), import the , class, and use its , method:,To display the current date and time, import the , class, and use its , method:,The ""T"" in the example above is used to separate the date from the time. You can use the , class 
+with the , method in the same package to format or parse date-time objects. 
+The following example will remove both the ""T"" and nanoseconds from the date-time:,The , method accepts all sorts of values, if you want to display 
+the date and time in a different format. For example:",,,
+Java ,User Input (Scanner),"Java User Input,Input Types","Example,Example","The , class is used to get 
+user input, and it is found in the , package.,To use the , class, create an object of the class and use any of the available methods found in the , class documentation. 
+In our example, we will use the , method, which is used to read Strings:,In the example above, we used the , method, which is used to read Strings. To read other types, look at the table below:,In the example below, we use different methods to read data of various types:",,,
+Java ,Enums,"Enums,Enum inside a Class,Enum in a Switch Statement,Loop Through an Enum","Example,Example,Example,Example","An , is a special ""class"" that represents a group of 
+, (unchangeable variables, like , variables).,To create an ,, use the , keyword (instead of class or interface), and separate 
+the constants with a comma. Note that they should be in uppercase letters:,You can also have an , inside a class:,Enums are often used in , statements to check for corresponding values:,The enum type has a , method, which returns an array of all enum constants. This method is useful when you want to loop through the constants of an enum:",,,
+Java ,Interface,"Interfaces,Multiple Interfaces ","Example,Example,Example","Another way to achieve , in Java, is with interfaces.,An , is a completely "","" 
+that is used to group related methods with empty bodies:,To access the interface methods, the interface must be ""implemented"" 
+(kinda like inherited) by another class with the , 
+keyword (instead of ,). The body of the 
+interface method is provided by the ""implement"" class:,To implement multiple interfaces, separate them with a comma:","Like ,, interfaces , be used to create objects (in the example above, 
+it is not possible to create an ""Animal"" object in the MyMainClass),Interface methods do not have a body - the 
+body is provided by the ""implement"" class,On implementation of an interface, you must override all of its methods,Interface methods are by default , and 
+  ,Interface attributes are by default ,, 
+  , and ,An interface cannot contain a constructor (as it cannot be used to create objects)",,
+Java ,Method Parameters,"Parameters and Arguments,Multiple Parameters,Return Values,A Method with If...Else","Example,Example,Example,Example,Example,Example","Information can be passed to methods as parameter. Parameters act as variables inside the method.,Parameters are specified after the method name, inside the parentheses.
+You can add as many parameters as you want, just separate them with a comma.,
+The following example has a 
+method that takes a , called , as parameter.
+When the method is called, we pass along a first name,
+which is used inside the method to print the full name:
+,You can have as many parameters as you like:,The , keyword, used in the examples above, indicates that the method should not return a value. If you 
+want the method to return a value, you can use a primitive data type (such as ,, 
+,, etc.) instead of ,, and use the , 
+keyword inside the method:,This example returns the sum of a method's ,:,You can also store the result in a variable (recommended, as it is easier to read and maintain):,It is common to use , statements inside methods:",,,
+Java ,Methods,"Create a Method,Call a Method","Example,Example,Example","A , is a block of code which only runs when it is called.,You can pass data, known as parameters, into a method.,Methods are used to perform certain actions, and they are also known as ,.,Why use methods? To reuse code: define the code once, and use 
+it many times.,A method must be declared within a class. It is defined 
+with the name of the method, followed by parentheses ,. Java provides some pre-defined methods, such as ,, but you can also create your own methods to perform certain actions:,To call a method in Java, write the method's name followed by two 
+parentheses , and a semicolon,In the following example, , is used to print a text (the action), when it is called:,A method can also be called multiple times:"," is the name of the method, means that the method belongs to the 
+Main class and not an object of the Main class. You will learn more about objects and how to access methods through objects later in this tutorial., means that this method does not have a 
+return value. You will learn more about return values later in this chapter",,
+Java ,Arrays,"Java Arrays,Access the Elements of an Array,Change an Array Element,Array Length,Loop Through an Array,Loop Through an Array with For-Each,Multidimensional Arrays","Example,Example,Example,Example,Example,Syntax,Example,Example,Example,Example","Arrays are used to store multiple values in a single variable, instead of declaring separate variables for each 
+value.,To declare an array, define the variable type with ,:,We have now declared a variable that holds an array of strings. To insert 
+values to it, we can use an array literal - place the values in a 
+comma-separated list, inside curly braces:,To create an array of integers, you could write:,You access an array element by referring to the index number.,This statement accesses the value of the first element in cars:,To change the value of a specific element, refer to the index number:, 
+To find out how many elements an array has, use the , property:,You can loop through the array elements with the , loop, and use the , 
+property to specify how many times the loop should run.,The following example outputs all elements in the , 
+array:,There is also a "","" loop, which is used exclusively to loop through elements in arrays:,The following example outputs all elements in the , 
+array, using a "","" loop:,The example above can be read like this: , , element (called 
+, - as in 
+,ndex) in ,, print out the value of,.,If you compare the , loop and , loop, you will see that the , method is easier to write, it 
+does not require a counter (using the length property), and it is more readable.,A multidimensional array is an array of arrays.,To create a two-dimensional array, add each array within its own set of 
+,:, is now an array with two arrays as its elements.,To access the elements of the , array, 
+specify two indexes: one for the array, and one for the element inside that array. 
+This example accesses the third element (2) in the second array (1) of 
+myNumbers:,We can also use a , inside another , to get the elements of a two-dimensional array (we still have to point to the two indexes):",,,
+Java ,Break and Continue,"Java Break,Java Continue,Break and Continue in While Loop","Example,Example,Break Example,Continue Example","You have already seen the , statement used in an earlier chapter of this tutorial. It was used to ""jump out"" of a , statement.,The , statement can also be used to jump out of a 
+,.,This example stops the loop when i is equal to 4:,The , statement breaks one iteration (in the loop), if a specified condition occurs, and continues with the next iteration in the loop.,This example skips the value of 4:,You can also use , and , in while loops:",,,
+Java ,For Loop,"Java For Loop,Another Example,For-Each Loop","Syntax,Example,Example,Syntax,Example","When you know exactly how many times you want to loop through a block of 
+code, use the , loop instead of a , loop:, is executed (one time) before the execution of the code block., defines the condition for executing the code block., is executed (every time) after the code block has been executed.,The example below will print the numbers 0 to 4:,Statement 1 sets a variable before the loop starts (int i = 0).,Statement 2 defines the condition for the loop to run (i must be less than 
+5). If the condition is true, the loop will start over again, if it is false, 
+the loop will end.,Statement 3 increases a value (i++) each time the code block in the loop has 
+been executed.,This example will only print even values between 0 and 10:,There is also a "","" loop, which is used exclusively to loop through elements in an ,:,The following example outputs all elements in the , 
+array, using a "","" loop:",,,
+Java ,While Loop,"Loops,Java While Loop,The Do/While Loop","Syntax,Example,Syntax,Example","Loops can execute a block of code as long as a specified condition is reached.,Loops are handy because they save time, reduce errors, and they make code more readable.,The , loop loops through a block of code as long as a specified condition is ,:,In the example below, the code in the loop will run, over and over again, as long as 
+a variable (i) is less than 5:,The , loop is a variant of the , loop. This loop will 
+execute the code block once, before checking if the condition is true, then it will
+repeat the loop as long as the condition is true.,The example below uses a , loop. The loop will always be 
+executed at least once, even if the condition is false, because the code block 
+is executed before the condition is tested:",,,
+Java ,If ... Else,"Java Conditions and If Statements,The if Statement,The else Statement,The else if Statement,Short Hand If...Else (Ternary Operator)","Syntax,Example,Example,Syntax,Example,Syntax,Example,Syntax,Example,Example","Java supports the usual logical conditions from mathematics:,You can use these conditions to perform different actions for different decisions.,Java has the following conditional statements:,Use the , statement to specify a block of Java code to be executed if a condition is ,.,In the example below, we test two values to find out if 20 is greater than 
+18. If the condition is ,, print some text:,We can also test variables:,In the example above we use two variables, , and ,, 
+to test whether x is greater than y 
+(using the , operator). As x is 20, and y is 18, and we know that 20 is greater than 18, we print to the screen that ""x is greater than y"".,Use the , statement to specify a block of code to be executed if the condition is ,.,In the example above, time (20) is greater than 18, so the condition is ,. 
+Because of this, we move on to the , condition and print to the screen ""Good 
+evening"". If the time was less than 18, the program would print ""Good day"".,Use the , statement to specify a new condition if the first condition is ,.,In the example above, time (22) is greater than 10, so the , is ,. The next condition, in the  
+, statement, is also ,, so we move on to the ,
+condition since , and , is both , - and print to the screen ""Good 
+evening"".,However, if the time was 14, our program would print ""Good day."",There is also a short-hand if else, which is known as the , because it consists of three operands. It can be used to 
+replace multiple lines of code with a single line. It is often used to replace 
+simple if else statements:,Instead of writing:,You can simply write:","Less than: ,Less than or equal to: ,Greater than: ,Greater than or equal to: ,Equal to ,Not Equal to: ,Use , to specify a block of code to be executed, if a specified condition is true,Use , to specify a block of code to be executed, if the same condition is false,Use , to specify a new condition to test, if the first condition is false,Use , to specify many alternative blocks of code to be executed",,
+Java ,Delete Files,"Delete a File,Delete a Folder","Example,Example","To delete a file in Java, use the , method:,You can also delete a folder. However, it must be empty:",,,
+Java ,Booleans,"Java Booleans,Boolean Values,Boolean Expression","Example,Example,Example,Example,Example","Very often, in programming, you will need a data type that can only have one of two values, like:,For this, Java has a , data type, which can take the values , or ,.,A boolean type is declared with the , keyword and can only take the values , or ,:,However, it is more common to return boolean values from boolean expressions, for conditional testing
+(see below).,A , is a Java expression that returns a Boolean value: , or ,.,You can use a comparison operator, such as the , (,) operator to find out if an expression (or a variable) is true:,Or even easier:,In the examples below, we use the , (,) operator to evaluate an expression:","YES / NO,ON / OFF,TRUE / FALSE",,
+Java ,Switch,"Java Switch Statements,The break Keyword,The default Keyword","Syntax,Example,Example","Use the , statement to select one of many code blocks to be executed.,This is how it works:,The example below uses the weekday number to calculate the weekday name:,When Java reaches a , 
+keyword, it breaks out of the switch block.,This will stop the execution of more code and case testing inside 
+the block.,When a match is found, and the job is done, it's time for a break. There is no need for more testing.,The , keyword specifies some code to run if there is no 
+case match:","The , expression is evaluated once.,The value of the expression is compared with the values of each ,.,If there is a match, the associated block of code is executed.,The , and , keywords are optional, and will be described later in this chapter",,
+Java ,Math,"Math.max(,),Math.min(,),Math.sqrt(,),Math.abs(,),Random Numbers","Example,Example,Example,Example,Example,Example","The Java Math class has many methods that allows you to perform mathematical tasks on numbers.,The , method can be used to find the highest value of , and
+,:,The , method can be used to find the lowest value of , 
+and ,:,The , method returns the square root of ,:,The , method returns the absolute (positive) value of ,:, returns a random number between 0.0 (inclusive), and 1.0 (exclusive):,To get more control over the random number, e.g. you only want a random 
+number between 0 and 100, you can use the following formula:",,,
+Java ,Strings,"Java Strings,String Length,More String Methods,Finding a Character in a String,String Concatenation,Special Characters,Adding Numbers and Strings","Example,Example,Example,Example,Example,Example,Example,Example,Example,Example,Example,Example","Strings are used for storing text.,A , variable contains a collection of characters surrounded by double quotes:,A String in Java is actually an object, which contain methods that can perform certain operations on strings. For example, the length of a string can be found with the , method:,There are many string methods available, for example , and ,:,The , method returns the , (the position) 
+of the first occurrence of a specified text in a string 
+(including whitespace):,The , operator can be used between strings to 
+combine them. This is called ,:,You can also use the , method to concatenate two strings:,Because strings must be written within quotes, Java will misunderstand this string, 
+and generate an error:,The solution to avoid this problem, is to use the ,.,The backslash (,) escape character turns special characters into string characters:,The sequence ,  inserts a double quote in a string:,
+,The sequence ,  inserts a single quote in a string:,
+,The sequence ,  inserts a single backslash in a string:,
+,Six other escape sequences are valid in Java:,If you add two numbers, the result will be a number:,If you add two strings, the result will be a string concatenation:,If you add a number and a string, the result will be a string concatenation:",,,
+Java ,Operators,"Java Operators,Arithmetic Operators,Java Assignment Operators,Java Comparison Operators,Java Logical Operators","Example,Example,Example,Example","Operators are used to perform operations on variables and values.,In the example below, we use the
+, , to add together two values:,Although the , operator is often used to add together two values, like in the example above, it can also be used to add together a variable and a value, or a variable and another variable:,Java divides the operators into the following groups:,Arithmetic operators are used to perform common mathematical operations.,Assignment operators are used to assign values to variables.,In the example below, we use the , operator (,) 
+to assign the value , to a variable called ,:,The , operator (,) adds a value to a variable:,A list of all assignment operators:,Comparison operators are used to compare two values:,Logical operators are used to determine the logic between variables or 
+values:","Arithmetic operators,Assignment operators,Comparison operators,Logical operators,Bitwise operators",,
+Java ,Type Casting,"Java Type Casting,Widening Casting,Narrowing Casting","Example,Example","Type casting is when you assign a value of one primitive data type to another type.,In Java, there are two types of casting:,Widening casting is done automatically when passing a smaller size type to a 
+larger size type:,Narrowing casting must be done manually by placing the type in parentheses 
+in front of the value:"," (automatically) - converting a smaller type 
+to a larger type size,
+  , -> , -> , -> , -> , -> , -> ,
+, (manually) - converting a larger type 
+to a smaller size type,
+  , -> , -> , -> , -> , -> , -> ,
+",,
+Java ,Data Types,"Java Data Types,Primitive Data Types,Numbers,Integer Types,Floating Point Types,Booleans,Characters,Strings,Non-Primitive Data Types","Example,Example,Example,Example,Example,Example,Example,Example,Example,Example,Example,Example","As explained in the previous chapter, a variable in Java must be a specified data type:,Data types are divided into two groups:,A primitive data type specifies the size and type of variable values, and it has no 
+additional methods.,There are eight primitive data types in Java:,Primitive number types are divided into two groups:, stores whole numbers, positive or negative (such as 123 or -456), without decimals. 
+Valid types are ,, ,, , 
+and ,. Which type you should use, depends on the numeric value., represents numbers with a fractional part, 
+containing one or more decimals. There are two types: , and ,.,The , data type can store whole numbers 
+from -128 to 127. This can be used instead of , or other integer types to 
+save memory when you are certain that the value will be within -128 and 127:,The , data type can store whole numbers from -32768 to 32767:,The , data type can store whole numbers from -2147483648 to 2147483647. , In general, and in our tutorial, the , data type is 
+the preferred data type when we create variables with a numeric value.,The , data type can store whole numbers from -9223372036854775808 to 9223372036854775807. This is used when int is not large enough to store the value. Note that you should end the value with an ""L"":,You should use a floating point type whenever you need a number with a decimal, such as 9.99 or 3.14515.,The , data type can store fractional numbers from 3.4e−038 to 3.4e+038. Note that you should end the value with an ""f"":,The , data type can store fractional numbers from 1.7e−308 to 1.7e+308. Note that you should end the value with a ""d"":,A floating point number can also be a scientific number with an ""e"" to indicate the power of 10:,A boolean data type is declared with the , keyword and can only take the values , or ,:,Boolean values are mostly used for conditional testing, which you will learn more about in a later chapter.,The , data type is used to store a 
+, character. The character must be 
+surrounded by single quotes, like 'A' or 'c':,Alternatively, you can use ASCII values to display certain characters:, A list of all ASCII values can be found in our ,.,The , data type is used to store a sequence of characters (text). String values must be surrounded by double quotes:,Non-primitive data types are called , because 
+they refer to objects.,The main difference between , and , data types are:,Examples of non-primitive types are ,, ,, ,, etc. You will learn more about these in a later chapter.","Primitive data types - includes ,, ,, ,, ,, 
+ ,, ,, , and ,Non-primitive data types - such as ,, , and  , (you will learn more about these in a later chapter),Primitive types are predefined (already defined) in Java. Non-primitive types are created by the programmer and 
+is not defined by Java (except for ,).,Non-primitive types can be used to call methods to perform certain operations, while primitive types cannot.,A primitive type has always a value, while non-primitive types can be ,.,A primitive type starts with a lowercase letter, while non-primitive types starts with an uppercase letter.,The size of a primitive type depends on the data type, while non-primitive types have all the same size.",,
+Java ,Comments,"Java Comments,Single-line Comments,Java Multi-line Comments","Example,Example,Example","Comments can be used to explain Java code, and to make it more readable. It can also be used to 
+prevent execution when testing alternative code.,Single-line comments start with two forward slashes (,).,Any text between , and the end of the line 
+is ignored by Java (will not be executed).,This example uses a single-line comment before a line of code:,This example uses a single-line comment at the end of a line of code:,Multi-line comments start with , and ends with ,.,Any text between , and , will be ignored by Java.,This example uses a multi-line comment (a comment block) to explain the code:",,,
+Java ,Syntax,"Java Syntax,The main Method,System.out.println()",,"In the previous chapter, we created a Java file called ,, and we used the following code to print ""Hello World"" to the screen:,Every line of code that runs in Java must be inside a ,.
+In our example, we named the class ,. A class should always start with 
+an uppercase first letter., Java is case-sensitive: ""MyClass"" and ""myclass"" has 
+different meaning.,The name of the java file , the class name.
+When saving the file, save it using the class name and add "".java"" to the end of 
+the filename. To run the example above on your computer, make sure that Java is 
+properly installed: Go to the , for how to install Java. The output should be:,The , method is required and you will 
+see it in every Java 
+program:,Any code inside the , method will be executed. You don't have to understand the keywords before and after main. You will get to know 
+them bit by bit while reading this tutorial.,For now, just remember that every Java program has a , name which 
+must match the filename, and that every program must contain the 
+, method.,Inside the , method, we can use the , 
+method to print a line of text to the screen:",,,
+Java ,Variables,"Java Variables,Declaring (Creating) Variables,Final Variables,Other Types,Display Variables,Declare Many Variables,Java Identifiers","Syntax,Example,Example,Example,Example,Example,Example,Example,Example,Example,Example","Variables are containers for storing data values. ,In Java, there are different , of variables, for example:,To create a variable, you must specify the type and assign it a value:,Where , is one of Java's types (such as , or ,), and 
+, is the name of the variable (such as , or
+,). The , is used to assign values to the variable.,To create a variable that should store text, look at the following example:,To create a variable that should store a number, look at the following example:,You can also declare a variable without assigning the value, and assign the value later:,Note that if you assign a new value to an existing variable, it will overwrite the previous value:,However, you can add the , keyword if you don't want others (or yourself) to overwrite existing values (this will declare the variable as ""final"" or ""constant"", which means unchangeable and read-only):,A demonstration of how to declare variables of other types:,The , method is often used to display variables.,To combine both text and a variable, use the , character:,You can also use the , character to add a variable to another variable:,For numeric values, the , character works as a mathematical operator (notice that we use , (integer) variables here):,From the example above, you can expect:,To declare more than one variable of the ,, use a comma-separated list:,All Java , must be
+, with ,.,These unique names are called ,.,Identifiers can be short names (like x and y) or more descriptive names (age, sum, totalVolume)., It is recommended to use descriptive names in order to 
+create understandable and maintainable code:,The general rules for naming variables are:"," - stores text, such as ""Hello"". String values are 
+ surrounded by double quotes, - stores integers (whole numbers), without decimals, such as 123 or -123, - stores floating point numbers, with decimals, such as 19.99 or -19.99, - stores single characters, such as 
+ 'a' or 'B'. Char values are surrounded by single quotes, - stores values with two states: 
+ true or false,x stores the value 5,y stores the value 6,Then we use the , method to display the value of x + y, 
+ which is ,Names can contain letters, digits, underscores, and dollar signs,Names must begin with a letter,Names should start with a lowercase letter and it cannot contain whitespace,Names can also begin with $ and _ (but we will not use it in this tutorial),Names are case sensitive (""myVar"" and ""myvar"" are different variables),Reserved words (like Java keywords, such as , or 
+  ,) cannot be used as names",,
+Java ,Getting Started,"Java Install,Setup for Windows,Java Quickstart",,"Some PCs might have Java already installed.,To check if you have Java installed on a Windows PC, search in the start bar for Java or type the following in Command Prompt (cmd.exe):,If Java is installed, you will see something like this (depending on version):,If you do not have Java installed on your computer, you can download it for free at ,., In this tutorial, we will write Java code in a text editor. However, it is possible to write Java in an Integrated Development Environment, such as IntelliJ IDEA, Netbeans or Eclipse, which are particularly useful when managing larger collections of Java files.,To install Java on Windows:,In Java, every application begins with a class name, and that class must match the filename.,Let's create our first Java file, called Main.java, which can be done in any text editor 
+(like Notepad).,The file should contain a ""Hello World"" message, which is written with the 
+following code:,Don't worry if you don't understand the code above - we will discuss it in detail in later chapters. 
+For now, focus on , to run the code above.,Save the code in Notepad as ""Main.java"". Open Command Prompt (cmd.exe), navigate to the directory where you saved your file, and type ""javac 
+Main.java"":,This will compile your code. If there are no errors in the code, the command prompt will take you to the next line. 
+Now, type ""java Main"" to run the file:,The output should read:, You have written and executed your first Java program.",,,
+Java ,Introduction,"What is Java?,Why Use Java?,Get Started",,"Java is a popular programming language, created in 1995.,It is owned by Oracle, and more than , devices run Java.,It is used for:,It is not necessary to have any prior programming experience.","Mobile applications (specially Android apps),Desktop applications,Web applications,Web servers and application servers,Games,Database connection,And much, much more!,Java works on different platforms (Windows, Mac, Linux, Raspberry Pi, etc.),It is one of the most popular programming language in the world,It is easy to learn and simple to use,It is open-source and free,It is secure, fast and powerful,It has a huge community support (tens of millions of developers),Java is an object oriented language which gives a clear structure to programs and allows code to be reused, lowering development costs,As Java is close to , and ,, it makes it easy for programmers to switch to Java or vice versa",,

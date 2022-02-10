@@ -1,0 +1,1269 @@
+H1_leftside_heading,H1_rightside_heading,H2,H3,All_para,li,div,div_2
+PHP ,Tutorial,"Easy Learning with ""PHP Tryit"",PHP Exercises,PHP Examples,PHP Quiz Test,PHP References",Example,"With our online ""PHP Tryit"" editor, you can edit the PHP code, and click 
+on a button to view the result.,Learn by examples! This tutorial supplements all explanations with clarifying examples.,Learn by taking a quiz! This quiz will give you a signal of how much you know, or do not know, about PHP.,W3Schools' PHP reference contains different categories of all PHP functions, keywords and constants, along with examples.",,"
+ <!DOCTYPE html>,
+ <html>,
+    <body>,
+ ,
+ ,
+    </body>,
+    </html>
+",
+PHP ,Forms - Required Fields,"PHP - Required Fields,PHP - Display The Error Messages",Example,"This chapter shows how to make input fields required and create error messages if needed.,From the validation rules table on the previous page, we see that the ""Name"", ""E-mail"", and 
+""Gender"" fields are required. These fields cannot be empty and must be filled out in the 
+HTML form.,In the previous chapter, all input fields were optional. ,In the following code we have added some new variables: $nameErr, $emailErr, 
+$genderErr, and $websiteErr. These error variables will hold error messages for the 
+required fields. We have also added an , statement for each $_POST variable. This 
+checks if the $_POST variable is empty (with the PHP , 
+function). If it is empty, an error message is stored in the different error variables, 
+and if it is not empty, it sends the user input data through the , 
+function:,Then in the HTML form, we add a little script after each required field, 
+which generates the correct error message if needed (that is if the user tries to submit 
+the form without filling out the required fields):,The next step is to validate the input data, that is ""Does the Name field 
+contain only letters and whitespace?"", and ""Does the E-mail field contain a 
+valid e-mail address syntax?"", and if filled out, ""Does the Website field contain 
+a valid URL?"".",,,
+PHP ,Form Validation,"PHP Form Validation,Text Fields,Radio Buttons,The Form Element,Big Note on PHP Form Security,How To Avoid $_SERVER[""PHP_SELF""] Exploits?,Validate Form Data With PHP",Example,"This and the next chapters show how to use PHP to validate form data.,The HTML form we will be working at in these chapters, contains various input fields: 
+required and optional text fields, radio buttons, and a submit button:,The validation rules for the form above are as follows:,First we will look at the plain HTML code for the form:,The name, email, and website fields are text input elements, and the comment 
+field is a textarea. The HTML code looks like this:,The gender fields are radio buttons and the HTML code looks like this:,The HTML code of the form looks like this:,When the form is submitted, the form data is sent with method=""post"".,So, the $_SERVER[""PHP_SELF""] sends the submitted form data to the page itself, instead of jumping to a different page. 
+This way, the user will get error messages on the same page as the form.,The $_SERVER[""PHP_SELF""] variable can be used by hackers!,If PHP_SELF is used in your page then a user can enter a slash (/) and then
+some Cross Site Scripting (XSS) commands to execute.,Assume we have the following form in a page named ""test_form.php"":,Now, if a user enters the normal URL in the address bar like 
+""http://www.example.com/test_form.php"", the above code will be translated to:,So far, so good.,However, consider that a user enters the following URL in the address bar:,In this case, the above code will be translated to:,This code adds a script tag and an alert command. And when the page loads, the 
+JavaScript code will be executed (the user will see an alert box). This is just a simple 
+and harmless example how the PHP_SELF variable can be exploited.,Be aware of that ,A hacker can redirect the user to a file on another server, 
+and that file can hold malicious code 
+that can alter the global variables or submit the form to another 
+address to save the user data, for example.,$_SERVER[""PHP_SELF""] exploits can be avoided by using the htmlspecialchars() function.,The form code should look like this:,The htmlspecialchars() function converts special characters to HTML entities. Now if the user 
+tries to exploit the PHP_SELF variable, it will result in the following output:,The exploit attempt fails, and no harm is done!,The first thing we will do is to pass all variables through PHP's htmlspecialchars() function.,When we use the htmlspecialchars() function; then if a user tries to submit the following in a text field:,<script>location.href('http://www.hacked.com')</script>,- this would not be executed, because it would be saved as HTML escaped code, like this:,&lt;script&gt;location.href('http://www.hacked.com')&lt;/script&gt;,The code is now safe to be displayed on a page or inside an e-mail.,We will also do two more things when the user submits the form:,The next step is to create a function that will do all the checking for us 
+(which is much more convenient than writing the same code over and over again).,We will name the function test_input().,Now, we can 
+check each $_POST variable with the test_input() function, and the script looks like this:,Notice that at the start of the script, we check whether the form has been 
+submitted using $_SERVER[""REQUEST_METHOD""]. If the REQUEST_METHOD is POST, then 
+the form has been submitted - and it 
+should be validated. If it has not been submitted, skip the validation and 
+display a blank form.,However, in the example above, all input fields are optional. The script 
+works fine even if the user does not enter any data.,The next step is to make input fields required and create error messages if 
+needed.",,,
+PHP ,File Handling,"PHP Manipulating Files,PHP readfile() Function,PHP Exercises",Example,"File handling is an important part of any web application. You 
+often need to open and process a file for different tasks.,PHP has several functions for creating, reading, uploading, and editing files.,The , function reads a file and writes it to the output buffer.,Assume we have a text file called ""webdictionary.txt"", stored on the 
+server, that looks like this:,The PHP code to read the file and write it to the output buffer is as follows 
+(the , function returns the number of bytes read on success):,The , function is useful if all you want to do is open up a file and read its contents.,The next chapters will teach you more about file handling.",,,
+PHP ,File Open/Read/Close,"PHP Open File - fopen(),PHP Read File - fread(),PHP Close File - fclose(),PHP Read Single Line - fgets(),PHP Check End-Of-File - feof(),PHP Read Single Character - fgetc(),Complete PHP Filesystem Reference,PHP Exercises","Example,Example,Example,Example","In this chapter we will teach you how to open, read, and close a file 
+on the server.,A better method to open files is with the , function. This function gives you more 
+options than the , function.,We will use the text file, ""webdictionary.txt"", during the lessons:,The first parameter of , contains the name of the file to be opened and the 
+second parameter specifies in which mode the file should be opened. The following example 
+also generates a message if the fopen() function is unable to open the specified file:, The , and the , functions will be 
+explained below.,The file may be opened in one of the following modes:,The , function reads from an open file.,The first parameter of , contains the name of the file to read from and 
+the second parameter specifies the maximum number of bytes to read.,The following PHP code reads the ""webdictionary.txt"" file to the end:,The , function is used to close an open file.,The , requires the name of the file (or a variable that holds the 
+filename) we want to close:,The , function is used to read a single line from a file.,The example below outputs the first line of the ""webdictionary.txt"" file:, After a call to the , function, the file pointer has moved to the next line.,The , function checks if the ""end-of-file"" (EOF) has been reached.,The , function is useful for looping through data of unknown length.,The example below reads the ""webdictionary.txt"" file line by line, until end-of-file is reached:,The , function is used to read a single character from a file.,The example below reads the ""webdictionary.txt"" file character by 
+character, until end-of-file is reached:, After a call to the , function, the file pointer moves to the next character.,For a complete reference of filesystem functions, go to our complete
+,.",,,
+PHP ,Complete Form Example,"PHP - Keep The Values in The Form,PHP - Complete Form Example",Example,"This chapter shows how to keep the values in the input fields 
+when the user hits the submit button.,To show the values in the input fields after the user hits the submit button, 
+we add a little PHP script inside the value attribute of the following input 
+fields: name, email, and website. In the comment textarea field, we put the 
+script between the <textarea> and </textarea> tags. The little script outputs the 
+value of the $name, $email, $website, and $comment variables. ,Then, we also need to show which radio button that was checked. For this, we 
+must manipulate the checked attribute (not the value attribute for radio 
+buttons):,Here is the complete code for the PHP Form Validation Example:",,,
+PHP ,Date and Time,"The PHP Date() Function,Get a Date,PHP Tip - Automatic Copyright Year,Get a Time,Get Your Time Zone,Create a Date With mktime(),Create a Date From a String With strtotime(),More Date Examples,Complete PHP Date Reference,PHP Exercises","Example,Example,Example,Example,Example,Example,Example,Example,Example","The PHP , function is used to format a date and/or a time.,The PHP , function formats a timestamp to a more readable date and time.,The required , parameter of the date() function specifies how to format the date 
+(or time).,Here are some characters that are commonly used for dates:,Other characters, like""/"", ""."", or ""-"" can also be inserted between the 
+characters to add additional formatting.,The example below formats today's date in three different ways:,Use the , function to automatically update the copyright year on your 
+website:,Here are some characters that are commonly used for times:,The example below outputs the current time in the specified format:,If the time you got back from the code is not correct, it's probably because your server is in another country or set up 
+for a different timezone.,So, if you need the time to be correct according to a specific 
+location, you can set the timezone you want to use. ,The example below sets the timezone to ""America/New_York"", then outputs the current time in the specified format:,The optional , parameter in the date() function specifies a timestamp. If 
+omitted, the current date and time will be used (as in the 
+examples above).,The PHP , function returns the Unix timestamp for a date. The Unix timestamp contains the number of seconds between the Unix Epoch 
+(January 1 1970 00:00:00 GMT) and the time specified.,The example below creates a date and time with the 
+, function from a number of parameters in the 
+, function:,The PHP , function is used to convert a human readable 
+date string into a 
+Unix timestamp (the number of seconds since January 1 1970 00:00:00 GMT).,The example below creates a date and time from the , function:,PHP is quite clever about converting a string to a date, so you can put in 
+various values:,However, , is not perfect, so remember to check the strings you put in there.,The example below outputs the dates for the next six Saturdays:,The example below outputs the number of days until 4th of July:,For a complete reference of all date functions, go to our complete
+,.,The reference contains a brief description, and examples of use, for each function!","d - Represents the day of the month (01 to 31) ,m - Represents a month (01 to 12),Y - Represents a year (in four digits),l (lowercase 'L') - Represents the day of the week,H - 24-hour format of an hour (00 to 23),h - 12-hour format of an hour with leading zeros (01 to 12) ,i - Minutes with leading zeros (00 to 59),s - Seconds with leading zeros (00 to 59),a - Lowercase Ante meridiem and Post meridiem (am or pm)",,
+PHP ,File Create/Write,"PHP Create File - fopen(),PHP File Permissions,PHP Write to File - fwrite(),PHP Overwriting,Complete PHP Filesystem Reference","Example,Example,Example","In this chapter we will teach you how to create and write to a file 
+on the server.,The , function is also used to create a file. Maybe a little confusing, but in PHP, a file is created using the same 
+function used to open files.,If you use , on a file that does not 
+exist, it will create it, given that the file is opened for writing (w) or 
+appending (a).,The example below creates a new file called ""testfile.txt"". The file will be 
+created in the same directory where the PHP code resides:,If you are having errors when trying to get this code to run, check that you have granted your PHP file access to write 
+information to the hard drive.,The , function is used to write to a file.,The first parameter of , contains the name of the file to write to and 
+the second parameter is the string to be written.,The example below writes a couple of names into a new file called ""newfile.txt"":,Notice that we wrote to the file ""newfile.txt"" twice. Each time we wrote to 
+the file we sent the string $txt that first contained ""John Doe"" and second 
+contained ""Jane Doe"". After we finished writing, we closed the file using the , function.,If we open the ""newfile.txt"" file it would look like this:,Now that ""newfile.txt"" contains some data we can show what happens when we 
+open an existing file for writing. All the existing data will be ERASED and we 
+start with an empty file.,In the example below we open our existing file ""newfile.txt"", and write some 
+new data into it:,If we now open the ""newfile.txt"" file, both John and Jane have 
+vanished, and only the data we just wrote is present:,For a complete reference of filesystem functions, go to our complete
+,.",,,
+PHP ,Form Handling,"PHP - A Simple HTML Form,GET vs. POST,When to use GET?,When to use POST?,PHP Exercises","Example,Example","The PHP superglobals $_GET and $_POST are used to collect form-data.,The example below displays a simple HTML form with two input fields and a submit button:,When the user fills out the form above and clicks the submit button, the form data is sent 
+for processing to a PHP file named ""welcome.php"". The form data is sent with 
+the HTTP POST method.,To display the submitted data you could simply echo all the variables. The ""welcome.php"" looks like this:,The output could be something like this:,The same result could also be achieved using the HTTP GET method:,and ""welcome_get.php"" looks like this:,The code above is quite simple. However, the most important thing is missing. You need 
+to validate form data to protect your script from malicious code.,Both GET and POST create an array (e.g. array( key1 => value1, 
+key2 => value2, key3 => value3, ...)). This array holds key/value pairs, where 
+keys are the names of the form controls and values are the input data from the user.,Both GET and POST are treated as $_GET and $_POST. These are superglobals, 
+which means that they are always accessible, regardless of scope - and you can access them from any function,
+class or file without having to do anything special.,$_GET is an array of variables passed to the current script via the URL parameters.,$_POST is an array of variables passed to the current script via the HTTP POST method.,Information sent from a form with the GET method is , (all 
+variable names and values are displayed in the URL). GET also has limits on the amount of 
+information to send. The limitation is about 2000 characters. However, 
+because the variables are displayed in the URL, it is possible to bookmark the 
+page. This can be useful in some cases.,GET may be used for sending non-sensitive data., GET should NEVER be used for sending passwords or other sensitive information!,Information sent from a form with the POST method is , 
+(all names/values are embedded within the body of the HTTP request) and 
+has , on the amount of information to send.,Moreover POST supports advanced functionality such as support for multi-part 
+binary input while uploading files to server.,However, because the variables are not displayed in the URL, it is not possible to bookmark the page.,Next, lets see how we can process PHP forms the secure way!",,,
+PHP ,Regular Expressions,"What is a Regular Expression?,Syntax,Regular Expression Functions,Using preg_match(),Using preg_match_all(),Using preg_replace(),Regular Expression Modifiers,Regular Expression Patterns,Metacharacters,Quantifiers,Grouping,Complete RegExp Reference","Example,Example,Example,Example","A regular expression is a sequence of characters that forms a search pattern.
+When you search for data in a text, you can use this search pattern to describe what you
+are searching for.,A regular expression can be a single character, or a more complicated pattern.,Regular expressions can be used to perform all types of text search and text replace
+operations.,In PHP, regular expressions are strings composed of delimiters, a pattern and optional
+modifiers.,In the example above, , is the ,, , is the ,that is being searched for,
+and , is a ,that makes the search case-insensitive.,The delimiter can be any character that is not a letter, number, backslash or space. The
+most common delimiter is the forward slash (/), but when your pattern contains forward
+slashes it is convenient to choose other delimiters such as # or ~.,PHP provides a variety of functions that allow you to use regular expressions. The
+,, , and , functions are some of the
+most commonly used ones:,The , function will tell you whether a string contains matches of a pattern.,The , function will tell you how many matches were found for a pattern in a
+string.,The , function will replace all of the matches of the pattern in a string with
+another string.,Modifiers can change how a search is performed.,Brackets are used to find a range of characters:,Metacharacters are characters with a special meaning:,Quantifiers define quantities:,You can use parentheses , to apply quantifiers to entire patterns. They also can be used
+to select parts of the pattern to be used as a match.,For a complete reference, go to our ,.,The reference contains descriptions and examples of all Regular Expression functions.",,,
+"PHP , - Superglobals",Global Variables,PHP Global Variables - Superglobals,,"Superglobals were introduced in PHP 4.1.0, and are built-in 
+variables that are always available in all scopes.,Some predefined variables in PHP are ""superglobals"", which means that they 
+are always accessible, regardless of scope - and you can access them from any 
+function, class or file without having to do anything special.,The PHP superglobal variables are:,The next chapters will explain some of the superglobals, and the rest will be 
+explained in later chapters.","$GLOBALS,$_SERVER,$_REQUEST,$_POST,$_GET,$_FILES,$_ENV,$_COOKIE,$_SESSION",,
+PHP ,Forms - Validate E-mail and URL,"PHP - Validate Name,PHP - Validate E-mail,PHP - Validate URL,PHP - Validate Name, E-mail, and URL",Example,"This chapter shows how to validate names, e-mails, and URLs.,The code below shows a simple way to check if the name field only contains 
+letters, dashes, apostrophes and whitespaces. If the value of the name field is not valid, then store 
+an error message:,The easiest and safest way to check whether an email address is well-formed 
+is to use PHP's filter_var() function.,In the code below, if the e-mail address is not well-formed, then store an error message:,The code below shows a way to check if a URL address syntax is 
+valid (this regular expression also allows dashes in the URL). If the URL address syntax is not valid, then store an error message:,Now, the script looks like this:,The next step is to show how to prevent the form from emptying all the input 
+fields when the user submits the form.",,,
+PHP ,Include Files,"PHP include and require Statements,PHP include Examples,PHP include vs. require,PHP Exercises","Example,Example,Example,Example,Example","The , (or ,) statement takes all the text/code/markup that exists in the specified file and copies it into
+the file that uses the include statement.,Including files is very useful when you want to include the same PHP,
+HTML, or text on multiple pages of a website.,It is possible to insert the content of one PHP file into another PHP file (before the 
+server executes it), with the include or require statement.,So, if you want the execution to go on and show users the output, even if the 
+include file is missing, use the include statement. Otherwise, in case of FrameWork, CMS, or a 
+complex PHP application coding, always use the require statement to include a key file to the 
+flow of execution. This will help avoid compromising your application's security 
+and integrity, just in-case one key file is accidentally missing.,Including files saves a lot of work. This means that 
+you can create a standard header, footer, or menu file for all your web pages. 
+Then, when the header needs to be updated, you can only 
+update the header include file.,Assume we have a standard footer file called ""footer.php"", that looks like this:,To include the footer file in a page, use the , statement:,Assume we have a standard menu file called ""menu.php"":,All pages in the Web site should use this menu file. Here is how it can be done 
+(we are using a <div> element so that the menu easily can be styled with CSS later):,Assume we have a file called ""vars.php"", with some variables defined:,Then, if we include the ""vars.php"" file, the variables can be used in the calling file:,The , statement is also used to include a file into the PHP code.,However, there is one big difference between include and require; when a 
+file is included with the , statement and PHP cannot find it, the script 
+will continue to execute:,If we do the same example using the , statement, the 
+echo statement will not be executed because the script execution dies after the 
+, statement returned a fatal error:"," will produce a fatal error (E_COMPILE_ERROR) and stop the script, will only produce a warning (E_WARNING) and the script will continue",,
+PHP ,Arrays,"What is an Array?,Create an Array in PHP,Get The Length of an Array - The count() Function,Complete PHP Array Reference,PHP Exercises","Example,Example","An array stores multiple values in one single variable:,An array is a special variable, which can hold more than one value at a time.,If you have a list of items (a list of car names, for example), storing the cars in single variables could look like this:,However, what if you want to loop through the cars and find a specific one? And what if you had not 3 cars, but 300?,The solution is to create an array!,An array can hold many values under a single name, and you can access the values by referring to an index number.,In PHP, the , function is used to create an array:,In PHP, there are three types of arrays:,The , function is used to return the length (the number of elements) of 
+an array:,For a complete reference of all array functions, go to our complete ,.,The reference contains a brief description, and examples of use, for each function!"," - Arrays with a numeric index, - Arrays with named keys, - Arrays containing one or more arrays",,
+PHP ,Timezones,PHP Supported Timezones,,"Below is a complete list of the timezones supported by PHP, which are useful with several PHP date functions.",,,
+"PHP ,Functions",Zip ,"PHP Zip Introduction,Requirements,Installation,PHP Zip Functions",,"The Zip files functions allows you to read ZIP files.,The ZIP extension requires ,.,For these functions to work, you have to compile PHP with --enable-zip., Use the
+, configure option to use a system libzip installation. 
+libzip version 0.11 is required, with 0.11.2 or later recommended., Building against the bundled libzip is discouraged, but still 
+possible by adding --without-libzip to the configuration. , Users must enable ""php_zip.dll"" inside of ""php.ini"" for 
+these functions to work., The ZIP extension is built-in.",,,
+PHP ,Loops,PHP Loops,,"In the following chapters you will learn how to repeat code by 
+using loops in PHP.,Often when you write code, you want the same block of code to run over and 
+over again a certain number of times. So, instead of adding several almost equal code-lines in a script, we 
+can use loops.,Loops are used to execute the same block of code again and again, as long as 
+a certain condition is true.,In PHP, we have the following loop types:,The following chapters will explain and give examples of each loop type."," - loops through a block of code as long as the specified condition is true, - loops through a block of code once, and then repeats the loop 
+  as long as the specified condition is true, - loops through a block of code a specified number of times, - loops through a block of code for each element in an 
+  array",,
+"PHP , Function",var_dump(),"Definition and Usage,Syntax,Parameter Values,Technical Details",Example,"The var_dump() function dumps information about one or more variables. The 
+information holds type and value of the variable(s).",,"
+<?php,
+  $a = 32;,echo var_dump($a) . ""<br>"";,$b = ""Hello 
+  world!"";,echo var_dump($b) . ""<br>"";,$c = 32.5;,echo 
+  var_dump($c) . ""<br>"";,$d = array(""red"", ""green"", 
+  ""blue"");,echo var_dump($d) . ""<br>"";,
+  $e = array(32, ""Hello world!"", 32.5, array(""red"", ""green"", ""blue""));,echo 
+  var_dump($e) . ""<br>"";,// Dump two variables,echo 
+  var_dump($a, $b) . ""<br>"";,?>
+",
+PHP ,Functions,"PHP Built-in Functions,PHP User Defined Functions,Create a User Defined Function in PHP,PHP Function Arguments,PHP is a Loosely Typed Language,PHP Default Argument Value,PHP Functions - Returning values,PHP Return Type Declarations,Passing Arguments by Reference,PHP Exercises","Example,Example,Example,Example,Example,Example,Example,Example,Example,Example","The real power of PHP comes from its functions.,PHP has more 
+than 1000 built-in functions, and in addition you can create your own custom 
+functions.,PHP has over 1000 built-in functions that can be called directly, from within 
+a script, to perform 
+a specific task.,Please check out our PHP reference for a complete overview of the
+,.,Besides the built-in PHP functions, it is possible to create your own functions.,A user-defined function declaration starts with the word ,:, Give the function a name that reflects what the 
+function does!,In the example below, we create a function named ""writeMsg()"". The opening 
+curly brace ( { ) indicates the beginning of the function code, and the closing 
+curly brace ( } ) indicates the end of the function. The function outputs ""Hello 
+world!"". To call the function, just write its name followed by brackets ():,Information can be passed to functions through arguments. An argument is just 
+like a variable.,Arguments are specified after the function name, inside the parentheses. You 
+can add as many arguments as you want, just separate them with a comma. ,The following example has a function with one argument ($fname). When the 
+familyName() function is called, we also pass along a name (e.g. Jani), and the 
+name is used inside the function, which outputs several different first names, 
+but an equal last name:,The following example has a function with two arguments ($fname and $year):,In the example above, notice that we did not have to tell PHP which data type the variable is.,PHP automatically associates a data type to the variable, depending on its value. 
+Since the data types are not set in a strict sense, you can do things like 
+adding a string to an integer without causing an error.,In PHP 7, type declarations were added. This gives us an option to specify 
+the expected data type when declaring a function, and by adding the , 
+declaration, it will throw a ""Fatal 
+Error"" if the data type mismatches.,In the following example we try to send both a number and a string to the 
+function without using ,:,To specify , we need to set ,. 
+This must be on the very first line of the PHP file.,In the following example we try to send both a number and a string to the 
+function, but here we have added the , 
+declaration:,The following example shows how to use a default parameter. If we call the 
+function setHeight() without arguments it takes the default value as argument:,To let a function return a value, use the , statement:,PHP 7 also supports Type Declarations for the , 
+statement. Like with the type declaration for function arguments, by enabling the strict requirement, it will throw a ""Fatal 
+Error"" on a type mismatch.,To declare a type for the function return, add a colon (
+, ) and the type right before the opening curly 
+( , )bracket when declaring the function.,In the following example we specify the return type for the function:,You can specify a different return type, than the argument types, but make 
+sure the return is the correct type:,In PHP, arguments are usually passed by value, which means that a copy of the value is
+used in the function and the variable that was passed into the function cannot be changed.,When a function argument is passed by reference, changes to the argument also change
+the variable that was passed in. To turn a function argument into a reference, the ,
+operator is used:","A function is a block of statements that can be used repeatedly in a program.,A function will not execute automatically when a page loads.,A function will be executed by a call to the function.",,
+"PHP , Function",var_export(),"Definition and Usage,Syntax,Parameter Values,Technical Details",Example,"The var_export() function outputs or returns structured information about a variable. ,This function works similar to ,, 
+except that the returned value for this function is valid PHP code.",,"
+<?php,
+  $a = 32;,echo var_export($a) . ""<br>"";,$b = ""Hello 
+  world!"";,echo var_export($b) . ""<br>"";,$c = 32.5;,echo 
+  var_export($c) . ""<br>"";,$d = array(""red"", ""green"", 
+  ""blue"");,echo var_export($d) . ""<br>"";,
+  $e = array(32, ""Hello world!"", 32.5, array(""red"", ""green"", ""blue""));,
+  echo var_export($e) . ""<br>"";,?>
+",
+"PHP , Function",unset(),"Definition and Usage,Syntax,Parameter Values,Technical Details",Example,The unset() function unsets a variable.,,"
+<?php,
+  $a = ""Hello world!"";,echo 
+  ""The value of variable 'a' before unset: "" . $a . ""<br>"";,
+  unset($a);,echo 
+  ""The value of variable 'a' after unset: "" . $a;,?>
+",
+"PHP , Function",unserialize(),"Definition and Usage,Syntax,Parameter Values,Technical Details",Example,The unserialize() function converts serialized data back into actual data. ,,"
+<?php,
+  $data = serialize(array(""Red"", ""Green"", ""Blue""));,echo $data 
+  . ""<br>"";,$test = unserialize($data);,var_dump($test);,?>
+",
+"PHP , Function",strval(),"Definition and Usage,Syntax,Parameter Values,Technical Details",Example,The strval() function returns the string value of a variable.,,"
+<?php,
+  $a = ""Hello"";,echo strval($a) . ""<br>"";,$b = ""1234.56789"";,echo 
+  strval($b) . ""<br>"";,$c = 
+  ""1234.56789Hello"";,echo strval($c) . ""<br>"";,$d = 
+  ""Hello1234.56789"";,echo strval($d) . ""<br>"";,
+  ,$e = 
+  1234;,echo strval($e) . ""<br>"";,?>
+",
+"PHP , Functions",XML Parser,"PHP XML Parser Introduction,Installation,PHP XML Parser Functions,PHP XML Parser Constants",,"The XML functions lets you parse, but not validate, XML documents.,XML is a data format for standardized structured document exchange. More 
+information on XML can be found in our 
+,.,This extension uses the Expat XML parser.,Expat is an event-based parser, it views an XML document as a series of 
+events. When an event occurs, it calls a specified function to handle it.,Expat is a non-validating parser, and ignores any DTDs linked to a document. 
+However, if the document is not well formed it will end with an error message.,Because it is an event-based, non validating parser, Expat is fast and well 
+suited for web applications.,The XML parser functions lets you create XML parsers and define handlers for XML 
+events.,The XML functions are part of the PHP core. There is no installation needed to use these functions.",,,
+"PHP , Function",isset(),"Definition and Usage,Syntax,Parameter Values,Technical Details",Example,"The isset() function checks whether a variable is set, which means that it 
+has to be declared and is not NULL.,This function returns true if the variable exists and is not NULL, otherwise it returns 
+false., If multiple variables are supplied, then this function 
+will return true only if all of the variables are set. , A variable can be unset with the unset() function.",,"
+<?php,
+  $a = 0;,// True because $a is set,if (isset($a)) {,  echo 
+  ""Variable 'a' is set.<br>"";,},$b = null;,// False because $b is 
+  NULL,if (isset($b)) {,  echo ""Variable 'b' is set."";,},?>
+",
+"PHP , Function",settype(),"Definition and Usage,Syntax,Parameter Values,Technical Details",Example,The settype() function converts a variable to a specific type. ,,"
+<?php,
+  $a = ""32""; // string ,settype($a, ""integer""); // $a is now integer,$b = 32; 
+  // integer ,settype($b, ""string""); // $b is now string,$c = true; // 
+  boolean ,settype($c, ""integer""); // $c is now integer (1),?>
+",
+"PHP , Function",serialize(),"Definition and Usage,Syntax,Parameter Values,Technical Details",Example,"The serialize() function converts a storable representation of a value. ,To serialize data means to convert a value to a sequence of bits, so that it 
+can be stored in a file, a memory buffer, or transmitted across a network. ",,"
+<?php,
+  $data = serialize(array(""Red"", ""Green"", ""Blue""));,echo $data;,?>
+",
+"PHP , Function",print_r(),"Definition and Usage,Syntax,Parameter Values,Technical Details",Example,"The print_r() function prints the information about a variable in a more 
+human-readable way.",,"
+<?php,
+  $a = array(""red"", ""green"", ""blue"");,print_r($a);,echo ""<br>"";,
+  ,$b = array(""Peter""=>""35"", ""Ben""=>""37"", ""Joe""=>""43"");,print_r($b);,?>
+",
+"PHP , Function",is_string(),"Definition and Usage,Syntax,Parameter Values,Technical Details",Example,"The is_string() function checks whether a variable is of type string or not.,This function returns true (1) if the variable is of type string, otherwise it returns false/nothing.",,"
+<?php,
+  $a = ""Hello"";,echo ""a is "" . is_string($a) . ""<br>"";,$b = 0;,echo ""b is 
+  "" . is_string($b) . ""<br>"";,$c = 32;,echo ""c is "" . is_string($c) . 
+  ""<br>"";,$d = ""32"";,echo ""d is "" . is_string($d) . ""<br>"";,$e = 
+  true;,echo ""e is "" . is_string($e) . ""<br>"";,$f = ""null"";,echo ""f 
+  is "" . is_string($f) . ""<br>"";,$g = """";,echo ""g is "" . is_string($g) 
+  . ""<br>"";,
+ ?>
+",
+"PHP , Function",is_scalar(),"Definition and Usage,Syntax,Parameter Values,Technical Details",Example,"The is_scalar() function checks whether a variable is a scalar or not.,This function returns true (1) if the variable is a scalar, otherwise it returns false/nothing.,Integers, floats, strings, or boolean can be scalar variables. Arrays, 
+objects, and resources are not.",,"
+<?php,
+  $a = ""Hello"";,echo ""a is "" . is_scalar($a) . ""<br>"";,$b = 0;,echo ""b is 
+  "" . is_scalar($b) . ""<br>"";,$c = 32;,echo ""c is "" . is_scalar($c) . 
+  ""<br>"";,$d = NULL;,echo ""d is "" . is_scalar($d) . ""<br>"";,
+  ,$e = array(""red"", ""green"", ""blue"");,echo ""e is "" . is_scalar($e) . ""<br>"";,?>
+",
+"PHP , Function",is_resource(),"Definition and Usage,Syntax,Parameter Values,Technical Details",Example,"The is_resource() function checks whether a variable is a resource or not., The is_resource() function will return FALSE if the 
+resource has been closed.,This function returns true (1) if the variable is a resource, otherwise it returns false/nothing.",,"
+<?php,
+  $file = fopen(""test.txt"",""r"");,if (is_resource($file)) {,  echo 
+  ""File is open"";,} else {,  echo ""Error open file"";,},?>
+",
+"PHP , Function",is_real(),"Definition and Usage,Syntax,Parameter Values,Technical Details",Example,"The is_real() function checks whether a variable is of type float or not.,This function is an alias of ,.",,"
+<?php,
+  $a = 32;,echo ""a is "" . is_real($a) . ""<br>"";,$b = 0;,echo ""b is 
+  "" . is_real($b) . ""<br>"";,$c = 32.5;,echo ""c is "" . is_real($c) . 
+  ""<br>"";,$d = ""32"";,echo ""d is "" . is_real($d) . ""<br>"";,$e = 
+  true;,echo ""e is "" . is_real($e) . ""<br>"";,$f = ""null"";,echo ""f 
+  is "" . is_real($f) . ""<br>"";,$g = 1.e3;,echo ""g is "" . is_real($g) 
+  . ""<br>"";,
+ ?>
+",
+"PHP , Function",is_object(),"Definition and Usage,Syntax,Parameter Values,Technical Details",Example,"The is_object() function checks whether a variable is an object.,This function returns true (1) if the variable is an object, otherwise it returns false/nothing.",,"
+<?php,
+  function get_cars($obj) {,  if (!is_object($obj)) {,    
+  return false;,  },return $obj->cars;,},$obj = new 
+  stdClass();,$obj->cars = array(""Volvo"", ""BMW"", ""Audi"");,var_dump(get_cars(null));,
+  echo ""<br>"";,var_dump(get_cars($obj));,?>
+",
+"PHP , Function",is_numeric(),"Definition and Usage,Syntax,Parameter Values,Technical Details",Example,"The is_numeric() function checks whether a variable is a number or a numeric 
+string.,This function returns true (1) if the variable is a number or a numeric 
+string, otherwise it returns false/nothing.",,"
+<?php,
+  $a = 32;,echo ""a is "" . is_numeric($a) . ""<br>"";,$b = 0;,echo ""b 
+  is "" . is_numeric($b) . ""<br>"";,$c = 32.5;,echo ""c is "" . is_numeric($c) 
+  . ""<br>"";,$d = ""32"";,echo ""d is "" . is_numeric($d) . ""<br>"";,
+  $e = true;,echo ""e is "" . is_numeric($e) . ""<br>"";,$f = null;,
+  echo ""f is "" . is_numeric($f) . ""<br>"";,
+ ?>
+",
+"PHP , Function",is_integer(),"Definition and Usage,Syntax,Parameter Values,Technical Details",Example,"The is_integer() function checks whether a variable is of type integer or not.,This function is an alias of ,.",,"
+<?php,
+  $a = 32;,echo ""a is "" . is_integer($a) . ""<br>"";,$b = 0;,echo ""b is "" 
+  . is_integer($b) . ""<br>"";,$c = 32.5;,echo ""c is "" . is_integer($c) . ""<br>"";,
+  ,$d = ""32"";,echo ""d is "" . is_integer($d) . ""<br>"";,$e = true;,
+  echo ""e is "" . is_integer($e) . ""<br>"";,$f = ""null"";,echo ""f is "" . 
+  is_integer($f) . ""<br>"";,
+ ?>
+",
+"PHP , Function",is_null(),"Definition and Usage,Syntax,Parameter Values,Technical Details",Example,"The is_null() function checks whether a variable is NULL or not.,This function returns true (1) if the variable is NULL, otherwise it returns false/nothing.",,"
+<?php,
+  $a = 0;,echo ""a is "" . is_null($a) . ""<br>"";,$b = null;,echo ""b 
+  is "" . is_null($b) . ""<br>"";,$c = ""null"";,echo ""c is "" . is_null($c) 
+  . ""<br>"";,$d = NULL;,echo ""d is "" . is_null($d) . ""<br>"";,
+ ?>
+",
+"PHP , Function",is_long(),"Definition and Usage,Syntax,Parameter Values,Technical Details",Example,"The is_long() function checks whether a variable is of type integer or not.,This function is an alias of ,.",,"
+<?php,
+  $a = 32;,echo ""a is "" . is_long($a) . ""<br>"";,$b = 0;,echo ""b is "" 
+  . is_long($b) . ""<br>"";,$c = 32.5;,echo ""c is "" . is_long($c) . ""<br>"";,
+  ,$d = ""32"";,echo ""d is "" . is_long($d) . ""<br>"";,$e = true;,
+  echo ""e is "" . is_long($e) . ""<br>"";,$f = ""null"";,echo ""f is "" . 
+  is_long($f) . ""<br>"";,
+ ?>
+",
+"PHP , Function",is_int(),"Definition and Usage,Syntax,Parameter Values,Technical Details",Example,"The is_int() function checks whether a variable is of type integer or not.,This function returns true (1) if the variable is of type integer, otherwise it returns false.",,"
+<?php,
+  $a = 32;,echo ""a is "" . is_int($a) . ""<br>"";,$b = 0;,echo ""b is "" 
+  . is_int($b) . ""<br>"";,$c = 32.5;,echo ""c is "" . is_int($c) . ""<br>"";,
+  ,$d = ""32"";,echo ""d is "" . is_int($d) . ""<br>"";,$e = true;,
+  echo ""e is "" . is_int($e) . ""<br>"";,$f = ""null"";,echo ""f is "" . 
+  is_int($f) . ""<br>"";,
+ ?>
+",
+"PHP , Function",is_float(),"Definition and Usage,Syntax,Parameter Values,Technical Details",Example,"The is_float() function checks whether a variable is of type float or not.,This function returns true (1) if the variable is of type float, otherwise it returns false.",,"
+<?php,
+  $a = 32;,echo ""a is "" . is_float($a) . ""<br>"";,$b = 0;,echo ""b is 
+  "" . is_float($b) . ""<br>"";,$c = 32.5;,echo ""c is "" . is_float($c) . 
+  ""<br>"";,$d = ""32"";,echo ""d is "" . is_float($d) . ""<br>"";,$e = 
+  true;,echo ""e is "" . is_float($e) . ""<br>"";,$f = ""null"";,echo ""f 
+  is "" . is_float($f) . ""<br>"";,$g = 1.e3;,echo ""g is "" . is_float($g) 
+  . ""<br>"";,
+ ?>
+",
+"PHP , Function",is_iterable(),"Definition and Usage,Syntax,Parameter Values,Technical Details",Example,"The is_iterable() function checks whether the contents of a variable is an 
+iterable value or not.,This function returns true (1) if the variable is iterable, otherwise it returns false/nothing.",,"
+<?php,
+  $a = ""Hello"";,echo ""a is "" . is_iterable($a) . ""<br>"";,
+  $b = array(""red"", ""green"", ""blue"");,echo ""b is 
+  "" . is_iterable($b) . ""<br>"";,$c = 
+  array(""Peter""=>""35"", ""Ben""=>""37"", ""Joe""=>""43"");,echo ""c is "" . is_iterable($c) . 
+  ""<br>"";,$d = [1, 2, 3];,echo ""d is "" . is_iterable($d) . ""<br>"";,?>
+",
+"PHP , Function",is_double(),"Definition and Usage,Syntax,Parameter Values,Technical Details",Example,"The is_double() function checks whether a variable is of type float or not.,This function is an alias of ,.",,"
+<?php,
+  $a = 32;,echo ""a is "" . is_double($a) . ""<br>"";,$b = 0;,echo ""b is 
+  "" . is_double($b) . ""<br>"";,$c = 32.5;,echo ""c is "" . is_double($c) . 
+  ""<br>"";,$d = ""32"";,echo ""d is "" . is_double($d) . ""<br>"";,$e = 
+  true;,echo ""e is "" . is_double($e) . ""<br>"";,$f = ""null"";,echo ""f 
+  is "" . is_double($f) . ""<br>"";,$g = 1.e3;,echo ""g is "" . is_double($g) 
+  . ""<br>"";,
+ ?>
+",
+"PHP , Function",is_callable(),"Definition and Usage,Syntax,Parameter Values,Technical Details",Example,"The is_callable() function checks whether the contents of a variable can be called as a function or not.,This function returns true (1) if the variable is callable, otherwise it returns false/nothing.",,"
+<?php,
+  function test1(){,},echo ""test1 is callable: "" . is_callable(""test1"");,
+  echo ""<br>"";,echo ""test2 is callable: "" . is_callable(""test2"");,?>
+",
+"PHP , Function",is_bool(),"Definition and Usage,Syntax,Parameter Values,Technical Details",Example,"The is_bool() function checks whether a variable is a boolean or not.,This function returns true (1) if the variable is a boolean, otherwise it returns false/nothing.",,"
+<?php,
+  $a = 1;,echo ""a is "" . is_bool($a) . ""<br>"";,
+  $b = 0;,echo ""b is 
+  "" . is_bool($b) . ""<br>"";,$c = 
+  true;,echo ""c is "" . is_bool($c) . 
+  ""<br>"";,$d = false;,echo ""d is "" . is_bool($d) . ""<br>"";,?>
+",
+"PHP , Function",is_array(),"Definition and Usage,Syntax,Parameter Values,Technical Details",Example,"The is_array() function checks whether a variable is an array or not.,This function returns true (1) if the variable is an array, otherwise it returns false/nothing.",,"
+<?php,
+  $a = ""Hello"";,echo ""a is "" . is_array($a) . ""<br>"";,
+  $b = array(""red"", ""green"", ""blue"");,echo ""b is 
+  "" . is_array($b) . ""<br>"";,$c = 
+  array(""Peter""=>""35"", ""Ben""=>""37"", ""Joe""=>""43"");,echo ""c is "" . is_array($c) . 
+  ""<br>"";,$d = ""red, green, blue"";,echo ""d is "" . is_array($d) . ""<br>"";,?>
+",
+"PHP , Function",gettype(),"Definition and Usage,Syntax,Parameter Values,Technical Details",Example,The gettype() function returns the type of a variable.,,"
+<?php,
+  $a = 3;,echo gettype($a) . ""<br>"";,$b = 3.2;,echo 
+  gettype($b) . ""<br>"";,
+  ,$c = ""Hello"";,echo gettype($c) . ""<br>"";,$d = array();,echo 
+  gettype($d) . ""<br>"";,$e = array(""red"", ""green"", ""blue"");,echo 
+  gettype($e) 
+  . ""<br>"";,$f = NULL;,echo gettype($f) . ""<br>"";,
+  ,$g = false;,echo gettype($g) . ""<br>"";,?>
+",
+"PHP , Function",intval(),"Definition and Usage,Syntax,Parameter Values,Technical Details",Example,The intval() function returns the integer value of a variable.,,"
+<?php,
+  $a = 32;,echo intval($a) . ""<br>"";,$b = 3.2;,echo intval($b) . ""<br>"";,
+  ,$c = ""32.5"";,echo intval($c) . ""<br>"";,$d = array();,echo 
+  intval($d) . ""<br>"";,$e = array(""red"", ""green"", ""blue"");,echo intval($e) 
+  . ""<br>"";,?>
+",
+"PHP , Function",get_defined_vars(),"Definition and Usage,Syntax,Parameter Values,Technical Details",Example,"The get_defined_vars() function returns all defined variables, as an array.,None.",,"
+<?php,
+  $a = array(""red"", ""green"", ""blue"");,$arr = get_defined_vars();,
+  print_r($arr[""a""]);,?>
+",
+"PHP , Function",floatval(),"Definition and Usage,Syntax,Parameter Values,Technical Details",Example,The floatval() function returns the float value of a variable.,,"
+<?php,
+  $a = ""1234.56789"";,echo floatval($a) . ""<br>"";,$b = 
+  ""1234.56789Hello"";,echo floatval($b) . ""<br>"";,$c = 
+  ""Hello1234.56789"";,echo floatval($c) . ""<br>"";,?>
+",
+"PHP , Function",get_resource_type(),"Definition and Usage,Syntax,Parameter Values,Technical Details",Example,The get_resource_type() function returns the type of a resource.,,"
+<?php,
+  $file = fopen(""test.txt"",""r"");,echo get_resource_type($file);,?>
+",
+"PHP , Function",empty(),"Definition and Usage,Syntax,Parameter Values,Technical Details",Example,"The empty() function checks whether a variable is empty or not.,This function returns false if the variable exists and is not empty, otherwise it returns 
+true.,The following values evaluates to empty:","0,0.0,""0"","""",NULL,FALSE,array()","
+<?php,
+  $a = 0;,// True because $a is empty,if (empty($a)) {,  echo 
+  ""Variable 'a' is empty.<br>"";,},// True because $a is set,if (isset($a)) 
+  {,  echo ""Variable 'a' is set"";,},?>
+",
+"PHP , Function",is_countable(),"Definition and Usage,Syntax,Parameter Values,Technical Details",Example,"The is_countable() function checks whether the contents of a variable is a countable value or not.,This function returns true (1) if the variable is countable, otherwise it returns false/nothing.",,"
+<?php,
+  $a = ""Hello"";,echo ""a is "" . is_countable($a) . ""<br>"";,
+  $b = array(""red"", ""green"", ""blue"");,echo ""b is 
+  "" . is_countable($b) . ""<br>"";,$c = 
+  array(""Peter""=>""35"", ""Ben""=>""37"", ""Joe""=>""43"");,echo ""c is "" . is_countable($c) . 
+  ""<br>"";,$d = [1, 2, 3];,echo ""d is "" . is_countable($d) . ""<br>"";,?>
+",
+"PHP , Function",doubleval(),"Definition and Usage,Syntax,Parameter Values,Technical Details",Example,"The doubleval() function returns the float value of a variable.,This function is an alias of ,.",,"
+<?php,
+  $a = ""1234.56789"";,echo doubleval($a) . ""<br>"";,$b = 
+  ""1234.56789Hello"";,echo doubleval($b) . ""<br>"";,$c = 
+  ""Hello1234.56789"";,echo doubleval($c) . ""<br>"";,?>
+",
+"PHP , Function",debug_zval_dump(),"Definition and Usage,Syntax,Parameter Values,Technical Details",Example,The debug_zval_dump() function dumps a string representation of an internal zend value to output.,,"
+<?php,
+  $a = ""Hello 
+  world!"";,echo debug_zval_dump($a) . ""<br>"";,?>
+",
+"PHP , Function",boolval(),"Definition and Usage,Syntax,Parameter Values,Technical Details",Example,The boolval() function returns the boolean value of a variable.,,"
+<?php,
+  echo ""0: "" .(boolval(0) ? 'true' : 'false') . ""<br>"";,echo ""4: "" .(boolval(42) 
+  ? 'true' : 'false') . ""<br>"";,echo '"""": ' .(boolval("""") ? 'true' : 'false') 
+  . ""<br>"";,echo '""Hello"": ' .(boolval(""Hello"") ? 'true' : 'false') . ""<br>"";,
+  echo '""0"": ' .(boolval(""0"") ? 'true' : 'false') . ""<br>"";,echo ""[3, 5]: "" 
+  .(boolval([3, 5]) ? 'true' : 'false') . ""<br>"";,echo ""[]: "" .(boolval([]) ? 
+  'true' : 'false') . ""<br>"";,?>
+",
+"PHP , Functions",Variable Handling,PHP Variable Handling Functions,,The PHP variable handling functions are part of the PHP core. No installation is required to use these functions.,,,
+"PHP , Functions",String,PHP String Functions,,The PHP string functions are part of the PHP core. No installation is required to use these functions.,,,
+PHP Stream Functions,,"PHP Stream Introduction,Installation,PHP Stream Functions",,"Streams are the way of generalizing file, network, data compression, and 
+other operations which share a common set of functions and uses. In its simplest 
+definition, a stream is a resource object which exhibits streamable behavior. 
+That is, it can be read from or written to in a linear fashion, and may be able 
+to fseek() to an arbitrary location within the stream. ,A wrapper is 
+additional code which tells the stream how to handle specific 
+protocols/encodings.,The Stream functions are part of the PHP core. There is no installation needed to use these functions.",,,
+"PHP , Functions",SimpleXML,"PHP SimpleXML Introduction,Installation,PHP SimpleXML Functions,PHP SimpleXML Iteration Functions",,"SimpleXML is an extension that allows us to easily manipulate and get XML 
+data.,SimpleXML provides an easy way of getting an element's name, attributes and 
+textual content if you know the XML document's structure or layout.,SimpleXML turns an XML document into a data structure you can iterate through 
+like a collection of arrays and objects.,From PHP 5, the SimpleXML functions are part of the PHP core. No installation is required to use these functions.",,,
+"PHP , Functions",Regular Expression,"PHP Regular Expression Introduction,Installation,Runtime Configuration,PHP Regular Expression Functions,Regular Expression Modifiers,Regular Expression Patterns,Metacharacters,Quantifiers",,"Regular expressions allow you to search for and replace patterns in strings.,The PHP regular expression functions are part of the PHP core. No installation is required to use these functions.,These settings in php.ini can be used to limit the amount time or resources used when
+evaluating regular expressions.,Modifiers can change how a search is performed.,Brackets are used to find a range of characters:,Metacharacters are characters with a special meaning:,Quantifiers define quantities:",,,
+"PHP , Functions",Output Control,"PHP Output Control Functions,Installation,Runtime Configuration,PHP Output Control Functions",,"PHP provides a set of functions that control what content is sent to the browser and when.
+This is referred to as ,.,Output can come from any of the following sources:,PHP and the backend on which it is running may hold the output in a buffer before sending
+it to the user., The output control functions can create any number of output buffers. Output buffers catch
+output given by the program. Each new output buffer is placed on the top of a stack of
+output buffers, and any output it provides will be caught by the buffer below it. The output
+control functions handle only the topmost buffer, so the topmost buffer must be removed in
+order to control the buffers below it.,The PHP output control functions are part of the PHP core. No installation is required to use these functions.,The behavior of output control functions is affected by settings in php.ini:",", ,, ,, ,... and other similar functions and statements,Notices, warnings and errors from PHP,Any content outside of the , tags",,
+PHP Network Functions,,"PHP Network Introduction,Installation,PHP Network Functions",,"The Network functions contains various network function and let you manipulate information sent to the browser by the 
+Web server, before any other output has been sent.,The Network functions are part of the PHP core. There is no installation needed to use these functions.",,,
+"PHP , Functions",MySQLi,"PHP MySQLi Introduction,Installation / Runtime Configuration,PHP MySQLi Functions",,"The MySQLi functions allows you to access MySQL database servers., The MySQLi extension is designed to work with MySQL version 4.1.13 or newer.,For the MySQLi functions to be available, you must compile PHP with support for the 
+MySQLi extension.,The MySQLi extension was introduced with PHP version 5.0.0. The MySQL Native Driver was included in PHP version 5.3.0.,For installation details, go to:
+,For runtime configuration details, go to:
+",,,
+"PHP , Functions",Misc.,"PHP Miscellaneous Introduction,Installation,Runtime Configuration,PHP Miscellaneous Functions,PHP Predefined Misc. Constants",,"The misc. functions were only placed here because none of the other 
+categories seemed to fit.,The misc. functions are part of the PHP core. No installation is required to 
+use these functions.,The behavior of the misc. functions is affected by settings in the php.ini file.,Misc. configuration options:",,,
+"PHP , Functions",Math,"PHP Math Introduction,Installation,PHP Math Functions,PHP Predefined Math Constants",,"The math functions can handle values within the range of integer and float types.,The PHP math functions are part of the PHP core. No installation is required to use these functions.",,,
+"PHP , Functions",Mail,"PHP Mail Introduction,Requirements,Installation,Runtime Configuration,PHP Mail Functions",,"The mail() function allows you to send emails directly from a script.,For the mail functions to be available, PHP requires an installed and working 
+email system. The program to be used is defined by 
+the configuration settings in the php.ini file.,The mail functions are part of the PHP core. There is no installation 
+needed to use these functions.,The behavior of the mail functions is affected by settings in php.ini:",,,
+"PHP , Functions",libxml,"PHP libxml Introduction,Installation,PHP libxml Functions,PHP Predefined libxml Constants",,"The libxml functions and constants are used together with SimpleXML, XSLT and 
+DOM functions.,These functions require the libxml package. 
+,: indicates the earliest version of PHP that supports the 
+  function.",,,
+PHP ,Keywords,PHP Keywords,,"PHP has a set of keywords that are reserved words which cannot be used as function
+names, class names or method names. Prior to PHP 7, these keywords could not be used as
+class property names either:",,,
+"PHP , Functions",JSON,"PHP JSON Introduction,Installation,PHP JSON Functions,PHP Predefined JSON Constants",,"The JSON extension implements the JavaScript Object Notation data-interchange 
+format.,In PHP 5, the decoding is handled by a parser based on the JSON_checker by 
+Douglas Crockford.,PHP 7 has a new and improved parser specifically written for PHP and licensed 
+under the PHP license.,From PHP 5.2.0, the JSON functions are enabled by default. There is no 
+installation needed to use these functions.",,,
+"PHP , Functions",FTP,"PHP FTP Introduction,Installation,PHP FTP Functions,PHP Predefined FTP Constants",,"The FTP functions give client access to file servers through the File 
+Transfer Protocol (FTP).,The FTP functions are used to open, login and close connections, as well as 
+upload, download, rename, delete, and get information on files from file 
+servers. Not all of the FTP functions will work with every server or return the 
+same results. The FTP functions became available with PHP 3.,If you only 
+wish to read from or write to a file on an FTP server, consider using the ftp:// 
+wrapper with the Filesystem functions which provide a simpler and more intuitive 
+interface.,For these functions to work, you have to compile PHP with --enable-ftp.,The Windows version of PHP has built-in support for this extension.",,,
+"PHP , Functions",Filter,"PHP Filter Introduction,Installation,Runtime Configurations,PHP Filter Functions,PHP Predefined Filter Constants",,"This PHP filters is used to validate and filter data coming from insecure sources, 
+like user input.,From PHP 5.2.0, the filter functions are enabled by default. There is no installation 
+needed to use these functions.,The behavior of these functions is affected by settings in php.ini:",,,
+"PHP , Functions",Filesystem,"PHP Filesystem Introduction,Installation,Unix / Windows Compatibility,Runtime Configuration,PHP Filesystem Functions",,"The filesystem functions allow you to access and manipulate the filesystem.,The filesystem functions are part of the PHP core. There is no installation 
+needed to use these functions.,When specifying a path on Unix platforms, a forward slash (/) is used as directory separator.,On Windows platforms, both 
+forward slash (/) and backslash (\) can be used.,The behavior of the filesystem functions is affected by settings in php.ini.",,,
+"PHP , Reference",Exception,PHP Exception Object,,"Exceptions are used by functions and methods to send information about errors and
+unexpected behaviour.,The Exception object has no public properties, but it has private and protected properties
+which can be written to or read from using the constructor and methods.,The Exception object has the following methods:",,,
+"PHP , Functions",Error ,"PHP Error Introduction,Installation,Runtime Configuration,PHP Error and Logging Functions,PHP Predefined Error and Logging Constants",,"The error functions are used to deal with error handling and logging.,The error functions allow us to define own error handling rules, and modify 
+the way the errors can be logged.,The logging functions allow us to send messages 
+directly to other machines, emails, or system logs.,The error reporting functions allow us to customize what level and kind of 
+error feedback is given. ,The PHP error functions are part of the PHP core. No installation is required 
+to use these functions.,The behavior of the error functions is affected by settings in php.ini.,Errors and logging configuration options:",,,
+"PHP , Functions",Directory,"PHP Directory Introduction,Installation,PHP Directory Functions",,"The directory functions allow you to retrieve information about directories 
+and their contents.,The PHP directory functions are part of the PHP core. No installation is required to use these functions.",,,
+"PHP , Functions",Date/Time,"PHP Date/Time Introduction,Installation,Runtime Configuration,PHP Date/Time Functions,PHP Predefined Date/Time Constants",,"The date/time functions allow you to get the date and time from 
+the server where your PHP script runs. You can then use the date/time functions 
+to format the date and time in several ways., These functions depend on the locale settings of your server. 
+Remember to take daylight saving time and leap years into consideration when 
+working with these functions.,The PHP date/time functions are part of the PHP core. No installation is required to use these functions.,The behavior of these functions is affected by settings in php.ini:",,,
+"PHP , Functions",Calendar,"PHP Calendar Introduction,Installation,PHP Calendar Functions,PHP Predefined Calendar Constants",,"The calendar extension contains functions that simplifies converting between different calendar formats., To convert between calendar formats, you must first convert to Julian Day Count, then to the calendar of your choice., The Julian Day Count is not the same as the Julian Calendar!,For these functions to work, you have to compile PHP with 
+--enable-calendar.,The Windows version of PHP has built-in support for this extension.",,,
+"PHP , Functions",Array,"PHP Array Introduction,Installation,PHP Array Functions",,"The array functions allow you to access and manipulate arrays.,Simple and multi-dimensional arrays are supported.,The array functions are part of the PHP core. There is no installation needed to use these functions.",,,
+PHP Reference,,PHP Reference,,"
+This section contains a complete PHP reference documentation.,The PHP reference contains different categories of all PHP functions, keywords and constants, along with examples.",,,
+"W3Schools , Certificate",PHP Certificate,How Does It Work?,,,"Study for free at W3Schools.com,Study at your own speed,Test your skills with W3Schools online quizzes,Apply for your certificate by paying an exam fee,Take your exam online, at any time, and from any location",,
+PHP ,Online Compiler,"PHP Compiler (Editor),PHP Compiler Explained",,"With our online PHP compiler, you can edit PHP code, and view the result in your browser.,Click on the ""Try it Yourself"" button to see how it works.,The window to the left is editable - edit the code and click on the ""Run"" button to view the result in the right window.,The icons are explained in the table below:",,,
+PHP ,Examples,"PHP Syntax,PHP Comments,PHP Variables,PHP Echo and Print,PHP Data Types,PHP Strings,PHP Numbers,PHP Math,PHP Constants,PHP Operators,PHP If...Else and Switch Statements,PHP While and For Loops,PHP Functions,PHP Arrays,PHP Multidimensional Arrays,PHP Sorting Arrays,PHP Superglobals,PHP Regular Expressions,PHP Form Validation,PHP Date and Time,PHP Include Files,PHP File Handling,PHP File Open/Read/Close,PHP Cookies,PHP Sessions,PHP Filters,PHP JSON,PHP Exceptions,PHP Classes/Objects,PHP Select Data From MySQL,PHP SimpleXML Parser,PHP XML Expat Parser",,,,,
+PHP Example - ,AJAX Poll,"AJAX Poll,Example Explained - The HTML Page,The PHP File,The Text File",,"The following example will demonstrate a poll where the result is shown without reloading.,When a user chooses an option above, a function called ""getVote()"" is executed. The 
+function is triggered by the ""onclick"" event:,The getVote() function does the following:,The page on the server called by the JavaScript above is a PHP file called ""poll_vote.php"":,The value is sent from the JavaScript, and the following 
+happens:,The text file (poll_result.txt) is where we store the data from the poll. ,It is stored like this:,The first number represents the ""Yes"" votes, the second number represents the 
+""No"" votes., Remember to allow your web server to edit the text file. Do , give everyone access, just the web server (PHP).","Create an XMLHttpRequest object,Create the function to be executed when the server response is ready,Send the request off to a file on the server,Notice that a parameter (vote) is added to the URL (with the value of the yes or no option)",,
+PHP Example - ,AJAX Live Search,"AJAX Live Search,Example Explained - The HTML Page,The PHP File",,"AJAX can be used to create more user-friendly and interactive searches.,The following example will demonstrate a live search, where you get search results while you type.,Live search has many benefits compared to traditional searching:,Search for a W3Schools page in the input field below:,The results in the example above are found in an XML file
+(,). To make this 
+example small and simple, only six results are available.,When a user types a character in the input field above, the function ""showResult()"" is executed. The function is triggered by the ""onkeyup"" 
+event:,Source code explanation:,If the input field is empty (str.length==0), the function clears the 
+content of the livesearch placeholder and exits the function.,If the input field is not empty, the showResult() function executes the following:,The page on the server called by the JavaScript above is a PHP file called ""livesearch.php"".,The source code in ""livesearch.php"" searches an XML file for titles matching the search string and returns the result:,If there is any text sent from the JavaScript (strlen($q) > 0), the following happens:","Results are shown as you type,Results narrow as you continue typing,If results become too narrow, remove characters to see a broader result,Create an XMLHttpRequest object,Create the function to be executed when the server response is ready,Send the request off to a file on the server,Notice that a parameter (q) is added to the URL (with the content of the input field),Load an XML file into a new XML DOM object,Loop through all <title> elements to find matches from the text sent from the JavaScript,Sets the correct url and title in the ""$response"" variable.
+ If more than one match is found, all matches are added to the variable,If no matches are found, the $response variable is set to ""no suggestion""",,
+PHP Example - ,AJAX and XML,"AJAX XML Example,Example Explained - The HTML Page,The PHP File",Example,"AJAX can be used for interactive communication with an XML file.,The following example will demonstrate how a web page can fetch information from an XML file with AJAX:,When a user selects a CD in the dropdown list above, a function called ""showCD()"" is executed. The 
+function is triggered by the ""onchange"" event:,The showCD() function does the following:,The page on the server called by the JavaScript above is a PHP file called ""getcd.php"".,The PHP script loads an XML document, "","", runs a query against the XML file, and returns the result as HTML:,When the CD query is sent from the JavaScript to the PHP page, the following 
+happens:","Check if a CD is selected,Create an XMLHttpRequest object,Create the function to be executed when the server response is ready,Send the request off to a file on the server,Notice that a parameter (q) is added to the URL (with the content of the dropdown list)",,
+PHP ,Exercises,"Exercises,Count Your Score",,"You can test your PHP skills with W3Schools' Exercises.,We have gathered a variety of PHP exercises (with answers) for each PHP Chapter.,Try to solve an exercise by filling in the missing parts of a code. If you're stuck, hit the ""Show Answer"" button to see what you've done wrong.,You will get 1 point for
+each correct answer. Your score and total score will always be displayed.",,,
+PHP - ,AJAX and MySQL,"AJAX Database Example,Example Explained - The MySQL Database,Example Explained,The PHP File","Example,Example","AJAX can be used for interactive communication with a database.,The following example will demonstrate how a web page can fetch information from a database with AJAX:,The database table we use in the example above looks like this:,In the example above, when a user selects a person in the dropdown list 
+above, a function called ""showUser()"" is executed.,The function is triggered by the onchange event.,Here is the HTML code:,Code explanation:,First, check if person is selected. If no person is selected (str == """"), clear the 
+content of txtHint and exit the function. If a person is selected, do the following:,The page on the server called by the JavaScript above is a PHP file called ""getuser.php"".,The source code in ""getuser.php"" runs a query against a MySQL database, and returns the result in an HTML 
+table:,Explanation: When the query is sent from the JavaScript to the PHP file, the following happens:","Create an XMLHttpRequest object,Create the function to be executed when the server response is ready,Send the request off to a file on the server,Notice that a parameter (q) is added to the URL (with the content of the dropdown list)","
+ <html>,<head>,<script>,function showUser(str) {,  if (str == """") {,
+      document.getElementById(""txtHint"").innerHTML = """";,    return;,
+    } else { ,    var xmlhttp = new XMLHttpRequest();,    xmlhttp.onreadystatechange = function() {,      if (this.readyState == 4 && this.status == 200) {,        document.getElementById(""txtHint"").innerHTML = this.responseText;,
+        },    };,    xmlhttp.open(""GET"",""getuser.php?q=""+str,true);,
+      xmlhttp.send();,  },},</script>,</head>,<body>,<form>,
+ <select name=""users"" onchange=""showUser(this.value)"">,  <option value="""">Select a person:</option>,  <option value=""1"">Peter Griffin</option>,  <option value=""2"">Lois Griffin</option>,  <option value=""3"">Joseph Swanson</option>,  <option value=""4"">Glenn Quagmire</option>,  </select>,</form>,<br>,<div id=""txtHint""><b>Person info will be listed here...</b></div>,</body>,</html>",
+PHP - ,AJAX and PHP,"AJAX PHP Example,Example Explained,The PHP File - ""gethint.php""","Example,Example","AJAX is used to create more interactive applications.,The following example will demonstrate how a web page can communicate with a 
+web server while a user type characters in an input field:,In the example above, when a user types a character in the input field, a function 
+called ""showHint()"" is executed.,The function is triggered by the onkeyup event.,Here is the HTML code:,Code explanation:,First, check if the input field is empty (str.length == 0). If it is, clear the 
+content of the txtHint placeholder and exit the function.,However, if the input field is not empty, do the following:,The PHP file checks an array of names, and returns the corresponding name(s) to the 
+browser:","Create an XMLHttpRequest object,Create the function to be executed when the server response is ready,Send the request off to a PHP file (gethint.php) on the server,Notice that q parameter is added to the url (gethint.php?q=""+str),And the str variable holds the content of the input field","
+ <html>,<head>,<script>,function showHint(str) {,  if (str.length == 0) { ,
+      document.getElementById(""txtHint"").innerHTML = """";,    return;,  } else {,    var xmlhttp = new XMLHttpRequest();,    xmlhttp.onreadystatechange = function() {,      if (this.readyState == 4 && this.status == 200) {,        document.getElementById(""txtHint"").innerHTML = this.responseText;,      },    };,    xmlhttp.open(""GET"", ""gethint.php?q="" + str, true);,    xmlhttp.send();,
+    },},</script>,</head>,<body>,<p><b>Start typing a name in the input field below:</b></p>,
+  <form action="""">,  <label for=""fname"">First name:</label>,  
+  <input type=""text"" id=""fname"" name=""fname"" onkeyup=""showHint(this.value)"">,
+  </form>,<p>Suggestions: <span id=""txtHint""></span></p>,
+ </body>,</html>",
+PHP - AJAX ,Introduction,"What is AJAX?,How AJAX Works,AJAX is Based on Internet Standards,Google Suggest,Start Using AJAX Today",,"AJAX is about updating parts of a web page, without reloading the whole page.,AJAX = Asynchronous JavaScript and XML.,AJAX is a technique for creating fast and dynamic web pages.,AJAX allows web pages to be updated asynchronously by exchanging small 
+amounts of data with the server behind the scenes. This means that it is 
+possible to update parts of a web page, without reloading the whole page.,Classic web pages, (which do not use AJAX) must reload the entire page if the 
+content should change.,Examples of applications using AJAX: Google Maps, Gmail, Youtube, and 
+Facebook tabs.,AJAX is based on internet standards, and uses a combination of:,AJAX was made popular in 2005 by Google, with Google Suggest., 
+is using AJAX to create a very dynamic web interface: 
+When you start typing in Google's search box, a JavaScript sends the letters off 
+to a server and the server returns a list of suggestions.,In our PHP tutorial, we will demonstrate how AJAX can update parts of a web 
+page, without reloading the whole page. The server script will be written in PHP.,If you want to learn more about AJAX, visit our ,.","XMLHttpRequest object (to exchange data asynchronously with a server),JavaScript/DOM (to display/interact with the information),CSS (to style the data),XML (often used as the format for transferring data)",,
+PHP ,XML DOM Parser,"The XML DOM Parser,Installation,The XML File,Load and Output XML,Looping through XML",,"The built-in DOM parser makes it possible to process XML documents in PHP.,The DOM parser is a tree-based parser.,Look at the following XML document fraction:,The DOM sees the XML above as a tree structure: ,The DOM parser functions are part of the PHP core. There is no installation needed to use these functions.,The XML file below (""note.xml"") will be used in our example:,We want to initialize the XML parser, load the xml, and output it:,The output of the code above will be:,If you select ""View source"" in the browser window, you will see the following HTML:,The example above creates a DOMDocument-Object and loads the XML from ""note.xml"" into it.,Then the saveXML() function puts the internal XML document into a string, so we can output it. ,We want to initialize the XML parser, load the XML, and loop through all elements of the <note> element:,The output of the code above will be:,In the example above you see that there are empty text nodes between each element.,When XML generates, it often contains white-spaces between the nodes. The XML 
+DOM parser treats these as ordinary elements, and if you are not aware of them, 
+they sometimes cause problems.,If you want to learn more about the XML DOM, please visit our
+,.","Level 1: XML Document,Level 2: Root element: <from>,Level 3: Text element: ""Jani""",,
+PHP ,XML Expat Parser,"The XML Expat Parser,The XML File,Initializing the XML Expat Parser,More PHP XML Expat Parser",Example,"The built-in XML Expat Parser makes it possible to process XML 
+documents in PHP.,The Expat parser is an event-based parser.,Look at the following XML fraction:,An event-based parser reports the XML above as a series of three events: ,The XML Expat Parser functions are part of the PHP core. There is no 
+installation needed to use these functions.,The XML file ""note.xml"" will be used in the example below:,We want to initialize the XML Expat Parser in PHP, define some handlers for different 
+XML events, and then parse the XML file.,Example explained:,For more information about the PHP Expat functions, visit our ,.","Start element: from,Start CDATA section, value: Jani,Close element: from","
+<?php,
+// Initialize the XML parser,
+$parser=xml_parser_create();,
+,
+// Function to use at the start of an element,
+function start($parser,$element_name,$element_attrs) {,
+  switch($element_name) {,
+    case ""NOTE"":,
+    echo ""-- Note --<br>"";,
+    break;,
+    case ""TO"":,
+    echo ""To: "";,
+    break;,
+    case ""FROM"":,
+    echo ""From: "";,
+    break;,
+    case ""HEADING"":,
+    echo ""Heading: "";,
+    break;,
+    case ""BODY"":,
+    echo ""Message: "";,
+   },
+ },
+,
+// Function to use at the end of an element,
+function stop($parser,$element_name) {,
+  echo ""<br>"";,
+ },
+,
+// Function to use when finding character data,
+function char($parser,$data) {,
+  echo $data;,
+ },
+,
+// Specify element handler,
+xml_set_element_handler($parser,""start"",""stop"");,
+,
+// Specify data handler,
+xml_set_character_data_handler($parser,""char"");,
+,
+// Open XML file,
+$fp=fopen(""note.xml"",""r"");,
+,
+// Read data,
+while ($data=fread($fp,4096)) {,
+  xml_parse($parser,$data,feof($fp)) or ,
+  die (sprintf(""XML Error: %s at line %d"", ,
+  xml_error_string(xml_get_error_code($parser)),,
+  xml_get_current_line_number($parser)));,
+ },
+,
+// Free the XML parser,
+xml_parser_free($parser);,
+?>
+",
+PHP ,SimpleXML - Get Node/Attribute Values,"PHP SimpleXML - Get Node Values,Another XML File,PHP SimpleXML - Get Node Values of Specific Elements,PHP SimpleXML - Get Node Values - Loop,PHP SimpleXML - Get Attribute Values,PHP SimpleXML - Get Attribute Values - Loop,More PHP SimpleXML","Example,Example,Example,Example,Example","SimpleXML is a PHP extension that allows us to easily 
+manipulate and get XML data.,Get the node values from the "","" file:,The output of the code above will be:,Assume we have an XML file called "","", 
+that looks like this: ,The following example gets the node value of the <title> element in the first 
+and second <book> elements in the ""books.xml"" file: ,The output of the code above will be:,The following example loops through all the <book> elements in the ""books.xml"" file, 
+and gets the node values of the <title>, <author>, <year>, and <price> elements:,The output of the code above will be:,The following example gets the attribute value of the ""category"" attribute of 
+the first <book> element and the attribute value of the ""lang"" attribute 
+of the <title> element in the second <book> element:,The output of the code above will be:,The following example gets the attribute values of the <title> elements in the ""books.xml"" file:,The output of the code above will be:,For more information about the PHP SimpleXML functions, visit our
+,.",,"
+ <?php,$xml=simplexml_load_file(""note.xml"") or die(""Error: Cannot create object"");,echo $xml->to . ""<br>"";,
+ echo $xml->from . ""<br>"";,echo $xml->heading . ""<br>"";,echo $xml->body;,?>
+,
+ <?php,$xml=simplexml_load_file(""books.xml"") or die(""Error: Cannot create object"");,echo $xml->book[0]->title . ""<br>"";,echo $xml->book[1]->title; ,?>
+,
+ <?php,$xml=simplexml_load_file(""books.xml"") or die(""Error: Cannot create object"");,foreach($xml->children() as $books) { ,  echo $books->title . "", ""; ,
+    echo $books->author . "", ""; ,  echo $books->year . "", "";,
+    echo $books->price . ""<br>""; ,} ,?>
+,
+ <?php,$xml=simplexml_load_file(""books.xml"") or die(""Error: Cannot create object"");,echo $xml->book[0]['category'] . ""<br>"";,echo $xml->book[1]->title['lang']; ,?>
+,
+ <?php,$xml=simplexml_load_file(""books.xml"") or die(""Error: Cannot create object"");,foreach($xml->children() as $books) { ,  echo $books->title['lang'];,
+    echo ""<br>""; ,} ,?>
+",
+PHP ,SimpleXML Parser,"The SimpleXML Parser,Installation,PHP SimpleXML - Read From String,PHP SimpleXML - Read From File,More PHP SimpleXML","Example,Example,Example","SimpleXML is a PHP extension that allows us to easily 
+manipulate and get XML data.,SimpleXML is a tree-based parser.,SimpleXML provides an easy way of getting an element's name, attributes and textual 
+content if you know the XML document's structure or layout.,SimpleXML turns an XML document into a data structure you can iterate through 
+like a collection of arrays and objects.,Compared to DOM or the Expat parser, SimpleXML takes a fewer lines of code to 
+read text data from an element.,From PHP 5, the SimpleXML functions are part of the PHP core. No installation is required to use these functions.,The PHP , function is used to read XML data from a string.,Assume we have a variable that contains XML data, like this:,The example below shows how to use the , function to 
+read XML data from a string:,The output of the code above will be:, Use the libxml functionality to retrieve 
+all XML errors when loading the document and then iterate over the errors. The 
+following example tries to load a broken XML string:,The output of the code above will be:,The PHP , function is used to read XML data from a file.,Assume we have an XML file called "","", 
+that looks like this:,The example below shows how to use the , function to read 
+XML data from a file:,The output of the code above will be:, The next chapter shows how to get/retrieve node values 
+from an XML file with SimpleXML!,For more information about the PHP SimpleXML functions, visit our
+,.",,"
+<?php,
+$xml=simplexml_load_file(""note.xml"") or die(""Error: Cannot create object"");,
+ print_r($xml);,
+?>
+",
+PHP ,Quiz,"The Test,Count Your Score",,"You can test your PHP skills with W3Schools' Quiz.,The test contains 25 questions and there is no time limit.,The test is not official, it's just a nice way to see how much you know, or don't know, about 
+PHP.,You will get 1 point for each correct answer. At the end of the Quiz,
+your total score will be displayed. Maximum score is 25 points.",,,
+PHP ,XML Parsers,"What is XML?,What is an XML Parser?,Tree-Based Parsers,Event-Based Parsers",,"The XML language is a way to structure data for sharing across websites.,Several web technologies like RSS Feeds and Podcasts are written in XML.,XML is easy to create. It looks a lot like HTML, except 
+that you make up your own tags.,If you want to learn more about XML, please visit our 
+,.,To read and update, create and manipulate an XML document, you will need 
+an XML parser.,In PHP there are two major types of XML parsers:,Tree-based parsers holds the entire document in Memory and transforms the XML document into a 
+Tree structure. It analyzes the whole document, and provides access to the Tree elements (DOM).,This type of parser is a better option for smaller 
+XML documents, but not for large XML document as it causes major 
+performance issues.,Example of tree-based parsers:,Event-based parsers do 
+not hold the entire document in Memory, instead, they read in one node at a 
+time and allow you to interact with in real time. Once you move onto the next 
+node, the old one is thrown away.,This type of parser is well suited for large XML documents. It parses faster and consumes less memory. ,Example of event-based parsers:","Tree-Based Parsers,Event-Based Parsers,SimpleXML,DOM,XMLReader,XML Expat Parser",,
+PHP ,MySQL Limit Data Selections,Limit Data Selections From a MySQL Database,,"MySQL provides a LIMIT clause that is used to specify the number of records 
+to return.,The LIMIT clause makes it easy to code multi page results or pagination with 
+SQL, and is very useful on large tables. Returning a large number of records can 
+impact on performance.,Assume we wish to select all records from 1 - 30 (inclusive) from a table 
+called ""Orders"". The SQL query would then look like this:,When the SQL query above is run, it will return the first 30 records.,What if we want to select records 16 - 25 (inclusive)?,Mysql also provides a way to handle this: by using OFFSET.,The SQL query below says ""return only 10 records, start on record 16 (OFFSET 
+15)"":,You could also use a shorter syntax to achieve the same result:,Notice that the numbers are reversed when you use a comma.",,,
+PHP ,MySQL Update Data,Update Data In a MySQL Table Using MySQLi and PDO,"Example (MySQLi Object-oriented),Example (MySQLi Procedural),Example (PDO)","The UPDATE statement is used to update existing records in a table:,To learn more about SQL, please visit our ,.,Let's look at the ""MyGuests"" table:,The following examples update the record with id=2 in the ""MyGuests"" table:,After the record is updated, the table will look like this:",,"
+<?php,$servername = ""localhost"";,$username = ""username"";,$password = ""password"";,$dbname = ""myDB"";,// Create connection,$conn = new mysqli($servername, $username, $password, $dbname);,
+ // Check connection,
+ if ($conn->connect_error) {,
+  die(""Connection failed: "" . $conn->connect_error);,}
+,
+ ,$sql = ""UPDATE MyGuests SET lastname='Doe' WHERE id=2"";,
+ ,if ($conn->query($sql) === TRUE) {,  echo ""Record updated successfully"";,} else {,  echo ""Error updating record: "" . $conn->error;,},$conn->close();,
+?>
+,
+<?php,$servername = ""localhost"";,$username = ""username"";,$password = ""password"";,$dbname = ""myDB"";,// Create connection,
+$conn = mysqli_connect($servername, $username, $password, $dbname);,
+ // Check connection,
+ if (!$conn) {,
+    die(""Connection failed: "" . mysqli_connect_error());,},$sql = ""UPDATE MyGuests SET lastname='Doe' WHERE id=2"";,
+ ,if (mysqli_query($conn, $sql)) {,  echo ""Record updated successfully"";,} else {,
+    echo ""Error updating record: "" . mysqli_error($conn);,},mysqli_close($conn);,
+?>
+,
+<?php,$servername = ""localhost"";,$username = ""username"";,
+ $password = ""password"";,$dbname = ""myDBPDO"";,try {,
+    $conn = new PDO(""mysql:host=$servername;dbname=$dbname"", $username, $password);,
+    // set the PDO error mode to exception,  $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);,
+   
+ $sql = ""UPDATE MyGuests SET lastname='Doe' WHERE id=2"";,
+ ,  // Prepare statement,  $stmt = $conn->prepare($sql);,  // execute the query,
+    $stmt->execute();,  // echo a message to say the UPDATE succeeded,
+    echo $stmt->rowCount() . "" records UPDATED successfully"";,} catch(PDOException $e) 
+  {,  echo $sql . ""<br>"" . $e->getMessage();,},
+ ,$conn = null;,
+?>
+",
+PHP ,MySQL Delete Data,Delete Data From a MySQL Table Using MySQLi and PDO,"Example (MySQLi Object-oriented),Example (MySQLi Procedural),Example (PDO)","The DELETE statement is used to delete records from a table:,To learn more about SQL, please visit our ,.,Let's look at the ""MyGuests"" table:,The following examples delete the record with id=3 in the ""MyGuests"" table:,After the record is deleted, the table will look like this:",,"
+<?php,$servername = ""localhost"";,$username = ""username"";,$password = ""password"";,$dbname = ""myDB"";,// Create connection,$conn = new mysqli($servername, $username, $password, $dbname);,
+ // Check connection,
+ if ($conn->connect_error) {,
+  die(""Connection failed: "" . $conn->connect_error);,}
+,
+ ,// sql to delete a record,
+ $sql = ""DELETE FROM MyGuests WHERE id=3"";,
+ ,if ($conn->query($sql) === TRUE) {,  echo ""Record deleted successfully"";,} else {,
+    echo ""Error deleting record: "" . $conn->error;,},$conn->close();,
+?>
+,
+<?php,$servername = ""localhost"";,$username = ""username"";,$password = ""password"";,$dbname = ""myDB"";,// Create connection,
+$conn = mysqli_connect($servername, $username, $password, $dbname);,
+ // Check connection,
+ if (!$conn) {,
+  die(""Connection failed: "" . mysqli_connect_error());,},// sql to delete a record,
+ $sql = ""DELETE FROM MyGuests WHERE id=3"";,
+ ,if (mysqli_query($conn, $sql)) {,  echo ""Record deleted successfully"";,} else {,
+    echo ""Error deleting record: "" . mysqli_error($conn);,},mysqli_close($conn);,
+?>
+,
+<?php,$servername = ""localhost"";,$username = ""username"";,
+ $password = ""password"";,$dbname = ""myDBPDO"";,try {,  $conn = new PDO(""mysql:host=$servername;dbname=$dbname"", $username, $password);,
+    // set the PDO error mode to exception,  $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);,
+    // sql to delete a record,
+   
+ $sql = ""DELETE FROM MyGuests WHERE id=3"";,
+ ,  // use exec() because no results are returned,  $conn->exec($sql);,
+    echo ""Record deleted successfully"";,} catch(PDOException $e) {,  echo $sql . ""<br>"" . $e->getMessage();,
+  },
+ ,$conn = null;,
+?>
+",
+PHP ,MySQL Use The ORDER BY Clause,"Select and Order Data From a MySQL Database,Select and Order Data With MySQLi,Select Data With PDO (+ Prepared Statements)","Example (MySQLi Object-oriented),Example (MySQLi Procedural),Example (MySQLi Object-oriented),Example (PDO)","The ORDER BY clause is used to sort the result-set in ascending or descending 
+order.,The ORDER BY clause sorts the records in ascending order by default. To sort 
+the records in descending order, use the DESC keyword.,To learn more about SQL, please visit our ,.,The following example selects the id, firstname and lastname columns from the MyGuests 
+table. The records will be ordered by the lastname column:,Code lines to explain from the example above:,First, we set up the SQL query that selects the id, firstname and lastname columns from the MyGuests 
+table. The records will be ordered by the lastname column. The next line of code runs the query and puts the resulting data into a 
+variable called $result.,Then, the , checks if there are more than zero 
+rows returned.,If there are more than zero rows returned, the 
+function , puts all the results into an associative array that we can loop 
+through. The , loop loops through the result set and outputs the data from 
+the id, firstname and lastname columns.,The following example shows the same as the example above, in the MySQLi procedural way:,You can also put the result in an HTML table:,The following example uses prepared statements.,Here we select the id, firstname and lastname columns from the MyGuests table. 
+The records will be ordered by the lastname column, and it will be 
+displayed in an HTML table:",,,
+PHP ,MySQL Use The WHERE Clause,"Select and Filter Data From a MySQL Database,Select and Filter Data With MySQLi,Select Data With PDO (+ Prepared Statements)","Example (MySQLi Object-oriented),Example (MySQLi Procedural),Example (MySQLi Object-oriented),Example (PDO)","The WHERE clause is used to filter records.,The WHERE clause is used to extract only those records that fulfill a 
+specified condition.,To learn more about SQL, please visit our ,.,The following example selects the id, firstname and lastname columns from the MyGuests 
+table where the lastname is ""Doe"", and displays it on the page:,Code lines to explain from the example above:,First, we set up the SQL query that selects the id, firstname and lastname columns from the MyGuests 
+table where the lastname is ""Doe"". The next line of code runs the query and puts the resulting data into a 
+variable called $result.,Then, the , checks if there are more than zero 
+rows returned.,If there are more than zero rows returned, the 
+function , puts all the results into an associative array that we can loop 
+through. The , loop loops through the result set and outputs the data from 
+the id, firstname and lastname columns.,The following example shows the same as the example above, in the MySQLi procedural way:,You can also put the result in an HTML table:,The following example uses prepared statements.,It selects the id, firstname and lastname columns from the MyGuests table 
+where the lastname is ""Doe"", and 
+displays it in an HTML table:",,,
+PHP ,MySQL Select Data,"Select Data From a MySQL Database,Select Data With MySQLi,Select Data With PDO (+ Prepared Statements)","Example (MySQLi Object-oriented),Example (MySQLi Procedural),Example (MySQLi Object-oriented),Example (PDO)","The SELECT statement is used to select data from one or more tables:,or we can use the * character to select ALL columns from a table:,To learn more about SQL, please visit our ,.,The following example selects the id, firstname and lastname columns from the MyGuests 
+table and displays it on the page:,Code lines to explain from the example above:,First, we set up an SQL query that selects the id, firstname and lastname columns from the MyGuests 
+table. The next line of code runs the query and puts the resulting data into a 
+variable called $result.,Then, the function , checks if there are more than zero 
+rows returned.,If there are more than zero rows returned, the 
+function , puts all the results into an associative array that we can loop 
+through. The , loop loops through the result set and outputs the data from 
+the id, firstname and lastname columns.,The following example shows the same as the example above, in the MySQLi 
+procedural way:,You can also put the result in an HTML table:,The following example uses prepared statements.,It selects the id, firstname and lastname columns from the MyGuests table and 
+displays it in an HTML table:",,,
+PHP ,MySQL Prepared Statements,"Prepared Statements and Bound Parameters,Prepared Statements in MySQLi,Prepared Statements in PDO","Example (MySQLi with Prepared Statements),Example (PDO with Prepared Statements)","Prepared statements are very useful against SQL injections.,A prepared statement is a feature used to execute the same (or similar) SQL 
+statements repeatedly with high efficiency.,Prepared statements basically work like this:,Compared to executing SQL statements directly, prepared statements have three main advantages:,The following example uses prepared statements and bound parameters in MySQLi:,Code lines to explain from the example above:,In our SQL, we insert a question mark (?) where we want to substitute in an integer, string, double or blob 
+value.,Then, have a look at the bind_param() function:,This function binds the parameters to the SQL query and tells the 
+database what the parameters are. The ""sss"" argument lists the 
+types of data that the parameters are. The s character tells mysql that the parameter is a string.,The argument may be one of four types:,We must have one of these for each parameter.,By telling mysql what type of data to expect, we minimize the risk of SQL injections.,The following example uses prepared statements and bound parameters in PDO:","Prepared statements reduce parsing time as the preparation on the query is done only once (although the statement is executed multiple times),Bound parameters minimize bandwidth to the server as you need send only the parameters each time, and not the whole query,Prepared statements are very useful against SQL injections, because parameter values, which are transmitted later using a different protocol, need not be correctly escaped. If the original statement template is not derived from external input, SQL injection cannot occur.,i - integer,d - double,s - 
+string,b - BLOB
+",,
+PHP ,MySQL Insert Multiple Records,Insert Multiple Records Into MySQL Using MySQLi and PDO,"Example (MySQLi Object-oriented),Example (MySQLi Procedural),Example (PDO)","Multiple SQL statements must be executed with the , function.,The following examples add three new records to the ""MyGuests"" table:,The PDO way is a little bit different:",,,
+PHP ,MySQL Get Last Inserted ID,Get ID of The Last Inserted Record,"Example (MySQLi Object-oriented),Example (MySQLi Procedural),Example (PDO)","If we perform an INSERT or UPDATE on a table with an AUTO_INCREMENT field, we can 
+get the ID of the last inserted/updated record immediately.,In the table ""MyGuests"", the ""id"" column is an AUTO_INCREMENT 
+field:,The following examples are equal to the examples from the previous page (,), except that we have added one single line of code to retrieve the ID 
+of the last inserted record. We also echo the last inserted ID:",,,
+PHP ,MySQL Insert Data,Insert Data Into MySQL Using MySQLi and PDO,"Example (MySQLi Object-oriented),Example (MySQLi Procedural),Example (PDO)","After a database and a table have been created, we can start adding data in 
+them.,Here are some syntax rules to follow:,The INSERT INTO statement is used to add new records to a MySQL table:,To learn more about SQL, please visit our ,.,In the previous chapter we created an empty table named ""MyGuests"" with 
+five columns: ""id"", ""firstname"", ""lastname"", ""email"" and ""reg_date"". 
+Now, let us fill the table with data.,The following examples add a new record to the ""MyGuests"" table:","The SQL query must be quoted in PHP,String values inside the SQL query must be quoted,Numeric values must not be quoted,The word NULL must not be quoted",,
+PHP ,MySQL Create Table,Create a MySQL Table Using MySQLi and PDO,"Example (MySQLi Object-oriented),Example (MySQLi Procedural),Example (PDO)","A database table has its own unique name and consists of 
+columns and rows.,The CREATE TABLE statement is used to create a table in MySQL.,We will create a table named ""MyGuests"", with 
+five columns: ""id"", ""firstname"", ""lastname"", ""email"" and ""reg_date"":,The data type specifies what type of data the column can hold. For a complete 
+reference of all the available data types, go to our
+,.,After the data type, you can specify other optional attributes for each 
+column:,Each table should have a primary key column (in this case: the ""id"" column). 
+Its value must be unique for each record in the table.,The following examples shows how to create the table in PHP:","NOT NULL - Each row must contain a value for that column, null values are not allowed,DEFAULT value - Set a default value that is added when no other value is passed,UNSIGNED - Used for number types, limits the stored data to positive numbers and zero,AUTO INCREMENT - MySQL automatically increases the value of the field by 1 each time a new record is added,PRIMARY KEY - Used to uniquely identify the rows in a table. The column with PRIMARY KEY setting is often an ID number, and is often used with AUTO_INCREMENT",,
+PHP ,Create a MySQL Database,Create a MySQL Database Using MySQLi and PDO,"Example (MySQLi Object-oriented),Example (MySQLi Procedural),Example (PDO)","A database consists of one or more tables. ,You will need special CREATE privileges to create or to delete a MySQL 
+database.,The CREATE DATABASE statement is used to create a database in MySQL.,The following examples create a database named ""myDB"":, The following PDO example create a database named ""myDBPDO"":, A great benefit of PDO is that it has exception class to handle any problems that may 
+occur in our database queries. If an exception is thrown within the try{ } block, 
+the script stops executing and flows directly to the first catch(){ } block. In the catch block above we echo the SQL statement and 
+the generated error message. ",,,
+PHP ,Connect to MySQL,"Should I Use MySQLi or PDO?,MySQL Examples in Both MySQLi and PDO Syntax,MySQLi Installation,PDO Installation,Open a Connection to MySQL,Close the Connection","Example (MySQLi Object-Oriented),Example (MySQLi Procedural),Example (PDO),MySQLi Object-Oriented:,MySQLi Procedural:,PDO:","PHP 5 and later can work with a MySQL database using:,Earlier versions of PHP used the MySQL extension. However, this 
+extension was deprecated in 2012.,If you need a short answer, it would be ""Whatever you like"".,Both MySQLi and PDO have their advantages:,PDO will work on 12 different database systems, whereas MySQLi will only 
+work with MySQL databases.,So, if you have to switch your project 
+to use another database, PDO makes the process easy. You only have 
+to change the connection string and a few queries. With MySQLi, you will need 
+to rewrite the entire code - queries included.,Both are object-oriented, but MySQLi also offers a procedural API.,Both support Prepared Statements. Prepared Statements protect 
+from SQL injection, and are very important for web application security.,In this, and in the following chapters we demonstrate three ways of working 
+with PHP and MySQL:,For Linux and Windows: The MySQLi extension is automatically installed in 
+most cases, when php5 mysql package is installed.,For installation details, go to:
+,For installation details, go to:
+,Before we can access data in the MySQL database, we need to be able to connect to 
+the server:, A great benefit of PDO is that it 
+has an exception class to handle any problems that may 
+occur in our database queries. If an exception is thrown within the try{ } block, 
+the script stops executing and flows directly to the first catch(){ } block.,The connection will be closed automatically when the script ends. To close the 
+connection before, use the following:"," (the ""i"" stands for improved),MySQLi (object-oriented),MySQLi (procedural),PDO",,
+PHP ,MySQL Database,"What is MySQL?,PHP + MySQL Database System, Database Queries,Download MySQL Database,Facts About MySQL Database",,"With PHP, you can connect to and manipulate databases.,MySQL is the most popular database system used with PHP.,The data in a MySQL database are stored in tables. A table is a collection of related data, and it consists of columns 
+and rows.,Databases are useful for storing information categorically. A company may 
+have a database with the following tables:, A query is a question or a request.,We can query a database for specific information and have a 
+recordset returned.,Look at the following query (using standard SQL):,The query above selects all the data in the ""LastName"" column from the ""Employees"" 
+table.,To learn more about SQL, please visit our ,.,If you don't have a PHP server with a MySQL Database, you can download it 
+for free here: ,
+,MySQL is the de-facto standard database system for web sites 
+with HUGE volumes of both data and end-users (like Facebook, Twitter, 
+and Wikipedia).,Another great thing about MySQL is that it can be scaled down to support 
+embedded database applications.,Look at , for an overview of companies using MySQL.","MySQL is a database system used on the web,MySQL is a database system that runs on a server,MySQL is ideal for both small and large applications,MySQL is very fast, reliable, and easy to use,MySQL uses standard SQL,MySQL compiles on a number of platforms,MySQL is free to download and use,MySQL is developed, distributed, and supported by Oracle Corporation,MySQL is named after co-founder Monty Widenius's daughter: My,Employees,Products,Customers,Orders,PHP combined with MySQL are cross-platform (you can develop in 
+  Windows and serve on a Unix platform)",,
+PHP Iterables,,"PHP - What is an Iterable?,PHP - Using Iterables,PHP - Creating Iterables","Example,Example,Example","An iterable is any value which can be looped through with a , loop.,The , pseudo-type was introduced in PHP 7.1, and it can be used as a data type for function arguments and function
+return values.,The , keyword can be used as a data type of a function argument or as the return
+type of a function:,All arrays are iterables, so any array can be used as an argument of a function that requires an iterable.,Any object that implements the , interface can be used as an argument of a function
+that requires an iterable.,An iterator contains a list of items and provides methods to loop through them. It keeps a
+pointer to one of the elements in the list. Each item in the list should have a key which can
+be used to find the item.,An iterator must have these methods:"," - Returns the element that the pointer is currently pointing to. It can be any
+data type, Returns the key associated with the current element in the list. It can only be
+an integer, float, boolean or string, Moves the pointer to the next element in the list, Moves the pointer to the first element in the list, If the internal pointer is not pointing to any element (for example, if next()
+was called at the end of the list), this should return false. It returns true in any
+other case",,
+PHP ,Namespaces,"PHP Namespaces,Declaring a Namespace,Using Namespaces,Namespace Alias","Syntax,Example,Syntax,Example,Example,Example,Example","Namespaces are qualifiers that solve two different problems:,For example, you may have a set of classes which describe an HTML table, such as Table, Row and
+Cell while also having another set of classes to describe furniture, such as Table,
+Chair and Bed. Namespaces can be used to organize the classes into two different
+groups while also preventing the two classes Table and Table from being mixed up.,Namespaces are declared at the beginning of a file using the , keyword:,Constants, classes and functions declared in this file will belong to the , namespace:,For further organization, it is possible to have nested namespaces:,Any code that follows a , declaration is operating inside the namespace, so
+classes that belong to the namespace can be instantiated without any qualifiers. To access
+classes from outside a namespace, the class needs to have the namespace attached
+to it.,When many classes from the same namespace are being used at the same time, it is
+easier to use the , keyword:,It can be useful to give a namespace or class an alias to make it easier to write. This is
+done with the , keyword:",,,
+PHP ,OOP - Static Properties,"PHP - Static Properties,PHP - More on Static Properties","Syntax,Syntax,Example,Example,Example","Static properties can be called directly - without creating an instance of a 
+class.,Static properties are declared with the , 
+keyword:,To access a static property use the class name, double colon (::), and the 
+property name:,Let's look at an example:,Here, we declare a static property: $value. Then, we echo the value of the static 
+property 
+by using the class name, double colon (::), and the property name (without creating a class 
+first).,A class can have both static and non-static properties. A static property can be 
+accessed from a method in the same class using the , 
+keyword and double colon (::):,To call a static property from a child class, use the , 
+keyword inside the child class:",,,
+PHP ,OOP - Static Methods,"PHP - Static Methods,PHP - More on Static Methods","Syntax,Syntax,Example,Example,Example,Example","Static methods can be called directly - without creating an instance of the 
+class first.,Static methods are declared with the , 
+keyword:,To access a static method use the class name, double colon (::), and the 
+method name:,Let's look at an example:,Here, we declare a static method: welcome(). Then, we call the static method 
+by using the class name, double colon (::), and the method name (without 
+creating an instance of the class first).,A class can have both static and non-static methods. A static method can be 
+accessed from a method in the same class using the , 
+keyword and double colon (::):,Static methods can also be called from methods in other classes. To do this, 
+the static method should be ,:,To call a static method from a child class, use the , 
+keyword inside the child class. Here, the static method can be , 
+or ,.",,,
+PHP ,OOP - Traits,"PHP - What are Traits?,PHP - Using Multiple Traits","Syntax,Syntax,Example,Example","PHP only supports single inheritance: a child class can inherit only from one 
+single parent.,So, what if a class needs to inherit multiple behaviors? OOP traits solve 
+this problem.,Traits are used to declare methods that can be used in multiple classes. 
+Traits can have methods and abstract methods that can be used in multiple 
+classes, and the methods can have any access modifier (public, private, or 
+protected).,Traits are declared with the , 
+keyword:,To use a trait in a class, use the , 
+keyword:,Let's look at an example:,Here, we declare one trait: message1. Then, we create a class: 
+Welcome. The class uses the trait, and all the methods in the trait will be 
+available in the class.,If other classes need to use the msg1() function, simply use 
+the message1 trait in those classes. This reduces code duplication, because 
+there is no need to redeclare the same method over and over again.,Let's look at another example:,Here, we declare two traits: message1 and message2. Then, we create two classes: 
+Welcome and Welcome2. The first class (Welcome) uses the message1 trait, and the 
+second class (Welcome2) uses both message1 and message2 traits (multiple traits 
+are separated by comma).",,,
+PHP ,OOP - Interfaces,"PHP - What are Interfaces?,PHP - Interfaces vs. Abstract Classes,PHP - Using Interfaces","Syntax,Example,Example","Interfaces allow you to specify what methods a class should implement.,Interfaces make it easy to use a variety of different classes in the same way. When one or more classes use the same interface, it is referred to as ""polymorphism"".,Interfaces are declared with the , keyword:,Interface are similar to abstract classes. The difference between interfaces and abstract classes are:,To implement an interface, a class must use the , keyword.,A class that implements an interface must implement , of the interface's methods.,From the example above, let's say that we would like to write software which manages a group of animals. There are actions
+that all of the animals can do, but each animal does it in its own way.,Using interfaces, we can write some code which can work for all of the 
+animals even if each animal behaves differently:,Cat, Dog and Mouse are all classes that implement the Animal interface, which means that
+all of them are able to make a sound using the , method. Because of this,
+we can loop through all of the animals and tell them to make a sound even if we don't
+know what type of animal each one is.,Since the interface does not tell the classes how to implement the method, each animal
+can make a sound in its own way.","Interfaces cannot have properties, while abstract classes can,All interface methods must be public, while abstract class methods is public 
+or protected,All methods in an interface are abstract, so they cannot be implemented in code
+and the abstract keyword is not necessary,Classes can implement an interface while inheriting from another class at the same
+time",,
+PHP ,OOP - Abstract Classes,"PHP - What are Abstract Classes and Methods?,PHP - More Abstract Class Examples","Syntax,Example,Example,Example","Abstract classes and methods are when the parent class has a named method, 
+but 
+need its child class(es) to fill out the tasks.,An abstract class is a class that contains at least one abstract method. An 
+abstract method is a method that is declared, but not implemented in the code.,An abstract class or method is defined with the , 
+keyword:,When inheriting from an abstract class, the child class method must be 
+defined with the same name, and the same or a less restricted access modifier. 
+So, if the abstract method is defined as protected, the child class method must 
+be defined as either protected or public, but not private. Also, the type and number of 
+required arguments must be the same. However, the child classes may have optional 
+arguments in addition.,So, when a child class is inherited from an abstract class, we have the following rules:,Let's look at an example:,The Audi, Volvo, and Citroen classes are inherited from the Car class. This means that the 
+Audi, Volvo, and Citroen classes can use the public $name 
+property as well as the public __construct() method from the 
+Car class because of inheritance.,But, intro() is an abstract method that should be defined in all the child 
+classes and they should return a string.,Let's look at another example where the abstract method has an argument:,Let's look at another example where the abstract method has an argument, and 
+the child class has two optional arguments that are not defined in the parent's 
+    abstract method:","The child class method must be defined with the same name and it redeclares the parent abstract method,The child class method must be defined with the same or a less restricted 
+  access modifier,The number of required arguments must be the same. However, the child class 
+  may have optional 
+arguments in addition",,
+PHP ,OOP - Class Constants,PHP - Class Constants,"Example,Example","Constants cannot be changed once it is declared.,Class constants can be useful if you need to define some constant data within 
+a class.,A class constant is declared inside a class with the , 
+keyword.,Class constants are case-sensitive. However, it is recommended to name the constants in 
+all uppercase letters.,We can access a constant from outside the class by using the class name 
+followed by the scope resolution operator (,) followed by the constant 
+name, like here:,Or, we can access a constant from inside the class by using the , keyword followed by the scope resolution operator (,) followed by the constant name, like here:",,,
+PHP ,OOP - Inheritance,"PHP - What is Inheritance?,PHP - Inheritance and the Protected Access Modifier,PHP - Overriding Inherited Methods,PHP - The final Keyword","Example,Example,Example,Example,Example,Example","Inheritance in OOP = When a class derives from another class.,The child class will inherit all the public and protected properties and 
+methods from the parent class. In addition, it can have its own properties and 
+methods.,An inherited class is defined by using the , 
+keyword.,Let's look at an example:,The Strawberry class is inherited from the Fruit class. ,This means that the Strawberry class can use the public $name and $color 
+properties as well as the public __construct() and intro() methods from the 
+Fruit class because of inheritance.,The Strawberry class also has its own method: message().,In the previous chapter we learned that , properties or methods can 
+  be accessed within the 
+  class and by classes derived from that class. What does that mean?,Let's look at an example:,In the example above we see that if we try to call a , 
+method (intro()) from outside the class, we will receive an error. , 
+methods will work fine!,Let's look at another example:,In the example above we see that all works fine! It is because we call the
+, 
+method (intro()) from inside the derived class.,Inherited methods can be overridden by redefining the methods (use the same 
+name) in the child class.,Look at the example below. The __construct() and intro() methods in the child 
+class (Strawberry) will override the __construct() and intro() methods in the 
+parent class (Fruit):,The , 
+keyword can be used to prevent class inheritance or to prevent method overriding.,The following example shows how to prevent class inheritance:,The following example shows how to prevent method overriding:",,,
+PHP ,OOP - Access Modifiers,PHP - Access Modifiers,"Example,Example","Properties and methods can have access modifiers which control where they can 
+be accessed.,There are three access modifiers:,In the following example we have added three different access modifiers to 
+three properties (name, color, and weight). Here, if you try to set the name property it 
+will work fine (because the name property is public, and can be accessed from 
+everywhere). However, if you try 
+to set the color or weight property it will result in a fatal 
+error (because the color and weight property are protected and private):,In the next example we have added access modifiers to 
+two functions. Here, if you try to call the set_color() or the set_weight() function it will result in a fatal 
+error (because the two functions are considered protected and private), even if 
+all the properties are public:"," , - the property or 
+  method can be accessed from everywhere. This is default, , - the property or method can 
+  be accessed within the 
+  class and by classes derived from that class, , - the property or method can 
+  ONLY be accessed within the class",,
+PHP ,OOP - Destructor,PHP - The __destruct Function,"Example,Example","A destructor is called when the object is destructed or the script is stopped 
+or exited.,If you create a , function, PHP will automatically call this 
+function at the end of the script.,Notice that the destruct function starts with two underscores (__)!,The example below has a __construct() function that is automatically called 
+when you create an object from a class, and a __destruct() function that is 
+automatically called at the end of the script:,Another example:",,,
+PHP ,OOP - Constructor,PHP - The __construct Function,"Example,Example","A constructor allows you to initialize an object's properties upon creation of the object.,If you create a , function, PHP will automatically call this 
+function when you create an object from a class.,Notice that the construct function starts with two underscores (__)!,We see in the example below, that using a constructor saves us from  
+calling the set_name() method which reduces the amount of code:,Another example:",,,
+PHP ,OOP - Classes and Objects,"OOP Case,Define a Class,Define Objects,PHP - The $this Keyword,PHP - instanceof","Syntax,Example,Example,Example,Example,Example,Example","A class is a template for objects, and an object is an instance 
+of class.,Let's assume we have a class named Fruit. A Fruit can have properties like name, 
+color, weight, etc. We can define variables like $name, $color, and $weight to hold the values of these properties.,When the individual objects (apple, banana, etc.) are created, they inherit 
+all the  
+properties and behaviors from the class, but each object will have different values for the properties.,A class is defined by using the , 
+keyword, followed by the name of the class and a pair of curly braces ({}). All 
+its properties and methods go inside the braces:,Below we declare a class named Fruit consisting of two properties 
+($name and $color) and two methods set_name() and 
+get_name() for setting and getting the $name property:,Classes are nothing without objects! We can create multiple objects from a 
+class. Each object has all the properties and methods defined in the class, but 
+they will have different property values.,Objects 
+of a class is created using the , keyword.,In the example below, $apple and $banana are instances of the class Fruit:,In the example below, we add two more methods to class Fruit, for setting and 
+getting the $color property:,The $this keyword refers to the current object, and is only available inside 
+methods.,Look at the following example:,So, where can we change the value of the $name property? There are two 
+ways:,1. Inside the class (by adding a set_name() method and use $this):,2. Outside the class (by directly changing the property value):,You can use the , keyword to check if an object belongs to a specific class:",,,
+PHP ,- What is OOP?,"PHP What is OOP?,PHP - What are Classes and Objects?",,"From PHP5, you can also write PHP code in an object-oriented 
+style.,Object-Oriented programming is faster and easier to execute.,OOP stands for Object-Oriented Programming.,Procedural programming is about writing procedures or functions that perform 
+operations on the data, while object-oriented programming is about 
+creating objects that contain both data and functions.,Object-oriented programming has several advantages over procedural 
+programming:, The ""Don't Repeat Yourself"" (DRY) principle is about 
+reducing the repetition of code. You should extract out the codes that are 
+common for the application, and place them at a single place and reuse them 
+instead of repeating it.,Classes and objects are the two main aspects of object-oriented programming.,Look at the following illustration to see the difference between class and 
+objects:,Another example:,So, a class is a template for objects, and an object is an instance of a class.,When the individual objects are created, they inherit all the 
+properties and behaviors from the class, but each object will have different values for the properties.,Look at the next chapters to learn more about OOP.","OOP is faster and easier to execute,OOP provides a clear structure for the programs,OOP helps to keep the PHP code DRY ""Don't Repeat Yourself"", and makes 
+  the 
+  code easier to maintain, modify and debug,OOP makes it possible to create full reusable 
+  applications with less code and shorter development time",,
+PHP ,Exceptions,"What is an Exception?,Throwing an Exception,The try...catch Statement,The try...catch...finally Statement,The Exception Object,Complete Exception Reference","Example,Example,Example,Example,Example","An exception is an object that describes an error or unexpected behaviour of a PHP script.
+,Exceptions are thrown by many PHP functions and classes.,User defined functions and classes can also throw exceptions.,Exceptions are a good way to stop a function when it comes across data that it cannot
+use.,The , statement allows a user defined 
+function or method to throw an exception. When an exception is thrown, the code 
+following it will not be executed.,If an exception is not caught, a fatal error will occur with an ""Uncaught 
+Exception"" message.,Lets try to throw an exception without catching it:,The result will look something like this:,To avoid the error from the example above, we can use the
+, statement to catch exceptions and continue the process.,The catch block indicates what type of exception should be caught and the name of the
+variable which can be used to access the exception. In the example above, the type of
+exception is , and the variable name is ,.,The , statement can be used to catch exceptions. Code in the
+, block will always run regardless of whether an exception was caught. If
+, is present, the , block is optional.,The Exception Object contains information about the error or unexpected behaviour that
+the function encountered.,When catching an exception, the following table shows some of the methods that can be used to
+get information about the exception:,For a complete reference, go to our ,.,The reference contains descriptions and examples of all Exception methods.",,,
+JSON,PHP and ,"What is JSON?,PHP and JSON,PHP - json_encode(),PHP - json_decode(),PHP - Accessing the Decoded Values,PHP - Looping Through the Values","Example,Example,Example,Example,Example,Example,Example,Example","JSON stands for JavaScript Object Notation, and is a syntax for storing and 
+exchanging data.,Since the JSON format is a text-based format, it can easily be sent to and 
+from a server, and used as a data format by any programming language.,PHP has some built-in functions to handle JSON.,First, we will look at the following two functions:,The , function is used to encode a value to JSON format.,The , function is used to decode 
+a JSON object into a PHP object or an associative array.,The , function returns an object 
+by default. The , function has a 
+second parameter, and when set to true, JSON objects are decoded into 
+associative arrays.,Here are two examples of how to access the decoded values from an object and 
+from an associative array:,You can also loop through the values with a , 
+loop:","
+,
+, ","
+  <?php,$age = array(""Peter""=>35, ""Ben""=>37, ""Joe""=>43);,
+  ,echo json_encode($age);,?>,
+  <?php,$cars = array(""Volvo"", ""BMW"", ""Toyota"");,echo json_encode($cars);,?>,
+  <?php,$jsonobj = '{""Peter"":35,""Ben"":37,""Joe"":43}';,var_dump(json_decode($jsonobj));,?>,
+  <?php,$jsonobj = '{""Peter"":35,""Ben"":37,""Joe"":43}';,var_dump(json_decode($jsonobj, 
+  true));,?>,
+  <?php,$jsonobj = '{""Peter"":35,""Ben"":37,""Joe"":43}';,
+  $obj = json_decode($jsonobj);,echo $obj->Peter;,echo $obj->Ben;,
+  echo $obj->Joe;,?>,
+  <?php,$jsonobj = '{""Peter"":35,""Ben"":37,""Joe"":43}';,
+  $arr = json_decode($jsonobj, true);,echo $arr[""Peter""];,echo $arr[""Ben""];,
+  echo $arr[""Joe""];,?>,
+  <?php,$jsonobj = '{""Peter"":35,""Ben"":37,""Joe"":43}';,
+  $obj = json_decode($jsonobj);,foreach($obj 
+  as $key => $value) {,  echo $key . "" => "" . $value . ""<br>"";,},?>,
+  <?php,$jsonobj = '{""Peter"":35,""Ben"":37,""Joe"":43}';,
+  $arr = json_decode($jsonobj, true);,foreach($arr as $key => $value) {,  echo $key . "" => "" . $value 
+  . ""<br>"";,},?>",
+PHP ,Callback Functions,"Callback Functions,Callbacks in User Defined Functions","Example,Example,Example","A callback function (often referred to as just ""callback"") is a function which is passed as an
+argument into another function.,Any existing function can be used as a callback function. To use a function as a callback
+function, pass a string containing the name of the function as the argument of another
+function:,Starting with version 7, PHP can pass anonymous functions as callback functions:,User-defined functions and methods can also take callback functions as 
+arguments. To use callback functions inside a user-defined function or method, 
+call it by adding parentheses to the variable and pass arguments as with normal 
+functions:",,,
+PHP ,Filters Advanced,"Validate an Integer Within a Range,Validate IPv6 Address,Validate URL - Must Contain QueryString,Remove Characters With ASCII Value > 127,Complete PHP Filter Reference","Example,Example,Example,Example","The following example uses the , function to check if a variable 
+is both of type INT, and between 1 and 200:,The following example uses the , function to check if the variable $ip is a valid 
+IPv6 address:,The following example uses the , function to check if the variable $url is a 
+URL with a querystring:,The following example uses the , function to sanitize a string. It 
+will both remove all HTML tags, and all characters with ASCII value > 127, from 
+the string:,For a complete reference of all filter functions, go to our complete
+, Check each filter to see 
+what options and flags are available.,The reference contains a brief description, and examples of use, for each function!",,,
+PHP ,Filters,"The PHP Filter Extension ,Why Use Filters?,PHP filter_var() Function,Sanitize a String,Validate an Integer,Validate an IP Address,Sanitize and Validate an Email Address,Sanitize and Validate a URL,Complete PHP Filter Reference","Example,Example,Example,Example,Example,Example,Example","Validating data = Determine if the data is in proper form.,Sanitizing data = Remove any illegal character from the data.,PHP filters are used to validate and sanitize external input.,The PHP filter extension has many of the functions needed for checking user input,
+and is designed to make data validation easier and quicker.,The , function can be used to list what the PHP filter extension offers: ,Many web applications receive external input. External input/data can be:,The , function both validate and sanitize data.,The , function filters a single variable with a specified filter. It takes two pieces of data:,The following example uses the , function to remove all HTML tags 
+from a string:,The following example uses the , function to check if the variable $int 
+is an integer. If $int is an integer,
+the output of the code below will be: ""Integer is valid"". If $int is not an integer, 
+the output will be: ""Integer is not valid"":,In the example above, if $int was set to 0, the function above will return 
+""Integer is not valid"". To solve this problem, use the code below:,The following example uses the , function to check if the variable $ip 
+is a valid IP address:,The following example uses the , function to first remove all 
+illegal characters from the $email variable, then check if it 
+is a valid email address:,The following example uses the , function to first remove all 
+illegal characters from a URL, then check if $url is a valid URL:,For a complete reference of all filter functions, go to our complete
+, Check each filter to see 
+what options and flags are available.,The reference contains a brief description, and examples of use, for each function!","User input from a form,Cookies,Web services data,Server variables,Database query results,The variable you want to check,The type of check to use",,
+PHP ,Sessions,"What is a PHP Session?,Start a PHP Session,Get PHP Session Variable Values,Modify a PHP Session Variable,Destroy a PHP Session ,PHP Exercises","Example,Example,Example,Example,Example","A session is a way to store information (in variables) to be used across multiple pages.,Unlike a cookie, the information is not stored on the users computer.,When you work with an application, you open it, do some changes, and 
+then you close it. This is much like a Session. The computer knows who you are. 
+It knows when you start the application and when you end. But on the internet 
+there is one problem: the web server does not know who you are or what you do, 
+because the HTTP address doesn't maintain state.,Session variables solve this problem by storing user information 
+to be used across multiple pages (e.g. username, favorite color, etc). By 
+default, session variables last until the user closes the browser.,So; Session variables hold information about one single user, and are available to all pages in one application.,A session is started with the , function.,Session variables are set with the PHP global variable: $_SESSION.,Now, let's create a new page called ""demo_session1.php"". In this page, we start a 
+new PHP session and set some session variables:,Next, we create another page called ""demo_session2.php"". From this page, we 
+will access the session information we set on the first page (""demo_session1.php"").,Notice that session variables are not passed individually to each new page, 
+instead they are retrieved from the session we open at the beginning of each 
+page (,).,Also notice that all session variable values are stored in the global $_SESSION variable:,Another way to show all the session variable values for a user session is to run the 
+following code:,To change a session variable, just overwrite it:,To remove all global session variables and destroy the session, use ,
+and ,:",,,
+PHP ,Cookies,"What is a Cookie? ,Create Cookies With PHP,PHP Create/Retrieve a Cookie,Modify a Cookie Value,Delete a Cookie,Check if Cookies are Enabled,Complete PHP Network Reference,PHP Exercises","Example,Example,Example,Example","A cookie is often used to identify a user. A cookie is a small file that the 
+server embeds on the user's computer. Each time the same computer requests a 
+page with a browser, it will send the cookie too. With PHP, you can both create 
+and retrieve cookie values.,A cookie is created with the , function.,Only the , parameter is required. All other parameters are 
+optional.,The following example creates a cookie named ""user"" with the value ""John 
+Doe"". The cookie will expire after 30 days (86400 * 30). The ""/"" means that the 
+cookie is available in entire website (otherwise, select the directory you 
+prefer).,We then retrieve the value of the cookie ""user"" (using the global variable 
+$_COOKIE). We also use the , function to find out if the cookie is set:, The value of the cookie is automatically URLencoded when 
+sending the cookie, and automatically decoded when received (to prevent 
+URLencoding, use , instead).,To modify a cookie, just set (again) the cookie using the , function:,To delete a cookie, use the , function with an expiration date in 
+the past:,The following example creates a small script that checks whether cookies are 
+enabled. First, try to create a test cookie with the , function, then 
+count the $_COOKIE array variable:,For a complete reference of Network functions, go to our complete
+,.",,,
+PHP ,File Upload,"Configure The ""php.ini"" File,Create The HTML Form,Create The Upload File PHP Script,Check if File Already Exists,Limit File Size,Limit File Type,Complete Upload File PHP Script,Complete PHP Filesystem Reference",,"With PHP, it is easy to upload files to the server.,However, with ease comes danger, so always be careful when 
+allowing file uploads!,First, ensure that PHP is configured to allow file uploads.,In your ""php.ini"" file, search for the , directive, and set it to On:,Next, create an HTML form that allow users to choose the image file they want to upload:,Some rules to follow for the HTML form above:,Without the requirements above, the file upload will not work.,Other things to notice:,The form above sends data to a file called ""upload.php"", which we will create next.,The ""upload.php"" file contains the code for uploading a file:,PHP script explained:,Now we can add some restrictions.,First, we will check if the file already exists in the ""uploads"" folder. If 
+it does, an error message is displayed, and $uploadOk is set to 0:,The file input field in our HTML form above is named ""fileToUpload"".,Now, we want to check the size of the file. If the file is larger than 500KB, an error message is displayed, and $uploadOk is set to 0:,The code below only allows users to upload JPG, JPEG, PNG, and GIF files. All other 
+file types gives an error message before setting $uploadOk to 0:,The complete ""upload.php"" file now looks like this:,For a complete reference of filesystem functions, go to our complete
+,.","Make sure that the form uses method=""post"",The form also needs the following attribute: enctype=""multipart/form-data"". It specifies which content-type to use when submitting the form,The type=""file"" attribute of the <input> tag shows the input field as a file-select control, with a ""Browse"" button next to the input control ,$target_dir = ""uploads/"" - specifies the directory where the file is going to be placed,$target_file specifies the path of the file to be uploaded,$uploadOk=1 is not used yet (will be used later),$imageFileType holds the file extension of the file (in lower case),Next, check if the image file is an actual image or a fake image",,
+"PHP , Statement",switch,"The PHP switch Statement,PHP Exercises",Example,"The , statement is used to perform different actions based on different conditions.,Use the , statement to ,.,This is how it works: First we have a single expression , (most often a
+variable), that is evaluated once. The value of the expression is then compared
+with the values for each case in the structure. If there is a match, the block
+of code associated with that case is executed. Use , to prevent the
+code from running into the next case automatically. The , statement is used if no 
+match is found.",,,
+PHP ,Operators,"PHP Operators,PHP Arithmetic Operators,PHP Assignment Operators,PHP Comparison Operators,PHP Increment / Decrement Operators,PHP Logical Operators,PHP String Operators,PHP Array Operators,PHP Conditional Assignment Operators,PHP Exercises",,"Operators are used to perform operations on variables and values.,PHP divides the operators in the following groups:,The PHP arithmetic operators are used with numeric values to perform common arithmetical operations, 
+such as addition, subtraction, multiplication etc.,The PHP assignment operators are used with numeric values to write a value to a variable.,The basic assignment operator in PHP is ""="". It means that the left operand 
+gets set to the value of the assignment expression on the right.,The PHP comparison operators are used to compare two values (number or string):,The PHP increment operators are used to increment a variable's value.,The PHP decrement operators are used to decrement a variable's value.,The PHP logical operators are used to combine conditional statements.,PHP has two operators that are specially designed for strings.,The PHP array operators are used to compare arrays.,The PHP conditional assignment operators are used to set a value depending on conditions:","Arithmetic operators,Assignment operators,Comparison operators,Increment/Decrement operators,Logical operators,String operators,Array operators,Conditional assignment operators",,
+PHP ,Constants,"PHP Constants,Create a PHP Constant,PHP Constant Arrays,Constants are Global","Example,Example,Example,Example","Constants are like variables except that once they are defined 
+they cannot be changed or undefined.,A constant is an identifier (name) for a simple value. The value cannot be 
+changed during the script.,A valid constant name starts with a letter or underscore (no $ sign before 
+the constant name)., Unlike variables, constants are automatically global across 
+the entire script.,To create a constant, use the , function.,Parameters:,In PHP7, you can create an Array constant using the , function.,Constants are automatically global and can be used across 
+the entire script.",": Specifies the name of the constant,: Specifies the value of the constant,: Specifies whether the constant name should be case-insensitive. Default is false",,
+PHP Math,,"PHP pi() Function,PHP min() and max() Functions,PHP abs() Function,PHP sqrt() Function,PHP round() Function,Random Numbers,Complete PHP Math Reference","Example,Example,Example,Example,Example,Example,Example","PHP has a set of math functions that allows you to perform mathematical tasks on numbers.,The , function returns the value of PI:,The , and , functions can be used to find the lowest or highest value in a list of arguments:,The , function returns the absolute (positive) value of a number:,The , function returns the square root of a number:,The , function rounds a floating-point number 
+to its nearest integer:,The , function generates a random number:,To get more control over the random number, you can add the optional , and , parameters to specify the lowest integer and the highest integer to be returned.,For example, if you want a random integer between 10 and 100 (inclusive), use 
+,:,For a complete reference of all math functions, go to our complete ,.,The PHP math reference contains description and example of use, for each function.",,,
+PHP ,Numbers,"PHP Numbers,PHP Integers,PHP Floats,PHP Infinity,PHP NaN,PHP Numerical Strings,PHP Casting Strings and Floats to Integers","Example,Example,Example,Example,Example,Example","In this chapter we will look in depth into Integers, Floats, and 
+Number Strings.,One thing to notice about PHP is that it provides automatic data type 
+conversion.,So, if you assign an integer value to a variable, the type of that variable 
+will automatically be an integer. Then, if you assign a string to 
+the same variable, the type will change to a string.,This automatic conversion can sometimes break your code.,2, 256, -256, 10358, -179567 are all integers.,An integer is a number without any decimal part.,An integer data type is a non-decimal number between -2147483648 and 
+2147483647 in 32 bit systems, and between -9223372036854775808 and 
+9223372036854775807 in 64 bit systems. A value greater (or lower) than this, will be stored as float, 
+because it exceeds the limit of an integer., Another important thing to know is that even if 4 * 2.5 is 10, the result is 
+stored as float, because one of the operands is a float (2.5).,Here are some rules for integers:,PHP has the following predefined constants for integers:,PHP has the following functions to check if the type of a variable is 
+integer:,A float is a number with a decimal point or a number in exponential form.,2.0, 256.4, 10.358, 7.64E+5, 5.56E-5 are all floats.,The float data type can commonly store a value up to 1.7976931348623E+308 
+(platform dependent), and have a maximum precision of 14 digits.,PHP has the following predefined constants for floats (from PHP 7.2):,PHP has the following functions to check if the type of a variable is 
+float:,A numeric value that is larger than PHP_FLOAT_MAX is considered infinite.,PHP has the following functions to check if a numeric value is finite or 
+infinite:,However, the PHP var_dump() function returns the data type and value:,NaN stands for Not a Number.,NaN is used for impossible mathematical operations.,PHP has the following functions to check if a value is not a number:,However, the PHP var_dump() function returns the data type and value:,The PHP is_numeric() function can be used to find whether a variable is 
+numeric. The function returns true if the variable is a number or a numeric 
+string, false otherwise.,Sometimes you need to cast a numerical value into another data type.,The (int), (integer), or intval() function are often used to convert a value 
+to an integer.","An integer must have at least one digit,An integer must NOT have a decimal point,An integer can be either positive or negative,Integers can be specified in three formats: decimal (10-based), hexadecimal (16-based - prefixed with 0x) or octal (8-based - prefixed with 0),PHP_INT_MAX - The largest integer supported,PHP_INT_MIN - The smallest integer supported,PHP_INT_SIZE -  The size of an integer in bytes,is_int(),is_integer() - alias of is_int(),is_long() - alias of is_int(),PHP_FLOAT_MAX - The largest representable floating point number,PHP_FLOAT_MIN - The smallest representable positive floating point number,- PHP_FLOAT_MAX - The smallest representable negative floating point 
+  number,PHP_FLOAT_DIG - The number of decimal digits that can be rounded into a 
+  float and back without precision loss,PHP_FLOAT_EPSILON - The smallest representable positive number x, so that 
+  x + 1.0 != 1.0,is_float(),is_double() - alias of is_float()",,
+"PHP , Statements",if...else...elseif,"PHP Conditional Statements,PHP - The if Statement,PHP - The if...else Statement,PHP - The if...elseif...else Statement,PHP - The switch Statement,PHP Exercises","Example,Example,Example","Conditional statements are used to perform different actions based on different conditions.,Very often when you write code, you want to perform different actions for 
+different conditions. You can use conditional statements in your code to do this.,In PHP we have the following conditional statements:,The , statement executes some code if one condition is true.,The , statement executes some code if a condition is true and 
+another code if that condition is false.,The , statement executes different codes for more than two 
+conditions.,The , statement will be explained in the next chapter."," statement - executes some code if one condition is true, statement - executes some code if a condition is true and another code if that condition is false, statement  - executes different codes for more than two conditions, statement - selects one of many blocks of code to be executed",,
+PHP ,Strings,"PHP String Functions,strlen() - Return the Length of a String,str_word_count() - Count Words in a String,strrev() - Reverse a String,strpos() - Search For a Text Within a String,str_replace() - Replace Text Within a String,Complete PHP String Reference,PHP Exercises","Example,Example,Example,Example,Example","A string is a sequence of characters, like ""Hello world!"".,In this chapter we will look at some commonly used functions to manipulate strings.,The PHP , function returns the length of a string.,The PHP , function counts the 
+number of words in a string.,The PHP , function reverses a string.,The PHP , function searches for a specific text within a string. If a match is found, the function returns the character position of the first match. If no match is found, it will return FALSE.,  
+The first character position in a string is 0 (not 1).,The PHP , function replaces some characters with some other 
+characters in a string.,For a complete reference of all string functions, go to our complete ,.,The PHP string reference contains description and example of use, for each function!",,,
+PHP ,Data Types,"PHP Data Types,PHP String,PHP Integer,PHP Float,PHP Boolean,PHP Array,PHP Object,PHP NULL Value,PHP Resource","Example,Example,Example,Example,Example,Example","Variables can store data of different types, and different data types can do 
+different things.,PHP supports the following data types:,A string is a sequence of characters, like ""Hello world!"".,A string can be any text inside quotes. You can use single or double quotes:,An integer data type is a non-decimal number between -2,147,483,648 and 
+2,147,483,647.,Rules for integers:,In the following example $x is an integer. The PHP var_dump() 
+function returns the data type and value:,A float (floating point number) is a number with a decimal point or a number in exponential form.,In the following example $x is a float. The PHP var_dump() 
+function returns the data type and value:,A Boolean represents two possible states: TRUE or FALSE.,Booleans are often used in conditional testing. You will learn more about 
+conditional testing in a later chapter of this tutorial.,An array stores multiple values in one single variable.,In the following example $cars is an array. The PHP var_dump() 
+function returns the data type and value:,You will learn a lot more about arrays in later chapters of this tutorial.,Classes and objects are the two main aspects of object-oriented programming.,A class is a template for objects, and an object is an instance of a class.,When the individual objects are created, they inherit all the properties and 
+behaviors from the class, but each object will have different values for the 
+properties.,Let's assume we have a class named Car. A Car can have properties like model, 
+color, etc. We can define variables like $model, $color, and so on, to hold the 
+values of these properties.,When the individual objects (Volvo, BMW, Toyota, etc.) are created, they 
+inherit all the properties and behaviors from the class, but each object will 
+have different values for the properties.,If you create a __construct() function, PHP will automatically call this 
+function when you create an object from a class.,Null is a special data type which can have only one value: NULL.,A variable of data type NULL is a variable that has no value assigned to it., If a variable is created without a value, it is 
+automatically assigned a value of NULL.,Variables can also be emptied by setting the value to NULL:,The special resource type is not an actual data type. It is the storing of a 
+reference to functions and resources external to PHP.,A common example of 
+using the resource data type is a database call.,We will not talk about the resource type here, since it is an advanced topic.","String,Integer,Float (floating point numbers - also called double),Boolean,Array,Object,NULL,Resource,An integer must have at least one digit,An integer must not have a decimal point,An integer can be either positive or negative,Integers can be specified in: decimal (base 10), hexadecimal (base 16), octal (base 
+  8), or binary (base 2) notation",,
+PHP ,echo and print Statements,"PHP echo and print Statements,The PHP echo Statement,The PHP print Statement","Example,Example,Example,Example","With PHP, there are two basic ways to get output: , and ,.,In this tutorial we use , 
+or , in almost every 
+example. So, this chapter contains a little more info about those two output 
+statements., and , are more or less the same. They are both used to output data 
+to the screen. ,The differences are small: , has no return value while , has a return value of 1 so it can be used in 
+expressions. , can take multiple parameters (although such usage is rare) 
+while , can take one argument. , is marginally 
+faster than ,.,The , statement can be used with or without parentheses: 
+, or ,.,The following example shows how to output text with the , 
+command (notice that the text can contain HTML markup):,The following example shows how to output text and variables with the , 
+statement:,The , statement can be used with or without 
+parentheses: 
+, or ,.,The following example shows how to output text with the , 
+command (notice that the text can contain HTML markup):,The following example shows how to output text and variables with the 
+, statement:",,,
+PHP ,Variables,"Creating (Declaring) PHP Variables,PHP Variables,Output Variables,PHP is a Loosely Typed Language","Example,Example,Example,Example","Variables are ""containers"" for storing information.,In PHP, a variable starts with the , sign, followed by the name of the variable:,After the execution of the statements above, the variable 
+, will hold the value 
+,, the variable 
+, will hold the value 
+,, 
+and the variable , will hold the value 
+,., When you assign a text value to a variable, put quotes around the value., Unlike other programming languages, PHP has no command 
+for declaring a variable. It is created the moment you first assign a value to 
+it.,A variable can have a short name (like x and y) or a more descriptive name (age, carname, total_volume).,Rules for PHP variables:,The PHP , statement is often used to output data to the screen.,The following example will show how to output text and a variable:,The following example will produce the same output as the example above:,The following example will output the sum of two variables:, You will learn more about the , statement and how 
+to output data to the screen in the next chapter.,In the example above, notice that we did not have to tell PHP which data type the variable is.,PHP automatically associates a data type to the variable, depending on its value. 
+Since the data types are not set in a strict sense, you can do things like 
+adding a string to an integer without causing an error.,In PHP 7, type declarations were added. This gives an option to specify 
+the data type expected when declaring a function, and by enabling the strict requirement, it will throw a ""Fatal 
+Error"" on a type mismatch.,You will learn more about , and 
+, requirements, and  
+data type declarations in the , chapter.","A variable starts with the , sign, followed by the name of the variable,A variable name must start with a letter or the underscore character,A variable name cannot start with a number,A variable name can only contain alpha-numeric characters and underscores (A-z, 0-9, and _ ),Variable names are case-sensitive (, and 
+  , are two different variables)","
+<?php,
+$txt = ""Hello world!"";,
+$x = 5;,$y = 10.5;,
+?>
+,
+<?php,
+$txt = ""W3Schools.com"";,
+ echo ""I love $txt!"";,?>
+",
+PHP ,Comments,Comments in PHP,"Example,Example,Example","A comment in PHP code is a line that is not executed as a part of the 
+program. Its only purpose is to be read by someone who is looking at the code.,Comments can be used to:,PHP supports several ways of commenting:","Let others understand your code,Remind yourself of what you did - Most programmers have experienced coming back to their own work a year or two later and having to re-figure out what they did. Comments can remind you of what you were thinking when you wrote the code",,
+PHP ,Syntax,"Basic PHP Syntax,PHP Case Sensitivity,PHP Exercises","Example,Example,Example","A PHP script is executed on the server, and the plain HTML result is sent back to the browser.,A PHP script can be placed anywhere in the document.,A PHP script starts with , and ends with 
+,:,The default file extension for PHP files is "","".,A PHP file normally contains HTML tags, and some PHP scripting code.,Below, we have an example of a simple PHP file, with a PHP script that uses a 
+built-in PHP function "","" to output the text
+""Hello World!"" on a web page:, PHP statements end with a semicolon (,).,In PHP, keywords (e.g. ,, 
+,, ,, 
+,, etc.), classes, functions, 
+and user-defined functions are not case-sensitive.,In the example below, all three echo statements below are equal and legal:,Look at the example below; only the first statement will display the value of the 
+, variable! This is because 
+,, ,, and 
+, are treated as three 
+different variables:",,,
+PHP ,Installation,"What Do I Need?,Use a Web Host With PHP Support,Set Up PHP on Your Own PC,PHP Online Compiler / Editor",,"To start using PHP, you can:,If your server has activated support for PHP you do not 
+need to do anything.,Just create some , files, place them in your web directory, and the server 
+will automatically parse them for you.,You do not need to compile anything or install any extra tools.,Because PHP is free, most web hosts 
+offer PHP support.,However, if your server does not support PHP, you must:,The official PHP website (PHP.net) has installation instructions for PHP:
+,With w3schools' online PHP compiler, you can edit PHP code, and view the result in your browser.,Click on the ""Try it Yourself"" button to see how it works.","Find a web host with PHP and MySQL support,Install a web server on your own PC, and then install PHP and MySQL,install a web server,install PHP,install a database, such as MySQL",,
+PHP ,Introduction,"What You Should Already Know,What is PHP?,What is a PHP File?,What Can PHP Do?,Why PHP?,What's new in PHP 7",,"PHP code is executed on the server.,Before you continue you should have a basic understanding of the following:,If you want to study these subjects first, find the tutorials on our
+,.,With PHP you are not limited to output HTML. You can output images, PDF 
+files, and even Flash movies. You can also output any text, such as XHTML and 
+XML.","PHP is an acronym for ""PHP: Hypertext Preprocessor"",PHP is a widely-used, open source scripting language,PHP scripts are executed on the server,PHP is free to download and use,PHP files can contain text, HTML, CSS, JavaScript, and PHP code,PHP code is executed on the server, and the result is returned to the browser as plain HTML,PHP files have extension "","",PHP can generate dynamic page content,PHP can create, open, read, write, delete, and close files on the server,PHP can collect form data,PHP can send and receive cookies,PHP can add, delete, modify data in your database,PHP can be used to control user-access,PHP can encrypt data,PHP runs on various platforms (Windows, Linux, Unix, Mac OS X, etc.),PHP is compatible with almost all servers used today (Apache, IIS, etc.),PHP supports a wide range of databases,PHP is free. Download it from the official PHP resource: ,PHP is easy to learn and runs efficiently on the server side,PHP 7 is much faster than the previous popular stable release (PHP 5.6),PHP 7 has improved Error Handling,PHP 7 supports stricter Type Declarations for function arguments,PHP 7 supports new operators (like the spaceship operator: ,)",,

@@ -1,0 +1,295 @@
+H1_leftside_heading,H1_rightside_heading,H2,H3,All_para,li,div,div_2
+jQuery ,Tutorial,"Examples in Each Chapter,jQuery Exercises,jQuery Examples,jQuery Quiz Test,jQuery References",Example,"With our online editor, you can edit the code, and click on a button to view the result.,Learn by examples! At W3Schools you will find a lot of jQuery examples to edit and test yourself.,Test your jQuery skills at W3Schools!,At W3Schools you will find a complete reference of all jQuery selectors, methods, properties and events.",,,
+jQuery Traversing - ,Filtering,"The first(), last(), eq(), filter() and not() Methods,jQuery first() Method,jQuery last() Method,jQuery eq() method,jQuery filter() Method,jQuery not() Method,jQuery Exercises,jQuery Traversing Reference","Example,Example,Example,Example,Example","The most basic filtering methods are ,, , and ,, which 
+allow you to select a specific element based on its position in a group of 
+elements. ,Other filtering methods, like , and , allow you to select elements 
+that match, or do not match, a certain criteria. ,The , method returns the first element of the specified elements.,The following example selects the first , 
+element:,The , method returns the last element of the specified elements.,The following example selects the last , 
+element:,The , method returns an element with a specific index number of the 
+selected elements.,The index numbers start at 0, so the first element will have the index number 
+0 and not 1. The following example selects the second , element (index number 
+1):,The , method lets you specify a criteria. Elements that do not match 
+the criteria are removed from the selection, and those that match will be 
+returned.,The following example returns all , elements with class name ""intro"":,The , method returns all elements that do not match the criteria., The , method is the opposite of ,.,The following example returns all , elements that do not have class name 
+""intro"":,For a complete overview of all jQuery Traversing methods, please go to our
+,.",,,
+jQuery Traversing - ,Siblings,"Traversing Sideways in The DOM Tree,jQuery siblings() Method,jQuery next() Method,jQuery nextAll() Method,jQuery nextUntil() Method,jQuery prev(), prevAll() & prevUntil() Methods,jQuery Exercises,jQuery Traversing Reference","Example,Example,Example,Example,Example","With jQuery you can traverse sideways in the DOM 
+tree to find siblings of an element.,Siblings share the same parent. ,There are many useful jQuery methods for traversing sideways in the DOM tree:,The , method returns all sibling elements of the selected element.,The following example returns all sibling elements of ,:,You can also use an optional parameter to filter the search for siblings.,The following example returns all sibling elements of , that are , 
+elements:,The , method returns the next sibling element of the selected element.,The following example returns the next sibling of ,:,The , method returns all next sibling elements of the selected element.,The following example returns all next sibling elements of 
+,:,The , method returns all next sibling elements between two given 
+arguments.,The following example returns all sibling elements 
+between a , and a , element:,The ,, , and , methods work just like the methods above but with reverse functionality: they 
+return previous sibling elements (traverse backwards along sibling 
+elements in the DOM tree, instead of forward).,For a complete overview of all jQuery Traversing methods, please go to our
+,.",,,
+jQuery Traversing - ,Descendants,"Traversing Down the DOM Tree,jQuery children() Method,jQuery find() Method,jQuery Exercises,jQuery Traversing Reference","Example,Example,Example,Example","With jQuery you can traverse down the DOM tree to 
+find descendants of an element.,A descendant is a child, grandchild, great-grandchild, and so 
+on.,Two useful jQuery methods for traversing down the DOM tree are:,The , method returns all direct children of the selected element.,This method only traverses a single level down the DOM tree.,The following example returns all elements that are direct children of each , elements:,You can also use an optional parameter to filter the search for children.,The following example returns all , elements with the class name ""first"", that 
+are direct children of ,:,The , method returns descendant elements of the selected element, all 
+the way down to the last descendant.,The following example returns all , elements that are 
+descendants of ,:,The following example returns all 
+descendants of ,:,For a complete overview of all jQuery Traversing methods, please go to our
+,.",,,
+jQuery ,Examples,"jQuery Selectors,jQuery Events,jQuery Hide/Show,jQuery Fade,jQuery Slide,jQuery Animate,jQuery Stop Animations,jQuery HTML Get Content and Attributes,jQuery HTML Set Content and Attributes,jQuery HTML Add Elements/Content,jQuery HTML Remove Elements/Content,jQuery Get and Set CSS Classes,jQuery css() Method,jQuery Dimensions,jQuery Traversing Ancestors,jQuery Traversing Descendants,jQuery Traversing Siblings,jQuery Traversing Filtering,jQuery Filters,jQuery AJAX load() Method,jQuery AJAX get() and post() Methods",,Do you want to test your jQuery selector skills?,,,
+jQuery - ,AJAX get() and post() Methods,"HTTP Request: GET vs. POST,jQuery $.get() Method,jQuery $.post() Method,jQuery AJAX Reference","Example,Example","The jQuery get() and post() methods are used to request data from the server 
+with an HTTP GET 
+or POST request.,Two commonly used methods for a request-response between a client and server 
+are: GET and 
+POST.,GET is basically used for just getting (retrieving) some data from the server.
+, The GET method may return cached data.,POST can also be used to get some data from the server. However, the POST 
+method NEVER caches data, and is often used to send data along with the request.,To learn more about GET and POST, and the differences between the two 
+methods, please read our , chapter.,The , method requests data from the server with an HTTP GET request.,The required URL parameter specifies the URL you wish to request.,The optional callback parameter is the name of a function to be executed 
+if the request succeeds.,The following example uses the , method to retrieve data from a file on 
+the server:,The first parameter of , is the URL we wish to request (""demo_test.asp"").,The second 
+parameter is a callback function. The first callback parameter holds the content of 
+the page requested, and the second callback parameter holds the status of 
+the request., Here is how the ASP file looks like (""demo_test.asp""):,The , method requests data from the server using an HTTP POST request.,The required URL parameter specifies the URL you wish to request.,The optional data parameter specifies some data to send along with the 
+request.,The optional callback parameter is the name of a function to be executed 
+if the request succeeds.,The following example uses the , method to send some data along with the 
+request:,The first parameter of , is the URL we wish to request (""demo_test_post.asp"").,Then we pass in some data to send along with the request (name and city).,The ASP script in ""demo_test_post.asp"" reads the parameters, 
+processes them, and returns a result.,The third 
+parameter is a callback function. The first callback parameter holds the content of 
+the page requested, and the second callback parameter holds the status of 
+the request., Here is how the ASP file looks like (""demo_test_post.asp""):,For a complete overview of all jQuery AJAX methods, please go to our ,."," - Requests data from a specified resource, - Submits data to be processed to a specified resource",,
+jQuery - ,The noConflict() Method,"jQuery and Other JavaScript Frameworks,The jQuery noConflict() Method,jQuery Misc Reference","Example,Example,Example","What if you wish to use other frameworks on your pages, 
+while still using jQuery?,As you already know; jQuery uses the , sign as a shortcut for jQuery.,There are many other popular JavaScript frameworks like: Angular, Backbone, Ember, Knockout, and more.,If two different frameworks are using the same shortcut, one of them might stop working.,The jQuery team have already thought about this, and implemented the , method.,The , method releases the hold on the $ shortcut identifier, 
+so that other scripts can use it.,You can of course still use jQuery, simply by 
+writing the full name instead of the shortcut:,You can also create your 
+own shortcut very easily. The , method returns a reference to jQuery, 
+that you can save in a variable, for later use. Here is an example:,If you have a block of jQuery code which uses the , shortcut and you do not 
+want to change it all, you can pass the , sign in as a parameter to the ready method. This allows 
+you to access jQuery using ,, inside this function - outside of it, 
+you will have to use ""jQuery"":,For a complete overview of all jQuery Misc methods, please go to our
+,.",,,
+jQuery - ,Filters,"jQuery Filters,Filter Tables,Filter Lists,Filter Anything","Example,jQuery,Example,Example","Use jQuery to filter/search for specific elements.,Perform a case-insensitive search for items in a table:, We use jQuery to loop through each table 
+rows to check if there are any text values that matches the value of the input 
+field. The , method hides the row (,) that does not match the 
+search. We use the , DOM method to convert the text to lower case, which 
+makes the search case insensitive (allows ""john"", ""John"", and even ""JOHN"" on 
+search).,Perform a case-insensitive search for items in a list:,Perform a case-insensitive search for text inside a div element:","First item,Second item,Third item,Fourth","
+  <script>,$(document).ready(function(){,  $(""#myInput"").on(""keyup"", function() {,    var 
+  value = $(this).val().toLowerCase();,    $(""#myTable tr"").filter(function() {,
+        $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1),    });,
+   
+  });,});,</script>",
+jQuery - ,AJAX Introduction,"What is AJAX?,What About jQuery and AJAX?,jQuery AJAX Methods",jQuery AJAX Example,"AJAX is the art of exchanging data with a server, and updating 
+parts of a web page - without reloading the whole page.,AJAX = Asynchronous JavaScript and XML.,In short; AJAX is about loading data in the background and display it on the 
+webpage, without reloading the whole page.,Examples of applications using AJAX: Gmail, Google Maps, Youtube, and 
+Facebook tabs.,You can learn more about AJAX in our ,.,
+,jQuery provides several methods for AJAX functionality.,With the jQuery AJAX methods, you can request text, HTML, XML, or JSON from a remote 
+server using both HTTP Get and HTTP Post - And you can load the external data directly into the selected HTML elements of your 
+web page!,In the next chapters we will look at the most important jQuery AJAX methods.",,,
+jQuery - ,AJAX load() Method,"jQuery load() Method,jQuery AJAX Reference","Example,Example,Example","The jQuery , method is a simple, but powerful AJAX method.,The , method loads data from a 
+server and puts the returned data into the selected element.,The required URL parameter specifies the URL you wish to load.,The optional data parameter specifies a set of querystring key/value pairs to send along with 
+the request.,The optional callback parameter is the name of a function to be executed 
+after the , method is completed.,The following example loads the content of the file ""demo_test.txt"" into a 
+specific , element:,It is also possible to add a jQuery selector to the URL parameter. ,The following example loads the content of the element with id=""p1"", inside 
+the file ""demo_test.txt"", into a specific , element:,The optional callback parameter specifies a callback function to run when the 
+, method is completed. The callback function can have different parameters:,The following example displays an alert box after the load() method 
+completes. If the , method has succeeded, it displays ""External content 
+loaded successfully!"", and if it fails it displays an error message:,For a complete overview of all jQuery AJAX methods, please go to our ,."," - contains the resulting content if the call succeeds, - contains the status of the call, - contains the XMLHttpRequest object",,
+jQuery Traversing - ,Ancestors,"Traversing Up the DOM Tree,jQuery parent() Method,jQuery parents() Method,jQuery parentsUntil() Method,jQuery Exercises,jQuery Traversing Reference","Example,Example,Example,Example","With jQuery you can traverse up the DOM tree to 
+find ancestors of an element.,An ancestor is a parent, grandparent, great-grandparent, and so 
+on.,Three useful jQuery methods for traversing up the DOM tree are:,The , method returns the direct parent element of the selected element.,This method only traverse a single level up the DOM tree.,The following example returns the direct parent element of each , 
+elements:,The , method returns all ancestor elements of the selected element, 
+all the way up to the document's root element (,).,The following example returns all ancestors of all 
+, elements:,You can also use an optional parameter to filter the search for ancestors.,The following example returns all ancestors of all , elements that are , 
+elements:,The , method returns all ancestor elements between two given 
+arguments.,The following example returns all ancestor elements 
+between a , and a , element:,For a complete overview of all jQuery Traversing methods, please go to our
+,.",,,
+jQuery ,Traversing,"What is Traversing?,Traversing the DOM,jQuery Traversing Reference",,"jQuery traversing, which means ""move through"", are used to ""find"" (or select) 
+HTML elements based on their relation to other elements. Start with one 
+selection and move through that selection until you reach the elements you 
+desire.,The image below illustrates an HTML page as a tree (DOM tree). With jQuery traversing, you can 
+easily move up (ancestors), down (descendants) and sideways (siblings) in the tree,  starting from the 
+selected (current) element. This movement is called traversing - or moving 
+through - the DOM tree.,Illustration explained:,jQuery provides a variety of methods that allow us to traverse the DOM.,The largest category of traversal methods are tree-traversal.,The next chapters will show us how to travel up, down and sideways in 
+the DOM tree.,For a complete overview of all jQuery Traversing methods, please go to our
+,.","The <div> element is the, of <ul>, and an , of everything inside of it ,The <ul> element is the , of both <li> elements, and a , of <div>,The left <li> element is the , of <span>,
+ , of <ul> and a , of <div>,The <span> element is a , of the left <li> and a
+ , of <ul> and <div> ,The two <li> elements are , (they share the same parent),The right <li> element is the , of <b>, , of <ul> and a , of <div> ,The <b> element is a , of the right <li> and a
+ , of <ul> and <div>",,
+jQuery - ,Dimensions,"jQuery Dimension Methods,jQuery Dimensions,jQuery width() and height() Methods,jQuery innerWidth() and innerHeight() Methods,jQuery outerWidth() and outerHeight() Methods,jQuery More width() and height(),jQuery Exercises,jQuery CSS Reference","Example,Example,Example,Example,Example,Example","With jQuery, it is easy to work with the dimensions of elements and browser window.,jQuery has several important methods for working with dimensions:,
+,The , method sets or returns the width of an element (excludes 
+padding, border and margin).,The , method sets or returns the height of an element (excludes padding, border 
+and margin).,The following example returns the width and height of a specified , 
+element:,The , method returns the width of an element (includes padding).,The , method returns the height of an element (includes padding).,The following example returns the inner-width/height of a specified , 
+element:,The , method returns the width of an element (includes padding and 
+border).,The , method returns the height of an element (includes padding 
+and border).,The following example returns the outer-width/height of a specified , 
+element:,The , method returns the width of an element (includes 
+padding, border, and margin).,The , method returns the height of an element (includes 
+padding, border, and margin).,The following example returns the width and height of the document (the HTML 
+document) and window (the browser viewport):,The following example sets the width and height of a specified , 
+element:,For a complete overview of all jQuery CSS methods, please go to our ,.",,,
+jQuery - ,css() Method,"jQuery css() Method,Return a CSS Property,Set a CSS Property,Set Multiple CSS Properties,jQuery Exercises,jQuery CSS Reference","Example,Example,Example","The , method sets or returns one or more style properties for the selected elements.,To return the value of a specified CSS property, use the following syntax:,The following example will return the background-color value of the FIRST matched element:,To set a specified CSS property, use the following syntax:,The following example will set the background-color value for ALL matched elements:,To set multiple CSS properties, use the following syntax:,The following example will set a background-color and a font-size for ALL 
+matched elements:,For a complete overview of all jQuery CSS methods, please go to our ,.",,,
+jQuery ,Properties,jQuery Properties,,,,,
+jQuery - ,Get and Set CSS Classes,"jQuery Manipulating CSS,Example Stylesheet,jQuery addClass() Method,jQuery removeClass() Method,jQuery toggleClass() Method,jQuery css() Method,jQuery Exercises,jQuery CSS Reference","Example,Example,Example,Example","With jQuery, it is easy to manipulate the style of elements.,jQuery has several methods for CSS manipulation. We will look at the 
+following methods:,The following stylesheet will be used for all the examples on this page:,The following example shows how to add class attributes to different 
+elements. Of course you can select multiple elements, when adding classes:,You can also specify multiple classes within the , method:,The following example shows how to remove a specific class attribute from different 
+elements:,The following example will show how to use the jQuery , method. 
+This method toggles between adding/removing classes from the selected elements:,The jQuery , method will be explained in the next chapter.,For a complete overview of all jQuery CSS methods, please go to our ,."," - Adds one or more classes to the selected elements, - Removes one or more classes from the selected elements, - Toggles between adding/removing classes from the selected elements, - Sets or returns the style attribute",,
+"jQuery , Methods",Miscellaneous,jQuery Misc Methods,,,,,
+"jQuery , Methods",AJAX,jQuery AJAX Methods,,"AJAX is the art of exchanging data with a server, and update parts of a web page - without reloading the whole page.,The following table lists all the jQuery AJAX methods:",,,
+"jQuery , Methods",Traversing,jQuery Traversing Methods,,,,,
+"jQuery , Methods",HTML / CSS,jQuery HTML / CSS Methods,,"The following table lists all the methods used to manipulate the HTML and CSS.,The methods below work for both HTML and XML documents. Exception: the html() method.",,,
+"jQuery , Methods",Effect,jQuery Effect Methods,,The following table lists all the jQuery methods for creating animation effects.,,,
+"jQuery , Methods",Event,jQuery Event Methods,,"Event methods trigger or attach a function to an event handler for the 
+selected elements.,The following table lists all the jQuery methods used to handle events.",,,
+jQuery ,Selectors,jQuery Selectors,,"Use our , to demonstrate the different selectors.",,,
+jQuery Reference,,jQuery Reference,,"
+This section contains a complete jQuery reference documentation.,The jQuery reference contains a list of all jQuery selectors, methods, properties and events, along with examples.",,,
+W3Schools ,jQuery Certificate,How Does It Work?,,,"Study for free at W3Schools.com,Study at your own speed,Test your skills with W3Schools online quizzes,Apply for your certificate by paying an exam fee,Take your exam online, at any time, and from any location",,
+jQuery ,Exercises,"Exercises,Count Your Score",,"You can test your jQuery skills with W3Schools' Exercises.,We have gathered a variety of jQuery exercises (with answers) for each jQuery Chapter.,Try to solve an exercise by filling in the missing parts of a code. If you're stuck, hit the ""Show Answer"" button to see what you've done wrong.,You will get 1 point for
+each correct answer. Your score and total score will always be displayed.",,,
+jQuery - ,Remove Elements,"Remove Elements/Content,jQuery remove() Method,jQuery empty() Method,Filter the Elements to be Removed,jQuery Exercises,jQuery HTML Reference","Example,Example,Example,Example","With jQuery, it is easy to remove existing HTML elements.,To remove elements and content, there are mainly two jQuery methods:,The jQuery , method removes the selected element(s) and its child 
+elements.,The jQuery , method removes the child elements of the selected element(s).,The jQuery , method also accepts one parameter, which allows you to 
+filter the elements to be removed.,The parameter can be any of the jQuery selector syntaxes.,The following example removes all , elements with ,:   ,This example removes all , elements with , and 
+,:  ,For a complete overview of all jQuery HTML methods, please go to our
+,."," - Removes the selected element (and its child elements), - Removes the child elements from the selected element",,
+jQuery - ,Add Elements,"Add New HTML Content,jQuery append() Method,jQuery prepend() Method,Add Several New Elements With append() and prepend(),jQuery after() and before() Methods,Add Several New Elements With after() and before(),jQuery Exercises,jQuery HTML Reference","Example,Example,Example,Example,Example","With jQuery, it is easy to add new elements/content.,We will look at four jQuery methods that are used to add new content:,The jQuery , method inserts content AT THE END of the selected HTML elements.,The jQuery , method inserts content AT THE BEGINNING of the selected HTML elements.,In both examples above, we have only inserted some text/HTML at the 
+beginning/end of the selected HTML elements.,However, both the , and , methods can take an infinite number of new 
+elements as parameters. The new elements can be generated with text/HTML (like 
+we have done in the examples above), with jQuery, or with 
+JavaScript code and DOM elements.,In the following example, we create several new elements. The elements are 
+created with text/HTML, jQuery, and JavaScript/DOM. Then we append the new 
+elements to the text with the , method (this would have worked for 
+, too) :,The jQuery , method inserts content AFTER the selected HTML elements.,The jQuery , method inserts content BEFORE the selected HTML elements.,Also, both the , and , methods can take an infinite number of new 
+elements as parameters. The new elements can be generated with text/HTML (like 
+we have done in the example above), with jQuery, or with 
+JavaScript code and DOM elements.,In the following example, we create several new elements. The elements are 
+created with text/HTML, jQuery, and JavaScript/DOM. Then we insert the new 
+elements to the text with the , method (this would have worked for 
+, too) :,For a complete overview of all jQuery HTML methods, please go to our
+,."," - Inserts content at the end of the selected elements, - Inserts content at the beginning of the selected elements, - Inserts content after the selected elements, - Inserts content before the selected elements",,
+jQuery ,Quiz Test,"The Test,Count Your Score",,"You can test your jQuery skills with W3Schools' Quiz.,The test contains 25 questions and there is no time limit.,The test is not official, it's just a nice way to see how much you know, or don't know, about 
+the jQuery library.,You will get 1 point for each correct answer. At the end of the Quiz,
+your total score will be displayed. Maximum score is 25 points.",,,
+jQuery - ,Get Content and Attributes,"jQuery DOM Manipulation,Get Content - text(), html(), and val(),Get Attributes - attr(),jQuery Exercises,jQuery HTML Reference","Example,Example,Example","jQuery contains powerful methods for changing and manipulating HTML elements and attributes.,One very important part of jQuery is the possibility to manipulate the DOM.,jQuery comes with a bunch of DOM related methods that make it easy to 
+access and manipulate elements and attributes.,Three simple, but useful, jQuery methods for DOM manipulation are:,The following example demonstrates how to get content with the jQuery , and , methods:,The following example demonstrates how to get the value of an input field with the jQuery , method:,The jQuery , method is used to get attribute values.,The following example demonstrates how to get the value of the href attribute 
+in a link:,The next chapter explains how to set (change) content and attribute values.,For a complete overview of all jQuery HTML methods, please go to our
+,."," - Sets or returns the text content of selected elements, - Sets or returns the content of selected elements (including HTML markup), - Sets or returns the value of form fields",,
+jQuery - ,Set Content and Attributes,"Set Content - text(), html(), and val(),A Callback Function for text(), html(), and val(),Set Attributes - attr(),A Callback Function for attr(),jQuery Exercises,jQuery HTML Reference","Example,Example,Example,Example,Example","We will use the same three methods from the previous page to ,:,The following example demonstrates how to set content with the jQuery ,, ,, 
+and , methods:,All of the three jQuery methods above: ,, ,, 
+and ,, also come with a callback function. The callback function has two 
+parameters: the index of the current element in the list of elements selected 
+and the original (old) value. You then return the string you wish to use as the 
+new value from the function.,The following example demonstrates , and , with a callback 
+function:,The jQuery , method is also used to set/change attribute values.,The following example demonstrates how to change (set) the value of the href attribute 
+in a link:,The , method also allows you to set multiple attributes at the same 
+time.,The following example demonstrates how to set both the href and title attributes 
+at the same time:,The jQuery method ,, also comes with a callback function. The callback function has two 
+parameters: the index of the current element in the list of elements selected 
+and the original (old) attribute value. You then return the string you wish to use as the 
+new attribute value from the function.,The following example demonstrates , with a callback 
+function:,For a complete overview of all jQuery HTML methods, please go to our
+,."," - Sets or returns the text content of selected elements, - Sets or returns the content of selected elements (including HTML markup), - Sets or returns the value of form fields",,
+jQuery ,Stop Animations,"Examples,jQuery stop() Method,jQuery Exercises,jQuery Effects Reference",Example,"The jQuery stop() method is used to stop animations or effects before it is finished.,Click to slide down/up the panel,
+Demonstrates the jQuery stop() method.,
+Demonstrates the jQuery stop() method.,The jQuery , method is used to stop an animation or effect before it is finished.,The , method works for all jQuery effect functions, including sliding, fading and custom animations.,The optional stopAll parameter specifies whether also the animation queue 
+should be cleared or not. Default is false, which means that only the active 
+animation will be stopped, allowing any queued animations to be performed 
+afterwards.,The optional goToEnd parameter specifies whether or 
+not to complete the current animation immediately. Default is false.,So, by default, the , method kills the current animation being performed 
+on the selected element.,The following example demonstrates the , method, with no parameters:,For a complete overview of all jQuery effects, please go to our ,.",,,
+jQuery Effects - ,Animation,"jQuery Animations - The animate() Method,jQuery animate() - Manipulate Multiple Properties,jQuery animate() - Using Relative Values,jQuery animate() - Using Pre-defined Values,jQuery animate() - Uses Queue Functionality,jQuery Exercises,jQuery Effects Reference","Example,Example,Example,Example,Example 1,Example 2","With jQuery, you can create custom animations.,The jQuery , method is used to create custom animations.,The required params parameter defines the CSS properties to be animated.,The optional speed parameter specifies the duration of the effect. It can take the following values: ""slow"", ""fast"", or 
+milliseconds.,The optional callback parameter is a function to be executed after the 
+animation completes.,The following example demonstrates a simple use of the , method; it moves 
+a <div> element to the right, until it has reached a left property of 250px:,Notice that multiple properties can be animated at the same time:,It is also possible to define relative values (the value is then relative to 
+the element's current value). This is done by putting += or -= in front of the 
+value:,You can even specify a property's animation value as "","", "","", or "","":,By default, jQuery comes with queue functionality for animations.,This means that if you write multiple , calls after each other, 
+jQuery creates an ""internal"" queue with these method calls. Then it runs the 
+animate calls ONE by ONE.,So, if you want to perform different animations after each other, we take 
+advantage of the queue functionality:,The example below first moves the , element to the right, and then increases the font size of the text:,For a complete overview of all jQuery effects, please go to our ,.",,,
+jQuery Effects - ,Sliding,"Examples,jQuery Sliding Methods,jQuery slideDown() Method,jQuery slideUp() Method,jQuery slideToggle() Method,jQuery Exercises,jQuery Effects Reference","Example,Example,Example","The jQuery slide methods slide elements up and down.,Click to slide down/up the panel,
+Demonstrates the jQuery slideDown() method.,
+Demonstrates the jQuery slideUp() method.,
+Demonstrates the jQuery slideToggle() method.,With jQuery you can create a sliding effect on elements.,jQuery has the following slide methods:,The jQuery , method is used to slide down an element.,The optional speed parameter specifies the duration of the effect. It can take the following values: ""slow"", ""fast"", or 
+milliseconds.,The optional callback parameter is a function to be executed after the sliding completes.,The following example demonstrates the , method:,The jQuery , method is used to slide up an element.,The optional speed parameter specifies the duration of the effect. It can take the following values: ""slow"", ""fast"", or 
+milliseconds.,The optional callback parameter is a function to be executed after the sliding completes.,The following example demonstrates the , method:,The jQuery , method toggles between the , and , 
+methods.,If the elements have been slid down, , will slide them up.,If the elements have been slid up, , will slide them down. ,The optional speed parameter can take the following values: ""slow"", ""fast"", milliseconds.,The optional callback parameter is a function to be executed after the 
+sliding completes.,The following example demonstrates the , method:,For a complete overview of all jQuery effects, please go to our ,.",,,
+jQuery Effects - ,Fading,"Examples,jQuery Fading Methods,jQuery fadeIn() Method,jQuery fadeOut() Method,jQuery fadeToggle() Method,jQuery fadeTo() Method,jQuery Exercises,jQuery Effects Reference","Example,Example,Example,Example","With jQuery you can fade elements in and out of visibility.,Click to fade in/out panel,
+Demonstrates the jQuery fadeIn() method.,
+Demonstrates the jQuery fadeOut() method.,
+Demonstrates the jQuery fadeToggle() method.,
+Demonstrates the jQuery fadeTo() method.,With jQuery you can fade an element in and out of visibility.,jQuery has the following fade methods:,The jQuery , method is used to fade in a hidden element.,The optional speed parameter specifies the duration of the effect. It can take the following values: ""slow"", ""fast"", or 
+milliseconds.,The optional callback parameter is a function to be executed after the 
+fading completes.,The following example demonstrates the , method with different 
+parameters:,The jQuery , method is used to fade out a visible element.,The optional speed parameter specifies the duration of the effect. It can take the following values: ""slow"", ""fast"", or 
+milliseconds.,The optional callback parameter is a function to be executed after the 
+fading completes.,The following example demonstrates the , method with different 
+parameters:,The jQuery , method toggles between the , and , 
+methods.,If the elements are faded out, , will fade them in.,If the elements are faded in, , will fade them out. ,The optional speed parameter specifies the duration of the effect. It can take the following values: ""slow"", ""fast"", or 
+milliseconds.,The optional callback parameter is a function to be executed after the 
+fading completes.,The following example demonstrates the , method with different 
+parameters:,The jQuery , method allows fading to a given opacity (value between 0 and 1).,The required speed parameter specifies the duration of the effect. It can take the following values: ""slow"", ""fast"", or 
+milliseconds.,The required opacity parameter in the , method specifies fading to a given opacity (value between 0 and 1).,The optional callback parameter is a function to be executed after the function completes.,The following example demonstrates the , method with different 
+parameters:,For a complete overview of all jQuery effects, please go to our ,.",,,
+jQuery Effects - ,Hide and Show,"Examples,jQuery hide() and show(),jQuery toggle(),jQuery Exercises,jQuery Effects Reference","Example,Example,Example","Hide, Show, Toggle, Slide, Fade, and Animate. WOW!,Click to show/hide panel,
+Demonstrates a simple jQuery hide() method.,
+Another hide() demonstration. How to hide parts of text.,With jQuery, you can hide and show HTML elements with the , and , methods:,The optional speed parameter specifies the speed of the hiding/showing, and 
+can take the following values: ""slow"", ""fast"", or milliseconds.,The optional callback parameter is a function to be executed after  
+the , or , method completes (you will learn more about callback functions in a 
+later chapter).,The following example demonstrates the speed parameter with ,:,You can also toggle between hiding and showing an element with the , method.,Shown elements are hidden and hidden elements are shown:,The optional speed parameter can take the following values: ""slow"", ""fast"", or milliseconds.,The optional callback parameter is a function to be executed after  
+, completes.,For a complete overview of all jQuery effects, please go to our ,.",,,
+jQuery ,Event Methods,"What are Events?,jQuery Syntax For Event Methods,Commonly Used jQuery Event Methods,The on() Method,jQuery Exercises,jQuery Event Methods","Example,Example,Example,Example,Example,Example,Example,Example,Example,Example,Example","jQuery is tailor-made to respond to events in an HTML page.,All the different visitors' actions that a web page can respond to are called events.,An event represents the precise moment when something happens.,Examples:,The term , is often used with events. Example: 
+""The keypress event is fired, the moment you press a key"".,Here are some common DOM events:,In jQuery, most DOM events have an equivalent jQuery method.,To assign a click event to all paragraphs on a page, you can do this: ,The next step is to define what should happen when the event fires. You must 
+pass a function to the event:,The , method allows us to execute a function when the 
+document is fully loaded. This event is already explained in the
+, chapter. ,The , method attaches an event handler function to an HTML element.,The 
+function is executed when the user clicks on the HTML element.,The following example says: When a click event fires on a , element; hide 
+the current , element:,The , method attaches an event handler function to an HTML element.,The function is executed when the user double-clicks on the HTML element:,The , method attaches an event handler function to an HTML 
+element.,The function is executed when the mouse pointer enters the HTML element:,The , method attaches an event handler function to an HTML 
+element.,The function is executed when the mouse pointer leaves the HTML element:,The , method attaches an event handler function to an HTML 
+element.,The function is executed, when the left, middle or right mouse button is pressed down, while the 
+mouse is over the HTML element:,The , method attaches an event handler function to an HTML 
+element.,The function is executed, when the left, middle or right mouse button is released, while the 
+mouse is over the HTML element:,The , method takes two functions and is a combination of the , and , 
+methods.,The first 
+function is executed when the mouse enters the HTML element, and the second 
+function is 
+executed when the mouse leaves the HTML element:,The , method attaches an event handler function to an HTML form field.,The function is executed when the form field gets focus:,The , method attaches an event handler function to an HTML form field.,The function 
+is executed when the form field loses focus:,The , method attaches one or more event handlers for the selected elements.,Attach a click event to a , element:,Attach multiple event handlers to a , element:,For a full jQuery event reference, please go to our ,.","moving a mouse over an element,selecting a radio button,clicking on an element",,
+jQuery - ,Chaining,jQuery Method Chaining,"Example,Example","With jQuery, you can chain together actions/methods.,Chaining allows us to run multiple jQuery methods (on the same 
+element) within a single statement.,Until now we have been writing jQuery statements one at a time (one after the 
+other).,However, there is a technique called chaining, that 
+allows us to run multiple jQuery commands, one after the other, on the same 
+element(s)., This way, browsers do not have to find the same element(s) more than once.,To chain 
+an action, you simply append the action to the previous action. ,The following example chains together the ,, ,, and , 
+methods. The ""p1"" element first changes to red, then it slides up, and then it 
+slides down: ,We could also have added more method calls if needed.,: When chaining, the line of code 
+could become quite long. However, jQuery is not very strict on the syntax; you can format it like you want, including line breaks and indentations. ,This also works just fine:,jQuery throws away extra whitespace and executes the lines above as one long line of code.",,,
+jQuery ,Get Started,"Adding jQuery to Your Web Pages,Downloading jQuery,jQuery CDN",Google CDN:,"There are several ways to start using jQuery on your web site. You can:,There are two versions of jQuery available for downloading: ,Both versions can be downloaded from ,.,The jQuery library is a single JavaScript file, and you reference it with the HTML , tag 
+(notice that the , tag should be inside the , section):, Place the downloaded file in the same directory as the pages where you wish to use it.,
+,If you don't want to download and host jQuery yourself, you can include it from a CDN (Content Delivery Network).,Google is an example of someone who host jQuery:","Download the jQuery library from jQuery.com,Include jQuery from a CDN, like Google,Production version - this is for your live website because it has been minified and compressed,Development version - this is for testing and development (uncompressed and readable code)","
+<head>,
+ <script src=""https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js""></script>,
+</head>
+",
+jQuery ,Introduction,"What You Should Already Know,What is jQuery?,Why jQuery?",,"The purpose of jQuery is to make it much easier to use JavaScript on your website.,Before you start studying jQuery, you should have a basic knowledge of:,If you want to study these subjects first, find the tutorials on our ,.,jQuery is a lightweight, ""write less, do more"", JavaScript library.,The purpose of jQuery is to make it much easier to use JavaScript on your website.,jQuery takes a lot of common tasks that require many lines of JavaScript code to accomplish,
+and wraps them into methods that you can call with a single line of code.,jQuery also simplifies a lot of the complicated things from JavaScript, like AJAX calls and DOM manipulation.,The jQuery library contains the following features:, In addition, jQuery has plugins for almost any task out there.,There are lots of other JavaScript libraries out there, but jQuery
+is probably the most popular, and also the most extendable.,Many of the biggest companies on the Web use jQuery, such as:","HTML/DOM manipulation,CSS manipulation,HTML event methods,Effects and animations,AJAX,Utilities,Google,Microsoft,IBM,Netflix",,
+"jQuery , Functions",Callback,jQuery Callback Functions,"Example with Callback,Example without Callback","A callback function is executed after the current effect is 100% finished.,JavaScript statements are executed line by line. However, with effects, 
+the next line of code can be run even though the effect is not finished. This 
+can create errors.,To prevent this, you can create a callback function.,A callback function is executed after the current effect is finished.,Typical syntax: ,The example below has a callback parameter that is a function that will be executed after the hide effect is completed:,The example below has no callback parameter, and the alert box will be displayed before the hide effect is completed:",,,
+jQuery ,Syntax,"jQuery Syntax,The Document Ready Event",,"With jQuery you select (query) HTML elements and perform ""actions"" on them.,The jQuery syntax is tailor-made for , HTML elements and performing some , on the element(s).,Basic syntax is: ,Examples:, - hides the current element., - hides all <p> elements., - hides all elements with class=""test""., - hides the element with id=""test"".,You might have noticed that all jQuery methods in our examples, are inside a document ready event:,This is to prevent any jQuery code from running before the document is finished loading (is ready).,It is good practice to wait for the document to be fully loaded and ready before working with it.
+This also allows you to have your JavaScript code before the body of your document, in the head section. ,Here are some examples of actions that can fail if methods are run before the document is fully loaded:, The jQuery team has also created an even shorter method for the 
+document ready event:,Use the syntax you prefer. We think that the document ready event is easier to understand when reading the code.","A $ sign to define/access jQuery,A (,) to ""query (or find)"" HTML elements,A jQuery ,() to be performed on the element(s),Trying to hide an element that is not created yet,Trying to get the size of an image that is not loaded yet",,
+jQuery ,Selectors,"jQuery Selectors,The element Selector,The #id Selector,The .class Selector,More Examples of jQuery Selectors,Functions In a Separate File,jQuery Exercises","Example,Example,Example,Example","jQuery selectors are one of the most important parts of the jQuery library.,jQuery selectors allow you to select and manipulate HTML element(s).,jQuery selectors are used to ""find"" (or select) HTML elements based on their 
+name, id, classes, types, attributes, values of attributes and much more.
+It's based on the existing ,, and in addition, it has 
+some own custom selectors.,All selectors in jQuery start with the dollar sign and parentheses: $().,The jQuery element selector selects elements based on the element name.,You can select all , elements on a page like this:,When a user clicks on a button, all , elements will be hidden:,The jQuery , selector uses the id attribute of an HTML tag to find the specific element.,An id should be unique within a page, so you should use the #id selector when you want to find a single, unique element.,To find an element with a specific id, write a hash character, followed by the id of the 
+HTML element:,When a user clicks on a button, the element with id=""test"" will be hidden:,The jQuery , selector finds elements with a specific class.,To find elements with a specific class, write a period character, followed by the name of the class:,When a user clicks on a button, the elements with class=""test"" will be hidden:,Use our , to demonstrate the different selectors.,For a complete reference of all the jQuery selectors, please go to our ,.,If your website contains a lot of pages, and you want your jQuery functions to be easy 
+to maintain, you can put your jQuery functions in a separate .js file.,When we demonstrate jQuery in this tutorial, the functions are added directly into the , 
+section. However, sometimes it is preferable to place them in a separate file, like this (use 
+the src attribute to refer 
+to the .js file): ",,"
+<head>,
+<script
+src=""https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js""></script>,
+,
+</head>
+",

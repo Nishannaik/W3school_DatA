@@ -1,0 +1,199 @@
+H1_leftside_heading,H1_rightside_heading,H2,H3,All_para,li,div,div_2
+NumPy ,Tutorial,"Learning by Reading,Learning by Quiz Test,Learning by Exercises,Learning by Examples",Example,"We have created 43 tutorial pages for you to learn more about NumPy.,Starting with a basic introduction and ends up with creating and plotting random data sets, and working with NumPy functions:,Test your NumPy skills with a quiz test.,In our ""Try it Yourself"" editor, you can use the NumPy module, and modify the code to see the result.",,,
+Exponential Distribution,,"Exponential Distribution,Visualization of Exponential Distribution,Relation Between Poisson and Exponential Distribution","Example,Example,Result","Exponential distribution is used for describing time till next event e.g. failure/success etc.,It has two parameters:, - inverse of rate ( see lam in poisson distribution ) defaults to 1.0., - The shape of the returned array.,
+Poisson distribution deals with number of occurences of an event in a time period whereas exponential
+distribution deals with the time between these events.
+",,,
+Rayleigh Distribution,,"Rayleigh Distribution,Visualization of Rayleigh Distribution,Similarity Between Rayleigh and Chi Square Distribution","Example,Example,Result","Rayleigh distribution is used in signal processing.,It has two parameters:, - (standard deviation) decides how flat the distribution will be  default 1.0)., - The shape of the returned array.,
+At unit stddev the and 2 degrees of freedom rayleigh and chi square represent the same distributions.
+",,,
+Zipf Distribution,,Visualization of Zipf Distribution,"Example,Example,Result","Zipf distritutions are used to sample data based on zipf's law.,It has two parameters:, - distribution parameter., - The shape of the returned array.,Sample 1000 points but plotting only ones with value < 10 for more meaningful chart.",,,
+Multinomial Distribution,,Multinomial Distribution,Example,"Multinomial distribution is a generalization of binomial distribution.,It describes outcomes of multi-nomial scenarios unlike binomial where scenarios must be only one of two.
+e.g. Blood type of a population, dice roll outcome.,It has three parameters:, - number of possible outcomes (e.g. 6 for dice roll)., - list of probabilties of outcomes (e.g. [1/6, 1/6, 1/6, 1/6, 1/6, 1/6] for dice roll)., - The shape of the returned array.",,,
+Chi Square Distribution,,"Chi Square Distribution,Visualization of Chi Square Distribution","Example,Example,Result","Chi Square distribution is used  as a basis to verify the hypothesis.,It has two parameters:, - (degree of freedom)., - The shape of the returned array.",,,
+Pareto Distribution,,"Pareto Distribution,Visualization of Pareto Distribution","Example,Example,Result","A distribution following Pareto's law i.e. 80-20 distribution (20% factors cause 80% outcome).,It has two parameter:, - shape parameter., - The shape of the returned array.",,,
+NumPy ufuncs,,"What are ufuncs?,Why use ufuncs?,What is Vectorization?","Example,Example","ufuncs stands for ""Universal Functions"" and they are NumPy functions that
+operates on the , object.,ufuncs are used to implement , in NumPy which is way faster than iterating over elements.,They also provide broadcasting and additional methods like reduce, accumulate etc. that are very helpful for computation.,ufuncs also take additional arguments, like:, boolean array or condition defining where the operations should take place., defining the return type of elements., output array where the return value should be copied.,Converting iterative statements into a vector based operation is called vectorization.,It is faster as modern CPUs are optimized for such operations.,list 1: [1, 2, 3, 4],list 2: [4, 5, 6, 7],One way of doing it is to iterate over both of the lists and then sum each elements.,NumPy has a ufunc for this, called , 
+that will produce the same result.",,,
+Create Your Own ufunc,,"How To Create Your Own ufunc,Check if a Function is a ufunc","Example,Example,Example,Example","To create you own ufunc, you have to define a function, like you do with normal functions in Python, then you
+add it to your NumPy ufunc library with the , method.,The , method takes the following arguments:,Check the , of a function to check if it is a ufunc or not.,A ufunc should return ,.,If it is not a ufunc, it will return another type, like this built-in NumPy function for joining two or more arrays:,If the function is not recognized at all, it will return an error:,To test if the function is a ufunc in an if statement, use the , value 
+(or , if you use np as an alias for numpy):",,,
+Logistic Distribution,,"Logistic Distribution,Visualization of Logistic Distribution,Difference Between Logistic and Normal Distribution","Example,Example,Result,Example,Result","Logistic Distribution is used to describe growth.,Used extensively in machine learning in logistic regression, neural networks etc.,It has three parameters:, - mean, where the peak is. Default 0., - standard deviation, the flatness of distribution. Default 1., - The shape of the returned array.,Both distributions are near identical, but logistic distribution has more area under the tails. ie. It representage more possibility of occurence of an events further away from mean.,For higher value of scale (standard deviation) the normal and logistic distributions are near identical apart from the peak.",,,
+Uniform Distribution,,"Uniform Distribution,Visualization of Uniform Distribution","Example,Example,Result","Used to describe probability where every event has equal chances of occuring.,E.g. Generation of random numbers.,It has three parameters:, - lower bound - default 0 .0., - upper bound - default 1.0., - The shape of the returned array.",,,
+Poisson Distribution,,"Poisson Distribution,Visualization of Poisson Distribution,Difference Between Normal and Poisson Distribution,Difference Between Poisson and Binomial Distribution","Example,Example,Result,Example,Result,Example,Result","Poisson Distribution is a ,.,It estimates how many times an event can happen in a specified time.
+e.g. If someone eats twice a day what is probability he will eat thrice?,It has two parameters:, - rate or known number of occurences e.g. 2 for above problem., - The shape of the returned array.,Normal distribution is continous whereas poisson is discrete.,But we can see that similar to binomial for a large enough poisson distribution it will become similar to normal distribution with certain std dev and mean.,The difference is very subtle it is that, binomial distribution is for discrete trials, whereas poisson distribution is for continuous trials.,But for very large , and near-zero , binomial 
+distribution is near identical to poisson distribution such that , is nearly equal to ,.",,,
+Normal (Gaussian) Distribution,,"Normal Distribution,Visualization of Normal Distribution","Example,Example,Example,Result","The Normal Distribution is one of the most important distributions.,It is also called the Gaussian Distribution after the German mathematician 
+Carl Friedrich Gauss.,It fits the probability distribution of many events, eg. IQ Scores, Heartbeat etc.,Use the , method to get a Normal Data Distribution.,It has three parameters:, - (Mean) where the peak of the bell exists., - (Standard Deviation) how flat the graph distribution should be., - The shape of the returned array.",,,
+Binomial Distribution,,"Binomial Distribution,Visualization of Binomial Distribution,Difference Between Normal and Binomial Distribution","Example,Example,Result,Example,Result","Binomial Distribution is a ,.,It describes the outcome of binary scenarios, e.g. toss of a coin, it will either be head or tails.,It has three parameters:, - number of trials., - probability of occurence of each trial (e.g. for toss of a coin 0.5 each)., - The shape of the returned array.,The main difference is that normal distribution is continous whereas binomial is discrete,
+but if there are enough data points it will be quite similar to normal distribution with certain loc and scale.",,,
+Seaborn,,"Visualize Distributions With Seaborn,Install Seaborn.,Distplots,Import Matplotlib,Import Seaborn,Plotting a Distplot,Plotting a Distplot Without the Histogram","Example,Example","Seaborn is a library that uses Matplotlib underneath to plot graphs. It will be used to visualize random distributions.,If you have , and , already installed on a system, install it using this command:,If you use Jupyter, install Seaborn using this command:,
+Distplot stands for distribution plot, it takes as input an array and plots a curve corresponding to the distribution of points in the array.
+,You can learn about the Matplotlib module in our ,.",,,
+Random Permutations,,"Random Permutations of Elements,Shuffling Arrays,Generating Permutation of Arrays","Example,Example","A permutation refers to an arrangement of elements. e.g. [3, 2, 1] is a permutation of [1, 2, 3] and vice-versa.,The NumPy Random module provides two methods for this:
+, and ,.,Shuffle means changing arrangement of elements in-place. i.e. in the array itself.",,,
+NumPy ,Exercises,"Exercises,Count Your Score",,"You can test your NumPy skills with W3Schools' Exercises.,We have gathered a variety of NumPy exercises (with answers) from the NumPy Chapters.,Try to solve an exercise by filling in the missing parts of a code. If you're stuck, hit the ""Show Answer"" button to see what you've done wrong.,You will get 1 point for
+each correct answer. Your score and total score will always be displayed.",,,
+NumPy GCD Greatest Common Denominator,,"Finding GCD (Greatest Common Denominator),Finding GCD in Arrays","Example,Example","The GCD (Greatest Common Denominator), also known as HCF (Highest Common Factor) is the biggest number that is a common factor of both of the numbers.,To find the Highest Common Factor of all values in an array, you can use the , method.",,,
+NumPy ,Quiz,"The Test,Count Your Score",,"You can test your NumPy skills with W3Schools' Quiz.,The test contains 25 questions and there is no time limit.,The test is not official, it's just a nice way to see how much you know, or don't know, about 
+NumPy.,You will get 1 point for each correct answer. At the end of the Quiz,
+your total score will be displayed. Maximum score is 25 points.",,,
+NumPy Set Operations,,"What is a Set,Create Sets in NumPy,Finding Union,Finding Intersection,Finding Difference,Finding Symmetric Difference","Example,Example,Example,Example,Example","A set in mathematics is a collection of unique elements.,Sets are used for operations involving frequent intersection, union and difference operations.,We can use NumPy's , method to find unique elements from any array.
+E.g. create a set array, but remember that the set arrays should only be 1-D arrays.,To find the unique values of two arrays, use the , method.,To find only the values that are present in both arrays, use the , method.,To find only the values in the first set that is NOT present in the seconds set, use the , method.,To find only the values that are NOT present in BOTH sets, use the , method.",,,
+NumPy Hyperbolic Functions,,"Hyperbolic Functions,Finding Angles,Angles of Each Value in Arrays","Example,Example,Example,Example","NumPy provides the ufuncs ,, , and , that take values in radians and produce the corresponding sinh, cosh and tanh values..,Finding angles from values of hyperbolic sine, cos, tan. E.g. sinh, cosh and tanh inverse (arcsinh, arccosh, arctanh).,Numpy provides ufuncs ,, , and , that produce radian values for corresponding sinh, cosh and tanh values given.",,,
+NumPy Trigonometric Functions,,"Trigonometric Functions,Convert Degrees Into Radians,Radians to Degrees,Finding Angles,Angles of Each Value in Arrays,Hypotenues","Example,Example,Example,Example,Example,Example,Example","NumPy provides the ufuncs ,, , and , that take values in radians and produce the corresponding sin, cos and tan 
+values.,By default all of the trigonometric functions take radians as parameters
+but we can convert radians to degrees and vice versa as well in NumPy.,Finding angles from values of sine, cos, tan. E.g. sin, cos and tan inverse (arcsin, arccos, arctan).,NumPy provides ufuncs ,, , and , that produce radian values for corresponding sin, cos and tan values given.,Finding hypotenues using pythagoras theorem in NumPy.,NumPy provides the , function that takes the base and perpendicular values and produces hypotenues based on pythagoras theorem.",,,
+NumPy LCM Lowest Common Multiple,,"Finding LCM (Lowest Common Multiple),Finding LCM in Arrays","Example,Example,Example","The Lowest Common Multiple is the least number that is common multiple of both of the numbers.,To find the Lowest Common Multiple of all values in an array, you can use the , method.",,,
+NumPy Differences,,Differences,"Example,Example","A discrete difference means subtracting two successive elements.,E.g. for [1, 2, 3, 4], the discrete difference would be [2-1, 3-2, 4-3] = [1, 1, 1],To find the discrete difference, use the , function.,We can perform this operation repeatedly by giving parameter ,.",,,
+NumPy Products,,"Products,Product Over an Axis,Cummulative Product","Example,Example,Example,Example","To find the product of the elements in an array, use the
+, function.,If you specify ,, NumPy will return the 
+product of each array.,Cummulative product means taking the product partially.,E.g. The partial product of [1, 2, 3, 4] is [1, 1*2, 1*2*3, 1*2*3*4] = [1, 2, 6, 24],Perfom partial sum with the , function.",,,
+NumPy Summations,,"Summations,Summation Over an Axis,Cummulative Sum","Example,Example,Example,Example","What is the difference between summation and addition?,Addition is done between two arguments whereas summation happens over n elements.,If you specify ,, NumPy will sum the 
+numbers in each array.,Cummulative sum means partially adding the elements in array.,E.g. The partial sum of [1, 2, 3, 4] would be [1, 1+2, 1+2+3, 1+2+3+4] = [1, 3, 6, 10].,Perfom partial sum with the , function.",,,
+NumPy Logs,,"Logs,Log at Base 2,Log at Base 10,Natural Log, or Log at Base e,Log at Any Base","Example,Example,Example,Example","NumPy provides functions to perform log at the base 2, e and 10.,We will also explore how we can take log for any base by creating a custom ufunc.,All of the log functions will place -inf or inf in the elements if the log can not be computed.,Use the , function to perform log at the base 2.,Use the , function to perform log at the base 10.,Use the , function to perform log at the base e.,NumPy does not provide any function to take log at any base,
+so we can use the , function along with inbuilt function , with two input parameters and one output parameter:",,,
+Rounding Decimals,,"Rounding Decimals,Truncation,Rounding,Floor,Ceil","Example,Example,Example,Example,Example","There are primarily five ways of rounding off decimals in NumPy:,Remove the decimals, and return the float number closest to zero. Use the , and , functions.,The , function increments preceding digit or decimal by 1 if >=5 else do nothing.,E.g. round off to 1 decimal point, 3.16666 is 3.2,The floor() function rounds off decimal to nearest lower integer.,E.g. floor of 3.166 is 3.,The ceil() function rounds off decimal to nearest upper integer.,E.g. ceil of 3.166 is 4.","truncation,fix,rounding,floor,ceil",,
+Simple Arithmetic,,"Simple Arithmetic,Addition,Subtraction,Multiplication,Division,Power,Remainder,Quotient and Mod,Absolute Values","Example,Example,Example,Example,Example,Example,Example,Example,Example","You could use arithmetic operators ,
+,
+,
+,
+directly between NumPy arrays, but this section discusses an extension of the same where we have 
+functions that can take any array-like objects e.g. lists, tuples etc. and perform arithmetic ,.,All of the discussed arithmetic functions take a , parameter in which we can specify that condition.,The , function sums the content of two arrays, and 
+return the results in a new array.,The , function subtracts the values from one array with the values from 
+another array,
+and return the results in a new array.,The , function multiplies the values from one array with the values from 
+another array,
+and return the results in a new array.,The , function divides the values from one array with the values from another array,
+and return the results in a new array.,The , function rises the values from the first array to the power of the values of the second array,
+and return the results in a new array.,Both the , and the , functions
+return the remainder of the values in the first array corresponding to the values in the second array, and return the results in a new array.,You get the same result when using the , function:,The , function
+return both the quotient and the the mod. The return value is two arrays, the 
+first array contains the quotient and second array contains the mod.,Both the , and the , functions
+ functions do the same absolute operation element-wise but we should use , 
+ to avoid confusion with python's inbuilt ",,,
+Random Data Distribution,,"What is Data Distribution?,Random Distribution","Example,Example","Data Distribution is a list of all possible values, and how often each value 
+occurs.,Such lists are important when working with statistics and data science.,The random module offer methods that returns randomly generated data 
+distributions.,A random distribution is a set of random numbers that follow a certain ,.,We can generate random numbers based on defined probabilities using the 
+, method of the 
+, module.,The , method allows us to specify the probability for each value.,The probability is set by a number between 0 and 1, where 0 means that the 
+value will never occur and 1 means that the value will always occur.,Even if you run the example above 100 times, the value 9 will never occur.,You can return arrays of any shape and size by specifying the shape in the
+, parameter.",,,
+Random Numbers in NumPy,,"What is a Random Number?,Pseudo Random and True Random.,Generate Random Number,Generate Random Float,Generate Random Array,Generate Random Number From Array","Example,Example,Example,Example,Example,Example,Example,Example","Random number does NOT mean a different number every time. Random means something that can
+not be predicted logically.,Computers work on programs, and programs are definitive set of instructions. So it means there must be some
+algorithm to generate a random number as well.,If there is a program to generate random number it can be
+predicted, thus it is not truly random.,Random numbers generated through a generation algorithm are called ,.,Can we make truly random numbers?,Yes. In order to generate a truly random number on our computers we need to get the random data from some
+outside source. This outside source is generally our keystrokes, mouse movements, data on network
+etc.,We do not need truly random numbers, unless its related to security (e.g. encryption keys) or the basis of
+application is the randomness (e.g. Digital roulette wheels).,In this tutorial we will be using pseudo random numbers.,NumPy offers the , module to work with random numbers.,The random module's , method returns a random float between 0 and 1.,In NumPy we work with arrays, and you can use the two methods from the above examples to make random arrays.,The , method takes a ,
+parameter where you can specify the shape of an array.,The , method also allows you to specify 
+the shape of the array.,The , method allows you to generate a random value based on an array of values.,The , method takes an array as a 
+parameter and randomly returns one of the values.,The , method also allows you to return an , of values.,Add a , parameter to specify the shape of the array.",,,
+NumPy ,Filter Array,"Filtering Arrays,Creating the Filter Array,Creating Filter Directly From Array","Example,Example,Example,Example,Example","Getting some elements out of an existing array and creating a new array out 
+of them is called ,.,In NumPy, you filter an array using a ,.,If the value at an index is , that element is contained in the filtered array, if the value at that index is 
+, that element is excluded from the filtered array.,The example above will return ,, why?,Because the new filter contains only the values where the filter array had the value 
+,, in this case, index 
+0 and 2.,In the example above we hard-coded the , 
+and , values, but the common use is to create a filter array based on conditions.,The above example is quite a common task in NumPy and NumPy provides a nice way to tackle it.,We can directly substitute the array instead of the iterable variable in our condition and it will work just as we expect it to.",,,
+NumPy ,Sorting Arrays,"Sorting Arrays,Sorting a 2-D Array","Example,Example,Example,Example","Sorting means putting elements in an ,., is any sequence that has an order corresponding to elements, like numeric or alphabetical, ascending or descending.,The NumPy ndarray object has a function called ,, 
+that will sort a specified array.,You can also sort arrays of strings, or any other data type:,If you use the sort() method on a 2-D array, both arrays will be sorted:",,,
+NumPy ,Searching Arrays,"Searching Arrays,Search Sorted","Example,Example,Example,Example,Example,Example","You can search an array for a certain value, and return the indexes that get a match.,To search an array, use the , method.,The example above will return a tuple: ,Which means that the value 4 is present at index 3, 5, and 6.,There is a method called , which performs a binary search in the array,
+and returns the index where the specified value would be inserted to maintain the 
+search order.,Example explained: The number 7 should be inserted on index 1 to remain the sort order.,The method starts the search from the left and returns the first index where the number 
+7 is no longer larger than the next value.,By default the left most index is returned, but we can give , to return the right most index instead.,Example explained: The number 7 should be inserted on index 2 to remain the sort order.,The method starts the search from the right and returns the first index where the number 
+7 is no longer less than the next value.,To search for more than one value, use an array with the specified values.,The return value is an array: , containing the three indexes where 2, 4, 6 would be inserted 
+in the original array to maintain the order.",,,
+NumPy ,Splitting Array,"Splitting NumPy Arrays,Split Into Arrays,Splitting 2-D Arrays","Example,Example,Example,Example,Example,Example,Example","Splitting is reverse operation of Joining.,Joining merges multiple arrays into one and Splitting breaks one
+array into multiple.,We use , for splitting arrays, we pass it the array we want to split 
+and the number of splits.,If the array has less elements than required, it will adjust from the end accordingly.,The return value of the , method is an array containing each of the split as an array.,If you split an array into 3 arrays, you can access them from the result just 
+like any array element:,Use the same syntax when splitting 2-D arrays.,Use the , method, pass in the array 
+you want to split 
+and the number of splits you want to do.,The example above returns three 2-D arrays.,Let's look at another example, this time each element in the 2-D arrays 
+contains 3 elements.,The example above returns three 2-D arrays.,In addition, you can specify which axis you want to do the split around.,The example below also returns three 2-D arrays, but they are split along the 
+row (axis=1).,An alternate solution is using , opposite of 
+",,,
+NumPy ,Joining Array,"Joining NumPy Arrays,Joining Arrays Using Stack Functions,Stacking Along Rows,Stacking Along Columns,Stacking Along Height (depth)","Example,Example,Example,Example,Example,Example","Joining means putting contents of two or more arrays in a single array.,In SQL we join tables based on a key, whereas in NumPy we join arrays by axes.,We pass a sequence of arrays that we want to join to the
+, function, along with the axis. If axis is not explicitly passed, it is taken as 0.,Stacking is same as concatenation, the only difference is that stacking is done along a new axis.,We can concatenate two 1-D arrays along the second axis which would result in putting them one over 
+the other, ie. stacking.,We pass a sequence of arrays that we want to join to the
+, method along with the axis. If axis is not explicitly passed it is taken as 0.,NumPy provides a helper function: , 
+to stack along rows.,NumPy provides a helper function: , to stack along columns.,NumPy provides a helper function: , 
+to stack along height, which is the same as depth.",,,
+NumPy ,Array Iterating,"Iterating Arrays,Iterating 2-D Arrays,Iterating 3-D Arrays,Iterating Arrays Using nditer(),Iterating Array With Different Data Types,Iterating With Different Step Size, Enumerated Iteration Using ndenumerate()","Example,Example,Example,Example,Example,Example,Example,Example,Example,Example","Iterating means going through elements one by one.,As we deal with multi-dimensional arrays in numpy, we can do this using basic 
+, loop of python.,If we iterate on a 1-D array it will go through each element one by one.,In a 2-D array it will go through all the rows.,To return the actual values, the scalars, we have to iterate the arrays in each dimension.,In a 3-D array it will go through all the 2-D arrays.,To return the actual values, the scalars, we have to iterate the arrays in each dimension.,The function , is a helping function that can be used from very basic to very advanced iterations. 
+It solves some basic issues which we face in iteration, lets go through it with examples.
+
+,In basic , loops, iterating through each scalar of an array we need to use 
+, 
+, loops which can be difficult to write for arrays with very high dimensionality.,We can use , argument and pass it the expected datatype to change the datatype of elements while iterating.,NumPy does not change the data type of the element in-place (where the element is in array) so it needs some other space to perform this action, that extra space is called buffer, and in order to enable it in , we pass ,.,We can use filtering and followed by iteration.,Enumeration means mentioning sequence number of somethings one by one.,Sometimes we require corresponding index of the element while iterating, the , method can be used for those usecases.",,,
+NumPy ,Array Reshaping,"Reshaping arrays,Reshape From 1-D to 2-D,Reshape From 1-D to 3-D,Can We Reshape Into any Shape?,Returns Copy or View?,Unknown Dimension,Flattening the arrays","Example,Example,Example,Example,Example","Reshaping means changing the shape of an array.,The shape of an array is the number of elements in each dimension.,By reshaping we can add or remove dimensions or change number of elements in each dimension.,Yes, as long as the elements required for reshaping are equal in both shapes.,We can reshape an 8 elements 1D array into 4 elements in 2 rows 2D array but we cannot reshape it 
+into a 3 elements 3 rows 2D array as that would require 3x3 = 9 elements.,The example above returns the original array, so it is a view.,You are allowed to have one ""unknown"" dimension.,Meaning that you do not have to specify an exact number for one of the 
+dimensions in the reshape method.,Pass , as the value, and NumPy will 
+calculate this number for you.,Flattening array means converting a multidimensional array into a 1D array.,We can use , to do this.",,,
+NumPy ,Array Shape,"Shape of an Array,Get the Shape of an Array,What does the shape tuple represent?","Example,Example","The shape of an array is the number of elements in each dimension.,NumPy arrays have an attribute called , that returns a tuple with each index having the number of corresponding elements.,The example above returns ,, which means that the array has 2 dimensions, 
+where the first dimension has 2 elements and the second has 4.,Integers at every index tells about the number of elements the corresponding dimension has.,In the example above at index-4 we have value 4, so we can say that 5th ( 4 + 1 th) dimension has 4 elements.",,,
+NumPy ,Array Copy vs View,"The Difference Between Copy and View,COPY:,VIEW:,Check if Array Owns it's Data","Example,Example,Example,Example","The main difference between a copy and a view of an array is that
+the copy is a new array, and the view is just a view of the original array.,The copy , the data and any changes made to the copy will not 
+affect original array, and any changes made to the original array will not 
+affect the copy.,The view , the data and any changes made to the view will 
+affect the original array, and any changes made to the original array will 
+affect the view.,As mentioned above, copies , the data, and views , 
+the data, but how can we check this?,Every NumPy array has the attribute , that 
+returns , if the array owns the data.,Otherwise, the ,  attribute refers to the original object.
+
+",,,
+NumPy ,Data Types,"Data Types in Python,Data Types in NumPy,Checking the Data Type of an Array,Creating Arrays With a Defined Data Type,What if a Value Can Not Be Converted?,Converting Data Type on Existing Arrays","Example,Example,Example,Example,Example,Example,Example","By default Python have these data types:,NumPy has some extra data types, and refer to data types with one 
+character, like , for integers, , for unsigned integers etc.,Below is a list of all data types in NumPy and the characters used to represent them.,The NumPy array object has a property called , 
+that returns the data type of the array:,We use the , function to create arrays, this function can take an optional argument: , 
+that allows us to define the expected data type of the array elements:,For ,, ,, ,, 
+, and , we can define size as well.,If a type is given in which elements can't be casted then NumPy will raise a ValueError.,The best way to change the data type of an existing array, is to make a copy 
+of the array with the , method.,The , function creates a copy of the 
+array, and allows you to specify the data type as a parameter.,The data type can be specified using a string, like , for float,
+, for integer etc. or you can use the data type directly like
+, for float and , for integer."," - used to represent text data, the text is given under quote marks. e.g. ""ABCD"", - used to represent integer numbers. e.g. -1, -2, -3, - used to represent real numbers. e.g. 1.2, 42.42, - used to represent True or False., - used to represent complex 
+numbers. e.g. 1.0 + 2.0j, 1.5 + 2.5j, - integer, - boolean, - unsigned integer, - float, - complex float, - timedelta, - datetime, - object, - string, - unicode string, - fixed chunk of memory for other type ( void )",,
+NumPy ,Array Slicing,"Slicing arrays,Negative Slicing,STEP,Slicing 2-D Arrays","Example,Example,Example,Example,Example,Example,Example,Example,Example","Slicing in python means taking elements from one given index to another given 
+index.,We pass slice instead of index like this: ,.,We can also define the step, like this: ,.,If we don't pass start its considered 0,If we don't pass end its considered length of array in that dimension,If we don't pass step its considered 1,Use the minus operator to refer to an index from the end:,Use the , value to determine the step of the slicing:",,,
+NumPy ,Array Indexing,"Access Array Elements,Access 2-D Arrays,Access 3-D Arrays,Negative Indexing","Example,Example,Example,Example,Example,Example,Example","Array indexing is the same as accessing an array element.,You can access an array element by referring to its index number.,The indexes in NumPy arrays start with 0, meaning that the first element  
+has index 0, and the second has index 1 etc.,To access elements from 2-D arrays we can use comma separated integers representing 
+the 
+dimension and the index of the element.,Think of 2-D arrays like a table with rows and columns, where the row 
+represents the dimension and the index represents the column.,To access elements from 3-D arrays we can use comma separated integers representing 
+the dimensions and the index of the element., prints the value ,.,And this is why:,The first number represents the first dimension, which contains two arrays:,
+[[1, 2, 3], [4, 5, 6]],
+and:,
+[[7, 8, 9], [10, 11, 12]],
+Since we selected ,, we are left with the first array:,
+[[1, 2, 3], [4, 5, 6]],The second number represents the second dimension, which also contains two arrays:,
+[1, 2, 3],
+and:,
+[4, 5, 6],
+Since we selected ,, we are left with the second array:,
+[4, 5, 6],The third number represents the third dimension, which contains three values:,
+4,
+5,
+6,
+Since we selected ,, we end up with the third value:,
+6,Use negative indexing to access an array from the end.",,,
+NumPy ,Creating Arrays,"Create a NumPy ndarray Object,Dimensions in Arrays,0-D Arrays,1-D Arrays,2-D Arrays,3-D arrays,Check Number of Dimensions?,Higher Dimensional Arrays","Example,Example,Example,Example,Example,Example,Example,Example","NumPy is used to work with arrays. The array object in NumPy is called
+,.,We can create a NumPy
+, object by using the , function.,To create an ,,
+we can pass a list, tuple or any array-like object into the , 
+method, and it will be converted into an
+,:,A dimension in arrays is one level of array depth (nested arrays).,0-D arrays, 
+or Scalars, are the elements in an array. Each value in an array is a 0-D array.,An array that has 0-D arrays as its elements is called uni-dimensional or 1-D array.,These are the most common and basic arrays.,An array that has 1-D arrays as its elements is called a 2-D array.,These are often used to represent matrix or 2nd order tensors.,An array that has 2-D arrays (matrices) as its elements is called 3-D array.,These are often used to represent a 3rd order tensor.,NumPy Arrays provides the , attribute that returns an integer that tells us how many dimensions the array have.,An array can have any number of dimensions.,When the array is created, you can define the number of dimensions by using 
+the , argument.,In this array the innermost dimension (5th dim) has 4 elements,
+the 4th dim has 1 element that is the vector,
+the 3rd dim has 1 element that is the matrix with the vector,
+the 2nd dim has 1 element that is 3D array and 1st dim has 1 element that is a 4D array.",,,
+NumPy ,Getting Started,"Installation of NumPy,Import NumPy,NumPy as np,Checking NumPy Version","Example,Example,Example","If you have , and , already installed on a system, then installation of 
+NumPy is very easy.,Install it using this command:,If this command fails, then use a python distribution that already has NumPy installed like, Anaconda, Spyder etc.,Once NumPy is installed, import it in your applications by adding the
+, keyword:,Now NumPy is imported and ready to use.,NumPy is usually imported under the , 
+alias.,Create an alias with the , keyword while importing:,Now the NumPy package can be referred to as , instead of ,.,The version string is stored under , 
+attribute.",,,
+NumPy ,Introduction,"What is NumPy?,Why Use NumPy?,Why is NumPy Faster Than Lists?,Which Language is NumPy written in?,Where is the NumPy Codebase?",,"NumPy is a Python library used for working with arrays.,It also has functions for working in domain of linear algebra, fourier transform, and matrices.,NumPy was created in 2005 by Travis Oliphant. It is an open source project 
+and you can use it freely.,NumPy stands for Numerical Python.,In Python we have lists that serve the purpose of arrays, but they are slow to process.,NumPy aims to provide an array object that is up to 50x faster than 
+traditional Python lists.,The array object in NumPy is called ,, 
+it provides a lot of supporting functions that make working with 
+, very easy.,Arrays are very frequently used in data science, where speed and resources 
+are very important.,NumPy arrays are stored at one continuous place in memory unlike lists, so processes can access and manipulate them very efficiently.,This behavior is called locality of reference in computer science.,This is the main reason why NumPy is faster than lists. Also it is optimized to work with latest CPU architectures.,NumPy is a Python library and is written partially in Python, but most of the parts that require fast computation are written in C or C++.,The source code for NumPy is located at this github repository 
+",,,

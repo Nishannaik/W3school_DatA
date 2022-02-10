@@ -1,0 +1,1116 @@
+H1_leftside_heading,H1_rightside_heading,H2,H3,All_para,li,div,div_2
+ASP and ASP.NET Tutorials,,"The ASP Technology,Classic ASP - Active Server Pages,ASP.NET,ASP.NET Web Pages,ASP.NET MVC,ASP.NET Web API,ASP.NET Web Forms,ASP.NET Core",,"ASP supports many different development models:,ASP and ASP.NET are server side technologies.,Both technologies enable computer code to be executed by an Internet server.,When a browser requests an ASP or ASP.NET file, the ASP engine reads the file, executes 
+any code in the file, and returns the result to the browser.,ASP (aka Classic ASP) was introduced in 1998 
+as Microsoft's first server side scripting language.,Classic ASP pages have the file extension , and are normally written in VBScript.,ASP.NET was released in 2002 as a successor to Classic ASP.,ASP.NET pages have the extension , and are normally written in C# (C sharp).,ASP.NET 4.6 is the latest official version of ASP.NET.,ASP.NET 5 was expected to be an important redesign of ASP.NET.,However, the development of ASP.NET 5 was stopped in favor of 
+,. ,ASP.NET Web Pages is an SPA application model (Single Page Application).,The SPA model is quite similar to PHP and Classic ASP.,ASP.NET Web Pages is being merged into the new ASP.NET Core.,ASP.NET MVC is an MVC application model (Model-View-Controller).,ASP.NET MVC is being merged into the new ASP.NET Core.,ASP.NET MVC is not covered in this tutorial.
+,ASP.NET API is an API application model (Application Programming Interface).,ASP.NET API is being merged into the new ASP.NET Core.,ASP.NET API is not covered in this tutorial.,ASP.NET Web Forms is an event driven application model.,ASP.NET Web Forms is , a part of the new ASP.NET Core.,ASP.NET Web Forms is , covered in this tutorial.,ASP.NET Core was released in 2016.,ASP.NET Core merges ASP.NET MVC, ASP.NET Web API, and ASP.NET Web Pages into 
+one application framework.,ASP.NET Core is not covered in this tutorial.","Classic ASP,ASP.NET Web Forms,ASP.NET MVC,ASP.NET Web Pages,ASP.NET API,ASP.NET Core",,
+ASP.NET Razor ,- VB Logic Conditions,"The If Condition,The Else Condition,The ElseIf Condition,Select Conditions","Example,Example,Example,Example","Programming Logic: Execute code based on conditions.,VB lets you execute code based on conditions.,To test a condition you use the ,. The if 
+statement returns true or false, based on your test:,An if statement can include an ,.,The else condition defines the code to be executed if the condition is false., In the example above, if the first condition is true, it will be executed. 
+The else condition covers ""everything else"".,Multiple conditions can be tested with an ,: ,In the example above, if the first condition is true, it will be executed.,If not, then if the next condition is true, this condition will be executed.,You can have any number of else if conditions.,If none of the if or else if conditions are true, the last else block 
+(without a condition) covers ""everything else"".,A , can be used to test a number of individual conditions:,
+""Select Case"" is followed by the test value (day). Each individual test condition has a case 
+value, and any number of code lines. If the test value matches the case value, the code lines 
+are 
+executed. 
+,
+A select block can have a default case (Case Else) for  
+""everything else"" that runs if none of the other cases are true.
+","The if statement starts a code block,The condition is written between if and then,The code between if ... then and end if is executed if the test is true",,
+ASP.NET Razor ,- VB Loops and Arrays,"For Loops,For Each Loops,While Loops,Arrays","Example,Example,Example,Example","Statements can be executed repeatedly in loops.,If you need to run the same statements repeatedly, you can program a loop.,If you know how many times you want to loop, you can use a ,. This 
+kind of loop is especially useful for counting up or counting down:,If you work with a collection or an array, you often use a ,.,A collection is a group of similar objects, and the for each loop lets 
+you carry out a task on each item. The for each loop walks through a 
+collection until it is finished.,The example below walks through the ASP.NET Request.ServerVariables 
+collection.,The , is a general purpose loop. ,A while loop begins with the while keyword, followed by parentheses, where you 
+specify how long the loop continues, then a block to repeat.,While loops typically add to, or subtract from, a 
+variable used for counting.,In the example below, the += operator adds 1 to the variable i, each time the 
+loop runs.,An array is useful when you want to store similar variables but don't want to 
+create a separate variable for each of them:",,,
+ASP ,Syntax,"ASP Uses VBScript,ASP Files,Using JavaScript in ASP,More Examples,VBScript Examples,VBScript Reference","Example,Example,Example,Example,Example","All our examples shows the ASP code in red.,This makes it easier for you to understand how 
+ASP works.,A scripting language is a lightweight programming language.,VBScript is a light version of Microsoft's Visual Basic.,ASP files can be ordinary HTML files. In addition, ASP files can also contain server scripts.,Scripts surrounded by <% and %> are executed on the server.,The , method is used by ASP to write output to HTML.,The following example writes ""Hello World"" into HTML:,To set JavaScript as the scripting language for a web page you must insert a language specification at the top of the page:,There is an easy shortcut to Response.Write(). You can use an equal sign (=) 
+instead. ,The following example also writes ""Hello World"" into HTML:,HTML tags can be a part of the output:,HTML attributes can be a part of the output:,This tutorial contains a lot of VBScript examples.,This tutorial has complete VBScript reference.",,,
+ASP ,Variables,"More Examples,Do You Remember Algebra from School?,VBScript Variables,Declaring (Creating) VBScript Variables,Assigning Values to Variables,VBScript Array Variables,The Lifetime of Variables ",Example,"Variables are ""containers"" for storing information.,
+This example demonstrates how to declare a variable, assign a value to it, and use the value in a text.,
+Arrays are used to store a series of related data items. This example demonstrates how to 
+create an array that stores names.,
+How to loop through the six headings in HTML.,
+This example will display a different message to the user depending on the time on the server.,
+This example is the same as the one above, but the syntax is different.,
+,
+How to create a variable, assign a value to it, and then change the value of it.,
+,
+How to insert a variable value in a text.,Do you remember algebra from school? x=5, y=6, z=x+y,Do you remember that a letter (like x) could be used to hold a value (like 5), and that you could use the information above to calculate the value of z to be 11?,These letters are called ,, and variables can be used to hold values (x=5) or expressions (z=x+y).,As with algebra, VBScript variables are used to hold values or expressions.,A variable can have a short name, like x, or a more descriptive name, like carname.,Rules for VBScript variable names:,In VBScript, all variables are of type ,, that can store different types of data.,Creating variables in VBScript is most often referred to as ""declaring"" variables.,You can declare VBScript variables with the Dim, Public or the Private statement. Like this:,Now you have created two variables. The name of the variables are ""x"" and ""carname"".,You can also declare variables by using its name in a script. Like this:,Now you have also created a variable. The name of the variable is ""carname"". However, this method is not a good practice, because you can misspell the variable name later
+in your script, and that can cause strange results when your script is running., If you misspell for example the ""carname"" variable to ""carnime"", 
+the script will automatically create a new variable called ""carnime"".  To prevent your script from doing this, you can use the Option Explicit statement.
+This statement forces you to declare all your variables with the dim, public or 
+private statement., Put the Option Explicit statement on the top of your script. Like this:,You assign a value to a variable like this:,The variable name is on the left side of the expression and the value you want to
+assign to the variable is on the right. Now the variable ""carname"" has
+the value of ""Volvo"", and the variable ""x"" has the value of ""10"".,An array variable is used to store multiple values in a single variable.,
+In the following example, an array containing
+3 elements is declared:
+,The number shown in the parentheses is 2. We start at zero so this array contains 3 elements. This is a fixed-size array.
+You assign data to each of the elements of the array like this:,Similarly, the data can be retrieved from any element using the index of the particular array element you want.
+Like this:,You can have up to 60 dimensions in an array. Multiple dimensions are declared by separating
+the numbers in the parentheses with commas. Here we have a two-dimensional array consisting of 5 rows and 7 columns:
+,Assign data to a two-dimensional array:,A variable declared outside a procedure can be accessed and changed by any script in the ASP file. ,A variable declared inside a procedure is created and destroyed every time the procedure is executed. No scripts outside the procedure can access or change the variable. ,To declare variables accessible to more than one ASP file, declare them as session variables or application variables.,Session variables are used to store information about ONE single user, and are available to all pages in one application. Typically information stored in session variables are name, id, and preferences.,Application variables are also available to all pages in one application. Application variables are used to store information about ALL users in one specific application.","Must begin with a letter ,Cannot contain a period (.),Cannot exceed 255 characters",,
+VBScript ,Conditional Statements,"Conditional Statements,If...Then...Else,If...Then...ElseIf,Select Case","Example,Example,Example","Conditional statements are used to perform different actions for different decisions.,In VBScript we have four conditional statements:,Use the If...Then...Else statement if you want to,
+If you want to execute only , statement when a condition is true, you can write the code on one line:,There is no ..Else.. in this syntax. You just tell the code to
+perform , if a condition is true (in this case If i=10).
+,If you want to execute , statement when a condition is true,
+you must put each statement on separate lines, and end the statement with the
+keyword ""End If"":
+,There is no ..Else.. in the example above either. You just tell the code to perform , if the condition is true.,If you want to execute a statement if a condition is true and execute another statement if the condition is not true, you must add the ""Else""
+keyword:,
+In the example above, the first block of code will be executed if the condition is true, and the other block
+will be executed otherwise (if i is greater than 10).
+,You can use the If...Then...ElseIf statement if you want to select one of many blocks of
+code to execute:,You can also use the ""Select Case"" statement if you want to select one of many blocks of
+code to execute:,This is how it works: First we have a single expression (most often a
+variable), that is evaluated once. The value of the expression is then compared with the
+values for each Case in the structure. If there is a match, the block of code
+associated with that Case is executed."," - executes a set of code when a condition is true,  - select one of two sets of lines to execute,  - select one of many sets of lines to execute, - select one of many sets of lines to execute,execute some code if a condition is true,select one of two blocks of code to execute",,
+ASP Tutorial,,"Easy Learning with ""Show Example"",What is ASP?,What is an ASP File?,What can ASP do for you?,How Does it Work?,ASP References,ASP Examples",Example,"This ASP tutorial contains hundreds of examples.,Our ""Show Example"" tool makes it easy to learn ASP, because it shows ASP  
+code with parallel HTML output.,When a browser requests a normal HTML file, the server just returns the file.,When a browser requests an ASP file, the server passes the request to the ASP engine 
+which reads the ASP file and executes the server scripts in the file.,Finally the ASP file is returned to the browser as plain HTML.,At W3Schools you will find complete ASP references about built-in objects and 
+components, and their properties and methods.,Learn by 100 examples! Because ASP scripts are executed on the server, you
+can not view ASP code in a browser, you will only see the output from ASP which
+is plain HTML. At W3Schools every example displays the hidden ASP code. This
+will make it easier for you to understand how it works., ","ASP stands for ,ctive ,erver ,ages,ASP is a Microsoft Technology,ASP is a program that runs inside a web server,An ASP file has the file extension "".asp"",An ASP file is just the same as an HTML file,An ASP file can contain server scripts in addition to HTML,Server scripts in an ASP file are executed on the server,Edit, change, add content, or customize any web page,Respond to user queries or data submitted from HTML forms,Access databases or other server data and return results to a browser,Provide web security since ASP code cannot be viewed in a browser,Offer simplicity and speed",,
+ASP ,Procedures,"Procedures ,Differences Between VBScript and JavaScript,VBScript Procedures,VBScript Sub Procedures,VBScript Function Procedures,Calling a Procedure,More Examples","Example,Example,Example,Example,Example","In ASP you can call a JavaScript procedure from a VBScript and vice versa. ,The ASP source code can contain procedures and functions: ,Insert the <%@ language="","" %> line above the
+<html> tag to write the procedure/function in another scripting language: ,When calling a VBScript or a JavaScript procedure from an ASP file written in VBScript, you can use the
+""call"" keyword followed by the procedure name. If a procedure requires
+parameters, the parameter list must be enclosed in parentheses when using the
+""call"" keyword. If you omit the ""call"" keyword, the
+parameter list must not be enclosed in parentheses. If the procedure has no
+parameters, the parentheses are optional.,When calling a JavaScript or a VBScript procedure from an ASP file written in JavaScript,
+always use parentheses after the procedure name.,VBScript has two kinds procedures:,A Sub procedure:,or,A Function procedure:,or,This simple function procedures is called to calculate the sum of two arguments:,The function ""myfunction"" will return the sum of argument ""a"" and argument 
+""b"". In this case 14.,When you call a procedure you can use the Call statement, like this:,Or, you can omit the Call statement, like this:
+,
+How to call both a JavaScript procedure and a VBScript procedure in an ASP file.","Sub procedure,Function procedure,is a series of statements, enclosed by the Sub and End Sub statements,can perform actions, but , a value,can take arguments,is a series of statements, enclosed by the Function and End Function statements,can perform actions and , a value,can take arguments that are passed to it by a calling procedure,without arguments, must include an empty set of parentheses (),returns a value by assigning a value to its name",,
+VBScript ,Looping,"Looping Statements,For...Next Loop,For Each...Next Loop,Do...Loop,More Examples","Example,Example","Looping statements are used to run the same block of code a specified number of times.,In VBScript we have four looping statements:,Use the , statement to run a block of code a specified number of times.
+,The , statement specifies the counter variable (,), and its start and end
+values. The , statement increases the counter variable (,) by one.,With the , keyword, you can increase or decrease the counter variable by the value you specify.,In the example below, the counter variable (,) is INCREASED by two, each time the loop repeats.,To decrease the counter variable, you must use a negative , value. You must specify an end value that is less than the start value.,In the example below, the counter variable (,) is DECREASED by two, each time the loop repeats.,You can exit a For...Next statement with the Exit For keyword.,A , loop repeats a block of code for each item in a collection, or for each element of an array.,
+If you don't know how many repetitions you want, use a Do...Loop statement.,
+The Do...Loop statement repeats a block of code while a condition is
+true, or until a condition becomes true.
+,
+You use the While keyword to check a condition in a Do...Loop statement.
+,If , equals 9, the code inside the loop above will never be executed.,
+The code inside this loop will be executed at least one time, even if , is less than 10.
+,
+You use the Until keyword to check a condition in a Do...Loop statement.
+,
+If , equals 10, the code inside the loop will never be executed.
+,The code inside this loop will be executed at least one time, even if , is equal to 10.,
+You can exit a Do...Loop statement with the Exit Do keyword.
+,
+The code inside this loop will be executed as long as , is different
+from 10, and as long as , is greater than 10.
+,
+,
+How to loop through the six headings in html.
+,
+,
+How to make a simple , loop.
+","- runs code a specified number of times,- runs code for each item in a collection or each element of an array,- loops while or until a condition is true,- Do not use it - use the Do...Loop statement instead",,
+ASP.NET Razor ,- VB Variables,"Variables,Data Types,Operators,Converting Data Types",Examples,"Variables are named entities used to store data.,Variables are used to store data.,The name of a variable must begin with an alphabetic character and 
+cannot contain whitespace or reserved characters. ,A variable can be of a 
+specific type, indicating the kind of data it stores. String variables store 
+string values (""Welcome to W3Schools""), integer variables store number values 
+(103), date variables store date values, etc.,Variables are declared 
+using the Dim keyword, or by using the type (if you want to declare the type), 
+but ASP.NET can usually determine data types automatically.,Below is a list of  common data types:,An operator tells ASP.NET what kind of command to perform in an expression., The VB language supports many operators. Below is a list of common operators:,Converting from one data type to another is sometimes useful.,The most 
+common example is to convert string input to another type, such as an integer or 
+a date.,As a rule, user input comes as strings, even if the user entered a number. 
+Therefore, numeric input values must be converted to numbers before they can be 
+used in calculations.,Below is a list of common conversion methods:",,,
+"ASP , and ","Forms,User Input","More Examples,User Input ,Request.QueryString,Request.Form ,Form Validation",,"The Request.QueryString and Request.Form commands are used to retrieve user input from forms.,
+How to interact with the user, with the Request.QueryString command.,
+How to interact with the user, with the Request.Form command.,
+How to interact with the user, through radio buttons, with the Request.Form command.,The Request object can be used to retrieve user information from forms.,User input can be retrieved with the Request.QueryString or Request.Form command. ,The Request.QueryString command is used to collect values in a form with method=""get"".,Information sent from a form with the GET method is visible to everyone (it will be displayed in the browser's address bar)
+and has limits on the amount of information to send.,If a user typed ""Bill"" and ""Gates"" in the HTML form above, the URL sent to the server would look like this:,Assume that ""simpleform.asp"" contains the following ASP script:,The browser will display the following in the body of the document:,The Request.Form
+command is used to collect values in a form with method=""post"".,Information sent from a form with the POST method 
+is invisible to others and has no limits on the amount of information to send.,If a user typed ""Bill"" and ""Gates"" in the HTML form 
+above, the URL sent to the server would look like this: ,Assume that ""simpleform.asp"" contains the following ASP script:,The browser will display the following in the body of the document:,User input should be validated on the browser whenever possible (by client scripts).
+Browser validation is faster and reduces the server load.,You should consider server validation if the user input will be
+inserted into a database. A good way to validate a form on the server is to post
+the form to itself, instead of jumping to a different page. The user will then
+get the error messages on the same page as the form. This makes it easier to
+discover the error.",,,
+ASP.NET Razor ,- C# Logic Conditions,"The If Condition,The Else Condition,The Else If Condition,Switch Conditions","Example,Example,Example,Example","Programming Logic: Execute code based on conditions.,C# lets you execute code based on conditions.,To test a condition you use an ,. The if 
+statement returns true or false, based on your test:,An if statement can include an ,.,The else condition defines the code to be executed if the condition is false., In the example above, if the first condition is true, it will be executed. 
+The else condition covers ""everything else"".,Multiple conditions can be tested with an ,: ,In the example above, if the first condition is true, it will be executed.,If not, then if the next condition is true, this condition will be executed.,You can have any number of else if conditions.,If none of the if and else if conditions are true, the last else block 
+(without a condition) covers ""everything else"".,A , can be used to test a number of individual conditions:,
+The test value (day) is in parentheses. Each individual test condition has a case 
+value that ends with a colon, and any number of code lines ending with a break 
+statement. If the test value matches the case value, the code lines are 
+executed. 
+,
+A switch block can have a default case (default:) for  
+""everything else"" that runs if none of the cases are true.
+","The if statement starts a code block,The condition is written inside parenthesis,The code inside the braces is executed if the test is true",,
+ASP.NET Razor ,- C# Loops and Arrays,"For Loops,For Each Loops,While Loops,Arrays","Example,Example,Example,Example","Statements can be executed repeatedly in loops.,If you need to run the same statements repeatedly, you can program a loop.,If you know how many times you want to loop, you can use a ,. This 
+kind of loop is especially useful for counting up or counting down:,If you work with a collection or an array, you often use a ,.,A collection is a group of similar objects, and the for each loop lets 
+you carry out a task on each item. The for each loop walks through a 
+collection until it is finished.,The example below walks through the ASP.NET Request.ServerVariables 
+collection.,The , is a general purpose loop. ,A while loop begins with the while keyword, followed by parentheses, where you 
+specify how long the loop continues, then a block to repeat.,While loops typically add to, or subtract from, a 
+variable used for counting.,In the example below, the += operator adds 1 to the variable i, each time the 
+loop runs.,An array is useful when you want to store similar variables but don't want to 
+create a separate variable for each of them:",,,
+ASP.NET Razor ,- Markup,"What is Razor?,Razor Syntax,Razor Helpers,Razor Programming Languages",,"Razor is not a programming language. It's a server side markup language. ,Razor is a markup syntax that 
+lets you embed server-based code (Visual Basic and C#) into web pages.,Server-based code can create dynamic web content on the fly, while a web page 
+is written to the browser. When a web page is called, the server executes the 
+server-based code inside the page before it returns the page to the browser. By 
+running on the server, the code can perform complex tasks, like accessing 
+databases. ,Razor is based 
+on ASP.NET, and designed 
+for creating web applications. It has the power of traditional ASP.NET markup, 
+but it is easier to use, and easier to learn.,Razor uses a syntax very similar to PHP and Classic ASP.,Razor:,PHP:,Classic ASP:,ASP.NET helpers are components that can be accessed by single lines of 
+Razor code.,You can build your own helpers using Razor syntax, or 
+use built-in ASP.NET helpers.,Below is a short description of some useful Razor helpers:,Razor supports both C# (C sharp) and VB (Visual Basic).","Web Grid,Web Graphics,Google Analytics,Facebook Integration,Twitter 
+Integration,Sending Email,Validation",,
+ASP.NET Razor ,- C# Variables,"Variables,Data Types,Operators,Converting Data Types",Examples,"Variables are named entities used to store data.,Variables are used to store data.,The name of a variable must begin with an alphabetic character and 
+cannot contain whitespace or reserved characters. ,A variable can be of a 
+specific type, indicating the kind of data it stores. String variables store 
+string values (""Welcome to W3Schools""), integer variables store number values 
+(103), date variables store date values, etc.,Variables are declared 
+using the var keyword, or by using the type (if you want to declare the type), 
+but ASP.NET can usually determine data types automatically.,Below is a list of  common data types:,An operator tells ASP.NET what kind of command to perform in an expression., The C# language supports many operators. Below is a list of common operators:,Converting from one data type to another is sometimes useful.,The most 
+common example is to convert string input to another type, such as an integer or 
+a date.,As a rule, user input comes as strings, even if the user entered a number. 
+Therefore, numeric input values must be converted to numbers before they can be 
+used in calculations.,Below is a list of common conversion methods:",,,
+ADO ,Data Types,,,"The table below shows the ADO Data Type mapping between Access, SQL Server, and Oracle:,* In Oracle 8.0.x - decimal and int are equal to number and number(10).",,,
+ASP.NET Razor ,- C# and VB Code Syntax,"Main Razor Syntax Rules for C#,Main Razor Syntax Rules for VB,How Does it Work?,Working With Objects,If and Else Conditions,Reading User Input","C# Example,Example,Example,Example,Example","Razor supports both C# (C sharp) and VB (Visual Basic).,Razor is a simple programming syntax for embedding server code in web pages. ,Razor syntax is based on the ASP.NET framework, the part of the Microsoft.NET Framework that's specifically designed for creating web 
+applications.  ,The Razor syntax gives you all the power of ASP.NET, but is using a simplified 
+syntax that's easier to learn if you're a beginner, and makes you more 
+productive if you're an expert. ,Razor web pages can be described as HTML pages with two kinds of content: 
+HTML content and Razor code. ,When the server reads the page, it runs the Razor code first, before it sends 
+the HTML page to the browser. The code that is executed on the server can 
+perform tasks that cannot be done in the browser, for example accessing a server 
+database. Server code can create dynamic HTML content on the fly, before it is 
+sent to the browser. Seen from the browser, the HTML generated by server code is 
+no different than static HTML content.,ASP.NET web pages with Razor syntax have the special file extension cshtml 
+(Razor using C#) or vbhtml (Razor using VB). ,Server coding often involves objects.,The ""DateTime"" object is a typical 
+built-in ASP.NET object, but objects can also be self-defined, a web page, a text box, a file, 
+a database record, etc.,Objects may have methods they can perform. A 
+database record might have a ""Save"" method, an image object might have a 
+""Rotate"" method, an email object might have a ""Send"" method, 
+and so on.,Objects 
+also have properties that describe their characteristics. A database record 
+might have a FirstName and a LastName property (among others). ,The ASP.NET 
+DateTime object has a Now property (written as DateTime.Now), and the Now property has a 
+Day property (written as DateTime.Now.Day). The example below shows how to 
+access some properties of the DateTime object:,An important feature of dynamic web pages is that you can determine what to 
+do based on conditions.,The common way to do this is with the if ... else statements:,Another important feature of dynamic web pages is that you can read user 
+input.,Input is read by the Request[] function, and posting (input) is tested by the 
+IsPost condition:","Razor code blocks are enclosed in @{ ... },Inline expressions (variables and functions) start with @,Code statements end with semicolon,Variables are declared with the var keyword,Strings are enclosed with quotation marks,C# code is case sensitive,C# files have the extension .cshtml,Razor code blocks are enclosed in @Code ... End Code,Inline expressions (variables and functions) start with @,Variables are declared with the Dim keyword,Strings are enclosed with quotation marks,VB code is not case sensitive,VB files have the extension .vbhtml",,
+"ADO , Object",Record,"Record Object (ADO version 2.5),Syntax,Properties,Methods,Collections,The Fields Collection's Properties",,"The ADO Record object is used to hold a row in a Recordset, a directory, or a
+file from a file system.,Only structured databases could be accessed by ADO in versions prior 2.5. In
+a structured database, each table has the exact same number of columns in each row, and each column is composed of the same data type.,The Record object allows access to data-sets where the number of columns and/or the data type can
+be different from row to row. ",,,
+"ADO , Object",Stream,"Stream Object (ADO version 2.5),Syntax,Properties,Methods",,"The ADO Stream Object is used to read, write, and manage a stream of binary data or text.,A Stream object can be obtained in three ways:","From a URL pointing to a document, a folder, or a Record object,By instantiating a Stream object to store data for your application,By opening the default Stream object associated with a Record object",,
+"ADO , Object",Recordset,"Examples,Recordset Object,ProgID,Properties,Methods,Events,Collections,The Fields Collection's Properties,The Properties Collection's Properties",,"
+This example demonstrates how to use the GetRows method.,The ADO Recordset object is used to hold a set of records from a database table.
+A Recordset object consist of records and columns (fields).,In ADO, this object is the most important and the one used most often to 
+manipulate data from a database.,Recordset objects can support two types of updating: ,In ADO there are 4 different cursor types defined:,The cursor type can be set by the CursorType property or by the CursorType
+parameter in the Open method., Not all providers support all methods or properties of the Recordset
+object.,  You cannot handle events using VBScript or JScript (only
+Visual Basic, Visual C++, and Visual J++ languages can handle events)."," - all changes are written immediately to the
+    database once you call the Update method., - the provider will cache multiple changes and then 
+  send them to the database with the UpdateBatch method., - Allows you to see additions, changes, and deletions by other
+    users.,Like a dynamic cursor, except that
+    you cannot see additions by other users, and it prevents access to records that other users
+    have deleted. Data changes by other users will still be visible.,- Provides a static copy of a recordset for you to use to find data or generate
+    reports. Additions, changes, or deletions by other users will not be visible. This is the only type of cursor allowed when you open a client-side Recordset object.,- Allows you to only scroll forward through the Recordset. Additions, changes, or deletions by other users will not be visible. ",,
+"ADO , Object",Property,"Property Object,ProgID,Properties",,"The ADO Property object represents a dynamic characteristic of an ADO object that is defined by the provider.,Each provider that talks with ADO has different ways of interacting with ADO. Therefore, ADO needs
+to store information about the provider in some way. The solution is that the provider gives specific
+information (dynamic properties) to ADO. ADO stores each provider property in a Property object
+that is again stored in the Properties Collection. The Collection is assigned to
+either a Command object, Connection object, Field object, or a Recordset object.",,,
+"ADO , Object",Parameter,"Parameter Object,Syntax,Properties,Methods",,"The ADO Parameter object provides information about a single parameter used in a stored procedure or
+query.  ,A Parameter object is added to the Parameters Collection when it is created.
+The Parameters Collection is associated with a specific Command object, which uses the
+Collection to pass parameters in and out of stored procedures and queries.,Parameters can be used to create Parameterized Commands. These commands are (after they have been
+defined and stored) using parameters to alter some details of the command before it is executed.
+For example, an SQL SELECT statement could use a parameter to define the
+criteria of a WHERE clause.,There are four types of parameters: input parameters, output parameters, input/output
+parameters and return parameters.",,,
+"ADO , Object",Field,"Field Object,ProgID,Properties,Methods,Collections",,"The ADO Field object contains information about a column in a Recordset object. There is one Field object for each
+column in the Recordset.",,,
+"ADO , Object",Error,"Error Object,Syntax,Properties",,"The ADO Error object contains details about data access errors that have been generated during a
+single operation. ,
+ADO generates one Error object for each error. Each Error object contains details of the specific
+error, and are stored in the Errors collection. To access the errors, you must refer to
+a specific connection.,To loop through the Errors collection:",,,
+"ADO , Object",Connection,"Connection Object,ProgID,Properties,Methods,Events,Collections",,"The ADO Connection Object is used to create an open connection to a data source. Through this
+connection, you can access and manipulate
+a database.,If you want to access a database multiple times, you should establish a connection using the Connection object.
+You can also make a connection to a database by passing a connection string via a Command or Recordset object. However,
+this type of connection is only good for one specific, single query.,  You cannot handle events using VBScript or JScript (only Visual Basic, Visual C++, and Visual J++ languages can handle
+events).",,,
+"ADO , Object",Command,"Command Object,ProgID,Properties,Methods,Collections",,"The ADO Command object is used to execute a single query against a database. The query can
+perform actions like creating, adding, retrieving, deleting or updating
+records.,If the query is used to retrieve data, the data will be returned as a RecordSet object. This means that the retrieved data can be manipulated by
+properties, collections, methods, and events of the Recordset object.,The major feature of the Command object is the ability to use stored queries and procedures
+with parameters.",,,
+ADO ,Speed Up With GetString(),"Multiple Response.Write's,The GetString() Method",Example,"Use the GetString() method to speed up your ASP script (instead 
+of using multiple Response.Write's).,The following example demonstrates one way of how to display a  
+database query in an HTML table:,For a large query, this can slow down the script processing time, since 
+many Response.Write commands must be processed by the server.,The solution is to have the entire string created, from <table> to </table>, 
+and then output it - using Response.Write just once.,The GetString() method allows you to display the string with only one Response.Write. 
+It also eliminates the do...loop code and the conditional test that checks if 
+the recordset is at EOF.,To create an HTML table with data from a recordset, we only need to use three of the parameters above 
+(all parameters are optional):, The GetString() method is an ADO 2.0 feature. You can download ADO 2.0 at
+,.,In the following example we will use the GetString() method to hold the 
+recordset as a string: ,The str variable above contains a string of all the columns and rows 
+returned by the SQL SELECT statement. Between each 
+column the HTML 
+</td><td> will appear, and between each row, the HTML </td></tr><tr><td> will 
+appear. This will produce the exact HTML we need with only one Response.Write.","coldel - the HTML to use as a column-separator,rowdel - the HTML to use as a row-separator,nullexpr - the HTML to use if a column is NULL",,
+ADO ,Demonstration,"Read this First,List, Edit, Update, and Delete Database Records,
+Add a New Record to a Database
+",,"To demonstrate a small real life ADO application, we have put together a few
+ADO demos.,If you try to update the database, you will get the error message: ""You
+do not have permission to update this database"". You get this error because
+you don't have write access to our server.
+,BUT, if you copy the code and run it on your own system, you might get the
+same error. That is because the system might see you as an anonymous internet user
+when you access the file via your browser. In that case, you have to change the access-rights
+to get access to the file.
+,Open Windows Explorer, find the .mdb file. Right-click on the .mdb file and 
+select Properties. Go to the Security tab and set the access-rights here.,
+",,,
+ADO ,Delete Records,Delete a Record in a Table,,"We may use the SQL DELETE command to delete a record in a 
+table in a database. ,We want to delete a record in the Customers table in the Northwind database. 
+We first create a table that lists all records in the Customers table:,If the user clicks on the button in the ""customerID"" column he or she will be 
+taken to a new file called ""demo_delete.asp"". The ""demo_delete.asp"" file 
+contains the source code on how to create input fields based on the fields from 
+one record in the database table. It also contains a ""Delete record"" button 
+that will delete the current record:",,,
+ADO ,Update Records,Update a Record in a Table,,"We may use the SQL UPDATE command to update a record in a 
+table in a database. ,We want to update a record in the Customers table in the Northwind database. 
+We first create a table that lists all records in the Customers table:,If the user clicks on the button in the ""customerID"" column he or she will be 
+taken to a new file called ""demo_update.asp"". The ""demo_update.asp"" file 
+contains the source code on how to create input fields based on the fields from 
+one record in the database table. It also contains a ""Update record"" button 
+that will save your changes:",,,
+ADO ,Add Records,"Add a Record to a Table in a Database,Important,What about Fields With no Data?",,"We may use the SQL INSERT INTO command to add a record to a 
+table in a database. ,We want to add a new record to the Customers table in the Northwind database. 
+We first create a form that contains the fields we want to collect data from:,When the user presses the submit button the form is sent to a file called ""demo_add.asp"". 
+The ""demo_add.asp"" file contains the code that will add a new record to the 
+Customers table:,If you use the SQL INSERT command be aware of the following:,In a MS Access database, you can enter zero-length strings ("""") in Text, 
+Hyperlink, and Memo fields IF you set the AllowZeroLength property to 
+Yes.,Not all databases support zero-length strings and may cause an 
+error when a record with blank fields is added. It is important to check what 
+data types your database supports.,
+","If the table contains a primary key, make sure to append a unique, 
+non-Null value to the primary key field (if not, the provider may not append the 
+  record, or an error occurs),If the table contains an AutoNumber field, do not include this field in 
+  the SQL INSERT command (the value of this field will be taken care of 
+  automatically by the provider)",,
+ADO ,Sort,"Sort the Data,More Examples",Example,"We may use SQL to specify how to sort the data in the record 
+set. ,We want to display the ""Companyname"" and ""Contactname"" fields from the ""Customers"" 
+table, ordered by ""Companyname"" (remember to save the file with an .asp extension):,
+How to sort the data on a specified fieldname.,
+Let the user choose what column to sort on.",,,
+ADO ,Queries,"Display Selected Data,More Examples",Example,"We may use SQL to create queries to specify 
+only a selected set of records and fields to view.,We want to display only the records from the ""Customers"" table that have a ""Companyname"" 
+that starts with an A (remember to save the file with an .asp extension):,
+,
+How to display only the records from the ""Customers"" table that have a ""Companyname"" 
+that is larger than E.,
+,
+How to display only the Spanish customers from the ""Customers"" table.,
+,
+Let the user choose which country to show customers from.",,,
+ADO ,Display,"Display the Field Names and Field Values,Display the Field Names and Field Values in an HTML Table,Add Headers to the HTML Table,More Examples","Example,Example,Example","The most common way to display data from a recordset, is to
+display the data in an HTML table. ,We have a database named ""Northwind"" and we want to display the
+data from the ""Customers"" table (remember to save the file with an 
+.asp extension):,We can also display the data from the ""Customers"" table inside an HTML
+table with the following lines (remember to save the file with an .asp 
+extension):,We want to add headers to the HTML
+table to make it more readable (remember to save the file with an .asp 
+extension):,
+How to add colors to the HTML table to make it look nice.",,,
+ADO ,Recordset,"Create an ADO Table Recordset,Create an ADO SQL Recordset,Extract Data from the Recordset,The ADO Recordset Object",,"To be able to read database data, the data must first be loaded
+into a
+recordset. ,After an ADO Database Connection has been created, as demonstrated in the
+previous chapter, it is possible to create an ADO Recordset.  ,Suppose we have a database named ""Northwind"", we can get access to the
+""Customers"" table inside the database with
+the following lines:,We can also get access to the data in the ""Customers"" table using
+SQL:,After a recordset is opened, we can extract data from recordset.  ,Suppose we have a database named ""Northwind"", we can get access to the
+""Customers"" table inside the database with
+the following lines:,The ADO Recordset object is used to hold a set of records from a database table. ,.",,,
+ADO ,Database Connection,"Create a DSN-less Database Connection,Create an ODBC Database Connection,An ODBC Connection to an MS Access Database,The ADO Connection Object",,"Before a database can be accessed from a web page, a database connection has
+to be established.,The easiest way to connect to a database is to use a DSN-less connection. A
+DSN-less connection can be used against any Microsoft Access database on your web site.,If you have a database called ""northwind.mdb"" located in a web
+directory like ""c:/webdata/"",
+you can connect to the database with the following ASP code:,Note, from the example above, that you have to specify the Microsoft Access
+database driver (Provider) and the physical path to the database on your
+computer.,If you have an ODBC database called ""northwind"" you can connect to the database with the following
+ASP code:,With an ODBC connection, you can connect to any database, on any computer in
+your network, as long as an ODBC connection is available.,Here is how to create a connection to a MS Access Database: ,Note that this configuration has to be done on the computer where your web site
+is located. If you are running Personal Web Server (PWS)
+or Internet Information Server (IIS) on your own computer,
+the instructions above will work, but if your web site is located on a remote server, you have to
+have physical access to that server, or ask your web
+host to do this for you. ,The ADO Connection object is used to create an open connection to a data
+source. Through this connection, you can access and manipulate a database.,.",,,
+ADO ,Introduction,"What you should already know,What is ADO?,Accessing a Database from an ASP Page",,"ADO can be used to access databases from your web pages.,Before you continue you should have a basic understanding of the
+following:,If you want to study these subjects first, go to our ,The common way to access a database from inside an ASP page is to:","HTML,ASP,SQL,ADO is a Microsoft technology,ADO stands for ,ctiveX ,ata ,bjects,ADO is a Microsoft Active-X component,ADO is automatically installed with Microsoft IIS,ADO is a programming interface to access data in a database",,
+ASP ,Quick Reference,"Basic Syntax,Forms and User Input,ASP Cookies,Including Files,Global.asa,The Session Object,Application Object,The Response Object,Request Object,Server Object",,"ASP Quick Reference from W3Schools. Print it, and fold it in your pocket.,ASP scripts are surrounded by <% and %>.  To write some 
+output to a browser:,<html>,
+<body>,
+<%
+response.write(""Hello World!"")
+%>,
+</body>,
+</html>,The default language in ASP is VBScript. To use another scripting language, 
+insert a language specification at the top of the ASP page:,<%@ language=""javascript"" %>,
+<html>,
+<body>,<%,
+....,
+%>,Request.QueryString is used to collect values in a form with method=""get"". 
+Information sent from a form with the GET method is visible to everyone (it will 
+be displayed in the browser's address bar) and has limits on the amount of 
+information to send.,Request.Form is used to collect values in a form with method=""post"". 
+Information sent from a form with the POST method is invisible to others and has 
+no limits on the amount of information to send.,A cookie is often used to identify a user. A cookie is a small file that the 
+server embeds on the user's computer. Each time the same computer requests for a 
+page with a browser, it will send the cookie too.,The Response.Cookies command is used to create cookies:,<%,
+Response.Cookies(""firstname"")=""Alex"",
+Response.Cookies(""firstname"").Expires=""May 10,2002"",
+%>, The Response.Cookies command must appear BEFORE the <html> tag!,The ""Request.Cookies"" command is used to retrieve a cookie value:,<%,
+fname=Request.Cookies(""firstname""),
+response.write(""Firstname="" & fname),
+%>, You can insert the content of one ASP file into another ASP file before the 
+server executes it, with the #include directive. The #include directive is used 
+to create functions, headers, footers, or elements that will be reused on 
+multiple pages,Syntax:,<!--#include virtual=""somefile.inc""-->,
+or,
+<!--#include file =""somefile.inc""-->,Use the virtual keyword to indicate a path beginning with a virtual 
+directory. If a file named ""header.inc"" resides in a virtual directory named 
+/html, the following line would insert the contents of ""header.inc"":,<!-- #include virtual =""/html/header.inc"" -->,Use the file keyword to indicate a relative path. A relative path begins with 
+the directory that contains the including file. If you have a file in the html 
+directory, and the file ""header.inc"" resides in html\headers, the following line 
+would insert ""header.inc"" in your file:,<!-- #include file =""headers\header.inc"" -->,Use the file keyword with the syntax (..\) to include a file from a 
+higher-level directory.,The Global.asa file is an optional file that can contain declarations of 
+objects, variables, and methods that can be accessed by every page in an ASP 
+application., , The Global.asa file must be stored in the
+root directory of the ASP application, and each application can only have one
+Global.asa file.,The Global.asa file can contain only the following:,In Global.asa you can tell the application and session objects what to do 
+when the application/session starts and what to do when the application/session 
+ends. The code for this is placed in event handlers. , We do not use
+<% and %>, to
+insert scripts in the Global.asa file, we have to put the subroutines inside the
+HTML <script> tag:,<script language=""vbscript"" runat=""server"">,
+ sub Application_OnStart,
+   ' some code,
+ end sub,
+ sub Application_OnEnd,
+   ' some code,
+ end sub,
+ sub Session_OnStart,
+   ' some code,
+ end sub,
+ sub Session_OnEnd,
+   ' some code,
+ end sub,
+ </script>,It is also possible to create objects with session or application scope in 
+ Global.asa by using the <object> tag. , The <object> tag should be 
+ outside the <script> tag!,Syntax:,<object runat=""server"" scope=""scope"" id=""id"",
+ {progid=""progID""|classid=""classID""}>,
+ .......,
+ </object>,A TypeLibrary is a container for the contents of a DLL file corresponding to 
+ a COM object. By including a call to the TypeLibrary in the Global.asa file, 
+ the constants of the COM object can be accessed, and errors can be better 
+ reported by the ASP code. If your Web application relies on COM objects that 
+ have declared data types in type libraries, you can declare the type libraries 
+ in Global.asa.,Syntax:, <!--METADATA TYPE=""TypeLib"",
+ file=""filename"",
+ uuid=""typelibraryuuid"",
+ version=""versionnumber"",
+ lcid=""localeid"",
+ -->,The Session object is used to store information about, or change settings for 
+a user session. Variables stored in the Session object hold information about 
+one single user, and are available to all pages in one application.,A group of ASP files that work together to perform some 
+ purpose is called an application. The Application object in ASP is used to tie 
+ these files together. All users share one Application object. The Application object
+should hold information that will be used by many pages in the application (like
+database connection information).,The Response Object is used to send output to the user from the server.,When a browser asks for a page from a server, it is called a request. The
+Request Object is used to get information from the user.,The Server Object is used to access properties and methods on the server.","Application events ,Session events ,<object> declarations  ,TypeLibrary declarations ,the #include directive,
+Contents - Holds every item added to the session with script commands,
+StaticObjects - Holds every object added to the session with the <object> tag, and a given session,
+Contents.Remove(,) - Deletes an item from the Contents collection,
+Contents.RemoveAll() - Deletes every item from the Contents collection,CodePage - Sets the code page that will be used to display dynamic content,
+LCID - Sets the locale identifier that will be used to display dynamic content,
+SessionID - Returns the session id,
+Timeout - Sets the timeout for the session,
+Abandon - Kills every object in a session object,
+Contents - Holds every item added to the application with script commands,
+StaticObjects - Holds every object added to the application with the <object>
+tag,
+Contents.Remove - Deletes an item from a collection,Contents.RemoveAll - Deletes every item from a collection,Lock - Prevents a user from changing the application object properties,
+Unlock - Allows a user to change the application object properties,Cookies(name) - Sets a cookie value. If the cookie does not exist, it will
+    be created, and take the value that is specified,Buffer - Whether to buffer the output or not. When the output is buffered,
+    the server will hold back the response until all of the server scripts have
+    been processed, or until the script calls the Flush or End method. If this
+    property is set, it should be before the <html> tag in the ASP file,CacheControl - Sets whether proxy servers can cache the output or not.
+    When set to Public, the output can be cached by a proxy server,Charset(,Sets the name of the character set (like
+    ""ISO8859-1"") to the content type header,ContentType - Sets the HTTP content type (like ""text/html"",
+    ""image/gif"", ""image/jpeg"", ""text/plain""). Default
+    is ""text/html"",Expires - Sets how long a page will be cached on a browser before it
+    expires,ExpiresAbsolute - Sets a date and time when a page cached on a browser
+    will expire,IsClientConnected - Checks if the client is still connected to the server,Pics(,) - Adds a value to the pics label response header,Status - Specifies the value of the status line,AddHeader(,) - Adds an HTML header with a specified value,AppendToLog ,Adds a string to the end of the server log
+    entry,BinaryWrite(,) - Writes the given information without
+    any character-set conversion,Clear - Clears the buffered output. Use this method to handle errors. If
+    Response.Buffer is not set to true, this method will cause a run-time error,End - Stops processing the script, and return the current result,Flush - Sends buffered output immediately. If Response.Buffer is not set
+    to true, this method will cause a run-time error,Redirect(,) - Redirects the user to another url,Write(,) - Writes a text to the user,ClientCertificate - Holds field values stored in the client certificate,Cookies(,) - Holds cookie values,Form(,) - Holds form (input) values. The form must use
+    the post method,QueryString(,) - Holds variable values in the query
+    string,ServerVariables(,) - Holds server variable values,TotalBytes - Holds the total number of bytes the client is sending in the
+    body of the request,BinaryRead - Fetches the data that is sent to the server from the client
+    as part of a post request,ScriptTimeout - Sets how long a script can run before it is terminated,CreateObject(,) - Creates an instance of an object,Execute(,) - Executes an ASP file from inside another ASP
+    file. After executing the called ASP file, the control is
+    returned to the original ASP file,GetLastError() - Returns an ASPError object that will describe the error
+    that occurred,HTMLEncode(,) - Applies HTML encoding to a string,MapPath(,) - Maps a relative or virtual path to a physical path,Transfer(,) - Sends all of the state information to another ASP
+    file for processing. After the transfer, procedural control is not returned
+    to the original ASP file,URLEncode(,) - Applies URL encoding rules to a string",,
+"ASP , Component (ASP 3.0)",Content Rotator,"ASP Content Rotator Component,ASP Content Rotator Example,ASP Content Rotator Component's Methods",Example,"The ASP Content Rotator component creates a ContentRotator object that displays a
+different content string each time a visitor enters or refreshes a page.,A
+text file, called the Content Schedule File, includes the information about the content strings.,The content strings can contain HTML tags so you can display any type 
+of content that HTML can represent: text, images, colors, or hyperlinks.,The following example displays a different content each time a visitor views 
+the Web page.,First, create a text file named ""textads.txt"" and place it in a subfolder called 
+""text"".,""textads.txt"":,Notice the #number at the beginning of each content string. This number is 
+an optional parameter that indicates the relative weight of the HTML content 
+string. In the text file above, the Content Rotator will display the first and 
+second content 
+string three-tenth of the time, and the third string four-tenths of 
+the time.,Then, create an ASP file, and insert the following code:",,,
+"ASP , Component",Content Linking,"More Examples,ASP Content Linking Component,ASP Content Linking Example,ASP Content Linking Component's Methods",,"
+Build a table of contents.,
+Use the Content Linking Component to navigate between the pages in a text file.,The ASP Content Linking component is used to create a quick and easy navigation system!,The Content Linking component returns a Nextlink object that is used to hold a list of Web pages to be navigated.,First we create a text file - ""links.txt"":,The text file above contains the pages to be navigated. The pages must be listed in the same order you want them to be 
+displayed, and it must also contain a description for each file name (use the tab key to separate file name from description)., If you want to add a page, or change the order of the pages in the list; you only have to 
+modify the text file! The navigation will automatically be corrected!,Then we create an include file, ""nlcode.inc"". The .inc file creates 
+a NextLink object to navigate between the pages listed in ""links.txt"".,""nlcode.inc"":,In each of the .asp pages listed in the text file ""links.txt"", put one line of code: 
+,. This line will include the code in
+""nlcode.inc"" on every page listed in ""links.txt"" and the navigation will work.",,,
+"ASP , Component",Browser Capabilities,"ASP Browser Capabilities Component,ASP Browser Capabilities Example,The Browscap.ini File",Example,"The ASP Browser Capabilities component creates a BrowserType object that determines the type, capabilities and version number of a visitor's browser.,When a browser connects to a server, a User Agent header is also sent to the server. This header contains information about the browser.,The BrowserType object compares the information in the header with information in a file on the server called ""Browscap.ini"".,If there is a match between the browser type and version number in the header and the information in the ""Browscap.ini"" file, the BrowserType object 
+can be used to list the properties of the matching browser. If there is no match for the browser type and version number in the Browscap.ini file, it 
+will set every property to ""UNKNOWN"".,The example below creates a BrowserType object in an ASP file, and displays  
+some of the capabilities of your browser:,The ""Browscap.ini"" file is used to declare properties and to set default values for browsers.,This section is not a tutorial on how to maintain ""Browscap.ini"" files, it only shows you the basics;
+so you get an idea what the file is all about.,The ""Browscap.ini"" file can contain the following:,A ""Browscap.ini"" file might look something like this:","ActiveXControls - Support ActiveX controls?,Backgroundsounds - Support background sounds?,Cdf - Support Channel Definition Format for Webcasting?,Tables - Support tables?,Cookies - Support cookies?,Frames - Support frames?,Javaapplets - Support Java applets?,Javascript - Supports JScript?,Vbscript - Supports VBScript?,Browser - Specifies the name of the browser,Beta - Is the browser beta software?,Platform - Specifies the platform that the browser runs on,Version - Specifies the version number of the browser",,
+"ASP , Component",AdRotator,"ASP AdRotator Component,ASP AdRotator Example,ASP AdRotator Properties,ASP AdRotator Methods",Example,"The ASP AdRotator component creates an AdRotator object that displays a different image each time a user enters or refreshes a page. A
+text file includes information about the images., The AdRotator does not work with Internet Information Server 7 (IIS7).,Assume that we have the following text file, named ""ads.txt"":,The lines below the asterisk in the text file above specifies the name of the images (ads) to be displayed, the
+hyperlink addresses, the alternate text (for the images), and the display rates (in percent).,The first line in the text file above specifies what to happen when a visitor clicks on one of the images.
+The redirection page (banners.asp) will receive a querystring with the URL to redirect to., To specify the height, width, and border of the image, you can insert the following lines under REDIRECT:,The ""banners.asp"" file looks like this:,That's all!!",,,
+"ASP , Object",Dictionary,"More Examples,The Dictionary Object",,"The Dictionary object stores information in name/value pairs.,
+How to create a Dictionary object, and then use the Exists method to check if a specified key exists.,
+How to use the Items method to return an array of all the items.,
+How to use the Keys method to return an array of all the keys.,
+How to use the Item property to return the value of an item.,
+How to use the Key property to set a key in a Dictionary object.,
+How to use the Count property to return the number of key/item pairs.,The Dictionary object is used to store information in name/value pairs 
+(referred to as key and item). The Dictionary object might seem similar to 
+Arrays, however, the Dictionary object is a more desirable solution to 
+manipulate related data.,Comparing Dictionaries and Arrays:,The following example creates a Dictionary object, adds some key/item 
+pairs to it, and retrieves the item value for the key gr:,The Dictionary object's properties and methods are described below: ","Keys are used to identify the items in a Dictionary object,You do not have to call ReDim to change the size of the Dictionary object,When deleting an item from a Dictionary, the remaining items will   automatically shift up,Dictionaries cannot be multidimensional, Arrays can,Dictionaries have more built-in functions than Arrays,Dictionaries work better than arrays on accessing random elements frequently,Dictionaries work better than arrays on locating items by their content",,
+"ASP , Object",Folder,The Folder Object,,"The Folder Object is used to return information about a specified folder.,The Folder object is used to return information about a specified folder.,To work with the properties and methods of the Folder object, you will have to 
+create an instance of the Folder object through the FileSystemObject object. First; create a FileSystemObject
+object and then instantiate the Folder object through the GetFolder method of the FileSystemObject object.,The following code uses the GetFolder method of the FileSystemObject object to instantiate the Folder object
+and the DateCreated property to return the date when the specified folder was created:,The Folder object's collections, properties, and methods are described below: ",,,
+"ASP , Object",File,"More Examples,The File Object",Example,"The File object is used to return information about a specified file.,
+How to get the date and time a specified file was last modified.,
+How to get the date and time a specified file was last accessed.,
+How to return the attributes of a specified file.,The File object is used to return information about a specified file.,To work with the properties and methods of the File object, you will have to 
+create an instance of
+the File object through the FileSystemObject object. First; create a FileSystemObject
+object and then instantiate the File object through the GetFile method of the
+FileSystemObject object or through the Files property of the Folder object.,The following code uses the GetFile method of the FileSystemObject object to
+instantiate the File object and the DateCreated property to return the date when
+the specified file was created:,The File object's properties and methods are described below:",,,
+"ASP , Object",Drive,"More Examples,The Drive Object",,"The Drive object is used to get information about a local disk drive or a network share.,
+How to get the total size of a specified drive.,
+How to get the available space of a specified drive.,
+How to get the free space of a specified drive.,
+How to get the drive letter of a specified drive.,
+How to get the drive type of a specified drive.,
+How to get the file system of a specified drive.,
+How to check whether a specified drive is ready.,
+How to get the path of a specified drive.,
+How to get the root folder of a specified drive.,
+How to get the serialnumber of a specified drive.,The Drive object is used to return information about a local disk drive or a network share.
+The Drive object can return information about a drive's type of file system, free space,
+serial number, volume name, and more., You cannot return information about a drive's content with the
+Drive object. For this purpose you will have to use the Folder object.,To work with the properties of the Drive object, you will have to create an 
+instance of the Drive object through the FileSystemObject
+object. First; create a FileSystemObject object and then instantiate the Drive object 
+through the GetDrive method or
+the Drives property of the FileSystemObject object.,The Drive object's properties are described below:",,,
+"ASP , Object",TextStream,"More Examples,The TextStream Object",,"The TextStream object is used to access the contents of a text file.,
+How to 
+read from a text file.,
+How to only read a part of a TextStream file.,
+How to read one line from a TextStream file.,
+How to read all the lines from a TextStream file.,
+How to skip a specified number of characters when reading the TextStream file.,
+How to skip a line when reading the TextStream file.,
+How to return the current line number in a TextStream file.,
+How to get the column number of the current character in a file.,The TextStream object is used to access the contents of text files.,The following code creates a text file (c:\test.txt) and then writes some text
+to the file (the variable f is an instance of the TextStream object):,To create an instance of the TextStream object you can use the CreateTextFile or OpenTextFile methods of the FileSystemObject object,
+or you can use the OpenAsTextStream method of the File object.,The TextStream object's properties and methods are described below:",,,
+"ASP , Object",FileSystemObject,"More Examples,The FileSystemObject Object",,"The FileSystemObject object is used to access the file system on 
+a server.,
+How to check if a file exists.,
+How to check if a folder exists.,
+How to check if a drive exists.,
+How to get the name of a specified drive.,
+How to get the name of the parent folder of a specified path.,
+How to get the file name of the last component in a specified path.,
+How to get the file extension of the last component in a specified path.,
+How to get the base name of a file or folder, in a specified path.,The FileSystemObject object is used to access the file system on a server.,This object can manipulate files, folders, and directory paths. It is also
+possible to retrieve file system information with this object.,The following code creates a text file (c:\test.txt) and then writes some text to
+the file:",,,
+"ASP , Object",ASPError,The ASPError Object,,"The ASPError object displays information about errors in scripts.,The ASPError object was implemented in ASP 3.0 and is available in IIS5 and later.,The ASPError object is used to display detailed information of any error that occurs
+in scripts in an ASP page., The ASPError object is created when Server.GetLastError is
+called, so the error information can only be accessed by using the Server.GetLastError method.,The ASPError object's properties are described below (all properties are read-only):",,,
+"ASP , Object",Server,"More Examples,Server Object",,"The Server object is used to access properties and methods on the server.,
+Check when a file was last modified.,
+Open ""Textfile.txt"" for reading.,The ASP Server object is used to access properties and methods on the server. Its properties and methods are described below:",,,
+"ASP , Object",Session,"More Examples,Session Object",,"A Session object stores information about, or change settings for a user session.,
+Set or return an integer that specifies a location or region. Contents like date,
+time, and currency will be displayed according to that location or region.,
+Return
+a unique id for each user. The id is generated by the server.,
+Set and return the timeout (in minutes) of a session.,When you are working with an application on your computer, you open it, do some changes and then
+you close it. This is much like a Session. The computer knows who you are. It
+knows when you open the application and when you close it. However, on the internet there is one
+problem: the web server does not know who you are and what you do, because the HTTP address doesn't maintain state. ,ASP solves this problem by creating a unique cookie for each user. The cookie
+is sent to the user's computer and it contains information that identifies the user. This
+interface is called the Session object. ,The Session object stores information about, or change settings for a user session.,Variables stored in a Session object hold information about one single user, and are available to all pages in one application. Common information
+stored in session variables are name, id, and preferences. The server creates a new Session object for each new user, and destroys the Session object when the session expires. ,The Session object's collections, properties, methods, and events are 
+described below:",,,
+"ASP , Object",Request,Request Object,,"The Request object is used to get information from a visitor.,
+How to send query information to a page within a link, and retrieve that information on the
+destination page (which is, in this example, the same page).,
+Use the QueryString collection to retrieve the values from a form (the form uses 
+the get method - the information sent is visible to everybody).,
+How to use the values retrieved from a form.,
+What the QueryString collection contains if several input
+fields have equal names. It also shows how to use the Count keyword to count the 
+""name"" property.,
+How the Form collection retrieves the values from a form (the form uses the post
+method - the information sent is invisible to others).,
+How to use the values retrieved from a form.,
+What the Form collection contains if several
+input fields have equal names. It also shows how to use the Count keyword to 
+count the ""name"" property.,
+How to interact with the user through radio buttons.,
+How to interact with the user through checkboxes.,
+How to get the visitor's browser type, IP address, and more. ,
+How to create a Welcome Cookie.,
+How to find
+the total number of bytes the user sent in the Request object.,When a browser asks for a page from a server, it is called a request. The Request 
+object is used to get information from a visitor.
+Its collections, properties, and methods are described below:",,,
+"ASP , Object",Response,"More Examples,Response Object",,"The ASP Response object is used to send output to the user from the server.,
+,
+How to write text with ASP.
+,
+,
+How to combine text and HTML tags with ASP.
+,
+,
+How to redirect the user to a different URL.
+,
+,
+How to create a random link.,
+,
+How to control the buffer.
+,
+,
+How to clear the buffer.
+,
+,
+How to end a script in the middle of processing.
+,
+,
+How to specify how many minutes a page will be cached
+in a browser before it expires.
+,
+,
+How to specify a date/time a page cached in a browser
+will expire.
+,
+,
+How to check if a user is disconnected from the server.
+,
+,
+How to specify the type of content.
+,
+,
+How to specify the name of the character set.
+,The ASP Response object is used to send output to the user from the server. Its
+collections, properties, and methods are described below:",,,
+VBScript ,Keywords,VBScript Keywords,,,,,
+VBScript ,Functions,,,This page contains all the built-in VBScript functions. The page is divided into following sections:,,,
+"ASP , Object",Application,Application Object,,"A group of ASP files that work together to perform some purpose
+is called an application.
+The Application object is used to tie these files together.,An application on the Web may consists of several ASP files that work together to perform some purpose.
+The Application object is used to tie these files together.,The Application object is used to store and access variables from any page, just like the Session object. The difference
+is that ALL users share ONE Application object (with Sessions there is ONE Session object for EACH user).,The Application object holds information that will be used by many pages in the application (like database connection information).
+The information can be accessed from any page. The information can also be changed in one place, and the changes will automatically be reflected
+on all pages.,The Application object's collections, methods, and events are described 
+below:",,,
+ASP ,and VBScript Examples,,,"
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+",,,
+"ASP , with ","Sending e-mail,CDOSYS","Sending e-mail with CDOSYS,How about CDONTs?,Examples using CDOSYS",,"CDOSYS is a built-in component in ASP. This component is used to send e-mails with ASP.,CDO (Collaboration Data Objects) is a Microsoft technology that is designed to simplify the creation of messaging applications.,CDOSYS is a built-in component in ASP. We will show you how to use this component to send e-mail with ASP.,Microsoft has discontinued the use of CDONTs on Windows 2000, Windows XP and Windows 2003. If you have used CDONTs in your ASP applications, you should 
+update the code and use the new CDO technology.,Sending a text e-mail:,Sending a text e-mail with Bcc and CC fields:,Sending an HTML e-mail:,Sending an HTML e-mail that sends a webpage from a website:,Sending an HTML e-mail that sends a webpage from a file on your computer:,Sending a text e-mail with an Attachment:,Sending a text e-mail using a remote server:",,,
+ASP AJAX,,"What is AJAX?,How AJAX Works,AJAX is Based on Internet Standards,Google Suggest,Start Using AJAX Today,AJAX ASP Example,Example Explained,The ASP File - ""gethint.asp"",AJAX Database Example,Example Explained - The HTML Page,The ASP File","Example,Example,Example","AJAX is about updating parts of a web page, without reloading the whole page.,AJAX = Asynchronous JavaScript and XML.,AJAX is a technique for creating fast and dynamic web pages.,AJAX allows web pages to be updated asynchronously by exchanging small 
+amounts of data with the server behind the scenes. This means that it is 
+possible to update parts of a web page, without reloading the whole page.,Classic web pages, (which do not use AJAX) must reload the entire page if the 
+content should change.,Examples of applications using AJAX: Google Maps, Gmail, Youtube, and 
+Facebook tabs.,AJAX is based on internet standards, and uses a combination of:,AJAX was made popular in 2005 by Google, with Google Suggest., 
+is using AJAX to create a very dynamic web interface: 
+When you start typing in Google's search box, a JavaScript sends the letters off 
+to a server and the server returns a list of suggestions.,In our ASP tutorial, we will demonstrate how AJAX can update parts of a web 
+page, without reloading the whole page. The server script will be written in ASP.,If you want to learn more about AJAX, visit our ,.,The following example will demonstrate how a web page can communicate with a 
+web server while a user type characters in an input field:,In the example above, when a user types a character in the input field, a function 
+called ""showHint()"" is executed.,The function is triggered by the onkeyup event.,Here is the HTML code:,Code explanation:,First, check if the input field is empty (str.length == 0). If it is, clear the 
+content of the txtHint placeholder and exit the function.,However, if the input field is not empty, do the following:,The ASP file checks an array of names, and returns the corresponding name(s) to the 
+browser:,AJAX can be used for interactive communication with a database.,The following example will demonstrate how a web page can fetch 
+information from a database with AJAX:,When a user selects a customer in the dropdown list above, a function called ""showCustomer()"" is executed. The 
+function is triggered by the ""onchange"" event:,Source code explanation:,If no customer is selected (str.length==0), the function clears the 
+content of the txtHint placeholder and exits the function.,If a customer is selected, the showCustomer() function executes the following:,The page on the server called by the JavaScript above is an ASP file called ""getcustomer.asp"".,The source code in ""getcustomer.asp"" runs a query against a database, and returns the result in an HTML 
+table:","XMLHttpRequest object (to exchange data asynchronously with a server),JavaScript/DOM (to display/interact with the information),CSS (to style the data),XML (often used as the format for transferring data),Create an XMLHttpRequest object,Create the function to be executed when the server response is ready,Send the request off to an ASP file (gethint.asp) on the server,Notice that q parameter is added gethint.asp?q=""+str,The str variable holds the content of the input field,Create an XMLHttpRequest object,Create the function to be executed when the server response is ready,Send the request off to a file on the server,Notice that a parameter (q) is added to the URL (with the content of the 
+    dropdown list)",,
+ASP ,The Global.asa file,"The Global.asa file,Events in Global.asa,<object> Declarations,TypeLibrary Declarations,Restrictions,How to use the Subroutines,Global.asa Example",,"The Global.asa file is an optional file that can contain declarations of objects, variables, and methods that
+can be accessed by every page in an ASP application.,All valid browser scripts (JavaScript, VBScript, JScript, PerlScript, etc.) can be used within Global.asa.,The Global.asa file can contain only the following:, The Global.asa file must be stored in the root directory of the
+ASP application, and each application can only have one Global.asa file.,In  Global.asa you can tell the application and session objects what to do when the application/session starts and what to do when the
+application/session ends. The code for this is placed in event handlers. The Global.asa file can contain four types of events:, - This event occurs EVERY time a NEW user requests his or her first page in the ASP application., - This event occurs EVERY time a user ends a session. A user-session ends after a page has not been requested by the user for a 
+specified time (by default this is 20 minutes)., - This event occurs after the LAST user has ended the session. Typically, this event occurs when a Web server stops.
+This procedure is used to clean up settings after the Application stops, like delete records or write information to text files.,A Global.asa file could look something like this:, Because we cannot use the ASP script delimiters (<% and %>) to insert scripts in the Global.asa file, we put subroutines inside an HTML 
+<script> element.,It is possible to create objects with session or application scope in Global.asa by using the <object> tag., The <object> tag should be outside the <script> tag!,The first example creates an object of session scope named ""MyAd"" by using the ProgID parameter:,The second example creates an object of application scope named ""MyConnection"" by using the ClassID parameter:,The objects declared in the Global.asa file can be used by any script in the application:,A TypeLibrary is a container for the contents of a DLL file corresponding to a COM object. By including a call to the TypeLibrary in the Global.asa file,
+the constants of the COM object can be accessed, and errors can be better reported by the ASP code. If your Web application relies on COM objects that have
+declared data types in type libraries, you can declare the type libraries in Global.asa.,The server can return one of the following error messages:, METADATA tags can appear anywhere in the Global.asa file (both inside and outside <script> tags). However, it is recommended that
+METADATA tags appear near the top of the Global.asa file.,Restrictions on what you can include in the Global.asa file:,Global.asa is often used to initialize variables. , The example below shows how to detect the exact time a visitor first arrives on a Web site. The time is stored in a Session variable named 
+""started"", and the value of the ""started"" variable can be accessed from any ASP page in the application:,Global.asa can also be used to control page access.,The example below shows how to redirect every new visitor to another page, in this case to a
+page called ""newpage.asp"":,And you can include functions in the Global.asa file.,In the example below the Application_OnStart subroutine occurs when the Web server starts. Then
+the Application_OnStart subroutine calls another subroutine named ""getcustomers"".
+The ""getcustomers"" subroutine opens a database and retrieves a record set from
+the ""customers"" table. The record set is assigned to an array, where it
+can be accessed from any ASP page without querying the database:,In this example we will create a Global.asa file that counts the number of current visitors.,The Global.asa file:,To display the number of current visitors in an ASP file:","Application events,Session events,<object> declarations,TypeLibrary declarations,the #include directive, You cannot display text written in the Global.asa file. This file can't display information,You can only use Server and Application objects in the Application_OnStart and Application_OnEnd
+subroutines. In the Session_OnEnd subroutine, you can use Server, Application, and Session
+    objects. In the Session_OnStart subroutine you can use any built-in object,The Application_OnStart sets the Application variable ""visitors"" to 0 when the server starts,The Session_OnStart subroutine adds one to the variable ""visitors"" every time a new visitor arrives,The Session_OnEnd subroutine subtracts one from ""visitors"" each time this subroutine is triggered",,
+"ASP , Object",Application,"Application Object,Store and Retrieve Application Variables,Loop Through the Contents Collection,Loop Through the StaticObjects Collection,Lock and Unlock",,"A group of ASP files that work together to perform some purpose is called an application.,An application on the Web may consist of several ASP files that work together to perform some purpose.
+The Application object is used to tie these files together.,The Application object is used to store and access variables from any page, just like the Session object. The difference
+is that ALL users share ONE Application object (with Sessions there is ONE Session object for EACH user).,The Application object holds information that will be used by many pages in the application (like database connection information).
+The information can be accessed from any page. The information can also be changed in one place, and the changes will automatically be reflected
+on all pages.,Application variables can be accessed and changed by any page in an application.,You can create Application variables in ""Global.asa"" like this:,In the example above we have created two Application variables: ""vartime"" and ""users"".,You can access the value of an Application variable like this:,The Contents collection contains all application variables. You can loop through the Contents collection, to see what's stored in it:,If you do not know the number of items in the Contents collection, you can use the Count property:,You can loop through the StaticObjects collection, to see the values of all objects stored in the Application object:,You can lock an application with the ""Lock"" method. When an
+application is locked, the users cannot change the Application variables (other than the one currently accessing
+it). You can unlock an application with the ""Unlock"" method. This method
+removes the lock from the Application variable:",,,
+ASP.NET Web Pages ,- Classes,ASP.NET Classes Reference,,,,,
+ASP.NET Web Pages ,- Examples in C# and VB,,,Learn ASP.NET Web Pages by C# and Visual Basic examples.,,,
+ASP ,Including Files,"The #include Directive,How to Use the #include Directive,Syntax for Including Files,Tips and Notes",,"You can insert the content of one ASP file into another ASP file before the
+server executes it, with the #include directive.,The #include directive is used to create functions, headers, footers, or 
+elements that will be reused on multiple pages.,Here is a file called ""mypage.asp"":,Here is the ""wisdom.inc"" file:,Here is the ""time.inc"" file:,If you look at the source code in a browser, it will look something like this:,To include a file in an ASP page, place the #include directive inside comment tags:,Use the virtual keyword to indicate a path beginning with a virtual directory.,If a file named ""header.inc"" resides in a virtual directory named /html, the following line would insert the contents of ""header.inc"":,Use the file keyword to indicate a relative path. A relative path begins with the directory that contains the including file.,If you have a file in the html directory, and the file ""header.inc"" resides in html\headers, the following line would insert ""header.inc"" in your file:,Note that the path to the included file (headers\header.inc) is relative to the including file. 
+If the file containing this #include statement is not in the html directory, the statement will not work.,In the sections above we have used the file extension "".inc"" for included files. Notice that if a user tries to browse an INC file directly,
+its content will be displayed. If your included file contains confidential information or information you do not want any users to see, it is better to use an 
+ASP extension. The source code in an ASP file will not be visible after the interpretation. An included file can also include other files,
+and one ASP file can include the same file more than once., Included files are processed and inserted before the scripts are executed. The following script will NOT work because ASP executes the 
+#include directive before it assigns a value to the variable:,You cannot open or close a script delimiter in an INC file. The following script will NOT work:,But this script will work:",,,
+"ASP , Object",Session,"The Session object ,When does a Session Start?,When does a Session End?,Store and Retrieve Session Variables ,Remove Session Variables ,Loop Through the Contents Collection,Loop Through the StaticObjects Collection",,"A Session object stores information about, or change settings for a user session.,When you are working with an application on your computer, you open it, do some changes and then
+you close it. This is much like a Session. The computer knows who you are. It
+knows when you open the application and when you close it. However, on the internet there is one
+problem: the web server does not know who you are and what you do, because the HTTP address doesn't maintain state. ,ASP solves this problem by creating a unique cookie for each user. The cookie
+is sent to the user's computer and it contains information that identifies the user. This
+interface is called the Session object. ,The Session object stores information about, or change settings for a user session.,Variables stored in a Session object hold information about one single user, and are available to all pages in one application. Common information
+stored in session variables are name, id, and preferences. The server creates a new Session object for each new user, and destroys the Session object when the session expires. ,A session starts when:,A session ends if a user has not requested or refreshed a page in the application for a specified period. By default, this is 20 minutes. ,If you want to set a timeout interval that is shorter or longer than the default, 
+use the , property.,The example below sets a timeout interval of 5 minutes:,Use the , method to end a session immediately:, The main problem with sessions is WHEN they should end. We do 
+not know if the user's last request was the final one or not. So we do not know 
+how long we should keep the session ""alive"". Waiting too long for an idle 
+session uses up resources on the server, but if the session is deleted too soon 
+the user has to start all over again because the server has deleted all the 
+information. Finding the right timeout interval can be difficult!,The most important thing about the Session object is that you can store variables in it.,The example below will set the Session variable , to ""Donald Duck"" and the Session variable , to ""50"":,When the value is stored in a session variable it can be reached from ANY page in the ASP application:,The line above returns: ""Welcome Donald Duck"".,You can also store user preferences in the Session object, and then access
+that preference to choose what page to return to the user.,The example below specifies a text-only version of the page if the user has a low screen resolution: ,The Contents collection contains all session variables.,It is possible to remove a session variable with the Remove method.,The example below removes the session variable ""sale"" if the value of the session variable ""age"" is lower than 18: ,To remove all variables in a session, use the RemoveAll method: ,The Contents collection contains all session variables. You can loop through the Contents collection, to see what's stored in it: ,Result:,If you do not know the number of items in the Contents collection, you can use the Count property:,Result:,You can loop through the StaticObjects collection, to see the values of all objects stored in the Session object:","A new user requests an ASP file, and the Global.asa file includes a Session_OnStart procedure,A value is stored in a Session variable,A user requests an ASP file, and the Global.asa file uses the <object> tag to instantiate an object with session scope",,
+ASP.NET Web Pages ,- Publishing the Website,"
+1.
+Use the Latest Version of ASP.NET,
+2.
+Copy the Web Folders,
+3.
+    The DLL Files,4. Copy Your Data",,"Before you continue, make sure your hosting computer runs the latest version 
+of ASP.NET (4.0 or 4.5).,Copy your website (all folders and content) from your development computer to 
+an application folder on your remote hosting computer (server).,Make sure the bin folder, on your remote hosting computer, contains the same dll files as on your development computer.,After copying the bin folder, it should contain files like this:,Microsoft.Web.Infrastructure.dll,
+    NuGet.Core.dll,
+    System.Web.Helpers.dll,
+    System.Web.Razor.dll,
+    System.Web.WebPages.Administration.dll,
+    System.Web.WebPages.Deployment.dll,
+    System.Web.WebPages.dll,
+    System.Web.WebPages.Razor.dll,
+    WebMatrix.Data.dll,
+    WebMatrix.WebData,If your application contains data or a database. For instance an SQL Server Compact database (a .sdf file in App_Data 
+folder), consider the following:,Do you want to publish your test data to the 
+remote server?,Most likely not.,If you have test data on your development computer, it may overwrite production data on your remote hosting computer.,If you have to copy an SQL database (.sdf file), perhaps you should delete 
+everything in the database, and then copy the empty .sdf file from your development 
+computer to the server. ",,,
+ASP ,Cookies,"More Examples,What is a Cookie? ,How to Create a Cookie?,How to Retrieve a Cookie Value?,A Cookie with Keys,Read all Cookies,What if a Browser Does NOT Support Cookies?",,"A cookie is often used to identify a user.,
+How to create a Welcome cookie.,A cookie is often used to identify a user. A cookie is a small file that the server
+embeds on the user's computer. Each time the same computer requests a page with a browser, it will send the cookie
+too. With ASP, you can both create and retrieve cookie values.,The ""Response.Cookies"" command is used to create cookies., The Response.Cookies command must appear BEFORE the <html> tag.,In the example below, we will create a cookie named ""firstname"" and assign the value ""Alex"" to it:,It is also possible to assign properties to a cookie, like setting a date when the cookie should expire:,The ""Request.Cookies"" command is used to retrieve a cookie value.,In the example below, we retrieve the value of the cookie named ""firstname"" and display it on a page:, Firstname=Alex,If a cookie contains a collection of multiple values, we say that the cookie has Keys.,In the example below, we will create a cookie collection named ""user"".
+The ""user"" cookie has Keys that contains information about a user:,Look at the following code:,Assume that your server has sent all the cookies above to a user.,Now we want to read all the cookies sent to a user. The example below shows 
+how to do it (note that the code below checks if a cookie has Keys with the HasKeys property):,firstname=Alex,user:firstname=John,
+user:lastname=Smith,
+user:country=Norway,
+user:age=25,If your application deals with browsers that do not support cookies, you will
+have to use other methods to pass information from one page to another in your application.
+There are two ways of doing this:,You can add parameters to a URL:,And retrieve the values in the ""welcome.asp"" file like this:,You can use a form. The form passes the user input to ""welcome.asp"" when the user clicks on the Submit button:,Retrieve the values in the ""welcome.asp"" file like this:",,,
+ASP.NET Web Pages ,- WebSecurity Object,"Description,WebSecurity Object Reference - Properties,WebSecurity Object Reference - Methods,Initializing the WebSecurity Database,The WebSecurity Database,Simple Membership Configuration",_AppStart.cshtml,"The , provides security and authentication for 
+ASP.NET Web Pages applications.,With the WebSecurity object you can create user accounts, login and logout users, 
+reset or change passwords, and more.,You must create or initialize an WebSecurity database before you can use the WebSecurity 
+object in your code.,In the root of your web, create a page (or edit the page ) named ,. ,Put the following code inside the file:,The code above will run each time the web site (application) starts. It 
+initializes the WebSecurity database., is the name of the WebSecurity database (Users.sdf)., is the name of the database table that 
+contains the user profile information., is the name of the column that 
+contains the user IDs (primary key). , is the name of the column that contains 
+user names.,The last parameter , is a boolean value indicating that 
+the user profile and 
+membership tables should be created automatically if they don't exist, otherwise
+,.,The , table contains one record for each user, 
+with a user ID (primary key) and the user's name (email):,The , will contain membership information 
+about when the user was created and if (and when) the membership was confirmed.,Much like this (some columns are not shown):,You might get errors using the WebSecurity object, if your site is not configured to use the ASP.NET 
+Web Pages membership system ,.,This can occur if a 
+hosting provider's server is configured differently than your local server. To 
+fix this, add the following element to the site's Web.config file:",,,
+ASP.NET Web Pages ,- The WebMail Helper,"The WebMail Helper,
+Scenario: Email Support,
+First: Edit Your AppStart Page ,
+Second: Create an Email Input Page,
+Third: Create An Email Send Page,WebMail Object Reference - Properties,WebMail Object Reference - Methods,Technical Data,Initializing the WebMail Helper","_AppStart.cshtml,_AppStart.cshtml,Email_Input.cshtml,Email_Send.cshtml,_AppStart.cshtml","The WebMail Helper - One of many useful ASP.NET Web Helpers.,With the WebMail object you can easily send emails from a web page.,The WebMail Helper makes it easy to send an email from a web application 
+using SMTP (Simple Mail transfer Protocol).,
+To demonstrate the use of email, we will create an input page for support, let 
+the user submit the page to another page, and send an email about the support 
+problem.,
+If you have built the Demo application in this tutorial, you already have a page 
+called _AppStart.cshtml with the following content:,
+To initiate the WebMail helper, add the the following 
+WebMail properties to your AppStart page:,Properties explained:, The name the SMTP server that will be used to 
+send the emails., The port the server will use to send SMTP 
+transactions (emails)., True, if the server should use SSL (Secure Socket 
+Layer) encryption., The name of the SMTP email account used to send 
+the email., The password of the SMTP email account., The email to appear in the from address (often the 
+same as UserName).,
+Then create an input page, and name it Email_Input:,The purpose of the input page is to collect information, then 
+submit the data to a new page that can send the information as an email.,
+Then create the page that will be used to send the email, and name it Email_Send:,The Send() method has the following parameters:,And the following optional parameters:,To use the WebMail helper, you need access to an SMTP server. SMTP is the 
+""output"" part of email. If you use a web host, you probably already know the 
+name of the SMTP server. If you work in a corporate network, your IT department 
+can give you the name. If you are working at home, you 
+might be able to use your ordinary email provider., In order to send an email you will need:,In the root of your web, create a page (or edit the page ) named ,. ,Put the following code inside the file:,The code above will run each time the web site (application) starts. It 
+feeds your , with initial values.,Please substitute:, with the name the SMTP server that will be used to 
+send the emails., with the port number the server will use to send SMTP 
+transactions (emails)., with true, if the server should use SSL (Secure Socket 
+Layer) encryption., with the name of the SMTP email account used to send 
+emails., with the password of the SMTP email account.,with the email to appear in the from address.","The name of the SMTP server ,The port number (most often 25) ,An email user name,An email password",,
+ASP.NET Web Pages ,- The Chart Helper,"The Chart Helper,Chart From an Array,Chart From Database Data,Chart From XML Data,Chart Object Reference","Example,Example,Example,Example","The Chart Helper - One of many useful ASP.NET Web Helpers.,In the previous chapters, you learned how to use an ASP.NET ""Helper"".,You learned how to display data in a grid using the ""WebGrid Helper"". ,This chapter explains how to display data in graphical form, using the ""Chart 
+Helper"".,The ""Chart Helper"" can create chart images of different types with many 
+formatting options and labels. It can create standard charts like area charts, 
+bar charts, column charts, line charts, and pie charts, along with more 
+specialized charts like stock charts.,
+,
+,
+,
+The data you display in a chart can be from an array, from a database, or from data in a file.
+,
+The example below shows the code needed to display a chart from an array of values:,- , creates a new chart object and sets its width and height,- the , method 
+specifies the chart title,- the , method adds data to the chart,- the , parameter defines the type of chart,- the , parameter defines x-axis names,- the , parameter defines the y-axis values,- the , method displays the chart 
+,You can run a database query and then use data from the results to create a 
+chart:,- , opens the database (and assigns the database 
+object to the variable db),- , runs a database query and stores the result in 
+dbdata,- , creates a chart new object and sets its width and height,- the , method 
+specifies the chart title,- the , method binds the data source to the chart,- the , method displays the chart 
+,An alternative to using the DataBindTable method is to use AddSeries (See 
+previous example). DataBindTable is easier to use, but AddSeries is more flexible because you 
+can specify the chart and data more explicitly:",,,
+ASP.NET Web Pages ,- The WebGrid Helper,"Doing the HTML Yourself,Using The WebGrid Helper,WebGrid Object Reference","Database Example,WebGrid Example","WebGrid - One of many useful ASP.NET Web Helpers.,In a previous chapter, you displayed database data by using razor code,  
+and doing the HTML markup yourself: ,Using the WebGrid helper is an easier way to display data.,The WebGrid helper:","Automatically sets up an HTML table to display data,Supports different options for formatting,Supports paging through data,Supports Sorting by clicking on column headings",,
+ASP.NET Web Pages ,- Helpers,"ASP.NET Helpers,The WebGrid Helper,The Chart Helper,The WebMail Helper,The WebImage Helper,Third Party Helpers,Analytics (Google),Bing,Crypto,Facebook,FileUpload,GamerCard,Gravatar Object Reference,Json,LinkShare,ModelState,ObjectInfo,Recaptcha,ServerInfo,Twitter,Video,WebCache,WebImage",,"Web Helpers greatly simplifies web development and common 
+programming tasks.,ASP.NET helpers are components that can be accessed by single lines of 
+Razor code.,You can build your own helpers using Razor syntax stored as .cshtml files, or 
+use built-in ASP.NET helpers.,You will learn how to use Razor helpers in the next chapters of this 
+tutorial.,Below is a short description of some useful Razor helpers:,The WebGrid helper simplifies the way to display data:,The ""Chart Helper"" can display chart images of different types with 
+many formatting options and labels.,
+,
+,
+,
+The Chart helper can display data from arrays , from databases, or from files.
+,The WebMail helper provides functions for sending email messages using SMTP 
+(Simple Mail Transfer Protocol).,The WebImage helper provides functionality to manage images in a web page.,Keywords: flip, rotate, resize, watermark.,With Razor you can take advantage of built-in or third party helpers to 
+simplify the use of email, databases, multimedia, and social networks as well as 
+many other issues like navigation and web security.
+","Automatically sets up an HTML table to display data,Supports different options for formatting,Supports paging (First, next, previous, last) through data,Supports sorting by clicking on column headings",,
+ASP.NET Web Pages ,- Databases,"What We Will Do,Displaying Data from Database,Adding a Customers Page,Example Explained,ASP.NET Database Object Reference",Products.cshtml,"This chapter is about working with databases.,In this chapter we will:,With Web Pages, you can easily display data from a database.,You can connect to an existing database, or create a new database from scratch.,In this example we will connect to an existing SQL Server Compact database.,In the ""DemoWebPages"" folder, create a new CSHTML file named ""Products.cshtml"".,Replace the code in the file with the code from the example below:,The Database.Open(,) method will connect to a database in two 
+steps:,First, it searches the application's App_Data folder for a database that 
+matches the , parameter without the file-name extension.,If no file is found, it looks for a ""connection string"" in the 
+application's Web.config file.,(A connection string contains information about how to connect to a database. It can include a file path, or the name of an SQL database, with full user name and password),This two-step search makes it possible to test the application with a local 
+database, and run the application on a web host using a connection string. ",Create a web page to list data from a database,,
+ASP.NET Web Pages ,- Files,"Working with Text Files,Add a Text File Manually,Displaying Data from a Text File,Example explained,Displaying Data from an Excel File","Persons.txt,Example","This chapter is about working with text files.,Sometimes you will want to access data stored in text files.,Text files used to store data is often called flat files.,Common flat file 
+formats are .txt, .xml, and .csv (comma-delimited values). ,In the example to follow, you will need a text file to work with.,On your web site, if you don't have an App_Data folder, create one.,In the App_Data folder, create a new file named Persons.txt.,Add the following content to the file: ,The example below shows how to display data from a text file:  , finds the exact text file path., opens the text file and reads all lines 
+from the file into an array.,For each , in each , of the 
+array the data is displayed.,With Microsoft Excel, you can save a spreadsheet as a comma separated text 
+file (.csv file). When you do so, each row in the spreadsheet is saved as a text 
+line, and each data column is separated by a comma. ,You can use the example above to read an Excel .csv file (just change the 
+file name to the name of the Excel file).",How to read and display data from a text file,,
+ASP.NET Web Pages ,- HTML Forms,"Creating an HTML Input Page,Razor Example - Displaying Images,Example explained","Razor Example,Razor Example","A form is a section of an HTML document where you put input 
+controls (text boxes, check boxes, radio buttons, and pull-down lists).,Suppose you have 3 images in your image folder, and you want to display images dynamically 
+by the users choice.,This is easily done by a little Razor code. ,If you have an image called ""Photo1.jpg"" in your images folder on your web 
+site, you can display the image using an HTML 
+<img> element like this:,The example below shows how to display a selected 
+picture which the user selects 
+from a drop-down list:  ,The server creates a variable called ,.,The HTML page has a , (a <select> element) named ,. 
+It lets the user select a friendly name (like ,), and passes a file 
+name (like ,) when the page is submitted to the web server.,The Razor code reads the value of Choice by ,. If it has a value the 
+code constructs a path to the image images/Photo1.jpg, and stores it in the 
+variable ,.,In the HTML page there is an <img>
+element to display the image. The src attribute is set to the value of the imagePath 
+variable when the page displays.,The <img> element is in an if block to 
+prevent trying to display an image with no name (like the first time the page is 
+displayed).",,,
+ASP.NET Web Pages ,- Global Pages,"Before Web Startup: _AppStart,Before Every Page: _PageStart,How Does it Work?",,"This chapter is about the global pages AppStart and PageStart.,
+Most server side code are written inside individual web pages. For example, if a 
+web page contains an input form, the web page typically contains server code for 
+reading the data.,
+However, by creating a page named _AppStart in the root of your site, you can 
+have startup code executed before the site starts. If this page 
+exists, ASP.NET runs it the first time any page in the site is requested.,
+Typical use for _AppStart is startup code and initialization of global values 
+like counters and global names.,
+, _AppStart should have the same file extension as your 
+web pages, like: _AppStart.cshtml.  ,
+,_AppStart has an underscore prefix. Because of this, 
+the files cannot be browsed directly.,
+Just like _AppStart runs before your site starts, you can write code that 
+runs before any page in each folder.,
+For each folder in your web, you can add a file named _PageStart.,
+Typical use for _PageStart is setting the layout page for all pages in a 
+folder, or checking that a user is logged in before running a page.,
+The following diagram shows how it works:,
+,
+When a request comes in, ASP.NET checks whether _AppStart exists. 
+If so, and this is the first request to the site, _AppStart runs.,
+Then ASP.NET checks whether _PageStart exists. If so, _PageStart runs, before the requested page.,
+If you include a call to RunPage() inside _PageStart you specify where you want 
+the requested page to run. If not, the _PageStart runs before the 
+requested page.",,,
+ASP.NET Web Pages ,- Objects,"The Page Object,Some Page Object Methods,
+,Some Page Object Properties,
+,The Page Property (of the Page Object)","Home.cshtml,Layout.cshtml"," Web Pages is much often about Objects.,You have already seen some Page Object methods in use:,In the previous chapter you saw two Page Object properties being used (IsPost, and 
+Request):,The Page property of the Page Object, provides property-like access to data shared between pages and layout 
+    pages.,You can use (add) your own properties to the Page property:,The pages property is very helpful. For instance, it makes it possible to set 
+the page title in content files, and use it in the layout file:","Page.Title,Page.Version,Page.anythingyoulike",,
+ASP.NET Web Pages ,- Folders,"Logical Folder Structure,Physical Folder Structure,Virtual and Physical Names,URLs and Paths,The ~ Operator,The 
+Server.MapPath Method,The Href Method",,"This chapter is about folders and folder paths.,In this chapter you will learn:,
+Below is a typical folder structure for an ASP.NET web pages web site: ,
+The physical  
+structure for the ""Images"" folder at the website above might look like this on a computer:,
+C:\Johnny\Documents\MyWebSites\Demo\Images , ,
+From the example above:,
+The virtual name of a web picture might be ""Images/pic31.jpg"".,
+But the physical name is ""C:\Johnny\Documents\MyWebSites\Demo\Images\pic31.jpg"",URLs are used to access files from the web:
+, ,The URL corresponds 
+to a physical file on a server: C:\MyWebSites\w3schools\html\html5_intro.asp ,A virtual 
+path is shorthand to represent physical paths. If you use virtual paths, you can move your 
+pages to a different domain 
+(or server) without having to update the paths. ,The root on a disk drive is written like C:\, but the root on a web site is  / 
+(forward slash).,The virtual path of a 
+web folder is (almost) never the same as the physical folder.,In your code you will, reference both the physical path and the virtual path, depending on what 
+you are coding. ,ASP.NET has 3 tools for working with folder paths: the ~ operator, the Server.MapPath method, 
+and the Href method.,To specify the virtual root in programming code, use the ~ operator.,If you use the ~ operator, instead of a path, you can move your website to a different folder or 
+location without changing any code:,The Server.MapPath method converts a virtual path (/default.cshtml) to a 
+physical path that the server can understand (C:\Johnny\MyWebSited\Demo\default.cshtml).,You will use this method when you need to open data 
+files located on the server (data files can only be accessed with a full 
+physical path):,You will learn more about reading from (and writing to) data files on the server in 
+the next chapter of this tutorial.,The Href method converts a path used in the code to a path that the browser 
+can understand (the browser cannot understand the ~ operator).,You use the Href method to create paths to resources like image files, and CSS files.,You will often use this method in HTML 
+<a>, <img>, and <link> elements:,The Href method is a method of the WebPage Object.","About Logical and Physical folder structures,About Virtual and Physical names,About web URLs and Paths,The ""Account"" folder contains logon and security files,The ""App_Data"" folder contains databases and data files,The ""Images"" folder contains images,The ""Scripts"" folder contains browser scripts,The ""Shared"" folder contains common files (like layout and style files)",,
+ASP.NET Web Pages ,- Page Layout,"A Consistent Look,Content Blocks,Using a Layout Page,D.R.Y. - Don't Repeat Yourself,Preventing Files from Being Browsed,Hiding Sensitive Information","Example,Layout Page:,Any Web Page:,_AppStart.cshtml","With Web Pages it is easy to create a web site with a 
+consistent layout.,On the Internet you will discover many web sites with a consistent look and 
+feel:,With Web Pages this can be done very efficiently. You can have reusable 
+blocks of content (content blocks), like headers and footers, in separate files.,You can 
+also define a consistent layout for all your pages, using a layout template 
+(layout file).,Many websites have content that is displayed on every 
+page (like headers and footers).,With Web Pages you can use the , method to import content from separate 
+files.,Content block (from another file) can be imported anywhere in a web page, and 
+can contain text, markup, and code, just like any regular web page. ,Using common headers and footers as an example, this saves you a lot of work. You don't have to write the 
+same content in every page, and when you change the header or footer files, the 
+content is 
+updated in all your pages.,This is how it looks in code:,In the previous section, you saw that including the same content in many 
+web pages is easy.,Another approach to creating a consistent look is to use a layout page. A layout page 
+contains the structure, but not the content, of a web page. When a web page 
+(content page) is linked to a layout page, it will be displayed 
+according to the layout page (template).,The layout page is just like a normal web page, except from a call to the
+, method where the content page will be 
+included.,Each content page must start with a ,.,This is how it looks in code:,With two ASP.NET tools, Content Blocks and Layout Pages, you can give your 
+web applications a consistent look.,These tools also save you a lot of work, since you don't have to repeat the 
+same information on all pages. Centralizing markup, style, and code makes web 
+applications much more manageable and easier to maintain.,With ASP.NET, files with a name that starts with an underscore cannot be 
+browsed from the web.,If you want to prevent your content blocks or layout files from being viewed 
+by your users, rename the files to:,_header.cshtml,_footer.cshtml,_Layout.cshtml,With ASP.NET, the common way to hide sensitive information (database passwords, 
+email passwords, etc.) is to keep the information in a separate file named 
+""_AppStart"".","Every page have the same header,Every page have the same footer,Every page have the same style and layout",,
+ASP.NET Web Pages ,- Adding Razor Code,"Razor Markup,Razor Syntax for C#,Razor Syntax for VB,More About C# and Visual Basic","Example,C# Example,VB Example","ASP.NET Web Pages use Razor markup with C# or VB code,Razor is a simple , for embedding server code 
+(C# or VB) into ASP.NET web pages.,The page above contains both ordinary HTML markup and Razor markup.,If you want to learn more about Razor, and the C# and Visual Basic 
+programming languages:,Go to the , of 
+this tutorial. ","C# code blocks are enclosed in @{ ... },Inline expressions (variables or functions) start with @,Code statements end with semicolon,Variables are declared with the var keyword, or the datatype (int, string, 
+  etc.) ,Strings are enclosed with quotation marks,C# code is case sensitive,C# files have the extension .cshtml,VB code blocks are enclosed in @Code ... End Code,Inline expressions (variables or functions) start with @,Variables are declared with the Dim keyword,Strings are enclosed with quotation marks,VB code is not case sensitive,VB files have the extension .vbhtml",,
+ASP.NET Web Pages  ,- Tutorial,"Easy Learning with ""Run Example"",ASP.NET Web Pages,Web Pages Tutorial,Web Pages Examples,Web Pages References",Web Pages Example,"Our ""Run Example"" tool displays the ASP.NET code and the HTML output simultaneously.,Click on the ""Run Example"" button to see how it works:,Web Pages is one of many programming models for creating ASP.NET web sites and 
+web applications.,Web Pages provides an easy way to combine HTML, 
+CSS, and server code: ,In addition, Web Pages applications are easily extendable with programmable helpers 
+for 
+databases, videos, graphics, social 
+networking and more.
+,If you are new to ASP.NET, Web Pages is a perfect place to start. ,In this Web Pages tutorial you will learn how to combine HTML, CSS, JavaScript 
+and server code, using server code written in VB 
+or C# .,You will also learn how to extend your web pages with programmable Web 
+Helpers. ,Learn by examples!,Because ASP.NET code is executed on the server, you
+cannot view the code in your browser. You will only see the output as plain HTML. ,At W3Schools every example displays the hidden 
+ASP.NET code. This
+makes it easier for you to understand how it works., ,At the end of this tutorial you will find a complete set of ASP.NET references with objects, 
+components, properties and methods., ","Easy to learn, understand, and use,Uses an SPA application model (Single Page Application),Similar to PHP and Classic ASP,VB (Visual Basic) or C# (C sharp) scripting languages ",,

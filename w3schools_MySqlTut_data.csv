@@ -1,0 +1,272 @@
+H1_leftside_heading,H1_rightside_heading,H2,H3,All_para,li,div,div_2
+MySQL ,Tutorial,"Examples in Each Chapter,MySQL Exercises,MySQL Examples,MySQL Quiz Test,MySQL References",Example,"With our online MySQL editor, you can edit the SQL statements, and click on a button to view the result.,Click on the ""Try it Yourself"" button to see how it works.,Learn by examples! This tutorial supplements all explanations with clarifying examples.,Test your MySQL skills at W3Schools!,At W3Schools you will find a complete reference of MySQL data types and functions:",,,
+MySQL ,Self Join,"MySQL Self Join,Demo Database,MySQL Self Join Example",Example,"A self join is a regular join, but the table is joined with itself., and , are different table aliases for the same table.,In this tutorial we will use the well-known Northwind sample database.,Below is a selection from the ""Customers"" table:,The following SQL statement matches customers that are from the same city:",,,
+"MySQL , Keyword",CROSS JOIN,"SQL CROSS JOIN Keyword,Demo Database,MySQL CROSS JOIN Example","Example,Example","The , keyword returns all records 
+from both tables (table1 and table2).,In this tutorial we will use the well-known Northwind sample database.,Below is a selection from the ""Customers"" table:,And a selection from the ""Orders"" table:,The following SQL statement selects all customers, and all orders:, The , keyword returns all matching 
+records from both tables whether the other table matches or not. So, if 
+there are rows in ""Customers"" that do not have matches in ""Orders"", or if there 
+are rows in ""Orders"" that do not have matches in ""Customers"", those rows will be 
+listed as well.,If you add a , clause (if table1 and 
+table2 has a relationship), the , will 
+produce the same result as the , clause:",,,
+"MySQL , Keyword",RIGHT JOIN,"MySQL RIGHT JOIN Keyword,Demo Database,MySQL RIGHT JOIN Example",Example,"The , keyword returns all records from the right table (table2), and the 
+matching records (if any) from the left table (table1).,In this tutorial we will use the well-known Northwind sample database.,Below is a selection from the ""Orders"" table:,And a selection from the ""Employees"" table:,The following SQL statement will return all employees, and any orders they 
+might have placed:, The , keyword returns all records from the 
+right table (Employees), even if there are no matches in the left table 
+(Orders).",,,
+"MySQL , Statement",GROUP BY,"The MySQL GROUP BY Statement,Demo Database,MySQL GROUP BY Examples,Demo Database,GROUP BY With JOIN Example","Example,Example,Example","The , statement groups rows that have the same values into summary 
+rows, like ""find the number of customers in each country"".,The , statement is often used with aggregate functions (,, 
+,, 
+,, ,, 
+,) to group the result-set by one or more columns.,Below is a selection from the ""Customers"" table in the Northwind sample 
+database:,The following SQL statement lists the number of customers in each country:,The following SQL statement lists the number of customers in each country, 
+sorted high to low:,Below is a selection from the ""Orders"" table in the Northwind sample database:,And a selection from the ""Shippers"" table:,The following SQL statement lists the number of orders sent by each shipper:",,,
+MySQL ,EXISTS Operator,"The MySQL EXISTS Operator,Demo Database,MySQL EXISTS Examples","Example,Example","The , operator is used to test for the existence of any record in a subquery.,The , operator returns TRUE if the subquery returns one or more records.,Below is a selection from the ""Products"" table in the Northwind sample database:,And a selection from the ""Suppliers"" table:,The following SQL statement returns TRUE and lists the suppliers with a product price less than 20:,The following SQL statement returns TRUE and lists the suppliers with a product price 
+equal to 22:",,,
+MySQL ,ANY and ALL Operators,"The MySQL ANY and ALL Operators,The ANY Operator,The ALL Operator,Demo Database,SQL ANY Examples,SQL ALL Examples","Example,Example,Example,Example,Example","The , and , operators allow you to perform a comparison between a single 
+column value and a range of other values.,The , operator:, means that the condition will be true if the operation is true for 
+any of the values in the range.,The , operator:, means that the condition will be true only if the operation is true 
+for all values in the range.,Below is a selection from the , table in the Northwind sample database:,And a selection from the , table:,The following SQL statement lists the ProductName if it 
+finds ANY records in the OrderDetails table has Quantity equal to 10 (this will 
+return TRUE because the Quantity column has some values of 10):,The following SQL statement lists the ProductName if it 
+finds ANY records in the OrderDetails table has Quantity larger than 99 (this 
+will return TRUE because the Quantity column has some values larger than 99):,The following SQL statement lists the ProductName if it 
+finds ANY records in the OrderDetails table has Quantity larger than 1000 (this 
+will return FALSE because the Quantity column has no values larger than 1000):,The following SQL statement lists ALL the product names:,The following SQL statement lists the ProductName if ALL the records in the 
+OrderDetails table has Quantity equal to 10. This will of course return FALSE 
+because the Quantity column has many different values (not only the value of 10):","returns a boolean value as a result,returns TRUE if ANY of the subquery values meet the condition,returns a boolean value as a result,returns TRUE if ALL of the subquery values meet the condition,is used with ,, 
+  , and , statements",,
+"MySQL , Keyword",LEFT JOIN,"MySQL LEFT JOIN Keyword,Demo Database,MySQL LEFT JOIN Example",Example,"The , keyword returns all records 
+from the left table (table1), and the matching records (if any) from the right table (table2). ,In this tutorial we will use the well-known Northwind sample database.,Below is a selection from the ""Customers"" table:,And a selection from the ""Orders"" table:,The following SQL statement will select all customers, and any orders they might have:, The , keyword returns all records from the 
+left table (Customers), even if there are no matches in the right table (Orders).",,,
+"MySQL , Operator",UNION,"The MySQL UNION Operator,Demo Database,SQL UNION Example,SQL UNION ALL Example,SQL UNION With WHERE,SQL UNION ALL With WHERE,Another UNION Example","Example,Example,Example,Example,Example","The , operator is used to combine the result-set of two or more 
+, 
+statements.,The , operator selects only distinct values by default. To allow 
+duplicate values, use ,:, The column names in the result-set are usually equal to 
+the column names in the first , statement.,In this tutorial we will use the well-known Northwind sample database.,Below is a selection from the ""Customers"" table:,And a selection from the ""Suppliers"" table:,The following SQL statement returns the cities 
+(only distinct values) from both the ""Customers"" and the ""Suppliers"" table:, If some customers or suppliers have the same city, each city will only be 
+listed once, because , selects only distinct values. Use 
+, to also select 
+duplicate values!,The following SQL statement returns the cities 
+(duplicate values also) from both the ""Customers"" and the ""Suppliers"" table:,The following SQL statement returns the German cities 
+(only distinct values) from both the ""Customers"" and the ""Suppliers"" table:,The following SQL statement returns the German cities (duplicate values also) from 
+both the ""Customers"" and the ""Suppliers"" table:,The following SQL statement lists all customers and suppliers:,Notice the ""AS Type"" above - it is an alias. , are used to give a table or a column a temporary name.
+An alias only exists for the duration of the query. So, here we have created a 
+temporary column named ""Type"", that list whether the contact person is a 
+""Customer"" or a ""Supplier"".","Every , statement within
+  , must have the same number 
+of columns,The columns must also have similar data types,The columns in 
+  every , statement must also be in the same order",,
+"MySQL , Statement",CASE,"The MySQL CASE Statement,CASE Syntax,Demo Database,MySQL CASE Examples","Example,Example","The , statement goes through conditions and returns a value when the first condition is 
+met (like an if-then-else statement). So, once a condition is true, it will stop 
+reading and return the result. If no conditions are true, it returns 
+the value in the , clause. ,If there is no , part and no conditions are true, it returns NULL.,Below is a selection from the ""OrderDetails"" table in the Northwind sample database:,The following SQL goes through conditions and returns a value when the first condition is met:,The following SQL will order the customers by City. However, if City is NULL, then order by Country:",,,
+"MySQL , Clause",HAVING,"The MySQL HAVING Clause,Demo Database,MySQL HAVING Examples,Demo Database,More HAVING Examples","Example,Example,Example,Example","The , clause was added to SQL because the 
+, keyword cannot be 
+used with aggregate functions.,Below is a selection from the ""Customers"" table in the Northwind sample 
+database:,The following SQL statement lists the number of customers in each country. 
+Only include countries with more than 5 customers:,The following SQL statement lists the number of customers in each country, 
+sorted high to low (Only include countries with more than 5 customers):,Below is a selection from the ""Orders"" table in the Northwind sample database:,And a selection from the ""Employees"" table:,The following SQL statement lists the employees that have registered more 
+than 10 orders:,The following SQL statement lists if the employees ""Davolio"" or ""Fuller"" have registered 
+more than 25 orders:",,,
+"MySQL , Statement",INSERT INTO SELECT,"The MySQL INSERT INTO SELECT Statement,Demo Database,MySQL INSERT INTO SELECT Examples","Example,Example,Example","The , statement copies data from one table and 
+inserts it into another table.,The , statement requires that 
+the data types in source and target tables matches., The existing records in the target table are unaffected.,Copy all columns from one table to another table:,Copy only some columns from one table into another table:,In this tutorial we will use the well-known Northwind sample database.,Below is a selection from the ""Customers"" table:,And a selection from the ""Suppliers"" table:,The following SQL statement copies ""Suppliers"" into ""Customers"" (the columns 
+that are not filled with data, will contain NULL):,The following SQL statement copies ""Suppliers"" into ""Customers"" (fill all 
+columns):,The following SQL statement copies only the German suppliers into ""Customers"":",,,
+"MySQL , Keyword",INNER JOIN,"MySQL INNER JOIN Keyword,Demo Database,MySQL INNER JOIN Example,JOIN Three Tables","Example,Example","The , keyword selects records that have matching values in both tables.,In this tutorial we will use the well-known Northwind sample database.,Below is a selection from the ""Orders"" table:,And a selection from the ""Customers"" table:,The following SQL statement selects all orders with customer information:, The , keyword selects all rows from both 
+tables as long as there is a match between the columns. If there are records in the 
+""Orders"" table that do not have matches in ""Customers"", these orders will not 
+be shown!,The following SQL statement selects all orders with customer and shipper 
+information:",,,
+MySQL ,Joins,"MySQL Joining Tables,Supported Types of Joins in MySQL",Example,"A , clause is used to combine rows from two or more tables, based on 
+a related column between them.,Let's look at a selection from the ""Orders"" table:,Then, look at a selection from the ""Customers"" table:,Notice that the ""CustomerID"" column in the ""Orders"" table refers to the 
+""CustomerID"" in the ""Customers"" table. The relationship between the two tables above 
+is the ""CustomerID"" column.,Then, we can create the following SQL statement (that contains an ,), 
+that selects records that have matching values in both tables:,and it will produce something like this:,
+, 
+, 
+, 
+,
+",": Returns records that have matching values in both tables,: Returns all records from the left table, and the matched records from the right table,: Returns all records from the right table, and the matched records from the left table,: Returns all records from both 
+  tables",,
+MySQL ,Exercises,"Exercises,Count Your Score",,"You can test your MySQL skills with W3Schools' Exercises.,We have gathered a variety of MySQL exercises (with answers) for each MySQL Chapter.,Try to solve an exercise by filling in the missing parts of a code. If you're stuck, hit the ""Show Answer"" button to see what you've done wrong.,You will get 1 point for
+each correct answer. Your score and total score will always be displayed.",,,
+MySQL ,Aliases,"MySQL Aliases,Demo Database,Alias for Columns Examples,Alias for Tables Example","Example,Example,Example,Example,Example","Aliases are used to give a table, or a column in a table, a temporary name.,Aliases are often used to make column names more readable.,An alias only exists for the duration of that query.,An alias is created with the , keyword.,In this tutorial we will use the well-known Northwind sample database.,Below is a selection from the ""Customers"" table:,And a selection from the ""Orders"" table:,The following SQL statement creates two aliases, one for the CustomerID 
+column and one for the CustomerName column:,The following SQL statement creates two aliases, one for the CustomerName 
+column and one for the ContactName column. , Single or double quotation marks 
+are required if the alias name contains spaces:,The following SQL statement creates an alias named ""Address"" that combine four columns (Address, PostalCode, 
+City and Country):,The following SQL statement selects all the orders from the customer with 
+CustomerID=4 (Around the Horn). We use the ""Customers"" and ""Orders"" tables, and 
+give them the table aliases of ""c"" and ""o"" respectively (Here we use 
+aliases to make the SQL shorter):,The following SQL statement is the same as above, but without aliases:,Aliases can be useful when:","There are more than one table involved in a query,Functions are used in the query,Column names are big or not very readable,Two or more columns are combined together",,
+MySQL ,Quiz,"The Test,Count Your Score",,"You can test your MySQL skills with W3Schools' Quiz.,The test contains 25 questions and there is no time limit.,The test is not official, it's just a nice way to see how much you know, or don't know, about 
+MySQL and SQL.,You will get 1 point for each correct answer. At the end of the Quiz, your total score will be displayed. Maximum score is 25 points.",,,
+"MySQL , Operator",BETWEEN,"The MySQL BETWEEN Operator,Demo Database,BETWEEN Example,NOT BETWEEN Example,BETWEEN with IN Example,BETWEEN Text Values Example,NOT BETWEEN Text Values Example,Sample Table,BETWEEN Dates Example","Example,Example,Example,Example,Example,Example,Example","The , operator selects values within a given range. The values can be numbers, text, or dates.,The , operator is inclusive: begin and end values are included.,Below is a selection from the ""Products"" table in the Northwind 
+sample database:,The following SQL statement selects all products with a price between 10 and 20:,To display the products outside the range of the previous example, use ,:,The following SQL statement selects all products with a price between 10 and 
+20. In addition; do not show products with a CategoryID of 1,2, or 3:,The following SQL statement selects all products with a ProductName between ""Carnarvon 
+Tigers"" and ""Mozzarella di Giovanni"":,The following SQL statement selects all products with a ProductName between ""Carnarvon 
+Tigers"" and ""Chef Anton's Cajun Seasoning"":,The following SQL statement selects all products with a ProductName not 
+between ""Carnarvon 
+Tigers"" and ""Mozzarella di Giovanni"":,Below is a selection from the ""Orders"" table in the Northwind 
+sample database:,The following SQL statement selects all orders with an OrderDate between '01-July-1996' and 
+'31-July-1996':",,,
+MySQL ,Examples,"MySQL SELECT,MySQL WHERE,MySQL AND, OR and NOT,MySQL ORDER BY,MySQL NULL Values,MySQL LIMIT,MySQL MIN() and MAX(),MySQL COUNT(), AVG() and SUM(),MySQL LIKE,MySQL Wildcards,MySQL IN,MySQL BETWEEN,MySQL Aliases,MySQL Joins,MySQL UNION,MySQL GROUP BY,MySQL HAVING,MySQL EXISTS,MySQL ANY and ALL,MySQL CASE,MySQL Comments,MySQL Database",,MySQL Database tutorials can be found here:,,,
+ ,MySQL Data Types,MySQL Data Types (Version 8.0),,"The data type of a column defines what value the column can hold: 
+integer, character, money, date and time, binary, 
+and so on.,Each column in a database table is required to have a name and a data type.,An SQL developer must decide what type of data that will be stored inside each 
+column when creating a table. The data type is a 
+guideline for SQL to understand what type of data is expected inside of each 
+column, and it also identifies how SQL will interact with the stored data.,In MySQL there are three main data types: string, numeric, and date and time., All the numeric data types may have an extra option: UNSIGNED 
+or ZEROFILL. If you add the UNSIGNED option, MySQL disallows negative values for 
+the column. If you add the ZEROFILL option, MySQL automatically also adds the 
+UNSIGNED attribute to the column.",,,
+"MySQL , Field",AUTO INCREMENT,"What is an AUTO INCREMENT Field?,MySQL AUTO_INCREMENT Keyword",,"Auto-increment allows a unique number to be generated automatically when a new record is inserted into a table.,Often this is the primary key field that we would like to be created automatically every time a new record is inserted.,MySQL uses the , keyword to perform an auto-increment feature.,By default, the starting value for , is 1, and it will increment by 1 for each new record.,The following SQL statement defines the ""Personid"" column to be an auto-increment primary key field in the ""Persons"" table:,To let the , sequence start with another value, use the following SQL statement:,When we insert a new record into the ""Persons"" table, we do NOT have to specify a value for the ""Personid""
+column (a unique value will be added automatically):,The SQL statement above would insert a new record into the ""Persons"" table. The 
+""Personid"" column would be assigned a unique value automatically. The ""FirstName"" column would be set to 
+""Lars"" and the ""LastName"" column would be set to ""Monsen"".",,,
+MySQL ,Views,"MySQL CREATE VIEW Statement,MySQL CREATE VIEW Examples,MySQL Updating a View,MySQL Dropping a View","Example,Example,Example,Example,Example,Example","In SQL, a view is a virtual table based on the result-set of an SQL statement.,A view contains rows and columns, just like a real table. The fields in a view are fields from one or more real tables in the database.,You can add SQL statements and functions to a view and present the data as if the data were coming from one single table.,A view is created with the , statement., A view always shows up-to-date data! The database engine recreates the 
+view, every time a user queries it.,The following SQL creates a view that shows all customers from Brazil:,We can query the view above as follows:,The following SQL creates a view that selects every product in the ""Products"" table with a price higher than the average price:,We can query the view above as follows:,A view can be updated with the , statement.,The following SQL adds the ""City"" column to the ""Brazil Customers"" view:,A view is deleted with the , statement.,The following SQL drops the ""Brazil Customers"" view:",,,
+MySQL ,Functions,"MySQL String Functions,MySQL Numeric Functions,MySQL Date Functions,MySQL Advanced Functions",,"MySQL has many built-in functions.,This reference contains string, numeric, date, and some advanced functions 
+in MySQL.",,,
+"MySQL , Statement",CREATE INDEX,"MySQL CREATE INDEX Statement,MySQL CREATE INDEX Example,DROP INDEX Statement",,"The , statement is used to create indexes in tables.,Indexes are used to retrieve data from the database more quickly than 
+otherwise. The users cannot see the indexes, they are just used to speed up searches/queries.,Creates an index on a table. Duplicate values are allowed:,Creates a unique index on a table. Duplicate values are not allowed:,The SQL statement below creates an index named ""idx_lastname"" on the ""LastName"" column in the ""Persons"" table:,If you want to create an index on a combination of columns, you can list the column names within the parentheses, separated by commas:,The , statement is used to delete an index in a table.",,,
+"MySQL , Constraint",DEFAULT,"MySQL DEFAULT Constraint,DEFAULT on CREATE TABLE,DEFAULT on ALTER TABLE,DROP a DEFAULT Constraint",,"The , constraint is used to set a default value for a column.,The default value will be added to all new records, if no other value is specified.,The following SQL sets a , value for the ""City"" column when the ""Persons"" table is created:,The , constraint can also be used to insert system values, by using functions like ,:,To create a , constraint on the ""City"" column when the table is already created, use the following SQL:,To drop a , constraint, use the following SQL:",,,
+"MySQL , Constraint",CHECK,"MySQL CHECK Constraint,CHECK on CREATE TABLE,CHECK on ALTER TABLE,DROP a CHECK Constraint",,"The , constraint is used to limit the value range that can be placed in a column.,If you define a , constraint on a column it 
+will allow only certain values for this column.,If you define a , constraint on a table it can limit the values in certain columns based on values in other columns in the row.,The following SQL creates a , constraint on the ""Age"" column when the ""Persons"" table is created.
+The , constraint ensures that the age of a person must be 18, or older:,To allow naming of a , constraint, and for defining a , constraint on multiple columns, use the following SQL syntax:,To create a , constraint on the ""Age"" column when the table is already created, use the following SQL:,To allow naming of a , constraint, and for defining a , constraint on multiple columns, use the following SQL syntax:,To drop a , constraint, use the following SQL:",,,
+"MySQL , Constraint",FOREIGN KEY,"MySQL FOREIGN KEY Constraint,FOREIGN KEY on CREATE TABLE,FOREIGN KEY on ALTER TABLE,DROP a FOREIGN KEY Constraint",,"The , constraint is used to prevent actions that would destroy links between tables.,A , is a field (or collection of fields) in one table, that refers to 
+the , in another table.,The table with the foreign key is called the child table, and the table 
+with the primary key is called the referenced or parent table.,Look at the following two tables:,Notice that the ""PersonID"" column in the ""Orders"" table points to the ""PersonID"" column in the ""Persons"" table.,The ""PersonID"" column in the ""Persons"" table is the , in the ""Persons"" table.,The ""PersonID"" column in the ""Orders"" table is a , in the ""Orders"" table.,The , constraint prevents invalid data from being inserted into the foreign key column,
+because it has to be one of the values contained in the parent table.,The following SQL creates a , on the ""PersonID"" column when the ""Orders"" table is created:,To allow naming of a , constraint, and for defining a , constraint on multiple columns, use the following SQL syntax:,To create a , constraint on the ""PersonID"" column when the ""Orders"" table is already created, use the following SQL:,To allow naming of a , constraint, and for defining a , constraint on multiple columns, use the following SQL syntax:,To drop a , constraint, use the following SQL:",,,
+"MySQL , Constraint",PRIMARY KEY,"MySQL PRIMARY KEY Constraint,PRIMARY KEY on CREATE TABLE,PRIMARY KEY on ALTER TABLE,DROP a PRIMARY KEY Constraint",,"The , constraint uniquely identifies each record in a table.,Primary keys must contain UNIQUE values, and cannot contain NULL values.,A table can have only ONE primary key; and in the table, this primary key can 
+consist of single or multiple columns (fields).,The following SQL creates a , on the ""ID"" column when the ""Persons"" table is created:,To allow naming of a , constraint, and for defining a 
+, constraint on multiple columns, use the following SQL syntax:, In the example above there is only ONE , (PK_Person). 
+However, the VALUE of the primary key is made up of TWO COLUMNS (ID + LastName).,
+,To create a , constraint on the ""ID"" column when the table is already created, use the following SQL:,To allow naming of a , constraint, and for defining a 
+, constraint on multiple columns, use the following SQL syntax:, If you use , to add a primary key, the primary key column(s) must
+have been declared to not contain NULL values (when the table was first created).,To drop a , constraint, use the following SQL:",,,
+"MySQL , Constraint",UNIQUE,"MySQL UNIQUE Constraint,UNIQUE Constraint on CREATE TABLE,UNIQUE Constraint on ALTER TABLE,DROP a UNIQUE Constraint",,"The , constraint ensures that all values in a column are different.,Both the , and 
+, constraints provide a guarantee for uniqueness for a column or set of columns.,A , constraint automatically has a
+, constraint.,However, you can have many , constraints per table, but only one 
+, constraint per table.,The following SQL creates a , constraint on the ""ID"" column when the ""Persons"" table is created:,To name a , constraint, and to define a 
+, constraint on multiple columns, use the following SQL syntax:,To create a , constraint on the ""ID"" column when the table is already created, use the following SQL:,To name a , constraint, and to define a 
+, constraint on multiple columns, use the following SQL syntax:,To drop a , constraint, use the following SQL:",,,
+"MySQL , Constraint",NOT NULL,"MySQL NOT NULL Constraint,NOT NULL on CREATE TABLE,NOT NULL on ALTER TABLE","Example,Example","By default, a column can hold NULL values.,The , constraint enforces a column to NOT accept NULL values.,This enforces a field to always contain a value, which means that you cannot insert a new record, or update a record without adding a value to this field.,The following SQL ensures that the ""ID"", ""LastName"", and 
+""FirstName"" columns 
+will NOT accept NULL values when the ""Persons"" table is created:,To create a , constraint on the ""Age"" column when the ""Persons"" table is already created, use the following SQL:",,,
+"MySQL , Statement",ALTER TABLE,"MySQL ALTER TABLE Statement,ALTER TABLE - ADD Column,ALTER TABLE - DROP COLUMN,ALTER TABLE - MODIFY COLUMN,MySQL ALTER TABLE Example,Change Data Type Example,DROP COLUMN Example","Example,Example,Example,Example,Example","The , statement is used to add, delete, or modify columns in an existing table.,The , statement is also used to add and drop various constraints on 
+an existing table.,To add a column in a table, use the following syntax:,The following SQL adds an ""Email"" column to the ""Customers"" table:,To delete a column in a table, use the following syntax (notice that some 
+database systems don't allow deleting a column):,The following SQL deletes the ""Email"" column from the ""Customers"" table:,To change the data type of a column in a table, use the following syntax:,Look at the ""Persons"" table:,Now we want to add a column named ""DateOfBirth"" in the ""Persons"" table.,We use the following SQL statement:,Notice that the new column, ""DateOfBirth"", is of type date and is going to hold a 
+date. The data type specifies what type of data the column can hold. For a complete 
+reference of all the data types available in MySQL, 
+go to our complete ,.,The ""Persons"" table will now look like this:,Now we want to change the data type of the column named ""DateOfBirth"" in the ""Persons"" table.,We use the following SQL statement:,Notice that the ""DateOfBirth"" column is now of type year and is going to hold a year in a two- or four-digit format.,Next, we want to delete the column named ""DateOfBirth"" in the ""Persons"" table.,We use the following SQL statement:,The ""Persons"" table will now look like this:",,,
+MySQL ,Constraints,"Create Constraints,MySQL Constraints",,"SQL constraints are used to specify rules for data in a table.,Constraints can be specified when the table is created with the 
+, statement, or after the table is created 
+with the , statement.,SQL constraints are used to specify rules for the data in a table.,Constraints are used to limit the type of data that can go into a table. This 
+ensures the accuracy and reliability of the data in the table. If there is any violation between the constraint and the data action, 
+the action is aborted.,Constraints can be column level or table level. Column level constraints 
+apply to a column, and table level constraints apply to the whole table.,The following constraints are commonly used in SQL:"," - Ensures that a column cannot have a NULL value, - Ensures that all values in a column are 
+  different, - A combination of a 
+  , and ,. 
+  Uniquely identifies each row in a table, 
+  - Prevents actions that would destroy links between tables, , - Ensures that 
+  the values in a column satisfies a specific condition, , - Sets a default value for a column 
+  if no value 
+  is specified, , - Used to create and retrieve data from the database 
+  very quickly",,
+"MySQL , Statement",DROP DATABASE,"The MySQL DROP DATABASE Statement,DROP DATABASE Example",Example,"The , statement is used to drop an existing SQL database.,The following SQL statement drops the existing database ""testDB"":",,,
+MySQL ,Comments,"MySQL Comments,Single Line Comments,Multi-line Comments","Example,Example,Example,Example,Example,Example,Example","Comments are used to explain sections of SQL statements, or to prevent execution 
+of SQL statements.,Single line comments start with ,.,Any text between -- and the end of the line will be ignored (will not be executed).,The following example uses a single-line comment as an explanation:,The following example uses a single-line comment to ignore the end of a line:,The following example uses a single-line comment to ignore a statement:,Multi-line comments start with , and end with 
+,.,Any text between /* and */ will be ignored.,The following example uses a multi-line comment as an explanation:,The following example uses a multi-line comment to ignore many statements:,To ignore just a part of a statement, also use the /* */ comment.,The following example uses a comment to ignore part of a line:,The following example uses a comment to ignore part of a statement:",,,
+MySQL ,Working With Dates,"MySQL Dates,MySQL Date Data Types,Working with Dates",,"As long as your data contains only the date portion, your queries will work as expected. However, if a time portion is involved, it gets 
+more complicated.,MySQL comes with the following data types for storing a date or a date/time value in the database:, The date data type are set for a column when you create a new table in your database!,Look at the following table:,Now we want to select the records with an OrderDate of ""2008-11-11"" from the table above.,We use the following , statement:,The result-set will look like this:,Now, assume that the ""Orders"" table looks like this (notice the 
+added time-component in the ""OrderDate"" column):,If we use the same , statement as above:,we will get no result! This is because the query is looking only for dates with no time portion."," , - format YYYY-MM-DD, , - format: YYYY-MM-DD HH:MI:SS, - format: YYYY-MM-DD HH:MI:SS, , - format YYYY or YY",,
+"MySQL , Statement",DROP TABLE,"The MySQL DROP TABLE Statement,MySQL DROP TABLE Example,MySQL TRUNCATE TABLE",Example,"The , statement is used to drop an existing table in a database.,The following SQL statement drops the existing table ""Shippers"":,The , statement is used to delete the data inside a table, but 
+not the table itself.",,,
+"MySQL , Statement",CREATE TABLE,"The MySQL CREATE TABLE Statement,MySQL CREATE TABLE Example,Create Table Using Another Table","Example,Example","The , statement is used to create a new table in a database.,The column parameters specify the names of the columns of the table.,The datatype parameter specifies the type of data the column can hold (e.g. varchar, integer, date, etc.)., For an overview of the available data types, go to our complete ,.,The following example creates a table called ""Persons"" that contains five columns: PersonID, LastName, FirstName, 
+Address, and City:,The PersonID column is of type int and will hold an integer.,The LastName, FirstName, Address, and City columns are of type varchar and will hold characters, and the maximum length for these fields 
+is 255 characters.,The empty ""Persons"" table will now look like this:, The empty ""Persons"" table can now be filled with data with the 
+SQL , statement.,A copy of an existing table can also be created using ,.,The new table gets the same column definitions. All columns or specific columns can be selected.,If you create a new table using an existing table, the new table will be filled with the existing values from the old table.,The following SQL creates a new table called ""TestTables"" (which is 
+a copy of the ""Customers"" table): ",,,
+"MySQL , Statement",CREATE DATABASE,"The MySQL CREATE DATABASE Statement,CREATE DATABASE Example",Example,"The , statement is used to create a new SQL database.,The following SQL statement creates a database called ""testDB"":",,,
+MySQL ,Operators,"MySQL Arithmetic Operators,MySQL Bitwise Operators,MySQL Comparison Operators,MySQL Compound Operators,MySQL Logical Operators",,,,,
+MySQL ,Wildcards,"MySQL Wildcard Characters,Demo Database,Using the % Wildcard,Using the _ Wildcard","Example,Example,Example,Example","A wildcard character is used to substitute one or more characters in a string.,Wildcard characters are used with the , 
+operator. The , operator is used in a , clause to search for a specified pattern in a column.,The wildcards can also be used in combinations!,Here are some examples showing different , operators with '%' and '_' wildcards:,The table below shows the complete ""Customers"" table from the Northwind sample database:,The following SQL statement selects all customers with a City starting with ""ber"":,The following SQL statement selects all customers with a City containing the 
+pattern ""es"": ,The following SQL statement selects all customers with a City starting with any character, followed by ""ondon"":,The following SQL statement selects all customers with a City starting with 
+""L"", followed by any character, followed by ""n"", followed by any character, followed by ""on"":",,,
+"MySQL , Functions",MIN() and MAX(),"MySQL MIN() and MAX() Functions,Demo Database,MIN() Example,MAX() Example","Example,Example","The , function returns the smallest value of the selected column.,The , function returns the largest value of the selected column.,Below is a selection from the ""Products"" table in the Northwind sample database:,The following SQL statement finds the price of the cheapest product:,The following SQL statement finds the price of the most expensive product:",,,
+"MySQL , Operator",IN,"The MySQL IN Operator,Demo Database,IN Operator Examples","Example,Example,Example","The , operator allows you to specify multiple values in a , clause.,The , operator is a shorthand for multiple , conditions.,or:,The table below shows the complete ""Customers"" table from the Northwind sample database:,The following SQL statement selects all customers that are located in ""Germany"", ""France"" 
+or ""UK"":,The following SQL statement selects all customers that are NOT located in ""Germany"", ""France"" or ""UK"":,The following SQL statement selects all customers that are from the same 
+countries as the suppliers:",,,
+"MySQL , Clause",LIMIT,"The MySQL LIMIT Clause,Demo Database,MySQL LIMIT Examples,ADD a WHERE CLAUSE","Example,Example","The , clause is used to specify the number of records to return.,The , clause is useful on large tables with thousands of 
+records. Returning a large number of records can impact performance.,Below is a selection from the ""Customers"" table in the Northwind sample database:,The following SQL statement selects the first three records from the ""Customers"" table:,The following SQL statement selects the first three records from the ""Customers"" table, 
+where the country is ""Germany"":",,,
+"MySQL , Functions",NULL,"MySQL IFNULL() and COALESCE() Functions,MySQL IFNULL() Function,MySQL COALESCE() Function",,"Look at the following ""Products"" table:,Suppose that the ""UnitsOnOrder"" column is optional, and may contain NULL values.,Look at the following SELECT statement:,In the example above, if any of the ""UnitsOnOrder"" values are NULL, the result 
+will be NULL.,The MySQL , function lets you 
+return an alternative value if an expression is NULL.,The example below returns 0 if the value is NULL:,Or we can use the , function, like this:",,,
+"MySQL , Statement",DELETE,"The MySQL DELETE Statement,Demo Database,SQL DELETE Example,Delete All Records","Example,Example","The , statement is used to delete existing records in a table.,Below is a selection from the ""Customers"" table in the Northwind sample 
+database:,The following SQL statement deletes the customer ""Alfreds Futterkiste"" from 
+the ""Customers"" table:,The ""Customers"" table will now look like this:,It is possible to delete all rows in a table without deleting the table. This 
+means that the table structure, attributes, and indexes will be intact:,The following SQL statement deletes all rows in the ""Customers"" table, 
+without deleting the table:",,,
+"MySQL , Operators","AND, OR and NOT","The MySQL AND, OR and NOT Operators,Demo Database,AND Example,OR Example,NOT Example,Combining AND, OR and NOT","Example,Example,Example,Example,Example,Example","The , clause can be combined with ,, ,, and , operators.,The , and , operators are used to filter records based on more than one 
+condition:,The , operator displays a record if the condition(s) is NOT TRUE.,The table below shows the complete ""Customers"" table from the Northwind sample database:,The following SQL statement selects all fields from ""Customers"" where country is ""Germany"" AND city is ""Berlin"":,The following SQL statement selects all fields from ""Customers"" where city is ""Berlin"" OR ""Stuttgart"":,The following SQL statement selects all fields from ""Customers"" where country is ""Germany"" OR ""Spain"":,The following SQL statement selects all fields from ""Customers"" where country is NOT ""Germany"":,You can also combine the ,, , and , operators.,The following SQL statement selects all fields from ""Customers"" where country is ""Germany"" AND city must be ""Berlin"" 
+OR ""Stuttgart"" (use parenthesis to form complex expressions):,The following SQL statement selects all fields from ""Customers"" where country is 
+NOT ""Germany"" and NOT ""USA"":","The , operator displays a record if all the conditions separated by , 
+  are TRUE.,The , operator displays a record if any of the conditions separated by , is TRUE.",,
+"MySQL , Statement",UPDATE,"The MySQL UPDATE Statement,Demo Database,UPDATE Table,UPDATE Multiple Records,Update Warning!","Example,Example,Example","The , statement is used to modify the existing records in a table.,Below is a selection from the ""Customers"" table in the Northwind sample database:,The following SQL statement updates the first customer (CustomerID = 1) with a new contact person , 
+a new city.,The selection from the ""Customers"" table will now look like this:,It is the , clause that determines how many records will be updated.,The following SQL statement will 
+update the PostalCode to 00000 for all records where country is ""Mexico"":,The selection from the ""Customers"" table will now look like this:,The selection from the ""Customers"" table will now look like this:",,,
+"MySQL , Operator",LIKE,"The MySQL LIKE Operator,Demo Database,SQL LIKE Examples","Example,Example,Example,Example,Example,Example,Example","The , operator is used in a , clause to search for a specified pattern in a column.,There are two wildcards often used in conjunction with the , operator:,The percent sign and the underscore can also be used in combinations!,Here are some examples showing different , operators with '%' and '_' wildcards:,The table below shows the complete ""Customers"" table from the Northwind sample database:,The following SQL statement selects all customers with a CustomerName starting with 
+""a"":,The following SQL statement selects all customers with a CustomerName ending with ""a"":,The following SQL statement selects all customers with a CustomerName that 
+have ""or"" in any position:,The following SQL statement selects all customers with a CustomerName that 
+have ""r"" in the second position:,The following SQL statement selects all customers with a CustomerName that 
+starts with ""a"" and are at least 3 characters in length:,The following SQL statement selects all customers with a ContactName that 
+starts with ""a"" and ends with ""o"":,The following SQL statement selects all customers with a CustomerName that 
+does 
+NOT start with ""a"":","The percent sign (%) represents zero, one, or multiple characters,The underscore sign (_) represents one, single character",,
+MySQL ,NULL Values,"What is a NULL Value?,How to Test for NULL Values?,Demo Database,The IS NULL Operator,The IS NOT NULL Operator","Example,Example","A field with a NULL value is a field with no value.,If a field in a table is optional, it is possible to insert a new record or 
+update a record without adding a value to this field. Then, the field will be 
+saved with a NULL value.,It is not possible to test for NULL values with comparison operators, such as 
+=, <, or <>.,We will have to use the , and , operators instead.,Below is a selection from the ""Customers"" table in the Northwind sample 
+database:,The , operator is used to test for empty values (NULL values).,The following SQL lists all customers with a NULL value in the ""Address"" field:,The , operator is used to test for non-empty values (NOT NULL 
+values).,The following SQL lists all customers with a value in the ""Address"" field:",,,
+"MySQL , Statement",INSERT INTO,"The MySQL INSERT INTO Statement,Demo Database,INSERT INTO Example,Insert Data Only in Specified Columns","Example,Example","The , statement is used to insert new records in a table.,It is possible to write the , 
+statement in two ways:,1. Specify both the column names and the values to be inserted:,2. If you are adding values for all the columns of the table, you do not need to 
+specify the column names in the SQL query. However, make sure the order of the 
+values is in the same order as the columns in the table. Here, the , syntax 
+would be as follows:,Below is a selection from the ""Customers"" table in the Northwind 
+sample database:,The following SQL statement inserts a new record in the ""Customers"" table:,The selection from the ""Customers"" table will now look like this:,It is also possible to only insert data in specific columns.,The following SQL statement will insert a new record, but only insert data in the ""CustomerName"", 
+""City"", and ""Country"" columns (CustomerID will 
+be updated automatically):,The selection from the ""Customers"" table will now look like this:",,,
+"MySQL , Keyword",ORDER BY,"The MySQL ORDER BY Keyword,Demo Database,ORDER BY Example,ORDER BY DESC Example,ORDER BY Several Columns Example,ORDER BY Several Columns Example 2","Example,Example,Example,Example","The , keyword is used to sort the result-set in ascending or 
+descending order.,The , keyword sorts the records in ascending order by default. To sort the records in descending order, use the , keyword.,Below is a selection from the ""Customers"" table in the Northwind sample database:,The following SQL statement selects all customers from the ""Customers"" table, 
+sorted by the ""Country"" column:,The following SQL statement selects all customers from the ""Customers"" table, 
+sorted DESCENDING by the ""Country"" column:,The following SQL statement selects all customers from the ""Customers"" table, 
+sorted by the ""Country"" and the ""CustomerName"" column. This means that it orders 
+by Country, but if some rows have the same Country, it orders them by 
+CustomerName:,The following SQL statement selects all customers from the ""Customers"" table, 
+sorted ascending by the ""Country"" and descending by the ""CustomerName"" column:",,,
+"MySQL , Clause",WHERE,"The MySQL WHERE Clause,Demo Database,WHERE Clause Example,Text Fields vs. Numeric Fields,Operators in The WHERE Clause","Example,Example","The , clause is used to filter records.,It is used to extract only those records that fulfill a specified 
+condition.,Below is a selection from the ""Customers"" table in the Northwind sample database:,The following SQL statement selects all the customers from  
+""Mexico"":,SQL requires single quotes around text values (most database systems will 
+also allow double quotes).,However, numeric fields should not be enclosed in quotes:,The following operators can be used in the , clause:",,,
+"MySQL , Statement",SELECT,"The MySQL SELECT Statement,Demo Database,SELECT Columns Example,SELECT * Example,The MySQL SELECT DISTINCT Statement,SELECT Example Without DISTINCT,SELECT DISTINCT Examples","Example,Example,Example,Example,Example","The , statement is used to select data from a database.,The data returned is stored in a result table, called the result-set.,Here, column1, column2, ... are the field names of the table you want to 
+select data from. If you 
+want to select all the fields available in the table, use the following syntax:,In this tutorial we will use the well-known Northwind sample database.,Below is a selection from the ""Customers"" table in the Northwind sample database:,The following SQL statement selects the ""CustomerName"", ""City"", and ""Country"" columns from the ""Customers"" table:,The following SQL statement selects ALL the columns from the ""Customers"" table:,The , statement is used to return only distinct (different) values.,Inside a table, a column often contains many duplicate values; and sometimes you only want to list the different (distinct) values.,The following SQL statement selects all (including the duplicates) values from the ""Country"" column in the ""Customers"" table:,Now, let us use the , statement and see the result.,The following SQL statement selects only the DISTINCT values from the ""Country"" column in the ""Customers"" table:,The following SQL statement counts and returns the number of different (distinct) 
+countries in the ""Customers"" table:",,,
+MySQL ,SQL,"What is SQL?,How to Use SQL,Keep in Mind That...,Semicolon after SQL Statements?,Some of The Most Important SQL Commands",Example,"SQL is the standard language for dealing with Relational Databases.,SQL is used to insert, search, update, and delete database records.,The following SQL statement selects all the records in the ""Customers"" table:,In this tutorial we will write all SQL keywords in upper-case.,Some database systems require a semicolon at the end of each SQL statement.,Semicolon is the standard way to separate each SQL statement in database 
+systems that allow more than one SQL statement to be executed in the same call 
+to the server.,In this tutorial, we will use semicolon at the end of each SQL statement.","SQL keywords are NOT case sensitive: , is the same as , - extracts data from a database, - updates data in a database, - deletes data from a database, - inserts new data into a database, - creates a new database, - modifies a database, - creates a new table, - modifies a table, - deletes a table, - creates an index (search key), - deletes an index
+  ",,
+MySQL RDBMS,,"What is RDBMS?,What is a Database Table?,What is a Relational Database?",,"RDBMS stands for Relational Database Management System.,RDBMS is a program used to maintain a relational database.,RDBMS is the basis for all modern database systems such as MySQL, Microsoft SQL Server, Oracle, and Microsoft Access.,RDBMS uses , to access the data in the database.,A table is a collection of related data entries, and it consists of columns and rows.,A column holds specific information about every record in the table.,A record (or row) is each individual entry that exists in a table.,Look at a selection from the Northwind ""Customers"" table:,The columns in the ""Customers"" table above are: CustomerID, CustomerName, ContactName, Address, 
+City, PostalCode and Country. The table has 5 records (rows).,A relational database defines database relationships in the form of tables. 
+The tables are related to each other - based on data common to each.,Look at the following three tables ""Customers"", ""Orders"", and ""Shippers"" from the Northwind 
+database:,The relationship between the ""Customers"" table and the ""Orders"" table is the 
+CustomerID column:,The relationship between the ""Orders"" table and the ""Shippers"" table is the 
+ShipperID column:",,,
+ MySQL,Introduction to,"What is MySQL?,Who Uses MySQL?,Show Data On Your Web Site",,"MySQL is a very popular open-source relational database management system (RDBMS).,To build a web site that shows data from a database, you will need:","MySQL is a relational database management system,MySQL is open-source,MySQL is free,MySQL is ideal for both small and large applications,MySQL is very fast, reliable, scalable, and easy to use,MySQL is cross-platform,MySQL is compliant with the ANSI SQL standard,MySQL was first released in 1995,MySQL is developed, distributed, and supported by Oracle Corporation,MySQL is named after co-founder Monty Widenius's daughter: My,Huge websites like Facebook, Twitter, Airbnb, Booking.com, Uber, GitHub, YouTube, etc.,Content Management Systems like WordPress, Drupal, Joomla!, Contao, etc.,A very large number of web developers around the world,An RDBMS database program (like MySQL),A server-side scripting language, like PHP,To use SQL to get the data you want,To use HTML / CSS to style the page",,
+"MySQL , Functions","COUNT(), AVG() and SUM()","MySQL COUNT(), AVG() and SUM() Functions,Demo Database,COUNT() Example,AVG() Example,Demo Database,SUM() Example","Example,Example,Example","The , function returns the number of rows that matches a specified criterion.,The , function returns the average value of a numeric column. ,The , function returns the total sum of a numeric column. ,Below is a selection from the ""Products"" table in the Northwind sample database:,The following SQL statement finds the number of products:, NULL values are not counted.,The following SQL statement finds the average price of all products:, NULL values are ignored.,Below is a selection from the ""OrderDetails"" table in the Northwind 
+sample database:,The following SQL statement finds the sum of the ""Quantity"" fields 
+in the ""OrderDetails"" table:, NULL values are ignored.",,,

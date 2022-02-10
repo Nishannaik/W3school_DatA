@@ -1,0 +1,257 @@
+H1_leftside_heading,H1_rightside_heading,H2,H3,All_para,li,div,div_2
+W3.JS Tutorial,,"What Can W3.JS Do?,W3.JS Examples,W3.JS References,How To","Example,Example","W3.JS is a JavaScript library designed to simplify web development projects:,Below is a list of the some of the things W3.JS can do:,At the end of the W3.JS tutorial, you can find more than 100 examples.,With our online editor, you can edit and test each example yourself.,In this tutorial you will also find a complete W3.JS reference about  
+all functions and attributes.,W3.JS is very easy to use.,Just add a link to , in your web page:,Or download , and add a link to the file:",,"
+<script src=""https://www.w3schools.com/lib/w3.js""></script>,
+<script src=""w3.js""></script>",
+W3.JS Display HTML Data,,"Easy to Use,Displaying a Larger Object,Filling a Dropdown,Filling a List,Combining w3.displayObject with w3.includeHTML,Filling Check Boxes,Filling Classes,Filling a Table,Filling a <select> Element","Example,Example,myObject,Example,Example,Example,Example,Example,Example,Example","Just add brackets , to any HTML element to reserve space 
+for your data:,Finally call , to display the data in your 
+HTML:,To demonstrate the power of W3.JS, we will display a larger JavaScript object 
+(myObject).,The object is an array of customers objects with the CustomerName, City, and 
+Country properties:,When you include HTML snippets in a web page, you must secure that other 
+functions that depend on the included HTML do not execute before the HTML is 
+properly included.,The easiest way to ""hold back"" code is to place it in a callback function.,A callback function can be added as an argument to w3.includeHTML():",,"
+  <div id=""id01"">,{{firstName}} {{lastName}},</div>
+,
+  <select id=""id01"">,  <option 
+  w3-repeat=""customers"">{{CustomerName}}</option>,
+  </select>,<script>,w3.displayObject(""id01"", myObject);,</script>
+,
+  <ul id=""id01"">,  <li w3-repeat=""customers"">{{CustomerName}}</li>,
+  </ul>,
+  <script>,w3.displayObject(""id01"", myObject);,</script>
+,
+  <div w3-include-html=""list.html""></div> ,<script>,
+  w3.includeHTML(myCallback);,
+  ,function myCallback() {,  w3.displayObject(""id01"", myObject);,},
+  </script>
+,
+  <table id=""id01"">,
+    <tr w3-repeat=""customers"">,    <td>{{CustomerName}}</td>,    
+  <td><input type=""checkbox"" {{checked}}""></td>,  </tr>,</table>,
+  <script>,w3.displayObject(""id01"", myObject);,</script> 
+,
+  <table id=""id01"">,  <tr w3-repeat=""customers"" class=""{{Color}}"">,
+      <td>{{CustomerName}}</td>,  </tr>,</table>,
+  <script>,w3.displayObject(""id01"", myObject);,</script>
+,
+  <table id=""id01"">,  <tr>,    <th>Customer</th>,
+      <th>City</th>,    <th>Country</th>,  </tr>,
+    <tr w3-repeat=""customers"">,
+    <td>{{CustomerName}}</td>,  <td>{{City}}</td>,
+    <td>{{Country}}</td>,  </tr>,
+  </table>,<script>,w3.displayObject(""id01"", myObject);,</script>
+,
+  <select id=""id01"">,
+    <option w3-repeat=""x in cars"">{{x}}</option>,
+  </select>,
+  <script>,
+  w3.displayObject(""id01"", {""cars"" : [""Volvo"", ""Ford"", ""BMW"", ""Mercedes""]});,
+  </script>
+",
+W3.JS Examples,,"W3.JS Hide,W3.JS Show,W3.JS Toggle Show,W3.JS Add Style,W3.JS Add Class,W3.JS Remove Class,W3.JS Toggle Class,W3.JS Filters,W3.JS Sort,W3.JS Slideshow,W3.JS Include,W3.JS Display,W3.JS Http,W3.JS Controller",,,,,
+W3.JS HTML Slideshows,,"No Autostart,Next Slide,More Slideshows",Example,"To prevent the slideshow from starting automatically, set the interval 
+parameter to 0:,Add buttons to browse through the slideshow:,When you initiate a slideshow, the w3.slideshow() function returns an object representing the slideshow.,The slideshow object contain properties and methods, such as next() and previous():,Any HTML element can be included in a slideshow.,Define which, by using CSS selectors.",,"
+<img class=""nature"" src=""img_snowtops.jpg"">,
+<img class=""nature"" src=""img_mountains.jpg"">,
+<img class=""nature"" src=""img_nature.jpg"">,
+<script>,w3.slideshow("".nature"");,</script>
+,
+<button onclick=""myShow.previous()"">Previous</button>,
+<button onclick=""myShow.next()"">Next</button>,
+  <h1 class=""city"">London</h1>,<h1 class=""city"">Paris</h1>,<h1 
+  class=""city"">Tokyo</h1>,<script>,w3.slideshow("".city"");,</script>",
+W3.JS HTML Includes,,"The HTML,Include the HTML,Add the JavaScript,Full Example,Include Many HTML Snippets,Adding a Callback Function","content.html,Example,Example,Example,Example,Example","Save the HTML you want to include in an .html file:,Including HTML is done by using a , attribute:,HTML includes are done by JavaScript.,Make sure your page has , loaded and call ,:,You can include any number of HTML snippets:,When you include HTML snippets in a web page, you must secure that other 
+functions that depends on the included HTML do not execute before the HTML is 
+properly included.,The easiest way to ""hold back"" code is to place it in a callback function.,A callback function can be added as an argument to w3.includeHTML():",,"
+ <a href=""https://www.w3schools.com/html/"">HTML</a><br>,<a 
+ href=""https://www.w3schools.com/css/"">CSS</a><br>,<a 
+ href=""https://www.w3schools.com/bootstrap/"">Bootstrap</a><br>,<a 
+ href=""https://www.w3schools.com/js/"">JavaScript</a><br>,<a 
+ href=""https://www.w3schools.com/sql/"">SQL</a><br>,<a 
+ href=""https://www.w3schools.com/php/"">PHP</a><br>,<a 
+ href=""https://www.w3schools.com/w3css/"">W3.CSS</a><br>
+,
+<div ,=""content.html""></div>
+,
+<script>,w3.includeHTML();,</script> ,
+<!DOCTYPE html>,<html>,<script src=""/lib/w3.js""></script>,<body>,
+<div w3-include-html=""content.html""></div>,
+ <script>,w3.includeHTML();,</script>,
+</body>,</html>
+,
+<!DOCTYPE html>,
+<html>,
+<script src=""/lib/w3.js""></script>,
+<body>,
+<div w3-include-HTML=""h1.html""></div>,
+<div w3-include-HTML=""content.html""></div>,
+<script>,
+w3.includeHTML();,
+</script>,
+</body>,
+<html>
+,
+<script>,
+w3.includeHTML(,);,
+function myCallback() {,
+  // code that has to wait goes here,
+},
+</script>
+",
+W3.JS HTML Sort,,"Sort Lists,Sort Tables","Example,Example","Click the button to sort the list alphabetically:,Click the table headers to sort the  table accordingly:","Oslo,Stockholm,Helsinki,Berlin,Rome,Madrid","
+  <button onclick=""w3.sortHTML('#id01', 'li')"">Sort</button>,
+  ,<ul id=""id01"">,  <li>Oslo</li>,  <li>Stockholm</li>,  
+  <li>Helsinki</li>,  <li>Berlin</li>,  <li>Rome</li>,  
+  <li>Madrid</li>,</ul>,
+  <table id=""myTable"">,  
+  <tr>,    <th onclick=""w3.sortHTML('#myTable','.item', 
+  'td:nth-child(1)')"">Name</th>,    
+  <th onclick=""w3.sortHTML('#myTable','.item', 'td:nth-child(2)')"">Country</th>,  
+  </tr>,  <tr class=""item"">,    <td>Berglunds snabbkop</td>,    
+  <td>Sweden</td>,  </tr>,  <tr class=""item"">,    
+  <td>North/South</td>,    <td>UK</td>,    
+  </tr>,  <tr class=""item"">,    <td>Alfreds 
+  Futterkiste</td>,    <td>Germany</td>,  </tr>,...,
+  </table>",
+W3.JS Add Classes to HTML,,"Add Class by Id,Add Class by Tag,Add Class by Class,Add Multiple Classes,Remove Class by Id,Remove Class by Tag,Remove Class by Class,Remove Multiple Classes,Toggle Class by Id,Toggle Class by Tag,Toggle Class by Class,Toggle Multiple Classes","Example,Example,Example,Example,Example,Example,Example,Example,Example,Example,Example,Example","Add the ""marked"" class to an element with id=""London"":,Add the ""marked"" class to all <h2> elements:,Add the ""marked"" class to an elements with class=""city"":,To add multiple classes to an element, separate each class with a space.,Add both ""class1"" and ""class2"" to an element with id=""London"":,Remove the ""marked"" class from an element with id=""London"":,Remove the ""marked"" class from all <h2> elements:,Remove the ""marked"" class from all elements with class=""city"":,To remove multiple classes from an element, separate each class with a space.,Remove both ""class1"" and ""class2"" from an element with id=""London"":,Toggle between the ""marked"" class of an element with id=""London"":,Toggle between the ""marked"" class of all <h2> elements:,Toggle between the ""marked"" class of all elements with class=""city"":,Toggle between the class name ""class1"" and ""class2"" of id=""London:",,"
+  <button onclick=""w3.addClass('#London','marked')"">Add Class</button>,
+  <button onclick=""w3.addClass('h2','marked')"">Add Class</button>,
+  <button onclick=""w3.addClass('.city','marked')"">Add Class</button>,
+  <button onclick=""w3.addClass('#London','class1 class2')"">Add 
+  Classes</button>,
+  <button onclick=""w3.removeClass('#London','marked')"">Remove Class</button>,
+  <button onclick=""w3.removeClass('h2','marked')"">Remove Class</button>,
+  <button onclick=""w3.removeClass('.city','marked')"">Remove Class</button>,
+  <button onclick=""w3.removeClass('#London','class1 class2')"">Remove 
+  Classes</button>,
+  <button onclick=""w3.toggleClass('#London','marked')"">Toggle</button>,
+  <button onclick=""w3.toggleClass('h2','marked')"">Toggle</button>,
+  <button onclick=""w3.toggleClass('.city','marked')"">Toggle</button>,
+  <button onclick=""w3.toggleClass('#London','class1','class2')"">Toggle</button>",
+W3.JS Downloads,,"Download W3.JS,W3.JS is Free,How To use W3.JS,Changelog (Latest Versions)","Example,Example,Example,Example","Download the latest version from this link:
+,W3.JS is free to use. No license is necessary.,To use W3.JS, just add a link to ""w3.js"" in your web pages:,Or download w3.js and run it from your own web site:,If you put w3.js in a subfolder, add the folder name between slashes:,If you place w3.js at the root of your web, add a slash:",,"
+<!DOCTYPE html>,<html>,<title>My Web</title>,
+,
+<!DOCTYPE html>,<html>,<title>My Web</title>,
+,
+,
+  <!DOCTYPE html>,<html>,<title>My Web</title>,
+  ,
+  <!DOCTYPE html>,<html>,<title>My Web</title>,
+  ",
+W3.JS References,,"Complete W3.JS API Reference,Complete W3.JS Attribute Reference",,,,,
+W3.JS Data Servers,,"Dynamic Data,Server Running PHP and MySQL,Cross-Site HTTP Requests,Server Running Node.js and MySQL,Server Running ASP.NET, Razor and SQL Lite,Server Running PHP and MS Access,Server Running ASP.NET, VB and MS Access",,"The data used in the previous chapter static data fetched from a server.,The server code for fetching dynamic data from a database can be written in many different languages.,Here are some examples:,Requests for data from a different server (other than the requesting page), are 
+called , HTTP requests.,Cross-site requests are common on the web. Many pages load css, images, 
+or scripts from different servers.,However, in modern browsers, HTTP requests , 
+are restricted to the , for security reasons.,The following line (in the PHP example above) allows access 
+to the page from a cross-site:",,"
+<?php,header(""Access-Control-Allow-Origin: *"");,header(""Content-Type: 
+application/json; charset=UTF-8"");,$conn = 
+new mysqli(""myServer"", ""user"", ""pass"", ""myDB"");,$result = $conn->query(""SELECT 
+CompanyName, City, Country FROM Customers"");,$outp = """";,
+while($rs = $result->fetch_array(MYSQLI_ASSOC)) {,  if ($outp != """") {$outp .= "","";},
+    $outp .= '{""Name"":""'  . $rs[""CompanyName""] . '"",';,  $outp .= '""City"":""'   . $rs[""City""]        . '"",';,  $outp .= '""Country"":""'. $rs[""Country""]     . '""}';
+,},
+$outp ='{""customers"":['.$outp.']}';,$conn->close();,echo($outp);,?>,
+<?php,header(""Access-Control-Allow-Origin: *"");,header(""Content-Type: 
+ application/json; charset=ISO-8859-1"");,$conn = new COM(""ADODB.Connection"");,
+$conn->open(""PROVIDER=Microsoft.Jet.OLEDB.4.0;Data Source=myDB.mdb"");,
+,$rs = $conn->execute(""SELECT CompanyName, City, Country FROM 
+Customers"");,$outp = """";,while (!$rs->EOF) {,  if ($outp != """") {$outp .= "","";},  $outp .= '{""Name"":""'  . $rs[""CompanyName""] . '"",';,  $outp .= '""City"":""'   . $rs[""City""]        . '"",';,
+    $outp .= '""Country"":""'. $rs[""Country""]     . '""}';
+,  $rs->MoveNext();,},$outp ='{""customers"":['.$outp.']}';,
+$conn->close();,echo ($outp);,?>",
+W3.JS Controllers,,"What is a Controller?,Controller Example 1,Controller Example 2","Convert to Upper Case,Summarize Price","A controller is a function you write to control your data.,With a self-written controller, you can modify data anyway you want:,You want to convert your data to upper case before display.","Convert to upper case,Convert currencies,Calculate and Summarize,Round values,Substitute values,Change colors according to values,Anything else you are able to program",,
+W3.JS W3Data,,"What is W3Data?,Application  Models,Displaying From a Text File,Displaying From a JSON File,Displaying From an XML File,Downloads","model_customers.js,Example,Example,model_cd_from_txt,cd_catalog.txt,Example,model_cd_from_json.js,cd_catalog.js,Example,model_cd_from_xml,cd_catalog.xml","W3Data is a tool for bringing server data to HTML applications.,The purpose of , is to provide , with data from a web server.,W3Data uses , (written in JSON) to describe server applications.,This simple model describes a full application for retrieving data from a ,:,The models are stored on the server and cannot be edited by a web user.,You have to be a server administrator or a user given the rights to edit 
+files on the server.,Using an application model is easy, just add the model name to w3data.php 
+when you call w3Http():,This is the model used in the application:,This is the comma separated text file: ,This is the model used in the application:,This is the JSON file: ,This is the model used in the application:,This is the XML file: ,Download the file: ,.,Copy the file to your web site and rename it to ,.",,"
+ <script>,
+  w3.getHttpObject(""w3data.php?model=model_customers"", myFunction);,
+  function myFunction(myObject) {,  w3.displayObject(""id01"", 
+  myObject);,},</script>,
+ <script>,
+  w3.getHttpObject(""w3data.php?model=model_cd_from_txt"", myFunction);,
+  function myFunction(myObject) {,  w3.displayObject(""id01"", 
+  myObject);,},</script>,
+ <script>,
+  w3.getHttpObject(""w3data.php?model=model_cd_from_json"", myFunction);,function 
+  myFunction(myObject) {,  w3.displayObject(""id01"", myObject);,
+  },</script>,
+ <script>,
+  w3.getHttpObject(""w3data.php?model=model_cd_from_xml"", myFunction);,
+  function myFunction(myObject) {,  w3.displayObject(""id01"", 
+  myObject);,},</script>",
+W3.JS Http Requests,,"Filling a Dropdown,Filling a List,Filling a Table,Filling Another Table","Example,Example,Example,Example","The examples on this page are the same as the examples on the previous page, 
+except that the data are requested from a web server:
+",,"
+<select id=""id01"">,  <option w3-repeat=""customers"">{{CustomerName}}</option>,
+</select>,<script>,w3.getHttpObject(""customers.js"", myFunction);,
+  ,function myFunction(myObject) {,  w3.displayObject(""id01"", myObject);,},</script> ,
+<ul id=""id01"">,  <li w3-repeat=""customers"">{{CustomerName}}</li>,</ul>,
+ ,<script>,w3.getHttpObject(""customers.js"", myFunction);,function 
+  myFunction(myObject) {,  w3.displayObject(""id01"", myObject);,},</script>,
+<table id=""id01"">,
+  <tr>,
+    <th>Customer</th>,
+    <th>City</th>,
+    <th>Country</th>,
+  </tr>,
+  <tr w3-repeat=""customers"">,
+  <td>{{CustomerName}}</td>,
+  <td>{{City}}</td>,
+  <td>{{Country}}</td>,
+  </tr>,
+</table>,
+  <script>,w3.getHttpObject(""customers.js"", myFunction);,function 
+  myFunction(myObject) {,  w3.displayObject(""id01"", myObject);,},</script>
+,
+<table id=""id01"">,
+  <tr>,
+    <th>Title</th>,
+    <th>Artist</th>,
+    <th>Price</th>,
+  </tr>,
+  <tr w3-repeat=""cd"">,
+  <td>{{title}}</td>,
+  <td>{{artist}}</td>,
+  <td>{{price}}</td>,
+  </tr>,
+</table>,
+  <script>,w3.getHttpObject(""cd_catalog.js"", myFunction);,function 
+  myFunction(myObject) {  ,  w3.displayObject(""id01"", 
+  myObject);,},</script>
+",
+W3.JS Add Style to HTML,,"Add Style by Id,Add Style by Tag,Add Style by Class","Example,Example,Example","Add a red background color to an element with id=""London"":,Add a red background color to all <h2> elements:,Add a red background color to all elements with class=""city"":",,"
+  <button onclick=""w3.addStyle('#London','background-color','red')"">Add Style</button>,
+  <button onclick=""w3.addStyle('h2','background-color','red')"">Add Style</button>,
+  <button onclick=""w3.addStyle('.city','background-color','red')"">Add Style</button>",
+W3.JS Hide & Show,,"Hiding Elements Using Element Id,Hiding Elements Using Tag Name,Hiding Elements Using Class Name,Show Elements Using Element Id,Show Elements Using Tag Name,Show Elements Using Class Name,Toggle Hide and Show Using Element Id,Toggle Hide and Show Using Tag Name,Toggle Hide and Show Using Class Name","Example,Example,Example,Example,Example,Example,Example,Example,Example","To hide an element with a specified id, use a hash tag (#) in front of the id 
+name.,Hide an element with id=""London"":,To hide all elements with a specified tag name, use the tag name (without < 
+and >) as the selector.,Hide all <h2> elements:,To hide all elements with a specified class name, use a period (.) in front 
+of the class name.,Hide elements with class=""city"":,To show an element with a specified id, use a hash tag (#) in front of the id 
+name.,Show an element with id=""London"":,To show all elements with a specified tag name, use the tag name (without < 
+and >) as the selector.,Show all <h2> elements:,To show all elements with a specified class name, use a period (.) in front 
+of the class name.,Show elements with class=""city"":,Toggle between hiding and showing an element with id=""London"":,Toggle between hiding and showing all <h2> elements:,Toggle between hiding and showing elements with class=""city"":",,"
+  <button onclick=""w3.hide('#London')"">Hide</button>,
+  <button onclick=""w3.hide('h2')"">Hide</button>,
+  <button onclick=""w3.hide('.city')"">Hide</button>,
+  <button onclick=""w3.show('#London')"">Show</button>,
+  <button onclick=""w3.show('h2')"">Show</button>,
+  <button onclick=""w3.show('.city')"">Show</button>,
+  <button onclick=""w3.toggleShow('#London')"">Toggle Hide/Show</button>,
+  <button onclick=""w3.toggleShow('h2')"">Toggle Hide/Show</button>,
+  <button onclick=""w3.toggleShow('.city')"">Toggle Hide/Show</button>",
+W3.JS Intro,,"HTML Slideshows,Display Data in HTML,Sort HTML Elements,Filter HTML Elements,Hide and Show HTML Elements,Add Style to HTML Elements,Toggle the Class of HTML Elements",,"
+,Click on the table headers to sort the table accordingly:","Name,{{CustomerName}}, {{Country}},Alfreds Futterkiste,Berglunds snabbköp,Centro comercial Moctezuma,Ernst Handel,FISSA Fabrica Inter. Salchichas S.A.,Galería del gastrónomo,Island Trading,Königlich Essen,Laughing Bacchus Wine Cellars,Magazzini Alimentari Riuniti,North/South,Paris spécialités",,
+W3.JS HTML Filters,,"Filter Lists,Filter Tables","Example,Example",Search for a name in the input field.,{{CustomerName}},"
+  <input oninput=""w3.filterHTML('#id01', 
+  'li', this.value)"">,<ul id=""id01"">,  <li>Alfreds Futterkiste</li>,  <li>Berglunds snabbkop</li>,
+  ...,
+  <input oninput=""w3.filterHTML('#id01', '.item', this.value)"">,<table 
+  id=""id01"">,  <tr>,    <th>Customer</th>,    
+  <th>City</th>,    <th>Country</th>,  </tr>,  
+  <tr class=""item"">,    <td>Alfreds Futterkiste</td>,    
+  <td>Berlin</td>,    <td>Germany</td>,  </tr>,  
+  <tr class=""item"">,    <td>Berglunds snabbkop</td>,    
+  <td>Lulea</td>,    <td>Sweden</td>,  </tr>,...",
+W3.JS Selectors,,"W3.JS Selectors,Selector Examples,More Selector Examples",,"W3.JS , HTML elements and perform , on the selected element(s):,To select HTML elements, use a tag name:,To select an element with a specific id, write a hash character, followed by the id of the HTML element:,To select elements with a specific class, write a period character, followed by the name of the class:,For a complete reference of all CSS selectors, please go to our ,.","The ,() is performed on the selected element(s),The (,) selects the HTML element(s)",,

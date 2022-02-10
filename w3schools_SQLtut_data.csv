@@ -1,0 +1,372 @@
+H1_leftside_heading,H1_rightside_heading,H2,H3,All_para,li,div,div_2
+SQL ,Tutorial,"Examples in Each Chapter,SQL Exercises,SQL Examples,SQL Quiz Test,SQL References,SQL Data Types",Example,"With our online SQL editor, you can edit the SQL statements, and click on a button to view the result.,Click on the ""Try it Yourself"" button to see how it works.,Learn by examples! This tutorial supplements all explanations with clarifying examples.,Test your SQL skills at W3Schools!,At W3Schools you will find a complete reference for keywords and function:,Data types and ranges for Microsoft Access, MySQL and SQL Server.",,,
+SQL ,Self Join,"SQL Self Join,Demo Database,SQL Self Join Example",Example,"A self join is a regular join, but the table is joined with itself., and , are different table aliases for the same table.,In this tutorial we will use the well-known Northwind sample database.,Below is a selection from the ""Customers"" table:,The following SQL statement matches customers that are from the same city:",,,
+"SQL , Keyword",FULL OUTER JOIN,"SQL FULL OUTER JOIN Keyword,Demo Database,SQL FULL OUTER JOIN Example",,"The , keyword returns all records when there is a match in 
+left (table1) or right (table2) table records., , and 
+, are the same., , can potentially return very large 
+result-sets!,In this tutorial we will use the well-known Northwind sample database.,Below is a selection from the ""Customers"" table:,And a selection from the ""Orders"" table:,The following SQL statement selects all customers, and all orders:,A selection from the result set may look like this:, The , keyword returns all matching 
+records from both tables whether the other table matches or not. So, if 
+there are rows in ""Customers"" that do not have matches in ""Orders"", or if there 
+are rows in ""Orders"" that do not have matches in ""Customers"", those rows will be 
+listed as well.",,,
+"SQL , Statement",SELECT INTO,"The SQL SELECT INTO Statement,SQL SELECT INTO Examples",,"The , statement copies data from one table into a new table.,Copy all columns into a new table:,Copy only some columns into a new table:,The new table will be created with the column-names and types as defined in the old table.
+You can create new column names using the , clause.,The following SQL statement creates a backup copy of Customers:,The following SQL statement uses the , clause to copy the table into a new 
+table in another database:,The following SQL statement copies only a few columns into a new table:,The following SQL statement copies only the German customers into a new table:,The following SQL statement copies data from more than one table into a new table:, , can also be used to create a 
+new, empty table using the schema of another. Just add a 
+, clause that 
+causes the query to return no data:",,,
+"SQL , Statement",INSERT INTO SELECT,"The SQL INSERT INTO SELECT Statement,Demo Database,SQL INSERT INTO SELECT Examples","Example,Example,Example","The , statement copies data from one table and 
+inserts it into another table.,The , statement requires that 
+the data types in source and target tables match., The existing records in the target table are unaffected.,Copy all columns from one table to another table:,Copy only some columns from one table into another table:,In this tutorial we will use the well-known Northwind sample database.,Below is a selection from the ""Customers"" table:,And a selection from the ""Suppliers"" table:,The following SQL statement copies ""Suppliers"" into ""Customers"" (the columns 
+that are not filled with data, will contain NULL):,The following SQL statement copies ""Suppliers"" into ""Customers"" (fill all 
+columns):,The following SQL statement copies only the German suppliers into ""Customers"":",,,
+"SQL , Clause",HAVING,"The SQL HAVING Clause,Demo Database,SQL HAVING Examples,Demo Database,More HAVING Examples","Example,Example,Example,Example","The , clause was added to SQL because the 
+, keyword cannot be 
+used with aggregate functions.,Below is a selection from the ""Customers"" table in the Northwind sample 
+database:,The following SQL statement lists the number of customers in each country. 
+Only include countries with more than 5 customers:,The following SQL statement lists the number of customers in each country, 
+sorted high to low (Only include countries with more than 5 customers):,Below is a selection from the ""Orders"" table in the Northwind sample database:,And a selection from the ""Employees"" table:,The following SQL statement lists the employees that have registered more 
+than 10 orders:,The following SQL statement lists if the employees ""Davolio"" or ""Fuller"" have registered 
+more than 25 orders:",,,
+SQL ,ANY and ALL Operators,"The SQL ANY and ALL Operators,The SQL ANY Operator,The SQL ALL Operator,Demo Database,SQL ANY Examples,SQL ALL Examples","Example,Example,Example,Example,Example","The , and , operators allow you to perform a comparison between a single 
+column value and a range of other values.,The , operator:, means that the condition will be true if the operation is true for 
+any of the values in the range.,The , operator:, means that the condition will be true only if the operation is true 
+for all values in the range. ,Below is a selection from the , table in the Northwind sample database:,And a selection from the , table:,The following SQL statement lists the ProductName if it 
+finds ANY records in the OrderDetails table has Quantity equal to 10 (this will 
+return TRUE because the Quantity column has some values of 10):,The following SQL statement lists the ProductName if it 
+finds ANY records in the OrderDetails table has Quantity larger than 99 (this 
+will return TRUE because the Quantity column has some values larger than 99):,The following SQL statement lists the ProductName if it 
+finds ANY records in the OrderDetails table has Quantity larger than 1000 (this 
+will return FALSE because the Quantity column has no values larger than 1000):,The following SQL statement lists ALL the product names:,The following SQL statement lists the ProductName if ALL the records in the 
+OrderDetails table has Quantity equal to 10. This will of course return FALSE 
+because the Quantity column has many different values (not only the value of 10):","returns a boolean value as a result,returns TRUE if ANY of the subquery values meet the condition,returns a boolean value as a result,returns TRUE if ALL of the subquery values meet the condition,is used with ,, 
+  , and , statements",,
+"SQL , Keyword",RIGHT JOIN,"SQL RIGHT JOIN Keyword,Demo Database,SQL RIGHT JOIN Example",Example,"The , keyword returns all records from the right table (table2), and the 
+matching records from the left table (table1). The result is 0 records from the left side, 
+if there is no match., In some databases , is called 
+,.,In this tutorial we will use the well-known Northwind sample database.,Below is a selection from the ""Orders"" table:,And a selection from the ""Employees"" table:,The following SQL statement will return all employees, and any orders they 
+might have placed:, The , keyword returns all records from the 
+right table (Employees), even if there are no matches in the left table 
+(Orders).",,,
+"SQL , Keyword",LEFT JOIN,"SQL LEFT JOIN Keyword,Demo Database,SQL LEFT JOIN Example",Example,"The , keyword returns all records from the left table (table1), and the 
+matching records from the right table (table2). The result is 0 records from the right side, 
+if there is no match., In some databases LEFT JOIN is called LEFT OUTER JOIN.,In this tutorial we will use the well-known Northwind sample database.,Below is a selection from the ""Customers"" table:,And a selection from the ""Orders"" table:,The following SQL statement will select all customers, and any orders they 
+might have:, The , keyword returns all records from the 
+left table (Customers), even if there are no matches in the right table 
+(Orders).",,,
+SQL ,EXISTS Operator,"The SQL EXISTS Operator,Demo Database,SQL EXISTS Examples","Example,Example","The , operator is used to test for the existence of any record in a subquery.,The , operator returns TRUE if the subquery returns one or more records.,Below is a selection from the ""Products"" table in the Northwind sample database:,And a selection from the ""Suppliers"" table:,The following SQL statement returns TRUE and lists the suppliers with a product price less than 20:,The following SQL statement returns TRUE and lists the suppliers with a product price 
+equal to 22:",,,
+SQL ,Joins,"SQL JOIN,Different Types of SQL JOINs",Example,"A , clause is used to combine rows from two or more tables, based on 
+a related column between them.,Let's look at a selection from the ""Orders"" table:,Then, look at a selection from the ""Customers"" table:,Notice that the ""CustomerID"" column in the ""Orders"" table refers to the 
+""CustomerID"" in the ""Customers"" table. The relationship between the two tables above 
+is the ""CustomerID"" column.,Then, we can create the following SQL statement (that contains an ,), 
+that selects records that have matching values in both tables:,and it will produce something like this:,Here are the different types of the JOINs in SQL:,
+, 
+, 
+, 
+,
+",": Returns records that have matching values in both tables,: Returns all records from the left table, and the matched records from the right table,: Returns all records from the right table, and the matched 
+  records from the left table,: Returns all records when there is a match in either left 
+  or right table",,
+"SQL , Keyword",INNER JOIN,"SQL INNER JOIN Keyword,Demo Database,SQL INNER JOIN Example, JOIN Three Tables","Example,Example","The , keyword selects records that have matching values in 
+both tables.,In this tutorial we will use the well-known Northwind sample database.,Below is a selection from the ""Orders"" table:,And a selection from the ""Customers"" table:,The following SQL statement selects all orders with customer information:, The , keyword selects all rows from both 
+tables as long as there is a match between the columns. If there are records in the 
+""Orders"" table that do not have matches in ""Customers"", these orders will not 
+be shown!,The following SQL statement selects all orders with customer and shipper 
+information:",,,
+SQL ,Aliases,"SQL Aliases,Demo Database,Alias for Columns Examples,Alias for Tables Example","Example,Example,Example,Example,Example","SQL aliases are used to give a table, or a column in a table, a temporary name.,Aliases are often used to make column names more readable.,An alias only exists for the duration of that query.,An alias is created with the , keyword.,In this tutorial we will use the well-known Northwind sample database.,Below is a selection from the ""Customers"" table:,And a selection from the ""Orders"" table:,The following SQL statement creates two aliases, one for the CustomerID 
+column and one for the CustomerName column:,The following SQL statement creates two aliases, one for the CustomerName 
+column and one for the ContactName column. , It requires 
+double quotation marks or square brackets if the alias name contains spaces:,The following SQL statement creates an alias named ""Address"" that combine four columns (Address, PostalCode, 
+City and Country):, To get the SQL statement above to work in MySQL use the following:,The following SQL statement selects all the orders from the customer with 
+CustomerID=4 (Around the Horn). We use the ""Customers"" and ""Orders"" tables, and 
+give them the table aliases of ""c"" and ""o"" respectively (Here we use 
+aliases to make the SQL shorter):,The following SQL statement is the same as above, but without aliases:,Aliases can be useful when:","There are more than one table involved in a query,Functions are used in the query,Column names are big or not very readable,Two or more columns are combined together",,
+"SQL , Operator",UNION,"The SQL UNION Operator,Demo Database,SQL UNION Example,SQL UNION ALL Example,SQL UNION With WHERE,SQL UNION ALL With WHERE,Another UNION Example","Example,Example,Example,Example,Example","The , operator is used to combine the result-set of two or more 
+, 
+statements.,The , operator selects only distinct values by default. To allow 
+duplicate values, use ,:, The column names in the result-set are usually equal to 
+the column names in the first , statement.,In this tutorial we will use the well-known Northwind sample database.,Below is a selection from the ""Customers"" table:,And a selection from the ""Suppliers"" table:,The following SQL statement returns the cities 
+(only distinct values) from both the ""Customers"" and the ""Suppliers"" table:, If some customers or suppliers have the same city, each city will only be 
+listed once, because , selects only distinct values. Use 
+, to also select 
+duplicate values!,The following SQL statement returns the cities 
+(duplicate values also) from both the ""Customers"" and the ""Suppliers"" table:,The following SQL statement returns the German cities 
+(only distinct values) from both the ""Customers"" and the ""Suppliers"" table:,The following SQL statement returns the German cities (duplicate values also) from 
+both the ""Customers"" and the ""Suppliers"" table:,The following SQL statement lists all customers and suppliers:,Notice the ""AS Type"" above - it is an alias. , are used to give a table or a column a temporary name.
+An alias only exists for the duration of the query. So, here we have created a 
+temporary column named ""Type"", that list whether the contact person is a 
+""Customer"" or a ""Supplier"".","Every , statement within
+  , must have the same number 
+of columns,The columns must also have similar data types,The columns in 
+  every , statement must also be in the same order",,
+SQL ,Examples,"SQL Syntax,SQL SELECT,SQL SELECT DISTINCT,SQL WHERE,SQL AND, OR and NOT Operators,SQL ORDER BY,SQL INSERT INTO,SQL NULL Values,SQL Update,SQL DELETE,SQL SELECT TOP,SQL MIN() and MAX(),SQL COUNT, AVG() and SUM(),SQL LIKE,SQL Wildcards,SQL IN,SQL BETWEEN,SQL Aliases,SQL Joins,SQL UNION,SQL GROUP BY,SQL HAVING,SQL EXISTS,SQL ANY and ALL,SQL INSERT INTO SELECT,SQL CASE,SQL Comments,SQL Database",,SQL Database tutorials can be found here:,,,
+SQL ,Quiz,"The Test,Count Your Score",,"You can test your SQL skills with W3Schools' Quiz.,The test contains 25 questions and there is no time limit.,The test is not official, it's just a nice way to see how much you know, or don't know, about SQL.,You will get 1 point for each correct answer. At the end of the Quiz, your total score will be displayed. Maximum score is 25 points.",,,
+SQL Server ,Functions,"SQL Server String Functions,SQL Server Math/Numeric Functions,SQL Server Date Functions,SQL Server Advanced Functions",,"SQL Server has many built-in functions.,This reference contains string, numeric, date,  
+conversion, and some advanced functions 
+in SQL Server.",,,
+SQL Keywords Reference,,SQL Keywords,,This SQL keywords reference contains the reserved words in SQL.,,,
+W3Schools ,SQL Certificate,How Does It Work?,,,"Study for free at W3Schools.com,Study at your own speed,Test your skills with W3Schools online quizzes,Apply for your certificate by paying an exam fee,Take your exam online, at any time, and from any location",,
+SQL ,Exercises,"Exercises,Count Your Score",,"You can test your SQL skills with W3Schools' Exercises.,We have gathered a variety of SQL exercises (with answers) for each SQL Chapter.,Try to solve an exercise by filling in the missing parts of a code. If you're stuck, hit the ""Show Answer"" button to see what you've done wrong.,You will get 1 point for
+each correct answer. Your score and total score will always be displayed.",,,
+"SQL , from W3Schools",Quick Reference,,,,,,
+SQL ,Hosting,"SQL Hosting,MS SQL Server,Oracle,MySQL,MS Access",,"If you want your web site to be able to store and retrieve data from a 
+database, your web server should have access to a database-system that uses the 
+SQL language.,If your web server is hosted by an Internet Service Provider (ISP), you will have to look for SQL hosting plans.,The most common SQL hosting databases are MS SQL Server, Oracle, MySQL, and MS Access.,Microsoft's SQL Server is a popular database software for  database-driven web sites 
+with high traffic.,SQL Server is a very powerful, robust and full featured SQL database system.,Oracle is also a popular database software for  database-driven web sites 
+with high traffic.,Oracle is a very powerful, robust and full featured SQL database system.,MySQL is also a popular database software for web sites.,MySQL is a very powerful, robust and full featured SQL database system.,MySQL is an inexpensive 
+alternative to the expensive Microsoft and Oracle solutions.,When a web site requires only a simple database, Microsoft Access can be a 
+solution.,MS Access is not well suited for very high-traffic, and not as powerful as 
+MySQL, SQL Server, or Oracle.",,,
+"SQL , Operator",BETWEEN,"The SQL BETWEEN Operator,Demo Database,BETWEEN Example,NOT BETWEEN Example,BETWEEN with IN Example,BETWEEN Text Values Example,NOT BETWEEN Text Values Example,Sample Table,BETWEEN Dates Example","Example,Example,Example,Example,Example,Example,Example,Example","The , operator selects values within a given range. The values can be numbers, text, or dates.,The , operator is inclusive: begin and end values are included. ,Below is a selection from the ""Products"" table in the Northwind 
+sample database:,The following SQL statement selects all products with a price between 10 and 20:,To display the products outside the range of the previous example, use ,:,The following SQL statement selects all products with a price between 10 and 
+20. In addition; do not show products with a CategoryID of 1,2, or 3:,The following SQL statement selects all products with a ProductName between Carnarvon 
+Tigers and Mozzarella di Giovanni:,The following SQL statement selects all products with a ProductName between Carnarvon 
+Tigers and Chef Anton's Cajun Seasoning:,The following SQL statement selects all products with a ProductName not 
+between Carnarvon 
+Tigers and Mozzarella di Giovanni:,Below is a selection from the ""Orders"" table in the Northwind 
+sample database:,The following SQL statement selects all orders with an OrderDate between '01-July-1996' and 
+'31-July-1996':,OR:",,,
+MySQL ,Functions,"MySQL String Functions,MySQL Numeric Functions,MySQL Date Functions,MySQL Advanced Functions",,"MySQL has many built-in functions.,This reference contains string, numeric, date, and some advanced functions 
+in MySQL.",,,
+"SQL , Statement",GROUP BY,"The SQL GROUP BY Statement,Demo Database,SQL GROUP BY Examples,Demo Database,GROUP BY With JOIN Example","Example,Example,Example","The , statement groups rows that have the same values into summary 
+rows, like ""find the number of customers in each country"".,The , statement is often used with aggregate functions (,, 
+,, 
+,, ,, 
+,) to group the result-set by one or more columns.,Below is a selection from the ""Customers"" table in the Northwind sample 
+database:,The following SQL statement lists the number of customers in each country:,The following SQL statement lists the number of customers in each country, 
+sorted high to low:,Below is a selection from the ""Orders"" table in the Northwind sample database:,And a selection from the ""Shippers"" table:,The following SQL statement lists the number of orders sent by each shipper:",,,
+SQL ,"Data Types for MySQL, SQL Server, and MS Access","SQL Data Types,MySQL Data Types (Version 8.0),SQL Server Data Types,MS Access Data Types",,"The data type of a column defines what value the column can hold: 
+integer, character, money, date and time, binary, 
+and so on.,Each column in a database table is required to have a name and a data type.,An SQL developer must decide what type of data that will be stored inside each 
+column when creating a table. The data type is a 
+guideline for SQL to understand what type of data is expected inside of each 
+column, and it also identifies how SQL will interact with the stored data.,In MySQL there are three main data types: string, numeric, and date and time., All the numeric data types may have an extra option: UNSIGNED 
+or ZEROFILL. If you add the UNSIGNED option, MySQL disallows negative values for 
+the column. If you add the ZEROFILL option, MySQL automatically also adds the 
+UNSIGNED attribute to the column.",,,
+SQL ,Injection,"SQL Injection,SQL in Web Pages,SQL Injection Based on 1=1 is Always True,SQL Injection Based on """"="""" is Always True,SQL Injection Based on Batched SQL Statements ,Use SQL Parameters for Protection,Examples","Example,Example,Result,Result,Example,Example,Result,ASP.NET Razor Example,Another Example","SQL injection is a code injection technique that might destroy your database.,SQL injection is one of the most common web hacking techniques.,SQL injection is the placement of malicious code in SQL statements, via web page input.,SQL injection usually occurs when you ask a user for input, like their 
+username/userid, and instead of a name/id, the user gives you an SQL statement 
+that you will , run on your database.,Look at the following example which creates a , statement by adding a variable 
+(txtUserId) to a select string. The variable is fetched from user input 
+(getRequestString):,The rest of this chapter describes the potential dangers of using user input in SQL statements.,Look at the example above again. The original purpose of the code was to create an SQL statement to select a 
+user, with a given user id.,If there is nothing to prevent a user from entering ""wrong"" input, the user 
+can enter some ""smart"" input like this:,UserId: ,Then, the SQL statement will look like this:,The SQL above is valid and will return ALL rows from the ""Users"" table, since , is always TRUE.,Does the example above look dangerous? What if the ""Users"" table contains names and passwords?,The SQL statement above is much the same as this:,A hacker might get access to all the user names and passwords in a database, by 
+simply inserting 
+105 OR 1=1 into the input field.,Here is an example of a user login on a web site:,Username:,
+,Password:,
+,
+A hacker might get access to user names and passwords in a database by 
+simply inserting "" OR """"="" into the user name or password text box:,User Name:,
+,Password:,
+,The code at the server will create a valid SQL statement like this:,The SQL above is valid and will return all rows from the ""Users"" table, 
+since , is always TRUE.,Most databases support batched SQL statement.,A batch of SQL statements is a group of two or more SQL statements, separated by semicolons.,The SQL statement below will return all rows from the ""Users"" table, then delete the 
+""Suppliers"" table.,Look at the following example: ,And the following input:,User id: ,The valid SQL statement would look like this:,To protect a web site from SQL injection, you can use SQL parameters.,SQL parameters are values that are added to an SQL query at execution time, in a controlled manner.,Note that parameters are represented in the SQL statement by a @ marker.,The SQL engine checks each parameter to ensure that it is correct for its column
+and are treated literally, and not as part of the SQL to be executed.,The following examples shows how to build parameterized queries in some common web languages.,SELECT STATEMENT IN ASP.NET:,INSERT INTO STATEMENT IN ASP.NET:,INSERT INTO STATEMENT IN PHP:",,,
+SQL ,Views,"SQL CREATE VIEW Statement,SQL CREATE VIEW Examples,SQL Updating a View,SQL Dropping a View","Example,Example,Example,Example,Example,Example","In SQL, a view is a virtual table based on the result-set of an SQL statement.,A view contains rows and columns, just like a real table. The fields in a view are fields from one or more real tables in the database.,You can add SQL statements and functions to a view and present the data as if the data were coming from one single table.,A view is created with the , 
+statement. , A view always shows up-to-date data! The database engine recreates the 
+view, every time a user queries it.,The following SQL creates a view that shows all customers from Brazil:,We can query the view above as follows:,The following SQL creates a view that selects every product in the ""Products"" table with a price higher than the average price:,We can query the view above as follows:,A view can be updated with the , statement.,The following SQL adds the ""City"" column to the ""Brazil Customers"" view:,A view is deleted with the , 
+statement.,The following SQL drops the ""Brazil Customers"" view:",,,
+SQL ,Working With Dates,"SQL Dates,SQL Date Data Types,SQL Working with Dates",,"As long as your data contains only the date portion, your queries will work as expected. However, if a time portion is involved, it gets 
+more complicated., comes with the following data types for storing a date or a date/time value in the database:, comes with the following data types for storing a date or a date/time value in the database:, The date types are chosen for a column when you create a new table in your database!,Look at the following table:,Now we want to select the records with an OrderDate of ""2008-11-11"" from the table above.,We use the following , statement:,The result-set will look like this:,Now, assume that the ""Orders"" table looks like this (notice the 
+added time-component in the ""OrderDate"" column):,If we use the same , statement as above:,we will get no result! This is because the query is looking only for dates with no time portion."," , - format YYYY-MM-DD, , - format: YYYY-MM-DD HH:MI:SS, - format: YYYY-MM-DD HH:MI:SS, , - format YYYY or YY, , - format YYYY-MM-DD, , - format: YYYY-MM-DD HH:MI:SS, , - format: YYYY-MM-DD HH:MI:SS, - format: a unique number",,
+"SQL , Field",AUTO INCREMENT,"AUTO INCREMENT Field,Syntax for MySQL,Syntax for SQL Server,Syntax for Access,Syntax for Oracle",,"Auto-increment allows a unique number to be generated automatically when a new record is inserted into a table.,Often this is the primary key field that we would like to be created automatically every time a new record is inserted.,The following SQL statement defines the ""Personid"" column to be an auto-increment primary key field in the ""Persons"" table:,MySQL uses the , keyword to perform an auto-increment feature.,By default, the starting value for , is 1, and it will increment by 1 for each new record.,To let the , sequence start with another value, use the following SQL statement:,To insert a new record into the ""Persons"" table, we will NOT have to specify a value for the ""Personid""
+column (a unique value will be added automatically):,The SQL statement above would insert a new record into the ""Persons"" table. The 
+""Personid"" column would be assigned a unique value. The ""FirstName"" column would be set to 
+""Lars"" and the ""LastName"" column would be set to ""Monsen"".,The following SQL statement defines the ""Personid"" column to be an auto-increment primary key field in the ""Persons"" table:,The MS SQL Server uses the , keyword to perform an auto-increment feature. ,In the example above, the starting value for , is 1, and it will increment by 1 for each new record., To specify that the ""Personid"" column should start at value 10 and increment by 5, change 
+it to ,.,To insert a new record into the ""Persons"" table, we will NOT have to specify a value for the ""Personid"" column (a unique value will be added automatically):,The SQL statement above would insert a new record into the ""Persons"" table. The 
+""Personid"" column would be assigned a unique value. The ""FirstName"" column would be set to 
+""Lars"" and the ""LastName"" column would be set to ""Monsen"".,The following SQL statement defines the ""Personid"" column to be an auto-increment primary key field in the ""Persons"" table:,The MS Access uses the , keyword to perform an auto-increment feature. ,By default, the starting value for , is 1, and it will increment by 1 for each new record., To specify that the ""Personid"" column should start at value 10 and increment by 5, change the autoincrement to ,.,To insert a new record into the ""Persons"" table, we will NOT have to specify a value for the ""Personid"" column (a unique value will be added 
+automatically):,The SQL statement above would insert a new record into the ""Persons"" table. The 
+""Personid"" column would be assigned a unique value. The ""FirstName"" column would be set to 
+""Lars"" and the ""LastName"" column would be set to ""Monsen"".,In Oracle the code is a little bit more tricky.,You will have to create an auto-increment field with the sequence object (this object generates a number sequence).,Use the following , syntax:,The code above creates a sequence object called seq_person, that starts with 1 and will increment by 1.
+It will also cache up to 10 values for performance. The cache option specifies how many sequence values will be stored in memory for faster access.,To insert a new record into the ""Persons"" table, we will have to use the nextval function (this function retrieves the next value from seq_person 
+sequence):,The SQL statement above would insert a new record into the ""Persons"" table. The ""Personid"" column would be assigned the next number from the seq_person 
+sequence. The ""FirstName"" column would be set to ""Lars"" and the ""LastName"" column would be set to ""Monsen"".",,,
+"SQL , Statement",CREATE INDEX,"SQL CREATE INDEX Statement,CREATE INDEX Example,DROP INDEX Statement",,"The , statement is used to create indexes in tables.,Indexes are used to retrieve data from the database more quickly than 
+otherwise. The users cannot see the indexes, they are just used to speed up searches/queries.,Creates an index on a table. Duplicate values are allowed:,Creates a unique index on a table. Duplicate values are not allowed:, The syntax for creating indexes varies among different databases. Therefore: Check the syntax for creating indexes in your database.,The SQL statement below creates an index named ""idx_lastname"" on the ""LastName"" column in the ""Persons"" table:,If you want to create an index on a combination of columns, you can list the column names within the parentheses, separated by commas:,The , statement is used to delete an index in a table.",,,
+"SQL , Constraint",DEFAULT,"SQL DEFAULT Constraint,SQL DEFAULT on CREATE TABLE,SQL DEFAULT on ALTER TABLE,DROP a DEFAULT Constraint",,"The , constraint is used to set a default value for a column.,The default value will be added to all new records, if no other value is specified.,The following SQL sets a , value for the ""City"" column when the ""Persons"" table is created:,The , constraint can also be used to insert system values, by using functions like ,:,To create a , constraint on the ""City"" column when the table is already created, use the following SQL:,To drop a , constraint, use the following SQL:",,,
+"SQL , Constraint",FOREIGN KEY,"SQL FOREIGN KEY Constraint,SQL FOREIGN KEY on CREATE TABLE,SQL FOREIGN KEY on ALTER TABLE,DROP a FOREIGN KEY Constraint",,"The , constraint is used to prevent actions that would destroy links between tables.,A , is a field (or collection of fields) in one table, that refers to 
+the , in another table.,The table with the foreign key is called the child table, and the table 
+with the primary key is called the referenced or parent table.,Look at the following two tables:,Notice that the ""PersonID"" column in the ""Orders"" table points to the ""PersonID"" column in the ""Persons"" table.,The ""PersonID"" column in the ""Persons"" table is the , in the ""Persons"" table.,The ""PersonID"" column in the ""Orders"" table is a , in the ""Orders"" table.,The , constraint prevents invalid data from being inserted into the foreign key column,
+because it has to be one of the values contained in the parent table.,The following SQL creates a , on the ""PersonID"" column when the ""Orders"" table is created:,To allow naming of a , constraint, and for defining a , constraint on multiple columns, use the following SQL syntax:,To create a , constraint on the ""PersonID"" column when the ""Orders"" table is already created, use the following SQL:,To allow naming of a , constraint, and for defining a , constraint on multiple columns, use the following SQL syntax:,To drop a , constraint, use the following SQL:",,,
+"SQL , Constraint",CHECK,"SQL CHECK Constraint,SQL CHECK on CREATE TABLE,SQL CHECK on ALTER TABLE,DROP a CHECK Constraint",,"The , constraint is used to limit the value range that can be placed in a column.,If you define a , constraint on a column it 
+will allow only certain values for this column.,If you define a , constraint on a table it can limit the values in certain columns based on values in other columns in the row.,The following SQL creates a , constraint on the ""Age"" column when the ""Persons"" table is created.
+The , constraint ensures that the age of a person must be 18, or older:,To allow naming of a , constraint, and for defining a , constraint on multiple columns, use the following SQL syntax:,To create a , constraint on the ""Age"" column when the table is already created, use the following SQL:,To allow naming of a , constraint, and for defining a , constraint on multiple columns, use the following SQL syntax:,To drop a , constraint, use the following SQL:",,,
+"SQL , Constraint",PRIMARY KEY,"SQL PRIMARY KEY Constraint,SQL PRIMARY KEY on CREATE TABLE,SQL PRIMARY KEY on ALTER TABLE,DROP a PRIMARY KEY Constraint",,"The , constraint uniquely identifies each record in a table.,Primary keys must contain UNIQUE values, and cannot contain NULL values.,A table can have only ONE primary key; and in the table, this primary key can 
+consist of single or multiple columns (fields).,The following SQL creates a , on the ""ID"" column when the ""Persons"" table is created:,To allow naming of a , constraint, and for defining a 
+, constraint on multiple columns, use the following SQL syntax:, In the example above there is only ONE , (PK_Person). 
+However, the VALUE of the primary key is made up of TWO COLUMNS (ID + LastName).,
+,To create a , constraint on the ""ID"" column when the table is already created, use the following SQL:,To allow naming of a , constraint, and for defining a 
+, constraint on multiple columns, use the following SQL syntax:, If you use , to add a primary key, the primary key column(s) must
+have been declared to not contain NULL values (when the table was first created).,To drop a , constraint, use the following SQL:",,,
+"SQL , Constraint",UNIQUE,"SQL UNIQUE Constraint,SQL UNIQUE Constraint on CREATE TABLE,SQL UNIQUE Constraint on ALTER TABLE,DROP a UNIQUE Constraint",,"The , constraint ensures that all values in a column are different.,Both the , and 
+, constraints provide a guarantee for uniqueness for a column or set of columns.,A , constraint automatically has a
+, constraint.,However, you can have many , constraints per table, but only one 
+, constraint per table.,The following SQL creates a , constraint on the ""ID"" column when the ""Persons"" table is created:,To name a , constraint, and to define a 
+, constraint on multiple columns, use the following SQL syntax:,To create a , constraint on the ""ID"" column when the table is already created, use the following SQL:,To name a , constraint, and to define a 
+, constraint on multiple columns, use the following SQL syntax:,To drop a , constraint, use the following SQL:",,,
+"SQL , Constraint",NOT NULL,"SQL NOT NULL Constraint,SQL NOT NULL on CREATE TABLE,SQL NOT NULL on ALTER TABLE",Example,"By default, a column can hold NULL values.,The , constraint enforces a column to NOT accept NULL values.,This enforces a field to always contain a value, which means that you cannot insert a new record, or update a record without adding a value to this field.,The following SQL ensures that the ""ID"", ""LastName"", and 
+""FirstName"" columns 
+will NOT accept NULL values when the ""Persons"" table is created:,To create a , constraint on the ""Age"" column when the ""Persons"" table is already created, use the following SQL:",,,
+SQL ,Constraints,"SQL Create Constraints,SQL Constraints",,"SQL constraints are used to specify rules for data in a table.,Constraints can be specified when the table is created with the 
+, statement, or after the table is created 
+with the , statement.,SQL constraints are used to specify rules for the data in a table.,Constraints are used to limit the type of data that can go into a table. This 
+ensures the accuracy and reliability of the data in the table. If there is any violation between the constraint and the data action, 
+the action is aborted.,Constraints can be column level or table level. Column level constraints 
+apply to a column, and table level constraints apply to the whole table.,The following constraints are commonly used in SQL:"," - Ensures that a column cannot have a NULL value, - Ensures that all values in a column are 
+  different, - A combination of a 
+  , and ,. 
+  Uniquely identifies each row in a table, 
+  - Prevents actions that would destroy links between tables, , - Ensures that 
+  the values in a column satisfies a specific condition, , - Sets a default value for a column 
+  if no value 
+  is specified, , - Used to create and retrieve data from the database 
+  very quickly",,
+"SQL , Statement",DROP TABLE,"The SQL DROP TABLE Statement,SQL DROP TABLE Example,SQL TRUNCATE TABLE",Example,"The , statement is used to drop an existing table in a database.,The following SQL statement drops the existing table ""Shippers"":,The , statement is used to delete the data inside a table, but 
+not the table itself.",,,
+"SQL , Statement",ALTER TABLE,"SQL ALTER TABLE Statement,ALTER TABLE - ADD Column,ALTER TABLE - DROP COLUMN,ALTER TABLE - ALTER/MODIFY COLUMN,SQL ALTER TABLE Example,Change Data Type Example,DROP COLUMN Example","Example,Example","The , statement is used to add, delete, or modify columns in an existing table.,The , statement is also used to add and drop various constraints on 
+an existing table.,To add a column in a table, use the following syntax:,The following SQL adds an ""Email"" column to the ""Customers"" table:,To delete a column in a table, use the following syntax (notice that some 
+database systems don't allow deleting a column):,The following SQL deletes the ""Email"" column from the ""Customers"" table:,To change the data type of a column in a table, use the following syntax:,Look at the ""Persons"" table:,Now we want to add a column named ""DateOfBirth"" in the ""Persons"" table.,We use the following SQL statement:,Notice that the new column, ""DateOfBirth"", is of type date and is going to hold a 
+date. The data type specifies what type of data the column can hold. For a complete 
+reference of all the data types available in MS Access, MySQL, and SQL Server, 
+go to our complete ,.,The ""Persons"" table will now look like this:,Now we want to change the data type of the column named ""DateOfBirth"" in the ""Persons"" table.,We use the following SQL statement:,Notice that the ""DateOfBirth"" column is now of type year and is going to hold a year in a two- or four-digit format.,Next, we want to delete the column named ""DateOfBirth"" in the ""Persons"" table.,We use the following SQL statement:,The ""Persons"" table will now look like this:",,,
+"SQL , for SQL Server",BACKUP DATABASE,"The SQL BACKUP DATABASE Statement,The SQL BACKUP WITH DIFFERENTIAL Statement,BACKUP DATABASE Example,BACKUP WITH DIFFERENTIAL Example","Example,Example","The , statement is used in SQL Server to create a full back up of an existing SQL database.,A differential back up only backs up the parts of the database that have 
+changed since the last full database backup.,The following SQL statement creates a full back up of the existing database ""testDB"" 
+to the D disk:,The following SQL statement creates a differential back up of the database ""testDB"":",,,
+"SQL , Statement",DROP DATABASE,"The SQL DROP DATABASE Statement,DROP DATABASE Example",Example,"The , statement is used to drop an existing SQL database.,The following SQL statement drops the existing database ""testDB"":",,,
+"SQL , Statement",CREATE TABLE,"The SQL CREATE TABLE Statement,SQL CREATE TABLE Example,Create Table Using Another Table","Example,Example","The , statement is used to create a new table in a database.,The column parameters specify the names of the columns of the table.,The datatype parameter specifies the type of data the column can hold (e.g. varchar, integer, date, etc.)., For an overview of the available data types, 
+go to our complete ,.,The following example creates a table called ""Persons"" that contains five columns: PersonID, LastName, FirstName, 
+Address, and City:,The PersonID column is of type int and will hold an integer.,The LastName, FirstName, Address, and City columns are of
+type varchar and will hold characters, and the maximum length for these fields 
+is 255 characters.,The empty ""Persons"" table will now look like this:, The empty ""Persons"" table can now be filled with data with the 
+SQL , statement.,A copy of an existing table can also be created using 
+,.,The new table gets the same column definitions. All columns or specific 
+columns can be selected.,If you create a new table using an existing table, the new table will be 
+filled with the existing values from the old table.,The following SQL creates a new table called ""TestTables"" (which is 
+a copy of the ""Customers"" table): ",,,
+"SQL , Statement",CREATE DATABASE,"The SQL CREATE DATABASE Statement,CREATE DATABASE Example",Example,"The , statement is used to create a new SQL database.,The following SQL statement creates a database called ""testDB"":",,,
+SQL ,Operators,"SQL Arithmetic Operators,SQL Bitwise Operators,SQL Comparison Operators,SQL Compound Operators,SQL Logical Operators",,,,,
+SQL ,Comments,"SQL Comments,Single Line Comments,Multi-line Comments","Example,Example,Example,Example,Example,Example,Example","Comments are used to explain sections of SQL statements, or to prevent execution 
+of SQL statements.,Single line comments start with ,.,Any text between -- and the end of the line will be ignored (will not be executed).,The following example uses a single-line comment as an explanation:,The following example uses a single-line comment to ignore the end of a line:,The following example uses a single-line comment to ignore a statement:,Multi-line comments start with , and end with 
+,.,Any text between /* and */ will be ignored.,The following example uses a multi-line comment as an explanation:,The following example uses a multi-line comment to ignore many statements:,To ignore just a part of a statement, also use the /* */ comment.,The following example uses a comment to ignore part of a line:,The following example uses a comment to ignore part of a statement:",,,
+SQL ,Stored Procedures for SQL Server,"What is a Stored Procedure?,Demo Database,Stored Procedure Example,Stored Procedure With One Parameter,Stored Procedure With Multiple Parameters","Example,Example,Example,Example,Example,Example","A stored procedure is a prepared SQL code that you can save, so the 
+code can be reused over and over again.,So if you have an SQL query that you write over and over again, save 
+it as a stored procedure, and then just call it to execute it.,You can also pass parameters to a stored procedure, so that the stored procedure can act based on the parameter value(s) 
+that is passed.,Below is a selection from the ""Customers"" table in the Northwind sample database:,The following SQL statement creates a stored procedure named ""SelectAllCustomers"" 
+that selects all records from the ""Customers"" table:,Execute the stored procedure above as follows:,The following SQL statement creates a stored procedure  
+that selects Customers from a particular City from the ""Customers"" table:,Execute the stored procedure above as follows:,Setting up multiple parameters is very easy. Just list each parameter and the 
+data type separated by a comma as shown below.,The following SQL statement creates a stored procedure  
+that selects Customers from a particular City with a particular PostalCode from the ""Customers"" table:,Execute the stored procedure above as follows:",,,
+"SQL , Functions",NULL,"SQL IFNULL(), ISNULL(), COALESCE(), and NVL() Functions,Solutions",,"Look at the following ""Products"" table:,Suppose that the ""UnitsOnOrder"" column is optional, and may contain NULL values.,Look at the following SELECT statement:,In the example above, if any of the ""UnitsOnOrder"" values are NULL, the result 
+will be NULL.,The MySQL , function lets you 
+return an alternative value if an expression is NULL:,or we can use the , function, like this:,The SQL Server , function lets 
+you return an alternative value when an expression is NULL:,The MS Access , function returns 
+TRUE (-1) if the expression is a null value, otherwise FALSE (0):,The Oracle , function achieves the same result:",,,
+"SQL , Statement",CASE,"The SQL CASE Statement,CASE Syntax,Demo Database,SQL CASE Examples","Example,Example","The , statement goes through conditions and returns a value when the first condition is 
+met (like an if-then-else statement). So, once a condition is true, it will stop 
+reading and return the result. If no conditions are true, it returns 
+the value in the , clause. ,If there is no , part and no conditions are true, it returns NULL.,Below is a selection from the ""OrderDetails"" table in the Northwind sample database:,The following SQL goes through conditions and returns a value when the first condition is met:,The following SQL will order the customers by City. However, if City is NULL, then order by Country:",,,
+"SQL , Operator",IN,"The SQL IN Operator,Demo Database,IN Operator Examples","Example,Example,Example","The , operator allows you to specify multiple values in a , clause.,The , operator is a shorthand for multiple , conditions.,or:,The table below shows the complete ""Customers"" table from the Northwind sample database:,The following SQL statement selects all customers that are located in ""Germany"", ""France"" 
+or ""UK"":,The following SQL statement selects all customers that are NOT located in ""Germany"", ""France"" or ""UK"":,The following SQL statement selects all customers that are from the same 
+countries as the suppliers:",,,
+SQL ,Wildcards,"SQL Wildcard Characters,Demo Database,Using the % Wildcard,Using the _ Wildcard,Using the [charlist] Wildcard,Using the [!charlist] Wildcard","Example,Example,Example,Example,Example,Example,Example,Example","A wildcard character is used to substitute one or more characters in a string.,Wildcard characters are used with the , 
+operator. The , operator is used in a , clause to search for a specified pattern in a column.,All the wildcards can also be used in combinations!,Here are some examples showing different , operators with '%' and '_' wildcards:,The table below shows the complete ""Customers"" table from the Northwind sample database:,The following SQL statement selects all customers with a City starting with 
+""ber"":,The following SQL statement selects all customers with a City containing the 
+pattern ""es"": ,The following SQL statement selects all customers with a City starting with 
+any character, followed by ""ondon"":,The following SQL statement selects all customers with a City starting with 
+""L"", followed by any character, followed by ""n"", followed by any character, 
+followed by ""on"":,The following SQL statement selects all customers with a City starting with 
+""b"", ""s"", or ""p"":,The following SQL statement selects all customers with a City starting with 
+""a"", ""b"", or ""c"":,The two following SQL statements select all customers with a City NOT starting 
+with ""b"", ""s"", or ""p"":,Or:",,,
+MS Access ,Functions ,"MS Access String Functions,MS Access Numeric Functions,MS Access Date Functions,MS Access Some Other Functions",,"MS Access has many built-in functions.,This reference contains the string, numeric, and date functions 
+in MS Access.",,,
+"SQL , Operator",LIKE,"The SQL LIKE Operator,Demo Database,SQL LIKE Examples","Example,Example,Example,Example,Example,Example,Example","The , operator is used in a , clause to search for a specified pattern in a column.,There are two wildcards often used in conjunction with the , operator:,The percent sign and the underscore can also be used in combinations!,Here are some examples showing different , operators with '%' and '_' wildcards:,The table below shows the complete ""Customers"" table from the Northwind sample database:,The following SQL statement selects all customers with a CustomerName starting with 
+""a"":,The following SQL statement selects all customers with a CustomerName ending with ""a"":,The following SQL statement selects all customers with a CustomerName that 
+have ""or"" in any position:,The following SQL statement selects all customers with a CustomerName that 
+have ""r"" in the second position:,The following SQL statement selects all customers with a CustomerName that 
+starts with ""a"" and are at least 3 characters in length:,The following SQL statement selects all customers with a ContactName that 
+starts with ""a"" and ends with ""o"":,The following SQL statement selects all customers with a CustomerName that 
+does 
+NOT start with ""a"":"," The percent sign (%) represents zero, one, or multiple characters, The underscore sign (_) represents one, single character",,
+"SQL , Functions","COUNT(), AVG() and SUM()","The SQL COUNT(), AVG() and SUM() Functions,Demo Database,COUNT() Example,AVG() Example,Demo Database,SUM() Example","Example,Example,Example","The , function returns the number of rows that matches a specified criterion.,The , function returns the average value of a numeric column. ,The , function returns the total sum of a numeric column. ,Below is a selection from the ""Products"" table in the Northwind sample database:,The following SQL statement finds the number of products:, NULL values are not counted.,The following SQL statement finds the average price of all products:, NULL values are ignored.,Below is a selection from the ""OrderDetails"" table in the Northwind 
+sample database:,The following SQL statement finds the sum of the ""Quantity"" fields 
+in the ""OrderDetails"" table:, NULL values are ignored.",,,
+"SQL , Functions",MIN() and MAX(),"The SQL MIN() and MAX() Functions,Demo Database,MIN() Example,MAX() Example","Example,Example","The , function returns the smallest value of the selected column.,The , function returns the largest value of the selected column.,Below is a selection from the ""Products"" table in the Northwind sample database:,The following SQL statement finds the price of the cheapest product:,The following SQL statement finds the price of the most expensive product:",,,
+"SQL , Clause","TOP, LIMIT, FETCH FIRST or ROWNUM","The SQL SELECT TOP Clause,Demo Database,SQL TOP, LIMIT and FETCH FIRST Examples,SQL TOP PERCENT Example,ADD a WHERE CLAUSE","Example,Example,Example,Example,Example,Example,Example,Example","The , clause is used to specify the number of records to return.,The , clause is useful on large tables with thousands of 
+records. Returning a large number of records can impact performance.,Below is a selection from the ""Customers"" table in the Northwind sample database:,The following SQL statement selects the first three records from the ""Customers"" table 
+(for SQL Server/MS Access):,The following SQL statement shows the equivalent example for MySQL:,The following SQL statement shows the equivalent example for 
+Oracle:,The following SQL statement selects the first 50% of the records from the 
+""Customers"" table (for SQL Server/MS Access):,The following SQL statement shows the equivalent example for 
+Oracle:,The following SQL statement selects the first three records from the ""Customers"" table, 
+where the country is ""Germany"" (for SQL Server/MS Access):,The following SQL statement shows the equivalent example for MySQL:,The following SQL statement shows the equivalent example for 
+Oracle:",,,
+"SQL , Statement",DELETE,"The SQL DELETE Statement,Demo Database,SQL DELETE Example,Delete All Records","Example,Example","The , statement is used to delete existing records in a table.,Below is a selection from the ""Customers"" table in the Northwind sample 
+database:,The following SQL statement deletes the customer ""Alfreds Futterkiste"" from 
+the ""Customers"" table:,The ""Customers"" table will now look like this:,It is possible to delete all rows in a table without deleting the table. This 
+means that the table structure, attributes, and indexes will be intact:,The following SQL statement deletes all rows in the ""Customers"" table, 
+without deleting the table:",,,
+"SQL , Statement",UPDATE,"The SQL UPDATE Statement,Demo Database,UPDATE Table,UPDATE Multiple Records,Update Warning!","Example,Example,Example","The , statement is used to modify the existing records in a table.,Below is a selection from the ""Customers"" table in the Northwind sample 
+database:,The following SQL statement updates the first customer (CustomerID = 1) with a new contact person , 
+a new city.,The selection from the ""Customers"" table will now look like this:,It is the , clause that determines how many records will be updated.,The following SQL statement will 
+update the ContactName to ""Juan"" for all records where country is ""Mexico"":,The selection from the ""Customers"" table will now look like this:,The selection from the ""Customers"" table will now look like this:",,,
+SQL ,NULL Values,"What is a NULL Value?,How to Test for NULL Values?,Demo Database,The IS NULL Operator,The IS NOT NULL Operator","Example,Example","A field with a NULL value is a field with no value.,If a field in a table is optional, it is possible to insert a new record or 
+update a record without adding a value to this field. Then, the field will be 
+saved with a NULL value.,It is not possible to test for NULL values with comparison operators, such as 
+=, <, or <>.,We will have to use the , and , operators instead.,Below is a selection from the ""Customers"" table in the Northwind sample 
+database:,The , operator is used to test for empty values (NULL values).,The following SQL lists all customers with a NULL value in the ""Address"" field:,The , operator is used to test for non-empty values (NOT NULL 
+values).,The following SQL lists all customers with a value in the ""Address"" field:",,,
+"SQL , Keyword",ORDER BY,"The SQL ORDER BY Keyword,Demo Database,ORDER BY Example,ORDER BY DESC Example,ORDER BY Several Columns Example,ORDER BY Several Columns Example 2","Example,Example,Example,Example","The , keyword is used to sort the result-set in ascending or 
+descending order.,The , keyword sorts the records in ascending order by default. To sort the records in descending order, use the , keyword.,Below is a selection from the ""Customers"" table in the Northwind sample database:,The following SQL statement selects all customers from the ""Customers"" table, 
+sorted by the ""Country"" column:,The following SQL statement selects all customers from the ""Customers"" table, 
+sorted DESCENDING by the ""Country"" column:,The following SQL statement selects all customers from the ""Customers"" table, 
+sorted by the ""Country"" and the ""CustomerName"" column. This means that it orders 
+by Country, but if some rows have the same Country, it orders them by 
+CustomerName:,The following SQL statement selects all customers from the ""Customers"" table, 
+sorted ascending by the ""Country"" and descending by the ""CustomerName"" column:",,,
+"SQL , Operators","AND, OR and NOT","The SQL AND, OR and NOT Operators,Demo Database,AND Example,OR Example,NOT Example,Combining AND, OR and NOT","Example,Example,Example,Example,Example,Example","The , clause can be combined with ,, ,, and , operators.,The , and , operators are used to filter records based on more than one 
+condition:,The , operator displays a record if the condition(s) is NOT TRUE.,The table below shows the complete ""Customers"" table from the Northwind sample database:,The following SQL statement selects all fields from ""Customers"" where country is ""Germany"" AND city is ""Berlin"":,The following SQL statement selects all fields from ""Customers"" where city is ""Berlin"" OR ""München"":,The following SQL statement selects all fields from ""Customers"" where country is ""Germany"" OR ""Spain"":,The following SQL statement selects all fields from ""Customers"" where country is NOT ""Germany"":,You can also combine the ,, , and , operators.,The following SQL statement selects all fields from ""Customers"" where country is ""Germany"" AND city must be ""Berlin"" 
+OR ""München"" (use parenthesis to form complex expressions):,The following SQL statement selects all fields from ""Customers"" where country is 
+NOT ""Germany"" and NOT ""USA"":","The , operator displays a record if all the conditions separated by , 
+  are TRUE.,The , operator displays a record if any of the conditions separated by , is TRUE.",,
+"SQL , Statement",INSERT INTO,"The SQL INSERT INTO Statement,Demo Database,INSERT INTO Example,Insert Data Only in Specified Columns","Example,Example","The , statement is used to insert new records in a table.,It is possible to write the , 
+statement in two ways:,1. Specify both the column names and the values to be inserted:,2. If you are adding values for all the columns of the table, you do not need to 
+specify the column names in the SQL query. However, make sure the order of the 
+values is in the same order as the columns in the table. Here, the , syntax 
+would be as follows:,Below is a selection from the ""Customers"" table in the Northwind 
+sample database:,The following SQL statement inserts a new record in the ""Customers"" table:,The selection from the ""Customers"" table will now look like this:,It is also possible to only insert data in specific columns.,The following SQL statement will insert a new record, but only insert data in the ""CustomerName"", 
+""City"", and ""Country"" columns (CustomerID will 
+be updated automatically):,The selection from the ""Customers"" table will now look like this:",,,
+"SQL , Clause",WHERE,"The SQL WHERE Clause,Demo Database,WHERE Clause Example,Text Fields vs. Numeric Fields,Operators in The WHERE Clause","Example,Example","The , clause is used to filter records.,It is used to extract only those records that fulfill a specified 
+condition.,Below is a selection from the ""Customers"" table in the Northwind sample database:,The following SQL statement selects all the customers from the country 
+""Mexico"", in the ""Customers"" table:,SQL requires single quotes around text values (most database systems will 
+also allow double quotes).,However, numeric fields should not be enclosed in quotes:,The following operators can be used in the , clause:",,,
+"SQL , Statement",SELECT DISTINCT,"The SQL SELECT DISTINCT Statement,Demo Database,SELECT Example Without DISTINCT,SELECT DISTINCT Examples","Example,Example,Example,Example","The , statement is used to return only distinct 
+(different) values.,Inside a table, a column often contains many duplicate values; and sometimes you 
+only want to list the different (distinct) values.,Below is a selection from the ""Customers"" table in the Northwind sample 
+database:,The following SQL statement selects all (including the duplicates) values from the ""Country"" column in the ""Customers"" table:,Now, let us use the , statement and see the result.,The following SQL statement selects only the DISTINCT values from the ""Country"" column in the ""Customers"" table:,The following SQL statement lists the number of different (distinct) customer countries:,Here is the workaround for MS Access:",,,
+"SQL , Statement",SELECT,"The SQL SELECT Statement,Demo Database,SELECT Column Example,SELECT * Example","Example,Example","The , statement is used to select data from a database.,The data returned is stored in a result table, called the result-set.,Here, column1, column2, ... are the field names of the table you want to 
+select data from. If you 
+want to select all the fields available in the table, use the following syntax:,Below is a selection from the ""Customers"" table in the Northwind sample database:,The following SQL statement selects the ""CustomerName"" and ""City"" columns 
+from the ""Customers"" table:,The following SQL statement selects all the columns from the ""Customers"" 
+table:",,,
+SQL ,Syntax,"Database Tables,SQL Statements,Keep in Mind That...,Semicolon after SQL Statements?,Some of The Most Important SQL Commands",Example,"A database most often contains one or more tables. Each table is identified 
+by a name (e.g. ""Customers"" or ""Orders""). Tables contain records (rows) with 
+data.,In this tutorial we will use the well-known Northwind sample database 
+(included in MS Access and MS SQL Server).,Below is a selection from the ""Customers"" table:,
+The table above contains five records (one for each customer) and seven columns 
+(CustomerID, CustomerName, ContactName, Address, City, PostalCode, and Country).,Most of the actions you need to perform on a database are done with SQL 
+statements.,The following SQL statement selects all the records in the ""Customers"" table:,In this tutorial we will teach you all about the different SQL statements.,In this tutorial we will write all SQL keywords in upper-case.,Some database systems require a semicolon at the end of each SQL statement.,Semicolon is the standard way to separate each SQL statement in database 
+systems that allow more than one SQL statement to be executed in the same call 
+to the server.,In this tutorial, we will use semicolon at the end of each SQL statement.","SQL keywords are NOT case sensitive: , is the same as , - extracts data from a database, - updates data in a database, - deletes data from a database, - inserts new data into a database, - creates a new database, - modifies a database, - creates a new table, - modifies a table, - deletes a table, - creates an index (search key), - deletes an index
+  ",,
+ SQL,Introduction to,"What is SQL?,What Can SQL do?,SQL is a Standard - BUT....,Using SQL in Your Web Site,RDBMS",Example,"SQL is a standard language for accessing and manipulating databases.,Although SQL is an ANSI/ISO standard, there are different versions of the SQL language.,However, to be compliant with the ANSI standard, they all support at least the major commands (such as ,, ,, ,, ,, ,) in a similar manner.,To build a web site that shows data from a database, you will need:,RDBMS stands for Relational Database Management System.,RDBMS is the basis for SQL, and for all modern database systems such as MS SQL Server, IBM DB2, Oracle, MySQL, and Microsoft Access.,The data in RDBMS is stored in database objects called tables. A table is a collection of related data entries and it consists of columns and rows.,Look at the ""Customers"" table:,Every table is broken up into smaller entities called fields. The fields in 
+the Customers table consist of CustomerID, CustomerName, ContactName, Address, 
+City, PostalCode and Country. A field is a column in a table that is designed to maintain 
+specific information about every record in the table.,A record, also called a row, is each individual entry that exists in a table. 
+For example, there are 91 records in the above Customers table. A record is a 
+horizontal entity in a table.,A column is a vertical entity in a table that contains all information 
+associated with a specific field in a table.","SQL stands for Structured Query Language,SQL lets you access and manipulate databases,SQL became a standard of the American National Standards Institute (ANSI) 
+  in 1986, and of the International Organization for Standardization (ISO) in 
+  1987, SQL can execute queries against a database,SQL can retrieve data from a database,SQL can insert records in a database,SQL can update records in a database,SQL can delete records from a database,SQL can create new databases,SQL can create new tables in a database,SQL can create stored procedures in a database,SQL can create views in a database,SQL can set permissions on tables, procedures, and views,An RDBMS database program (i.e. MS Access, SQL Server, MySQL),To use a server-side scripting language, like PHP or ASP,To use SQL to get the data you want,To use HTML / CSS to style the page",,

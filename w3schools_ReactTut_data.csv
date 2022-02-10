@@ -1,0 +1,220 @@
+H1_leftside_heading,H1_rightside_heading,H2,H3,All_para,li,div,div_2
+React Tutorial,,"Learning by Examples,Learning by Exercises,React Quiz,Create React App,Run the React Application,What You Should Already Know",Example:,"Our ""Show React"" tool makes it easy to demonstrate React. It shows both the code and the result.,Test your React skills with a quiz.,To learn and test React, you should set up a React Environment on 
+your computer.,This tutorial uses the ,.,The , tool is an officially supported way to create React applications., is required to use ,.,Open your terminal in the directory you would like to create your 
+application.,Run this command to create a React application named
+,:, will set up everything you need to run a React application.,Run this command to move to the , directory:,Run this command to execute the React application ,:,A new browser window will pop up with your newly created React App! If not, open your browser and type 
+, in the address bar.,The result:,Before starting with React.JS, you should have intermediate experience in:,You should also have some experience with the new JavaScript features 
+introduced in ECMAScript 6 (ES6), you will learn about them in the , chapter.","HTML,CSS,JavaScript",,
+"React , Hooks",,Effect Cleanup,"Example:,1. No dependency passed:,2. An empty array:,3. Props or state values:,Example:,Example:,Example:","The , Hook allows you to perform side effects in your components.,Some examples of side effects are: fetching data, directly updating the DOM, and timers., accepts two arguments. The second argument is optional.,Let's use a timer as an example.,But wait!! I keeps counting even though it should only count once!, runs on every render. That means that when the count changes, a render happens, which then triggers another effect.,This is not what we want. There are several ways to control when side effects run.,We should always include the second parameter which accepts an array.
+We can optionally pass dependencies to , in this array.,So, to fix this issue, let's only run this effect on the initial render.,If there are multiple dependencies, they should be included in the , dependency array.,Some effects require cleanup to reduce memory leaks.,Timeouts, subscriptions, event listeners, and other effects that are no longer needed should be disposed.,We do this by including a return function at the end of the , Hook.",,,
+"React , Hook",,"Import ,Initialize ,Read State,Update State,What Can State Hold,Updating Objects and Arrays in State","Example:,Example:,Example:,Example:,Example:,Example:,Example:","The React , Hook allows us to track state in a function component.,State generally refers to data or properites that need to be tracking in an application.,To use the , Hook, we first need to , it into our component.,Notice that we are destructuring , from , as it is a named export.,We initialize our state by calling , in our function component., accepts an initial state and returns two values:,Notice that again, we are destructuring the returned values from ,.,The first value, ,, is our current state.,The second value, ,, is the fuction that is used to update our state.,Lastly, we set the initial state to an empty string: ,We can now include our state anywhere in our component.,To update our state, we use our state updater function.,The , Hook can be used to keep track of strings, numbers, booleans, arrays, objects, and any combination of these!,We could create multiple state Hooks to track individual values.,Or, we can just use one state and include an object instead!,When state is updated, the entire state gets overwritten.,What if we only want to update the color of our car?,If we only called ,, this would remove the brand, model, and year from our state.,We can use the JavaScript spread operator to help us.,Because we need the current value of state, we pass a function into our , function.
+This function receives the previous value.,We then return an object, spreading the , and overwriting only the color.","The current state.,A function that updates the state.",,
+React Custom Hooks,,"Build a Hook,Example Explained","Example:,Example:","Hooks are reusable functions.,When you have component logic that needs to be used by multiple components, we can extract that logic to a custom Hook.,Custom Hooks start with ""use"". Example: ,.,In the following code, we are fetching data in our , component and displaying it.,We will use the , service to fetch fake data. This service is great for testing applications when there is no existing data.,To learn more, check out the , section.,Use the JSONPlaceholder service to fetch fake ""todo"" items and display the titles on the page:,The fetch logic may be needed in other components as well, so we will extract that into a custom Hook.,Move the fetch logic to a new file to be used as a custom Hook:,We have created a new file called , containing a function called , which contains all of the logic needed to fetch our data.,We removed the hard-coded URL and replaced it with a , variable that can be passed to the custom Hook.,Lastly, we are returning our data from our Hook.,In ,, we are importing our , Hook and utilizing it like any other Hook. This is where we pass in the URL to fetch data from.,Now we can reuse this custom Hook in any component to fetch data from any URL.",,,
+React ,Quiz,"The Test,Count Your Score",,"You can test your React skills with W3Schools' Quiz.,The test contains 25 questions and there is no time limit. ,The test is not official, it's just a nice way to see how much you know, or don't know, about React.,You will get 1 point for each correct answer. At the end of the Quiz,
+your total score will be displayed. Maximum score is 25 points.",,,
+"React , Hook",,Solution,"Example:,Example:","The React , Hook returns a memoized callback function.,This allows us to isolate resource intensive functions so that they will not automatically run on every render.,The , Hook only runs when one of its dependencies update.,This can improve performance.,One reason to use , is to prevent a component from re-rendering unless its props have changed.,In this example, you might think that the , component will not re-render unless the , change:,Try running this and click the count increment button.,You will notice that the , component re-renders even when the , do not change.,Why does this not work? We are using ,, so the , component should not re-render since neither the , state nor the , function are changing when the count is incremented.,This is because of something called ""referential equality"".,Every time a component re-renders, its functions get recreated. Because of this, the , function has actually changed.,To fix this, we can use the , hook to prevent the function from being recreated unless necessary.,Use the , Hook to prevent the , component from re-rendering needlessly:,Now the , component will only re-render when the , prop changes.",,,
+"React , Hook",,Syntax,Example:,"The , Hook is similar to the , Hook.,It allows for custom state logic.,If you find yourself keeping track of multiple pieces of state that rely on complex logic, , may be useful.,The useReducer Hook accepts two arguments.,The , function contains your custom state logic and the ,can be a simple value but generally will contain an object.,The , Hook returns the current ,and a ,method.,Here is an example of , in a counter app:,This is just the logic to keep track of the todo complete status.,All of the logic to add, delete, and complete a todo could be contained within a single
+, Hook by adding more actions.",,,
+React useContext Hook,,"React Context,The Problem,The Solution,Full Example","Example:,Example:","React Context is a way to manage state globally.,It can be used together with the , Hook to share state between
+deeply nested components more easily than with , alone.,State should be held by the highest parent component in the stack that requires access to the state.,To illustrate, we have many nested components. The component at the top and bottom of the stack need access to the state.,To do this without Context, we will need to pass the state as ""props"" through each nested component. This is called ""prop drilling"".,Even though components 2-4 did not need the state, they had to pass the state along so that it could reach component 5.,The solution is to create context.,To create context, you must Import , and initialize 
+it:,Next we'll use the Context Provider to wrap the tree of components that need the state Context.,Wrap child components in the Context Provider and supply the state value.,Now, all components in this tree will have access to the user Context.,In order to use the Context in a child component, we need to access it using the , Hook.,First, include the , in the import 
+statement:,Then you can access the user Context in all components:",,,
+"React , Hook",,"Does Not Cause Re-renders,Accessing DOM Elements,Tracking State Changes","Example:,Example:,Example:","The , Hook allows you to persist values between renders.,It can be used to store a mutable value that does not cause a re-render when updated.,It can be used to access a DOM element directly.,If we tried to count how many times our application renders using the , Hook, we would be caught in an infinite loop since this Hook itself causes a re-render.,To avoid this, we can use the , Hook., only returns one item. It returns an Object called ,.,When we initialize , we set the initial value: ,.,Run this on your computer and try typing in the input to see the application render count increase.,In general, we want to let React handle all DOM manipulation.,But there are some instances where , can be used without causing issues.,In React, we can add a , attribute to an element to access it directly in the DOM.,The , Hook can also be used to keep track of previous state values.,This is because we are able to persist , values between renders.,This time we use a combination of ,, ,, and , to keep track of the previous state.,In the ,, we are updating the , current value each time the , is updated by entering text into the input field.",,,
+Styling React Using Sass,,"What is Sass,Can I use Sass?,Create a Sass file","my-sass.scss:,index.js:","Sass is a CSS pre-processor.,Sass files are executed on the server and sends CSS to the 
+browser.,You can learn more about Sass in our
+,.,If you use the , in your project, you can easily 
+install and use Sass in your React projects.,Install Sass by running this command in your terminal:,Now you are ready to include Sass files in your project!,Create a Sass file the same way as you create CSS files, but Sass files have the 
+file extension ,In Sass files you can use variables and other Sass functions:,Import the Sass file the same way as you imported a CSS file:",,,
+Styling React Using CSS,,"Inline Styling,CSS Stylesheet,CSS Modules","Example:,Example:,Example:,App.css:,index.js:,my-style.module.css:,Car.js:,index.js:","There are many ways to style React with CSS, this tutorial will 
+take a closer look at three common ways:,To style an element with the inline style attribute, the value must be a 
+JavaScript object:,Since the inline CSS is written in a JavaScript object, properties with 
+hyphen separators, like ,, 
+must be written with camel case syntax:,You can also create an object with styling information, and refer to it in the style attribute:,You can write your CSS styling in a separate file, just save the file with the 
+, file extension, and import it in your 
+application.,Import the stylesheet in your application:,Another way of adding styles to your application is to use CSS Modules.,CSS Modules are convenient for components that are placed in separate files.,Create the CSS module with the , 
+extension, example: ,.,Import the stylesheet in your component:,Import the component in your application:","Inline styling,CSS stylesheets,CSS Modules",,
+React Memo,,"Problem,Solution","Example:,Example:","Using , will cause React to skip rendering a component if its props have not changed.,This can improve performance.,In this example, the , component re-renders even when the todos have not changed.,When you click the increment button, the , component re-renders.,If this component was complex, it could cause performance issues.,To fix this, we can use ,.,Use ,to keep the , component from needlessly re-rendering.,Wrap the , component export in ,:,Now the , component only re-renders when the , that are passed to it through props are updated.",,,
+"React , Hook",,"Performance,Use ","Example:,Example:","The React , Hook returns a memoized value.,The , Hook only runs when one of its dependencies update.,This can improve performance.,The , Hook can be used to keep expensive, resource intensive functions from needlessly running.,In this example, we have an expensive function that runs on every render.,When changing the count or adding a todo, you will notice a delay in execution.,To fix this performance issue, we can use the , Hook to memoize the , function. This will cause the function to only run when needed.,We can wrap the expensive function call with ,.,The ,Hook accepts a second parameter to declare 
+dependencies. The expensive function will only run when its dependencies have changed.,In the following example, the expensive function will only run when , 
+is changed and not when todo's are added.",,,
+React Router,,"Add React Router,Folder Structure,Basic Usage,Example Explained,Pages / Components",Example,"Create React App doesn't include page routing.,React Router is the most popular solution.,To add React Router in your application, run this in the terminal from the root directory of the application:,To create an application with multiple page routes, let's first start with the file structure.,Within the , folder, we'll create a folder named
+, with several files:,:,Each file will contain a very basic React component.,Now we will use our Router in our , file.,We wrap our content first with ,.,Then we define our ,.
+An application can have multiple ,.
+Our basic example only uses one.,
+,s can be nested.
+The first , has a path of ,
+and renders the , component.,
+The nested ,s inherit and add to the parent route.
+So the , path is combined with the parent and becomes
+,.,
+The , component route does not have a path but has an
+, attribute.
+That specifies this route as the default route for the parent route, which is ,.,
+Setting the , to , will act as a 
+catch-all for any undefined URLs. This is great for a 404 error page.,
+The , component has
+, and , elements.,The , renders the current route selected., is used to set the URL and keep track of browsing history.,Anytime we link to an internal path, we will use ,
+instead of ,.,The ""layout route"" is a shared component that inserts common content on all pages, such as a navigation menu.",,,
+React ,Exercises,"Exercises,Count Your Score",,"You can test your React skills with W3Schools' Exercises.,We have gathered a variety of React exercises (with answers) for each React Chapter.,Try to solve an exercise by filling in the missing parts of a code. If you're stuck, hit the ""Show Answer"" button to see what you've done wrong.,You will get 1 point for
+each correct answer. Your score and total score will always be displayed.",,,
+W3Schools ,React Certificate,How Does It Work?,,,"Study for free at W3Schools.com,Study at your own speed,Test your skills with W3Schools online quizzes,Apply for your certificate by paying an exam fee,Take your exam online, at any time, and from any location",,
+React Forms,,"Adding Forms in React,Handling Forms,Submitting Forms,Multiple Input Fields,Textarea,Select","Example:,Example:,Example:,Example:,Example:,HTML:,Example:","Just like in HTML, React uses forms to allow users to interact with the web page.,You add a form with React like any other element:,This will work as normal, the form will submit and the page will refresh.,But this is generally not what we want to happen in React.,We want to prevent this default behavior and let React control the form.,Handling forms is about how you handle the data when it changes value or gets 
+submitted.,In HTML, form data is usually handled by the DOM.,In React, form data is usually handled by the components.,When the data is handled by the components, all the data is stored in the component 
+state.,You can control changes by adding event handlers in the
+, attribute.,We can use the , Hook to keep track of each inputs value and provide a ""single source of truth"" for the entire application.,You can control the submit action by adding an event handler in the , attribute for the ,:,You can control the values of more than one input field by adding a 
+, attribute to each element.,We will initialize our state with an empty object.,To access the fields in the event handler use the
+, and
+, syntax.,To update the state, use square brackets [bracket notation] around the property name.,The textarea element in React is slightly different from ordinary HTML.,In HTML the value of a textarea was the text between the start tag 
+, 
+and the end tag ,.,In React the value of a textarea is placed in a value attribute.
+We'll use the , Hook to mange the value of the textarea:,A drop down list, or a select box, in React is also a bit different from HTML.,in HTML, the selected value in the drop down list was defined with the , attribute:,In React, the selected value is defined with a ,
+attribute on the , tag:,By making these slight changes to , and ,, React is able to handle all input elements in the same way.",,,
+React Hooks,,"What is a Hook?,Hook Rules,Custom Hooks",Example:,"Hooks were added to React in version 16.8.,Hooks allow function components to have access to state and other React features. Because of this, class components are generally no longer needed.,Hooks allow us to ""hook"" into React features such as state and lifecycle methods.,You must , Hooks from ,.,Here we are using the , Hook to keep track of the application state.,State generally refers to application data or properties that need to be tracked.,There are 3 rules for hooks:,If you have stateful logic that needs to be reused in several components, you can build your own custom Hooks.,We'll go into more detail in the ,.","Hooks can only be called inside React function components.,Hooks can only be called at the top level of a component.,Hooks cannot be conditional",,
+React Lists,,Keys,"Example:,Example:","In React, you will render lists with some type of loop.,The JavaScript , array method is generally the preferred method.,When you run this code in your ,, it will work but you will receive a warning that there is no ""key"" provided for the list items.,Keys allow React to keep track of elements. This way, if an item is updated or removed, only that item will be re-rendered instead of the entire list.,Keys need to be unique to each sibling. But they can be duplicated globally.",,,
+React Conditional Rendering,," Statement,Logical , Operator,Ternary Operator","Example:,Example:,Example:,Example:,Example:,Example:","In React, you can conditionally render components.,There are several ways to do this.,We can use the , JavaScript operator to decide which component to render.,Try changing the , attribute to ,:,Another way to conditionally render a React component is by using the , operator.,If ,  is equates to true,
+the expression after , will render.,Try emptying the , array:,Another way to conditionally render elements is by using a ternary operator.,We will go back to the goal example.,To learn more, see the , section.",,,
+React Props,,"React Props,Pass Data","Example,Example,Example,Example,Example","Props are arguments passed into React components.,Props are passed to components via HTML attributes.,React Props are like function arguments in JavaScript , attributes 
+in HTML.,To send props into a component, use the same syntax as HTML attributes:,The component receives the argument as a , object:,Props are also how you pass data from one component to another, as parameters.,If you have a variable to send, and not a string as in the example above, you just put the variable name inside curly brackets:,Or if it was an object:",,,
+React Components,,"React Components,Create Your First Component,Rendering a Component,Props,Components in Components,Components in Files","Example,Example,Example,Example,Example,Example,Example","Components are like functions that return HTML elements.,Components are independent and reusable bits of code.
+They serve the same purpose as JavaScript functions,
+but work in isolation and return HTML.,Components come in two types, Class components and Function components, in 
+this tutorial we will concentrate on Function components.,When creating a React component, the component's name , start with an 
+upper case letter.,A class component must include the , statement. 
+This statement creates an inheritance to React.Component, and gives your component access to React.Component's functions.,The component also requires a , method, 
+this method returns HTML.,Here is the same example as above, but created using a Function component instead.,A Function component also returns HTML, and behaves much the same way as a Class component,
+but Function components can be written using much less code,
+are easier to understand, and will be preferred in this tutorial.,Now your React application has a component called Car, which returns an 
+, element.,To use this component in your application, use similar syntax as normal HTML:
+,Components can be passed as ,, which stands for properties.,Props are like function arguments, and you send them into the component as attributes.,You will learn more about , in the next chapter.,We can refer to components inside other components:,React is all about re-using code, and it is recommended to split your components into separate files.,To do that, create a new file with a , 
+file extension and put the code inside it:,To be able to use the Car component, you have to import the file in your 
+application.",,,
+React Events,,"Adding Events,Passing Arguments,React Event Object","React:,HTML:,Example:,Example:,Example:","Just like HTML DOM events, React can perform actions based on user events.,React has the same events as HTML: click, change, mouseover etc.,React events are written in camelCase syntax:,
+instead of ,.,React event handlers are written inside curly 
+braces:,  instead of
+,. ,To pass an argument to an event handler, use an arrow function.,Event handlers have access to the React event that triggered the function.,In our example the event is the ""click"" event.,This will come in handy when we look at , in 
+a later chapter.",,,
+React Class Components,,"React Components,Create a Class Component,Component Constructor,Props,Props in the Constructor,Components in Components,Components in Files,React Class Component State,Creating the state Object,Using the , Object,Changing the , Object,Lifecycle of Components,Mounting,Updating,Unmounting","Example,Example,Example,Example,Example,Example,Example,Example,Example,Example,Example,Example:,Example:,Example:,Example:,Example:,Example:,Example:,Example:,Example:,Example:,Example:,Example:,Example:","Before React 16.8, Class components were the only way to track state and lifecycle on a React component.
+Function components were considered ""state-less"".,With the addition of Hooks, Function components are now almost equivalent to Class components.
+The differences are so minor that you will probably never need to use a Class component in React.,Even though Function components are preferred, there are no current plans on removing Class components from React.,This section will give you an overview of how to use Class components in React.,Components are independent and reusable bits of code.
+They serve the same purpose as JavaScript functions,
+but work in isolation and return HTML via a render() function.,Components come in two types, Class components and Function components, in 
+this chapter you will learn about Class components.,When creating a React component, the component's name must start with an 
+upper case letter.,The component has to include the , statement, this statement creates an inheritance to 
+React.Component, and gives your component access to React.Component's functions.,The component also requires a , method, 
+this method returns HTML.,Now your React application has a component called Car, which returns a 
+, element.,To use this component in your application, use similar syntax as normal HTML:
+,If there is a , function in your component, this function will be called when the 
+component gets initiated.,The constructor function is where you initiate the component's properties.,In React, component properties should be kept in an object called
+,.,You will learn more about , later in 
+this tutorial.,The constructor function is also where you honor the inheritance of the 
+parent component by including the , 
+statement, which executes the parent component's constructor function, and your component has access to all the functions of 
+the parent component (,).,Use the color property in the render() function:,Another way of handling component properties is by using ,.,Props are like function arguments, and you send them into the component as attributes.,You will learn more about , in the next chapter.,If your component has a constructor function,
+the props should always be passed to the constructor and also to the React.Component via the , method.,We can refer to components inside other components:,React is all about re-using code, and it can be smart to insert some of your 
+components in separate files.,To do that, create a new file with a , 
+file extension and put the code inside it:,Note that the file must start by importing React (as before), and it has to 
+end with the statement ,.,To be able to use the , component, you have to import the file in your 
+application.,React Class components have a built-in , object.,You might have noticed that we used , earlier in the component constructor section.,The , object is where you store property values that belongs to the component.,When the , object changes, the component re-renders.,The state object is initialized in the constructor:,The state object can contain as many properties as you like:,Refer to the , object anywhere in the component by using the
+, syntax:,To change a value in the state object, use the , method.,When a value in the , object changes, 
+the component will re-render, meaning that the output will change according to 
+the new value(s).,Each component in React has a lifecycle which you can monitor and manipulate during its 
+three main phases.,The three phases are: ,, ,, and
+,.,Mounting means putting elements into the DOM.,React has four built-in methods that gets called, in this order, when 
+mounting a component:,The , method is required and will 
+always be called, the others are optional and will be called if you define them.,The , method is called before anything else, 
+when the component is initiated, and it is the natural 
+place to set up the initial , and other 
+initial values.,The , method is called with the 
+,, as arguments, and you should always 
+start by calling the , before 
+anything else, this will initiate the parent's constructor method and allows the 
+component to inherit methods from its parent (,).,The , method is 
+called right before rendering the element(s) in the DOM.,This is the natural place to set the , object based on the initial 
+,.
+,It takes , as an argument, and returns an object with changes to the
+,.,The example below starts with the favorite color being 
+""red"", but the
+, method updates the favorite color based on the
+, attribute:,The , method is required, and is the 
+method that actually outputs the HTML to the DOM.,The , method is called after the 
+component is rendered.,This is where you run statements that requires that the component is already placed in the DOM.,The next phase in the lifecycle is when a component is ,.,A component is updated whenever there is a change in the component's
+, or ,.,React has five built-in methods that gets called, in this order, when a component 
+is updated:,The , method is required and will 
+always be called, the others are optional and will be called if you define them.,Also at , the , method is 
+called. This is the first method that is called when a component gets updated.,This is still the natural place to set the , object based on the initial props.
+
+
+,The example below has a button that changes the favorite color to blue, but 
+since the , method is called, 
+which updates the state with the color from the favcol attribute, the favorite color is 
+still 
+rendered as yellow:,In the , method
+you can return a Boolean value that specifies whether React should continue with the rendering or not.,The default value is ,.,The example below shows what happens when the , method returns ,:,The , method is of course called when a component gets ,, 
+it has to re-render the HTML to the DOM, with the new changes.,The example below has a button that changes the favorite color to blue:,In the , method
+you have access to the , and 
+, , the update, meaning that 
+even after the update, you can check what the values were , the 
+update.,If the , method
+is present, you should also include the , method, otherwise you will get an error.,The example below might seem complicated, but all it does is this:,When the component is , it is rendered with the favorite 
+color ""red"".,When the component , a timer changes the state, and 
+after one second, the favorite color becomes ""yellow"".,This action triggers the , phase, and since this component has a , method, this method is executed, and writes a 
+message to the empty DIV1 element.,Then the , method is 
+executed and writes a message in the empty DIV2 element:, ,The , method
+is called after the component is updated in the DOM.,The example below might seem complicated, but all it does is this:,When the component is , it is rendered with the favorite 
+color ""red"".,When the component , a timer changes the state, and 
+the color becomes ""yellow"".,This action triggers the , phase, and since this component has 
+a , method, this method is 
+executed and writes a message in the empty DIV element:,The next phase in the lifecycle is when a component is removed from the DOM, or , as React likes to call it.,React has only one built-in method that gets called when a component is unmounted:,The , method is 
+called when the component is about to be removed from the DOM.",,,
+React ES6,,"What is ES6?,Why Should I Learn ES6?",,"ES6 stands for ECMAScript 6.,ECMAScript was created to standardize JavaScript, and ES6 is the 6th version 
+of ECMAScript, it was published in 2015, and is also known as ECMAScript 2015.,React uses ES6, and you should be familiar with some of the new features 
+like:"," (let, const, var), like ",,
+React JSX,,"What is JSX?,Coding JSX,Expressions in JSX,Inserting a Large Block of HTML,One Top Level Element,Elements Must be Closed,Attribute class = className,Conditions - if statements","Example 1,Example 2,Example,Example,Example,Example,Example,Example,Example,Example","JSX stands for JavaScript XML.,JSX allows us to write HTML in React.,JSX makes it easier to write and add HTML in React.,JSX allows us to write HTML elements in JavaScript and place them in the DOM 
+without any ,  and/or
+, methods.,JSX converts HTML tags into react elements.,Here are two examples. The first uses JSX and the second does 
+not:,As you can see in the first example, JSX allows us to write HTML directly within the JavaScript code.,JSX is an extension of the JavaScript language based on ES6, and is translated into regular JavaScript at runtime.,With JSX you can write expressions inside curly braces ,.,The expression can be a React variable, or property, or any other valid JavaScript expression. JSX will execute the expression and return the result:,To write HTML on multiple lines, put the HTML inside parentheses:,The HTML code must be wrapped in , top level element.,So if you like to write , paragraphs, you must put them inside a 
+parent element, like a , element.,Alternatively, you can use a ""fragment"" to wrap multiple lines.
+This will prevent unnecessarily adding extra nodes to the DOM.,A fragment looks like an empty HTML tag: ,.,JSX follows XML rules, and therefore HTML elements must be properly closed.,The , attribute is a much used attribute 
+in HTML, but since JSX is rendered as JavaScript, and the
+, keyword is a reserved word in JavaScript, 
+you are not allowed to use it in JSX.,JSX solved this by using , instead. 
+When JSX is rendered, it translates , 
+attributes into , attributes.,React supports , statements, but not ,JSX.,To be able to use conditional statements in JSX, you should put the , 
+statements outside of the JSX, or you could use a ternary expression instead:,Write , statements outside of the JSX code:,Use ternary expressions instead:",,,
+React Introduction,,"What is React?,How does React Work?,React.JS History",,"React, sometimes referred to as a frontend JavaScript framework, is a 
+JavaScript library created by Facebook.,React is a tool for building UI components.,Instead of manipulating the browser's DOM directly, React creates a virtual 
+DOM in memory, where it does all the necessary manipulating, before making the 
+changes in the browser DOM.,React finds out what changes have been 
+made, and changes , 
+what needs to be changed. ,You will learn the various aspects of how React does this in the rest of this 
+tutorial.,Current version of React.JS is V17.0.2 (August 2021).,Initial Release to the Public (V0.3.0) was in July 2013.,React.JS was first used in 2011 for Facebook's Newsfeed feature. ,Facebook Software Engineer, Jordan Walke, created it.,Current version of , is 
+v4.0.3 (August 2021)., includes built tools such 
+as webpack, Babel, and ESLint.",,,
+React Getting Started,,"React Directly in HTML,Setting up a React Environment,Run the React Application,Modify the React Application,What's Next?","Example,Example,Example","To get an overview of what React is, you can write React 
+code directly in HTML.,But in order to use React in production, you need npm and 
+, installed.,The quickest way start learning React is to 
+write React directly in your HTML files.,Start by including three scripts, the first two let us write React code in our 
+JavaScripts, and the third, Babel, allows us to write JSX 
+syntax and ES6 in 
+older browsers.,You will learn more about JSX in the , chapter.,This way of using React can be OK for testing purposes, but for production you will need to set up a 
+,.,If you have npx and Node.js installed, you can create a React application by 
+using ,.,Run this command to create a React application named
+,:,The , will set up everything you need to run a React application.,Now you are ready to run your first , React application!,Run this command to move to the , directory:,Run this command to run the React application ,:,A new browser window will pop up with your newly created React App! If not, open your browser and type 
+, in the address bar.,The result:,So far so good, but how do I change the content?,Look in the , directory, and you will find a 
+, folder. Inside the
+, folder there is a file called 
+,, open it and it will look like this:,Try changing the HTML content and save the file.,The result:,Now you have a React Environment on your computer, and you are ready to learn more about React.,In the rest of this tutorial we will use our ""Show React"" tool to explain the various aspects of React, and how they are displayed in 
+the browser.,If you want to follow the same steps on your computer, start by 
+stripping down the , folder to only contain 
+one file: ,. You should also remove any 
+unnecessary lines of code inside the , 
+file to make them look like the example in the ""Show React"" tool 
+below:",,,
+React Render HTML,,"The Render Function,The HTML Code,The Root Node","Example,Example,Example","React's goal is in many ways to render HTML in a web page.,React renders HTML to the web page by using a function called ,.,The , function takes two 
+arguments, HTML code and an HTML element.,The purpose of the function is to display the specified HTML code inside the 
+specified HTML element.,But render where?,There is another folder in the root directory of your React project, named ""public"".
+In this folder, there is an , file.,You'll notice a single ,
+in the body of this file. This is where our React application will be rendered.,The HTML code in this tutorial uses JSX which allows you to write HTML tags 
+inside the JavaScript code:,Do not worry if the syntax is unfamiliar, you will learn more about JSX in the next chapter.,The root node is the HTML element where you want to display the result.,It is like a , for content managed by React.,It does NOT have to be a , element and it does 
+NOT have to 
+have the ,:",,,

@@ -1,0 +1,448 @@
+H1_leftside_heading,H1_rightside_heading,H2,H3,All_para,li,div,div_2
+Node.js ,Tutorial,"Learning by Examples,Examples Running in the Command Line Interface,Node.js Reference,Download Node.js","Example,Example","Our ""Show Node.js"" tool makes it easy to learn Node.js, it shows both the 
+code and the result.,In this tutorial there will be some examples that are better explained by displaying the result in the 
+command line interface.,When this happens, The ""Show Node.js"" tool will show the result in a black screen on the right:,Node.js has a set of built-in modules.,Download Node.js from the official Node.js web site:
+",,,
+"Node.js , Create Collection",MongoDB,Creating a Collection,Example,"To create a collection in MongoDB, use the , method:,Save the code above in a file called ""demo_mongodb_createcollection.js"" and run the file:,Which will give you this result:,MongoDB waits until you have inserted a document before it actually creates the collection.",,,
+"Node.js , Create Database",MongoDB,Creating a Database,Example,"To create a database in MongoDB, start by creating a MongoClient object, then specify a connection URL with the 
+correct ip address and the name of the database you want to create.,MongoDB will create the database if it does not exist, and make a connection 
+to it.,Save the code above in a file called ""demo_create_mongo_db.js"" and run the file:,Which will give you this result:,MongoDB waits until you have created a collection (table), with at least one document (record) before it actually creates the database (and collection).",,,
+"Node.js , Delete",MongoDB,"Delete Document,Delete Many,The Result Object","Example,Example,Example","To delete a record, or document as it is called in MongoDB, we use the
+, method.,The first parameter of the , method 
+is a query object defining which document to delete.,Save the code above in a file called ""demo_delete.js"" and run the file:,Which will give you this result:,To delete more than one document, use the
+, method.,The first parameter of the , method 
+is a query object defining which documents to delete.,Save the code above in a file called ""demo_delete_many.js"" and run the file:,Which will give you this result:,The , method returns an object which contains information about how 
+the execution affected the database.,Most of the information is not important to understand, but one object inside 
+the object is called ""result"" which tells us if the execution went OK, and how 
+many documents were affected.,The result object looks like this:,You can use this object to return the number of deleted documents:,Which will produce this result:",,,
+"Node.js , Insert",MongoDB,"Insert Into Collection,Insert Multiple Documents,The Result Object,The _id Field","Example,Example,Example,Example","To insert a record, or , as it is called in MongoDB, into a collection, we use the 
+, method.,The first parameter of the , method is an object containing the 
+name(s) and value(s) of each field in the document you want to insert.,It also takes a callback function where you can work with any errors, or the 
+result of the insertion:,Save the code above in a file called ""demo_mongodb_insert.js"" and run the file:,Which will give you this result:,To insert multiple documents into a collection in MongoDB, we use the 
+, method.,The first parameter of the , method 
+is an array of objects, containing the data you want to 
+insert.,It also takes a callback function where you can work with any errors, or the 
+result of the insertion:,Save the code above in a file called ""demo_mongodb_insert_multiple.js"" and run the file:,Which will give you this result:,When executing the , method, a result object is returned.,The result object contains information about how the insertion affected the 
+database.,The object returned from the example above looked like this:,The values of the properties can be displayed like this:,Which will produce this result:,If you do not specify an , field, then MongoDB 
+will add one for you and assign a unique id for each document.,In the example above no , field was 
+specified, and as you can see from the result object, MongoDB assigned a unique 
+_id for each document.,If you , specify the , field, the value must 
+be unique for each document:,Save the code above in a file called ""demo_mongodb_insert_id.js"" and run the file:,Which will give you this result:",,,
+"Node.js , Sort",MongoDB,"Sort the Result,Sort Descending","Example,Example","Use the , method to sort the result in ascending or descending order.,The , method takes one parameter, an 
+object defining the sorting order.,Save the code above in a file called ""demo_sort.js"" and run the file:,Which will give you this result:,Use the value -1 in the sort object to sort descending.,Save the code above in a file called ""demo_sort_desc.js"" and run the file:,Which will give you this result:",,,
+"Node.js , Drop",MongoDB,"Drop Collection,db.dropCollection","Example,Example","You can delete a table, or collection as it is called in MongoDB, by using 
+the , method.,The , method takes a callback function 
+containing the error object and the result parameter which returns true if the collection was dropped successfully, 
+otherwise it returns false.,Save the code above in a file called ""demo_drop.js"" and run the file:,Which will give you this result:,You can also use the , method to delete a table (collection).,The , method takes two parameters: the name of the collection 
+and a callback function.,Save the code above in a file called ""demo_dropcollection.js"" and run the file:,Which will give you this result:",,,
+Node.js ,MongoDB,"MongoDB,Install MongoDB Driver",,"Node.js can be used in database applications.,One of the most popular NoSQL database is MongoDB.,To be able to experiment with the code examples, you will need access to a MongoDB database.,You can download a free MongoDB database at
+,.,Or get started right away with a MongoDB cloud service at 
+,.,Let us try to access a MongoDB database with Node.js.,To download and install the official MongoDB driver, open the Command Terminal and execute the following:,Now you have downloaded and installed a mongodb database driver.,Node.js can use this module to manipulate MongoDB databases:",,,
+"Node.js , Find",MongoDB,"Find One,Find All,Find Some,The Result Object","Example,Example,Example,Example,Example,Example,Example","To select data from a collection in MongoDB, we can use the
+, method.,The , method returns the first 
+occurrence in the selection.,The first parameter of the , method 
+is a query object. In this example we use an empty query object, which selects 
+all documents in a collection (but returns only the first document).,Save the code above in a file called ""demo_mongodb_findone.js"" and run the file:,Which will give you this result:,To select data from a table in MongoDB, we can also use the
+, method.,The , method returns all 
+occurrences in the selection.,The first parameter of the , method 
+is a query object. In this example we use an empty query object, which selects 
+all documents in the collection.,Save the code above in a file called ""demo_mongodb_find.js"" and run the file:,Which will give you this result:,The second parameter of the , method 
+is the , object that describes which fields to include in the result.,This parameter is optional, and if omitted, all fields will be included in 
+the result.,Save the code above in a file called ""demo_mongodb_find_fields.js"" and run the file:,Which will give you this result:,As you can see from the result of the example above, the result can be converted into an array containing each 
+document as an object.,To return e.g. the address of the third document, just refer to the third array 
+object's address property:,Which will produce this result:",,,
+"Node.js , Query",MongoDB,"Filter the Result,Filter With Regular Expressions","Example,Example","When finding documents in a collection, you can filter the result by using a 
+query object.,The first argument of the , method 
+is a query object, and is used to limit the search.,Save the code above in a file called ""demo_mongodb_query.js"" and run the file:,Which will give you this result:,You can write regular expressions to find exactly what you are searching for.,To find only the documents where the ""address"" field starts with the letter ""S"", use the regular 
+expression ,:,Save the code above in a file called ""demo_mongodb_query_s.js"" and run the file:,Which will give you this result:",,,
+"Node.js , Update",MongoDB,"Update Document,Update Only Specific Fields,Update Many Documents,The Result Object","Example,Example,Example,Example","You can update a record, or document as it is called in MongoDB, by using 
+the , method.,The first parameter of the , method 
+is a query object defining which document to update.,The second parameter  
+is an object defining the new values of the document.,Save the code above in a file called ""demo_update_one.js"" and run the file:,Which will give you this result:,When using the , operator, only the 
+specified fields are updated:,To update , documents that meets the criteria of the query, use 
+the , method.,Save the code above in a file called ""demo_update_many.js"" and run the file:,Which will give you this result:,The , and the
+, methods return an object which contains information about how 
+the execution affected the database.,Most of the information is not important to understand, but one object inside 
+the object is called ""result"" which tells us if the execution went OK, and how 
+many documents were affected.,The result object looks like this:,You can use this object to return the number of updated documents:,Which will produce this result:",,,
+"Node.js ,Join",MySQL ,"Join Two or More Tables,Left Join,Right Join","users,products,Example,Example,Example","You can combine rows from two or more tables, based on a related column 
+between them, by using a JOIN statement.,Consider you have a ""users"" table and a ""products"" table:,These two tables can be combined by using users' , field and products' 
+, field.,Save the code above in a file called ""demo_db_join.js"" and run the file:,Which will give you this result:,As you can see from the result above, only the records with a match in both 
+tables are returned.,If you want to return , users, no matter if they have a favorite product or 
+not, use the LEFT JOIN statement:,Which will give you this result:,If you want to return all products, and the users who have them as their 
+favorite, even if no user have them as their favorite, use the RIGHT JOIN 
+statement:,Which will give you this result:",,,
+"Node.js , Limit",MySQL,"Limit the Result,Start From Another Position,Shorter Syntax","Example,Example,Example","You can limit the number of records returned from the query, by using the ""LIMIT"" statement:,Save the code above in a file called ""demo_db_limit.js"" and run the file:,Which will give you this result:,If you want to return five records, starting from the third record, you 
+can use the ""OFFSET"" keyword:,Save the code above in a file called ""demo_db_offset.js"" and run the file:,Which will give you this result:,You can also write your SQL statement like this ""LIMIT 2, 5"" which 
+returns the same as the offset example above:",,,
+"Node.js , Update",MySQL,"Update Table,The Result Object","Example,Example","You can update existing records in a table by using 
+the ""UPDATE"" statement:,Save the code above in a file called ""demo_db_update.js"" and run the file:,Which will give you this result:,When executing a query, a result object is returned.,The result object contains information about how the query  
+affected the table.,The result object returned from the example above looks like this:,The values of the properties can be displayed like this:,Which will produce this result:",,,
+"Node.js , Drop Table",MySQL,"Delete a Table,Drop Only if Exist","Example,Example","You can delete an existing table by using 
+the ""DROP TABLE"" statement:,Save the code above in a file called ""demo_db_drop_table.js"" and run the file:,Which will give you this result:,If the the table you want to delete is already deleted, or for any other 
+reason does not exist, you can use the IF EXISTS keyword to avoid getting an 
+error.,Save the code above in a file called ""demo_db_drop_table_if.js"" and run the file:,If the table exist, the result object will look like this:,If the table does not exist, the result object will look like this:,As you can see the only differnce is that the warningCount property is set to 1 if the table does not exist.",,,
+"Node.js , Delete",MySQL,"Delete Record,The Result Object","Example,Example","You can delete records from an existing table by using 
+the ""DELETE FROM"" statement:,Save the code above in a file called ""demo_db_delete.js"" and run the file:,Which will give you this result:,When executing a query, a result object is returned.,The result object contains information about how the query  
+affected the table.,The result object returned from the example above looks like this:,The values of the properties can be displayed like this:,Which will produce this result:",,,
+Node.js ,Built-in Modules,,,"Node.js has a set of built-in modules which you can use without any further 
+installation.,Here is a list of the built-in modules of Node.js version 6.10.3:",,,
+Node.js ,Raspberry Pi RGB LED with WebSocket,"Using Pulse-Width Modulation,What do we need?,Install the pigpio Module,Building the Circuit,Raspberry Pi and Node.js RGB LED and WebSocket Script,Raspberry Pi and Node.js WebSocket UI","rgbws.js,rgbws.js","In the previous chapters we have learned how to use WebSocket, and how to 
+use GPIO to turn LEDs on and off.,In this we will use chapter we use a RGB LED, with PWM (Pulse-width 
+modulation) to display different colors based on user input via WebSocket.,An RGB LED is a LED with 3 different colors. It has a RED, GREEN and 
+BLUE LED (RGB LED).,And using PWM, we can set the individual strength of the 3 LEDs. This will allow us to 
+mix them, to set a color.,In this chapter we will create an example where 
+we control an RGB LED with a web page via WebSocket.,For this you need:,Click the links in the list above for descriptions of the different 
+components.,Earlier, we have used the ""onoff"" module, which works great for just turning 
+on and off. Now we want to set the set the strength of the LEDs, so we need a 
+GPIO Module with a bit more functionality.,We will use the ""pigpio"" Node.js module, as this allows for PWM.,With PWM we 
+can set the strength of a LED from 0 to 255.,The ""pigpio"" Node.js module is based on the pigpio C library.,If you are using the ""Lite"" version of Raspbian, this is most likely not 
+included and must be manually installed.,Update your system package list:,Install the pigpio C library:,Now we can install the ""pigpio"" Node.js module using npm:,Now the ""pigpio"" module should be installed and we can use it to 
+interact with the GPIO of the Raspberry Pi.,Now it is time to build the circuit on our Breadboard.,If you are new to electronics, we recommend you turn off the power for 
+the Raspberry Pi. And use an anti-static mat or a grounding strap to avoid 
+damaging it.,Shut down the Raspberry Pi properly with the command:,After the LEDs stop blinking on the Raspberry Pi, then pull out the power 
+plug from the Raspberry Pi (or turn of the power strip it is connected to).,In building this Circuit it is important to know if you have a common 
+  anode, or common cathode, RGB LED:,You can check with your provider, or test it yourself:,Connect cables to GND and 3.3V pin. Connect GND to the longest leg of the 
+  RGB LED and the 3.3 V to any other leg. If the it lights up, your RGB LED has 
+  a common cathode. If not, it has a common anode.,Go to the ""nodetest"" directory, and create a new file called "","":,The file is now open and can be edited with the built in Nano Editor.,Now it is time add the HTML that allows for user input via WebSocket.,For this we want:,Go to the folder ""public"":,And create a HTML file, rgb.html:,Return to the ""nodetest"" folder: ,Run the code:,Open the website in a browser using http://[RaspberryPi_IP]:8080/,Now the RGB LED should change color depending on the user input.,End the program with ,.","A Raspberry Pi with Raspian, internet, SSH, with Node.js installed,The ,for Node.js,The , for Node.js,1 x ,3 x
+  ,1 x , (common anode or common cathode),4 x ,3 color sliders, one for each color (RGB),A color picker,A div showing the current color","
+    <!DOCTYPE html>,<html>,<meta name=""viewport"" 
+    content=""width=device-width, initial-scale=1"">,<link rel=""stylesheet"" 
+    href=""https://www.w3schools.com/w3css/4/w3.css"">,<style>,.slider {,  
+    -webkit-appearance: none;,  width: 100%;,  height: 15px;,  
+    border-radius: 5px;,  background: #d3d3d3;,  outline: none;,  
+    opacity: 0.7;,  -webkit-transition: .2s;,  transition: 
+    opacity .2s;,},.slider:hover {opacity: 1;},
+    ,.slider::-webkit-slider-thumb {,  -webkit-appearance: none;,  
+    appearance: none;,  width: 25px;,  height: 25px;,  
+    border-radius: 50%;,  cursor: pointer;,},.slider::-moz-range-thumb {,  width: 
+    25px;,  height: 25px;,  border-radius: 50%;,  
+    background: #4CAF50;,  cursor: pointer;,},#redSlider::-webkit-slider-thumb {background: red;},#redSlider::-moz-range-thumb 
+    {background: red;},#greenSlider::-webkit-slider-thumb {background: 
+    green;},#greenSlider::-moz-range-thumb {background: green;},#blueSlider::-webkit-slider-thumb 
+    {background: blue;},#blueSlider::-moz-range-thumb {background: blue;},
+    </style>,<body>,<div class=""w3-container"">,<h1>RGB Color</h1>,
+    <div class=""w3-cell-row"">,<div class=""w3-container w3-cell w3-mobile"">,
+    <p><input type=""range"" min=""0"" max=""255"" value=""0"" class=""slider"" id=""redSlider""></p>,
+    <p><input type=""range"" min=""0"" max=""255"" value=""0"" class=""slider"" id=""greenSlider""></p>,
+    <p><input type=""range"" min=""0"" max=""255"" value=""0"" class=""slider"" id=""blueSlider""></p>,
+    </div>,<div class=""w3-container w3-cell w3-mobile"" style=""background-color:black"" 
+    id=""colorShow"">,<div></div>,</div>,</div>,<p>Or pick a color: 
+    <input type=""color"" id=""pickColor""></p>,</div>,<script src=""https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.3/socket.io.js""></script>,
+    <script src=""https://www.w3schools.com/lib/w3color.js""></script>,<script>,
+    var socket = io(); //load socket.io-client and connect to the host that 
+    serves the page,var rgb = w3color(""rgb(0,0,0)""); //we use the w3color.js 
+    library to keep the color as an object,window.addEventListener(""load"", 
+    function(){ //when page loads,  var rSlider = 
+    document.getElementById(""redSlider"");,  var gSlider = 
+    document.getElementById(""greenSlider"");,  var bSlider = 
+    document.getElementById(""blueSlider"");,  var picker = 
+    document.getElementById(""pickColor"");,  rSlider.addEventListener(""change"", 
+    function() { //add event listener for when red slider changes,    
+    rgb.red = this.value; //update the RED color according to the slider,    
+    colorShow.style.backgroundColor = rgb.toRgbString(); //update the ""Current 
+    color"",    socket.emit(""rgbLed"", rgb); //send the updated 
+    color to RGB LED via WebSocket,  });,  
+    gSlider.addEventListener(""change"", function() { //add event listener for 
+    when green slider changes,    rgb.green = this.value; 
+    //update the GREEN color according to the slider,    
+    colorShow.style.backgroundColor = rgb.toRgbString(); //update the ""Current 
+    color"",    socket.emit(""rgbLed"", rgb); //send the updated 
+    color to RGB LED via WebSocket,  });,  
+    bSlider.addEventListener(""change"", function() { //add event listener for 
+    when blue slider changes,    rgb.blue = this.value;  
+    //update the BLUE color according to the slider,    
+    colorShow.style.backgroundColor = rgb.toRgbString(); //update the ""Current 
+    color"",    socket.emit(""rgbLed"", rgb); //send the updated 
+    color to RGB LED via WebSocket,  });,  
+    picker.addEventListener(""input"", function() { //add event listener for when 
+    colorpicker changes,    rgb.red = w3color(this.value).red; 
+    //Update the RED color according to the picker,    
+    rgb.green = w3color(this.value).green; //Update the GREEN color according to 
+    the picker,    rgb.blue = w3color(this.value).blue; 
+    //Update the BLUE color according to the picker,    
+    colorShow.style.backgroundColor = rgb.toRgbString();  //update the 
+    ""Current color"",    rSlider.value = rgb.red;  
+    //Update the RED slider position according to the picker,    
+    gSlider.value = rgb.green;  //Update the GREEN slider position 
+    according to the picker,    bSlider.value = rgb.blue;  
+    //Update the BLUE slider position according to the picker,   
+    socket.emit(""rgbLed"", rgb);  //send the updated color to RGB LED via 
+    WebSocket,  });,});,
+    </script>,</body>,</html>",
+Node.js ,Raspberry Pi GPIO - Flowing LEDs,"Using Array With Output to Create Flowing LEDs,What do we need?,Building the Circuit,Raspberry Pi and Node.js Flowing LEDs Script",flowingleds.js,"In this chapter we will use several GPIO pins to create a ""flowing"" effect by 
+turning them on and off in sequence.,For this you need:,Click the links in the list above for descriptions of the different 
+components.,Now it is time to build the circuit on our Breadboard.,If you are new to electronics, we recommend you turn off the power for 
+the Raspberry Pi. And use an anti-static mat or a grounding strap to avoid 
+damaging it.,Shut down the Raspberry Pi properly with the command:,After the LEDs stop blinking on the Raspberry Pi, then pull out the power 
+plug from the Raspberry Pi (or turn of the power strip it is connected to).,Go to the ""nodetest"" directory, and create a new file called "","":,The file is now open and can be edited with the built in Nano Editor.,Write, or paste the following:,Press "","" to save the code. Confirm with "","", and confirm the name with "","".,Run the code:,Now the LEDs should turn on and off in sequence, creating a flowing effect.,End the program with ,.","A Raspberry Pi with Raspian, internet, SSH, with Node.js installed,The , for Node.js,1 x ,8 x ,8 x ,9 x ",,
+Node.js ,Raspberry Pi - Components,"What are Components?,The Raspberry Pi and GPIO Pins,The Breadboard,Other Electrical Components,Node.js Modules",,"Components are parts of a larger whole. In this chapter, we explain the different components we use in our tutorial.,A breadboard is used for prototyping electronics, it allows you to create 
+circuits without soldering. It is basically a plastic board, with a grid of 
+tie-points (holes). Inside the board there are metal strips connecting the 
+different tie-points in specific ways.,In the illustration below we have highlighted some of the sections with different colors. This is to show you how the grid is connected.,The different sections of the breadboard:","On the left, and right, side there are 2 columns of tie-points. All the 
+    tie points in each of these columns are connected., - The columns highlighted with red. There are usually used 
+    to connect power to the Breadboard. Since the entire column is connected, 
+    you can connect power to any of the tie-points in the column., - The columns highlighted with blue. There are usually 
+    used to connect Ground to the Breadboard. Since the entire column is 
+    connected, you can connect ground to any of the tie-points in the column., - The rows highlighted with green. The 
+    tie-points of each of these rows are connected, but not the entire row! The 
+    left side tie-points are connected (A-B-C-D-E), and the right side 
+    tie-points are connected (F-G-H-I-J).,In the center of the Breadboard there is a Trench, this separates the 
+    left and right rows. The width of the trench is designed so that many 
+    Integrated Circuits fit across it.",,
+Node.js and ,Raspberry Pi - Webserver with WebSocket,"What Do I Need?,Webserver for Raspberry Pi and Node.js,Install socket.io for Node.js,Adding WebSocket to our Webserver,Adding Hardware, and sending a response to the Client",,"For this tutorial you need a Raspberry Pi. In our examples we use a a Raspberry Pi 3, 
+but this tutorial should work for most versions.,For this you need:,Click the links in the list above for descriptions of the different 
+components.,Compared to our earlier example, the only new thing we need is to set up a 
+web server, and install the socket.io module.,Following the earlier chapters in this Node.js tutorial, lets set up a web 
+server that can serve HTML files.,In our ""nodetest"" directory create a new directory we can use for static html files:,Now lets set up a webserver. Create a Node.js file that opens the requested 
+file and returns the content to the client. If anything goes wrong, throw a 404 
+error.,Go to the folder ""public"":,And create a HTML file, index.html:,This file will not have any functionality yet. For now it is just a 
+placeholder. Lets see if the webserver is working:,Open the website in a browser using http://[RaspberryPi_IP]:8080/:,The webserver should now be up and running, and we can move on to the 
+WebSocket part.,With the webserver set up, update your Raspberry Pi system packages to their latest versions.,Update your system package list:,Upgrade all your installed packages to their latest version:,To download and install newest version of socket.io, use the following command:,Now we can use WebSocket in our application. Lets update our index.html 
+file:,And our webserver.js file:,Lets test the server:,Open the website in a browser using http://[RaspberryPi_IP]:8080/:,Now the server should output all the changes to the checkbox to the console 
+on the Raspberry Pi.,The client is sending the changes to the server, and the server is 
+responding.,Lets add the , from a previous chapter.,Lets update our webserver.js file again. We will use a lot of the code from 
+the Pushbutton controlled LED chapter.,Lets test the server:,Open the website in a browser using http://[RaspberryPi_IP]:8080/:,Now the server should output all the changes to the checkbox to the console 
+on the Raspberry Pi.,The client is sending the changes to the server, and the server is 
+responding.,End the program with ,.","A Raspberry Pi with Raspian, internet, SSH, with Node.js installed,The , for Node.js,The , for Node.js,1 x ,1 x 
+  ,1 x 
+  ,1 x 
+  ,1 x 
+  ,4 x 
+  ,1 x 
+  ","
+    <!DOCTYPE html>,<html>,<body>,<h1>Control LED light</h1>,<input 
+    id=""light"" type=""checkbox"">LED,</body>,</html>,
+    <!DOCTYPE html>,<html>,<body>,<h1>Control LED 
+    light</h1>,<p><input type=""checkbox"" id=""light""></p>,<script src=""https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.3/socket.io.js""></script> 
+    <!-- include socket.io client side script -->,<script>,var socket = io(); 
+    //load socket.io-client and connect to the host that serves the page,
+    window.addEventListener(""load"", function(){ //when page loads,  var 
+    lightbox = document.getElementById(""light""); ,  
+    lightbox.addEventListener(""change"", function() { //add event listener for 
+    when checkbox changes,    socket.emit(""light"", Number(this.checked)); 
+    //send button status to server (as 1 or 0),  });,});,socket.on('light', 
+    function (data) { //get button status from client,  
+    document.getElementById(""light"").checked = data; //change checkbox according 
+    to push button on Raspberry Pi,  socket.emit(""light"", data); //send 
+    push button status to back to server,});,</script>,</body>,</html>",
+Node.js ,Raspberry Pi GPIO - Blinking LED,"Using the GPIO for Output,What do we need?,Building the Circuit,Raspberry Pi and Node.js Blinking LED Script",blink.js,"In this chapter we will use a Raspberry Pi and its GPIO to 
+make a LED blink.,We use Node.js with the onoff module to control the GPIO.,To get a LED light to turn on, we use a GPIO pin as ""Output"", and create a 
+script to turn it on and off (blinking).,In this chapter we will create a simple example where 
+we control a LED light.,For this you need:,Click the links in the list above for descriptions of the different 
+components.,Now it is time to build the circuit on our Breadboard.,If you are new to electronics, we recommend you turn off the power for 
+the Raspberry Pi. And use an anti-static mat or a grounding strap to avoid 
+damaging it.,Shut down the Raspberry Pi properly with the command:,After the LEDs stop blinking on the Raspberry Pi, then pull out the power 
+plug from the Raspberry Pi (or turn off the power strip it is connected to).,Now that we have everything set up, we can write a script to turn the LED on and off.,Start by making a directory where we can keep our Node.js scripts:,Go to our new directory:,Now we will create a new file called "","" using the Nano Editor:,The file is now open and can be edited with the built in Nano Editor.,Write, or paste the following code:,Press "","" to save the code. Confirm with "","", and confirm the name with "","".,Run the code:,Now the LED should blink for 5 seconds (10 times) before turning off again!","A Raspberry Pi with Raspian, internet, SSH, with Node.js installed,The , for Node.js,1 x ,1 x 
+  ,1 x 
+  ,2 x 
+  ",,
+Node.js ,Raspberry Pi GPIO - LED and Pushbutton,"Using both Input and Output,What do we need?,Building the Circuit,Raspberry Pi and Node.js LED and Button Script",buttonled.js,"In the previous chapter we learned how to use a Raspberry Pi and its GPIO to 
+make a LED blink.,For that we used a GPIO pin as ""Output"".,In this chapter we will use another GPIO pin as ""Input"".,Instead of blinking for 5 seconds, we want the LED to light up when you push 
+a button connected to the breadboard.,In this chapter we will create a simple example where 
+we control a LED light with a Push Button.,For this you need:,Click the links in the list above for descriptions of the different 
+components.,In this chapter we will build on the circuit we built in last chapter, so you 
+will recognize some of the parts in the list above.,Now it is time to build the circuit on our Breadboard. We will use the , as a starting point.,If you are new to electronics, we recommend you turn off the power for 
+the Raspberry Pi. And use an anti-static mat or a grounding strap to avoid 
+damaging it.,Shut down the Raspberry Pi properly with the command:,After the LEDs stop blinking on the Raspberry Pi, then pull out the power 
+plug from the Raspberry Pi (or turn of the power strip it is connected to).,Go to the ""nodetest"" directory, and create a new file called "","":,The file is now open and can be edited with the built in Nano Editor.,Write, or paste the following:,Press "","" to save the code. Confirm with "","", and confirm the name with "","".,Run the code:,Now the LED should turn on when you press the button, and turn off when you 
+release it.,End the program with ,.","A Raspberry Pi with Raspian, internet, SSH, with Node.js installed,The , for Node.js,1 x ,1 x ,1 x ,1 x ,1 x ,4 x ,1 x ",,
+Node.js ,Raspberry Pi - GPIO Introduction,"What is GPIO?,Taking a Closer Look at the GPIO Pins,Taking a Closer Look at the Breadboard,Install the onoff Module",,"GPIO stands for General Purpose Input Output.,The Raspberry Pi has two rows of GPIO pins, which are connections between the 
+Raspberry Pi, and the real world.,Output pins are like switches that the Raspberry Pi can turn on or off (like 
+turning on/off a LED light). But it can also send a signal to another device.,Input pins are like switches that you can turn on or off from the outside 
+world (like a on/off light switch). But it can also be a data from a sensor, or 
+a signal from another device.,That means that you can interact with the real world, and control devices and 
+electronics using the Raspberry PI and its GPIO pins!,A breadboard is used for prototyping electronics, it allows you to create 
+circuits without soldering. It is basically a plastic board, with a grid of 
+tie-points (holes). Inside the board there are metal strips connecting the 
+different tie-points in specific ways.,In the illustration below we have highlighted some of the sections with different colors. This is to show you how the grid is connected.,The different sections of the breadboard:,To interface with the GPIO on the Raspberry Pi using Node.js, we will use a 
+Module called ""onoff"".,Install the onoff module using npm:,Now onoff should be installed and we can interact with the GPIO of the Raspberry Pi.","On the left, and right, side there are 2 columns of tie-points. All the 
+    tie points in each of these columns are connected., - The columns highlighted with red. There are usually used 
+    to connect power to the Breadboard. Since the entire column is connected, 
+    you can connect power to any of the tie-points in the column., - The columns highlighted with blue. There are usually 
+    used to connect Ground to the Breadboard. Since the entire column is 
+    connected, you can connect ground to any of the tie-points in the column., - The rows highlighted with green. The 
+    tie-points of each of these rows are connected, but not the entire row! The 
+    left side tie-points are connected (A-B-C-D-E), and the right side 
+    tie-points are connected (F-G-H-I-J).,In the center of the Breadboard there is a Trench, this separates the 
+    left and right rows. The width of the trench is designed so that many 
+    Integrated Circuits fit across it.",,
+Node.js and ,Raspberry Pi,"What is the Raspberry Pi?,Raspberry Pi and Node.js,What Do I Need?,Write Raspbian OS Image to MicroSD Card,Set up Your Raspberry Pi,Set Up Network on the Raspberry Pi,Enable SSH, Change Hostname and Password,Install Node.js on Raspberry Pi,Get Started with Raspberry Pi and Node.js",,"Raspberry Pi is a small, multi-use computer.,With Node.js you can do amazing things with your Raspberry Pi.,The Raspberry Pi is a small, affordable, and amazingly capable, credit card 
+size computer.,It is developed by the Raspberry Pi Foundation, and it might be the most 
+versatile tech ever created.,Creator Eben Upton's goal was to create a low-cost device that would improve 
+programming skills and hardware understanding.,Due to the small size and price of the device, it has become the center of a 
+wide range of projects by tinkerers, makers, and electronics enthusiasts.,The Raspberry Pi has a row of GPIO (General Purpose input/output) pins, and 
+these can be used to interact in amazing ways with the real world. This tutorial 
+will focus on how to use these with Node.js.,For this tutorial you need a Raspberry Pi. In our examples we use a Raspberry Pi 3, 
+but this tutorial should work for most versions.,Hardware needed:,For later chapters in this tutorial we will use special sensors or devices 
+that we connect to the Raspberry Pi. We will specify these as special 
+requirements in the relevant chapters.,Before we can start using our Raspberry Pi for anything, we need to get a OS 
+installed.,Raspbian is a free operating system based on Debian Linux, and it is 
+optimized Raspberry Pi.,Download the latest Raspbian image from , 
+to your computer.,We use the ""LITE"" version in our tutorial, since we are setting the Raspberry 
+Pi up as a headless server (we will connect to it through SSH, without having a 
+keyboard/display connected to it). You can use whichever version you want, but 
+this tutorial is written with the ""LITE"" version as its focus.,Insert the MicroSD memory card in your computer (via the SD adapter if 
+needed). 
+Open File Explorer to verify that it is operational.,Etcher is a program for flashing images to memory cards. Download and 
+install Etcher from: ,Launch Etcher:,Click ""Select image"" button and find the Raspbian zip file that 
+you downloaded.,Click the ""Select drive"" button and specify the memory card as the target location.,Click the ""Flash!"" button to write the image to the memory card.,After Etcher is finished writing the image to the memory card, remove it from your computer.,To get the Raspberry Pi ready to boot we need to:,When the Raspberry Pi is finished booting up, log in using username: , and password: ,If you will use a Ethernet cable to connect your Raspberry Pi to the 
+internet, you can skip this step.,For this section we will assume you have a Raspberry Pi 3, with built in 
+WiFi.,Start by scanning for wireless networks:,This will list all of the available WiFi networks. (It also confirms that 
+your WiFi is working),Now we need to open the wpa-supplicant file, to add the network you want to 
+connect to:,This will open the file in the Nano editor. Add the following to the bottom 
+of the file (change , and , with the actual network name and 
+password):,Press "","" to save the code. Confirm with "","", and confirm the name with "","".,And reboot the Raspberry Pi:,After reboot, log in again, and confirm that the WiFi is connected and working:,If the WiFi is working propery, the information displayed should include an 
+IP address, similar to this:,Write down that IP address, as we will use it to connect to the Raspberry Pi 
+via SSH.,Now your Raspberry Pi is connected to the internet, it is time to enable SSH.,SSH allows you up use the Raspberry Pi without having a monitor and keyboard 
+connected to it.,(You will need a SSH client for this on your non-Raspberry Pi computer. We use , for windows),Open the Raspberry Pi Software Configuration Tool:,You should see a menu like this:,Select option ,:,Select option ,, to activate SSH:,Confirm with ,, to activate SSH:,SSH is now enabled, and you should be in the main menu again.,Select ,, and follow the instructions to change the password. Choose a secure password, but something you will remember:,After you have finished changing the password, you should be back in the main menu.,Select ,, and follow the instructions to change the hostname:,After you have finished changing the hostname, you should be back in the main menu.,Now we will close the menu and save the changes:,When selecting ,, you will get the option to reboot. Select , to reboot the Raspberry Pi.,You can now unplug the monitor and keyboard from the Raspberry Pi, and we can log in using out SSH client.,Open PuTTY, type in the IP address for your Raspberry Pi, and click ,:,Log in using the username , and the new password you specified.,You should now see a command line like this: (we used w3demopi as our hostname),You are now able to run your Raspberry Pi in ""Headless-mode"", meaning you do not need a monitor or keyboard. And if you have a WiFi connection, you do not need a ethernet cable either, just the power cable!,With the Raspberry Pi properly set up, login in via SSH, and update your Raspberry Pi system packages to their latest versions.,Update your system package list:,Upgrade all your installed packages to their latest version:,To download and install newest version of Node.js, use the following command:,Now install it by running:,Check that the installation was successful, and the version number of 
+Node.js with:,Now you have a Raspberry Pi with Node.js installed!,If you want to learn more about Node.js, follow our tutorial:
+,In the next chapter we will get to know the GPIO and how to use it with 
+Node.js.","Raspberry Pi computer,MicroSD memory card (We recommend a class 10 with 16 GB or higher),MicroSD to SD memory card adapter (usually included with the MicroSD card),Micro USB power supply to power the Raspberry Pi (2.5A or greater 
+  recommended),WiFi/Ethernet Cable connection for the Raspberry Pi (Not needed for 
+  Raspberry Pi 3 as it has built in WiFi),A working computer with internet and SD memory card reader (used to get the OS 
+  (Operating System) for the Raspberry Pi onto the memory card). In our tutorial 
+  we use a Windows computer for this, but you can use a Mac or Linux computer if 
+  you prefer,HDMI monitor, USB keyboard (we need these only temporarily for the first 
+  boot of the Raspberry Pi)",,
+"Node.js , Where",MySQL,"Select With a Filter,Wildcard Characters,Escaping Query Values","Example,Example,Example,Example,Example","When selecting records from a table, you can filter the selection by using 
+the ""WHERE"" statement:,Save the code above in a file called ""demo_db_where.js"" and run the file:,Which will give you this result:,You can also select the records that starts, includes, or ends with a given letter 
+or phrase.,Use the '%' wildcard to represent zero, one or multiple characters:,Save the code above in a file called ""demo_db_where_s.js"" and run the file:,Which will give you this result:,When query values are variables provided by the user, you should escape the values.,This is to prevent SQL injections, which is a common web hacking technique to  
+destroy or misuse your database.,The MySQL module has methods to escape query values:,You can also use a , as a placeholder for 
+the values you want to escape.,In this case, the variable is sent as the second parameter in the query() 
+method:,If you have multiple placeholders, the array contains multiple values, in 
+that order:",,,
+"Node.js , Select From",MySQL,"Selecting From a Table,Selecting Columns,The Result Object,The Fields Object","Example,Example,Example,Example,Example","To select data from a table in MySQL, use the ""SELECT"" statement.,Save the code above in a file called ""demo_db_select.js"" and run the file:,Which will give you this result:,To select only some of the columns in a table, use the ""SELECT"" statement followed by the column name.,Save the code above in a file called ""demo_db_select2.js"" and run the file:,Which will give you this result:,As you can see from the result of the example above, the result object is an 
+array containing each row as an object.,To return e.g. the address of the third record, just refer to the third array 
+object's address property:,Which will produce this result:,The third parameter of the callback function is an array containing 
+information about each field in the result.,Save the code above in a file called ""demo_db_select_fields.js"" and run the file:,Which will give you this result:,As you can see from the result of the example above, the fields object is an 
+array containing information about each field as an object.,To return e.g. the name of the second field, just refer to the second array item's name property:,Which will produce this result:",,,
+"Node.js , Join",MongoDB,Join Collections,"orders,products,Example","MongoDB is not a relational database, but you can perform a left outer join 
+by using the , stage.,The , stage lets you specify which 
+collection you want to join with the current collection, and which 
+fields that should match.,Consider you have a ""orders"" collection and a ""products"" collection:,Save the code above in a file called ""demo_mongodb_join.js"" and run the file:,Which will give you this result:,As you can see from the result above, the matching document from the products 
+collection is included in the orders collection as an array.",,,
+"Node.js , Limit",MongoDB,Limit the Result,"customers,Example,customers","To limit the result in MongoDB, we use the , 
+method.,The , method takes one parameter, a number defining how many documents 
+to return.,Consider you have a ""customers"" collection:,Save the code above in a file called ""demo_mongodb_limit.js"" and run the file:,Which will give you this result:,As you can see from the result above, only the 5 first documents were 
+returned.",,,
+"Node.js , Order By",MySQL,"Sort the Result,ORDER BY DESC","Example,Example","Use the ORDER BY statement to sort the result in ascending or descending 
+order.,The ORDER BY keyword sorts the result ascending by default. To sort the 
+result in descending order, use the DESC keyword.,Save the code above in a file called ""demo_db_orderby.js"" and run the file:,Which will give you this result:,Use the DESC keyword to sort the result in a descending order.,Save the code above in a file called ""demo_db_orderby_desc.js"" and run the file:,Which will give you this result:",,,
+"Node.js , Insert Into",MySQL,"Insert Into Table,Insert Multiple Records,The Result Object,Get Inserted ID","Example,Example,Example,Example","To fill a table in MySQL, use the ""INSERT INTO"" statement.,Save the code above in a file called ""demo_db_insert.js"", and run the file:,Which will give you this result:,To insert more than one record, make an array containing the values, and 
+insert a question mark in the sql, which will be replaced by the value array:,
+,Save the code above in a file called ""demo_db_insert_multple.js"", and run the file:,Which will give you this result:,When executing a query, a result object is returned.,The result object contains information about how the query  
+affected the table.,The result object returned from the example above looks like this:,The values of the properties can be displayed like this:,Which will produce this result:,For tables with an auto increment id field, you can get the id of the row you 
+just inserted by asking the result object.,Save the code above in a file called ""demo_db_insert_id.js"", and run the file:,Which will give you something like this in return:",,,
+"Node.js , Create Table",MySQL,"Creating a Table,Primary Key","Example,Example,Example","To create a table in MySQL, use the ""CREATE TABLE"" statement.,Make sure you define the name of the database when you create the connection:,Save the code above in a file called ""demo_create_table.js"" and run the file:,Which will give you this result:,When creating a table, you should also create a column with a unique key for each 
+record.,This can be done by defining a column as ""INT AUTO_INCREMENT PRIMARY KEY"" which will insert a 
+unique number for each record. Starting at 1, and increased by one for each 
+record.,If the table already exists, use the ALTER TABLE keyword:",,,
+Node.js ,Events,"Events in Node.js,Events Module,The EventEmitter Object","Example,Example","Node.js is perfect for event-driven applications.,Every action on a computer is an event. Like when a connection is made or a 
+file is opened.,Objects in Node.js can fire events, like the readStream object fires 
+events when opening and closing a file:,Node.js has a 
+built-in module, called ""Events"", where you can create-, fire-, and listen for- your own 
+events.,To include the built-in Events module use the , 
+method. In addition, all event properties and methods are an instance of an 
+EventEmitter object. To be able to access these properties and methods, create 
+an EventEmitter object:,You can assign event handlers to your own events with the EventEmitter 
+object.,In the example below we have created a function that will be 
+executed when a ""scream"" event is fired.,To fire an event, use the , method.",,,
+Node.js ,NPM,"What is NPM?,What is a Package?,Download a Package,Using a Package",Example,"NPM is a package manager for Node.js packages, or modules if you like., hosts thousands of 
+free packages to download and use.,The NPM program is installed on your computer when you install Node.js,A package in Node.js contains all the files you need for a module.,Modules are JavaScript libraries you can include in your project.,Downloading a package is very easy.,Open the command line interface and tell NPM to download the package you want.,I want to download a package called ""upper-case"":,Now you have downloaded and installed your first package!,NPM creates a folder named ""node_modules"", where the package will be placed. 
+All packages you install in the future will be 
+placed in this folder.,My project now has a folder structure like this:,Once the package is installed, it is ready to use.,Include the ""upper-case"" package the same way you include any other 
+module:,Create a Node.js file that will convert the output ""Hello World!"" into upper-case letters:,Save the code above in a file called ""demo_uppercase.js"", and initiate the file:,If you have followed the same steps on your computer, you will see the same result as the example: ",,,
+"Node.js , Create Database",MySQL,Creating a Database,,"To create a database in MySQL, use the ""CREATE DATABASE"" statement:,Save the code above in a file called ""demo_create_db.js"" and run the file:,Which will give you this result:",,,
+Node.js ,MySQL,"MySQL Database,Install MySQL Driver,Create Connection,Query a Database",,"Node.js can be used in database applications.,One of the most popular databases is MySQL.,To be able to experiment with the code examples, you should have MySQL installed 
+on your computer.,You can download a free MySQL database at ,.,Once you have MySQL up and running on your computer, you can access it by 
+using Node.js.,To access a MySQL database with Node.js, you need a MySQL driver. This 
+tutorial will use the ""mysql"" module, downloaded from NPM.,To download and install the ""mysql"" module, open the Command Terminal and execute the following:,Now you have downloaded and installed a mysql database driver.,Node.js can use this module to manipulate the MySQL database:,Start by creating a connection to the database.,Use the username and password from your MySQL database.,Save the code above in a file called ""demo_db_connection.js"" and run the file:,Which will give you this result:,Now you can start querying the database using SQL statements.,Use SQL statements to read from (or write to) a MySQL database. This 
+is also called ""to query"" the database.,The connection object created in the example above, has a method for querying the database:,The query method takes an sql statements as a parameter and returns the 
+result.,Learn how to read, write, delete, and update a database in the next chapters.,Read more about SQL statements in our ,.",,,
+Node.js ,URL Module,"The Built-in URL Module,Node.js File Server",Example,"The URL module splits up a web address into readable parts.,To include the URL module, use the , 
+method:,Parse an address with the , 
+method, and it will return a URL object with each part of the address as 
+properties:,Now we know how to parse the query string, and in the previous chapter we 
+learned how to make Node.js behave as a file 
+server. Let us combine the two, and serve the file requested by the client.,Create two html files and save them in the same folder as your node.js files.,Create a Node.js file that opens the requested file and returns the content 
+to the client. If anything goes wrong, throw a 404 error:,Remember to initiate the file:,If you have followed the same steps on your computer, you should see two 
+different results when opening these two addresses:",,"
+  <!DOCTYPE html>,<html>,<body>,<h1>Summer</h1>,<p>I love 
+  the sun!</p>,</body>,
+  </html>,
+  <!DOCTYPE html>,<html>,<body>,<h1>Winter</h1>,<p>I love 
+  the snow!</p>,</body>,
+  </html>",
+Node.js ,Send an Email,"The Nodemailer Module,Send an Email,Multiple Receivers,Send HTML","Example,Example,Example","The Nodemailer module makes it easy to send emails from your computer.,The Nodemailer module can be downloaded and installed using npm:,After you have downloaded the Nodemailer module, you can include the module 
+in any application:,Now you are ready to send emails from your server.,Use the username and password from your selected email provider to send an 
+email. This tutorial will show you how to use your Gmail account to send an 
+email:,And that's it! Now your server is able to send emails.,To send an email to more than one receiver, add them to the ""to"" property of the mailOptions object, separated by commas:,To send HTML formatted text in your email, use the ""html"" property instead of 
+the ""text"" property:",,,
+Node.js ,Upload Files,"The Formidable Module,Upload Files,Step 1: Create an Upload Form,Step 2: Parse the Uploaded File,Step 3: Save the File","Example,Example,Example","There is a very good module for working with file uploads, called ""Formidable"".,The Formidable module can be downloaded and installed using NPM:,After you have downloaded the Formidable module, you can include the module 
+in any application:,Now you are ready to make a web page in Node.js that lets the user upload 
+files to your computer:,Create a Node.js file that writes an HTML form, with an upload field:,Include the Formidable module to be able to parse the uploaded file once it 
+reaches the server.,When the file is uploaded and parsed, it gets placed on a temporary folder on your computer.,When a file is successfully uploaded to the server, it is placed on a 
+temporary folder.,The path to this directory can be found in the ""files"" object, passed as the 
+third argument in the , method's callback function.,To move the file to the folder of your choice, use the File System module, 
+and rename the file:",,,
+Node.js ,File System Module,"Node.js as a File Server,Read Files,Create Files,Update Files,Delete Files,Rename Files,Upload Files","Example,Example,Example,Example,Example,Example,Example,Example","The Node.js file system module allows you to work with the file system on your 
+computer.,To include the File System module, use the , method:,Common use for the File System module:,The , method is used to read files on your computer.,Assume we have the following HTML file (located in the same folder as 
+Node.js):,Create a Node.js file that reads the HTML file, 
+and return the content:,Save the code above in a file called ""demo_readfile.js"", and initiate the 
+file:,If you have followed the same steps on your computer, you will see the same 
+result as the example: ,The File System module has methods for creating new files:,The , method appends specified content to a file. If the 
+file does not exist, the file will be created:,The , method takes a ""flag"" as the second argument, if the 
+flag is ""w"" for ""writing"", the specified file is opened for writing. If the file 
+does not exist, an empty file is created:,The , method replaces the specified file and content if it exists. 
+If the file does not exist, a new file, containing the specified content, will 
+be created:,The File System module has methods for updating files:,The , method appends the specified content at the end of the specified file:,The , method replaces the specified file and content:,To delete a file with the File System module,  use the , 
+method.,The , method deletes the specified file:,To rename a file with the File System module,  use the , 
+method.,The , method renames the specified file:,You can also use Node.js to upload files to your computer.,Read how in our , chapter.","Read files,Create files,Update files,Delete files,Rename files","
+  <html>,<body>,<h1>My Header</h1>,<p>My paragraph.</p>,</body>,
+  </html>",
+Node.js ,HTTP Module,"The Built-in HTTP Module,Node.js as a Web Server,Add an HTTP Header,Read the Query String,Split the Query String","Example,Example,Example","Node.js has a built-in module called HTTP, which allows Node.js to transfer 
+data over the Hyper Text Transfer Protocol (HTTP).,To include the HTTP module, use the
+, method:,The HTTP module can create an HTTP server that listens to 
+server ports and gives a response back to 
+the client.,Use the , method to create an 
+HTTP server:,The function passed into the , 
+method, will be executed when someone tries to access the 
+computer on port 8080.,Save the code above in a file called ""demo_http.js"", and initiate 
+the file:,If you have followed the same steps on your computer, you will see the same result as the example: ,If the response from the HTTP server is supposed to be displayed as HTML, you 
+should include an HTTP header with the correct content type:,The first argument of the , method is the status code, 200 means 
+that 
+all is OK, the second argument is an object containing the response headers.,The function passed into the , 
+has a , argument that represents the request from the 
+client, as an object (http.IncomingMessage object).,This object has a property called ""url"" which holds the 
+part of the url that comes after the domain name:,Save the code above in a file called ""demo_http_url.js"" and 
+initiate the file:,If you have followed the same steps on your computer, you should see two 
+different results when opening these two addresses:,There are built-in modules to easily split the query string into readable 
+parts, such as the URL module.,Save the code above in a file called ""demo_querystring.js"" and 
+initiate the file:,The address:,
+,
+,Read more about the URL module in the , chapter.",,,
+Node.js ,Modules,"What is a Module in Node.js?,Built-in Modules,Include Modules,Create Your Own Modules,Include Your Own Module","Example,Example","Consider modules to be the same as JavaScript libraries.,A set of functions you want to include in your application.,Node.js has a set of built-in modules which you can use without any further 
+installation.,Look at our , for a 
+complete list of modules.,To include a module, use the , 
+function with the name of the module:,Now your application has access to the HTTP module, and is able to create a server:,You can create your own modules, and easily include them in your applications.,The following example creates a module that returns a date and time object:,Use the , keyword to make properties and methods available outside the module file.,Save the code above in a file called ""myfirstmodule.js"",Now you can include and use the module in any of your Node.js files.,Notice that we use , to locate the module, that means that the 
+module is located in the same folder as the Node.js file.,Save the code above in a file called ""demo_module.js"", and initiate the file:,If you have followed the same steps on your computer, you will see the same result as the example: ",,,
+Node.js ,Get Started,"Download Node.js,Getting Started,Command Line Interface,Initiate the Node.js File",,"The official Node.js website has installation instructions for Node.js:
+,Once you have downloaded and installed Node.js on your computer, let's try to 
+display ""Hello World"" in a web browser.,Create a Node.js file named ""myfirst.js"", and add the following 
+code:,Save the file on your computer: C:\Users\,\myfirst.js,The code 
+tells the computer to write ""Hello World!"" if anyone (e.g. a web browser) tries 
+to access your computer on port 8080.,For now, you do not have to 
+understand the code. It will be explained later.,Node.js files must be initiated in the ""Command Line Interface"" program 
+of your computer.,How to open the command line interface on your computer depends on the operating system. For Windows users, press the start button and look for 
+""Command 
+Prompt"", or simply write ""cmd"" in the search field.,Navigate to the folder that contains the file ""myfirst.js"", the 
+command line interface 
+window should look something like this:,The file you have just created must be initiated by Node.js before any action 
+can take place.,Start your command line interface, write , and hit enter:,Now, your computer works as a server!,If anyone tries to access your computer on port 8080, they will get a ""Hello 
+World!"" message in return!,Start your internet browser, and type in the address: ",,,
+Node.js ,Introduction,"What is Node.js?,Why Node.js?,What Can Node.js Do?,What is a Node.js File?",,"A common task for a web server can be to open a file on the server and return the content to 
+the client.,Here is how PHP or ASP handles a file request:,Here is how Node.js handles a file request:,
+Node.js eliminates the waiting, and simply continues with the next request. 
+,Node.js runs single-threaded, non-blocking, asynchronous programming, which 
+is very memory efficient.","Node.js is an open source server environment,Node.js is free,Node.js runs on various platforms (Windows, Linux, Unix, Mac OS X, etc.),Node.js uses JavaScript on the server,Node.js can generate dynamic page content,Node.js can create, open, read, write, delete, and close files on the server,Node.js can collect form data,Node.js can add, delete, modify data in your database,Node.js files contain tasks that will be executed on certain events,A typical event is someone trying to access a port on the server,Node.js files must be initiated on the server before having any effect,Node.js files have extension "".js""",,

@@ -1,0 +1,206 @@
+H1_leftside_heading,H1_rightside_heading,H2,H3,All_para,li,div,div_2
+C++ ,Tutorial,"Examples in Each Chapter,Learn by Examples,C++ Quiz",Example,"Our ""Try it Yourself"" editor makes it easy to learn C++. You can edit C++ code and view the result in your browser.,Learn by examples! This tutorial supplements all explanations with clarifying examples.,Learn by taking a quiz! The quiz will give you a signal of how much you know, or do not know, about C++.",,,
+C++ ,Functions,"Create a Function,Call a Function,Function Declaration and Definition","Syntax,Example,Example,Example","A function is a block of code which only runs when it is called.,You can pass data, known as parameters, into a function.,Functions are used to perform certain actions, and they are 
+important for reusing code: Define the code once, and use it many times.,C++ provides some pre-defined 
+functions, such as ,, which is used to 
+execute code. But you can also 
+create your own functions to perform certain actions. ,To create (often referred to as ,) a function, specify the name of the function, followed by parentheses ,: ,Declared functions are not executed immediately. They are ""saved for later 
+use"", and will be executed later, when they are called.,To call a function, write the function's name followed by two parentheses , 
+and a semicolon ,In the following example, , is used to print a text (the action), when it is called:,A function can be called multiple times:,A C++ function consist of two parts:, If a user-defined function, such as , is declared after the , function, 
+,:,However, it is possible to separate the declaration and the definition of the function - for code optimization.,You will often see C++ programs that have function declaration above ,, 
+and function definition below ,. This will make the code 
+better organized and easier to read:"," is the name of the function, means that the function does not have a 
+return value. You will learn more about return values later in the next chapter,inside the function (the body), add code that defines what the function should do, the return type, the name of the function, and parameters (if any), the body of the function (code to be executed)",,
+C++ ,Pointers,Creating Pointers,"Example,Example","You learned from the previous chapter, that we can get the , of a variable by using the , 
+operator:,A , however, is a variable that ,. ,A pointer variable points to a data type (like , or ,) of the same 
+type, and is created with the , operator. The address of the variable you're working with is assigned to the pointer:,Create a pointer variable with the name ,, that , a , variable, by using the 
+asterisk sign 
+, (,). 
+Note that the type of the pointer has to match the type of the variable you're 
+working with.,Use the , operator to store the memory address of the 
+variable called ,, and assign it to the pointer.,Now, , holds the value of ,'s memory address.",,,
+C++ ,References,Creating References,Example,"A reference variable is a ""reference"" to an existing variable, and 
+it is created with the , operator:,Now, we can use either the variable name , or the reference name , 
+to refer to the , variable:",,,
+C++ ,Classes and Objects,"C++ Classes/Objects,Create a Class,Create an Object,Multiple Objects","Example,Example,Example","C++ is an object-oriented programming language.,Everything in C++ is associated with classes and objects, along with its attributes and 
+methods. For example: in real life, a car is an ,. The car has ,, such as weight and color, and ,, such as drive and brake.,Attributes and methods are basically , and , that belongs to the class. These are often referred to as 
+""class members"".,A class is a user-defined data type that we can use in our program, and it 
+works as an object constructor, or a ""blueprint"" for creating objects.,To create a class, use the , keyword:,In C++, an object is created from a class. We have already created the class named ,, 
+so now we can use this to create objects.,To create an object of ,, specify the 
+class name, followed by the object name.,To access the class attributes (, and ,), use the dot syntax (,) 
+on the object:,You can create multiple objects of one class:","The , keyword is used to create a class called ,.,The , keyword is an ,, which specifies that members (attributes and methods) of the class are accessible from outside the class. You will learn more about , later.,Inside the class, there is an integer variable , and a string variable ,. When variables are declared 
+within a class, they are called ,.,At last, end the class definition with a semicolon ,.",,
+C++ ,Class Methods,"Class Methods,Parameters","Inside Example,Outside Example, Example","Methods are , that belongs to the class.,There are two ways to define functions that belongs to a class:,In the following example, we define a function inside the class, and we name 
+it "",""., You access methods just like you access attributes; by creating an object of 
+the class and using the dot syntax (,):,To define a function outside the class definition, you have to declare it 
+inside the class and then define it outside of the class. This is done by specifiying the 
+name of the class, followed the scope resolution , operator, 
+followed by the name of the function:,You can also add parameters:","Inside class definition,Outside class definition",,
+C++ ,OOP,"C++ What is OOP?,C++ What are Classes and Objects?",,"OOP stands for Object-Oriented Programming.,Procedural programming is about writing procedures or functions that perform 
+operations on the data, while object-oriented programming is about 
+creating objects that contain both data and functions.,Object-oriented programming has several advantages over procedural 
+programming:, The ""Don't Repeat Yourself"" (DRY) principle is about 
+reducing the repetition of code. You should extract out the codes that are 
+common for the application, and place them at a single place and reuse them 
+instead of repeating it.,Classes and objects are the two main aspects of object-oriented programming.,Look at the following illustration to see the difference between class and 
+objects:,Another example:,So, a class is a template for objects, and an object is an instance of a class.,When the individual objects are created, they inherit all the 
+variables and functions from the class.,You will learn much more about , in the next chapter.","OOP is faster and easier to execute,OOP provides a clear structure for the programs,OOP helps to keep the C++ code DRY ""Don't Repeat Yourself"", and makes 
+  the 
+  code easier to maintain, modify and debug,OOP makes it possible to create full reusable 
+  applications with less code and shorter development time",,
+C++ ,Function Parameters,Parameters and Arguments,"Syntax,Example","Information can be passed to functions as a parameter. Parameters act as 
+variables inside the function.,Parameters are specified after the function name, inside the parentheses.
+You can add as many parameters as you want, just separate them with a comma:,
+The following example has a 
+function that takes a , called , as parameter.
+When the function is called, we pass along a first name,
+which is used inside the function to print the full name:
+",,,
+C++ ,Function Overloading,Function Overloading,"Example,Example,Example","With,, multiple functions can have the same name with different
+parameters:,Consider the following example, which have two functions that add numbers of different type:,Instead of defining two functions that should do the same thing, it is better to overload one. ,In the example below, we overload the , function to work for both , 
+and ,:",,,
+C++ ,Break and Continue,"C++ Break,C++ Continue,Break and Continue in While Loop","Example,Example,Break Example,Continue Example","You have already seen the , statement used in an earlier chapter of this tutorial. It was used to ""jump out"" of a , statement.,The , statement can also be used to jump out of a 
+,.,This example jumps out of the loop when , is equal to 4:,The , statement breaks one iteration (in the loop), if a specified condition occurs, and continues with the next iteration in the loop.,This example skips the value of 4:,You can also use , and , in while loops:",,,
+C++ ,Constructors,"Constructors,Constructor Parameters","Example,Example,Example","A constructor in C++ is a , that is 
+automatically called when an object of a class is created.,To create a constructor, use the same name as the class, followed by 
+parentheses ,:,Constructors can also take parameters (just like regular functions), which can be 
+useful for setting initial values for attributes.,The following class have ,, , and , attributes, and a constructor with 
+different parameters. Inside the constructor we set the attributes equal to the 
+constructor parameters (,, etc). When we call the constructor 
+(by creating an object of the class), we pass parameters to the constructor, which will set the value of 
+the corresponding attributes to the same:,Just like functions, constructors can also be defined outside the class. 
+First, declare the constructor inside the class, and then define it outside of the 
+class by specifying the name of the class, followed by the scope resolution , 
+operator, followed by the name of the constructor (which is the same as the 
+class):",,,
+C++ ,Access Specifiers,Access Specifiers,"Example,Example,Example","By now, you are quite familiar with the , keyword that appears in all of our class examples:,The , keyword is an , 
+Access specifiers define how the members (attributes and methods) of a class can 
+be accessed. In the example above, the members are , - which means that they 
+can be accessed and modified from outside the code. ,However, what if we want 
+members to be private and hidden from the outside world? ,In C++, there are three access specifiers:,In the following example, we demonstrate the differences between , and , members:, By default, all members of a class are , if you don't specify an access specifier:"," - members are accessible from outside the class, - members cannot be accessed (or 
+viewed) from outside the class, - members cannot be accessed from 
+outside the class, however, they can be accessed in inherited classes. You will learn more about , later.",,
+C++ ,Exercises,"Exercises,Count Your Score",,"You can test your C++ skills with W3Schools' Exercises.,We have gathered a variety of C++ exercises (with answers) for each C++ Chapter.,Try to solve an exercise by editing some code, or show the answer to see what you've done wrong.,You will get 1 point for
+each correct answer. Your score and total score will always be displayed.",,,
+C++ ,For Loop,"C++ For Loop,Another Example","Syntax,Example,Example","When you know exactly how many times you want to loop through a block of 
+code, use the , loop instead of a , loop:, is executed (one time) before the execution of the code block., defines the condition for executing the code block., is executed (every time) after the code block has been executed.,The example below will print the numbers 0 to 4:,Statement 1 sets a variable before the loop starts (int i = 0).,Statement 2 defines the condition for the loop to run (i must be less than 
+5). If the condition is true, the loop will start over again, if it is false, 
+the loop will end.,Statement 3 increases a value (i++) each time the code block in the loop has 
+been executed.,This example will only print even values between 0 and 10:",,,
+C++ ,While Loop,"C++ Loops,C++ While Loop","Syntax,Example","Loops can execute a block of code as long as a specified condition is reached.,Loops are handy because they save time, reduce errors, and they make code more readable.,The , loop loops through a block of code as long as a specified condition is ,:,In the example below, the code in the loop will run, over and over again, as long as 
+a variable (,) is less than 5:",,,
+C++ ,Arrays,"C++ Arrays,Access the Elements of an Array,Change an Array Element","Example,Example,Example","Arrays are used to store multiple values in a single variable, instead of declaring separate variables for each 
+value.,To declare an array, define the variable type, specify the name 
+of the array followed by , 
+and specify the number of elements it should store:,We have now declared a variable that holds an array of four strings. To insert 
+values to it, we can use an array literal - place the values in a 
+comma-separated list, inside curly braces:,To create an array of three integers, you could write:,You access an array element by referring to the index number.,This statement accesses the value of the , in 
+,:,To change the value of a specific element, refer to the index number:",,,
+C++ ,Switch,"C++ Switch Statements,The break Keyword,The default Keyword","Syntax,Example,Example","Use the , statement to select one of many code blocks to be executed.,This is how it works:,The example below uses the weekday number to calculate the weekday name:,When C++ reaches a , 
+keyword, it breaks out of the switch block.,This will stop the execution of more code and case testing inside 
+the block.,When a match is found, and the job is done, it's time for a break. There is no need for more testing.,The , keyword specifies some code to run if there is no 
+case match:","The , expression is evaluated once,The value of the expression is compared with the values of each ,If there is a match, the associated block of code is executed,The , and , keywords are optional, and will be described later in this chapter",,
+C++ ,Examples,"C++ Syntax,C++ Output/Print,C++ Comments,C++ Variables,C++ User Input,C++ Data Types,C++ Operators,C++ Strings,C++ Math,C++ Booleans,C++ If...Else (Conditions),C++ Switch,C++ Loops,C++ Arrays,C++ References,C++ Pointers,C++ Files,C++ Functions,C++ Classes/Objects",,,,,
+C++ ,Online Compiler,"C++ Compiler (Editor),C++ Compiler Explained",,"With our online C++ compiler, you can edit C++ code, and view the result in your browser.,Click on the ""Try it Yourself"" button to see how it works.,The window to the left is editable - edit the code and click on the ""Run"" button to view the result in the right window.,The icons are explained in the table below:",,,
+C++ ,Quiz,"The Test,Count Your Score",,"You can test your C++ skills with W3Schools' Quiz.,The test contains 25 questions and there is no time limit.,The test is not official, it's just a nice way to see how much you know, or don't know, about 
+C++.,You will get 1 point for each correct answer. At the end of the Quiz,
+your total score will be displayed. Maximum score is 25 points.",,,
+C++ ,How To Add Two Numbers,"Add Two Numbers,Add Two Numbers with User Input","Example,Example","Learn how to add two numbers in C++:,In this example, the user must input two numbers. Then we print the 
+sum by calculating (adding) the two numbers:",,,
+C++ ,Inheritance,Inheritance,Example,"In C++, it is possible to inherit attributes and methods from one class to another. We group the ""inheritance concept"" into two categories:,To inherit from a class, use the , symbol.,In the example below, the , class 
+(child) inherits the attributes and methods from the , class 
+(parent):"," (child) - the class that inherits from another class, (parent) - the class being inherited from",,
+C++ ,Encapsulation,"Encapsulation,Access Private Members,Why Encapsulation?",Example,"The meaning of ,, is to make sure that 
+""sensitive"" data is hidden from users. To achieve this, you must declare class variables/attributes as , (cannot 
+be accessed from outside the class). If you want others to read or modify the 
+value of a private member, you can provide public , and 
+, methods.,To access a private attribute, use public ""get"" and ""set"" methods:,The , attribute is ,, 
+which have restricted access.,The public , method takes a parameter (,) and assigns it to the
+, attribute (salary = s).,The public , method returns the value of 
+the private , attribute.,Inside ,, we create an object of the , class. Now we can use the 
+, method to set the value of the 
+private attribute to ,. Then we call the 
+, method on the object to return the value.","It is considered good practice to declare your class attributes as private (as 
+often as you can). Encapsulation ensures better control of your data, 
+because you (or others) can change one part of the code without affecting other parts,Increased security of data",,
+C++ ,If ... Else,"C++ Conditions and If Statements,The if Statement","Syntax,Example,Example","C++ supports the usual logical conditions from mathematics:,You can use these conditions to perform different actions for different decisions.,C++ has the following conditional statements:,Use the , statement to specify a block of 
+C++ code to be executed if a condition is ,.,In the example below, we test two values to find out if 20 is greater than 
+18. If the condition is ,, print some text:,We can also test variables:,In the example above we use two variables, , and ,, 
+to test whether x is greater than y 
+(using the , operator). As x is 20, and y is 18, and we know that 20 is greater than 18, we print to the screen that ""x is greater than y"".","Less than: ,Less than or equal to: ,Greater than: ,Greater than or equal to: ,Equal to ,Not Equal to: ,Use , to specify a block of code to be executed, if a specified condition is true,Use , to specify a block of code to be executed, if the same condition is false,Use , to specify a new condition to test, if the first condition is false,Use , to specify many alternative blocks of code to be executed",,
+C++ ,Exceptions,"C++ Exceptions,C++ try and catch,Handle Any Type of Exceptions (...)","Example,Example,Example,Example,Example","When executing C++ code, different errors can occur: coding errors made by the programmer, errors due to wrong input, 
+or other unforeseeable things.,When an error occurs, C++ will normally stop and generate an error message. The technical term for this is: C++ will throw an , (throw an error).,Exception handling in C++ consist of three keywords: ,, , and ,:,The , statement allows you to define a block of code to be 
+tested for errors while it is being executed.,The , keyword throws an exception when a 
+problem is detected, which lets us create a custom error.,The , statement allows you to define a block of code to 
+be executed, if an error occurs in the try block.,The , and , keywords 
+come in pairs:,Consider the following example:,We use the , block to test some code: If the , variable is less than ,, we will , an exception, and handle it in our , block.,In the , block, we catch the error and 
+do something about it. The , 
+statement takes a ,: in our example we use an , variable (,) (because we are throwing an exception of , type in the , block (,)), 
+to output the value of ,.,If no error occurs (e.g. if , is , instead of ,, 
+meaning it will be be greater 
+than 18), the , block is skipped:,You can also use the , keyword to output a reference number, like a 
+custom error number/code for organizing purposes:,If you do not know the , , used in the , block, you can use the ""three dots"" syntax (,) inside the , block, which will handle any type of exception:",,,
+C++ ,Booleans,"C++ Booleans,Boolean Values",Example,"Very often, in programming, you will need a data type that can only have one of two values, like:,For this, C++ has a , data type, which can take the values , 
+(1) or , (0).,A boolean variable is declared with the , keyword and can only take the values , or ,:,From the example above, you can read that a , value returns ,, and , returns ,.,However, it is more common to return boolean values from boolean expressions
+(see next page).","YES / NO,ON / OFF,TRUE / FALSE",,
+C++ ,Files,"C++ Files,Create and Write To a File,Read a File","Example,Example,Example","The , library allows us to work with files.,To use the , library, include both the standard , , the , header file:,There are three classes included in the , library, 
+which are used to create, write or read files:,To create a file, use either the , or , class, 
+and specify the name of the file.,To write to the file, use the insertion operator (,).,To read from a file, use either the , or , 
+class, and the name of the file.,Note that we also use a , loop together with the , function 
+(which belongs to the , class) to read the file line by line, and to print the content of the file:",,,
+C++ ,Polymorphism,Polymorphism,"Example,Example","Polymorphism means ""many forms"", and it occurs when we have many classes that are related to each other by inheritance.,Like we specified in the previous chapter; 
+, lets us 
+inherit attributes and methods from another class. , 
+uses those methods to perform different tasks. This allows us to perform a single 
+action in different ways.,For example, think of a base class called , that has a method called ,. Derived classes of Animals could be Pigs, Cats, Dogs, Birds - And they also have their own implementation of an animal sound (the pig oinks, and the cat meows, etc.):,Now we can create , and , objects and override the , method:",,,
+C++ ,Strings,C++ Strings,"Example,Example","Strings are used for storing text.,A , variable contains a collection of characters surrounded by double quotes:,To use strings, you must include an additional header file in the source 
+code, the , library:",,,
+C++ ,Data Types,"C++ Data Types,Basic Data Types",Example,"As explained in the , chapter, a variable in C++ must be a specified data type:,The data type specifies the size and type of information the variable will store:",,,
+C++ ,Operators,"C++ Operators,Arithmetic Operators","Example,Example","Operators are used to perform operations on variables and values.,In the example below, we use the
+, , to add together two values:,Although the , operator is often used to add together two values, like in the example above, it can also be used to add together a variable and a value, or a variable and another variable:,C++ divides the operators into the following groups:,Arithmetic operators are used to perform common mathematical operations.",Bitwise operators,,
+C++ ,Math,"C++ Math,Max and min,C++  <cmath> Header,Other Math Functions","Example,Example,Example","C++ has many functions that allows you to perform mathematical tasks on numbers.,The , function can be used to find the highest value of , and
+,:,And the , function can be used to find the lowest value of 
+, 
+and ,:,Other functions, such as , (square root), , (rounds a number) and , 
+(natural logarithm), can be found in the , header 
+file:,A list of other popular Math functions (from the , library) can be found in the table below:",,,
+C++ ,Getting Started,"C++ Get Started,C++ Install IDE,C++ Quickstart,Learning C++ At W3Schools",myfirstprogram.cpp,"To start using C++, you need two things:,There are many text editors and compilers to choose from. In this tutorial, we 
+will use an IDE (see below).,An IDE (Integrated Development Environment) is used to edit AND compile the code.,Popular IDE's include Code::Blocks, Eclipse, and Visual Studio.  These are all 
+free, and they can be used to both edit and debug C++ code., Web-based IDE's can work as well, but functionality is limited.,We will use , in our tutorial, which we believe is a good place to start.,You can find the latest version of Codeblocks at ,. 
+Download the , file, which will install the text editor with 
+a compiler. ,Let's create our first C++ file.,Open Codeblocks and go to ,.,Write the following C++ code and save the file as , (,):,Don't worry if you don't understand the code above - we will discuss it in detail in later chapters. For now, focus on how to run the code.,In Codeblocks, it should look like this:,Then, go to , to run (execute) the program. The result will look something to this:,! You have now written and executed your first C++ program.,When learning C++ at W3Schools.com, you can use our ""Try it Yourself"" tool, which shows both the code and the result. This will make it easier for 
+you to understand every part as we move forward:","A text editor, like Notepad, to write C++ code,A compiler, like GCC, to translate the C++ code into a language that 
+the computer will understand",,
+C++ ,User Input,"C++ User Input,Creating a Simple Calculator","Example,Example","You have already learned that , is used to output (print) values. Now we will use , to get user input., is a predefined variable that reads data from the keyboard with the extraction operator (,).,In the following example, the user can input a number, which is stored in the 
+variable ,. Then we print the value of ,:,In this example, the user must input two numbers. Then we print the 
+sum by calculating (adding) the two numbers:,There you go! You just built a basic calculator!",,,
+C++ ,Output (Print Text),C++ Output (Print Text),"Example,Example","The , object, together with the , 
+operator, is used to output values/print text:,You can add as many , objects as you want. However, note that it does not insert a new line at the end of the output:",,,
+C++ ,Introduction,"What is C++?,Why Use C++,Get Started",,"C++ is a cross-platform language that can be used to create high-performance applications.,C++ was developed by Bjarne Stroustrup, as an extension to the C language.,C++ gives programmers a high level of control over system resources and memory.,The language was updated 3 major times in 2011, 2014, and 2017 to C++11, C++14, and  C++17.,C++ is one of the world's most popular programming languages.,C++ can be found in today's operating systems, Graphical User Interfaces, and embedded systems.,C++ is an object-oriented programming language which gives a clear structure to programs and allows code to be reused, lowering development costs.,C++ is portable and can be used to develop applications that can be adapted to multiple platforms.,C++ is fun and easy to learn!,As C++ is close to ,, it makes it easy for programmers to switch to C++ or vice versa,This tutorial will teach you the basics of C++.,It is not necessary to have any prior programming experience.",,,
+C++ ,Comments,"C++ Comments,Single-line Comments,C++ Multi-line Comments","Example,Example,Example","Comments can be used to explain C++ code, and to make it more readable. It can also be used to 
+prevent execution when testing alternative code. Comments can be singled-lined or multi-lined.,Single-line comments start with two forward slashes (,).,Any text between , and the end of the line 
+is ignored by the compiler (will not be executed).,This example uses a single-line comment before a line of code:,This example uses a single-line comment at the end of a line of code:,Multi-line comments start with , and ends with ,.,Any text between , and , will be ignored by 
+the compiler:",,,
+C++ ,Syntax,"C++ Syntax,Omitting Namespace","Example,Example","Let's break up the following code to understand it better:, , is a 
+, that lets us work with input and output objects, such as 
+, (used in line 5). Header files add functionality to C++ programs., , 
+means that we can use names for objects and variables from the 
+standard library., A blank line. C++ ignores white space. But we use it 
+to make the code more readable., Another thing that always appear in a C++ program, is ,. This is called a 
+,. Any code inside its curly brackets , will be executed.
+, , (pronounced ""see-out"") is an 
+, used together with the , (,) 
+to output/print text. In our example it will output ""Hello World""., Every C++ statement ends with a semicolon ,., The body of , could also been written as:,
+, The compiler ignores white spaces. However, multiple lines makes the code more readable., , ends the main function., Do not forget to add the closing curly bracket , to actually end the 
+main function.,You might see some C++ programs that runs without the standard namespace library. The , line can be omitted and replaced with the , keyword, 
+followed by the , operator 
+for some objects:",,,
+C++ ,Variables,"C++ Variables,Declaring (Creating) Variables,Other Types,Display Variables,Add Variables Together","Syntax,Example,Example,Example,Example,Example,Example","Variables are containers for storing data values. ,In C++, there are different , of variables (defined with different keywords), for example:,To create a variable, specify the type and assign it a value:,Where , is one of C++ types (such as ,), and 
+, is the name of the variable (such as , or
+,). The , is used to assign values to the variable.,To create a variable that should store a number, look at the following example:,You can also declare a variable without assigning the value, and assign the value later:,Note that if you assign a new value to an existing variable, it will overwrite the previous value:,A demonstration of other data types:,The , object is used together with the , 
+operator to display variables.,To combine both text and a variable, separate them with the , 
+operator:,To add a variable to another variable, you can use the , 
+operator:"," - stores integers (whole numbers), without decimals, such as 123 or -123, - stores floating point numbers, with decimals, such as 19.99 or -19.99, - stores single characters, such as 'a' or 'B'. 
+ Char values are surrounded by single quotes, - stores text, such as ""Hello World"". 
+ String values are surrounded by double quotes, - stores values with two states: 
+ true or false",,

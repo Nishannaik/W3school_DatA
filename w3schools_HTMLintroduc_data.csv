@@ -1,0 +1,1996 @@
+H1_leftside_heading,H1_rightside_heading,H2,H3,All_para,li,div,div_2
+HTML, Tutorial,"Easy Learning with HTML ""Try it Yourself"",HTML Examples,HTML Exercises,HTML Quiz Test,HTML References",Example,"With our ""Try it Yourself"" editor, you can edit the HTML code and view the 
+result:,In this HTML tutorial, you will find more than 200 examples. With our online 
+""Try it Yourself"" editor, you can edit and test each example yourself!,This HTML tutorial also contains nearly 100 HTML exercises.,Test your HTML skills with our HTML Quiz!,At W3Schools you will find complete references about HTML elements, 
+attributes, events, color names, entities, character-sets, URL encoding, 
+language codes, HTTP messages, browser support, and more:",,"
+<!DOCTYPE html>,
+<html>,<head>,<title>Page Title</title>,
+</head>,<body>,<h1>This is a Heading</h1>,<p>This is a paragraph.</p>,
+</body>,</html>
+",
+HTML ,JavaScript,"The HTML <script> Tag,A Taste of JavaScript,The HTML <noscript> Tag,HTML Exercises,HTML Script Tags","Example,Example,Example,Example,Example,Example","JavaScript makes HTML pages more dynamic and interactive.,The HTML , tag is used to define a client-side script 
+(JavaScript).,The , element either contains script statements, or it points to an 
+external script file through the , attribute.,Common uses for JavaScript are image manipulation, form validation, and 
+dynamic changes of content.,To select an HTML element, JavaScript most often uses the 
+, method.,This JavaScript example writes ""Hello JavaScript!"" into an HTML element with id=""demo"":,Here are some examples of what JavaScript can do:,The HTML , tag defines an alternate content 
+to be displayed to users that 
+have disabled scripts in their browser or have a browser that doesn't support 
+scripts:",,"
+<script>,
+ document.getElementById(""demo"").innerHTML = ""Hello JavaScript!"";,
+</script>,
+<script>,
+ document.getElementById(""demo"").innerHTML = ""Hello JavaScript!"";,
+</script>,<noscript>Sorry, your browser does not support JavaScript!</noscript>",
+HTML ,Iframes,"HTML Iframe Syntax,Iframe - Set Height and Width,Iframe - Remove the Border,Iframe - Target for a Link,Chapter Summary,HTML Exercises,HTML iframe Tag","Syntax,Example,Example,Example,Example,Example","An HTML iframe is used to display a web page within a web page.,The HTML , tag specifies an 
+inline frame.,An inline frame is used to embed another document within the current HTML document., It is a good practice to always include a , attribute for the ,. 
+This is used by screen readers to read out what the content of the iframe is.,Use the , and , attributes to specify the 
+size of the iframe.,The height and width are specified in pixels by default:,Or you can add the , attribute and use 
+the CSS , and , 
+properties:,By default, an iframe has a border around it. ,To remove the border, add the , attribute and use the CSS 
+, property:,With CSS, you can also change the size, style and color of the iframe's border:,An iframe can be used as the target frame for a link.,The , attribute 
+of the link must refer to the , attribute of the iframe:","The HTML , tag specifies an 
+inline frame,The , 
+attribute defines the URL of the page to embed,Always include a , attribute (for screen readers),The , and , attributes specifies the 
+size of the iframe,Use , to remove the border 
+  around the iframe","
+<iframe src="","" title="",""></iframe>
+,
+<iframe src=""demo_iframe.htm"" height=""200"" width=""300"" 
+  title=""Iframe Example""></iframe>,
+<iframe src=""demo_iframe.htm"" style=""height:200px;width:300px;"" 
+  title=""Iframe Example""></iframe>,
+<iframe src=""demo_iframe.htm"" style=""border:none;"" 
+  title=""Iframe Example""></iframe>,
+<iframe src=""demo_iframe.htm"" style=""border:2px solid red;"" 
+  title=""Iframe Example""></iframe>,
+ <iframe src=""demo_iframe.htm"" name=""iframe_a"" title=""Iframe 
+  Example""></iframe>,
+ <p><a href=""https://www.w3schools.com"" target=""iframe_a"">W3Schools.com</a></p>
+",
+HTML ,id Attribute,"Using The id Attribute,Difference Between Class and ID,HTML Bookmarks with ID and Links,Example,Using The id Attribute in JavaScript,Chapter Summary,HTML Exercises","Example,Example,Example,Example","The HTML , attribute is used 
+to specify a unique id for an HTML element.,You cannot have more than one element with the same id in an 
+HTML document.,The , attribute specifies a unique id 
+for an HTML element. The value of the , 
+attribute must be unique within the HTML document.,The , attribute is used to point 
+to a specific style declaration in a style sheet. It is also used by JavaScript to access and 
+manipulate the element with the specific id.,The syntax for id is: write a hash character (#), followed by an id name. 
+Then, define the CSS properties within curly braces {}.,In the following example we have an , element that points to the 
+id name 
+""myHeader"". This , 
+element will be styled according to the , 
+style definition in the head section:,A 
+class name can be used by multiple HTML elements, while an id name must only be 
+used by one HTML element 
+within the page:,HTML bookmarks are used to allow readers to jump to specific parts of a webpage.,Bookmarks can be useful if your page is very long.,To use a bookmark, you must first create it, and then add a link 
+to it.,Then, when the link is clicked, the page will scroll to the location with the 
+bookmark.,First, create a bookmark with the , attribute:,Then, add a link to the bookmark (""Jump to Chapter 4""), from within the same page:,Or, add a link to the bookmark (""Jump to Chapter 4""), from another page:,The , attribute can also be used by JavaScript to perform 
+some tasks for that specific element.,JavaScript can access an element with a specific id with the , method:","The , attribute is used to specify a unique id 
+for an HTML element,The value of the , 
+attribute must be unique within the HTML document,The , 
+  attribute is used by CSS and JavaScript to style/select a specific element,The value of the , 
+  attribute is case sensitive,The , 
+  attribute is also used to create HTML bookmarks,JavaScript can access an element with a specific id with the , 
+  method","
+  <!DOCTYPE html>,<html>,<head>,<style>,#myHeader {,  
+  background-color: lightblue;,  color: black;,  padding: 40px;,  
+  text-align: center;,} ,</style>,</head>,<body>,<h1 id=""myHeader"">My 
+  Header</h1>,</body>,</html>,
+  <style>,/* Style the element with the id ""myHeader"" 
+  */,
+  , {,  background-color: lightblue;,  
+  color: black;,  padding: 
+  40px;,  text-align: center;,},/* Style all 
+  elements with the class name ""city"" */,{,  background-color: tomato;,  color: white;,  padding: 10px;,} ,</style>,
+  ,<!-- An element with a unique id -->,<h1 id=""myHeader"">My 
+  Cities</h1>,<!-- Multiple elements with same class -->,<h2 class=""city"">London</h2>,<p>London is the capital of England.</p>,
+  <h2 class=""city"">Paris</h2>,<p>Paris is the capital of France.</p>,
+  <h2 class=""city"">Tokyo</h2>,<p>Tokyo is the capital of Japan.</p>,
+<h2 id=""C4"">Chapter 4</h2>,
+ <a href=""#C4"">Jump to Chapter 4</a>
+,
+<a href=""html_demo.html#C4"">Jump to Chapter 4</a>
+,
+  <script>,function displayResult() {,  document.getElementById(""myHeader"").innerHTML = ""Have a nice day!"";,},
+  </script>",
+HTML ,Computer Code Elements,"HTML <kbd> For Keyboard Input,HTML <samp> For Program Output,HTML <code> For Computer Code,HTML <var> For Variables,Chapter Summary,HTML Exercises,HTML Computer Code Elements","Example,Example,Example,Example,Example,Example","HTML contains several elements for defining user input and 
+computer code. ,The HTML , element is used 
+to define keyboard input. The content inside is displayed in the browser's 
+default monospace font.,The HTML , element is used to 
+define sample output from a computer program. The content inside is displayed in 
+the browser's default monospace font.,The HTML , element  is used 
+to define a piece of computer code. The content inside is displayed in the 
+browser's default monospace font.,Notice that the , element does not preserve extra whitespace and line-breaks.,To fix this, you can put the , element inside a , element:,The HTML , element  is used 
+to define a variable in programming or in a mathematical expression. The 
+content inside is typically displayed in italic.","The , element defines 
+keyboard input,The , element defines 
+  sample output from a computer program,The , element defines a piece of computer code,The , element defines a variable in programming or in a mathematical expression,The , element defines 
+  preformatted text","
+<code>,x = 5;,y = 6;,
+  z = x + y;,</code>
+,
+<p>Save the document by pressing <kbd>Ctrl + S</kbd></p>,
+  <p>Message from my computer:</p>,<p><samp>File not found.<br>Press F1 to 
+  continue</samp></p>,
+  <code>,x = 5;,y = 6;,z = x + y;,</code>,
+ <pre>,<code>,x = 5;,y = 6;,z = x + y;,</code>,</pre>,
+  <p>The area of a triangle is: 1/2 x <var>b</var> x <var>h</var>, where <var>b</var> 
+  is the base, and <var>h</var> is the vertical height.</p>",
+HTML ,Layout Elements and Techniques,"HTML Layout Elements,HTML Layout Techniques,CSS Frameworks,CSS Float Layout,CSS Flexbox Layout,CSS Grid Layout","Example,Example,Example","Websites often display content in multiple columns (like a magazine or 
+a newspaper).,HTML has several semantic elements that define the different parts of a web page:,There are four different techniques to create multicolumn layouts. Each 
+technique has its pros and cons:,If you want to create your layout fast, you can use a CSS framework, like
+, or ,.,It is common to do entire web layouts using the CSS , property. Float is easy to learn 
+- you just need to remember how the , and , properties work. 
+, Floating elements are tied to the document flow, which may harm 
+the flexibility. Learn more about float in our , chapter.,Use of flexbox ensures that elements behave predictably when the page layout 
+must accommodate different screen sizes and different display devices. 
+,Learn more about flexbox in our
+, chapter.,The CSS Grid Layout Module offers a grid-based layout system, with rows and columns,
+making it easier to design web pages without having to use floats and positioning.,Learn more about CSS grids in our
+, chapter."," , - Defines a header for a document or a section, , - Defines a set of navigation links, , - Defines a section in a document, , - Defines an independent, self-contained 
+  content, , - Defines content aside from the content (like a sidebar), , - Defines a footer for a document or a section, , - Defines additional details 
+  that the user can open and close on demand, , - Defines a heading for the , element,CSS framework,CSS float property,CSS flexbox,CSS grid",,
+HTML ,Style Guide,"Always Declare Document Type,Use Lowercase Element Names,Close All HTML Elements,Use Lowercase Attribute Names,Always Quote Attribute Values,Always Specify alt, width, and height for Images,Spaces and Equal Signs,Avoid Long Code Lines,Blank Lines and Indentation,Never Skip the <title> Element,Omitting <html> and <body>?,Omitting <head>?,Close Empty HTML Elements?,Add the lang Attribute,Meta Data,Setting The Viewport,HTML Comments,Using Style Sheets,Loading JavaScript in HTML,Accessing HTML Elements with JavaScript,Use Lower Case File Names,File Extensions,Differences Between .htm and .html?,Default Filenames","Good:,Bad:,Good:,Bad:,Good:,Bad:,Good:,Bad:,Very bad:,Good:,Bad:,Good:,Bad:,Good:,Bad:,Good Table Example:,Good List Example:,Example,Example,Allowed:,Also Allowed:,Example,Example","A consistent, clean, and tidy HTML code makes it easier for others to read and understand your code. ,Here are some guidelines and tips for creating good HTML code.,Always declare the document type as the first line in your document.,The correct document type for HTML is:,HTML allows mixing uppercase and lowercase letters in element names.,However, we recommend using lowercase element names, because:,In HTML, you do not have to close all elements (for example the , element). ,However, we strongly recommend closing all HTML elements, like this:,HTML allows mixing uppercase and lowercase letters in attribute names.,However, we recommend using lowercase attribute names, because:,HTML allows attribute values without quotes.,However, we recommend quoting attribute values, because:,Always specify the , attribute for images. This attribute is important if the image 
+for some reason cannot be displayed.,Also, always define the , and , of images. This reduces flickering, because the browser can reserve space for 
+the image before loading.,HTML allows spaces around equal signs. But space-less is easier to read and 
+groups entities better together.,When using an HTML editor, it is NOT convenient to scroll right and left to read the HTML code.,Try to avoid too long code lines.,Do not add blank lines, spaces, or indentations without a reason.,For readability, add blank lines to separate large or logical code blocks.,For readability, add two spaces of indentation. Do not use the tab key.,The , element is required in HTML.,The contents of a page title is very important for search engine optimization 
+(SEO)! The page title is used by search engine algorithms to decide the order 
+when listing pages in search results.,The , element:,So, try to make the title as accurate and meaningful as possible: ,An HTML page will validate without the , and 
+, tags:,However, we strongly recommend to always add the , and 
+, tags!,Omitting , can produce errors in older browsers.,Omitting , and , 
+can also crash DOM and XML software.,The HTML <head> tag can also 
+be omitted.,Browsers will add all elements before ,, to a default , 
+element.,However, we recommend using the , tag.,In HTML, it is optional to close empty elements.,If you expect XML/XHTML software to access your page, keep the 
+closing slash (/), because it is required in XML and XHTML.,You should always include the , attribute 
+inside the , tag, to declare the 
+language of the Web page. This is meant to assist search engines and browsers.,To ensure proper interpretation and correct search engine indexing, both the language and 
+the character encoding , should be defined as early as possible in an HTML document:,The viewport is the user's visible area of a web page. It varies with the device 
+- it will be smaller on a mobile phone than on a computer screen.,You should include the following , element in all your web pages:,This gives the browser instructions on how 
+to control the page's dimensions and scaling.,The , part sets the width of the page to follow the screen-width of the device (which will vary depending on the device).,The , part sets the initial zoom level when the page is first loaded by the browser.,Here is an example of a web page , the viewport meta tag, and the same web page , the viewport meta tag:,Short comments should be written on one line, like this:,Comments that spans more than one line, should be written like this:,Long comments are easier to observe if they are indented with two spaces.,Use simple syntax for linking to style sheets (the , attribute is not necessary):,Short CSS rules can be written compressed, like this:,Long CSS rules should be written over multiple lines:,Use simple syntax for loading external scripts (the , attribute is not necessary):,Using ""untidy"" HTML code can result in JavaScript errors.,These two JavaScript statements will produce different results:,.,Some web servers (Apache, Unix) are case sensitive about file names: ""london.jpg"" cannot be accessed as 
+""London.jpg"". ,Other web servers (Microsoft, IIS) are not case sensitive: ""london.jpg"" can be accessed as 
+""London.jpg"".,If you use a mix of uppercase and lowercase, you have to be aware of this.,If you move from a case-insensitive to a case-sensitive server, even small 
+errors will break your web!,To avoid these problems, always use lowercase file names!,HTML files should have a , extension (, is allowed).,CSS files should have a , extension.,JavaScript files should have a , extension.,There is no difference between the .htm and .html file extensions!,Both will be 
+treated as HTML by any web browser and web server.,When a URL does not specify a filename at the end (like ""https://www.w3schools.com/""), 
+the server just adds a default filename, such as ""index.html"", 
+""index.htm"", ""default.html"", or ""default.htm"".,If your server is configured only with ""index.html"" as the default filename, your 
+file must be named ""index.html"", and not ""default.html"".,However, servers can be configured with more than one default filename; 
+usually you can set up as many default filenames as you want.","Mixing uppercase and lowercase names looks bad,Developers normally use lowercase names,Lowercase looks cleaner,Lowercase is easier to write,Mixing uppercase and lowercase names looks bad,Developers normally use lowercase names,Lowercase look cleaner,Lowercase are easier to write,Developers normally quote attribute values,Quoted values are easier to read,You MUST use quotes if the value contains spaces,defines a title in the browser toolbar,provides a title for the page when it is added to favorites,displays a title for the page in search-engine results,Place the opening bracket on the same line as the selector,Use one space before the opening bracket,Use two spaces of indentation,Use semicolon after each property-value pair, including the last,Only use quotes around values if the value contains spaces,Place the closing bracket on a new line, without leading spaces","
+ <!DOCTYPE html>,
+<body>,
+<p>This is a paragraph.</p>,
+</body>,
+<BODY>,
+<P>This is a paragraph.</P>,
+</BODY>,
+ <section>,  <p>This is a paragraph.</p>,  <p>This is a paragraph.</p>,
+    </section>,
+ <section>,  <p>This is a paragraph.,  <p>This is a paragraph.,
+    </section>,
+  <a href=""https://www.w3schools.com/html/"">Visit our HTML tutorial</a>,
+  <a HREF=""https://www.w3schools.com/html/"">Visit our HTML tutorial</a>,
+ <table 
+    class=""striped"">,
+ <table class=striped>,
+ <table class=table striped>,
+ <img 
+    src=""html5.gif"" alt=""HTML5"" style=""width:128px;height:128px"">,
+ <img 
+    src=""html5.gif"">,
+ <link rel=""stylesheet"" href=""styles.css"">,
+ <link 
+    rel = ""stylesheet"" href = ""styles.css"">,
+ <body>,<h1>Famous Cities</h1>,<h2>Tokyo</h2>,
+    <p>Tokyo is the capital of Japan, the 
+    center of the Greater Tokyo Area,,and the most 
+    populous metropolitan area in the world.,It is the 
+    seat of the Japanese government and the Imperial Palace,,
+and the home of the Japanese Imperial Family.</p>,</body>,
+ <body>,  <h1>Famous Cities</h1>,  <h2>Tokyo</h2>,
+    ,  <p>,    Tokyo is the capital of Japan, the 
+    center of the Greater Tokyo Area,,    and the most 
+    populous metropolitan area in the world.,    It is the 
+    seat of the Japanese government and the Imperial Palace,,    
+    and the home of the Japanese Imperial Family.,  </p>,</body>,
+ <table>,  <tr>,    <th>Name</th>,
+    <th>Description</th>,
+     
+    </tr>,  <tr>,    <td>A</td>,
+    <td>Description of A</td>,
+     
+    </tr>,  <tr>,    <td>B</td>,
+    <td>Description of B</td>,  </tr>,</table>,
+ <ul>,  <li>London</li>,  <li>Paris</li>,
+      
+    <li>Tokyo</li>,</ul>,
+ <title>HTML 
+    Style Guide and Coding Conventions</title>,
+    <!DOCTYPE html>,<head>,  <title>Page Title</title>,
+    </head>,
+    ,
+ <h1>This is a heading</h1>,<p>This is a paragraph.</p>,
+    <!DOCTYPE html>,<html>,<title>Page Title</title>,
+    <body>,<h1>This is a heading</h1>,<p>This is a paragraph.</p>,
+    ,</body>,</html>,
+ <meta 
+    charset=""utf-8"">,
+ <meta charset=""utf-8"" />,
+    <!DOCTYPE html>,<html lang=""en-us"">,<head>,  <title>Page Title</title>,
+    </head>,<body>,<h1>This is a 
+    heading</h1>,<p>This is a paragraph.</p>,</body>,</html>,
+ <!DOCTYPE html>,<html 
+    lang=""en-us"">,<head>,  <meta charset=""UTF-8"">,
+   
+ <title>Page Title</title>,</head>,
+<!-- This is a comment -->
+,
+<!-- ,  This is a long comment example. This is 
+  a long comment example.,  This is a 
+  long comment example. This is a long comment example.,-->
+,
+<link rel=""stylesheet"" href=""styles.css"">
+,
+<script src=""myscript.js"">
+",
+HTML ,File Paths,"File Path Examples,HTML File Paths,Absolute File Paths,Relative File Paths,Best Practice","Example,Example,Example,Example","A file path describes the location of a file in a web site's folder structure.,A file path describes the location of a file in a web site's folder structure.,File paths are used when linking to external files, like:,An absolute file path is the full URL to a file:,A relative file path points to a file relative to the current page.,In the following example, the file path points to a file in the images folder located 
+at the root of the current web:,In the following example, the file path points to a file in the images folder located in the 
+current folder:,In the following example, the file path points to a file in the images folder located in the 
+folder one level up from the current folder:,It is best practice to use relative file paths (if possible).,When using relative file paths, your web pages will not be bound to your current 
+base URL. All links will work on your own computer (localhost) as well as on 
+your current public domain and your future public domains.","Web pages,Images,Style sheets,JavaScripts","
+<img src=""https://www.w3schools.com/images/picture.jpg"" 
+  alt=""Mountain"">
+,
+<img src=""/images/picture.jpg"" 
+alt=""Mountain"">
+,
+<img src=""images/picture.jpg"" 
+alt=""Mountain"">
+,
+<img src=""../images/picture.jpg"" 
+alt=""Mountain"">
+",
+HTML - ,The Head Element,"The HTML <head> Element,The HTML <title> Element,The HTML <style> Element,The HTML <link> Element,The HTML <meta> Element,Examples,Setting The Viewport,The HTML <script> Element,The HTML <base> Element,Chapter Summary,HTML head Elements","Example,Example,Example,Example,Example,Example","The HTML , element
+is a container for the following elements:
+,, ,, 
+,, ,, ,, and ,.,The , element is a container for metadata (data 
+about data) and is placed between the , tag and the , tag.,HTML metadata is data about the HTML document. Metadata is not displayed.,Metadata typically define the document title, character set, styles, scripts, and other meta information.,The , element defines the title of the document. 
+The title must be text-only, and it is shown in the browser's title bar or in 
+the page's tab.,The , element is required in HTML documents!,The contents of a page title is very important for search engine optimization 
+(SEO)! The page title is used by search engine algorithms to decide the order 
+when listing pages in search results.,The , element:,So, try to make the title as accurate and meaningful as possible!,A simple HTML document:,The , element is used to define style information for a 
+single HTML page:,The , element defines the 
+relationship between the current document and an external resource.,The , 
+tag is most often used to link to external style sheets:,The , element is typically used 
+to specify the character set, page description, keywords, author of the document, 
+and viewport settings.,The metadata will not be displayed on the page, but are used by browsers (how to display content 
+or reload page), 
+by search engines (keywords), and other web services.,Example of , tags:,The viewport is the user's visible area of a web page. It varies with the device 
+- it will be smaller on a mobile phone than on a computer screen.,You should include the following , element in all your web pages:,This gives the browser instructions on how 
+to control the page's dimensions and scaling.,The , part sets the width of the page to follow the screen-width of the device (which will vary depending on the device).,The , part sets the initial zoom level when the page is first loaded by the browser.,Here is an example of a web page , the viewport meta tag, and the same web page , the viewport meta tag:,The , element is used to define client-side JavaScripts.,The following JavaScript writes ""Hello JavaScript!"" into an HTML element with id=""demo"":,The , element specifies the base URL and/or target for all relative URLs in a page.,The , tag must have either an 
+href or a target attribute present, or both.,There can only be one single , 
+element in a document!","defines a title in the browser toolbar,provides a title for the page when it is added to favorites,displays a title for the page in search engine-results,The , element is a container for metadata (data 
+about data),The , element is placed between the , tag and the , tag,The , element is required and 
+  it defines the title of the document,The , element is used to 
+  define style information for a single document,The , 
+  tag is most often used to link to external style sheets,The , element is typically 
+  used to specify the character set, page description, keywords, author of the 
+  document, and viewport settings,The , element is used to define client-side JavaScripts,The , element specifies the 
+  base URL and/or target for all relative URLs in a page","
+<!DOCTYPE html>,
+<html>,<head>,
+ 
+<title>A Meaningful Page 
+ Title</title>,
+ </head>,
+<body>,
+  ,The content of the document......,
+  ,</body>,
+</html>
+,
+<style>,
+   
+  body {background-color: powderblue;},  h1 {color: red;},
+   
+  p {color: blue;},
+</style>,
+<link rel=""stylesheet"" href=""mystyle.css"">
+,
+ <meta charset=""UTF-8"">,<meta name=""description"" content=""Free Web tutorials"">,<meta name=""keywords"" content=""HTML, CSS, JavaScript"">,<meta name=""author"" content=""John 
+  Doe"">,
+<script>,function myFunction() {,
+   
+ document.getElementById(""demo"").innerHTML = ""Hello JavaScript!"";,
+ },</script>,
+   <head>,<base href=""https://www.w3schools.com/"" target=""_blank"">,</head>,
+   ,<body>,<img src=""images/stickman.gif"" width=""24"" height=""39"" 
+   alt=""Stickman"">,<a href=""tags/tag_base.asp"">HTML base Tag</a>,</body>,
+",
+HTML ,Block and Inline Elements,"Block-level Elements,Inline Elements,The <div> Element,The <span> Element,Chapter Summary,HTML Tags","Example,Example,Example,Example","Every HTML element has a default display value, depending on what type 
+of element it is.,There are two display values: block and inline.,A block-level element always starts on a new line.,A block-level element always takes up the full width available 
+(stretches out to the left and right as far as it can).,A block level element has a top and a bottom margin, whereas an inline 
+element does not.,Here are the block-level elements in HTML:,An inline element does not start on a new line.,An inline element only takes up as much width as necessary.,This is , a paragraph.,Here are the inline elements in HTML:,The , element is 
+often used as a container for other HTML elements.,The , element has no required attributes, but ,, , and , are common.,When used together with CSS, the , element can be used to style blocks of 
+content:,The , element is  
+an inline container used to mark up a part of a text, or a part of a document.,The , element has no required attributes, but ,, , and , are common.,When used together with CSS, the , element can be used to style parts of the text:","There are two display values: block and inline,A block-level element always starts on a new line and takes up the full 
+  width available,An inline element does not start on a new line and it only takes up as 
+  much width as necessary,The , element is a block-level 
+  and is often used as a container for other HTML elements,The , element is an inline 
+  container used to mark up a part of a text, or a part of a document","
+<div>Hello World</div>,
+<span>Hello World</span>,
+<div style=""background-color:black;color:white;padding:20px;"">,
+   <h2>London</h2>,  <p>London is the capital city of England. It is the most populous city in the United Kingdom, with a metropolitan area of over 13 million inhabitants.</p>,
+ </div>
+,
+  <p>My mother has <span style=""color:blue;font-weight:bold"">blue</span> eyes 
+  and my father has <span style=""color:darkolivegreen;font-weight:bold"">dark 
+  green</span> eyes.</p>,
+",
+HTML ,Tables,"Define an HTML Table,Table Cells,Table Rows,Table Headers,HTML Exercises,HTML Table Tags","Example,Example,Example,Example,Example","HTML tables allow web developers to arrange data into rows and 
+columns.,A table in HTML consists of table cells inside rows and columns,Each table cell is defined by a
+, and a , tag.,Everything between , and , are the content of the table cell.,Each table row starts with a 
+, and end with a , tag.,You can have as many rows as you like in a table, just make sure that the number of cells are the same in each row.,Sometimes you want your cells to be headers, in those cases use the
+, tag instead of the
+, tag:,By default, the text in , elements 
+are bold and centered, but you can change that with CSS. ",,"
+<table>, 
+<tr>,    <th>Company</th>,
+    <th>Contact</th> ,    <th>Country</th>,
+ 
+</tr>, 
+<tr>,    <td>Alfreds Futterkiste</td>,
+    <td>Maria 
+  Anders</td> ,    <td>Germany</td>,
+ 
+</tr>,  <tr>,    <td>Centro 
+  comercial Moctezuma</td>,
+    <td>Francisco 
+  Chang</td> ,    <td>Mexico</td>,
+  </tr>,</table>
+,
+<table>, 
+<tr>,    <td>Emil</td>,
+    <td>Tobias</td> ,    <td>Linus</td>,
+ 
+</tr>,</table>
+,
+<table>, 
+<tr>,    <td>Emil</td>,
+    <td>Tobias</td> ,    <td>Linus</td>,
+ 
+</tr>, 
+<tr>,    <td>16</td>,
+    <td>14</td> ,    <td>10</td>,
+ 
+</tr>,</table>
+,
+<table>, 
+<tr>,    <th>Person 1</th>,
+    <th>Person 2</th> ,    <th>Person 
+  3</th>,
+ 
+</tr>, 
+<tr>,    <td>Emil</td>,
+    <td>Tobias</td> ,    <td>Linus</td>,
+ 
+</tr>, 
+<tr>,    <td>16</td>,
+    <td>14</td> ,    <td>10</td>,
+ 
+</tr>,</table>
+",
+HTML ,class Attribute,"Using The class Attribute,The Syntax For Class,Multiple Classes,Different Elements Can Share Same Class,Use of The class Attribute in JavaScript,Chapter Summary,HTML Exercises","Example,Example,Example,Example,Example,Example","The HTML , attribute is 
+used to specify a class for an HTML element.,Multiple HTML elements can share the same class.,The , attribute is often used to point 
+to a class name in a style sheet. It can also be used by a JavaScript to access and 
+manipulate elements with the specific class name.,In the following example we have three , elements 
+with a , attribute with the value of 
+""city"". All of the three , 
+elements will be styled equally according to the , 
+style definition in the head section:,In the following example we have two , elements 
+with a , attribute with the value of 
+""note"". Both , 
+elements will be styled equally according to the , 
+style definition in the head section:,To create a class; write a period (.) character, followed by a 
+class name. 
+Then, define the CSS properties within curly braces {}:,HTML elements can belong to more than one class.,To define multiple classes, separate the class names with a space, e.g. <div 
+class=""city main"">. The element will be styled according to all the 
+classes specified.,In the following example, the first , element belongs to both the , class and also to the , class, 
+and will get the CSS styles from both of the classes: ,Different HTML elements can point to the same class name.,In the following example, both , and , 
+points to the ""city"" class 
+and will share the same style:,The class name can also be used by JavaScript to perform certain tasks for 
+specific elements.,JavaScript can access elements with a specific class name with the , method:","The HTML , attribute specifies one or 
+more class names for an element,Classes are used by CSS and JavaScript to select and access specific 
+  elements,The , attribute can be used on any 
+  HTML element,The class name is case sensitive,Different HTML elements can point to the same class name,JavaScript can access elements with a specific class name with the , 
+  method","
+ <!DOCTYPE html>,<html>,<head>,<style>,
+  .city {,  background-color: tomato;,  color: white;,  
+  border: 2px solid black;,  margin: 20px;,
+    padding: 20px;,} ,</style>,
+ </head>,<body>,<div class=""city"">,
+  
+ <h2>London</h2>,  <p>London is the capital of England.</p>,
+ </div>,<div class=""city"">,
+  
+ <h2>Paris</h2>,  <p>Paris is the capital of France.</p>,</div>,<div class=""city"">,
+  
+ <h2>Tokyo</h2>,  <p>Tokyo is the capital of Japan.</p>,</div>,</body>,</html>
+ ,
+ <!DOCTYPE html>,<html>,<head>,<style>,.note {,
+    font-size: 120%;,  color: red;,},
+ </style>,</head>,<body>,<h1>My <span class=""note"">Important</span> Heading</h1>,<p>This is some <span class=""note"">important</span> text.</p>,</body>,</html>,
+  <!DOCTYPE html>,<html>,<head>,<style>,.city {,  
+  background-color: tomato;,  color: white;,  padding: 10px;,
+  },</style>,</head>,<body>,<h2 class=""city"">London</h2>,
+  <p>London is the capital of England.</p>,<h2 class=""city"">Paris</h2>,
+  <p>Paris is the capital of France.</p>,<h2 class=""city"">Tokyo</h2>,
+  <p>Tokyo is the capital of Japan.</p>,</body>,</html>,
+  <h2 
+  class=""city main"">London</h2>,<h2 class=""city"">Paris</h2>,<h2 
+  class=""city"">Tokyo</h2>,
+  <h2 class=""city"">Paris</h2>,<p 
+  class=""city"">Paris is the capital of France</p>,
+  <script>,function myFunction() {,  var x = ,;,  for (var i = 0; i < x.length; 
+  i++) {,    x[i].style.display = ""none"";,  },},</script>",
+Pixels to Ems ,Conversion,"Pixel to Em Converter,Body Font Size",,"The tool below allows you to work out the em sizes from pixels (or vice versa).,In the table below, select a body font size in pixels (px) to display a 
+complete ""px to em and percent"" conversion table.","Set a default pixel size for body (usually 16px),Then, convert a pixel value to em, based on the default pixel size,Or, convert an em value to pixels, based on the default pixel size",,
+HTML ,Lists,"Unordered HTML List,Ordered HTML List,HTML Description Lists,HTML List Tags","Example,Example,Example,Example","HTML lists allow web developers to group a set of related items in lists.,An unordered list starts with the , tag. Each list item starts with the 
+, tag.,The list items will be marked with bullets (small black circles) by default:,An ordered list starts with the , tag. Each list item starts with the , tag.,The list items will be marked with numbers by default:,HTML also supports description lists.,A description list is a list of terms, with a description of each term.,The , tag defines the description list, the , tag defines the term (name), and the ,  
+tag describes each term:","Item,Item,Item,Item","
+<ul>,
+ 
+<li>Coffee</li>,  <li>Tea</li>,
+ 
+<li>Milk</li>,
+</ul>
+,
+<ol>,
+ 
+<li>Coffee</li>,  <li>Tea</li>,
+ 
+<li>Milk</li>,
+</ol>
+,
+<dl>,
+ 
+<dt>Coffee</dt>,
+ 
+<dd>- black hot drink</dd>,
+ 
+<dt>Milk</dt>,
+ 
+<dd>- white cold drink</dd>,
+</dl>
+",
+HTML ,Responsive Web Design,"What is Responsive Web Design?,Setting The Viewport,Responsive Images,Responsive Text Size,Media Queries,Responsive Web Page - Full Example,Responsive Web Design - Frameworks,W3.CSS,Bootstrap","Example,Example,Example,Example,Example,Example,Example,Example","Responsive web design is about creating web pages that look good on all devices! ,A responsive web design will automatically adjust for different screen sizes and viewports.,Responsive Web Design is about using HTML and CSS to automatically resize, hide, shrink, or enlarge,
+a website, to make it look good on all devices (desktops, tablets, and phones):,
+,
+,To create a responsive website, add the following , 
+tag to all your web pages:,This will set the viewport of your page, which will give the browser instructions on how 
+to control the page's dimensions and scaling.,Here is an example of a web page , the viewport meta tag, and the same web page , the viewport meta tag:,Responsive images are images that scale nicely to fit any browser size.,If the CSS , property is set to 100%, the image will be responsive and scale 
+up and down:,Notice that in the example above, the image can be scaled up to be larger than its original size.
+A better solution, in many cases, will be to use the , property instead.,If the , property is set to 100%, the image will scale down if it has to, but never scale up to be larger than its original size:,The HTML , element allows you to define different images for 
+different browser window sizes.,Resize the browser window to see how the image below change depending on the width:,The text size can be set with a ""vw"" unit, which means the ""viewport width"".,That way the text size will follow the size of the browser window:,In addition to resize text and images, it is also common to use media queries 
+in responsive web pages.,With media queries you can define completely different styles for different browser 
+sizes.,Example: resize the browser window to see that the three div elements below will display 
+horizontally on large screens and stacked vertically on small screens:,A responsive web page should look good on large desktop screens and on small mobile phones.,
+,
+,All popular CSS Frameworks offer responsive design.,They are free, and easy to use.,
+W3.CSS is a modern CSS framework with support for desktop, tablet, and mobile 
+design by default.,
+W3.CSS is smaller and faster than similar CSS frameworks.,
+W3.CSS is designed to be a high quality alternative to Bootstrap.,
+W3.CSS is designed to be independent of jQuery or any other JavaScript library.,To learn more about W3.CSS, read our ,.,Another popular CSS framework is Bootstrap. Bootstrap uses HTML, CSS and jQuery to make responsive web pages.,To learn more about Bootstrap, go to our ,.",,"
+<meta name=""viewport"" content=""width=device-width, initial-scale=1.0"">
+,
+<img 
+  src=""img_girl.jpg"" ,>
+,
+<img 
+  src=""img_girl.jpg"" style="",height:auto;"">
+,
+  <picture>,  <source srcset=""img_smallflower.jpg"" media=""(max-width: 
+  600px)"">,  <source srcset=""img_flowers.jpg"" media=""(max-width: 
+  1500px)"">,  <source srcset=""flowers.jpg"">,  <img src=""img_smallflower.jpg"" 
+  alt=""Flowers"">,</picture>,
+<h1 style="","">Hello World</h1>
+,
+  <style>,.left, .right {,  float: left;,  
+  width: 20%; /* The width is 20%, by default */,},.main {,  float: left;,  width: 60%; /* The width is 60%, by default */,},/* Use a media query to 
+  add a breakpoint at 800px: */,@media screen and (max-width: 800px) {,  .left, 
+  .main, .right {,    
+  width: 100%; /* The width is 100%, when the viewport is 800px or smaller */,  
+  },},</style>
+,
+ <!DOCTYPE html>,<html>,<meta name=""viewport"" 
+ content=""width=device-width, initial-scale=1"">,<link rel=""stylesheet"" 
+ href=""https://www.w3schools.com/w3css/4/w3.css"">,<body>,<div 
+ class=""w3-container w3-green"">,  <h1>W3Schools Demo</h1> ,  
+ <p>Resize this responsive page!</p> ,</div>,<div 
+ class=""w3-row-padding"">,  <div class=""w3-third"">,    <h2>London</h2>,    <p>London is the capital city of England.</p>,    <p>It is the most populous city in the United Kingdom,,    with a 
+ metropolitan area of over 13 million inhabitants.</p>,  </div>,  <div 
+ class=""w3-third"">,    <h2>Paris</h2>,    <p>Paris is 
+ the capital of France.</p> ,    <p>The Paris area is one of the largest 
+ population centers in Europe,,    with more than 12 million 
+ inhabitants.</p>,  </div>,  <div class=""w3-third"">,    
+ <h2>Tokyo</h2>,    <p>Tokyo is the capital of Japan.</p>,    <p>It 
+ is the center of the Greater Tokyo Area,,    and the most populous 
+ metropolitan area in the world.</p>,  </div>,</div>,</body>,
+ </html>,
+<!DOCTYPE html>,<html lang=""en"">,<head>,<title>Bootstrap 
+Example</title>,<meta charset=""utf-8"">,<meta name=""viewport"" 
+content=""width=device-width, initial-scale=1"">,<link rel=""stylesheet"" 
+href=""https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"">,
+<script 
+src=""https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js""></script>,
+<script 
+src=""https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js""></script>,
+</head>,<body>,<div class=""container"">,  <div 
+class=""jumbotron"">,    <h1>My First Bootstrap Page</h1>,  
+</div>,  <div class=""row"">,    <div 
+class=""col-sm-4"">,      ...,    
+</div>,    <div class=""col-sm-4"">,      
+...,    </div>,    <div 
+class=""col-sm-4"">,    ...,    </div>,  
+</div>,</div>,</body>,</html>",
+HTTP ,Request Methods,"What is HTTP?,HTTP Methods,The GET Method,The POST Method,The PUT Method,The HEAD Method,The DELETE Method,The OPTIONS Method,Compare GET vs. POST",,"The Hypertext Transfer Protocol (HTTP) is designed to enable 
+communications between clients and servers.,HTTP works as a request-response protocol between a client and server.,Example: A client (browser) sends an HTTP request to the server; then the server 
+returns a response to the client. The response contains status information about 
+the request and may also contain the requested content.,The two most common HTTP methods are: GET and POST.,Note that the query string (name/value pairs) is sent in the URL of 
+a GET request:,The data sent to the server with POST is stored in the request body of the 
+HTTP request:,The difference between POST and PUT is that PUT requests are idempotent. That 
+is, calling the same PUT request multiple times will always produce the same 
+result. In contrast, calling a POST request repeatedly have side effects of 
+creating the same resource multiple times.,In other words, if GET /users returns a list of users, then HEAD /users will 
+make the same request but will not return the list of users.,HEAD requests are useful for checking what a GET request will return before 
+actually making a GET request - like before downloading a large file or response 
+body.,The following table compares the two HTTP methods: GET and POST.","GET requests can be cached,GET requests remain in the browser history,GET requests can be bookmarked,GET requests should never be used when dealing with sensitive data,GET requests have length restrictions,GET requests are only used to request data (not modify),POST requests are never cached,POST requests do not remain in the browser history,POST requests cannot be bookmarked,POST requests have no restrictions on data length",,
+HTML ,Semantic Elements,"What are Semantic Elements?,Semantic Elements in HTML,HTML <section> Element,HTML <article> Element,Nesting <article> in <section> or Vice Versa?,HTML <header> Element,HTML <footer> Element,HTML <nav> Element,HTML <aside> Element,HTML <figure> and <figcaption> Elements,Why Semantic Elements?,Semantic Elements in HTML","Example,Example,Example 2,Example,Example,Example,Example,Example 2,Example","Semantic elements = elements with a meaning.,A semantic element clearly describes its meaning to both the browser and the developer.,Examples of , elements: , and , - Tells nothing about its content.,Examples of , elements: ,, ,, and , - Clearly defines its content.,Many web sites contain HTML code like:
+<div id=""nav""> <div class=""header""> <div id=""footer"">
+to indicate navigation, header, and footer.,In HTML there are some semantic elements that can be used to define different parts of a web page:
+ ,The , element defines a section in a document.,According to W3C's HTML documentation: ""A section is a thematic grouping of content, typically with a heading."",Examples of where a , element can be used:,A web page could normally be split into sections for introduction, 
+content, and contact information.,The , element specifies independent, self-contained content.,An article should make sense on its own, and it should be possible to 
+distribute it independently from the rest of the web site.,Examples of where the , element can be used:,The , 
+element specifies independent, self-contained content.,The , element defines section in a document.,Can we use the definitions to decide how to nest those elements? No, we cannot!,So, you will find HTML pages with , elements 
+containing , elements, and , elements containing , elements.,The , element represents a container for introductory content or 
+a set of navigational links.,A , element typically contains:, You can have several , elements in one 
+HTML document. However, , cannot be placed within a ,, , or another , element.,The , element defines a footer for a document or section.,A , element typically contains:,You can have several , elements in one document.,The , element defines a set of navigation links.,The , element defines some content aside from the content it is 
+placed in (like a sidebar).,The , content should be 
+indirectly related to the surrounding content.,The , tag specifies self-contained content, like illustrations, diagrams, photos, code listings, etc.,The , tag defines a caption for a , element. The , element can be placed as the first or 
+as the last child of a , element.,The , element defines the actual image/illustration. ,According to the W3C: ""A semantic Web allows data to be shared and reused across applications, 
+enterprises, and communities."",Below is a list of some of the semantic elements in HTML.","<article>,<aside>,<details>,<figcaption>,<figure>,<footer>,<header>,<main>,<mark>,<nav>,<section>,<summary>,<time>,Chapters,Introduction,News items,Contact information,Forum posts,Blog posts,User comments,Product cards,Newspaper articles,one or more heading elements (<h1> - <h6>),logo or icon,authorship information,authorship information,copyright 
+information,contact information,sitemap,back to top links,related documents","
+    <section>,<h1>WWF</h1>,<p>The World Wide Fund for Nature (WWF) is an 
+    international organization working on issues regarding the conservation, 
+    research and restoration of the environment, formerly named the World 
+    Wildlife Fund. WWF was founded in 1961.</p>,</section>,<section>,
+    <h1>WWF's Panda symbol</h1>,<p>The Panda has become the symbol of WWF. 
+    The well-known panda logo of WWF originated from a panda named Chi Chi that 
+    was transferred from the Beijing Zoo to the London Zoo in the same year of 
+    the establishment of WWF.</p>,</section>
+,
+    <article>,<h2>Google Chrome</h2>,<p>Google Chrome is a web browser 
+    developed by Google, released in 2008. Chrome is the world's most popular 
+    web browser today!</p>,</article>,<article>,<h2>Mozilla 
+    Firefox</h2>,<p>Mozilla Firefox is an open-source web browser developed 
+    by Mozilla. Firefox has been the second most popular web browser since 
+    January, 2018.</p>,</article>,<article>,<h2>Microsoft Edge</h2>,
+    <p>Microsoft Edge is a web browser developed by Microsoft, released in 2015. 
+    Microsoft Edge replaced Internet Explorer.</p>,</article>
+,
+  <html>,<head>,<style>,.all-browsers {,  margin: 0;,  
+  padding: 5px;,  background-color: lightgray;,},.all-browsers 
+  > h1, .browser {,  margin: 10px;,  padding: 5px;,},
+  .browser {,  background: white;,},.browser > h2,  
+  p {,  margin: 4px;,  font-size: 90%;,},</style>,
+  </head>,<body>,<article class=""all-browsers"">,  <h1>Most 
+  Popular Browsers</h1>,  <article class=""browser"">,    
+  <h2>Google Chrome</h2>,    <p>Google Chrome is a web browser 
+  developed by Google, released in 2008. Chrome is the world's most popular web 
+  browser today!</p>,  </article>,  <article class=""browser"">,    
+  <h2>Mozilla Firefox</h2>,    <p>Mozilla Firefox is an 
+  open-source web browser developed by Mozilla. Firefox has been the second most 
+  popular web browser since January, 2018.</p>,  </article>,  
+  <article class=""browser"">,    <h2>Microsoft Edge</h2>,    
+  <p>Microsoft Edge is a web browser developed by Microsoft, released in 2015. 
+  Microsoft Edge replaced Internet Explorer.</p>,  </article>,
+  </article>,</body>,</html>
+,
+      
+    <article>,
+  <header>,
+    
+ <h1>What Does WWF Do?</h1>,
+    <p>WWF's mission:</p>,
+  </header>,
+   <p>WWF's mission is to stop the degradation of our planet's natural environment,,  and build a future in which humans live in harmony with nature.</p>,
+ </article>
+,
+      
+    <footer>,
+  <p>Author: Hege Refsnes</p>,
+  <p><a href=""mailto:hege@example.com"">hege@example.com</a></p>,
+ </footer>
+,
+    <nav>,
+  
+ <a href=""/html/"">HTML</a> |,
+  
+ <a href=""/css/"">CSS</a> |,
+  
+ <a href=""/js/"">JavaScript</a> |,
+  
+ <a href=""/jquery/"">jQuery</a>,
+ </nav>
+,
+    <p>My family and I visited The Epcot center this summer. The weather was 
+    nice, and Epcot was amazing! I had a great summer together with my 
+    family!</p>,<aside>,<h4>Epcot Center</h4>,<p>Epcot is a theme 
+    park at Walt Disney World Resort featuring exciting attractions, 
+    international pavilions, award-winning fireworks and seasonal special 
+    events.</p>,</aside>
+,
+  <html>,<head>,<style>,aside {,  width: 30%;,  
+  padding-left: 15px;,  margin-left: 15px;,  float: right;,  
+  font-style: italic;,  background-color: lightgray;,},</style>,</head>,<body>,
+  ,<p>My family and I visited The Epcot 
+  center this summer. The weather was nice, and Epcot was amazing! I had a great 
+  summer together with my family!</p>,<aside>,<p>The Epcot center is a 
+  theme park at Walt Disney World Resort featuring exciting attractions, 
+  international pavilions, award-winning fireworks and seasonal special 
+  events.</p>,</aside>,<p>My family and I visited The Epcot center 
+  this summer. The weather was nice, and Epcot was amazing! I had a great summer 
+  together with my family!</p>,<p>My family and I visited The Epcot center 
+  this summer. The weather was nice, and Epcot was amazing! I had a great summer 
+  together with my family!</p>,</body>,</html>
+,
+<figure>,
+  <img src=""pic_trulli.jpg"" alt=""Trulli"">,
+  <figcaption>Fig1. - Trulli, Puglia, Italy.</figcaption>,
+</figure>
+",
+HTTP ,Status Messages,"HTML Error Messages,1xx: Information,2xx: Successful,3xx: Redirection,4xx: Client Error,5xx: Server Error",,"When a browser requests a service from a web server, an error might occur,
+and the server might return an error code like ""404 Not Found"".,It is common to name these errors HTML error messages.,But these messages are something called HTTP status messages.
+In fact, the server always returns a message for every request.
+The most common message is 200 OK.,Below is a list of HTTP status messages that might be returned:",,,
+Keyboard ,Shortcuts,"Keyboard Shortcuts For Windows and Mac,Basic Shortcuts,Text Editing,Web Browsers,Screenshots",,"Keyboard shortcuts are often used in modern operating systems and computer software programs.,Learning and using keyboard shortcuts can save you a lot of time.",,,
+"HTML , Reference",Language Code,"ISO Language Codes,ISO 639-1 Language Codes",,"You should always include the , attribute inside the , tag, to declare the language of the 
+Web page. This is meant to assist search engines and browsers:,In XHTML, the language is declared inside the , tag as follows:,ISO 639-1 defines abbreviations for languages:,See also: ,.",,,
+"HTML , Reference",URL Encoding,"URL - Uniform Resource Locator,URL Encoding (Percent Encoding),Try It Yourself,URL Encoding Functions,ASCII Encoding Reference,URL Encoding Reference",,"Web browsers request pages from web servers by using a URL.,The URL is the address of a web page, like: ,URL encoding converts characters into a format that can be transmitted over the Internet.,URLs can only be sent over the Internet using the ,.,Since URLs often contain characters outside the ASCII set, the URL has to be 
+converted into a valid ASCII format.,URL encoding replaces unsafe ASCII characters with a ""%"" followed by two 
+hexadecimal digits.,
+,URLs cannot contain spaces. URL encoding normally replaces a space with a 
+plus (+) sign or with %20.,
+If you click the ""Submit"" button below, the browser will URL encode the input 
+before it is sent to the server. A page at the server will display the received 
+input.,
+Try some other input and click Submit again.,In JavaScript, PHP, and ASP there are functions that can be used to URL 
+encode a string.,PHP has the rawurlencode() function, and ASP has the Server.URLEncode() function.,In JavaScript you can use the , function.,Click the ""URL Encode"" button to see how the JavaScript function encodes the 
+text.,The JavaScript function encodes space as %20.,
+Your browser will encode input, according to 
+the character-set used in your page.,
+The default character-set in HTML5 is UTF-8.,The ASCII control characters , were originally designed to 
+control hardware devices.,Control characters have nothing to do inside a URL.",,,
+"HTML , Reference",Canvas,"HTML Canvas Reference,Colors, Styles, and Shadows,Line Styles,Rectangles,Paths,Transformations,Text,Image Drawing,Pixel Manipulation,Compositing,Other",,"The HTML , tag is used to draw graphics, on the fly, via scripting 
+(usually JavaScript).,To learn more about ,, please 
+read our ,.",,,
+HTML Color Names,,Color Names Supported by All Browsers,,"All modern browsers support the following 140 color names (click on a color name, or a hex value, to view the color as the background-color along with different text colors):",,,
+"HTML , DOM Reference",Audio/Video,"HTML Audio and Video DOM Reference,HTML Audio/Video Methods,HTML Audio/Video Properties,HTML Audio/Video Events",,"The HTML5 DOM has methods, properties, and events for the , and , 
+elements.",,,
+"HTML <!DOCTYPE>
+",,"The HTML Document Type,Valid HTML Elements in Different DOCTYPES",,"All HTML documents must start with a , declaration.,The declaration is not an HTML tag.
+It is an ""information"" to the browser about what document type to expect.,In HTML5, the , declaration is simple:,In older documents (HTML 4 or XHTML), the declaration is more complicated
+because the declaration must refer to a DTD (Document Type Definition).,You can read more about document types in the 
+, reference.",,,
+HTML ,Event Attributes,"Global Event Attributes,Window Event Attributes,Form Events,Keyboard Events,Mouse Events,Drag Events,Clipboard Events,Media Events,Misc Events",,"HTML has the ability to let events trigger actions in a browser, like starting a JavaScript when a user clicks on an element.,To learn more about programming events, please visit our ,.,Below are the global event attributes that can be added to HTML elements to define event actions.,Events triggered for the window object (applies to the <body> tag):,Events triggered by actions inside a HTML form (applies to almost all HTML elements, but is most 
+used in form elements):,Events triggered by medias like videos, images and audio (applies to all HTML elements, but is most common in media elements, 
+like <audio>, <embed>, <img>, <object>, and <video>).",,,
+HTML Element Reference - By Category,,"Basic HTML,Formatting,Forms and Input,Frames,Images,Audio / Video,Links,Lists,Tables,Styles and Semantics,Meta Info,Programming",,,,,
+HTML ,Reference - Browser Support,HTML Reference With Browser Support,,"The table below lists all HTML elements and their attributes, along with browser support:,* Not supported by default, but can be enabled in about:config (set dom.dialog_element.enabled to true).",,,
+"HTML , Reference",ISO Country Codes,"ISO Country Codes,ISO Country Codes",,"In HTML, country codes can be used as an addition to the language code in the , 
+attribute.,The first two characters of a language code defines the language of the Web 
+page (See ,).,The last two characters define the country.,The following example specifies English as language and United States as 
+country:",,,
+HTML ,Favicon,"How To Add a Favicon in HTML,Favicon File Format Support,Chapter Summary,HTML Link Tag",Example,"A favicon is a small image displayed next to the page title in the browser tab.,You can use any image you like as your favicon. You can also create your own 
+favicon on sites like ,.,A favicon image is displayed to the left of the page title in the browser tab, like this:,To add a favicon to your website, either save your favicon image to the root 
+directory of your webserver, or create a folder in the root directory 
+called images, and save your favicon image in this folder. A common name for a favicon image is ""favicon.ico"".,Next, add a , element to your ""index.html"" file, 
+after the , element, like this:,Now, save the ""index.html"" file and reload it in your browser. Your browser tab should now 
+display your favicon image to the left of the page title.,The following table shows the file format support for a favicon image:","Use the HTML , element to 
+  insert a favicon","
+ <!DOCTYPE html>,<html>,<head>,  <title>My Page 
+  Title</title>,  <link rel=""icon"" type=""image/x-icon"" href=""/images/favicon.ico"">,</head>,<body>,
+  ,<h1>This is a Heading</h1>,<p>This is a paragraph.</p>,</body>,</html>",
+HTML ,Global Attributes,HTML Global Attributes,,The global attributes are attributes that can be used with all HTML elements.,,,
+"HTML , Reference",Attribute,HTML Attribute Reference,,The table below lists all HTML attributes and what elements they can be used within:,,,
+HTML ,Accessibility,"HTML Accessibility,Semantic HTML,Headings Are Important,Alternative Text,Declare the Language,Use Clear Language,Create Good Link Text","Semantic,Non-semantic,Example,Example,Example,Good,Bad","Always write HTML code with accessibility in mind!,Provide the user a good way to navigate and interact with your site. Make your HTML code 
+as , as possible.,Semantic HTML means using correct HTML elements for their correct purpose as 
+much as possible. Semantic elements are elements with a meaning; if you need a button, use the , element (and not a 
+, element).,Semantic HTML gives context to screen readers, which read the contents of a page out loud.,With the button example in mind: ,A button is also accessible for people relying on keyboard-only navigation; 
+it can be clickable with both mouse and keys, and it can be tabbed between 
+(using the tab key on the keyboard).,Examples of , elements: , and , - Tells nothing about its content.,Examples of , elements: ,, ,, and , - Clearly defines its content.,Headings are defined with the , to , tags:,Search engines use the headings to index the structure and content of your web pages.,Users skim your pages by its headings. It is important to use headings to 
+show the document structure and the relationships between different sections.,Screen readers also use headings as a navigational 
+tool. The different types of heading specify the outline of the page.
+, headings should be used for main headings, followed by , headings, then the less important 
+,, and so on.,The , attribute provides an alternate text for an image, if the user for 
+some reason cannot view it (because of slow connection, an error in the , 
+attribute, or if the user uses a screen reader).,The value of the , attribute should describe the image:,If a browser cannot find an image, it will display the value of the , 
+attribute:,You should always include the , 
+attribute inside the , tag, to declare the 
+language of the Web page. This is meant to assist search engines and browsers.,The following example specifies English as the language:,Always use a clear language, that is easy to understand. Also try to avoid characters that 
+cannot be read clearly by a screen reader. For example:,A link text should explain clearly what information the reader will get by clicking on that link.,Examples of good and bad links:","buttons have more suitable styling by default,a screen reader identifies it as a button,focusable,clickable,Keep sentences as short as possible,Avoid dashes. Instead of writing 1-3, write 1 to 3,Avoid abbreviations. Instead of writing Feb, write February,Avoid slang words","
+  <button>Report an Error</button>,
+  <div>Report an Error</div>,
+<h1>Heading 1</h1>,
+<h2>Heading 2</h2>,
+<h3>Heading 3</h3>,<h4>Heading 4</h4>,<h5>Heading 5</h5>,<h6>Heading 6</h6>,
+<img src=""img_chania.jpg"" alt=""A narrow city street with flowers in Chania"">
+,
+<img src=""wrongname.gif"" alt=""A narrow city street with flowers in Chania"">
+,
+<!DOCTYPE html>,<html lang=""en"">,<body>,
+ ...,</body>,</html>
+",
+"You Have Learned HTML, ",Now What?,"HTML Summary,Now You Know HTML, What's Next?,Learn CSS,Learn JavaScript,Publishing Your Website,Using an Internet Service Provider,Hosting Your Own Website",,"This tutorial has taught you how to use HTML to create your own web site.,HTML is the universal markup language for the Web. HTML lets you format text, add graphics, 
+create links, input forms, frames and tables, etc., and save it all in a text file that any
+browser can read and display.,For more information on HTML, please take a look at our , and our ,.,You can also test your HTML skills with , and ,.,CSS lets you style your HTML pages.,CSS gives you total control of the layout, without messing up the document content.,To learn more about CSS, please visit our ,.,JavaScript makes your website more dynamic. A dynamic website can react to events and allow user interaction.,JavaScript is the most popular scripting language on the internet and it works with all major browsers.,If you want to learn more about JavaScript, please visit our ,.,To make your website available to the world, you must publish it.,For this, you have two options:,An Internet service provider (ISP) is a company that provides services for 
+accessing and using the Internet.,Internet services typically provided by ISPs include Internet access, 
+Internet transit, domain name registration, web hosting, Usenet service, and 
+colocation.,Using an Internet Service Provider (ISP) is the most common option. ,Hosting your own website, on your own server, is also an option.","Use an Internet Service Provider,Host your own website, - ISPs have very fast connections to the internet., - ISPs have powerful web servers that can be shared by several clients.
+You can also expect an effective load balancing and necessary backup servers
+ , - ISPs are specialists on web hosting. Expect more than 99% up time, the latest software patches, and the best virus protection, - The ISP should offer 24-hours support. Toll-free phone could also be vital, - The ISP must run a daily backup routine, - Check the ISP's traffic volume restrictions (do not end up paying a fortune for unexpected
+high traffic), - Check the ISP's bandwidth and content restrictions (Is it possible to publish pictures, video, or sound?), - Make sure the ISP supports the e-mail capabilities you need, - Make sure the ISP supports the database access you need, - To run a ""real"" web site, you must buy powerful 
+server hardware (a low cost PC will not do the job). You will also 
+need a permanent (24/7) high-speed connection, - Server-licenses are often higher than client-licenses.
+ Server-licenses also might have limits on number of users, - Don't expect low labor expenses. You have to install your own hardware and software.
+You also have to deal with bugs and viruses, and keep your server constantly running",,
+HTML ,Character Sets,Common HTML Character Sets,,"The default character set in HTML5 is UTF-8.,For a closer look, visit our ,.",,,
+HTML ,Quiz,"The Test,Count Your Score",,"You can test your HTML skills with W3Schools' Quiz.,The test contains 40 questions and there is no time
+limit. ,The test is not official, it's just a nice way to see how much you know,
+or don't know, about HTML.,You will get 1 point for
+each correct answer. At the end of the Quiz, your total score will be displayed.
+Maximum score is 40 points.",,,
+HTML ,Exercises,"Exercises,Count Your Score",,"You can test your HTML skills with W3Schools' Exercises.,We have gathered a variety of HTML exercises (with answers) for each HTML Chapter.,Try to solve an exercise by editing some code. Get a ""hint"" if you're stuck, or show the answer to see what you've done wrong.,You will get 1 point for
+each correct answer. Your score and total score will always be displayed.",,,
+HTML ,Web Workers API,"What is a Web Worker?,Browser Support,HTML Web Workers Example,Check Web Worker Support,Create a Web Worker File,Create a Web Worker Object,Terminate a Web Worker,Reuse the Web Worker,Full Web Worker Example Code,Web Workers and the DOM","Example,Example","A web worker is a JavaScript running in the background, without affecting the performance of the page.,When executing scripts in an HTML page, the page becomes unresponsive until the script is finished.,A web worker is a JavaScript that runs in the background, independently 
+of other scripts, without affecting the performance of the page. You can continue to do whatever you want: 
+clicking, selecting things, etc., while the web worker runs in the background.,The numbers in the table specify the first browser version that fully support Web Workers.,The example below creates a simple web worker that count numbers in the background:,Before creating a web worker, check whether the user's browser supports it:,Now, let's create our web worker in an external JavaScript.,Here, we create a script that counts. The script is stored in the ""demo_workers.js"" file:,The important part of the code above is the , method - which is used to post a message back to the HTML page., Normally web workers are not used for such simple scripts, but for more CPU intensive tasks.,Now that we have the web worker file, we need to call it from an HTML page.,The following lines checks if the worker already exists, if not - it creates a new web worker object and runs the code in 
+""demo_workers.js"":,Then we can send and receive messages from the web worker.,Add an ""onmessage"" event listener to the web worker.,When the web worker posts a message, the code within the event listener is executed. The data 
+from the web worker is stored in event.data.,When a web worker object is created, it will continue to listen for messages (even after the external script is finished) until it is terminated.,To terminate a web worker, and free browser/computer resources, use the 
+, method:,If you set the worker variable to undefined, after it has been terminated, 
+you can reuse the code:,We have already seen the Worker code in the .js file. Below is the code for the HTML page:,Since web workers are in external files, they do not have access to the following JavaScript objects:","The window object,The document object,The parent object","
+<!DOCTYPE html>,
+<html>,
+<body>,
+,
+<p>Count numbers: <output id=""result""></output></p>,
+<button onclick=""startWorker()"">Start Worker</button> ,
+<button onclick=""stopWorker()"">Stop Worker</button>,
+,
+<script>,
+var w;,
+,
+function startWorker()
+{,
+   
+if (typeof(Worker) !== ""undefined"")
+{,
+    if (typeof(w) == ""undefined"") {,
+        w = new Worker(""demo_workers.js"");,
+      },
+    w.onmessage = function(event) {,
+        document.getElementById(""result"").innerHTML = event.data;,
+    };,
+  }
+else
+{,
+     
+document.getElementById(""result"").innerHTML = ""Sorry! No Web Worker support."";,
+    },
+},
+,
+function stopWorker()
+{ ,
+  w.terminate();,  w = undefined;,
+},
+</script>,
+,
+</body>,
+</html>",
+HTML ,Drag and Drop API,"Example,Drag and Drop,Browser Support,HTML Drag and Drop Example,Make an Element Draggable,What to Drag - ondragstart and setData(),Where to Drop - ondragover,Do the Drop - ondrop,More Examples","Example,Example","In HTML, any element can be dragged and dropped.,Drag the W3Schools image into the rectangle.,Drag and drop is a very common feature. It is when you ""grab"" an object and drag it to a different location.,The numbers in the table specify the first browser version that fully supports Drag and Drop.,The example below is a simple drag and drop example:,It might seem complicated, but lets go through all the different parts of a drag and drop event.,First of all: To make an element draggable, set the , attribute to true:,Then, specify what should happen when the element is dragged.,In the example above, the , attribute calls a function, drag(event), 
+that specifies what data to be dragged.,The , method sets the data type and the value of the 
+dragged data:,In this case, the data type is ""text"" and the value is the id of the draggable element (""drag1"").,The , event specifies where the dragged data can be dropped.,By default, data/elements cannot be dropped in other elements. To allow a drop, 
+we must prevent the default handling of the element.,This is done by calling the , method for the ondragover event:,When the dragged data is dropped, a drop event occurs.,In the example above, the ondrop attribute calls a function, drop(event):,Code explained:","Call preventDefault() to prevent the browser default handling of the data (default is open as link on drop),Get the dragged data with the dataTransfer.getData() method. This method will return any data that was set to the same type in the setData() method,The dragged data is the id of the dragged element (""drag1""),Append the dragged element into the drop element","
+ <!DOCTYPE HTML>,
+ <html>,
+ <head>,
+ <script>,
+ function allowDrop(ev)
+ {,
+   ev.preventDefault();,
+ },
+ ,
+ function drag(ev)
+ {,
+   
+ ev.dataTransfer.setData(""text"", ev.target.id);,
+ },
+ ,
+ function drop(ev)
+ {,
+   
+ ev.preventDefault();,
+   var data = ev.dataTransfer.getData(""text"");,
+   ev.target.appendChild(document.getElementById(data));,
+ },
+ </script>,
+ </head>,
+ <body>,
+ ,
+ <div id=""div1"" ondrop=""drop(event)""
+ ondragover=""allowDrop(event)""></div>,
+ ,
+ <img id=""drag1"" src=""img_logo.gif"" draggable=""true""
+ ondragstart=""drag(event)"" width=""336"" height=""69"">,
+ ,
+ </body>,
+ </html>",
+HTML ,Geolocation API,"Locate the User's Position,Browser Support,Using HTML Geolocation,Handling Errors and Rejections,Location-specific Information,The getCurrentPosition() Method - Return Data,Geolocation Object - Other interesting Methods","Example,Example,Example","The HTML Geolocation API is used to locate a user's position.,The HTML Geolocation API is used to get the geographical position of a user.,Since this can compromise privacy, the position is not available unless the user approves it.,The numbers in the table specify the first browser version that fully supports 
+Geolocation.,The , method is used to return the user's position.,The example below returns the latitude and longitude of the user's position:,Example explained:,The example above is a very basic Geolocation script, with no error handling.,The second parameter of the , method is used to handle 
+errors. It specifies a function to run if it fails to get the user's location:,This page has demonstrated how to show a user's position on a map.,Geolocation is also very useful for location-specific information, like:,The , method returns an object on success. The latitude, 
+longitude and accuracy properties are always returned. The other properties are returned 
+if available:,The Geolocation object also has other interesting methods:,The example below shows the , method. You need an accurate GPS device to test this (like 
+smartphone): ","Check if Geolocation is supported,If supported, run the getCurrentPosition() method. If not, display a message to the user,If the getCurrentPosition() method is successful, it returns a coordinates object to the function specified in the parameter (showPosition),The showPosition() function outputs the Latitude and Longitude,Up-to-date local information,Showing Points-of-interest near the user,Turn-by-turn navigation (GPS), - Returns the current position of the user and continues to 
+return updated position as the user moves (like the GPS in a car)., - Stops the , method.","
+ <script>,var x = document.getElementById(""demo"");,function getLocation() {,  if (navigator.geolocation) {,
+      navigator.geolocation.getCurrentPosition(showPosition);,  } else {,
+      x.innerHTML = ""Geolocation is not supported by this browser."";,
+    },},
+ function showPosition(position) {,  x.innerHTML = ""Latitude: "" + position.coords.latitude + ,  ""<br>Longitude: "" + position.coords.longitude; ,
+ },</script>,
+ <script>,var x = document.getElementById(""demo"");,function getLocation() {,
+    if (navigator.geolocation) {,    navigator.geolocation.watchPosition(showPosition);,  } else {,
+      x.innerHTML = ""Geolocation is not supported by this browser."";,
+    },},
+ function showPosition(position) {,  x.innerHTML = ""Latitude: "" + position.coords.latitude + ,  ""<br>Longitude: "" + position.coords.longitude; ,
+ },</script>",
+HTML ,SSE API,"Server-Sent Events - One Way Messaging,Browser Support,Receive Server-Sent Event Notifications,Check Server-Sent Events Support,Server-Side Code Example,The EventSource Object",Example,"Server-Sent Events (SSE) allow a web page to get updates from a server.,A server-sent event is when a web page automatically gets updates from a server.,This was also possible before, but the web page would have to ask if any updates were 
+available. With server-sent events, the updates come automatically.,Examples: Facebook/Twitter updates, stock price updates, news feeds, sport results, etc.,The numbers in the table specify the first browser version that fully support server-sent events.,The EventSource object is used to receive server-sent event notifications:,Example explained:,In the tryit example above there were some extra lines of code to check browser support for server-sent events:,For the example above to work, you need a server capable of sending data updates (like PHP or ASP).,The server-side event stream syntax is simple. Set the ""Content-Type"" header to 
+""text/event-stream"". Now you can start sending event streams.,Code in PHP (demo_sse.php):,Code in ASP (VB) (demo_sse.asp):,Code explained:,In the examples above we used the onmessage event to get messages. But other events are also available:","Create a new EventSource object, and specify the URL of the page sending the updates (in this example ""demo_sse.php""),Each time an update is received, the onmessage event occurs,When an onmessage event occurs, put the received data into the element with id=""result"",Set the ""Content-Type"" header to 
+""text/event-stream"",Specify that the page should not cache,Output the data to send (, start with ""data: ""),Flush the output data back to the web page",,
+HTML ,Web Storage API,"What is HTML Web Storage?,Browser Support,HTML Web Storage Objects,The localStorage Object,The sessionStorage Object","Example,Example,Example","HTML web storage; better than cookies.,With web storage, web applications can store data locally within the user's browser.,Before HTML5, application data had to be stored in cookies, included in 
+every server request. Web storage is more secure, and large amounts of data 
+can be stored locally, without affecting website performance.,Unlike cookies, 
+the storage limit is far larger (at least 5MB) and information is never 
+transferred to the server.,Web storage is per origin (per domain and protocol). All pages, from one 
+origin, can store and access the same data.,The numbers in the table specify the first browser version that fully supports 
+Web Storage.,HTML web storage provides two objects for storing data on the client:,Before using web storage, check browser support for localStorage and sessionStorage:,The localStorage object stores the data with no expiration date. The data 
+will not be deleted when the browser is closed, and will be available the next day, week, or year.,Example explained:,The example above could also be written like this:,The syntax for removing the ""lastname"" localStorage item is as follows:, Name/value pairs are always stored as strings. 
+Remember to convert them to another format when needed!,The following example counts the number of times a user has clicked a button. 
+In this code the value string is converted to a number to be able to increase the counter:,The , object is equal to the localStorage object, , 
+that it stores the data for only one session. The data is deleted when the user closes the 
+specific browser tab.,The following example counts the number of times a user has clicked a button, in the current session:"," - stores data with no expiration date, - stores data for one session (data is lost when the browser tab is closed),Create a localStorage name/value pair with name=""lastname"" and value=""Smith"",Retrieve the value of ""lastname"" and insert it into the element with id=""result""",,
+HTML ,Plug-ins,"Plug-ins,The <object> Element,The <embed> Element","Example,Example,Example,Example","Plug-ins are computer programs that extend the standard functionality of the browser.,Plug-ins were designed to be used for many different purposes:
+,The , element is supported by all browsers.,The , element defines an embedded object within an HTML document.,It was designed to embed plug-ins (like Java applets, PDF readers, and Flash Players) in web pages,
+but can also be used to include HTML in HTML:,Or images if you like:,The , element is supported in all major browsers.,The , element also defines an embedded object within an HTML document.,Web browsers have supported the <embed> element for a 
+long time. However, it has not been a part of the HTML  
+specification before HTML5.,The , element can also be used to include HTML in HTML:","To run Java applets,To run Microsoft ActiveX controls,To display Flash movies,To display maps,To scan for viruses,To verify a bank id","
+<object width=""100%"" height=""500px"" data=""snippet.html""></object>
+,
+<object data=""audi.jpeg""></object>
+,
+<embed src=""audi.jpeg"">
+,
+ <embed width=""100%"" height=""500px"" src=""snippet.html"">
+",
+HTML ,Examples,,,,,,
+HTML ,Video,"The HTML <video> Element,How it Works,HTML <video> Autoplay,Browser Support,HTML Video Formats,HTML Video - Media Types,HTML Video - Methods, Properties, and Events,HTML Video Tags","Example,Example,Example,Example,Example: Using JavaScript","The HTML , element is used to 
+show a video on a web page.,To show a video in HTML, use the , element:,The , attribute adds video controls, like play, pause, and volume.,It is a good idea to always include , and , attributes. If height and width are not set, the page 
+might flicker while the video loads.,The , element allows you to specify alternative video 
+files which the browser may choose from. The browser will use the first recognized format.,The text between the , and , tags will only be displayed 
+in browsers that do not 
+support the , element.,To start a video automatically, use the , attribute:,Add , after , to let your video start playing automatically (but muted):,The numbers in the table specify the first browser version that fully supports the 
+, element.,There are three supported video formats: MP4, WebM, and Ogg. The browser support for the different formats is:,The HTML DOM defines methods, properties, and events for the , element.,This allows you to load, play, and pause videos, as well as setting duration and volume.,There are also DOM events that can notify you when a video begins to play, is paused, etc.,For a full DOM reference, go to our ,.",,"
+<video width=""320"" height=""240"" controls>,
+  <source src=""movie.mp4"" type=""video/mp4"">,
+  <source src=""movie.ogg"" type=""video/ogg"">,
+Your browser does not support the video tag.,
+</video>
+,
+<video width=""320"" height=""240"" autoplay>,
+  <source src=""movie.mp4"" type=""video/mp4"">,
+  <source src=""movie.ogg"" type=""video/ogg"">,
+Your browser does not support the video tag.,
+</video>
+,
+<video width=""320"" height=""240"" autoplay muted>,
+  <source src=""movie.mp4"" type=""video/mp4"">,
+  <source src=""movie.ogg"" type=""video/ogg"">,
+Your browser does not support the video tag.,
+</video>
+",
+HTML ,YouTube Videos,"Struggling with Video Formats?,YouTube Video Id,Playing a YouTube Video in HTML,YouTube Autoplay + Mute,YouTube Playlist,YouTube Loop,YouTube Controls","Example,YouTube - Autoplay + Muted,YouTube - Loop,YouTube - Controls","The easiest way to play videos in HTML, is to use YouTube.,Converting videos to different formats can be difficult and time-consuming.,An easier solution is to let YouTube play the videos in your web page.,YouTube will display an id (like tgbNymZ7vqY), when you save (or play) a video.,You can use this id, and refer to your video in the HTML code.,To play your video on a web page, do the following:,You can let your video start playing automatically when a user visits the 
+page, by adding , to the YouTube URL. 
+However, automatically starting a video is annoying for your visitors!,Add , after , to let your video start playing automatically (but muted).,A comma separated list of videos to play (in addition to the original URL).,Add , to let your video loop forever.,Value 0 (default): The video will play only once.,Value 1: The video will loop (forever).,Add , to not display controls in the 
+video player.,Value 0: Player controls does not display.,Value 1 (default): Player controls display.","Upload the video to YouTube,Take a note of the video id,Define an , element in your web page,Let the , attribute point to the video URL,Use the , and , attributes to specify the dimension of the player,Add any other parameters to the URL (see below)","
+<iframe width=""420"" height=""315"",src=""https://www.youtube.com/embed/tgbNymZ7vqY"">,
+</iframe>
+,
+<iframe width=""420"" height=""315"",src=""https://www.youtube.com/embed/tgbNymZ7vqY?autoplay=1&mute=1"">,
+</iframe>
+,
+<iframe width=""420"" height=""315"",src=""https://www.youtube.com/embed/tgbNymZ7vqY?playlist=tgbNymZ7vqY&loop=1"">,
+</iframe>
+,
+<iframe width=""420"" height=""315"",src=""https://www.youtube.com/embed/tgbNymZ7vqY?controls=0"">,
+</iframe>
+",
+HTML ,Element Reference,HTML Tags Ordered Alphabetically,,,,,
+W3Schools ,HTML Certificate,How Does It Work?,,,"Study for free at W3Schools.com,Study at your own speed,Test your skills with W3Schools online quizzes,Apply for your certificate by paying an exam fee,Take your exam online, at any time, and from any location",,
+HTML ,Audio,"The HTML <audio> Element,HTML Audio - How It Works,HTML <audio> Autoplay,Browser Support,HTML Audio Formats,HTML Audio - Media Types,HTML Audio - Methods, Properties, and Events,HTML Audio Tags","Example,Example,Example","The HTML , element is used to 
+play an audio file on a web page.,To play an audio file in HTML, use the , element:,The , attribute adds audio controls, like play, pause, and volume.,The , element allows you to specify alternative audio 
+files which the browser may choose from. The browser will use the first recognized format.,The text between the , and , tags will only be displayed 
+in browsers that do not 
+support the , element.,To start an audio file automatically, use the , attribute:,Add , after , to let your audio file start playing automatically (but muted):,The numbers in the table specify the first browser version that fully supports the 
+, element.,There are three supported audio formats: MP3, WAV, and OGG. The browser support for the different formats is: ,*From Edge 79 ,The HTML DOM defines methods, properties, and events for the , element.,This allows you to load, play, and pause audios, as well as set duration and volume.,There are also DOM events that can notify you when an audio begins to play, is paused, etc.,For a full DOM reference, go to our ,.",,"
+ <audio controls>,
+  <source src=""horse.ogg"" type=""audio/ogg"">,
+  <source src=""horse.mp3"" type=""audio/mpeg"">,
+ Your browser does not support the audio element.,
+ </audio>
+,
+ <audio controls autoplay>,
+  <source src=""horse.ogg"" type=""audio/ogg"">,
+  <source src=""horse.mp3"" type=""audio/mpeg"">,
+ Your browser does not support the audio element.,
+ </audio>
+,
+ <audio controls autoplay muted>,
+  <source src=""horse.ogg"" type=""audio/ogg"">,
+  <source src=""horse.mp3"" type=""audio/mpeg"">,
+ Your browser does not support the audio element.,
+ </audio>
+",
+HTML ,Canvas Graphics,"What is HTML Canvas?,Browser Support,Canvas Examples,Add a JavaScript,HTML Canvas Tutorial","Example,Example,Example,Example,Example,Example,Example,Draw Image","The HTML , element is used to draw graphics, on the fly, via JavaScript.,The , element is only a container for graphics. You must use  
+JavaScript to actually draw the graphics.,Canvas has several methods for drawing paths, boxes, circles, text, and adding images.,The numbers in the table specify the first browser version that fully supports the 
+, element.,A canvas is a rectangular area on an HTML page. By default, a canvas has no border and no content.,The markup looks like this:, Always specify an , attribute (to be referred to in a script), 
+and a , and , attribute to define the size of the canvas. To add a border, use the , attribute.,Here is an example of a basic, empty canvas:,After creating the rectangular canvas area, you must add a JavaScript to do 
+the drawing.,Here are some examples:,To learn more about ,, please 
+read our ,.",,"
+<canvas id=""myCanvas"" width=""200"" height=""100""
+style=""border:1px solid 
+#000000;"">,
+</canvas>
+",
+HTML ,Input Types,"HTML Input Types,Input Type Text,Input Type Password,Input Type Submit,Input Type Reset,Input Type Radio,Input Type Checkbox,Input Type Button,Input Type Color,Input Type Date,Input Type Datetime-local,Input Type Email,Input Type File,Input Type Hidden,Input Type Month,Input Type Number,Input Restrictions,Input Type Range,Input Type Search,Input Type Tel,Input Type Time,Input Type Url,Input Type Week,HTML Exercises,HTML Input Type Attribute","Example,Example,Example,Example,Example,Example,Example,Example,Example,Example,Example,Example,Example,Example,Example,Example,Example,Example,Example,Example,Example,Example,Example,Example","This chapter describes the different types for the HTML , element. ,Here are the different input types you can use in HTML:, defines a ,:,This is how the HTML code above will be displayed in a browser:, defines a ,:,This is how the HTML code above will be displayed in a browser:, defines a button for , form data to a ,.,The form-handler is typically a server page with a script for processing 
+input data.,The form-handler is specified in the form's , 
+attribute:,This is how the HTML code above will be displayed in a browser:,If you omit the submit button's value attribute, the button will get a default text:, defines a , 
+that will reset all form values to their default values:,This is how the HTML code above will be displayed in a browser:, defines a ,.,Radio buttons let a user select ONLY ONE of a limited number of choices:,This is how the HTML code above will be displayed in a browser:, defines a ,.,Checkboxes let a user select ZERO or MORE options of a limited number of choices.,This is how the HTML code above will be displayed in a browser:, defines a ,:,This is how the HTML code above will be displayed in a browser:,The , is used for input fields that should contain a color.,Depending on browser support, a color picker can show up in the input field.,The , is used for input fields that should contain a date.,Depending on browser support, a date picker can show up in the input field.,You can also use the , and , attributes to add restrictions to dates:,The , specifies 
+a date and time input field, with no time zone.,Depending on browser support, a date picker can show up in the input field.,The , is used for input fields that should contain an e-mail address.,Depending on browser support, the e-mail address can be automatically validated when submitted.,Some smartphones recognize the email type, and add "".com"" to the keyboard to match email input.,The , 
+defines a file-select field and a ""Browse"" button for file uploads.,The , 
+defines a hidden input field (not visible to a user).,A hidden field let web developers include data that cannot be seen or 
+modified by users when a form is submitted.,A hidden field often stores what database record that needs to be updated 
+when the form is submitted., While the value is not displayed to the user in the 
+page's content, it is visible (and can be edited) using any browser's developer 
+tools or ""View Source"" functionality. Do not use hidden inputs as a form of 
+security!,The , allows the user to select a month and year.,Depending on browser support, a date picker can show up in the input field.,The , defines a , input field.,You can also set restrictions on what numbers are accepted.,The following example displays a numeric input field, where you can enter a value from 1 to 5:,Here is a list of some common input restrictions:,
+You will learn more about input restrictions in the next chapter.,
+The following example displays a numeric input field, where you can enter a 
+value from 0 to 100, in steps of 10. The default value is 30:,The , defines a control for entering a number whose exact value is not important (like a slider control). Default 
+range is 0 to 100. However, you can set restrictions on what 
+numbers are accepted with the ,, ,, and , attributes:,The , is used for search fields (a search field behaves like a regular text field).,The , is used for input fields that should contain a telephone number.,The , allows the user to select a time (no time zone).,Depending on browser support, a time picker can show up in the input field.,The , is used for input fields that should contain a URL address.,Depending on browser support, the url field can be automatically validated 
+when submitted.,Some smartphones recognize the url type, and adds "".com"" to the keyboard to match 
+url input.,The , allows the user to select a week and year.,Depending on browser support, a date picker can show up in the input field.",,"
+<form>,
+    <label for=""fname"">First name:</label><br>,  <input 
+  type=""text"" id=""fname"" name=""fname""><br>,  <label for=""lname"">Last 
+  name:</label><br>,  <input type=""text"" id=""lname"" name=""lname"">,
+</form>
+,
+<form>,
+   <label for=""username"">Username:</label><br>,  <input type=""text"" 
+  id=""username"" name=""username""><br>,  <label for=""pwd"">Password:</label><br>,  
+  <input type=""password"" id=""pwd"" name=""pwd"">,
+</form>
+,
+ <form action=""/action_page.php"">,  <label for=""fname"">First 
+  name:</label><br>,  <input type=""text"" id=""fname"" name=""fname"" 
+  value=""John""><br>,  <label for=""lname"">Last name:</label><br>,  
+  <input type=""text"" id=""lname"" name=""lname"" value=""Doe""><br><br>,  
+  <input type=""submit"" value=""Submit"">,</form>
+,
+ <form action=""/action_page.php"">,  <label for=""fname"">First 
+  name:</label><br>,  <input type=""text"" id=""fname"" name=""fname"" 
+  value=""John""><br>,  <label for=""lname"">Last name:</label><br>,  
+  <input type=""text"" id=""lname"" name=""lname"" value=""Doe""><br><br>,  
+  <input type=""submit"">,</form>
+,
+ <form action=""/action_page.php"">,  <label for=""fname"">First 
+  name:</label><br>,  <input type=""text"" id=""fname"" name=""fname"" 
+  value=""John""><br>,  <label for=""lname"">Last name:</label><br>,  
+  <input type=""text"" id=""lname"" name=""lname"" value=""Doe""><br><br>,  
+  <input type=""submit"" value=""Submit"">,  <input type=""reset"">,</form>
+,
+<p>Choose your favorite Web language:</p>,
+<form>,  <input type=""radio"" id=""html"" name=""fav_language"" 
+  value=""HTML"">,  <label for=""html"">HTML</label><br>,  <input 
+  type=""radio"" id=""css"" name=""fav_language"" value=""CSS"">,  <label 
+  for=""css"">CSS</label><br>,  <input type=""radio"" id=""javascript"" 
+  name=""fav_language"" value=""JavaScript"">,  <label for=""javascript"">JavaScript</label>,</form>
+,
+ <form>,  <input type=""checkbox"" id=""vehicle1"" name=""vehicle1"" value=""Bike"">,  
+  <label for=""vehicle1""> I have a bike</label><br>,  <input 
+  type=""checkbox"" id=""vehicle2"" name=""vehicle2"" value=""Car"">,  <label for=""vehicle2""> 
+  I have a car</label><br>,  <input type=""checkbox"" 
+  id=""vehicle3"" name=""vehicle3"" 
+  value=""Boat"">,  <label for=""vehicle3""> I have a boat</label>,
+ </form>
+,
+  <input type=""button"" onclick=""alert('Hello World!')"" value=""Click Me!"">,
+ <form>,  <label for=""favcolor"">Select your favorite 
+  color:</label>,  <input type=""color"" id=""favcolor"" name=""favcolor"">,
+ </form>,
+ <form>,  <label for=""birthday"">Birthday:</label>,  <input 
+  type=""date"" id=""birthday"" name=""birthday"">,</form>,
+ <form>,  <label for=""datemax"">Enter a date before 
+  1980-01-01:</label>,  <input type=""date"" id=""datemax"" name=""datemax"" 
+  max=""1979-12-31""><br><br>,  <label for=""datemin"">Enter a date after 
+  2000-01-01:</label>,  <input type=""date"" id=""datemin"" name=""datemin"" 
+  min=""2000-01-02"">,</form>,
+ <form>,  <label for=""birthdaytime"">Birthday (date and 
+  time):</label>,  <input type=""datetime-local"" id=""birthdaytime"" name=""birthdaytime"">,
+ </form>,
+ <form>,  <label for=""email"">Enter your email:</label>,  
+  <input type=""email"" id=""email"" name=""email"">,
+ </form>,
+  <form>,  <label for=""myfile"">Select a file:</label>,  
+  <input type=""file"" id=""myfile"" name=""myfile"">,</form>,
+  <form>,  <label for=""fname"">First name:</label>,  
+  <input type=""text"" id=""fname"" name=""fname""><br><br>,  <input 
+  type=""hidden"" id=""custId"" name=""custId"" value=""3487"">,  <input 
+  type=""submit"" value=""Submit"">,</form>,
+ <form>,  <label for=""bdaymonth"">Birthday (month and 
+  year):</label>,  <input type=""month"" id=""bdaymonth"" name=""bdaymonth"">,
+ </form>,
+ <form>,  <label for=""quantity"">Quantity (between 1 and 
+  5):</label>,  <input type=""number"" id=""quantity"" name=""quantity"" 
+  min=""1"" max=""5"">,</form>,
+ <form>,  <label for=""quantity"">Quantity:</label>,  <input 
+  type=""number"" id=""quantity"" name=""quantity"" min=""0"" max=""100"" step=""10"" 
+  value=""30"">,</form>,
+    <form>,  <label for=""vol"">Volume (between 0 and 50):</label>,  
+    <input type=""range"" id=""vol"" name=""vol"" min=""0"" max=""50"">,
+ </form>,
+ <form>,  <label for=""gsearch"">Search Google:</label>,  
+  <input type=""search"" id=""gsearch"" name=""gsearch"">,
+ </form>,
+    <form>,  <label for=""phone"">Enter your phone number:</label>,  
+    <input type=""tel"" id=""phone"" name=""phone"" 
+    pattern=""[0-9]{3}-[0-9]{2}-[0-9]{3}"">,</form>,
+ <form>,  <label for=""appt"">Select a time:</label>,  
+  <input type=""time"" id=""appt"" name=""appt"">,
+ </form>,
+ <form>,  <label for=""homepage"">Add your homepage:</label>,  
+  <input type=""url"" id=""homepage"" name=""homepage"">,
+ </form>,
+ <form>,  <label for=""week"">Select a week:</label>,  
+  <input type=""week"" id=""week"" name=""week"">,
+ </form>",
+HTML ,Form Elements,"The HTML <form> Elements,The <input> Element,The <label> Element,The <select> Element,The <textarea> Element,The <button> Element,The <fieldset> and <legend> Elements,The <datalist> Element,The <output> Element,HTML Exercises,HTML Form Elements","Example,Example,Example,Example,Example,Example,Example,Example,Example,Example,Example","This chapter describes all the different HTML form elements. ,The HTML , element can contain one or more of the following form elements:,One of the most used form element is the , element. ,The , element can be displayed in several ways, depending on the , 
+attribute.,All the different values of the , 
+attribute are covered in the next chapter:
+,.
+,The , element defines a label for 
+several 
+form elements.,The , element is useful for 
+screen-reader users, because the screen-reader will read out loud the label when 
+the user focus on the input element.,The , element also help users who have 
+difficulty clicking on very small regions (such as radio buttons or checkboxes) 
+- because when the user clicks the text within the , element, it toggles 
+the radio button/checkbox.,The , attribute of the , tag should 
+be equal to the , attribute of the ,  
+element to bind them together. ,The , element defines a drop-down list:,The , elements defines an option that can be 
+selected.,By default, the first item in the drop-down list is selected.,To define a pre-selected option, add the , attribute 
+to the option: ,Use the , attribute to specify the number of visible values:,Use the , attribute to allow the user to select more than one value:,The , element defines a multi-line input field (a text area):,The , attribute specifies the visible number of lines in 
+a text area.,The , attribute specifies the visible width of a text 
+area.,This is how the HTML code above will be displayed in a browser:,You can also define the size of the text area by using CSS:,The , element defines a clickable 
+button:,This is how the HTML code above will be displayed in a browser:,The , element is used to group related data in a form.,The , element defines a caption for the ,
+element.,This is how the HTML code above will be displayed in a browser:,The , element specifies a list of pre-defined options for an , element.,Users will see a drop-down list of the pre-defined options as they input data.,The , attribute of the , element, must refer to the
+, attribute of the , element.,The , element represents the result of a calculation (like one 
+performed by a script)."," , , , , , , , , , , ","
+  <label for=""fname"">First name:</label>,<input type=""text"" id=""fname"" name=""fname"">,
+  <label for=""cars"">Choose a car:</label>,<select id=""cars"" name=""cars"">,  <option value=""volvo"">Volvo</option>,
+  
+ <option value=""saab"">Saab</option>,  <option value=""fiat"">Fiat</option>,
+  
+ <option value=""audi"">Audi</option>,</select>,
+ <option value=""fiat"" selected>Fiat</option>,
+  <label for=""cars"">Choose a car:</label>,<select id=""cars"" name=""cars"" size=""3"">,  <option value=""volvo"">Volvo</option>,
+  
+ <option value=""saab"">Saab</option>,  <option value=""fiat"">Fiat</option>,
+  
+ <option value=""audi"">Audi</option>,</select>,
+  <label for=""cars"">Choose a car:</label>,<select id=""cars"" name=""cars"" size=""4"",multiple>,  <option value=""volvo"">Volvo</option>,
+  
+ <option value=""saab"">Saab</option>,  <option value=""fiat"">Fiat</option>,
+  
+ <option value=""audi"">Audi</option>,</select>,
+ <textarea name=""message"" rows=""10"" cols=""30"">,The cat was playing in the garden.,</textarea>,
+ <textarea name=""message"" 
+  style=""width:200px; height:600px;"">,The cat was playing in the garden.,</textarea>,
+ <button type=""button"" 
+ onclick=""alert('Hello World!')"">Click Me!</button>,
+  <form action=""/action_page.php"">,  <fieldset>,    
+  <legend>Personalia:</legend>,    <label for=""fname"">First 
+  name:</label><br>,    <input type=""text"" id=""fname"" name=""fname"" 
+  value=""John""><br>,    <label for=""lname"">Last name:</label><br>,    
+  <input type=""text"" id=""lname"" name=""lname"" value=""Doe""><br><br>,    
+  <input type=""submit"" value=""Submit"">,  </fieldset>,</form> ,
+<form action=""/action_page.php"">,  <input list=""browsers"">,
+  
+ <datalist id=""browsers"">,
+     <option value=""Internet Explorer"">,
+ 
+  <option value=""Firefox"">,
+    <option value=""Chrome"">,
+ 
+  <option value=""Opera"">,
+    <option value=""Safari"">,
+  
+ </datalist> ,</form>,
+    <form action=""/action_page.php"",  oninput=""x.value=parseInt(a.value)+parseInt(b.value)"">,  0,
+     
+    <input type=""range""  id=""a"" name=""a"" value=""50"">,  100 +,
+     
+    <input type=""number"" id=""b"" name=""b"" value=""50"">,  =,
+     
+    <output name=""x"" for=""a b""></output>,  <br><br>,  <input type=""submit"">,
+ </form>",
+HTML , SVG Graphics,"What is SVG?,The HTML <svg> Element,Browser Support,SVG Circle,SVG Rectangle,SVG Rounded Rectangle,SVG Star,SVG Logo,Differences Between SVG and Canvas,Comparison of Canvas and SVG,SVG Tutorial","Example,Example,Example,Example,Example","SVG defines vector-based graphics in XML format.,The HTML , element is a container for SVG graphics.,SVG has several methods for drawing paths, boxes, circles, text, and graphic images.,The numbers in the table specify the first browser version that fully supports the 
+, element.,SVG is a language for describing 2D graphics in XML.,Canvas draws 2D graphics, on the fly (with a JavaScript).,SVG is XML based, which means that every element is available within the SVG 
+DOM. You can attach JavaScript event handlers for an element.,In SVG, each drawn shape is remembered as an object. If attributes of an SVG 
+object are changed, the browser can automatically re-render the shape.,Canvas is rendered pixel by pixel. In canvas, once the graphic is drawn, it is forgotten by the browser. If its 
+position should be changed, the entire scene needs to be redrawn, including any 
+objects that might have been covered by the graphic.,The table below shows some important differences between Canvas and SVG:,To learn more about SVG, please read our ,.","SVG stands for Scalable Vector Graphics,SVG is used to define graphics for the Web,SVG is a W3C recommendation,Resolution dependent,No support for event handlers,Poor text rendering capabilities,You can save the resulting image as .png or .jpg,Well suited for graphic-intensive games,Resolution independent,Support for event handlers,Best suited for applications with large rendering areas (Google Maps),Slow rendering if complex (anything that uses the DOM a lot will be slow),Not suited for game applications","
+<!DOCTYPE html>,<html>,<body>,<svg 
+ width=""100"" height=""100"">,  <circle cx=""50"" cy=""50"" r=""40"" stroke=""green"" 
+ stroke-width=""4"" fill=""yellow"" />,</svg>,</body>,</html>,
+  <svg width=""400"" height=""100"">,  <rect width=""400"" height=""100"" style=""fill:rgb(0,0,255);stroke-width:10;stroke:rgb(0,0,0)"" 
+ />,</svg>,
+  <svg width=""400"" height=""180"">,  <rect x=""50"" y=""20"" rx=""20"" ry=""20"" 
+ width=""150"" height=""150"",  
+ style=""fill:red;stroke:black;stroke-width:5;opacity:0.5"" />,</svg>,
+<svg width=""300"" height=""200"">,
+  <polygon points=""100,10 40,198 190,78 10,78 160,198"",
+   style=""fill:lime;stroke:purple;stroke-width:5;fill-rule:evenodd;"" />,
+</svg>,
+ ,
+ <svg height=""130"" width=""500"">,  <defs>,    <linearGradient id=""grad1"" x1=""0%"" 
+ y1=""0%"" x2=""100%"" y2=""0%"">,      <stop offset=""0%"" style=""stop-color:rgb(255,255,0);stop-opacity:1"" 
+ />,      <stop offset=""100%"" style=""stop-color:rgb(255,0,0);stop-opacity:1"" />,
+    
+ </linearGradient>,  </defs>,  <ellipse cx=""100"" cy=""70"" rx=""85"" ry=""55"" 
+ fill=""url(#grad1)"" />,  <text fill=""#ffffff"" font-size=""45"" 
+ font-family=""Verdana"" x=""50"" y=""86"">SVG</text>,  Sorry, your browser does not 
+ support inline SVG.,</svg>,
+ ",
+HTML ,Input Attributes,"The value Attribute,The readonly Attribute,The disabled Attribute,The size Attribute,The maxlength Attribute,The min and max Attributes,The multiple Attribute,The pattern Attribute,The placeholder Attribute,The required Attribute,The step Attribute,The autofocus Attribute,The height and width Attributes,The list Attribute,The autocomplete Attribute,HTML Exercises,HTML Form and Input Elements","Example,Example,Example,Example,Example,Example,Example,Example,Example,Example,Example,Example,Example,Example,Example","This chapter describes the different attributes for the HTML , element. ,The input , attribute specifies an initial value for an input field:,The input , attribute specifies that an input field is read-only.,A read-only input field cannot be modified (however, a user can tab to it, highlight it, and copy the text from it).,The value of a read-only input field will be sent when submitting the form!,The input , attribute specifies that an input field should be disabled.,A disabled input field is unusable and un-clickable.,The value of a disabled input field will not be sent when submitting the form!,The input , attribute specifies the 
+visible width, in characters, of an input field.,The default value for , is 20., The , attribute 
+works with the following input types: text, search, tel, url, email, and 
+password.,The input , attribute specifies the maximum number of characters allowed in an input field., When a , is set, the input field will not accept more than the 
+specified number of characters. However, this attribute does not provide any feedback. 
+So, if you want to alert the user, 
+you must write JavaScript code.,The input , and , attributes specify the minimum and maximum values for an 
+input field.,The , and , attributes work with the following input types: number, range, date, datetime-local, month, time and week., Use the max and min attributes together to create a 
+range of legal values.,The input , attribute specifies that the user is allowed to enter more than one value in 
+an input field.,The , attribute works with the following input types: email, and file.,The input , attribute specifies a regular expression that the 
+input field's value is checked against, when the form is submitted.,The , attribute works with the following input types: text, 
+date, search, url, tel, email, and password., Use the global , attribute to describe the pattern to help the user., Learn more about , in our JavaScript tutorial.,The input , attribute specifies 
+a short hint that describes the expected value of an input field (a sample value or a short description of the 
+expected format).,The short hint is displayed in the input field before the user enters a 
+value.,The , attribute works with the following input types: text, search, url, tel, email, and password.,The input , attribute specifies that an input field must be filled out before submitting the form.,The , attribute works with the following input types: text, search, url, tel, email, password, date pickers, number, checkbox, radio, and file.,The input , attribute specifies the legal number intervals for an 
+input field.,Example: if step=""3"", legal numbers could be -3, 0, 3, 6, etc., This attribute can be used together with the max and min attributes to create a range of legal values.,The , attribute works with the following input types: number, range, date, datetime-local, month, time and week.,The input , attribute specifies that 
+an input field should automatically get focus when the page loads.,The input , and , attributes specify the height and width of an , element.,The input , attribute refers to a , element that contains pre-defined options for an <input> element.,The input , attribute specifies whether a form or 
+an input field should have autocomplete on or off.,Autocomplete allows the browser to predict the value. When a user starts to 
+type in a field, the browser should display options to fill in the field, based 
+on earlier typed values.,The , attribute works with , and the 
+following , types: text, search, url, tel, email, password, datepickers, range, and color., In some browsers you may need to activate an 
+autocomplete function for this to work (Look under ""Preferences"" in the 
+browser's menu).",,"
+<form>,
+  <label for=""fname"">First name:</label><br>,  <input type=""text"" 
+  id=""fname"" name=""fname"" value=""John""><br>,  <label for=""lname"">Last 
+  name:</label><br>,  <input type=""text"" id=""lname"" name=""lname"" 
+  value=""Doe"">,</form>
+,
+<form>,
+  <label for=""fname"">First name:</label><br>,  <input type=""text"" 
+  id=""fname"" name=""fname"" value=""John"" readonly><br>,  <label for=""lname"">Last 
+  name:</label><br>,  <input type=""text"" id=""lname"" name=""lname"" 
+  value=""Doe"">,</form>
+,
+<form>,
+  <label for=""fname"">First name:</label><br>,  <input type=""text"" 
+  id=""fname"" name=""fname"" value=""John"" disabled><br>,  <label for=""lname"">Last 
+  name:</label><br>,  <input type=""text"" id=""lname"" name=""lname"" 
+  value=""Doe"">,</form>
+,
+  <form>,  <label for=""fname"">First name:</label><br>,  <input 
+  type=""text"" id=""fname"" name=""fname"" size=""50""><br>,  <label 
+  for=""pin"">PIN:</label><br>,  <input type=""text"" id=""pin"" name=""pin"" 
+  size=""4"">,</form> ,
+  <form>,  <label for=""fname"">First name:</label><br>,  <input 
+  type=""text"" id=""fname"" name=""fname"" size=""50""><br>,  <label 
+  for=""pin"">PIN:</label><br>,  <input type=""text"" id=""pin"" name=""pin"" 
+  maxlength=""4"" size=""4"">,</form> ,
+<form>,  <label for=""datemax"">Enter a date before 
+  1980-01-01:</label>,  <input type=""date"" id=""datemax"" name=""datemax"" 
+  max=""1979-12-31""><br><br>,  <label for=""datemin"">Enter a date 
+  after 2000-01-01:</label>,  <input type=""date"" id=""datemin"" name=""datemin"" 
+  min=""2000-01-02""><br><br>,  <label for=""quantity"">Quantity 
+  (between 1 and 5):</label>,  <input type=""number"" id=""quantity"" 
+  name=""quantity"" min=""1"" max=""5"">,</form>,
+  <form>,  <label for=""files"">Select files:</label>,  <input 
+  type=""file"" id=""files"" name=""files"" multiple>,</form>,
+  <form>,  <label for=""country_code"">Country code:</label>,  
+  <input type=""text"" id=""country_code"" name=""country_code"",  
+  pattern=""[A-Za-z]{3}"" title=""Three letter country code"">,</form>,
+  <form>,  <label for=""phone"">Enter a phone number:</label>,  
+  <input type=""tel"" id=""phone"" name=""phone"",  
+  placeholder=""123-45-678"",  pattern=""[0-9]{3}-[0-9]{2}-[0-9]{3}"">,
+  </form>,
+  <form>,  <label for=""username"">Username:</label>,  <input 
+  type=""text"" id=""username"" name=""username"" required>,</form>,
+  <form>,  <label for=""points"">Points:</label>,  <input 
+  type=""number"" id=""points"" name=""points"" step=""3"">,</form>,
+  <form>,  <label for=""fname"">First name:</label><br>,  <input 
+  type=""text"" id=""fname"" name=""fname"" autofocus><br>,  <label for=""lname"">Last 
+  name:</label><br>,  <input type=""text"" id=""lname"" name=""lname"">,
+  </form>,
+  <form>,  <label for=""fname"">First name:</label>,  <input 
+  type=""text"" id=""fname"" name=""fname""><br><br>,  <label for=""lname"">Last 
+  name:</label>,  <input type=""text"" id=""lname"" name=""lname""><br><br>,  
+  <input type=""image"" src=""img_submit.gif"" alt=""Submit"" width=""48"" height=""48"">
+  ,</form>,
+  <form>, 
+<input list=""browsers"">, 
+ <datalist id=""browsers"">,
+     <option value=""Internet Explorer"">,
+ 
+  <option value=""Firefox"">,
+ 
+  <option value=""Chrome"">,
+ 
+  <option value=""Opera"">,
+ 
+  <option value=""Safari"">,
+  
+ </datalist>,</form>,
+    <form action=""/action_page.php"" autocomplete=""on"">,  <label for=""fname"">First 
+    name:</label>,  <input type=""text"" id=""fname"" name=""fname""><br><br>,  
+    <label for=""lname"">Last name:</label>,  <input type=""text"" id=""lname"" 
+    name=""lname""><br><br>,  <label for=""email"">Email:</label>,  
+    <input type=""email"" id=""email"" name=""email"" autocomplete=""off""><br><br>,  
+    <input type=""submit"" value=""Submit"">,</form>
+",
+HTML ,Forms,"The <form> Element,The <input> Element,Text Fields,The <label> Element,Radio Buttons,Checkboxes,The Submit Button,The Name Attribute for <input>,HTML Exercises","Example,Example,Example,Example,Example,Example","An HTML form is used to collect user input. The user input is 
+most often sent to a server for processing. ,The HTML , element is used to 
+create an HTML form for user input:,The , element is a container for different types of input elements, 
+such as: text fields, checkboxes, radio 
+buttons, submit buttons, etc.,All
+the different form elements are covered in this chapter:
+,.
+,The HTML , element is the most 
+used form element. ,An , element can be displayed in 
+many ways, depending on the , 
+attribute.,Here are some examples:,All the different input types are covered in this chapter:
+,.
+,The , defines a single-line input field for 
+text input.,This is how the HTML code above will be displayed in a browser:,Notice the use of the , element in the 
+example above. ,The , tag defines a label for many 
+form elements.,The , element is useful for 
+screen-reader users, because the screen-reader will read out loud the label when 
+the user focus on the input element.,The , element also help users who have 
+difficulty clicking on very small regions (such as radio buttons or checkboxes) 
+- because when the user clicks the text within the , element, it toggles 
+the radio button/checkbox.,The , attribute of the , tag should 
+be equal to the , attribute of the ,  
+element to bind them together. ,The , defines a radio button.,Radio buttons let a user select ONE of a limited number of choices.,This is how the HTML code above will be displayed in a browser:,Choose your favorite Web language:,The , defines a ,.,Checkboxes let a user select ZERO or MORE options of a limited number of choices.,This is how the HTML code above will be displayed in a browser:,The , defines a button for submitting the form data to a form-handler.,The form-handler is typically a file on the server with a script for processing 
+input data.,The form-handler is specified in the form's , 
+attribute.,This is how the HTML code above will be displayed in a browser:,Notice that each input field must have a , attribute to be submitted.,If the , attribute is omitted, the value of the input field will not be sent at all.",,"
+ <form>,
+ .,
+,
+ .,
+ </form>,
+,
+ <form>,
+    <label for=""fname"">First name:</label><br>,  <input 
+  type=""text"" id=""fname"" name=""fname""><br>,  <label for=""lname"">Last 
+  name:</label><br>,  <input type=""text"" id=""lname"" name=""lname"">,</form>
+,
+<p>Choose your favorite Web language:</p>,
+<form>,  <input type=""radio"" id=""html"" name=""fav_language"" 
+  value=""HTML"">,  <label for=""html"">HTML</label><br>,  <input 
+  type=""radio"" id=""css"" name=""fav_language"" value=""CSS"">,  <label 
+  for=""css"">CSS</label><br>,  <input type=""radio"" id=""javascript"" 
+  name=""fav_language"" value=""JavaScript"">,  <label for=""javascript"">JavaScript</label>,</form>
+,
+ <form>,  <input type=""checkbox"" id=""vehicle1"" name=""vehicle1"" value=""Bike"">,  
+  <label for=""vehicle1""> I have a bike</label><br>,  <input 
+  type=""checkbox"" id=""vehicle2"" name=""vehicle2"" value=""Car"">,  <label for=""vehicle2""> 
+  I have a car</label><br>,  <input type=""checkbox"" 
+  id=""vehicle3"" name=""vehicle3"" 
+  value=""Boat"">,  <label for=""vehicle3""> I have a boat</label>,
+ </form>
+,
+ <form action=""/action_page.php"">,  <label for=""fname"">First 
+  name:</label><br>,  <input type=""text"" id=""fname"" name=""fname"" 
+  value=""John""><br>,  <label for=""lname"">Last name:</label><br>,  
+  <input type=""text"" id=""lname"" name=""lname"" value=""Doe""><br><br>,  
+  <input type=""submit"" value=""Submit"">,</form>
+,
+ <form action=""/action_page.php"">,  <label for=""fname"">First 
+  name:</label><br>,  <input type=""text"" id=""fname"" value=""John""><br><br>,  
+  <input type=""submit"" value=""Submit"">,</form>
+",
+HTML ,Uniform Resource Locators,"URL - Uniform Resource Locator,Common URL Schemes,URL Encoding,Try It Yourself,ASCII Encoding Examples",,"A URL is another word for a web address.,A URL can be composed of words (e.g. w3schools.com), or an Internet Protocol (IP) address (e.g. 192.68.20.50).,Most people enter the name when surfing, because names are easier to remember than numbers.,Web browsers request pages from web servers by using a URL.,A Uniform Resource Locator (URL) is used to address a document (or other data) on the web.,A web address like , follows these syntax rules:,Explanation:,The table below lists some common schemes:,URLs can only be sent over the Internet using the
+,. If a URL contains characters outside the ASCII set, the URL has to be 
+converted.,URL encoding converts non-ASCII characters into a format that can be transmitted over the Internet.,URL encoding replaces non-ASCII characters with a ""%"" followed by hexadecimal digits.,URLs cannot contain spaces. URL encoding normally replaces a space with a plus (+) sign, or %20.,If you click ""Submit"", the browser will URL encode the input before it is sent to the server.,A page at the server will display the received input.,Try some other input and click Submit again.,Your browser will encode input, according to the character-set used in your page.,The default character-set in HTML5 is UTF-8.,For a complete reference of all URL encodings, visit our
+,."," - defines the , of Internet service (most common is ,), - defines a domain , (default for http is ,), - defines the Internet ,(like w3schools.com), - defines the ,at the host (default for http is ,), - defines a , at the server (If omitted: the root directory of the site), - defines the name of a document or resource","
+scheme://prefix.domain:port/path/filename
+",
+HTML ,Form Attributes,"The Action Attribute,The Target Attribute,The Method Attribute,The Autocomplete Attribute,The Novalidate Attribute,HTML Exercises,List of All <form> Attributes","Example,Example,Example,Example,Example,Example","This chapter describes the different attributes for the HTML , element. ,The , attribute defines the action to be performed when the form is submitted.,Usually, the form data is sent to a file on the server when the user clicks on the submit button.,In the example below, the form data is sent to a file called ""action_page.php"". 
+This file contains a server-side script that handles the form data:, If the , attribute is omitted, the action is set to the current page.,The , attribute specifies where to 
+display the response that is received after submitting the form.,The , attribute can have one of the 
+following values:,The default value is , which means that 
+the response will open in the current window.,The , attribute specifies the HTTP 
+method to be used when submitting the form data.,The form-data can be sent as URL variables (with ,) 
+or as HTTP post transaction (with ,).,The default HTTP method when submitting form data is GET. , , ,The , attribute specifies whether 
+a form should have autocomplete on or off.,When autocomplete is on, the browser automatically complete values based on values that the user has entered before.,The , attribute is a boolean attribute.,When present, it specifies that the form-data (input) should not be validated when submitted.","Appends the form data to the URL, in name/value pairs,NEVER use GET to send sensitive data! (the submitted form data is visible in the URL!),The length of a URL is limited (2048 characters),Useful for form submissions where a user wants to bookmark the result,GET is good for non-secure data, like query strings in Google,Appends the form data inside the body of the HTTP request (the submitted 
+  form data is not shown in the URL),POST has no size limitations, and can be used to send large amounts of data.,Form submissions with POST cannot be bookmarked","
+ <form action=""/action_page.php"">,  <label for=""fname"">First 
+  name:</label><br>,  <input type=""text"" id=""fname"" name=""fname"" 
+  value=""John""><br>,  <label for=""lname"">Last name:</label><br>,  
+  <input type=""text"" id=""lname"" name=""lname"" value=""Doe""><br><br>,  
+  <input type=""submit"" value=""Submit"">,</form>
+,
+<form action=""/action_page.php"" target=""_blank"">,
+<form action=""/action_page.php"" method=""get"">,
+<form action=""/action_page.php"" method=""post"">,
+    <form action=""/action_page.php"" autocomplete=""on"">,
+    <form action=""/action_page.php"" novalidate>",
+HTML, Versus XHTML,"What is XHTML?,Why XHTML?,The Most Important Differences from HTML,XHTML - <!DOCTYPE ....> Is Mandatory,XHTML Elements Must be Properly Nested,XHTML Elements Must Always be Closed,XHTML Empty Elements Must Always be Closed,XHTML Elements Must be in Lowercase,XHTML Attribute Names Must be in Lowercase,XHTML Attribute Values Must be Quoted,XHTML Attribute Minimization is Forbidden,Validate HTML With The W3C Validator","Example,Correct:,Wrong:,Correct:,Wrong:,Correct:,Wrong:,Correct:,Wrong:,Correct:,Wrong:,Correct:,Wrong:,Correct:,Wrong:","XHTML is a stricter, more XML-based version of HTML.,XML is a markup language where all documents must be marked up correctly (be ""well-formed"").,XHTML was developed to make HTML more extensible and flexible to work with 
+other data formats (such as XML). In addition, browsers ignore errors in HTML 
+pages, and try to display the website even if it has some errors in the markup. 
+So XHTML comes with a much stricter error handling.,If you want to study XML, please read our ,.,An XHTML document must have an XHTML <!DOCTYPE> declaration.,The <html>, <head>, <title>, and <body> elements must also be present, and the xmlns attribute in <html> 
+must specify the xml namespace for the document.,In XHTML, elements must always be properly nested within each other, like this:,In XHTML, elements must always be closed, like this:,In XHTML, empty elements must always be closed, like this:,In XHTML, element names must always be in lowercase, like this:,In XHTML, attribute names must always be in lowercase, like this:,In XHTML, attribute values must always be quoted, like this:,In XHTML, attribute minimization is forbidden:","XHTML stands for E,tensible ,yper,ext 
+,arkup ,anguage,XHTML is a stricter, more XML-based version of HTML,XHTML is HTML defined as an XML application,XHTML is supported by all major browsers,<!DOCTYPE> is ,The xmlns attribute in <html> is ,<html>, <head>, <title>, and <body> are ,Elements must always be ,Elements must always be ,Elements must always be in ,Attribute names must always be in ,Attribute values must always be ,Attribute minimization is ","
+  <!DOCTYPE html PUBLIC ""-//W3C//DTD XHTML 1.1//EN"",
+  ""http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"">,<html xmlns=""http://www.w3.org/1999/xhtml"">,
+<head>,
+ 
+<title>Title of document</title>,
+</head>,
+<body>,  , ,
+  ,</body>,
+</html>,
+<b><i>Some 
+  text</i></b>,
+<b><i>Some 
+  text</b></i>,
+<p>This is a paragraph</p>,
+<p>This is another paragraph</p>,
+<p>This is a paragraph,
+<p>This is another paragraph,
+A break: <br />,
+A horizontal rule: <hr />,
+An image: <img src=""happy.gif"" alt=""Happy face"" />,
+A break: <br>,
+A horizontal rule: <hr>,
+An image: <img src=""happy.gif"" alt=""Happy face"">,
+<body>,
+<p>This is a paragraph</p>,
+</body>,
+<BODY>,
+<P>This is a paragraph</P>,
+</BODY>,
+  <a href=""https://www.w3schools.com/html/"">Visit our HTML tutorial</a>,
+  <a HREF=""https://www.w3schools.com/html/"">Visit our HTML tutorial</a>,
+  <a href=""https://www.w3schools.com/html/"">Visit our HTML tutorial</a>,
+  <a href=https://www.w3schools.com/html/>Visit our HTML tutorial</a>,
+ <input type=""checkbox"" name=""vehicle"" value=""car"" checked=""checked"" />,<input type=""text"" name=""lastname"" disabled=""disabled"" />,
+ <input type=""checkbox"" name=""vehicle"" value=""car"" checked />,<input type=""text"" name=""lastname"" disabled />",
+HTML ,Encoding (Character Sets),"From ASCII to UTF-8,The HTML charset Attribute,Differences Between Character Sets,The ASCII Character Set,The ANSI Character Set (Windows-1252),The ISO-8859-1 Character Set,The UTF-8 Character Set",,"To display an HTML page correctly, a web browser must know 
+which character set to use.,ASCII was the first character encoding standard. ASCII defined 128 different characters that could be used on the internet: numbers (0-9), English letters (A-Z), and some special 
+characters like ! $ + - ( ) @ < > .,ISO-8859-1 was the default character set for HTML 4. This character set 
+supported 256 different character codes. HTML 4 also supported UTF-8.,ANSI (Windows-1252) was the original Windows character set. ANSI is identical 
+to ISO-8859-1, except that ANSI has 32 extra characters.,The HTML5 specification encourages web developers to use the UTF-8 character 
+set, which covers almost all of the 
+characters and symbols in the world!,To display an HTML page correctly, a web browser must know the character set used in the page. ,This is specified in the , tag:,The following table displays the differences between the character sets described above:,ASCII uses the values from 0 to 31 (and 127) for control characters.,ASCII uses the values from 32 to 126 for letters, digits, and symbols.,ASCII does not use the values from 128 to 255.,ANSI is identical to ASCII for the values from 0 to 127.,ANSI has a proprietary set of characters for the values from 128 to 159.,ANSI is identical to UTF-8 for the values from 160 to 255.,ISO-8859-1 is identical to ASCII for the values from 0 to 127.,ISO-8859-1 does not use the values from 128 to 159.,ISO-8859-1 is identical to UTF-8 for the values from 160 to 255.,UTF-8 is identical to ASCII for the values from 0 to 127.,UTF-8 does not use the values from 128 to 159.  ,UTF-8 is identical to both ANSI and 8859-1 for the values from 160 to 255.,UTF-8 continues from the value 256 with more than 10 000 different 
+characters.,For a closer look, study our ,.",,"
+<meta charset=""UTF-8"">
+",
+HTML ,Entities,"HTML Entities,Non-breaking Space,Some Useful HTML Character Entities,Combining Diacritical Marks",,"Reserved characters in HTML must be replaced with character entities.,Some characters are reserved in HTML.,If you use the less than (<) or greater than (>) signs in your text, the browser might mix them with tags.,Character entities are used to display reserved characters in HTML.,A character entity looks like this:,To display a less than sign (<) we must write: , or ,A commonly used entity in HTML is the non-breaking space: ,A non-breaking space is a space that will not break into a new line.,Two words 
+separated by a non-breaking space will stick together (not break into a new 
+line). This 
+is handy when breaking the words might be disruptive.,Examples:,Another common use of the non-breaking space is to prevent browsers from truncating spaces in HTML pages.,If you write 10 spaces in your text, the browser will remove 9 of them. To add real spaces to your text, 
+you can use the , character entity.,A diacritical mark is a ""glyph"" added to a letter.,Some diacritical marks, like grave (  ̀) and acute (  ́) are called accents. ,Diacritical marks can appear both above and below a letter, inside a letter, 
+and between two letters.,Diacritical marks can be used in combination with alphanumeric characters to produce a character that is not present in 
+the character set (encoding) used in the page.,Here are some examples:,You will see more HTML symbols in the next chapter of this tutorial.","§ 10,10 km/h,10 PM","
+&,;
+,
+&#,;
+",
+Using Emojis in HTML,,"What are Emojis?,The HTML charset Attribute,UTF-8 Characters,Emoji Characters,Some Emoji Symbols in UTF-8","Example,Example,Example","Emojis are characters from the UTF-8 character set: 😄 😍 💗,Emojis look like images, or icons, but they are not.,They are letters (characters) from the UTF-8 (Unicode) character set.,To display an HTML page correctly, a web browser must know the character set used in the page.,This is specified in the , tag:,Many UTF-8 characters cannot be typed on a keyboard,
+but they can always be displayed using numbers (called entity numbers):,The , element defines the character set.,The characters A, B, and C, are displayed by the numbers 65, 66, and 67.,To let the browser understand that you are displaying a character, you must start the entity number
+with &# and end it with ; (semicolon).,Emojis are also characters from the UTF-8 alphabet:,Since Emojis are characters, they can be copied, displayed,
+and sized just like any other character in HTML.,For a full list, please go to our ,.","A is 65,B is 66,C is 67,😄 is 128516,😍 is 128525,💗 is 128151","
+<meta charset=""UTF-8"">
+,
+<!DOCTYPE html>,
+<html>,
+  <head>,<meta charset=""UTF-8"">,</head>,
+<body>,
+<p>I will display A B C</p>,
+<p>I will display &#65; &#66; &#67;</p>,
+</body>,
+</html>
+,
+<!DOCTYPE html>,
+<html>,
+  <head>,<meta charset=""UTF-8"">,</head>,
+<body>,
+<h1>My First Emoji</h1>,
+<p>&#128512;</p>,
+</body>,</html>
+,
+<!DOCTYPE html>,
+<html>,
+  <head>,<meta charset=""UTF-8"">,</head>,
+<body>,
+<h1>Sized Emojis</h1>,
+  <p style=""font-size:48px"">,&#128512; &#128516; &#128525; &#128151;,</p>,
+</body>,</html>
+",
+HTML ,Symbols,"HTML Symbol Entities,Some Mathematical Symbols Supported by HTML,Some Greek Letters Supported by HTML,Some Other Entities Supported by HTML","Example,Will display as:","Symbols that are not present on your keyboard can also be added 
+by using entities.,HTML entities were described in the previous chapter.,Many mathematical, technical, and currency symbols, are not present on a normal keyboard.,To add such symbols to an HTML page, you can use the entity name or the entity number 
+(a decimal or a hexadecimal reference) for the symbol.",,"
+<p>I will display &euro;</p>,
+<p>I will display &#8364;</p>,
+<p>I will display &#x20AC;</p>
+",
+HTML ,Styles - CSS,"What is CSS?,Using CSS,Inline CSS,Internal CSS,External CSS,CSS Colors, Fonts and Sizes,CSS Border,CSS Padding,CSS Margin,Link to External CSS,Chapter Summary,HTML Exercises,HTML Style Tags","Example,Example,Example,""styles.css"":,Example,Example,Example,Example,Example,Example,Example","CSS stands for Cascading Style Sheets.,CSS saves a lot of work. It can control the layout of multiple 
+web pages all at once.,Cascading Style Sheets (CSS) is used to format the layout of a webpage.,With CSS, you can control the color, font, the size of text, the spacing 
+between elements, how elements are positioned and laid out, what background 
+images or background colors are to be used, different displays for different devices 
+and screen sizes, and much more!,CSS can be added to HTML documents in 3 ways:,The most common way to add CSS, is to keep the styles in external CSS 
+files. However, in this tutorial we will use inline and internal styles, because this is easier to 
+demonstrate, and easier for you to try it yourself.,An inline CSS is used to apply a unique style to a single HTML element.,An inline CSS uses the , attribute of an HTML element.,The following example sets the text color of the , element to blue, 
+and the text color of the , element to red:,An internal CSS is used to define a style for a single HTML page.,An internal CSS is defined in the , section of an HTML page, 
+within a , element.,The following example sets the text color of ALL the , elements 
+(on that page) to blue, and the text color of ALL the , elements to 
+red. In addition, the page will be displayed with a ""powderblue"" background 
+color: ,An external style sheet is used to define the style for many HTML pages.,To use an external style sheet, add a link to it in the , section of each HTML page:,The external style sheet can be written in any text editor. The file must not contain any 
+HTML code, and must be saved with a .css extension.,Here is what the ""styles.css"" file looks like:,Here, we will demonstrate some commonly used CSS properties. You will learn 
+more about them later.,The CSS , property defines the text color to be used.,The CSS , property defines the font to be used.,The CSS , property defines the text size to be used.,The CSS , property defines a border 
+around an HTML element., You can define a border for nearly all HTML elements.,The CSS , property defines a padding 
+(space) between the text and the border.,The CSS , property defines a margin 
+(space) outside the border.,External style sheets can be referenced with a full URL or with a path relative to the current web page."," - by using the , attribute inside HTML elements, - by using a , element in the , section, - by using a , 
+  element to link to an external CSS file,Use the HTML , attribute for inline styling,Use the HTML , element to define internal CSS,Use the HTML , element to refer to an external CSS file,Use the HTML , element to store <style> and <link> elements,Use the CSS , property for text colors,Use the CSS , property for text fonts,Use the CSS , property for text sizes,Use the CSS , property for borders,Use the CSS , property for space inside the border,Use the CSS , property for space outside the border","
+ <h1 style=""color:blue;"">A Blue Heading</h1>,<p 
+  style=""color:red;"">A red paragraph.</p>,
+<!DOCTYPE html>,<html>,<head>,<style>,
+ body {background-color: powderblue;},h1   {color: blue;},p    {color: red;},
+</style>,</head>,<body>,<h1>This is a 
+ heading</h1>,<p>This is a paragraph.</p>,</body>,</html>,
+<!DOCTYPE html>,<html>,<head>,
+  <link rel=""stylesheet"" href=""styles.css"">,
+</head>,<body>,<h1>This is a heading</h1>,<p>This is a paragraph.</p>,</body>,</html>,
+<!DOCTYPE html>,
+ <html>,<head>,<style>,h1 {,  color: blue;,  font-family: verdana;,  font-size: 300%;,},p {,
+    color: red;,  
+ font-family: courier;,  font-size: 160%;,},</style>,</head>,<body>,
+ <h1>This is a heading</h1>,<p>This is a paragraph.</p>,</body>,</html>,
+<link rel=""stylesheet"" href=""https://www.w3schools.com/html/styles.css"">
+,
+<link rel=""stylesheet"" href=""/html/styles.css"">
+,
+<link rel=""stylesheet"" href=""styles.css"">
+",
+HTML ,Images,"HTML Images Syntax,The src Attribute,The alt Attribute,Image Size - Width and Height,Width and Height, or Style?,Images in Another Folder,Images on Another Server/Website,Animated Images,Image as a Link,Image Floating,Common Image Formats,Chapter Summary,HTML Exercises,HTML Image Tags","Example,Example,Example,Syntax,Example,Example,Example,Example,Example,Example,Example,Example,Example,Example,Example","Images can improve the design and the appearance of a web page.,The HTML , tag is used to embed an 
+image in a web page.,Images are not technically inserted into a web page; images are linked to web 
+pages. The , tag creates a holding 
+space for the referenced image.,The , tag is empty, it contains attributes only, and does not 
+have a closing tag.,The , tag has two required 
+attributes:,The required , attribute specifies the path (URL) to the image., When a web page loads, it is the browser, at that 
+moment, that gets the image from a web server and inserts it into the page. 
+Therefore, make sure that the image actually stays in the same spot in relation 
+to the web page, otherwise your visitors will get a broken link icon. The broken 
+link icon and the , text are shown if the browser cannot find the image.,The required , attribute provides an alternate text for an image, if the user for 
+some reason cannot view it (because of slow connection, an error in the src 
+attribute, or if the user uses a screen reader).,The value of the , attribute should describe the image:,If a browser cannot find an image, it will display the value of the , 
+attribute:,You can use the , attribute to specify the width and 
+height of an image.,Alternatively, you can use the , and , attributes:,The , and , attributes always define the width and height of the 
+image in pixels.,The ,, ,, and , attributes are 
+all valid in HTML.,However, we suggest using the , attribute. It prevents styles sheets from changing 
+the size of images:,If you have your images in a sub-folder, you must include the folder 
+name in the , attribute:,Some web sites point to an image on another server.,To point to an image on another server, you must specify an absolute (full) 
+URL in the , attribute:, External images might be under 
+copyright. If you do not get permission to use it, you may be in violation of 
+copyright laws. In addition, you cannot control external images; it can suddenly 
+be removed or changed.,HTML allows animated GIFs:,To use an image as a link, put the , tag inside the , 
+tag:,Use the CSS , property to let the image float to the right or to the left of a text:,Here are the most common image file types, which are supported in all browsers 
+(Chrome, Edge, Firefox, Safari, Opera):","src - Specifies the path to the image,alt - Specifies an alternate text for the image,Use the HTML , element to define an image,Use the HTML , attribute to define the URL of the image,Use the HTML , attribute to define an alternate text for an image, if it cannot be displayed,Use the HTML , and , attributes 
+  or the CSS , and , 
+  properties to define the size of the image,Use the CSS , property to let the image float 
+  to the left or to the right","
+ <img src=""pic_trulli.jpg"" 
+alt=""Italian Trulli"">,
+,
+ <img src=""img_girl.jpg"" 
+alt=""Girl in a jacket"">,
+ <img src=""img_chania.jpg"" 
+alt=""Flowers in Chania"">,
+,
+<img src="","" alt="","">
+,
+<img src=""img_chania.jpg"" alt=""Flowers 
+  in Chania"">
+,
+<img src=""img_chania.jpg"" alt=""Flowers 
+  in Chania"">
+,
+<img src=""wrongname.gif"" alt=""Flowers 
+  in Chania"">
+,
+<img src=""img_girl.jpg"" alt=""Girl in a jacket"" style=""width:500px;height:600px;"">
+,
+<img src=""img_girl.jpg"" alt=""Girl in a jacket"" width=""500"" height=""600"">
+,
+ <!DOCTYPE html>,<html>,<head>,<style>,img { ,  width: 100%; ,},
+ </style>,</head>,<body>,<img src=""html5.gif"" alt=""HTML5 Icon"" width=""128"" height=""128"">,<img src=""html5.gif"" alt=""HTML5 Icon"" style=""width:128px;height:128px;"">,</body>,</html>,
+<img src=""/images/html5.gif"" 
+alt=""HTML5 Icon"" style=""width:128px;height:128px;"">
+,
+<img src=""https://www.w3schools.com/images/w3schools_green.jpg"" alt=""W3Schools.com"">
+,
+<img src=""programming.gif"" alt=""Computer Man"" style=""width:48px;height:48px;"">
+,
+<a href=""default.asp"">,  <img src=""smiley.gif"" alt=""HTML tutorial"" 
+style=""width:42px;height:42px;"">,</a>
+,
+<p><img src=""smiley.gif"" alt=""Smiley face""
+style=""float:right;width:42px;height:42px;"">,
+ The image will float to the right of 
+the text.</p>,<p><img src=""smiley.gif"" alt=""Smiley face""
+style=""float:left;width:42px;height:42px;"">,
+ The image will float to the left of 
+the text.</p>",
+HTML , Multimedia,"What is Multimedia?,Browser Support,Multimedia Formats,Common Video Formats,Common Audio Formats",,"Multimedia on the web is sound, music, videos, movies, and animations.,Multimedia comes in many different formats. It can be almost anything you can 
+hear or see, like images, music, 
+sound, videos, records, films, animations, and more.,Web pages often contain multimedia elements of different types and formats.,The first web browsers had support for text only, limited to a single font in a single color.,Later came browsers with support for colors, fonts, images, and multimedia!,Multimedia elements (like audio or video) are stored in media files. ,The most common way to discover the type of a file, is to look at the file 
+extension.,Multimedia files have formats and different extensions 
+like: .wav, .mp3, .mp4, .mpg, .wmv, and .avi.,MP3 is the best format for compressed recorded music. The 
+term MP3 has become synonymous with digital music.,If your website is about recorded music, MP3 is the choice.",,,
+HTML ,Links,"HTML Links - Hyperlinks,HTML Links - Syntax,HTML Links - The target Attribute,Absolute URLs vs. Relative URLs,HTML Links - Use an Image as a Link,Link to an Email Address,Button as a Link,Link Titles,More on Absolute URLs and Relative URLs,Chapter Summary,HTML Link Tags","Example,Example,Example,Example,Example,Example,Example,Example,Example,Example","Links are found in nearly all web pages. Links allow users to click their way from page to page.,HTML links are hyperlinks.,You can click on a link and jump to another document.,When you move the mouse over a link, the mouse arrow will turn into a little hand.,The HTML , tag defines a hyperlink. 
+It has the following syntax:,The most important attribute of the , ,The , is the part that will be visible to the reader.,Clicking on the link text, will send the reader to the specified URL address.,By default, links will appear as follows in all browsers:,By default, the linked page will be displayed in the current browser window. 
+To change this, you must specify another target for the link.,The , attribute specifies where to open the linked document.,The , attribute can have one of the following values:,Both examples above are using an , (a full web address) 
+in the , attribute.,A local link (a link to a page within the same website) is specified with a 
+, (without 
+the ""https://www"" part):,To use an image as a link, just put the , 
+tag inside the , tag:,Use , inside the , attribute to create a link that opens the user's email program (to 
+let them send a new email):,To use an HTML button as a link, you have to add some JavaScript code.,JavaScript allows you to specify what happens at certain events, such as a click of a button:,The , attribute specifies extra information about an element.
+The information is most often shown as a tooltip text when the mouse moves over the element.","An unvisited link is underlined and blue,A visited link is underlined and purple,An active link is underlined and red, - Default. Opens the document in 
+  the same window/tab as it was clicked, - Opens the document in a new window or tab, - Opens the document in the parent frame, - Opens the document in the full body of the window,Use the , element to define a link,Use the , attribute to define the link address,Use the , attribute to define where to open the linked document,Use the , element (inside ,) 
+  to use an image as a link,Use the , scheme inside the , attribute to create a link that opens the user's email program","
+<a href="","">,</a>
+,
+<a href=""https://www.w3schools.com/"">Visit W3Schools.com!</a>
+,
+ <a href=""https://www.w3schools.com/""
+target=""_blank"">Visit W3Schools!</a>
+,
+  <h2>Absolute URLs</h2>,<p><a href=""https://www.w3.org/"">W3C</a></p>,
+  <p><a href=""https://www.google.com/"">Google</a></p>,<h2>Relative 
+  URLs</h2>,<p><a href=""html_images.asp"">HTML Images</a></p>,<p><a href=""/css/default.asp"">CSS 
+  Tutorial</a></p>,
+<a href=""default.asp"">,<img src=""smiley.gif"" alt=""HTML tutorial"" style=""width:42px;height:42px;"">,</a>
+,
+  <a href=""mailto:someone@example.com"">Send email</a>
+,
+<button 
+  onclick=""document.location='default.asp'"">HTML Tutorial</button>
+,
+  <a href=""https://www.w3schools.com/html/"" title=""Go to W3Schools HTML 
+  section"">Visit our HTML Tutorial</a>,
+  <a href=""https://www.w3schools.com/html/default.asp"">HTML tutorial</a>,
+  <a href=""/html/default.asp"">HTML tutorial</a>,
+  <a href=""default.asp"">HTML tutorial</a>",
+HTML ,Comments,"HTML Comment Tag,Add Comments,Hide Content,Hide Inline Content,HTML Exercises","Example,Example,Example,Example","HTML comments are not displayed in the browser, but they can 
+help document your HTML source code.,You can add comments to your HTML source by using the following syntax:,Notice that there is an exclamation point (!) in the start tag, but not in the 
+end tag.,With comments you can place notifications and reminders in your HTML code:,Comments can be used to hide content.,Which can be helpful if you hide content temporarily:,You can also hide more than one line, everything between the , and the ,
+will be hidden from the display.,Comments are also great for debugging HTML, because you can 
+comment out HTML lines of code, one at a time, to search for errors.,Comments can be used to hide parts in the middle of the HTML code.",,"
+<!-- Write your comments here -->
+,
+<!-- This is a comment -->,<p>This is a paragraph.</p>,
+,<!-- Remember to add more information here -->,
+  <p>This is a paragraph.</p>,<!-- <p>This is another paragraph 
+  </p> -->,<p>This is a paragraph too.</p>
+,
+  <p>This is a paragraph.</p>,<!--,<p>Look at this cool 
+  image:</p>,
+<img border=""0"" src=""pic_trulli.jpg"" 
+alt=""Trulli"">,-->,<p>This is a paragraph too.</p>
+,
+  <p>This <!-- great text --> is a paragraph.</p>
+",
+HTML ,Paragraphs,"HTML Paragraphs,HTML Display,HTML Horizontal Rules,HTML Line Breaks,The Poem Problem,Solution - The HTML <pre> Element,HTML Exercises,HTML Tag Reference","Example,Example,Example,Example,Example,Example","A paragraph always starts on a new line, and is usually a block of text.,The HTML , element defines a paragraph.,A paragraph always starts on a new line, and browsers automatically add some white space (a margin) before and after a paragraph.,You cannot be sure how HTML will be displayed.,Large or small screens, and resized windows will create different results. ,With HTML, you cannot change the display by adding extra spaces or extra lines in your HTML code.,The browser will automatically remove any extra spaces and lines when the page is 
+displayed:,The , tag defines a thematic break in an HTML page, and is most often 
+displayed as a horizontal rule.,The , element is used to separate content (or define a change) in an HTML 
+page:,The , tag is an empty tag, which means that it has no end tag.,The HTML , element defines a line break.,Use , if you want a line break (a new line) without starting a new paragraph:,The , tag is an empty tag, which means that it has no end tag.,This poem will display on a single line:,The HTML , element defines preformatted text.,The text inside a , element is displayed in a fixed-width font (usually 
+Courier), and it preserves both spaces and line breaks:,W3Schools' tag reference contains additional information about HTML elements and their attributes.",,"
+<p>This is a paragraph.</p>,
+<p>This is another paragraph.</p>
+,
+ <p>,This paragraph,contains a lot of lines,in the source code,,but 
+ the browser ,ignores it.,</p>,<p>,This paragraph,contains         
+ a lot of spaces,in the source         
+ code,,but the        browser ,ignores 
+ it.,</p>,
+ <h1>This is heading 1</h1>,<p>This is some text.</p>,<hr>,<h2>This is heading 2</h2>,<p>This is some other text.</p>,<hr>
+,
+<p>This is<br>a paragraph<br>with line breaks.</p>,
+ <p>,  My Bonnie lies over 
+ the ocean.,  My Bonnie lies over the sea.,  My Bonnie 
+ lies over the ocean.,  Oh, bring back my Bonnie to me.,</p>,
+ <pre>,  My Bonnie lies over the ocean.,
+,  My Bonnie lies over the sea.,  My Bonnie lies over the 
+ocean.,  Oh, bring back my Bonnie to me.,</pre>",
+HTML ,Colors,"Color Names,Background Color,Text Color,Border Color,Hello World,Hello World,Hello World,Color Values","Example,Example,Example,Example","HTML colors are specified with predefined color names, or with 
+RGB, HEX, HSL, RGBA, or HSLA values.,In HTML, a color can be specified by using a color name:,
+,
+,HTML supports ,.,You can set the background color for HTML elements:,You can set the color of text:,Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.,Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.,You can set the color of borders:,In HTML, colors can also be specified using RGB values, HEX values, HSL 
+values, RGBA values, and HSLA values.,The following three <div> elements have their background color set with RGB, 
+HEX, and HSL values:,The following two <div> elements have their background color set with RGBA 
+and HSLA values, which adds an Alpha channel to the color (here we have 50% 
+transparency):",,"
+  <h1 style=""background-color:DodgerBlue;"">Hello World</h1>,<p style=""background-color:Tomato;"">Lorem 
+  ipsum...</p>,
+  <h1 style=""color:Tomato;"">Hello 
+  World</h1>,<p style=""color:DodgerBlue;"">Lorem 
+  ipsum...</p>,<p style=""color:MediumSeaGreen;"">Ut wisi 
+  enim...</p>,
+  <h1 style=""border:2px 
+  solid Tomato;"">Hello 
+  World</h1>,<h1 style=""border:2px 
+  solid DodgerBlue;"">Hello 
+  World</h1>,<h1 style=""border:2px 
+  solid Violet;"">Hello 
+  World</h1>,
+  <h1 style=""background-color:rgb(255, 
+  99, 71);"">...</h1>,<h1 style=""background-color:#ff6347;"">...</h1>,<h1 style=""background-color:hsl(9, 
+  100%, 64%);"">...</h1>,<h1 style=""background-color:rgba(255, 
+  99, 71, 0.5);"">...</h1>,<h1 style=""background-color:hsla(9, 
+  100%, 64%, 0.5);"">...</h1>",
+HTML ,Headings,"HTML Headings,Headings Are Important,Bigger Headings,HTML Exercises,HTML Tag Reference","Example,Example,Example","HTML headings are titles or subtitles that you want to display on a webpage.,HTML headings are defined with the , to , tags., defines the most important heading. , defines the least important heading.,Search engines use the headings to index the structure and content of your web pages.,Users often skim a page by its headings. It is important to use headings to show the document structure., headings should be used for main headings, followed by , headings, then the less important 
+,, and so on.,Each HTML heading has a default size. However, you can specify the size for any heading 
+with the , attribute, using the CSS , property:,W3Schools' tag reference contains additional information about these tags and their attributes.",,"
+<h1>Heading 1</h1>,
+<h2>Heading 2</h2>,
+<h3>Heading 3</h3>,<h4>Heading 4</h4>,<h5>Heading 5</h5>,<h6>Heading 6</h6>,
+<h1 
+  style=""font-size:60px;"">Heading 1</h1>,
+  ",
+HTML ,Quotation and Citation Elements,"HTML <blockquote> for Quotations,HTML <q> for Short Quotations,HTML <abbr> for Abbreviations,HTML <address> for Contact Information,HTML <cite> for Work Title,HTML <bdo> for Bi-Directional Override,HTML Exercises,HTML Quotation and Citation Elements","Example,Example,Example,Example,Example,Example,Example","In this chapter we will go through the 
+,,,, ,, ,, ,, 
+and , HTML elements.,The HTML , element defines a section that 
+is quoted from another source.,Browsers usually indent , elements.,The HTML , tag defines a short quotation.,Browsers normally insert quotation marks around the quotation.,The HTML , tag defines an abbreviation or an acronym, like ""HTML"", 
+""CSS"", ""Mr."", 
+""Dr."", ""ASAP"", ""ATM"".,Marking abbreviations can give useful information to browsers, translation 
+systems and search-engines., Use the global title attribute to 
+show the description for the 
+abbreviation/acronym when you mouse over the element. ,The HTML , tag defines the contact information for the author/owner of a document 
+or an article.,The contact information can be an email address, URL, physical address, phone 
+number, social media handle, etc.,The text in the , element usually renders in , 
+and browsers will
+always add a line break before and after the , element.,The HTML , tag defines the title of a 
+creative work (e.g. a book, a poem, a song, a movie, a painting, a sculpture, etc.)., A person's name is not the title of a work.,The text in the , element usually renders in ,.,BDO stands for Bi-Directional Override.,The HTML , tag is used to override 
+the current text direction:",,"
+ <p>Here is a quote from WWF's website:</p>,<blockquote cite=""http://www.worldwildlife.org/who/index.html"">,
+ For 50 years, WWF has been protecting the future of nature.,The world's 
+ leading conservation organization,,WWF works in 100 countries and is 
+ supported by,1.2 million members in the United States and,close to 5 
+ million globally.,</blockquote>,
+ <p>WWF's goal is to: <q>Build a future where people live in harmony with 
+ nature.</q></p>,
+ <p>The <abbr title=""World Health Organization"">WHO</abbr> was founded in 
+ 1948.</p>,
+
+ <address>,Written by John Doe.<br> ,Visit us at:<br>,Example.com<br>,
+ Box 564, Disneyland<br>,USA,</address>,
+ <p><cite>The Scream</cite> by Edvard Munch. Painted in 1893.</p>,
+ <bdo dir=""rtl"">This text will be written from right to left</bdo>",
+HTML ,Input form* Attributes,"The form Attribute,The formaction Attribute,The formenctype Attribute,The formmethod Attribute,The formtarget Attribute,The formnovalidate Attribute,The novalidate Attribute,HTML Form and Input Elements","Example,Example,Example,Example,Example,Example,Example","This chapter describes the different , attributes for the HTML , element. ,The input , attribute specifies the form 
+the , element belongs to.,The value of this attribute must be equal to the id attribute of the <form> 
+element it belongs to.,The input , attribute specifies the URL of 
+the file that will process the input when the form is submitted., This attribute overrides the , attribute of the , element.,The , attribute works with the 
+following input types: submit and image.,The input ,  attribute specifies how the form-data should be encoded when submitted (only for forms with method=""post"")., This attribute overrides the enctype attribute of the , element.,The , attribute works with the 
+following input types: submit and image.,The input ,  attribute defines the HTTP method for sending form-data to the action URL., This attribute overrides the method  attribute of the , element.,The , attribute works with the 
+following input types: submit and image.,The form-data can be sent as URL variables (method=""get"") or as an HTTP post 
+transaction (method=""post"").,The input , attribute specifies a name or a keyword that indicates where 
+to display the response that is received after submitting the form., This attribute overrides the target attribute of the , element.,The , attribute works with the 
+following input types: submit and image.,The input , attribute specifies 
+that an <input> element should not be validated when submitted., This attribute overrides the novalidate attribute of the , 
+element.,The , attribute works with the 
+following input types: submit.,The , attribute is a , attribute.,When present, novalidate specifies that all of the form-data should not be validated when submitted.","This method appends the form-data to the URL in name/value pairs,This method is useful for form submissions where a user want to bookmark 
+  the result,There is a limit to how much data you can place in a URL (varies between 
+  browsers), therefore, you cannot be sure that all of the form-data will be 
+  correctly transferred,Never use the ""get"" method to pass sensitive information! (password or 
+  other sensitive information will be visible in the browser's address bar),This method sends the form-data as an HTTP post transaction,Form submissions with the ""post"" method cannot be bookmarked,The ""post"" method is more robust and secure than ""get"", and ""post"" does 
+  not have size limitations","
+  
+    <form action=""/action_page.php"" id=""form1"">,  <label for=""fname"">First 
+    name:</label>,  <input type=""text"" id=""fname"" name=""fname""><br><br>,  
+    <input type=""submit"" value=""Submit"">,</form>,<label for=""lname"">Last 
+    name:</label>,<input type=""text"" id=""lname"" 
+    name=""lname"" form=""form1"">,
+  ,
+  
+    <form action=""/action_page.php"">,  <label for=""fname"">First 
+    name:</label>,  <input type=""text"" id=""fname"" name=""fname""><br><br>,  
+    <label for=""lname"">Last name:</label>,  <input type=""text"" id=""lname"" 
+    name=""lname""><br><br>,  <input type=""submit"" value=""Submit"">,  
+    <input type=""submit"" formaction=""/action_page2.php"" value=""Submit as Admin"">,
+    </form> ,
+  
+    <form action=""/action_page_binary.asp"" method=""post"">,  <label for=""fname"">First 
+    name:</label>,  <input type=""text"" id=""fname"" name=""fname""><br><br>,  
+    <input type=""submit"" value=""Submit"">,  <input type=""submit"" 
+    formenctype=""multipart/form-data"",  value=""Submit as 
+    Multipart/form-data"">,</form>   
+,
+    <form action=""/action_page.php"" method=""get"">,  <label for=""fname"">First 
+    name:</label>,  <input type=""text"" id=""fname"" name=""fname""><br><br>,  
+    <label for=""lname"">Last name:</label>,  <input type=""text"" id=""lname"" 
+    name=""lname""><br><br>,  <input type=""submit"" value=""Submit using 
+    GET"">,  <input type=""submit"" formmethod=""post"" value=""Submit using 
+    POST"">,</form> ,
+    <form action=""/action_page.php"">,  <label for=""fname"">First 
+    name:</label>,  <input type=""text"" id=""fname"" name=""fname""><br><br>,  
+    <label for=""lname"">Last name:</label>,  <input type=""text"" id=""lname"" 
+    name=""lname""><br><br>,  <input type=""submit"" value=""Submit"">,  
+    <input type=""submit"" formtarget=""_blank"" value=""Submit to a new window/tab"">,
+    </form> ,
+    <form action=""/action_page.php"">,  <label for=""email"">Enter your 
+    email:</label>,  <input type=""email"" id=""email"" name=""email""><br><br>,  
+    <input type=""submit"" value=""Submit"">,  <input type=""submit"" 
+    formnovalidate=""formnovalidate"",  value=""Submit without validation"">,
+    </form> ,
+   
+    <form action=""/action_page.php"" novalidate>,  <label 
+    for=""email"">Enter your email:</label>,  <input type=""email"" 
+    id=""email"" name=""email""><br><br>,  <input type=""submit"" 
+    value=""Submit"">,</form> ",
+HTML ,Elements,"HTML Elements,Nested HTML Elements,Never Skip the End Tag,Empty HTML Elements,HTML is Not Case Sensitive,HTML Tag Reference","Example,Example,Example","An HTML element is defined by a start tag, some content, and an 
+end tag.,The HTML , is everything from the start tag to the end tag:,Examples of some HTML elements:,HTML elements can be nested (this means that elements can contain other elements).,All HTML documents consist of nested HTML elements.,The following example contains four HTML elements (,, ,, , 
+and ,):,The , element is the root element 
+and it defines the whole HTML document.,It has a start tag , and an end tag ,.,Then, inside the , element there is 
+a , 
+element:,The , element defines the 
+document's body.,It has a start tag , and an end tag ,.,Then, inside the , element there 
+are two other elements:
+, and ,:,The , element defines a heading.,It has a start tag , and an end tag ,:,The , element defines a paragraph.,It has a start tag , and an end tag ,:,Some HTML elements will display correctly, even if you forget the end tag:,HTML elements with no content are called empty elements.,The , tag defines a line break, and 
+is an empty element without a closing tag:,HTML tags are not case sensitive: , means the same as ,.,The HTML standard does not require lowercase tags, but W3C
+, lowercase in HTML, and , lowercase for stricter document types like XHTML.,W3Schools' tag reference contains additional information about these tags and their attributes.",,"
+<!DOCTYPE html>,
+<html>,<body>,
+ <h1>My First Heading</h1>,<p>My first paragraph.</p>,
+</body>,</html>
+,
+<body>,
+ <h1>My First Heading</h1>,<p>My first paragraph.</p>,
+</body>
+,
+ <h1>My First Heading</h1>,<p>My first paragraph.</p>,
+<h1>My First Heading</h1>
+,
+<p>My first paragraph.</p>
+,
+<html>,<body>,
+ <p>This is a paragraph,
+ <p>This is a paragraph,
+,</body>,</html>,
+  <p>This is a <br> paragraph with a line break.</p>","
+,Content goes here...,
+,
+,My 
+  First Heading,
+,
+,My first paragraph.,
+"
+HTML ,Attributes,"HTML Attributes,The href Attribute,The src Attribute,The width and height Attributes,The alt Attribute,The style Attribute,The lang Attribute,The title Attribute,We Suggest: Always Use Lowercase Attributes,We Suggest: Always Quote Attribute Values,Single or Double Quotes?,Chapter Summary,HTML Exercises,HTML Attribute Reference","Example,Example,Example,Example,Example,Example,Example,Good:,Bad:,Example","HTML attributes provide additional information about HTML elements.,The , tag defines a hyperlink. The 
+, attribute specifies the URL of the page 
+the link goes to:,You will learn more about links in our ,.,The , tag is used to embed an 
+image in an HTML page. The , attribute 
+specifies the path to the image to be displayed:,There are two ways to specify the URL in the , 
+attribute:, - Links to an external image that is hosted 
+on another website. Example: ,., External images might be under copyright. If you do 
+not get permission to use it, you may be in violation of copyright laws. In 
+addition, you cannot control external images; it can suddenly be removed or 
+changed., - Links to an image that is hosted within 
+the website. Here, the URL does not include the domain name. If the URL begins 
+without a slash, it will be relative to the current page. Example: src=""img_girl.jpg"". 
+If the URL begins with a slash, it will be relative to the domain. Example: src=""/images/img_girl.jpg""., It is almost always best to use relative URLs. They 
+will not break if you change domain.,The , tag should also contain the
+, and , attributes, which specifies the width and 
+height of the image (in pixels):,The required , attribute for the , 
+tag specifies an 
+alternate text for an image, if the image for some reason cannot be displayed. 
+This can be due to 
+slow connection, or an error in the , attribute, or if the user uses a screen 
+reader.,You will learn more about images in our ,.,The , attribute is used to add styles to 
+an element, such as color, font, size, and more.,You will learn more about styles in our ,.,You should always include the , attribute 
+inside the , tag, to declare the 
+language of the Web page. This is meant to assist search engines and browsers.,The following example specifies English as the language:,Country codes can also be added to the language code in the , 
+attribute. So, the first two characters define the language of the HTML page, 
+and the last two characters define the country.,The following example specifies English as the language and United States as 
+the country:,You can see all the language codes in our
+,.,The , attribute defines some extra 
+information about an 
+element.,The value of the title attribute will be displayed as a tooltip when 
+you mouse over the element:,The HTML standard does not require lowercase attribute names.,The title attribute (and all other attributes) can be written with uppercase or lowercase 
+like , or ,.,However, W3C , lowercase attributes in HTML, and , 
+lowercase attributes for stricter document types like XHTML.,The HTML standard does not require quotes around attribute values.,However, W3C , quotes in HTML, and , quotes for 
+stricter document types like XHTML.,Sometimes you have to use quotes. This example will not display 
+the title attribute correctly, because it contains a space:,Double quotes around attribute values are the most common in HTML, but single 
+quotes can also be used.,In some situations, when the attribute value itself contains double quotes, it is necessary to use single quotes:,Or vice versa:","All HTML elements can have ,Attributes provide , about elements,Attributes are always specified in ,Attributes usually come in name/value pairs like: ,All HTML elements can have ,The , attribute of , specifies the URL of the page the link goes to,The , attribute of , specifies the path to the image to be displayed,The , and , attributes 
+  of , provide size information for images,The , attribute of , provides an alternate text for an image,The , attribute is used to add styles 
+  to an element, such as color, font, size, and more,The , attribute 
+  of the , tag declares the 
+  language of the Web page,The , attribute defines some extra 
+  information about an element","
+<a href=""https://www.w3schools.com"">Visit W3Schools</a>
+,
+<img src=""img_girl.jpg"">
+,
+<img src=""img_girl.jpg"" width=""500"" height=""600"">
+,
+ <img src=""img_girl.jpg"" alt=""Girl 
+  with a jacket"">
+,
+ <img src=""img_typo.jpg"" alt=""Girl 
+  with a jacket"">
+,
+<p style=""color:red;"">This is a red paragraph.</p>
+  ,
+<!DOCTYPE html>,<html lang=""en"">,<body>,...,</body>,</html>
+,
+<!DOCTYPE html>,<html lang=""en-US"">,<body>,...,</body>,</html>
+,
+ <p title=""I'm a tooltip"">This is a paragraph.</p>
+,
+  <a href=""https://www.w3schools.com/html/"">Visit our HTML tutorial</a>,
+  <a href=https://www.w3schools.com/html/>Visit our HTML tutorial</a>,
+ <p
+ title=About W3Schools>,
+<p title='John ""ShotGun"" Nelson'>
+,
+<p title=""John 'ShotGun' Nelson"">",
+HTML ,Editors,"Learn HTML Using Notepad or TextEdit,Step 1: Open Notepad (PC),Step 1: Open TextEdit (Mac),Step 2: Write Some HTML,Step 3: Save the HTML Page,Step 4: View the HTML Page in Your Browser,W3Schools Online Editor - ""Try it Yourself"",W3Schools Spaces",Example,"A simple text editor is all you need to learn HTML.,Web pages can be created and modified by using professional HTML editors.,However, for learning HTML we recommend a simple text editor like Notepad (PC) or TextEdit (Mac).,We believe in that using a simple text editor is a good way to learn HTML.,Follow the steps below to create your first web page with Notepad or TextEdit.,Open the , (the window symbol at the bottom left on your screen). Type ,.,Open , >, , ,Open ,Also change some preferences to get the application to 
+save files correctly.
+,choose,Then under ""Open and Save"", check the box that says ""Display HTML files as HTML code instead of formatted text"".,Write or copy the following HTML code into Notepad:,Save the file on your computer. Select , in the Notepad menu.,Name the file , and set the encoding to 
+, (which is the preferred encoding for HTML files).,Open the saved HTML file in your favorite browser (double click on the file, 
+or right-click - and choose ""Open with"").,The result will look much like this:,With our free online editor, you can edit the HTML code and view the result in your browser.,It is the perfect tool when you want to , code fast. It also has color 
+coding and the ability to save and share code with others:,If you want to create your own website and save your code online, try our 
+,, called ,:",,"
+<!DOCTYPE html>,<html>,<body>,<h1>My First Heading</h1>,
+<p>My first paragraph.</p>,</body>,</html>,
+<!DOCTYPE html>,
+<html>,<head>,<title>Page Title</title>,
+</head>,<body>,<h1>This is a Heading</h1>,<p>This is a paragraph.</p>,
+</body>,</html>
+",
+HTML ,Text Formatting,"HTML Formatting Elements,HTML <b> and <strong> Elements,HTML <i> and <em> Elements,HTML <small> Element,HTML <mark> Element,HTML <del> Element,HTML <ins> Element,HTML <sub> Element,HTML <sup> Element,HTML Exercises,HTML Text Formatting Elements","Example,Example,Example,Example,Example,Example,Example,Example,Example,Example,Example","HTML contains several elements for defining text with a special meaning.,Formatting elements were designed to display special types of text:,The HTML , element defines bold text, 
+without any extra importance.,The HTML , element defines text 
+with strong importance. The content inside is typically displayed in bold.,The HTML , element defines a part of 
+text in an alternate voice or mood. The content inside is typically displayed in 
+italic., The , tag is often used to indicate a technical term, 
+a phrase from another language, a thought, a ship name, etc.,The HTML , element defines 
+emphasized text. The content inside is typically displayed in italic., A screen reader will pronounce the words in , 
+with an emphasis, using verbal stress.,The HTML , element defines 
+smaller text:,The HTML , element defines text 
+that should be marked or highlighted:,The HTML , element defines text 
+that has been deleted from a document. Browsers will usually strike a line 
+through deleted text:,The HTML , element defines a text 
+that has been inserted into a document. Browsers will usually underline inserted 
+text:,The HTML , element defines 
+subscript text. Subscript text appears half a character below the normal line, 
+and is sometimes rendered in a smaller font. Subscript text can be used for 
+chemical formulas, like H,O:,The HTML , element defines 
+superscript text. Superscript text appears half a character above the normal 
+line, and is sometimes rendered in a smaller font. Superscript text can be used 
+for footnotes, like WWW,:"," - Bold text, - Important text, - Italic text, - Emphasized text, - Marked text, - Smaller text, - Deleted text, - Inserted text, - Subscript text, - Superscript text","
+    <b>This text is bold</b>,
+     <strong>This text is 
+     important!</strong>,
+    <i>This text is italic</i>,
+    <em>This text is 
+ emphasized</em>,
+  <small>This is some smaller text.</small>,
+,
+  <p>Do not forget to buy <mark>milk</mark> today.</p>,
+,
+ <p>My favorite color is <del>blue</del> red.</p>,
+,
+  <p>My favorite color is <del>blue</del> <ins>red</ins>.</p>,
+,
+ <p>This 
+ is <sub>subscripted</sub> text.</p>,
+,
+ <p>This 
+ is <sup>superscripted</sup> text.</p>,
+",
+HTML ,Styles,"The HTML Style Attribute,Background Color,Text Color,Fonts,Text Size,Text Alignment,Chapter Summary,HTML Exercises","Example,Example,Example,Example,Example,Example,Example","The HTML , attribute is used to add styles to an element, such as color, font, size, and more.,Setting the style of an HTML element, can be done with the , attribute.,The HTML , attribute has the following syntax:,The , is a CSS property. The , is a CSS value.,The CSS , property defines the background color 
+for an HTML element.,The CSS , property defines the text color for 
+an HTML element:,The CSS , property defines the font to be used  
+for an HTML element:,The CSS , property defines the text size for 
+an HTML element:,The CSS , property defines the horizontal text alignment for an HTML element:","Use the , attribute for styling HTML elements,Use , for background color,Use , for text colors,Use , for text fonts,Use , for text sizes,Use , for text alignment","
+ <,
+style="",:,"">
+,
+ <body style=""background-color:powderblue;"">,<h1>This is a heading</h1>,<p>This is a paragraph.</p>,</body>,
+  <body>,<h1 style=""background-color:powderblue;"">This is a heading</h1>,<p 
+  style=""background-color:tomato;"">This is a paragraph.</p>,</body>,
+ <h1 style=""color:blue;"">This is a heading</h1>,
+ <p style=""color:red;"">This is a paragraph.</p>,
+ <h1 style=""font-family:verdana;"">This is a heading</h1>,<p style=""font-family:courier;"">This is a paragraph.</p>,
+ <h1 style=""font-size:300%;"">This is a heading</h1>,<p 
+style=""font-size:160%;"">This is a paragraph.</p>,
+ <h1 style=""text-align:center;"">Centered Heading</h1>,
+ <p style=""text-align:center;"">Centered paragraph.</p>",
+HTML, Basic Examples,"HTML Documents,The <!DOCTYPE> Declaration,HTML Headings,HTML Paragraphs,HTML Links,HTML Images,How to View HTML Source?","Example,Example,Example,Example,Example","In this chapter we will show some basic HTML examples.,Don't worry if we use tags you have not learned about yet.,All HTML documents must start with a document type declaration: ,.,The HTML document itself begins with , and ends with ,.,The visible part of the HTML document is between , and ,. ,The , declaration represents the document type, and helps browsers to display web pages correctly.,It must only appear once, at the top of the page (before any HTML tags). ,The , declaration is not case sensitive.,The , declaration for HTML5 is:,HTML headings are defined with the , to , tags., defines the most important heading. , defines the least important 
+heading: ,HTML paragraphs are defined with the , tag:,HTML links are defined with the , tag:,The link's destination is specified in the , attribute. ,Attributes are used to provide additional information about HTML elements.,You will learn more about attributes in a later chapter.,HTML images are defined with the , tag.,The source file (,), alternative text (,), 
+,, and , are provided as attributes:,Have you ever seen a Web page and wondered ""Hey! How did they do that?"",Right-click in an HTML page and select ""View Page Source"" (in 
+Chrome) or ""View Source"" (in Edge), or similar in other browsers. This will open a window 
+containing the HTML source code of the page.,Right-click on an element (or a blank area), and choose ""Inspect"" or 
+""Inspect Element"" to see what elements are made up of (you will see both 
+the HTML and the CSS). You can also edit the HTML or CSS on-the-fly in the 
+Elements or Styles panel that opens.",,"
+<!DOCTYPE html>,<html>,<body>,<h1>My First Heading</h1>,<p>My first paragraph.</p>,</body>,</html>,
+<!DOCTYPE html>,
+<h1>This is heading 1</h1>,
+<h2>This is heading 2</h2>,
+<h3>This is heading 3</h3>
+,
+<p>This is a paragraph.</p>,
+<p>This is another paragraph.</p>
+,
+<a href=""https://www.w3schools.com"">This is a link</a>
+,
+<img src=""w3schools.jpg"" alt=""W3Schools.com"" width=""104"" height=""142"">
+",
+HTML ,Introduction,"What is HTML?,A Simple HTML Document,What is an HTML Element?,Web Browsers,HTML Page Structure,HTML History",Example,"HTML is the standard markup language for creating Web pages.,An HTML element is defined by a start tag, some content, and an end tag:,The HTML , is everything from the start tag to the end tag:,The purpose of a web browser (Chrome, Edge, Firefox, Safari) is to read HTML documents and display them 
+correctly.,A browser does not display the HTML tags, but uses them to determine how to display the document:,Below is a visualization of an HTML page structure:,Since the early days of the World Wide Web, there have been many versions of HTML:","HTML stands for Hyper Text Markup Language,HTML is the standard markup language for creating Web pages,HTML describes the structure of a Web page,HTML consists of a series of elements,HTML elements tell the browser how to display the content,HTML elements label pieces of content such as ""this is a heading"", ""this 
+  is a paragraph"", ""this is a link"", etc.,The , declaration defines 
+that this document is an HTML5 document,The , element is the root element of an HTML 
+page,The , element contains meta information about the 
+ HTML page,The , element specifies a title for the 
+ HTML page (which is shown in the browser's title bar or in the page's tab),The , element defines the 
+ document's body, and is a container for all the visible contents, such as 
+ headings, paragraphs, images, hyperlinks, tables, lists, etc.,The , element defines a large heading,The , element defines a paragraph","
+ <!DOCTYPE html>,
+<html>,<head>,<title>Page Title</title>,
+ </head>,
+<body>,<h1>My First Heading</h1>,<p>My first paragraph.</p>,
+    </body>,</html>
+","
+,Content goes here...,
+,
+,My 
+  First Heading,
+,
+,My first paragraph.,
+"

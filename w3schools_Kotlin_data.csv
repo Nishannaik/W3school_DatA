@@ -1,0 +1,162 @@
+H1_leftside_heading,H1_rightside_heading,H2,H3,All_para,li,div,div_2
+Kotlin ,Tutorial,"Examples in Each Chapter,Kotlin Exercises,Learn by Examples,Download Kotlin",Example,"Our ""Try it Yourself"" editor makes it easy to learn Kotlin. You can edit the 
+code and view the result in your browser:,Learn by examples! This tutorial supplements all explanations with clarifying examples.,Download Kotlin from github:
+",,,
+Kotlin ,OOP,"Kotlin - What is OOP?,Kotlin - What are Classes and Objects?",,"OOP stands for ,.,Procedural programming is about writing procedures or methods that perform 
+operations on the data, while object-oriented programming is about 
+creating objects that contain both data and methods.,Object-oriented programming has several advantages over procedural 
+programming:, The ""Don't Repeat Yourself"" (DRY) principle is about 
+reducing the repetition of code. You should extract out the codes that are 
+common for the application, and place them at a single place and reuse them 
+instead of repeating it.,Classes and objects are the two main aspects of object-oriented programming.,Look at the following illustration to see the difference between class and 
+objects:,Another example:,So, a class is a template for objects, and an object is an instance of a class.,When the individual objects are created, they inherit all the 
+variables and methods from the class.,You will learn much more about , in the next chapter.","OOP is faster and easier to execute,OOP provides a clear structure for the programs,OOP helps to keep the Kotlin code DRY ""Don't Repeat Yourself"", and makes 
+  the 
+  code easier to maintain, modify and debug,OOP makes it possible to create full reusable 
+  applications with less code and shorter development time",,
+Kotlin ,Functions,"Predefined Functions,Create Your Own Functions,Call a Function,Function Parameters,Multiple Parameters,Return Values,Shorter Syntax for Return Values","Example,Example,Example,Example,Example,Example,Example,Example,Example","A , is a block of code which only runs when it is called.,You can pass data, known as parameters, into a function.,Functions are used to perform certain actions, and they are also known as ,.,So it turns out you already know what a function is. You have been using it 
+the whole time through this tutorial!,For example, , is a function. It is used to output/print text to the screen:,To create your own function, use the , keyword, and write the name of the 
+function, followed by parantheses ,:,Now that you have created a function, you can execute it by , 
+it.,To call a function in Kotlin, write the name of the function followed by two 
+parantheses ,.,In the following example, , will 
+print some text (the action), when it is called:,A function can be called multiple times, if you want:,Information can be passed to functions as parameter.,Parameters are specified after the function name, inside the parentheses.
+You can add as many parameters as you want, just separate them with a comma. 
+Just note that you must specify the type of each parameter (Int, String, etc). ,
+The following example has a 
+function that takes a , called , as parameter.
+When the function is called, we pass along a first name,
+which is used inside the function to print the full name:
+,You can have as many parameters as you like:,In the examples above, we used functions to output a value. In the following example, we will use a function to 
+,a value and assign it to a variable.,To return a value, use the , keyword, and specify the 
+, after 
+the function's parantheses (, in this example):,Using two parameters:,There is also a shorter syntax for returning values. You can use the , operator instead of , 
+without specifying the return type. Kotlin is smart enough to automatically find out what it is:",,,
+Kotlin ,Exercises,"Exercises,Count Your Score",,"You can test your Kotlin skills with W3Schools' Exercises.,We have gathered a variety of Kotlin exercises (with answers) for each Kotlin Chapter.,Try to solve an exercise by editing some code, or show the answer to see what you've done wrong.,You will get 1 point for
+each correct answer. Your score and total score will always be displayed.",,,
+Kotlin ,Ranges,"Kotlin Ranges,Check if a Value Exists,Break or Continue a Range","Example,Example,Example,Example,Example,Example","With the ,, you can also create 
+, of values with "","":,You can also create ranges of numbers:,You can also use the , operator to check if a value exists in 
+a range:,You can also use the , and , keywords in a range/, loop:",,,
+Kotlin ,Inheritance,"Kotlin Inheritance (Subclass and Superclass),Example Explained",Example,"In Kotlin, it is possible to inherit class properties and functions from one class to another. We group the ""inheritance concept"" into two categories:,In the example below, , (subclass) inherits the 
+properties from the , class 
+(superclass):,Use the , keyword in front of the ,/parent, 
+to make this the class other classes should inherit properties and functions from.,To inherit from a class, specify the name of the ,, followed by a colon ,, 
+and then the name of the ,."," (child) - the class that inherits from another class, (parent) - the class being inherited from",,
+Kotlin ,Compiler,"Kotlin Compiler (Editor),Kotlin Compiler Explained",,"With our online Kotlin compiler, you can edit Kotlin code, and view the result in your browser.,Click on the ""Try it Yourself"" button to see how it works.,The window to the left is editable - edit the code and click on the ""Run"" button to view the result in the right window.,The icons are explained in the table below:",,,
+Kotlin ,Examples,"Kotlin Syntax and Output,Kotlin Comments,Kotlin Variables,Kotlin Data Types,Kotlin Operators,Kotlin Strings,Kotlin Booleans,Kotlin If...Else,Kotlin When,Kotlin While Loop,Kotlin While Loop,Kotlin Arrays,Kotlin For Loops,Kotlin Ranges,Kotlin Functions,Kotlin Classes",,,,,
+Kotlin ,Classes and Objects,"Kotlin Classes/Objects,Create a Class,Create an Object,Multiple Objects","Example,Example,Example","Everything in Kotlin is associated with classes and objects, along with its properties and 
+functions. For example: in real life, a car is an ,. The car has ,, such as 
+brand, weight and color, and ,, such as drive and brake. ,A Class is like an object constructor, or a ""blueprint"" for creating objects.,To create a class, use the , keyword, and specify the name of the class:,Now we can use the class named , to create objects.,In the example below, we create an object of , called
+,, and then we access the properties of , by 
+using the dot syntax (,), just like we did to 
+access array and string properties:,You can create multiple objects of one class:",,,
+Kotlin ,Class Functions,"Kotlin Class Functions,Class Function Parameters","Example,Example","You can also use , inside a class, to perfom certain actions:,Just like with regular functions, you can pass parameters to a class function:",,,
+Kotlin ,For Loop,"Kotlin For Loop,Traditional For Loop","Example,Example","Often when you work with arrays, you need to loop through all of the 
+elements.,To loop through array elements, use the , 
+loop together with the , operator:,You can loop through all kinds of arrays. In the example above, we used an array of strings. ,In the example above, we loop through an array of integers:,Unlike Java and other programming languages, there is no traditional , loop 
+in Kotlin.,In Kotlin, the , loop is used to loop through arrays, ranges, and other 
+things that contains a 
+countable number of values.,You will learn more about , in the next chapter - which 
+will create a range of values.",,,
+Kotlin ,Arrays,"Kotlin Arrays,Access the Elements of an Array,Change an Array Element,Array Length / Size,Check if an Element Exists,Loop Through an Array","Example,Example,Example,Example,Example,Example","Arrays are used to store multiple values in a single variable, instead of 
+creating separate variables for each 
+value.,To create an array, use the , function, and place the 
+values in a comma-separated list inside it:,You can access an array element by referring to the ,, 
+inside ,.,In this example, we access the value of the first element in cars:,To change the value of a specific element, refer to the index number:, 
+To find out how many elements an array have, use the , property:,You can use the , operator to check if an element exists in 
+an array:,Often when you work with arrays, you need to loop through all of the 
+elements.,You can loop through the array elements with the , 
+loop, which you will learn even more about in the next chapter.,The following example outputs all elements in the , 
+array:",,,
+Kotlin ,Constructors,Kotlin Constructor,"Example,Example,Example","In the previous chapter, we created an object of a class, and specified the properties inside the class, like this:,In Kotlin, there's a faster way of doing this, by using a ,.,A 
+constructor is like a special ,, and it is defined by using two parantheses , 
+after the class name. You can specify the properties inside of the parantheses (like passing 
+parameters into a regular function).,The constructor will initialize the properties when you create an object of a class. Just remember to specify the 
+type of the property/variable:,Now it's even easier to specify multiple objects of one class:",,,
+Kotlin ,Break and Continue,"Kotlin Break,Kotlin Continue","Example,Example","The , statement is used to jump out of a 
+,.,This example jumps out of the loop when i is equal to 4:,The , statement breaks one iteration (in the loop), if a specified condition occurs, and continues with the next iteration in the loop.,This example skips the value of 4:",,,
+Kotlin ,While Loop,"Loops,Kotlin While Loop,The Do..While Loop","Syntax,Example,Syntax,Example","Loops can execute a block of code as long as a specified condition is reached.,Loops are handy because they save time, reduce errors, and they make code more readable.,The , loop loops through a block of code as long as a specified condition is ,:,In the example below, the code in the loop will run, over and over again, as long as 
+the counter variable (i) is less than 5:,The , loop is a variant of the , loop. This loop will 
+execute the code block once, before checking if the condition is true, then it will
+repeat the loop as long as the condition is true.,The example below uses a , loop. The loop will always be 
+executed at least once, even if the condition is false, because the code block 
+is executed before the condition is tested:",,,
+Kotlin ,When,Kotlin when,Example,"Instead of writing many , expressions, you can use the , 
+expression, which is much easier to read.,It is used to select one of many code blocks to be executed:,This is how it works:","The , variable (,) is evaluated once,The value of the , variable is compared with the values of each ""branch"",Each branch starts with a value, followed by an arrow (->) and a result,If there is a match, the associated block of code is executed, is used to specify some code to run if there is no match,In the example above, the value of , is ,, meaning ""Thursday"" will be printed",,
+Kotlin ,If ... Else,"Kotlin Conditions and If..Else,Kotlin if,Kotlin else,Kotlin else if ,Kotlin If..Else Expressions","Syntax,Example,Example,Syntax,Example,Syntax,Example,Example,Example","Kotlin supports the usual logical conditions from mathematics:,You can use these conditions to perform different actions for different decisions.,Kotlin has the following conditionals:, Unlike Java, , can be used as a 
+, or as an , (to assign a 
+value to a variable) in Kotlin. See 
+an example at the bottom of the page to better understand it.,Use , to specify a block of code to be executed if a condition is ,.,In the example below, we test two values to find out if 20 is greater than 
+18. If the condition is ,, print some text:,We can also test variables:,In the example above we use two variables, , and ,, 
+to test whether x is greater than y 
+(using the , operator). As x is 20, and y is 18, and we know that 20 is greater than 18, we print to the screen that ""x is greater than y"".,Use , to specify a block of code to be executed if the condition is ,.,In the example above, time (20) is greater than 18, so the condition is ,, 
+so we move on to the , condition and print to the screen ""Good 
+evening"". If the time was less than 18, the program would print ""Good day"".,Use , to specify a new condition if the first condition is ,.,In the example above, time (22) is greater than 10, so the , is ,. The next condition, in the  
+, statement, is also ,, so we move on to the ,
+condition since , and , is both , - and print to the screen ""Good 
+evening"".,However, if the time was 14, our program would print ""Good day."",In Kotlin, you can also use , statements as expressions 
+(assign a value to a variable and return it):, You can ommit the curly braces , 
+when , has only one statement:, This example is similar to the ""ternary operator"" (short hand if...else) in Java.","Less than: ,Less than or equal to: ,Greater than: ,Greater than or equal to: ,Equal to ,Not Equal to: ,Use , to specify a block of code to be executed, if a specified condition is true,Use , to specify a block of code to be executed, if the same condition is false,Use , to specify a new condition to test, if the first condition is false,Use , to specify many alternative blocks of code to be executed",,
+Kotlin ,Strings,"Kotlin Strings,Access a String,String Length,String Functions,Comparing Strings,Finding a String in a String,Quotes Inside a String,String Concatenation,String Templates/Interpolation","Example,Example,Example,Example,Example,Example,Example,Example,Example,Example,Example,Example","Strings are used for storing text.,A string contains a collection of characters surrounded by double quotes:,Unlike ,, you do not have to specify that the variable should be a ,. Kotlin is smart enough to understand that the greeting variable in the example 
+above is a , because of the double quotes.,However, just like with other data types, you can specify the type if you insist:, If you want to create a , without assigning the value (and assign the value later), you must specify the type while declaring the variable:,To access the characters (elements) of a string, you must refer to the , 
+inside ,String indexes start with 0. In the example below, we access the first and third element in ,:,A String in Kotlin is an object, which contain properties and functions that can perform certain operations on strings, 
+by writing a dot character (,) after the specific string variable. For example, the length of a string can be found with the , 
+property:,There are many string functions available, for example , and ,:,The , function 
+compares two strings and returns 0 if both are equal:,The , function returns the , (the position) 
+of the first occurrence of a specified text in a string 
+(including whitespace):,To use quotes inside a string, use single quotes (,):,The , operator can be used between strings to add them together to make a new 
+string. This is called ,:,You can also use the , function to concatenate two strings:,Instead of concatenation, you can also use ""string templates"", which is an 
+easy way to add variables and expressions inside a string.,Just refer to the variable with the , symbol:",,,
+Kotlin ,Operators,"Kotlin Operators,Arithmetic Operators,Kotlin Assignment Operators,Kotlin Comparison Operators,Kotlin Logical Operators","Example,Example,Example,Example","Operators are used to perform operations on variables and values.,The value is called an operand, while the operation (to be performed between the two operands) is defined by an ,:,In the example below, the numbers 100 and 50 are ,, and the
+, sign is an ,:,Although the , operator is often used to add together two values, like in the example above, it can also be used to add together a variable and a value, or a variable and a variable:,Kotlin divides the operators into the following groups:,Arithmetic operators are used to perform common mathematical operations.,Assignment operators are used to assign values to variables.,In the example below, we use the , operator (,) 
+to assign the value , to a variable called ,:,The , operator (,) adds a value to a variable:,A list of all assignment operators:,Comparison operators are used to compare two values, and returns a , 
+value: either , or ,.,You will learn much more about Booleans in the , chapter and 
+,.,Logical operators are used to determine the logic between variables or 
+values:","Arithmetic operators,Assignment operators,Comparison operators,Logical operators",,
+Kotlin ,Booleans,"Kotlin Booleans,Boolean Values,Boolean Expression","Example,Example,Example,Example,Example,Example","Very often, in programming, you will need a data type that can only have one of two values, like:,For this, Kotlin has a , data type, which can take the values , or ,.,A boolean type can be declared with the , keyword and can only take the values , or ,:,Just like you have learned with other data types in the previous chapters, the example above can also be written without specifying the type, as Kotlin is smart enough to understand that the variables are Booleans:,A Boolean expression ,a Boolean value: , or ,.,You can use a comparison operator, such as the , (,) operator to find out if an expression (or a variable) is true:,Or even easier:,In the examples below, we use the , (,) operator to evaluate an expression:","YES / NO,ON / OFF,TRUE / FALSE",,
+Kotlin ,Data Types,"Kotlin Data Types,Numbers,Integer Types,Difference Between Int and Long,Floating Point Types,Booleans,Characters,Strings,Arrays,Type Conversion","Example,Example,Example,Example,Example,Example,Example,Example,Example,Example,Example,Example,Example,Example","In Kotlin, the , of a variable is decided by its value:,However, you learned from the previous chapter that it is possible to specify the type if you want:,Sometimes you have to specify the type, and often you don't. Anyhow, it is 
+good to know what the different types represent.
+,You will learn more about ,to specify the type later.,Data types are divided into different groups:,Number types are divided into two groups:, store whole numbers, positive or negative (such as 123 or -456), without decimals. 
+Valid types are ,, ,, , 
+and ,., represent numbers with a fractional part, 
+containing one or more decimals. There are two types: , and ,.,The , data type can store whole numbers 
+from -128 to 127. This can be used instead of , or other integer types to 
+save memory when you are certain that the value will be within -128 and 127:,The , data type can store whole numbers from -32768 to 32767:,The , data type can store whole numbers 
+from -2147483648 to 2147483647:,The , data type can store whole numbers from -9223372036854775808 to 9223372036854775808. This is used when 
+, is not large enough to store the value. 
+Optionally, you can end the value with an ""L"":,A whole number is an , as long as it is up to 2147483647. If it goes beyond 
+that, it is defined as ,:,Floating point types represent numbers with a decimal, such as 9.99 or 3.14515.,The , data type can store fractional numbers from 3.4e−038 to 3.4e+038. Note that you should end the value with an ""F"":,The , data type can store fractional 
+numbers from 1.7e−308 to 1.7e+038:,A floating point number can also be a scientific number with an ""e"" or ""E"" to indicate the power of 10:,The , data type and can only take the values , or ,:,Boolean values are mostly used for conditional testing, which you will learn more about in a later chapter.,The , data type is used to store a 
+, character. A char value must be 
+surrounded by , quotes, like 'A' or 'c':,Unlike Java, you cannot use ASCII values to display certain characters. The 
+value 66 would output a ""B"" in Java, but will generate an error in Kotlin:,The , data type is used to store a sequence of characters (text). String values must be surrounded by 
+, quotes:,You will learn more about strings in ,.,Arrays are used to store multiple values in a single variable, instead of declaring separate variables for each value.,You will learn more about arrays in ,.,Type conversion is when you convert the value of one data type to another type.,In Kotlin, numeric type conversion is different from ,. For example, it is not possible to convert an , type to a , type with the following code:,To convert a numeric data type to another type, you must use one of the following functions: ,, ,, ,, ,, ,, , or ,:","Numbers,Characters,Booleans,Strings,Arrays",,
+Kotlin ,Variables,"Kotlin Variables,Variable Type,Notes on ,Display Variables,Variable Names","Syntax,Example,Example,Example,Example,Example,Example,Example,Example,Example","Variables are containers for storing data values.,To create a variable, use , or ,, and assign a value to it with the equal sign (,):,The difference between , and , is that variables declared 
+with the , keyword 
+,, while , variables 
+,.,Unlike many other programming languages, variables in Kotlin do not need to be declared with a specified 
+, (like ""String"" for text or ""Int"" for numbers, if you are familiar with those).,To create a variable in Kotlin that should store text and another that should store a number, look at the following example:,Kotlin is smart enough to understand that , is a , (text), and that , is an , 
+(number) variable.,However, it is possible to specify the type if you insist:,You can also declare a variable without assigning the value, and assign the 
+value later. ,, this is only possible when you specify the type:,When you create a variable with the , keyword, the value 
+  , be changed/reassigned.,The following example will generate an error:,When using ,, you can change the value whenever you want:,Like you have seen with the examples above, the , method is often used to display variables.,To combine both text and a variable, use the , character:,You can also use the , character to add a variable to another variable:,For numeric values, the , character works as 
+a mathematical operator:,From the example above, you can expect:,A variable can have a short name (like x and y) or more descriptive names (age, sum, totalVolume).,The general rule for Kotlin variables are:","x stores the value 5,y stores the value 6,Then we use the , method to display the value of x + y, 
+ which is ,Names can contain letters, digits, underscores, and dollar signs,Names should start with a letter,Names can also begin with $ and _ (but we will not use it in this tutorial),Names are case sensitive (""myVar"" and ""myvar"" are different variables),Names should start with a lowercase letter and it cannot contain whitespace,Reserved words (like Kotlin keywords, such as , or 
+  ,) cannot be used as names",,
+Kotlin ,Comments,"Kotlin Comments,Single-line Comments,Multi-line Comments","Example,Example,Example","Comments can be used to explain Kotlin code, and to make it more readable. It can also be used to 
+prevent execution when testing alternative code.,Single-line comments starts with two forward slashes (,).,Any text between , and the end of the line 
+is ignored by Kotlin (will not be executed).,This example uses a single-line comment before a line of code:,This example uses a single-line comment at the end of a line of code:,Multi-line comments start with , and ends with ,.,Any text between , and , will be ignored by Kotlin.,This example uses a multi-line comment (a comment block) to explain the code:",,,
+Kotlin ,Output (Print Text),"Kotlin Output (Print),The print() function","Example,Example,Example,Example","The , function is used to output values/print text:,You can add as many , functions as you want. Note that it will add a new line for each function:,You can also print numbers, and perform mathematical calculations:,There is also a , function, which is similar to ,. The only difference is that it does not insert a new line at the end of the output:",,,
+Kotlin ,Get Started,"Kotlin IDE,Kotlin Install,Learning Kotlin At W3Schools",Main.kt,"The easiest way to get started with Kotlin, is to use an IDE.,An IDE (Integrated Development Environment) is used to edit and compile code.,In this chapter, we will use IntelliJ (developed by the same people that created Kotlin) which is free to download from ,.,Once IntelliJ is downloaded and installed, click on the 
+, button to get started with IntelliJ:,Then click on ""Kotlin"" in the left side menu, and enter a name for your project:,Next, we need to install something called JDK (Java Development Kit) to get 
+our Kotlin project up and going. Click on the ""Project JDK"" menu, select ""Download JDK"" and select a version and vendor (e.g. AdoptOpenJDK 11)
+and click on the ""Download"" button:,When the JDK is downloaded and installed, choose it from the select menu and 
+then click on the ""Next"" button and at last ""Finish"":,Now we can start working with our Kotlin project. Do not worry about all of the different buttons and functions in 
+IntelliJ. For now, just open the src (source) folder, and follow the same steps as in the image below, to create a kotlin file:,Select the ""File"" option and add a name to your Kotlin file, for example ""Main"":,You have now created your first Kotlin file (Main.kt). Let's add some Kotlin code to it, and run the program to see how it works. Inside the Main.kt file, add the following code:,Don't worry if you don't understand the code above - we will discuss it in detail in later chapters. For now, lets focus on how to run the code. Click on the Run button 
+at the top navigation bar, then click ""Run"", and select ""Mainkt"". ,Next, IntelliJ will build your project, and run the Kotlin file. The output 
+will look something like this:,As you can see, the output of the code was ""Hello World"", meaning that you have now written and executed your first Kotlin program!,When learning Kotlin at w3schools.com, you can use our ""Try it Yourself"" tool, which shows both the code and the result. This will make it easier for 
+you to understand every part as we move forward:",,,
+Kotlin ,Introduction,"What is Kotlin?,Why Use Kotlin?,Get Started",,"Kotlin is a modern, trending programming language that was released in 2016 
+by JetBrains.,It has become very popular since it is compatible with , (one of the most popular programming languages out there), which means that Java code (and libraries) can be 
+used in Kotlin programs.,Kotlin is used for:,This tutorial will teach you the very basics of Kotlin.,It is not necessary to have any prior programming experience.","Mobile applications (specially Android apps),Web development,Server side applications,Data science,And much, much more!,Kotlin is fully compatible with Java,Kotlin works on different platforms (Windows, Mac, Linux, Raspberry Pi, etc.),Kotlin is concise and safe,Kotlin is easy to learn, especially if you already know Java,Kotlin is free to use,Big community/support",,
+Kotlin ,Syntax,"Kotlin Syntax,Main Parameters","Example,Example","In the previous chapter, we created a Kotlin file called ,, and we used the following code to print ""Hello World"" to the screen:,The , keyword is used to declare a function. A function is a block of code designed to perform a particular task. In the example above, it declares the , function.,The , function is something you will 
+see in every Kotlin program. This function is used to , code. Any code inside the , function's curly brackets , will be ,.,For example, the , function is inside the , function, meaning that this will be executed. The , function is used to output/print text, and in our example it will output ""Hello World"".,Before Kotlin version 1.3, it was required to use the , function with parameters, like: ,. 
+The example above had to be written like this to work:, This is no longer required, and the program will run fine without it. However, it will not do any harm if you have been using it in the past, and will continue to use it.",,,

@@ -1,0 +1,173 @@
+H1_leftside_heading,H1_rightside_heading,H2,H3,All_para,li,div,div_2
+,Colors Tutorial,"Color Names,CSS Color Values,RGB Colors,Hexadecimal Colors,Upper Case or Lower Case?,Color Names,The currentcolor Keyword","Example,Example,Example,Example,Example,Example","With CSS, colors can be set by using color names:,With CSS, colors can be specified in different ways:,RGB color values are supported in all browsers.,Each parameter defines the intensity of the color as an integer between 0 and 255.,For example, rgb(0,0,255) is rendered as blue, 
+because the blue parameter is set to its highest value (255) and the others are set to 0.,Shades of gray are often defined using equal values for all the 3 light sources:,Hexadecimal color values are also supported in all browsers.,.,RR (red), GG (green) and BB (blue) are hexadecimal integers between 00 and 
+FF specifying the intensity of the color.,For example, #0000FF is displayed as blue, because the blue component is set to its highest value (FF) and the others are set to 
+00.,Shades of gray are often defined using equal values for all the 3 light sources:,You can use upper case or lower case letters to specify hexadecimal values.
+,CSS supports 140 standard color names.,In the next chapter you will find a complete alphabetical list of color names 
+with hexadecimal values:,The , keyword refers to the value of the color property of an element.","By color names,As RGB values,As hexadecimal values,As HSL values (CSS3),As HWB values (CSS4),With the , keyword",,
+Colors ,CMYK,"CMYK Colors,HTML Support,Try it Yourself,W3Schools Color Library",Example,"CMYK is a suggested standard for CSS4.,CMYK colors is a combination of CYAN, MAGENTA, YELLOW , and BLACK.,Computer screens display colors using RGB color values. Printers often presents colors using CMYK color values.,CMYK is not supported in HTML, but it is suggested as a new standard in CSS4.,While waiting for CSS4, you can include W3Schools' Color library, and use CMYK as an HTML attribute like this:,The JavaScript library used in the example above can be downloaded from:",,,
+Colors ,HWB,"HTML Support,W3Schools Color Library",Example,"HWB (Hue, Whiteness, Blackness) is a suggested standard for CSS4.,HWB is not supported in HTML (yet), but it is suggested as a new standard in CSS4. ,While waiting for CSS4, you can include W3Schools' Color library, and use HWB as an HTML attribute like this:,The JavaScript library used in the example above can be downloaded from",,"
+<div 
+ data-w3-color=""hwb(60, 50%, 0)"">,
+<p>London is the capital city of England.,
+It is the most populous city in the United Kingdom,,
+with a metropolitan area of over 13 million inhabitants.</p>,
+</div>,<script src=""/lib/w3color.js""></script>
+",
+Color ,Schemes,"Achromatic Color Schemes,Monochromatic Color Schemes,Analogous Color Schemes,Complementary Color Schemes,Triadic,Compound (aka Split Complementary) Color Scheme",,,,,
+Colors ,HSL,"HSL Colors,Hue,Saturation,Lightness,Try it Yourself",Example,"HSL color values are supported in IE9+, Firefox, Chrome, Safari, and in Opera 
+10+.,HSL stands for hue, saturation, and lightness.,HSL color values are specified with: ,.,Hue is a degree on the color wheel from 0 to 360. 0 is red, 120 
+is green, 240 is blue.,Saturation is a percentage value; 0% means a shade of 
+gray and 100% is the full color.,Lightness is also a percentage; 0% is black, 
+100% is white.,HSL color values are supported in all major browsers.",,,
+Color ,Theory,"What is Color Theory?,The Color of Light,The Color of Paint,Color Systems,Primary Colors,Secondary Colors",,"Color theory is a multitude of categories, definitions and concepts.,This tutorial covers the parts that are most useful for web design:,Sir Isaac Newton developed the theory 
+that all colors are mixtures of ,, ,, and , light.,This resulted in the first known color circle in 1666.,In 1766 the scientist Moses Harris created the first color wheel to classify 
+,, ,, and , as the primary colors.,Moses Harris worked with paint (Newton worked with light) following a theory (by a French painter) that all 
+colors are mixtures of Red, Yellow, and Blue pigments.,In this tutorial we will cover 3 different color systems:,Primary colors are the , in a given color system.,Primary colors can not be produced by mixing other colors a color system.,The primary colors for , are Red, Green, and Blue:,The primary colors for , are Cyan, Magenta, and Yellow:,The primary colors for , are Red, Yellow, and Blue:,Secondary colors are made by , in a color system,There are 3 secondary colors in the color systems described here.,Secondary colors are Yellow, Cyan Magenta.,Secondary colors are Blue, Red, Green.,Secondary colors are Orange, Green, Purple.","Primary, Secondary, and Tertiary Colors,Color Wheels (RGB, CMY, RYB),Color Hue, Lightness and Saturation,The color system used when producing colors by light (RGB),The color system used when printing (CMY),The color system used by artist and painters (RYB),Red-Orange,Yellow-Orange,Yellow-Green,Blue-Green,Blue-Purple,Red-Purple",,
+Color ,Wheels,"Color Wheels,Three Important Color Wheels,The RGB Color Wheel,The CMY(K) Color Wheel,The RYB Color Wheel",,"A color wheel is an illustrative organization of colors around a circle,
+showing the relationships between primary colors, secondary colors, and tertiary colors.,How many ways can you rearrange the rainbow?,.,.,The tertiary colors are made by mixing two secondary colors.,The 6 tertiary colors are Red-Orange, Yellow-Orange, Yellow-Green, Blue-Green, Blue-Purple, Red-Purple ",,,
+Colors ,NCol,"Natural Colors (NCol),HTML Support,W3Schools Color Library,Why NCol?",Example,"Natural colors (NCol) is an initiative from W3Schools.,The system is designed to make it easier to select HTML colors.,NCol specifies colors using a color letter with a number to specify the distance (in percent) from the color.,R30 means 30% away from , , moving towards ,. (In other words: Red with 30% Yellow),Color and distance can also be given in hues (0-360):,NCol is not supported in HTML, but it is very close to the new HWB 
+color system suggested in CSS4.,While waiting for CSS4, you can include W3Schools' Color library, and use NCol as an HTML attribute like this:,The JavaScript library used in the example above can be downloaded from,Trying to explain colors using RGB or HEX notation is very difficult.,Can you tell what color rgb(199,21,133) is?,RGB is based on how to physically produce colors by mixing light sources., ,Because of this, NCol makes it much easier to describe colors. ,Natural colors were first described by Karl Ewald Konstantin Hering (Germany 
+1834 - 1918).",,"
+<div 
+ data-w3-color=""R50,50%,0"">,
+<p>London is the capital city of England.,
+It is the most populous city in the United Kingdom,,
+with a metropolitan area of over 13 million inhabitants.</p>,
+</div>
+,<script src=""/lib/w3color.js""></script>",
+"The , Keyword",currentcolor,The currentcolor Keyword,Example,"The , keyword refers to the value of the color property of an element.",,,
+Color Gradient,,,,,,,
+Colors ,HEX,"Hexadecimal Colors,Try it Yourself",Example,"Hexadecimal color values are also supported in all browsers.,A hexadecimal color is specified with: #RRGGBB.,RR (red), GG (green) and BB (blue) are hexadecimal integers between 00 and 
+FF specifying the intensity of the color.,For example, #0000FF is displayed as blue, because the blue component is set to its highest value (FF) and the others are set to 
+00.,Hexadecimal color values are supported in all browsers.",,,
+Color ,"Hues, Tints, Shades, and Tones","Color Hue,Color Value (Lightness / Darkness),Color Saturation",,"Hue is just another word for color.,Simply put: Each position around the color wheel represents a different hue:,You can experiment with hue values using our ,.,Color value is a term for how light or dark dark a color is (from white to black),These 3 examples changes the lightness and darkness for red, orange, and yellow hues:,You can experiment with lightness and darkness for the same hue using our ,.,Saturation is about intensity.,Highly saturated colors are bright. Desaturated colors have less pigment.,These 3 examples changes the saturation for red, orange, and yellow hues:,You can experiment with saturation values for the 
+same hue using our ,.",,,
+Colors ,RGB,"RGB Colors,Try it Yourself",Example,"RGB color values are supported in all browsers.,An RGB color value is specified with: rgb(red, green, blue).,Each parameter (red, green, and 
+blue) defines the intensity of the color as an integer between 0 and 255.,For example, rgb(0, 0, 255) is rendered as blue, 
+because the blue parameter is set to its highest value (255) and the others are set to 0.,RGB color values are supported in all major browsers.",,,
+Color ,Converter,W3Color JavaScript Library,,The JavaScript library used in the color converter can be downloaded from,,,
+Colors - XKCD,,XKCD Color Names,,"XKCD is a popular web comic created by Randall Munroe.,His "","" (with 200 000 participants) resulted in a list of nearly 
+1000 color names.,The color names cannot be used in HTML.,These hex values are non official approximate values intended to simulate the colors in HTML:,Source: ",,,
+Colors Crayola,,,,"
+Crayola is a famous color pencil and crayon producer.,
+,Their color names are often creative and funny (with no evidence of being real names).,Source: ",,,
+Colors - X11,,X11 Colors,,"This list of X11 color names was developed at the Massachusetts Intitute of Technology (MIT)
+during the development of color based computer display system:",,,
+Colors - ISCC/NBS,,NBS-ISCC Color Names,,"ISCC-NBS is a system for color names based on a set of 12 color terms and a small set of 
+adjectives.,It was first established by ISCC (Inter-Society Color Council) in the 1930s by 
+delegates from American trade organizations and the National Bureau of Standards.,Source: ",,,
+Colors - RAL,,"The RAL Color Standard,RAL Signal Colors,RAL Traffic Colors,RAL Colors",Example,"RAL is used for defining standard colors for paint and coatings.,It is one of the most popular European color standard used today.,The colors are used in architecture, construction, industry and road safety.,The numbers in parentheses are references to
+the RAL Color Standard.,The hex values are non official approximate values intended to simulate 
+signal colors in HTML.,The numbers in parentheses are references to
+the RAL Color Standard.,The hex values are non official approximate values intended to simulate 
+traffic colors in HTML.,Source: ",,"
+<div style=""color:#fff;background-color:#a02128"">STOP</div>,<div 
+ style=""color:#fff;background-color:#d4652f"">WAIT</div>,<div 
+ style=""color:#fff;background-color:#317f43"">GO</div>",
+Colors - Resene,,Colors Sorted by Hue,,"The color names cannot be used in HTML.,These hex values are non official approximate values intended to simulate Resene colors in HTML:,The Resene Paints Limited color palettes is public available on the web:",,,
+Colors - NCS,,"HTML Support,W3Schools Color Library,More Examples,NCS Colors Ordered by Blackness",Example,"The Natural Color System (NCS) is the color standard (for interior design, decorating, 
+and painting) in Sweden, Spain, Norway and South Africa.,The NCS standard is unique because it is based entirely on 
+the perception of colors (how 
+eyes naturally see red, yellow, blue, green, white, and black).,NCS does not use color names. It uses letters and numbers to describe , color.,Example: The Swedish flag is blue and yellow. With NCS it can be described like 
+this:,
+,NCS colors , be used directly in HTML, because HTML 
+processes color values 
+differently.,However, the numeric values of NCS can be used to 
+compute ""look alike"" HTML colors. ,Using W3Schools' color library (w3color.js), you can use NCS colors as HTML attributes like this:,The JavaScript library used in the example above can be downloaded from,(The #hex values are non official approximate values intended to simulate NCS colors in HTML),Source : ",,"
+<div 
+ data-w3-color=""ncol(0580-Y10R)"">,
+<p>London is the capital city of England.,
+It is the most populous city in the United Kingdom,,
+with a metropolitan area of over 13 million inhabitants.</p>,
+</div>
+,<script src=""/lib/w3color.js""></script>",
+Colors - Australia,,"Australian Color Standard,Blue Colors",,"Before 1985, Australians used the British color standard BS 381C.,In 1985 the Australian Independent Colour Standard AS 2700 was created:,The codes (or names) cannot be used in HTML.,These hex values are non official approximate values intended to simulate AS 2700 colors in HTML:",,,
+Colors - British Standard,,"BRITISH STANDARD 4800,EXTENDED BRITISH STANDARD BS 4800",,"The British Standards for colors is called BS 381.,These hex values are non official approximate values intended to simulate the BS 
+381 in HTML:,The BS 4800 standard specifies 122 colors for building and construction 
+works.,The colors where intended for major works, such as office blocks, airports, 
+schools and hospitals.,These hex values are non official approximate values intended to simulate the British Standard 4800 in HTML:,The BS 4800 also includes 22 additional bright colors to reflect the latest 
+trends for public buildings.,Most of the these colors are recognized  in the UK, and often used to 
+meet safety, legal or contractual requirements.,These hex values are non official approximate values intended to simulate the 
+BS 4800 extensions in HTML:",,,
+Colors - FS 595,,"The FS 595 Color Standard,FS 595 Highway Colors,Downloads,FS 595 Safety Colors,FS 595 Camouflage Colors,ANA Colors (Army Navy Aero),FS 595C","Example,Example,Example,Example,Example,Example,Example,Example","The numbers in parentheses are references to 
+FS 595.,The #hex values are non official approximate values intended to simulate 
+highway colors in HTML:,The w3-highway-, names are references to the color library 
+,:,FS 595 color libraries can be downloaded from: 
+,.,The numbers in parentheses are references to 
+FS 595.,The hex values are non official approximate values intended to simulate 
+safety colors in HTML:,The w3-safety, names are references to the color library 
+,:,The numbers in parentheses are references to FS 595.,The hex values are non official approximate values intended to simulate camouflage colors in HTML:,The w3-camo-, names are references to the color library
+,:,
+,The hex values are non official approximate values intended to simulate ANA colors in HTML:,The values in parentheses are references to the color library ,:,FS 595C is the latest known version of the FS 595 standard.,These hex values are non official approximate values intended to simulate FS 595C colors in HTML:,Source: ",,"
+ <span style=""color:#fff;background-color:#ee9600"">Schoolbus</span>,
+ <span 
+ class=""w3-highway-schoolbus"">Schoolbus</span>,
+ <span style=""color:#fff;background-color:#bd1e24"">DANGER !</span>
+,
+ <span class=""w3-safety-red"">DANGER 
+ !</span>,
+<div style=""color:#fff;background-color:#9495a5"">Camouflaged Ship</div>
+,
+<div class=""w3-camo-gray"">Camouflaged Ship</div>
+,
+<div style=""color:#fff;background-color:#a0333a"">,
+<p>ANA Aircraft Red</p>,
+</div>
+,
+<div 
+ class=""w3-ana-619"">,
+<p>ANA Aircraft Red</p>,
+</div>
+",
+HTML ,Color Picker,"RGB (Red, Green, Blue)",,,,,
+Colors 2018,,"Color of the Year 2018,The Hottest Spring Colors 2018,Classic Spring Colors 2018,The Hottest Fall/Winter Colors 2018,Classic Fall/Winter Colors 2018",,,,,
+Colors 2019,,"Color of the Year 2019,The Hottest Spring/Summer Colors 2019,Autumn/Winter Colors 2019,Classic Autumn/Winter Colors 2019",,,,,
+Colors 2016,,"Colors of the Year 2016,The Hottest Spring Colors 2016,The Hottest Fall Colors 2016",,"The Pantone fashion color report for the Spring 2016 told us that we would wear colors that suggests health, peace, and accessibility because they make us feel comfortable.,The 
+2016 spring hues also reflect our access to modern art and a desire for natural surroundings.,Pantone told us that in the Fall 2016 we would wear colors that suggests 
+strength, confidence, and complexity.,The hues also reflect our desire for tranquility and optimism:",,,
+Colors 2017,,"Color of the Year 2017,The Hottest Spring Colors 2017,The Hottest Fall Colors 2017",,"Pantone told us that in the Spring of 2017 we would wear bright and vivid colors 
+as well as those that convey a sense of earthiness:",,,
+HTML ,Color Mixer,,,Mix two colors and see the result.,,,
+Colors 2020,,"Color of the Year 2020,The Hottest Spring/Sommer Colors 2020,Classic Spring/Sommer Colors 2020,Autumn/Winter Colors 2020,Download the Libraries",,,,,
+Compound Color Schemes,,,,"Compound schemes (aka Split Complementary) are almost the same as complementary schemes.,Instead of using colors that are opposites, it uses colors on both sides of the opposite hue",,,
+Triadic Color Schemes,,,,Triadic schemes are made up of hues equally spaced around the color wheel.,,,
+Colors 2021,,"The Hottest Spring/Sommer Colors 2021,Classic Spring/Sommer Colors 2021,Download the Libraries",,,,,
+Complementary Color Schemes,,,,"Complementary schemes are created by combining colors from opposite sides of the color wheel.,Complementary color schemes mostly consist of two complementary colors expanded with grey tones, tints, and shades.",,,
+Colors of the Year,,Colors of the Year 2015-2000,,,,,
+Analogous Color Schemes,,,,"Analogous color schemes are created by using colors that are next to each other on the color wheel.,If an analogous color scheme does not have enough contrast between the colors (for a nice website design), it can be adjusted to give it more variety.",,,
+Monochromatic Color Schemes,,,,"Monochromatic color schemes are easy to create because they use only one color.,Monochromatic schemes use different tones from the same angle on the color wheel (,).,Monochromatic color schemes are guaranteed to suit each other because they 
+all come from the same family. ",,,
+Color Psychology,,The Perception of Colors,,,"Colors can influence human behavior.,Colors can influence human perceptions.,Colors can influence the taste of food.,Colors can influence attractiveness.",,
+W3.CSS ,Flat UI Colors,Flat UI,Example,Another popular color scheme is Flat UI:,,"
+<div class=""w3-flat-emerald"">,
+  <p>London is the most populous city in the United Kingdom,,
+  with a metropolitan area of over 9 million inhabitants.</p>,
+</div>
+",
+Windows 8 Colors,,Windows 8,Example,"Windows 8 was the first major operating system focused on flat design and modern colors.,This example shows how to use Windows 8 colors with W3.CSS:",,"
+<div class=""w3-win8-lime"">,
+  <p>London is the most populous city in the United Kingdom,,
+  with a metropolitan area of over 9 million inhabitants.</p>,
+</div>
+",
+Windows Metro UI Colors,,Using Metro Colors in W3.CSS,Example,"Metro is the nickname of Microsoft Design Language (MDL).,Metro is focused on flat design and modern colors:,W3.CSS is a modern CSS framework used for styling HTML pages.,These examples shows you how to use Windows Metro colors with W3.CSS:",,"
+<div class=""w3-metro-light-green"">,
+  <p>London is the most populous city in the United Kingdom,,
+  with a metropolitan area of over 9 million inhabitants.</p>,
+</div>
+",
+W3.CSS ,Colors,"W3.CSS Default Color Classes,W3.CSS Text Color Classes,Hover Color Classes",,"W3.CSS is a modern CSS framework used for styling HTML pages.,The default color class used in W3.CSS is inspired by Material Design.,Material Design colors reflect the colors used in marketing, road signs, and sticky notes.,The following W3.CSS color classes can be used on any HTML element:,The following W3.CSS text color classes can be used on any HTML element:,The following W3.CSS hover color classes can be used on any HTML element:",,,
+Color ,Brands,"Intel,Instagram,IBM,Yahoo!,Amazon,Netflix,Coca-Cola,Pepsi,IKEA,Android",,The hex values below are approximate values intended to simulate branded colors.,,,
+Color ,Palettes,,,"On this page you will find some carefully designed color 
+palettes, free to use.",,,
+HTML Color Shades,,"Shades of Gray,Gray / Grey Web Colors,Shades of Red,16 Million Different Colors,Web Safe Colors?",,"Gray colors are displayed using an equal amount of power to all of the light sources.,To make it easy for you to select a gray color we have compiled a table of gray shades for you:,The color names of HTML / CSS was inherited from the ,.,HTML / CSS defined gray at the midpoint of the 8-bit gray scale (128,128,128).,X11 defined gray to be (190,190,190); which is closer to HTML silver.,There are several gray color names in HTML / CSS.,All gray colors are spelled as gray (not grey).,This spelling was inherited from the ,.,All modern browsers accept both gray and grey, but early versions of Internet Explorer did not recognize grey,If you look at the color table below, you will see the result of varying
+the red light from 0 to 255, while keeping the green and blue light at zero.,Click on the hexadecimal values, if you want to analyze the color in our color picker.,The combination of Red, Green and Blue values from 0 to 255 gives a total of
+more than 16 million different colors to play with (256 x 256 x 256).,Most modern monitors are capable of displaying at least 16384 different colors.,Many years ago, when computers supported maximum 256 different colors, a list 
+of 216 ""Web Safe Colors"" was suggested as a Web standard (reserving 40 fixed 
+system colors).,This is not important now, since most computers can display millions of 
+different colors.,This 216 hex values cross-browser color palette was created to ensure that all computers 
+would display the colors correctly when running a 256 color palette:",,,
+HTML Color Groups,,Color Names Sorted by Color Groups,,"All modern browsers support the following 140 color names (click on a color name, or a hex value, to view the color as the background-color along with different text colors):",,,
+HTML Color Values,,Named Colors Sorted by HEX Value,,,,,
+HTML Color Names,,Color Names Supported by All Browsers,,"All modern browsers support the following 140 color names (click on a color name, or a hex value, to view the color as the background-color along with different text colors):",,,

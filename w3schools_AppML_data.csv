@@ -1,0 +1,1142 @@
+H1_leftside_heading,H1_rightside_heading,H2,H3,All_para,li,div,div_2
+ Tutorial,AppML,"Introduction,What is AppML?,Why AppML?,AppML Example,Easy and Agile",AppML Example,"The Web is growing fast, and the amount of data in Cyberspace is growing even faster.,Every day new information systems are developed, and every day new users are connected,
+and data can be accessed 24/7 from anywhere in the world.,.,Along these lines, W3Schools has developed a very flexible technique for retrieving, displaying, and manipulate data,
+without the need for traditional programming.,Cooperating with Jan Egil Refsnes, W3schools has developed a vocabulary for defining Web applications.
+The vocabulary is called AppML (Application Modeling Language).,AppML uses the most up-to-date techniques and ideas of modern Web development with focus on:,AppML supports the functions you find in other frameworks like
+React, Angular, and Vue, but AppML is much easier to use, and much easier to understand.,AppML stands for ,lication ,odeling 
+,anguage.,AppML is not a programming language. It is descriptive language (a language for describing applications).,It is built around familiar Web application concepts like:,AppML runs in any HTML page. No installation is required. ,AppML is a tool for bringing data to HTML applications:,
+,
+,
+,
+,
+,
+,
+,HTML is not very suitable for describing web applications.,AppML is made for web applications:,AppML is very easy to understand and extraordinarily quick to develop.,This example shows how easy AppML can bring data to HTML: ,On today's market, there are many frameworks (tools or libraries) designed to 
+extend HTML.,Most of these frameworks manipulate HTML, CSS or JavaScript in a way that 
+makes them difficult to use (especially when used in combination).,AppML is different. You have 
+full HTML, CSS, and JavaScript freedom.,AppML makes it easy to create Single Page Applications (SPA) in a very clean 
+and efficient way. ,Even if you have never worked with web development before, you will find AppML 
+very easy to use.,If you are an experienced web developer, you will soon discover 
+the power of AppML.","Low Cost,Rapid and Agile Web Develoment,Optimized for Cloud Computing,High Speed and Low Bandwidth Consumption,MVC (Model Viev Controller) Architecture,Full Separation of Content from Presentation ,Highly Scalable and Testable,Easy Configuration and Reconfiguration,Forms,Lists,Reports,Filters,Functions,Databases,From Objects,From JSON files,From Text files,From XML files,From databases,AppML extends HTML with data ,AppML adds , to HTML, to control the behavior of 
+HTML data.","
+<!DOCTYPE html>,
+<html lang=""en-US"">,
+<title>Customers</title>,
+<link rel=""stylesheet"" href=""style.css"">,
+<script src=""https://www.w3schools.com/appml/2.0.3/appml.js""></script>,
+<body>,
+<h1>Customers</h1>,
+<table appml-data=""customers.js"">,
+<tr>,  <th>Customer</th>,
+  <th>City</th>,
+  <th>Country</th>,
+</tr>,
+<tr appml-repeat=""records"">,
+  <td>{{CustomerName}}</td>,
+  <td>{{City}}</td>,
+  <td>{{Country}}</td>,
+</tr>,
+</table>,
+,
+</body>,
+</html>
+",
+,AppML Case Study - Text Files,"The HTML Page,The Model,The File","Model,cd_catalog.txt","This is the HTML source:,This is the model used in the application:,This is the comma separated text file: ",,"
+    <!DOCTYPE html>,<html lang=""en-US"">,
+    <link rel=""stylesheet"" href=""https://www.w3schools.com/w3css/4/w3.css"">,
+    <script src=""https://www.w3schools.com/appml/2.0.3/appml.js""></script>,
+    <body>,
+    <div class=""w3-container"" appml-data=""appml.php?model=model_cd_from_txt"">,
+    <h1>CD Collection</h1>,<h3>Extracted from a comma separated text 
+    file</h3>,<div 
+    appml-include-html=""inc_listcommands_nofilter.htm""></div>,
+    <table class=""w3-table-all"">,  <tr>,    <th>Title</th>,    
+    <th>Artist</th>,    <th>Price</th>,  </tr>,  <tr 
+    appml-repeat=""records"">,    <td>{{Title}}</td>,    <td>{{Artist}}</td>,
+        <td>{{Price}}</td>,  </tr>,
+    </table>,</div>,</body>,</html>",
+,AppML Cases,"Part I: Accessing Internet Files,Part II: Accessing Internet Databases,AppML Browser and AppML Server,Text Files,XML Files,JSON Files,Databases,Customers,Suppliers,Products
+","cd_catalog.txt,cd_catalog.xml,cd_catalog.js","This case study demonstrates how to build Internet 
+applications using AppML.,In this case study, AppML runs both in the browser (appml.js) and on the 
+server (appml.php).,We will use a web server located at 
+,. ,All the files and databases are located on the server.,To demonstrate how to access text files, we have used files like this:,To demonstrate how to access XML files, we have used a files like this:,To demonstrate how to access JSON files, we have used files like this:,Our test database contains several tables like this:","Accessing a TEXT file,Accessing an XML file,Accessing a JSON file,Listing database data,Filtering database data,Editing database data","
+    <?xml version=""1.0"" encoding=""ISO-8859-1""?>,<CATALOG>,<CD>,
+     
+    <TITLE>Empire Burlesque</TITLE>,  <ARTIST>Bob Dylan</ARTIST>,
+     
+    <COUNTRY>USA</COUNTRY>,  <COMPANY>Columbia</COMPANY>,
+     
+    <PRICE>10.90</PRICE>,  <PUBLISHED>1985</PUBLISHED>,</CD>,<CD>,
+     
+    <TITLE>Hide your heart</TITLE>,  <ARTIST>Bonnie Tyler</ARTIST>,
+     
+    <COUNTRY>UK</COUNTRY>,  <COMPANY>CBS Records</COMPANY>,
+     
+    <PRICE>9.90</PRICE>,  <PUBLISHED>1988</PUBLISHED>,</CD>,
+    .,.
+",
+,AppML Case Study - Categories,"The HTML Page,Models","List Model,Form Model","This is the HTML source:,These are the models used in the application:",,"
+    <!DOCTYPE html>,<html lang=""en-US"">,<head>,<meta charset=""utf-8"">,
+    <title>Categories</title>,<link rel=""stylesheet"" 
+    href=""https://www.w3schools.com/w3css/4/w3.css"">,
+    <script src=""https://www.w3schools.com/appml/2.0.3/appml.js""></script>,
+    </head>,<body>,<div class=""w3-container w3-content"">,
+    <h1>Categories</h1>,<div id=""Form01"" class=""w3-container w3-light-grey 
+    w3-padding-large w3-margin-bottom"" 
+    appml-data=""appml.php?model=model_categoriesform"" 
+    appml-controller=""myFormController"" style=""display:none;"">,  <div 
+    appml-include-html=""inc_formcommands.htm""></div>,  <p>,    
+    <label>CategoryName:</label>,    <input id=""CategoryName"" class=""w3-input 
+    w3-border"">,  </p>,  <p>,    <label>Description:</label>,    
+    <input id=""Description"" class=""w3-input w3-border"">,  </p>,</div>,
+    <div appml-data=""appml.php?model=model_categorieslist"">,
+    <div appml-include-html=""inc_listcommands_nofilter.htm""></div>,<table 
+    class=""w3-table-all"">,  <tr>,    <th></th>,    <th>Category</th>,
+        <th>Description</th>,  </tr>,  <tr appml-repeat=""records"">,    
+    <td style=""cursor:pointer"" 
+    onclick=""appml('Form01').run({{CategoryID}})"">&#9998;</td>,    
+    <td>{{CategoryName}}</td>,    <td>{{Description}}</td>,  </tr>,
+    </table>,</div>,</div>,<script>,function 
+    myFormController($appml) {,  if ($appml.message == ""ready"") {return -1;},
+      if ($appml.message == ""loaded"") {,    
+    document.getElementById(""Form01"").style.display = """";,  },},
+    </script>,</body>,</html>",
+,AppML Case Study - Suppliers,"The HTML Page,Models","List Model,Form Model","This is the HTML source:,These are the models used in the application:",,"
+    <!DOCTYPE html>,<html lang=""en-US"">,<head>,<meta charset=""utf-8"">,
+    <title>Suppliers</title>,<link rel=""stylesheet"" 
+    href=""https://www.w3schools.com/w3css/4/w3.css"">,
+    <script src=""https://www.w3schools.com/appml/2.0.3/appml.js""></script>,
+    </head>,<body>,<div class=""w3-container w3-content"">,
+    <h1>Suppliers</h1>,<div id=""Form01"" class=""w3-container w3-light-grey 
+    w3-padding-large w3-margin-bottom"" 
+    appml-data=""appml.php?model=model_suppliersform"" 
+    appml-controller=""myFormController"" style=""display:none;"">,  <div 
+    appml-include-html=""inc_formcommands.htm""></div>,  <p>,    
+    <label>SupplierID:</label>,    <input id=""SupplierID"" class=""w3-input 
+    w3-border"">,  </p>,  <p>,    <label>SupplierName:</label>,    
+    <input id=""SupplierName"" class=""w3-input w3-border"">,  </p>,  <p>,
+        <label>ContactName:</label>,    <input id=""ContactName"" 
+    class=""w3-input w3-border"">,  </p>,  <p>,    
+    <label>Address:</label>,    <input id=""Address"" class=""w3-input 
+    w3-border"">,  </p>,  <p>,    <label>PostalCode:</label>,    
+    <input id=""PostalCode"" class=""w3-input w3-border"">,  </p>,  <p>,    
+    <label>City:</label>,    <input id=""City"" class=""w3-input w3-border"">,
+      </p>,  <p>,    <label>Country:</label>,    <input id=""Country"" 
+    class=""w3-input w3-border"">,  </p>,  <p>,    <label>Phone:</label>,
+        <input id=""Phone"" class=""w3-input w3-border"">,  </p>,</div>,
+    <div appml-data=""appml.php?model=model_supplierslist"">,
+    <div appml-include-html=""inc_listcommands.htm""></div>,<div 
+    appml-include-html=""inc_filter.htm""></div>,
+    <div class=""w3-responsive"">,<table class=""w3-table-all"">,  <tr>,    
+    <th></th>,    <th>Supplier</th>,    <th>City</th>,    
+    <th>Country</th>,    <th></th>,  </tr>,  <tr 
+    appml-repeat=""records"">,    <td style=""cursor:pointer"" 
+    onclick=""appml('Form01').run({{SupplierID}})"">&#9998;</td>,    
+    <td>{{SupplierName}}</td>,    <td>{{City}}</td>,    
+    <td>{{Country}}</td>,    <td><a href='' 
+    onclick=""openProducts({{SupplierID}});return false;"">Products</a></td>,  
+    </tr>,</table>,</div>,</div>,
+    ,<div id=""ProductsSection"" class=""w3-container w3-light-grey"" 
+    appml-data=""appml.php?model=model_productslist"" 
+    appml-controller=""myProductsController"" 
+    style=""display:none;padding:50px;margin-top:30px;"">,<span 
+    onclick=""document.getElementById('ProductsSection').style.display='none';"" 
+    class=""w3-button w3-xxlarge w3-right"">&times;</span>,
+    <h2>{{records[0]['SupplierName']}}</h2>,
+    <div class=""w3-responsive"">,<table class=""w3-table-all"">,  <tr>,    
+    <th>Product</th>,    <th>Category</th>,    <th>Supplier</th>,  
+    </tr>,  <tr appml-repeat=""records"">,    <td>{{ProductName}}</td>,
+        <td>{{CategoryName}}</td>,    <td>{{SupplierName}}</td>,  </tr>,
+    </table>,</div>,</div>,
+    </div>,<script>,function openProducts(id) {,  
+    appml(""ProductsSection"").clearQuery();,  
+    appml(""ProductsSection"").setQuery(""Products.SupplierID"", id); ,  
+    appml(""ProductsSection"").run();,  
+    document.getElementById(""ProductsSection"").style.display = """"; ,},
+    function myFormController($appml) {,  if ($appml.message == ""ready"") 
+    {return -1;},  if ($appml.message == ""loaded"") {,    
+    document.getElementById(""Form01"").style.display = """";,  },},
+    function myProductsController($appml) {,  if ($appml.message == ""ready"") 
+    {return -1;},},</script>,</body>,</html>
+",
+,AppML Case Study - JSON Files,"The HTML Page,The Model,The File","Model,cd_catalog.js","This is the HTML source:,This is the model used in the application:,This is the JSON file:",,"
+    <<!DOCTYPE html>,<html lang=""en-US"">,
+    <link rel=""stylesheet"" href=""https://www.w3schools.com/w3css/4/w3.css"">,
+    <script src=""https://www.w3schools.com/appml/2.0.3/appml.js""></script>,
+    <body>,
+    <div class=""w3-container"" appml-data=""appml.php?model=model_cd_from_json"">,
+    <h1>CD Collection</h1>,<h3>Extracted from a JSON text file</h3>,
+    <div appml-include-html=""inc_listcommands_nofilter.htm""></div>,<table 
+    class=""w3-table-all"">,  <tr>,    <th>Title</th>,    <th>Artist</th>,
+        <th>Price</th>,  </tr>,  <tr appml-repeat=""records"">,    
+    <td>{{Title}}</td>,    <td>{{Artist}}</td>,    <td>{{Price}}</td>,  
+    </tr>,
+    </table>,</div>,</body>,</html>",
+,AppML Case Study - XML Files,"The HTML Page,The Model,The File","Model,cd_catalog.xml","This is the HTML source:,This is the model used in the application:,This is the XML file: ",,"
+    <!DOCTYPE html>,<html lang=""en-US"">,<head>,<meta charset=""utf-8"">,
+    <link rel=""stylesheet"" href=""https://www.w3schools.com/w3css/4/w3.css"">,
+    <script src=""https://www.w3schools.com/appml/2.0.3/appml.js""></script>,
+    </head>,<body>,<div class=""w3-container"" 
+    appml-data=""appml.php?model=model_cd_from_xml"">,
+    <h1>CD Collection</h1>,<h3>Extracted from an XML file</h3>,<div 
+    appml-include-html=""inc_listcommands_nofilter.htm""></div>,<table 
+    class=""w3-table-all"">,  <tr>,    <th>Title</th>,    <th>Artist</th>,
+        <th>Country</th>,  </tr>,  <tr appml-repeat=""records"">,    
+    <td>{{Title}}</td>,    <td>{{Artist}}</td>,    <td>{{Country}}</td>,
+      </tr>,
+    </table>,</div>,</body>,</html>,
+    <?xml version=""1.0"" encoding=""ISO-8859-1""?>,<CATALOG>,<CD>,
+    <TITLE>Empire Burlesque</TITLE>,<ARTIST>Bob Dylan</ARTIST>,
+    <COUNTRY>USA</COUNTRY>,<COMPANY>Columbia</COMPANY>,
+    <PRICE>10.90</PRICE>,<PUBLISHED>1985</PUBLISHED>,</CD>,<CD>,
+    <TITLE>Hide your heart</TITLE>,<ARTIST>Bonnie Tyler</ARTIST>,
+    <COUNTRY>UK</COUNTRY>,<COMPANY>CBS Records</COMPANY>,
+    <PRICE>9.90</PRICE>,<PUBLISHED>1988</PUBLISHED>,</CD>,<CD>,
+    <TITLE>Greatest Hits</TITLE>,<ARTIST>Dolly Parton</ARTIST>,
+    <COUNTRY>USA</COUNTRY>,<COMPANY>RCA</COMPANY>,<PRICE>9.90</PRICE>,
+    <PUBLISHED>1982</PUBLISHED>,</CD>,<CD>,<TITLE>Still got the 
+    blues</TITLE>,<ARTIST>Gary Moore</ARTIST>,<COUNTRY>UK</COUNTRY>,
+    <COMPANY>Virgin records</COMPANY>,<PRICE>10.20</PRICE>,
+    <PUBLISHED>1990</PUBLISHED>,</CD>,<CD>,<TITLE>Eros</TITLE>,
+    <ARTIST>Eros Ramazzotti</ARTIST>,<COUNTRY>EU</COUNTRY>,
+    <COMPANY>BMG</COMPANY>,<PRICE>9.90</PRICE>,<PUBLISHED>1997</PUBLISHED>,
+    </CD>,<CD>,<TITLE>One night only</TITLE>,<ARTIST>Bee Gees</ARTIST>,
+    <COUNTRY>UK</COUNTRY>,<COMPANY>Polydor</COMPANY>,<PRICE>10.90</PRICE>,
+    <PUBLISHED>1998</PUBLISHED>,</CD>,<CD>,<TITLE>Sylvias 
+    Mother</TITLE>,<ARTIST>Dr.Hook</ARTIST>,<COUNTRY>UK</COUNTRY>,
+    <COMPANY>CBS</COMPANY>,<PRICE>8.10</PRICE>,<PUBLISHED>1973</PUBLISHED>,
+    </CD>,<CD>,<TITLE>Maggie May</TITLE>,<ARTIST>Rod Stewart</ARTIST>,
+    <COUNTRY>UK</COUNTRY>,<COMPANY>Pickwick</COMPANY>,<PRICE>8.50</PRICE>,
+    <PUBLISHED>1990</PUBLISHED>,</CD>,<CD>,<TITLE>Romanza</TITLE>,
+    <ARTIST>Andrea Bocelli</ARTIST>,<COUNTRY>EU</COUNTRY>,
+    <COMPANY>Polydor</COMPANY>,
+    <PRICE>10.80</PRICE>,<PUBLISHED>1996</PUBLISHED>,</CD>,<CD>,
+    <TITLE>When a man loves a woman</TITLE>,<ARTIST>Percy Sledge</ARTIST>,
+    <COUNTRY>USA</COUNTRY>,<COMPANY>Atlantic</COMPANY>,<PRICE>8.70</PRICE>,
+    <PUBLISHED>1987</PUBLISHED>,</CD>,<CD>,<TITLE>Black angel</TITLE>,
+    <ARTIST>Savage Rose</ARTIST>,<COUNTRY>EU</COUNTRY>,
+    <COMPANY>Mega</COMPANY>,<PRICE>10.90</PRICE>,
+    <PUBLISHED>1995</PUBLISHED>,</CD>,<CD>,<TITLE>1999 Grammy 
+    Nominees</TITLE>,<ARTIST>Many</ARTIST>,<COUNTRY>USA</COUNTRY>,
+    <COMPANY>Grammy</COMPANY>,<PRICE>10.20</PRICE>,
+    <PUBLISHED>1999</PUBLISHED>,</CD>,<CD>,<TITLE>For the good 
+    times</TITLE>,<ARTIST>Kenny Rogers</ARTIST>,<COUNTRY>UK</COUNTRY>,
+    <COMPANY>Mucik Master</COMPANY>,<PRICE>8.70</PRICE>,
+    <PUBLISHED>1995</PUBLISHED>,</CD>,<CD>,<TITLE>Big Willie 
+    style</TITLE>,<ARTIST>Will Smith</ARTIST>,<COUNTRY>USA</COUNTRY>,
+    <COMPANY>Columbia</COMPANY>,<PRICE>9.90</PRICE>,
+    <PUBLISHED>1997</PUBLISHED>,</CD>,<CD>,<TITLE>Tupelo Honey</TITLE>,
+    <ARTIST>Van Morrison</ARTIST>,<COUNTRY>UK</COUNTRY>,
+    <COMPANY>Polydor</COMPANY>,
+    <PRICE>8.20</PRICE>,<PUBLISHED>1971</PUBLISHED>,</CD>,<CD>,
+    <TITLE>Soulsville</TITLE>,<ARTIST>Jorn Hoel</ARTIST>,
+    <COUNTRY>Norway</COUNTRY>,<COMPANY>WEA</COMPANY>,<PRICE>7.90</PRICE>,
+    <PUBLISHED>1996</PUBLISHED>,</CD>,<CD>,<TITLE>The very best 
+    of</TITLE>,<ARTIST>Cat Stevens</ARTIST>,<COUNTRY>UK</COUNTRY>,
+    <COMPANY>Island</COMPANY>,<PRICE>8.90</PRICE>,
+    <PUBLISHED>1990</PUBLISHED>,</CD>,<CD>,<TITLE>Stop</TITLE>,
+    <ARTIST>Sam Brown</ARTIST>,<COUNTRY>UK</COUNTRY>,<COMPANY>A and 
+    M</COMPANY>,<PRICE>8.90</PRICE>,<PUBLISHED>1988</PUBLISHED>,</CD>,
+    <CD>,<TITLE>Bridge of Spies</TITLE>,<ARTIST>T'Pau</ARTIST>,
+    <COUNTRY>UK</COUNTRY>,<COMPANY>Siren</COMPANY>,<PRICE>7.90</PRICE>,
+    <PUBLISHED>1987</PUBLISHED>,</CD>,<CD>,<TITLE>Private 
+    Dancer</TITLE>,<ARTIST>Tina Turner</ARTIST>,<COUNTRY>UK</COUNTRY>,
+    <COMPANY>Capitol</COMPANY>,<PRICE>8.90</PRICE>,
+    <PUBLISHED>1983</PUBLISHED>,</CD>,<CD>,<TITLE>Midt om 
+    natten</TITLE>,
+    <ARTIST>Kim Larsen</ARTIST>,<COUNTRY>EU</COUNTRY>,
+    <COMPANY>Medley</COMPANY>,<PRICE>7.80</PRICE>,
+    <PUBLISHED>1983</PUBLISHED>,</CD>,<CD>,<TITLE>Pavarotti Gala 
+    Concert</TITLE>,<ARTIST>Luciano Pavarotti</ARTIST>,
+    <COUNTRY>UK</COUNTRY>,<COMPANY>DECCA</COMPANY>,<PRICE>9.90</PRICE>,
+    <PUBLISHED>1991</PUBLISHED>,</CD>,<CD>,<TITLE>The dock of the 
+    bay</TITLE>,<ARTIST>Otis Redding</ARTIST>,<COUNTRY>USA</COUNTRY>,
+    <COMPANY>Atlantic</COMPANY>,<PRICE>7.90</PRICE>,
+    <PUBLISHED>1987</PUBLISHED>,</CD>,<CD>,<TITLE>Picture book</TITLE>,
+    <ARTIST>Simply Red</ARTIST>,<COUNTRY>EU</COUNTRY>,
+    <COMPANY>Elektra</COMPANY>,<PRICE>7.20</PRICE>,
+    <PUBLISHED>1985</PUBLISHED>,</CD>,<CD>,<TITLE>Red</TITLE>,
+    <ARTIST>The Communards</ARTIST>,<COUNTRY>UK</COUNTRY>,
+    <COMPANY>London</COMPANY>,<PRICE>7.80</PRICE>,
+    <PUBLISHED>1987</PUBLISHED>,</CD>,<CD>,<TITLE>Unchain my 
+    heart</TITLE>,<ARTIST>Joe Cocker</ARTIST>,<COUNTRY>USA</COUNTRY>,
+    <COMPANY>EMI</COMPANY>,<PRICE>8.20</PRICE>,<PUBLISHED>1987</PUBLISHED>,
+    </CD>,</CATALOG>
+",
+,AppML API,"What Can Methods and Properties Do?,Example,Some AppML Methods,Some AppML Properties,Some Data Object Properties","Example,Result","The AppML API defines the methods and properties of AppML,With methods and properties you can:, creates a new AppML object., sets the data source of the AppML object., gets the data., contains the 
+data records.,You can loop the records and display the content in an HTML element:","Create AppML applications,Feed applications with data,Fetch application data for use in your web page",,
+,AppML Case Study - Customers,"The HTML Page,Models","List Model,Form Model","This is the HTML source:,These are the models used in the application:",,"
+    <!DOCTYPE html>,<html>,<head>,<link rel=""stylesheet"" 
+    href=""https://www.w3schools.com/w3css/4/w3.css"">,
+    <script src=""https://www.w3schools.com/appml/2.0.3/appml.js""></script>,
+    </head>,<body>,<div class=""w3-container w3-content"">,
+    <h1>Customers</h1>,<div class=""w3-container w3-light-grey 
+    w3-padding-large w3-margin-bottom"" 
+    appml-data=""appml.php?model=model_customersform"" 
+    appml-controller=""myFormController"" id=""Form01"" style=""display:none;"">,  
+    <div appml-include-html=""inc_formcommands.htm""></div>,  <p>,    
+    <label>CustomerName:</label>,    <input id=""customername"" class=""w3-input 
+    w3-border"">,  </p>,  <p>,    <label>ContactName:</label>,    
+    <input id=""contactname"" class=""w3-input w3-border"">,  </p>,  <p>,
+        <label>Address:</label>,    <input id=""address"" class=""w3-input 
+    w3-border"">,  </p>,  <p>,    <label>City:</label>,    <input 
+    id=""city"" class=""w3-input w3-border"">,  </p>,  <p>,    
+    <label>PostalCode:</label>,    <input id=""postalcode"" class=""w3-input 
+    w3-border"">,  </p>,  <p>,    <label>Country:</label>,    <input 
+    id=""country"" class=""w3-input w3-border"">,  </p>,</div>,
+    ,<div appml-data=""appml.php?model=model_customerslist"">,  <div 
+    appml-include-html=""inc_listcommands.htm""></div>,  <div 
+    appml-include-html=""inc_filter.htm""></div>,  <table class=""w3-table-all"">,
+        <tr>,      <th></th>,      <th>Customer</th>,      
+    <th>City</th>,      <th>Country</th>,    </tr>,    <tr 
+    appml-repeat=""records"">,      <td style=""cursor:pointer;width:40px;"" 
+    onclick=""appml('Form01').run({{CustomerID}});"">&#9998;</td>,      
+    <td>{{CustomerName}}</td>,      <td>{{City}}</td>,      
+    <td>{{Country}}</td>,    </tr>,  </table>,</div>,</div>,
+    <script>,function myFormController($appml) {,  if ($appml.message == 
+    ""ready"") {return -1; },  if ($appml.message == ""loaded"") {,    
+    document.getElementById(""Form01"").style.display = """";,  },},
+    </script>,</body>,</html>
+",
+,AppML Case Study - Products,"The HTML Page,Models","List Model,Form Model","This is the HTML source:,These are the models used in the application:",,"
+    <!DOCTYPE html>,<html lang=""en-US"">,<head>,<meta charset=""utf-8"">,
+    <title>Products</title>,<link rel=""stylesheet"" 
+    href=""https://www.w3schools.com/w3css/4/w3.css"">,
+    <script src=""https://www.w3schools.com/appml/2.0.3/appml.js""></script>,
+    </head>,<body>,<div class=""w3-container w3-content"">,
+    <h1>Products</h1>,<div id=""Form01"" class=""w3-container w3-light-grey 
+    w3-padding-large w3-margin-bottom"" style=""display:none;"" 
+    appml-controller=""myFormController"">,  <div 
+    appml-include-html=""inc_formcommands.htm""></div>,  <p>,    
+    <label>ProductName:</label>,    <input id=""ProductName"" class=""w3-input 
+    w3-border"">,  </p>,  <p>,    <label>Supplier:</label>,    <div 
+    appml-data=""appml.php?model=model_dropdown_suppliers"">,      <select 
+    id=""SupplierID"" class=""w3-select w3-border"">,        <option 
+    appml-repeat=""records"" value=""{{SupplierID}}"">{{SupplierName}}</option>,
+          </select>,    </div>,  </p>,  <p>,    
+    <label>Category:</label>,    <div 
+    appml-data=""appml.php?model=model_dropdown_categories"">,      <select 
+    id=""CategoryID"" class=""w3-select w3-border"">,        <option 
+    appml-repeat=""records"" value=""{{CategoryID}}"">{{CategoryName}}</option>,
+          </select>,    </div>,  </p>,  <p>,    <label>Unit:</label>,
+        <input id=""Unit"" class=""w3-input w3-border"">,  </p>,  <p>,    
+    <label>Price:</label>,    <input id=""Price"" onchange=""myValidator(this)"" 
+    class=""w3-input w3-border"">,  </p>,</div>,<div 
+    appml-data=""appml.php?model=model_productslist"" 
+    appml-controller=""myListController"">,<div 
+    appml-include-html=""inc_listcommands.htm""></div>,
+    <div appml-include-html=""inc_productsquery.htm""></div>,<table 
+    class=""w3-table-all"">,  <tr>,    <th></th>,    <th>Product 
+    Name</th>,    <th>Category</th>,    <th>Supplier</th>,    
+    <th>Price</th> ,  </tr>,  <tr appml-repeat=""records"">,    <td 
+    style=""cursor:pointer"" 
+    onclick=""appml('Form01').run({{ProductID}})"">&#9998;</td>,    
+    <td>{{ProductName}}</td>,    <td>{{CategoryName}}</td>,    
+    <td>{{SupplierName}}</td>,    <td>{{Price}}</td> ,  </tr>,</table>,
+    </div>,<h3 id=""sumprice""></h3>,</div>,
+    <script>,function myValidator(item) {,  var obj = appml(""Form01"");,
+      obj.message = ""validate"";,  obj.validate = {};,  obj.validate.item = 
+    item.id;,  obj.validate.value = item.value;,  myFormController(obj);,
+    },function myListController($appml) {,  if ($appml.message == 
+    ""done"") {,    var i, x, tot = 0;,    x = $appml.data.records;,    
+    for (i = 0; i < x.length; i++) {,      tot += Number(x[i].Price);,    
+    },    document.getElementById(""sumprice"").innerHTML = x.length + "" 
+    products. Total price: $"" + tot.toFixed(2);,  },  if ($appml.message 
+    == ""display"") {,    if ($appml.display.name == ""ProductName"") {,      
+    $appml.display.value = $appml.display.value.toUpperCase();,    },  },
+    },
+    ,function myFormController($appml) {,  if ($appml.message == ""ready"") 
+    {,    $appml.appName = ""Form01"";,    $appml.dataSource = 
+    ""appml.php?model=model_productsform"";,    return -1;,  },  if 
+    ($appml.message == ""loaded"") {,    
+    document.getElementById(""Form01"").style.display = """";,  },  if 
+    ($appml.message == ""submit"") {,    if 
+    (isNaN(document.getElementById(""Price"").value)) { ,      
+    $appml.setError(15, ""Price must be a number"");,      return -1; ,    },
+      },  if ($appml.message == ""validate"") {,    if ($appml.validate.item 
+    == ""Price"") { ,      if (isNaN($appml.validate.value)) { ,        
+    $appml.setError(15, ""Price must be a number"");,        return; ,      
+    },    },  },},</script>,</body>,</html>
+",
+,AppML Case Study - Shippers,"The HTML Page,Models","List Model,Form Model","This is the HTML source:,These are the models used in the application:",,"
+    <!DOCTYPE html>,<html lang=""en-US"">,<head>,<meta charset=""utf-8"">,
+    <title>Shippers</title>,<link rel=""stylesheet"" 
+    href=""https://www.w3schools.com/w3css/4/w3.css"">,
+    <script src=""https://www.w3schools.com/appml/2.0.3/appml.js""></script>,
+    </head>,<body>,<div class=""w3-container w3-content"">,
+    <h1>Shippers</h1>,<div id=""Form01"" class=""w3-container w3-light-grey 
+    w3-padding-large w3-margin-bottom"" 
+    appml-data=""appml.php?model=model_shippersform"" 
+    appml-controller=""myFormController"" style=""display:none;"">,  <div 
+    appml-include-html=""inc_formcommands.htm""></div>,  <p>,    
+    <label>ShipperName:</label>,    <input id=""ShipperName"" class=""w3-input 
+    w3-border"">,  </p>,  <p>,    <label>Phone:</label>,    <input 
+    id=""Phone"" class=""w3-input w3-border"">,  </p>,</div>,<div 
+    appml-data=""appml.php?model=model_shipperslist"">,
+    <div appml-include-html=""inc_listcommands_nofilter.htm""></div>,<table 
+    class=""w3-table-all"">,  <tr>,    <th></th>,    <th>Shipper</th>,
+        <th>Phone</th>,  </tr>,  <tr appml-repeat=""records"">,    <td 
+    style=""cursor:pointer"" 
+    onclick=""appml('Form01').run({{ShipperID}})"">&#9998;</td>,    
+    <td>{{ShipperName}}</td>,    <td>{{Phone}}</td>,  </tr>,</table>,
+    </div>,</div>,<script>,function myFormController($appml) {,  
+    if ($appml.message == ""ready"") {return -1;},  if ($appml.message == 
+    ""loaded"") {,    document.getElementById(""Form01"").style.display = """";,
+      },},
+    </script>,</body>,</html>
+",
+Models,AppML ,"What Is an AppML Model?,What Can an AppML Model Do?,Examples,Without a Model","Example,Example","An AppML model describes an application.,An AppML model is a JavaScript object (JSON) describing an application.,This small model describes a full application for retrieving data from a ,:,With an AppML model you can:,To allow users to filter data (search ,sort), you can add filter information to the model:,To allow users to update data, you can add update information to the 
+model:  ,The applications you have seen earlier in this tutorial, did not use any 
+models.","Define connections to databases like MySQL, SQL Server, Access, and Oracle.,Define connections to data files like JSON, XML, and other text files.,Define SQL statements for retrieving data.,Define filter and sorting restrictions.,Define data types, data formats, and update restrictions.,Define application security, users, and user groups.",,
+Messages,AppML ,"AppML Messages and Actions,AppML Messages,The ""ready"" Message,The ""loaded"" Message,The ""display"" Message,The ""done"" Message,The ""submit"" Message,The ""error"" Message,AppML Properties","Example,Example,Example,Example,Example,Example,Example","When AppML is about to perform an action, it sends the application 
+object ($appml) to the 
+controller.,One of the application object's properties is a message ($appml.message), 
+describing the application state.,Testing this message, enables you to add your own JavaScript code, depending 
+on the action.,This is a list of AppML messages that can be received:
+,When an AppML application is ready to load data, it will send a ""ready"" message.,This is the perfect place to provide the application with initial data 
+(start values):,In the example above, when the , is ""ready"", the controller adds two new properties to the application (, and,).,When the application runs, the new properties are available to the 
+application.,When an AppML application is loaded with data (ready to display), it will send a "","" message.,This is the perfect place to provide changes (if necessary) to  
+the loaded data.,Each time AppML is displaying a data item, it will send a "","" message.,This is the perfect place to modify the output:,In the example above, ""CustomerName"" is truncated to 15 characters, and ""Country"" 
+is converted to upper case.,When an AppML application has finished displaying data, it will send a "","" message.,This is the perfect place to clean up or calculate application data (after 
+display).,When an AppML application is ready to submit data, it will send a "","" message.,This is the perfect place to validate application input.,If an error occurs, AppML will send an "","" message.,This is the perfect place to handle errors.,This is a list of some commonly used AppML properties:
+",,"
+    function myController($appml) {,    if ($appml.message == ""ready"") {alert (""Hello 
+    Application"");},
+    },
+    <div appml-controller=""myController"" appml-data=""customers.js"">,<h1>Customers</h1>,<p>{{today}}</p>,<table>,  <tr>,    
+    <th>Customer</th>,    <th>City</th>,    
+    <th>Country</th>,  </tr>,  <tr appml-repeat=""records"">,    
+    <td>{{CustomerName}}</td>,    <td>{{City}}</td>,    
+    <td>{{Country}}</td>,  </tr>,</table>,
+    <p>Copyright {{copyright}}</p>,</div>,
+    ,<script>,function myController($appml) {,        
+    $appml.today = new Date();,        
+    $appml.copyright = ""W3Schools"",    },},</script>,
+    <div appml_app=""myController"" appml-data=""customers.js"">,
+    <h1>Customers</h1>,<table>,  <tr>,    
+    <th>Customer</th>,    <th>City</th>,    
+    <th>Country</th>,  </tr>,  <tr appml-repeat=""records"">,
+        
+    <td>{{CustomerName}}</td>,    <td>{{City}}</td>,    
+    <td>{{Country}}</td>,  </tr>,</table>,</div>,
+    ,<script>,function myController($appml) {,    if 
+    ($appml.message == ""display"") {,        if ($appml.display.name == 
+    ""CustomerName"") {,
+                $appml.display.value = $appml.display.value.substr(0,15);
+,
+            },
+            if ($appml.display.name == ""Country"") {,
+                
+    $appml.display.value = $appml.display.value.toUpperCase();,
+            },    },
+    },</script>,
+    <script>,function myController($appml) {,        
+    ,    },},</script>,
+    <script>,function myController($appml) {,        
+    ,    },},</script>,
+    <script>,function myController($appml) {,},</script>",
+Controllers,AppML ,"What Can a Controller Do?,Without a Controller,With a Controller","Example,Example","
+The purpose of an ,, is to let you , your 
+application.,By default AppML applications run without a controller:,With an AppML controller, you can , your application with 
+,.,The controller is a JavaScript function, ,.,The , attribute is used to refer to a controller 
+function.,The controller (myController) in the example above, changes the value of ""CustomerName"" to 
+uppercase, before it is displayed. ,If you have a controller, AppML will send , 
+($appml) to the controller, for every important action.,One of the application properties is a message ($appml.message), describing 
+the application state.","Set initial data,Change application data,Handle input and output,Validate data,Summarize data,Handle errors,Start and stop applications,And much more","
+<table appml-data=""customers.js,>,
+<tr>,
+  <th>Customer</th>,
+  <th>City</th>,
+  <th>Country</th>,</tr>,
+<tr appml-repeat=""records"">,
+  <td>{{CustomerName}}</td>,
+  <td>{{City}}</td>,
+  <td>{{Country}}</td>,
+</tr>,
+</table>,
+    <h1>Customers</h1>,<table appml-data=""customers.js"" ,"">,  <tr>,    
+    <th>Customer</th>,    <th>City</th>,    
+    <th>Country</th>,  </tr>,  <tr appml-repeat=""records"">,    
+    <td>{{CustomerName}}</td>,    <td>{{City}}</td>,    
+    <td>{{Country}}</td>,  </tr>,</table>,
+    ,<script>,function myController($appml) {,    
+    if ($appml.message == ""display"") {,        if ($appml.display.name == ""CustomerName"") 
+    {,            $appml.display.value = $appml.display.value.toUpperCase();,
+            },    },},</script>",
+ HTML Includes,AppML,Including HTML in HTML,"inc_footer.htm,Example","With AppML, you can include HTML in HTML.,A good example of this, is to include a standard HTML footer in all your HTML 
+pages.,This is an example of a file containing a standard footer:,In this example the appml-include-html attribute is used to include the file 
+""inc_footer.htm"": ",,"
+<hr style=""margin-top:10px;"">,
+<p style=""font-size:11px"">2016&copy; W3Schools. All rights reserved.</p>,
+<hr>,
+<!DOCTYPE html>,
+<html lang=""en-US"">,
+,
+<title>Customers</title>,
+<link rel=""stylesheet"" href=""style.css"">,
+<script src=""https://www.w3schools.com/appml/2.0.3/appml.js""></script>,
+,
+<body>,
+,
+<h1>Customers</h1>,
+<table appml-data=""customers.js"">,
+<tr>,
+  <th>Customer</th>,
+  <th>City</th>,
+  <th>Country</th>,
+</tr>,
+<tr appml-repeat=""records"">,
+  <td>{{CustomerName}}</td>,
+  <td>{{City}}</td>,
+  <td>{{Country}}</td>,
+</tr>,
+</table>,
+,
+<div ,></div>,
+,
+</body>,
+</html>
+",
+ Data,AppML,"Connecting AppML to Data,AppML Using a JavaScript Object,AppML Using a JSON File,AppML Using a Database,The Power of AppML","Example,customers.js,Example,Example","
+The , purpose of AppML is to provide , 
+to HTML pages.,A common way to separate HTML and Data, is to store the data in a JavaScript object.,Another common way to separate HTML and Data, is to store the data in a JSON 
+file:,With AppML, you can specify a JSON file as the data source in the appml-data attribute:,With a little help from a web server, you can feed your application 
+with SQL data.,This example uses PHP to read data from a MySQL 
+database:,You are about to discover the power of AppML.,AppML can provide you with data, 
+controllers, and models 
+for:,You can put as many AppML applications as you like inside an HTML page.,AppML does not interfere 
+with other parts of the page.,You have 
+full HTML, CSS, and JavaScript freedom.,AppML can be used to develop full scale CRUD web applications., To discover the power of AppML:
+,.","AppML can display data from variables,AppML can display data from files,AppML can display data from databases,Super-easy HTML Application Development,Super-easy Modeling, Prototyping, and Testing","
+    <table appml-data="","">,
+<tr>,
+  <th>Customer</th>,
+  <th>City</th>,
+  <th>Country</th>,</tr>,
+<tr appml-repeat=""records"">,
+  <td>{{CustomerName}}</td>,
+  <td>{{City}}</td>,
+  <td>{{Country}}</td>,
+</tr>,
+</table>,
+    ,<script>,var dataObj = {,""records"":[,
+    {""CustomerName"":""Alfreds Futterkiste"",""City"":""Berlin"",""Country"":""Germany""},,
+    {""CustomerName"":""Ana Trujillo Emparedados y helados"",""City"":""México D.F."",""Country"":""Mexico""},,
+    {""CustomerName"":""Antonio Moreno Taquería"",""City"":""México D.F."",""Country"":""Mexico""},,
+    {""CustomerName"":""Around the Horn"",""City"":""London"",""Country"":""UK""},,{""CustomerName"":""B's 
+    Beverages"",""City"":""London"",""Country"":""UK""},,{""CustomerName"":""Berglunds 
+    snabbköp"",""City"":""Luleå"",""Country"":""Sweden""},,{""CustomerName"":""Blauer See 
+    Delikatessen"",""City"":""Mannheim"",""Country"":""Germany""},,{""CustomerName"":""Blondel 
+    père et fils"",""City"":""Strasbourg"",""Country"":""France""},,{""CustomerName"":""Bólido 
+    Comidas preparadas"",""City"":""Madrid"",""Country"":""Spain""},,{""CustomerName"":""Bon 
+    app'"",""City"":""Marseille"",""Country"":""France""},,{""CustomerName"":""Bottom-Dollar 
+    Marketse"",""City"":""Tsawassen"",""Country"":""Canada""},,{""CustomerName"":""Cactus 
+    Comidas para llevar"",""City"":""Buenos Aires"",""Country"":""Argentina""},,{""CustomerName"":""Centro 
+    comercial Moctezuma"",""City"":""México D.F."",""Country"":""Mexico""},,
+    {""CustomerName"":""Chop-suey Chinese"",""City"":""Bern"",""Country"":""Switzerland""},,
+    {""CustomerName"":""Comércio Mineiro"",""City"":""São Paulo"",""Country"":""Brazil""},]};,</script>,
+    ,
+    <table ,"">,
+<tr>,
+  <th>Customer</th>,
+  <th>City</th>,
+  <th>Country</th>,</tr>,
+<tr appml-repeat=""records"">,
+  <td>{{CustomerName}}</td>,
+  <td>{{City}}</td>,
+  <td>{{Country}}</td>,
+</tr>,
+</table>
+,
+<table appml-data="",>,
+<tr>,
+  <th>Customer</th>,
+  <th>City</th>,
+  <th>Country</th>,</tr>,
+<tr appml-repeat=""records"">,
+  <td>{{CustomerName}}</td>,
+  <td>{{City}}</td>,
+  <td>{{Country}}</td>,
+</tr>,
+</table>",
+ History,AppML,"Executables Will Die, JavaScript Will Live,Web Applications Will be Internet Services, Future Applications Will be Easy to Create and Edit,Three Little Web Developers...",,"In 1999 Refsnes Data developed the first version of AppML.,Already then,  AppML was based on HTTP request communication 
+between web client and the web server. Later this method became well known as 
+AJAX.,
+In September 2000, a development project for a large Norwegian customer was 
+started. The goal of the project was to convert a huge information system (about 
+300 applications) from a Windows desktop application to a modern Internet 
+application, using only AppML.,The AppML-based system was launched in 2001, 
+several months before schedule, as the world's first commercial AJAX 
+application. The project was a huge success, with development time reduced by 
+75% compared to ordinary web development. Since then, new 
+applications have been added, and the system now covers over 1000 running 
+applications.,In February 2015, W3Schools re-launched AppML as a new product, open to the 
+public.,AppML design goals:,The paragraphs below describes Refsnes Data's original visions (1999) about future web applications.,Compiled executables (compiled from languages like C or Java) cannot run on 
+different hardware.,Executables (EXE files, ActiveX and COM objects, DLL-files) are components 
+that prevent the development of applications that can 
+run over the internet.,Future application will not use, or rely on, executables or any other components installed on the 
+client's computer.,Write your future applications using only HTML, CSS and JavaScript.,Make sure your future applications run in any web browser. ,The history is full of large, purpose built, applications. Many of these died 
+very quickly, because they could not survive requirements changes.,Applications should be flexible, generalized, and gracefully adjust to 
+changes, without being crumbled or destroyed.,Applications should be able to scale from supporting a few to millions of
+requests per day.,Applications should be able to spread from one server to
+many, or to move between servers, without breaking the
+application.,Applications should be able to cooperate with other applications.,Applications should not contain large masses of 
+code.,Applications should be broken down into smaller 
+services, that are easy to create and easy to maintain.,Applications should be a set of Internet services
+that can return data to submitted Internet requests.,
+Applications should request services via standard Internet protocols without maintaining a permanent connection to the server. ,
+,
+Write your future applications using Internet based SOA 
+(Service Oriented Architecture).,Make your application services general and flexible, and ready to 
+serve different types of requests.,Clients and servers will exchange data in an easy understandable way.,Applications will not be coded, if it can be avoided. ,Applications will be created and modified, by editing models, not by editing code.,Application descriptions will be readable by humans.,Application descriptions will be self describing.,Applications will be written by users, not programmers.,Use human readable text
+files to describe services, and 
+provide services by executing these descriptions.,Use text 
+files (like JSON files) to describe applications.,Use text 
+files (like JSON files) to exchange data.,Use HTML, CSS, and JavaScript to execute applications.,Once upon a time there were three little web developers developing a new web 
+site. ,1. The first web developer was using AppML.,2. The second web developer was using his favorite server 
+programming language.,3. The third was using a 
+professional enterprise web development framework.,The first web developer had a demo up 
+and running in two days. After collaboration with the users, an exiting prototype was ready in a week. 
+And after two 
+weeks of testing, an intelligent, fast and easy to use, web site, was ready 
+to publish.,The second web developer had his web site ready after 6 months. But the 
+WWW had changed its requirements, and was not satisfied. The 
+web developer could 
+not make major changes to his project because it contained too much code. So he 
+started the 
+development of version 2.,The third web developer never managed to complete his work. The professional web development framework was very 
+difficult to use, very hard to understand, and almost impossible to test. ,.","AppML applications must run over the Internet,AppML applications must be platform independent,AppML applications must use Internet standards only (HTML, CSS, 
+    JavaScript),AppML applications must support a variety of application needs,AppML applications must be self-describing,AppML applications must be easy to develop, maintain and change,AppML applications must be future proof",,
+ Architecture,AppML,"Modern Web Architecture,The MODEL - Just JSON,The VIEW - Just HTML,The CONTROLLER - Client and/or Server Scripts,The Art of Programming,Declarative Programming,Rapid and Agile Application Development,Code First,Service Oriented Architecture (SOA),Web Services,Benefits of Web Services,Cloud Computing","Model,HTML View","AppML combines the most up-to-date techniques and ideas of modern web 
+development.,AppML focus on speed, simplicity, and low cost:,The model describes the application.,The model is reusable on different hardware 
+and software platforms (Server, PC, iPhone, Tablets, etc.).,The model is not concerned with presentation or user 
+interface (UI).,The model is written in JSON:,The view is the UI (User Interface) for displaying (and input) data.,The view is written in HTML and CSS:,A client script in the web page can control the application:,A server script can control the application by:,Keeping application size and complexity low, is the main problem of all 
+programming. ,Controlling computer application complexity, is the true art of 
+programming.,Software development often breaks deadlines and budgets. Finished software is 
+often full of coding errors. This is because computer code is difficult to 
+develop, test, and maintain.,Coding is ,. You should describe more , 
+to do, less , to do it.,With AppML you , your application in the
+, and in the
+,.,With , there is ,.,
+,Controlling computer application complexity is the true art of programming.,Keeping application size and complexity under under control is the main 
+problem of all programming. ,RAD is a software development method that uses minimal planning in favor of 
+rapid prototyping.,
+AppML delivers super-fast prototyping, up to 100 times faster than traditional 
+development methods.,
+Application prototypes can run directly from the application model, without any 
+coding.,
+,Agile software development is a method based on step-by-step development, 
+where solutions are created by users and developers in collaboration.,With AppML, applications can be written step by step, in small increments, 
+from prototypes to full applications.,
+,A web application can be developed in two different ways:,1. Code First: Using pre-programmed, pre-tested code, adding only new 
+application descriptions.,2. Contract First: Coding the application from scratch using the full 
+application requirement description., uses the most rational concept: 
+,., is an architecture for 
+building web applications., offers low development costs and high flexibility.,With ,, applications can be created from scratch, or from existing IT 
+infrastructures, and be used, by different applications, on different hardware 
+and software., is a perfect fit for , and ,, where 
+data can be easily consumed without the concern about how. ,A , is an interface to data, identified by a URL, 
+just like a web page.,A , differs from a web page, only in the way it 
+communicates information. ,A typical , only provides data to a web page.,With AppML, HTML is the user interface, a , provides the 
+data., were designed to use XML standards 
+like SOAP, WSDL, and UDDI., like AppML are much easier to use. ,Example: A small program designed to supply other 
+applications with the stock exchange prices.,Example: Flight schedules and ticket reservation systems.,Since web services use HTTP, they are independent of both operating systems and programming languages., is an extension of SOA: Application-as-a service, 
+Storage-as-a-service, Data-as-a-service.,For most people, Cloud Computing is about storing data on the web:,The reasons are pretty obvious:,With AppML, it is very easy to put both databases and applications in the 
+cloud.","Low Cost,Rapid and Agile Web Develoment,Optimized for Cloud Computing,High Speed and Low Bandwidth Consumption,MVC (Model Viev Controller) Architecture,Full Separation of Content from Presentation ,Highly Scalable and Testable,Easy Configuration and Reconfiguration,Reconfiguration while applications are running,Smart Support for User Accounts and Roles,AppML can display data as defined in the model,AppML can display data as defined by HTML attributes.,AppML applications can run independent of HTML (hidden),(Optionally) AppML can request model data from a web server (SQL 
+    server),(Optionally) AppML users can edit data,(Optionally) AppML can send data to a web server,Receiving requests from the client (browser),Returning data to the client,Receiving data from the client,Updating data on the server,Taking care of authentication and security,Simpler to understand - Can be read by humans,Lightweight - no unnecessary code or markup,Easy to implement - no development tools required,Web services are small units of code,Web services are designed to handle a limited set of tasks,Web services use HTTP based communicating protocols,Web services are independent of operating systems,Web services are independent of programming languages,Web services can connect different applications, systems, and devices,Web Services makes it easy to distribute information,Web Services favors rapid application development,Emails and calendars,Documents and spreadsheets,Books, notes, and to do lists,Music, pictures and movies,Databases and applications,To have access to data from everywhere,To share my data with others,To survive hardware changes or crashes ","
+<!DOCTYPE html>,<html lang=""en-US"">,
+<title>Customers</title>,
+<link rel=""stylesheet"" href=""https://www.w3schools.com/w3css/4/w3.css"">,
+<script src=""https://www.w3schools.com/appml/2.0.3/appml.js""></script>,
+<body>,
+,
+<div class=""w3-container"" appml-data=""local?model=model_customers"">,
+<h1>Customers</h1>,
+<div appml-include-html=""inc_listcommands.htm""></div>,
+<div appml-include-html=""inc_filter.htm""></div>,
+<table class=""w3-table-all"">,
+  <tr>,
+    <th>Customer</th>,
+    <th>City</th>,
+    <th>Country</th>,
+  </tr>,
+  <tr appml-repeat=""records"">,
+    <td>{{CustomerName}}</td>,
+    <td>{{City}}</td>,
+    <td>{{Country}}</td>,
+</tr>,
+</table>,
+</div>,
+,
+</body>,
+</html>",
+"App, Reference - API",ML,"AppML Methods,AppML Properties,Data Object Properties,AppML Form Methods,AppML Filter Properties",,,,,
+"App, Reference - Databases",ML,"The ""database"" Property,Data From a Database,Filter Restrictions,Sorting Restrictions,Update Restrictions,Database Connections,Creating Databases","Example,Example,appml_config.php,Model","The ""database"" property defines a database as the data source. It has the 
+following sub properties:,This model fetches records containing Customer, City, and Country from a 
+Customer table in an SQL database:,To allow users to filter data, you can add filter information to the model:,To allow users to sort data, you can add sort information to the model:,To allow users to update data, you can include update information in the 
+model:  ,Database connections are defined in ,:,Since AppML allows you to execute SQL statements before the application is 
+started, you can use this to create a database if needed:,Perfect for rapid prototyping!",,,
+"App, Reference - Data Files",ML,"The ""data"" Property,Data From a Text File,Data From an XML File,Data From a JSON File","Model,Model,Model","The ""data"" property defines a data file as the data source. It has the 
+following ,:,This model fetches records containing Title, Artist, and Price (as item 1, 2, 
+and 5) from a comma separated text file: ,Example explained: ,.,This model fetches records containing Title, Artist, and Price from CD nodes 
+in an XML file: ,Example explained: ,.,This model fetches records containing Title, Artist, and Price from an array 
+of CD objects 
+in a JSON file: ,Example explained: ,.",,,
+"App, Reference",ML,"AppML HTML Attributes,AppML Messages,AppML Models,AppML Model Properties,Application Security,Private Models","Example,Example,Example,Example,Example,Example","AppML messages are explained in the chapter about
+,.,You have to be logged in as a member of the ""admin"" group, to access this 
+application:,You can add your own private data to the model.,This example suggests restrictions to data:,Model data can be used by server applications, and by your AppML controller.,This example uses model data to validate input:",,"
+    <div appml-include-html=""inc_header.htm""></div>,<h1>Customers</h1>,<table 
+    appml-data=""customers.js"" appml-controller=""myController"">,  <tr>,    
+    <th>Customer</th>,    <th>City</th>,    
+    <th>Country</th>,  </tr>,  <tr appml-repeat=""records"">,    
+    <td>{{CustomerName}}</td>,    <td>{{City}}</td>,    
+    <td>{{Country}}</td>,  </tr>,</table>,
+    <div appml-include-html=""inc_footer.htm""></div>
+",
+,AppML using Amazon Database,"What is Amazon Relational Database Service (RDS),Why use Amazon RDS?,Getting Started,Sign Up for Amazon Web Services,Create a MySQL Database Instance,Configure Database Connection in AppML","The Endpoint URL should look something like this:,PHP example: appml_config.php,Login with IAM","Amazon Relational Database Service (RDS) is a cloud based database service.,Amazon RDS manages many of the challenges of running a database.,With Amazon RDS you can scale performance and storage as you need it.,Amazon RDS manages automated backups, patching, and recovery.,It supports popular database products like:,Before you can start using RDS, you need to sign up for Amazon Web Services, 
+and set up a database user and security group.,When you sign up for Amazon Web Services (AWS), your AWS account is automatically signed up for all services in AWS, including Amazon RDS.,If you are a new AWS customer, you can get started with Amazon RDS for 
+free.,The AWS Free Tier is allows you to try AWS for free for 12 months after you sign up. 
+For more information, see
+,.,If you decide to continue with AWS after your free period (or if you need 
+more storage or performance than the free usage tier offers), you only pay for the resources you use.,To create an AWS account
+
+go to: ,, and then click Sign Up.,Follow the on-screen instructions.
+
+Note your AWS account number, because you'll need it later.,In this example we will set up a free Database instance running MySQL. (This is 
+free because it is intended for testing)., Create a MySQL DB instance:,To configure the database connection, edit the appml_config file:,Edit the following:,AppML should now be configured to connect to your Amazon RDS database.,You can now fill your database with data:","MySQL,PostgreSQL,Oracle,Microsoft SQL Server,and the new, MySQL-compatible Amazon Aurora DB 
+engine,If you have access to a PHP server, this is described in the
+    ,If you have access to an ASP.NET server, this is described in the
+    ",,
+,AppML using Google Cloud SQL,"What is Google Cloud SQL,Why use Google Cloud SQL?,Getting Started,Sign Up for Google Developers Console,Create a MySQL Database Instance,Configure Database Connection in AppML",PHP example: appml_config.php,"Google Cloud SQL is a cloud based database service.,Google Cloud SQL offers MySQL databases deployed in the cloud without a fuss.,Google offers powerful databases that run fast, and flexible charging (pay 
+per use).,Google manages automated backups, patching, and recovery.,Before you can start using Google Cloud SQL, you need a Google account, and sign up for 
+Google Developers Console.,If you do not have a Google account you can sign up for one here:
+,When you sign up for Google Developers Console, your Google account is 
+automatically signed up for all services in Google Cloud, including SQL.,If you are a new Cloud Platform user, you can get started with a trial period 
+for free.,The Cloud Platform free trial allows you to try Cloud SQL for free for 60 
+days. 
+For more information, see
+,.,If you decide to continue with Cloud Platform after your free period (or if you need 
+more storage or performance than the free usage tier offers), you only pay for the resources you use.,To create an Google Developers Console account
+
+go to: ,, and follow the on-screen 
+instructions.,In this example we will set up a Database instance running MySQL., Create a MySQL DB instance:,Now you have a Google Cloud SQL database, with an IP that you can connect to.,To configure the database connection, edit the appml_config file:,Edit the following:,AppML should now be configured to connect to your Google Cloud SQL database.,You can now fill your database with data:","Once you have created your account Google will automatically create a 
+    new project for you called ""My First Project"". In this example we will just 
+    use that project.,In the menu, click ""Storage"", and then ""Cloud SQL"",Click ""Create an instance"",On the ""Create Cloud SQL instance"" page select a name, region and 
+    performance tier for your DB instance. In this example we will skip the 
+    advanced options.,Click ""Create"",The new DB instance appears in the list of DB instances (when it has the 
+    status ""Runnable"" it is ready for use),Click on the name of the instance, and click ""Access Control"" on the 
+    navigation pane,Click ""IP address"" in the sub-navigation pane, and click the ""Request 
+    IPv4 address"" button,Keep this IP address, as it will be the IP address you use to connect to 
+    your database,Click ""Users"" in the sub-navigation pane, and click the ""New user"" 
+    button,Specify a username and password for your database,Click ""Authorization"" in the sub-navigation pane, and click the ""+ Add 
+    item"" button under Allowed Networks,Here you can specify who has access to your database, It can be:,Your own IP, or the IP of your server. This way only you have access 
+        to your database,or 0.0.0.0/0, which allows all external IP addresses to connect 
+        (this can be a security risk, and cause extra costs),
+    ,Click ""Save"",Click ""Databases"" in the navigation pane, and click the ""New database"" 
+    button,Specify a name for your database (you can leave the other options as 
+    they are unless you have specific requirements),If you have access to a PHP server, this is described in the
+    ,If you have access to an ASP.NET server, this is described in the
+    ",,
+,AppML .NET,"Create a Test Page,Create a Database Connection,
+Configuration File
+Explained:,Copy AppML,Create a Database Table ,Create an Application ","customers.htm,appml_config.aspx (SQL Server Example),appml_config.aspx (MS Access Example),create_customers.js,create_customers.htm,customers.js,customers.htm","If you have access to a .NET server, follow the instructions below to create 
+an AppML server application.,Create a test page and save on your PHP server as customers.htm (or anything 
+you like):,Test the web page in your browser.,If you have access to an SQL Server database, or any other OLEDB databases 
+(like MS Acess) define the database connections, and save it on the server as ,:,Download the file: 
+,.,Copy the file to your web site. Rename it to ,.,Create a , for creating a Customers table in the 
+database.,Create an , for running the create_customers.js model:,Run the HTML page in your browser.,Create a , for the customers application. Save it as
+,:,Create an , for running the customers application:,Run the HTML in your browser.",,"
+ <!DOCTYPE html>,
+    <html lang=""en"">,<title>Customers</title>,<link rel=""stylesheet"" href=""https://www.w3schools.com/w3css/4/w3.css"">,
+    <script src=""https://www.w3schools.com/appml/2.0.3/appml.js""></script>,
+    <body>,<div class=""w3-container"" appml-data=""customers"">,
+    <h1>Customers</h1>,<table class=""w3-table-all"">,  <tr>,    
+    <th>Customer</th>,    <th>City</th>,    
+    <th>Country</th>,  </tr>,  <tr appml-repeat=""records"">,    
+    <td>{{CustomerName}}</td>,    <td>{{City}} </td>,    
+    <td>{{Country}} </td>,  </tr>,</table>,</div>,<script>,
+    var customers = {,""records"":[,{""CustomerName"":""Alfreds Futterkiste"",""City"":""Berlin"",""Country"":""Germany""},,
+    {""CustomerName"":""Ana Trujillo Emparedados y helados"",""City"":""México D.F."",""Country"":""Mexico""},,
+    {""CustomerName"":""Antonio Moreno Taquería"",""City"":""México D.F."",""Country"":""Mexico""},,
+    {""CustomerName"":""Around the Horn"",""City"":""London"",""Country"":""UK""},,{""CustomerName"":""B's 
+    Beverages"",""City"":""London"",""Country"":""UK""},,{""CustomerName"":""Berglunds 
+    snabbköp"",""City"":""Luleå"",""Country"":""Sweden""},,{""CustomerName"":""Blauer See 
+    Delikatessen"",""City"":""Mannheim"",""Country"":""Germany""},,{""CustomerName"":""Blondel 
+    père et fils"",""City"":""Strasbourg"",""Country"":""France""},,{""CustomerName"":""Bólido 
+    Comidas preparadas"",""City"":""Madrid"",""Country"":""Spain""},,{""CustomerName"":""Bon 
+    app'"",""City"":""Marseille"",""Country"":""France""},,{""CustomerName"":""Bottom-Dollar 
+    Marketse"",""City"":""Tsawassen"",""Country"":""Canada""},,{""CustomerName"":""Cactus 
+    Comidas para llevar"",""City"":""Buenos Aires"",""Country"":""Argentina""},,{""CustomerName"":""Centro 
+    comercial Moctezuma"",""City"":""México D.F."",""Country"":""Mexico""},,{""CustomerName"":""Chop-suey 
+    Chinese"",""City"":""Bern"",""Country"":""Switzerland""},,{""CustomerName"":""Comércio 
+    Mineiro"",""City"":""São Paulo"",""Country"":""Brazil""},]};,</script>,
+    </body>,</html>
+,
+ <!DOCTYPE html>,<html>,<script src=""https://www.w3schools.com/appml/2.0.3/appml.js""></script>,<body>,<div appml-data=""appml.aspx?model=create_customers""></div>,</body>,</html>,
+ <!DOCTYPE html>,
+    <html lang=""en"">,<title>Customers</title>,<link rel=""stylesheet"" href=""https://www.w3schools.com/w3css/4/w3.css"">,
+    <script src=""https://www.w3schools.com/appml/2.0.3/appml.js""></script>,
+    <body>,<div class=""w3-container"" appml-data=""appml.aspx?model=model_customers"">,
+    <h1>Customers</h1>,<table class=""w3-table-all"">,  <tr>,    
+    <th>Customer</th>,    <th>City</th>,    
+    <th>Country</th>,  </tr>,  <tr appml-repeat=""records"">,    
+    <td>{{CustomerName}}</td>,    <td>{{City}}</td>,    
+    <td>{{Country}}</td>,  </tr>,</table>,</div>,</body>,</html>
+",
+,AppML PHP,"Create a Test Page,Create a Database Connection,Configuration File Explained:,Copy AppML,Create a Database Table ,Create an Application Model","customers.htm,appml_config.php,create_customers.js,create_customers.htm,model_customers.js,customers.htm","If you have access to a PHP server, follow the instructions below to create 
+an AppML server application.,Create a test page and save on your PHP server as customers.htm (or anything 
+you like):,Test the web page in your browser.,If you have access to a Database, follow the instructions below to create an 
+AppML database connection.,Define a database connection, and save it on the server as ,:,Download the file: ,.,Copy the file to your web site. Rename it to ,.,Create a , for creating a Customers table in the 
+database. Save it as ,:,Create an , for running the create_customers.js model:,Run the HTML page in your browser.,Create a , for the customers application. Save it as
+,:,Create an , for running the customers application:,Run the HTML in your browser.",,"
+ <!DOCTYPE html>,
+    <html lang=""en"">,<head>,<title>Customers</title>,<link rel=""stylesheet"" 
+    href=""https://www.w3schools.com/w3css/4/w3.css"">,<script src=""https://www.w3schools.com/appml/2.0.3/appml.js""></script>,
+    </head>,<body>,<div class=""w3-container"" appml-data=""customers"">,
+    <h1>Customers</h1>,<table class=""w3-table-all"">,  <tr>,    
+    <th>Customer</th>,    <th>City</th>,    
+    <th>Country</th>,  </tr>,  <tr appml-repeat=""records"">,    
+    <td>{{CustomerName}}</td>,    <td>{{City}} </td>,    
+    <td>{{Country}} </td>,  </tr>,</table>,</div>,<script>,
+    var customers = {,""records"":[,{""CustomerName"":""Alfreds Futterkiste"",""City"":""Berlin"",""Country"":""Germany""},,
+    {""CustomerName"":""Ana Trujillo Emparedados y helados"",""City"":""México D.F."",""Country"":""Mexico""},,
+    {""CustomerName"":""Antonio Moreno Taquería"",""City"":""México D.F."",""Country"":""Mexico""},,
+    {""CustomerName"":""Around the Horn"",""City"":""London"",""Country"":""UK""},,{""CustomerName"":""B's 
+    Beverages"",""City"":""London"",""Country"":""UK""},,{""CustomerName"":""Berglunds 
+    snabbköp"",""City"":""Luleå"",""Country"":""Sweden""},,{""CustomerName"":""Blauer See 
+    Delikatessen"",""City"":""Mannheim"",""Country"":""Germany""},,{""CustomerName"":""Blondel 
+    père et fils"",""City"":""Strasbourg"",""Country"":""France""},,{""CustomerName"":""Bólido 
+    Comidas preparadas"",""City"":""Madrid"",""Country"":""Spain""},,{""CustomerName"":""Bon 
+    app'"",""City"":""Marseille"",""Country"":""France""},,{""CustomerName"":""Bottom-Dollar 
+    Marketse"",""City"":""Tsawassen"",""Country"":""Canada""},,{""CustomerName"":""Cactus 
+    Comidas para llevar"",""City"":""Buenos Aires"",""Country"":""Argentina""},,{""CustomerName"":""Centro 
+    comercial Moctezuma"",""City"":""México D.F."",""Country"":""Mexico""},,{""CustomerName"":""Chop-suey 
+    Chinese"",""City"":""Bern"",""Country"":""Switzerland""},,{""CustomerName"":""Comércio 
+    Mineiro"",""City"":""São Paulo"",""Country"":""Brazil""},]};,</script>,
+    </body>,</html>
+,
+<?php echo(""Access Forbidden"");exit();?>,
+{,
+""dateformat"" : ""yyyy-mm-dd"",,
+""databases"" : [{,
+    ""connection"" : ""mydatabase"",,    ""host"" : ""localhost"",,
+    ""dbname"" : ""DemoDB"",,
+    ""username"" : ""DemoDBUkbn5"",,
+    ""password"" : ""l6|U6=V(*T+P"" ,
+ }],}
+,
+ <!DOCTYPE html>,<html>,<script src=""https://www.w3schools.com/appml/2.0.3/appml.js""></script>,<body>,<div appml-data=""appml.php?model=create_customers""></div>,</body>,</html>,
+ <!DOCTYPE html>,<html lang=""en"">,<title>Customers</title>,<link 
+    rel=""stylesheet"" href=""https://www.w3schools.com/w3css/4/w3.css"">,<script src=""https://www.w3schools.com/appml/2.0.3/appml.js""></script>,
+    <body>,<div class=""w3-container"" appml-data=""appml.php?model=model_customers"">,
+    <h1>Customers</h1>,<table class=""w3-table-all"">,  <tr>,    
+    <th>Customer</th>,    <th>City</th>,    
+    <th>Country</th>,  </tr>,  <tr appml-repeat=""records"">,    
+    <td>{{CustomerName}}</td>,    <td>{{City}}</td>,    
+    <td>{{Country}}</td>,  </tr>,</table>,</div>,</body>,</html>
+",
+Database,AppML ,Create Your Own Web SQL Database,,"With the small utility below, you can use AppML to create your own Web SQL 
+database.,Write your own SQL, or use the buttons to import existing SQL.,
+,
+,
+,
+,
+,
+,
+,
+,
+
+",,,
+,AppML Forms,"Create a Form Model,Create an HTML Form,HTML Form Explained,Create HTML Form Commands,Include the Form Commands,Add a Clickable Column to the Table,Finally, Hide the Form","model_customersform.js,HTML Form,inc_formcommands.htm,HTML Form,HTML Source,HTML,Controller","This chapter demonstrates how to construct an input form 
+against a database.,In the previous chapter, you created an application for listing records from 
+a database.,Now add a form application to the page:, 
+defines the AppML application for the form.,Use your favorite style sheet (we use bootstrap), and create your wanted form 
+commands:,Include the form commands in in your form:,In the previous chapter, you created an application for listing records from 
+a database.,Now add a new column to the table:,The onclick event (in the new column) triggers a call to run an AppML 
+application located in the HTML element with id=""Form01"":,Add a style to the form to make it invisible:,Add a controller to the form, to display the form only when it is loaded and 
+ready to display data:"," returns the AppML application, runs the applications with CustomerID 
+ as parameter.","
+    <div id=""Form01"" class=""w3-container w3-light-grey w3-padding-large 
+    w3-margin-bottom"" appml-data=""local?model=model_customersform"">,<p>,
+    <label for=""customername"">Customer:</label>,<input id=""customername"" 
+    class=""w3-input w3-border"">,</p>,<p>,<label 
+    for=""address"">Address:</label>,<input id=""address"" class=""w3-input 
+    w3-border"">,</p>,<p>,<label for=""city"">City:</label>,<input 
+    id=""city"" class=""w3-input w3-border"">,</p>,<p>,<label 
+    for=""postalcode"">Postal Code:</label>,<input id=""postalcode"" 
+    class=""w3-input w3-border"">,</p>,
+    ,<p>,<label for=""country"">Country:</label>,<input id=""country"" 
+    class=""w3-input w3-border"">,</p>,</div>,
+    <span onclick=""document.getElementById('Form01').style.display='none'"" 
+    class=""w3-button w3-xlarge w3-right"">&times;</span>,<div 
+    class=""w3-bar w3-border w3-white"">,<button 
+    onclick=""appml('Form01').newRecord();"" class=""w3-btn"">New</button>,
+    <button onclick=""appml('Form01').saveRecord();"" class=""w3-btn 
+    w3-green"">Save</button>,<button onclick=""appml('Form01').deleteRecord();"" 
+    class=""w3-btn"">Delete</button> ,</div>,<div id=""appmlmessage"" 
+    class=""w3-container w3-pale-yellow w3-padding"" style=""display:none;"">,
+    <span onclick=""this.parentNode.style.display='none';"" class=""w3-button 
+    w3-xlarge w3-right"">&times;</span>,<div id=""message""></div>,</div>
+,
+    <div id=""Form01"" class=""w3-container w3-light-grey w3-padding-large 
+    w3-margin-bottom"" appml-data=""local?model=model_customersform"">,
+    ,
+    ,<p>,<label for=""customername"">Customer:</label>,<input 
+    id=""customername"" class=""w3-input w3-border"">,</p>,<p>,<label 
+    for=""address"">Address:</label>,<input id=""address"" class=""w3-input 
+    w3-border"">,</p>,<p>,<label for=""city"">City:</label>,<input 
+    id=""city"" class=""w3-input w3-border"">,</p>,<p>,<label 
+    for=""postalcode"">Postal Code:</label>,<input id=""postalcode"" 
+    class=""w3-input w3-border"">,</p>,
+    ,<p>,<label for=""country"">Country:</label>,<input id=""country"" 
+    class=""w3-input w3-border"">,</p>,</div>,
+,
+    <div appml-data=""local?model=model_customerslist"">,
+    <h1>Customers</h1>,<div appml-include-html=""inc_listcommands.htm""></div>,
+    <div appml-include-html=""inc_filter.htm""></div>,<table 
+    class=""w3-table-all"">,  <tr>,<th>Customer</th>,    <th>City</th>,    <th>Country</th>,  
+    </tr>,  <tr appml-repeat=""records"">,
+    ,    <td>{{CustomerName}}</td>,    <td>{{City}}</td>,    
+    <td>{{Country}}</td>,  </tr>,
+    </table>,
+    ,</div>
+,
+  <div id=""Form01"" appml-data=""local?model=model_customersform"",
+  appml-controller=""myFormController"",
+  class=""jumbotron"" ,>
+,
+    <script>,function myFormController($appml) {,    if ($appml.message == 
+    ""ready"") {return -1;},    if ($appml.message == ""loaded"") {,        
+    document.getElementById(""Form01"").style.display="""";,    },
+    },</script>",
+,AppML Lists,"Create a New Model,Create an HTML Filter Template","model_customerslist.js,Example,inc_filter.htm,Example","In this chapter, we will list records from a database.,In the previous chapter, you used a model to create a database.,Now create a new model, including filter and sort definitions:,Use the model in your application:,Create the HTML for your filters:,Save the filter HTML in a file with a proper name like ""inc_filter.htm"".,Include the filter HTML in your prototype with ,:",,"
+  <div appml-data="","">,
+  <h1>Customers</h1>,
+  <div appml-include-html=""inc_listcommands.htm""></div>,
+  <table class=""w3-table-all"">,
+    <tr>,
+      <th>Customer</th>,
+      <th>City</th>,
+      <th>Country</th>,
+    </tr>,
+    <tr appml-repeat=""records"">,
+      <td>{{CustomerName}}</td>,
+      <td>{{City}}</td>,
+      <td>{{Country}}</td>,
+    </tr>,
+  </table>,
+  </div>,
+  <div id=""appml_filtercontainer"" class=""w3-container w3-light-grey w3-section 
+  w3-padding-large"" style=""display:none;"">,
+    <span id=""appmlbtn_queryClose"" 
+  onclick=""this.parentNode.style.display='none';"" class=""w3-button w3-large 
+  w3-right"">&times;</span>,
+    <h2>Filter</h2>,
+    <div id=""appml_filter"">,
+      <div appml-repeat=""filteritems"">,
+        <div class=""w3-row"">,
+          <div class=""w3-col m4"">,
+            <label>{{label||item}}:</label>,
+          </div>,
+          <div class=""w3-col m2"">,
+            <input id=""appml_datatype_{{item}}"" type='hidden'>,
+            <select id=""appml_operator_{{item}}"" class=""w3-select w3-border"">,
+              <option value=""0"">=</option>,
+              <option value=""1"">&lt;&gt;</option>,
+              <option value=""2"">&lt;</option>,
+              <option value=""3"">&gt;</option>,
+              <option value=""4"">&lt;=</option>,
+              <option value=""5"">&gt;=</option>,
+              <option value=""6"">%</option>,
+            </select>,
+          </div>,
+          <div class=""w3-col m6"">,
+            <input id=""appml_query_{{item}}"" class=""w3-input w3-border"">,
+          </div>,
+        </div>,
+      </div>,
+    </div>,
+    <div id=""appml_orderby"">,
+      <h2>Order By</h2>,
+      <div class=""w3-row"">,
+        <div class=""w3-col m5"">,
+          <select id='appml_orderselect' class=""w3-select w3-border"">,
+            <option value=''></option>,
+            <option appml-repeat=""sortitems"" value=""{{item}}"">{{label || 
+  item}}</option>,
+          </select>,
+        </div>,
+        <div class=""w3-col m7"">,
+          ASC <input type='radio' id=""appml_orderdirection_asc"" 
+  name='appml_orderdirection' value='asc' class=""w3-radio"">,
+          DESC <input type='radio' id=""appml_orderdirection_desc"" 
+  name='appml_orderdirection' value='desc' class=""w3-radio"">,
+        </div>,
+      </div>,
+    </div>,
+    <br>,
+    <button id=""appmlbtn_queryOK"" type=""button"" class=""w3-btn 
+  w3-green"">OK</button>,
+  </div>
+,
+  <div appml-data=""local?model=model_customerslist"">,
+  <h1>Customers</h1>,
+  <div appml-include-html=""inc_listcommands.htm""></div>,
+  <div ,></div>,
+  <table class=""w3-table-all"">,
+    <tr>,
+      <th>Customer</th>,
+      <th>City</th>,
+      <th>Country</th>,
+    </tr>,
+    <tr appml-repeat=""records"">,
+      <td>{{CustomerName}}</td>,
+      <td>{{City}}</td>,
+      <td>{{Country}}</td>,
+    </tr>,
+  </table>,
+  </div>",
+,AppML Prototype,"Create an HTML Prototype,Add AppML,Create an AppML Model,Create a Local Database with Multiple Records,Add a Navigation Template","Example,Example,proto_customers.js,Example,Example,inc_listcommands.htm,Example","In this chapter, we will build a prototype for a web application.,First, create a decent ,, using your favorite 
+CSS. ,We have used 
+W3.CSS in this example:,After you have created an HTML prototype, you can add AppML:,Add AppML:,Add a local WebSQL database:,Define a data source:,Define the HTML element to be repeated for each record in records:,To be able to use a database, you will need an AppML database model:,If you don't have a local database, you can use the AppML model to create a Web SQL database.,To create a table with a single record, use a model like this: ,.,Use the model in your application. Change the data source to ,:,To create a table with multiple records, use a model like this: ,.,Change the data source to ,Suppose you want all your applications to have a common navigation toolbar:,Create an HTML template for it:,Save the template in a file with a proper name like ""inc_listcommands.htm"".,Include the template in your prototype with the attribute ,:",,"
+<!DOCTYPE html>,<html lang=""en-US"">,<title>Customers</title>,
+ <link rel=""stylesheet"" href=""https://www.w3schools.com/w3css/4/w3.css""> ,
+<body>,
+ ,<div class=""w3-container"">,<h1>Customers</h1>,
+ <table class=""w3-table-all"">,  <tr>,    <th>Customer</th>,    
+ <th>City</th>,    <th>Country</th>,  </tr>,  
+ <tr>,    <td>{{CustomerName}}</td>,    
+ <td>{{City}}</td>,    <td>{{Country}}</td>,  </tr>,
+ </table>,
+ </div>,
+,</body>,</html>
+,
+<!DOCTYPE html>,<html lang=""en-US"">,
+    <title>Customers</title>,<link rel=""stylesheet"" href=""https://www.w3schools.com/w3css/4/w3.css"">,
+    ,<body>,<div class=""w3-container"" ,>,
+    <h1>Customers</h1>,<table class=""w3-table-all"">,  <tr>,    
+    <th>Customer</th>,    <th>City</th>,    
+    <th>Country</th>,  </tr>,  <tr,>,    
+    <td>{{CustomerName}}</td>,    <td>{{City}}</td>,    
+    <td>{{Country}}</td>,  </tr>,</table>,</div>,</body>,</html>
+,
+    <div class=""w3-container"" appml-data="","">,
+    <h1>Customers</h1>,<table class=""w3-table-all"">,  <tr>,    
+    <th>Customer</th>,    <th>City</th>,    
+    <th>Country</th>,  </tr>,  <tr appml-repeat=""records"">,    
+    <td>{{CustomerName}}</td>,    <td>{{City}}</td>,    
+    <td>{{Country}}</td>,  </tr>,</table>,</div>,
+    <div class=""w3-container"" appml-data="","">,
+    <h1>Customers</h1>,<table class=""w3-table-all"">,  <tr>,    
+    <th>Customer</th>,    <th>City</th>,    
+    <th>Country</th>,  </tr>,  <tr appml-repeat=""records"">,    
+    <td>{{CustomerName}}</td>,    <td>{{City}}</td>,  
+    <td>{{Country}}</td>,  </tr>,</table>,</div>,
+<div class=""w3-bar w3-border w3-section"">,
+<button class=""w3-button"" id='appmlbtn_first'>&#10094;&#10094;</button>,
+<button class=""w3-button"" id='appmlbtn_previous'>&#10094;</button>,
+<button class=""w3-button w3-hover-none"" id='appmlbtn_text'></button>,
+<button class=""w3-button"" id='appmlbtn_next'>&#10095;</button>,
+<button class=""w3-button"" id='appmlbtn_last'>&#10095;&#10095;</button>,
+<button class=""w3-btn ws-green"" id='appmlbtn_query'>Filter</button>,
+</div>,
+<div id=""appmlmessage""></div>
+,
+     <div class=""w3-container"" appml-data=""local?model=proto_customers_all"">,
+     <h1>Customers</h1>,<div ,></div>,
+     ,<table class=""w3-table-all"">,  <tr>,    <th>Customer</th>,    
+     <th>City</th>,    <th>Country</th>,  </tr>,  
+     <tr appml-repeat=""records"">,    <td>{{CustomerName}}</td>,    
+     <td>{{City}}</td>,    <td>{{Country}}</td>,  </tr>,
+     </table>,</div>",
+,The AppML Client,"AppML Client,AppML Web Applications,AppML Server,AppML Web SQL",,"In the following chapters, we will build a web application 
+in the web browser.,The AppML client is a JavaScript that runs in any web browser.,It can easily be added to any HTML page with a single line of code:,The AppML client lets you add external data to any HTML element, using HTML 
+attributes:,It has a built in function for displaying data anywhere in the HTML:,It also has built in functions for repeating HTML elements, using any array 
+found in the data:,The AppML client will not interfere with the existing HTML or CSS.,It works well with any existing CSS. We have used W3.CSS in our examples.,AppML is extremely efficient for building web applications.,One of the most powerful features is the ability to develop prototype applications in the 
+web browser, including database CRUD applications, without the need of any web 
+server.,AppML comes with two server scripts (PHP and .NET) designed to provide server data.,With AppML server scripts, you can easily access SQL databases, like mySQL and SQL server.,The server scripts are very powerful, and can easily be installed on any 
+PHP or .NET server. ,In addition, for rapid application development and prototyping, AppML can 
+also simulate a web server in the browser, using Web SQL.,Web SQL is a web page API for storing data in the browser using SQL. The API 
+is supported by Google Chrome, Opera, Safari, and the Android Browser.,Just add the following script to your web page:",,"
+<script src=""https://www.w3schools.com/appml/2.0.3/appml.js""></script>
+,
+ <table appml-data=""customers.js"">
+,
+ <td>{{CustomerName}}</td>,
+ <tr,appml-repeat=""records"">,..,.,</tr>,
+<script src=""https://www.w3schools.com/appml/2.0.3/appml_sql.js""></script>
+",
+,AppML Case Study - Employees,"The HTML Page,Models","List Model,Form Model","This is the HTML source:,These are the models used in the application:",,"
+    <!DOCTYPE html>,<html lang=""en-US"">,<head>,<meta charset=""utf-8"">,
+    <title>Employees</title>,<link rel=""stylesheet"" 
+    href=""https://www.w3schools.com/w3css/4/w3.css"">,
+    <script src=""https://www.w3schools.com/appml/2.0.3/appml.js""></script>,
+    </head>,<body>,<div class=""w3-container w3-content"">,
+    <h1>Employees</h1>,<div id=""Form01"" class=""w3-container w3-light-grey 
+    w3-padding-large w3-margin-bottom"" 
+    appml-data=""appml.php?model=model_employeesform"" 
+    appml-controller=""myFormController"" style=""display:none;"">,  <div 
+    appml-include-html=""inc_formcommands.htm""></div>,  <p>,    <label>Last 
+    Name:</label>,    <input id=""LastName"" class=""w3-input w3-border"">,  
+    </p>,  <p>,    <label>First Name:</label>,    <input id=""FirstName"" 
+    class=""w3-input w3-border"">,  </p>,  <p>,    <label>Date of 
+    Birth:</label>,    <input id=""BirthDate"" class=""w3-input w3-border"">,  
+    </p>,  <p>,    <label>Photo:</label>,    <input id=""Photo"" 
+    class=""w3-input w3-border"">,  </p>,  <p>,    <label>Notes:</label>,
+        <input id=""Notes"" class=""w3-input w3-border"">,  </p>,</div>,
+    <div appml-data=""appml.php?model=model_employeeslist"">,
+    <div appml-include-html=""inc_listcommands.htm""></div>,<div 
+    appml-include-html=""inc_filter.htm""></div>,
+    <table class=""w3-table-all"">,  <tr>,    <th></th>,    <th>Last 
+    Name</th>,    <th>First Name</th>,    <th>Date of Birth</th>,  
+    </tr>,  <tr appml-repeat=""records"">,   <td style=""cursor:pointer"" 
+    onclick=""appml('Form01').run({{EmployeeID}})"">&#9998;</td>,    
+    <td>{{LastName}}</td>,    <td>{{FirstName}}</td>,    
+    <td>{{BirthDate}}</td>,  </tr>,</table>,</div>,</div>,
+    ,<script>,function myFormController($appml) {,  if ($appml.message 
+    == ""ready"") {return -1;},  if ($appml.message == ""loaded"") {,    
+    document.getElementById(""Form01"").style.display = """";,  },},
+    </script>,</body>,</html>",
+ How To,AppML,"1. Create a Page Using HTML and CSS,2. Add AppML,AppML Explained:","HTML,CSS,Example","
+How to build an AppML Application in ,.
+,
+Use AppML to add data to your page:, 
+adds AppML to your 
+page.,=, connects 
+AppML data (customers.js) to an HTML element (<table>).,In this case we have used a JSON file:
+,
+, 
+repeats an HTML element (<tr>) for each item (records) in a data object.,The , 
+are placeholders for AppML data.",,"
+<!DOCTYPE html>,
+    <html lang=""en-US"">,<link rel=""stylesheet"" href=""style.css"">,<title>Customers</title>,
+ <body>,
+ ,<h1>Customers</h1>,
+<table>,
+<tr>,
+  <th>Customer</th>,
+  <th>City</th>,
+  <th>Country</th>,</tr>,
+<tr>,
+  <td>{{CustomerName}}</td>,
+  <td>{{City}}</td>,
+  <td>{{Country}}</td>,
+</tr>,
+</table>,
+    ,</body>,</html>,
+,
+    <!DOCTYPE html>,<html lang=""en-US"">,<title>Customers</title>,
+    <link rel=""stylesheet"" href=""style.css"">,
+,
+    <body>,<h1>Customers</h1>,<table ,>,
+<tr>,
+  <th>Customer</th>,
+  <th>City</th>,
+  <th>Country</th>,</tr>,
+<tr ,>,
+  <td>{{CustomerName}}</td>,
+  <td>{{City}}</td>,
+  <td>{{Country}}</td>,
+</tr>,
+</table>,
+    ,</body>,</html>",
